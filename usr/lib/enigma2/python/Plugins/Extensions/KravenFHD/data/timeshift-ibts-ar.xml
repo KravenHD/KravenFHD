@@ -1,0 +1,49 @@
+  <!-- TimeshiftState -->
+  <screen name="TimeshiftState" position="center,187" size="1177,93" backgroundColor="transparent" flags="wfNoBorder">
+    <widget name="state" position="7,22" size="165,36" font="Regular;42" foregroundColor="KravenIBFont1" halign="center" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="center" />
+    <widget source="session.CurrentService" render="Label" position="927,15" size="150,45" font="Regular;36" halign="right" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top">
+      <convert type="ServicePosition">Remaining</convert>
+    </widget>
+    <eLabel text="bis live:" position="796,15" size="150,45" font="Regular;36" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" foregroundColor="KravenIBFont1" />
+    <eLabel text="min" position="1087,15" size="75,45" font="Regular;36" foregroundColor="KravenIBFont1" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" />
+    <widget source="session.CurrentService" render="Label" position="175,15" size="150,45" font="Regular;36" halign="right" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top">
+      <convert type="ServicePosition">Length</convert>
+    </widget>
+    <eLabel text="min" position="337,15" size="90,45" font="Regular;36" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" foregroundColor="KravenIBFont1" />
+    <eLabel position="432,15" size="345,48" text="timeshift aktiv" font="Regular;42" backgroundColor="KravenIBbg" transparent="1" zPosition="10" valign="center" foregroundColor="red" halign="center" />
+    <widget position="27,64" render="Progress" backgroundColor="KravenIBbg" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress749.png" transparent="1" size="1123,7" source="session.CurrentService" zPosition="17">
+      <convert type="ServicePosition">Position</convert>
+    </widget>
+    <eLabel backgroundColor="KravenLine" position="27,67" size="1123,1" zPosition="16" />
+    <eLabel backgroundColor="KravenIBLine" position="0,0" size="1177,3" zPosition="-8" />
+    <eLabel backgroundColor="KravenIBLine" position="0,90" size="1177,3" zPosition="-8" />
+    <eLabel backgroundColor="KravenIBLine" position="0,3" size="3,87" zPosition="-8" />
+    <eLabel backgroundColor="KravenIBLine" position="1174,3" size="3,87" zPosition="-8" />
+    <eLabel backgroundColor="KravenIBbg" position="0,0" size="1177,93" zPosition="-9" />
+  </screen>
+  <!-- InfoBarTunerState -->
+  <screen name="TunerState" title="Tuner State" flags="wfNoBorder" position="0,294" size="1435,48" zPosition="5" padding="20" spacing="15" backgroundColor="transparent">
+	<widget name="Background" backgroundColor="KravenIBbg" borderWidth="2" borderColor="KravenIBLine" position="0,0" size="1435,48" zPosition="-1" transparent="1" />
+    <eLabel backgroundColor="KravenIBbg" position="0,0" size="1435,48" zPosition="-2" />
+	<widget name="Type" pixmaps="KravenFHD/InfoBarTunerState/record.png,KravenFHD/InfoBarTunerState/stream.png,KravenFHD/InfoBarTunerState/finished.png,KravenFHD/InfoBarTunerState/info.png" position="0,0" size="48,48" zPosition="1" backgroundColor="KravenIBbg" transparent="1" alphatest="on"/>
+	<widget name="Progress" pixmap="KravenFHD/InfoBarTunerState/progress.png" position="0,0" size="120,15" zPosition="1" borderWidth="2" borderColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1"/>
+	<widget name="Field0" font="Regular;33" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+	<widget name="Field1" font="Regular;33" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+	<widget name="Field2" font="Regular;33" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+	<widget name="Field3" font="Regular;33" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+	<widget name="Field4" font="Regular;33" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+	<widget name="Field5" font="Regular;33" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+	<widget name="Field6" font="Regular;33" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+	<widget name="Field7" font="Regular;33" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+	<widget name="Field8" font="Regular;33" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+	<widget name="Field9" font="Regular;33" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+  </screen>
+  <!-- AutoResolution -->
+  <screen name="ResolutionLabel" backgroundColor="transparent" position="0,187" size="378,93" flags="wfNoBorder">
+	<widget name="content" position="22,16" size="352,30" font="Regular;24" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" halign="left" valign="center" transparent="1" zPosition="-1" />
+	<widget name="restxt" position="22,46" size="352,30" font="Regular;24" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" halign="left" valign="center" transparent="1" zPosition="-1" />
+    <eLabel backgroundColor="KravenIBLine" position="0,0" size="378,3" zPosition="-8" />
+    <eLabel backgroundColor="KravenIBLine" position="0,90" size="378,3" zPosition="-8" />
+    <eLabel backgroundColor="KravenIBLine" position="375,3" size="3,87" zPosition="-8" />
+    <eLabel backgroundColor="KravenIBbg" position="0,0" size="378,93" zPosition="-9" />
+  </screen>

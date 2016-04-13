@@ -1,0 +1,15 @@
+ <!-- Clock Analog */-->
+  <widget backgroundColor="KravenIBbg" font="Regular2;27" foregroundColor="KravenIBFont2" halign="center" position="1587,1026" render="Label" size="330,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="2">
+    <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+  </widget>
+  <ePixmap alphatest="blend" pixmap="KravenFHD/clock/analog.png" position="1636,837" size="223,187" zPosition="1" />
+  <widget source="global.CurrentTime" render="KravenFHDWatches" position="1714,892" foregroundColor="KravenIBFont1" zPosition="4" size="73,73" alphatest="blend">
+    <convert type="KravenFHDExtraNumText">hourHand</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="KravenFHDWatches" position="1695,871" foregroundColor="KravenIBFont1" zPosition="5" size="112,112" alphatest="blend">
+    <convert type="KravenFHDExtraNumText">minHand</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="KravenFHDWatches" position="1707,883" foregroundColor="KravenIBFont2" zPosition="6" size="88,88" alphatest="blend">
+    <convert type="KravenFHDExtraNumText">secHand</convert>
+  </widget>
+ <!-- Clock Analog */-->

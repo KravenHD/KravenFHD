@@ -1,0 +1,9 @@
+<!--/* Volume -->
+<screen name="Volume" position="70,57" size="495,120" title="Volume" flags="wfNoBorder" backgroundColor="transparent" zPosition="99">
+  <widget name="Volume" position="108,54" size="255,7" zPosition="3" transparent="1" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress858.png" />
+  <ePixmap position="9,10" size="96,96" zPosition="1" pixmap="KravenFHD/global-icons/volume.png" transparent="0" alphatest="blend" />
+  <widget font="Regular;60" foregroundColor="KravenFont1" backgroundColor="Kravenbg" halign="center" valign="center" render="VVolumeText" source="global.CurrentTime" position="364,12" size="127,90" zPosition="20" transparent="1" />
+  <eLabel position="108,57" size="255,1" backgroundColor="KravenFont1" foregroundColor="KravenFont1" />
+  <eLabel position="3,1" size="490,115" backgroundColor="Kravenbg" zPosition="-2" transparent="0" />
+</screen>
+<!-- Volume */-->

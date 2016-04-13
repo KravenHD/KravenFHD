@@ -1,0 +1,15 @@
+<!-- /* Weather -->
+  <widget backgroundColor="KravenIBbg" source="session.CurrentService" transparent="1" zPosition="8" position="1440,82" size="105,105" render="KravenFHDWetterPicon" alphatest="blend" path="WetterIcons">
+    <convert  type="KravenFHDWeather">Day_0,MeteoIcon</convert>
+  </widget>
+  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular2;54" foregroundColor="KravenIBFont2" render="Label" position="1545,82" size="172,105" source="session.CurrentService" zPosition="3" halign="right" valign="center" transparent="1">
+    <convert type="KravenFHDWeather">Day_0,DayTemp</convert>
+  </widget>
+  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;36" foregroundColor="KravenIBFont1" render="Label" position="1717,82" size="112,52" source="session.CurrentService" zPosition="8" halign="right" valign="center" transparent="1">
+    <convert type="KravenFHDWeather">Day_0,MaxTemp</convert>
+  </widget>
+  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;36" foregroundColor="KravenIBFont1" render="Label" position="1717,135" size="112,52" source="session.CurrentService" zPosition="8" halign="right" valign="center" transparent="1">
+    <convert type="KravenFHDWeather">Day_0,MinTemp</convert>
+  </widget>
+  <constant-widget name="gradient-weather-small"/>
+<!-- Weather */-->

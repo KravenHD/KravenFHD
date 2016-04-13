@@ -1,0 +1,27 @@
+    <!-- MovieSelection -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="MovieSelection" position="0,0" size="1920,1080" title="">
+    <widget name="waitingtext" position="0,0" size="0,0" />
+	<eLabel text="MovieSelection" position="105,18" size="1500,69" backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg" font="Regular;28" foregroundColor="KravenFont2" halign="right" name="freeDiskSpace" position="105,112" size="1062,37" transparent="1" valign="center" />
+    <widget name="list" position="105,157" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget backgroundColor="Kravenbg" font="Regular2;36" foregroundColor="KravenFont2" noWrap="1" position="1233,112" render="Label" size="624,45" source="Service" transparent="1" zPosition="1">
+      <convert type="KravenFHDEventName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg" font="Regular;33" foregroundColor="KravenFont1" halign="left" position="1233,168" render="Label" size="270,40" source="Service" transparent="1" zPosition="1">
+      <convert type="MovieInfo">RecordServiceName</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg" font="Regular;33" foregroundColor="KravenFont1" position="1233,225" render="Label" size="624,672" source="Service" transparent="1" valign="top">
+      <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg" font="Regular2;25" foregroundColor="KravenFont2" halign="left" position="1233,931" render="Label" size="105,36" source="Service" transparent="1" zPosition="1">
+      <convert type="ServiceTime">Duration</convert>
+      <convert type="ClockToText">AsLength</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg" font="Regular2;25" foregroundColor="KravenFont2" halign="right" position="1683,931" render="Label" size="174,36" source="Service" transparent="1" zPosition="1">
+      <convert type="MovieInfo">FileSize</convert>
+    </widget>
+    <eLabel backgroundColor="Kravenbg" position="0,0" size="1920,1080" transparent="0" zPosition="-10" />
+	<constant-widget name="EMCSelection"/>
+    <constant-widget name="gradient-emc"/>
+    <!--<text="MovieSelection - no Cover" position="105,0" />-->
+  </screen>

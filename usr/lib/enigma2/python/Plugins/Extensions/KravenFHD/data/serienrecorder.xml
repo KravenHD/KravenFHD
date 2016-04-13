@@ -1,0 +1,61 @@
+  <screen name="SerienRecorder3.0" position="0,0" size="1920,1080" title="Serien Recorder" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="title" position="30,75" size="1320,82" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" transparent="1" font="Regular;39" valign="center" halign="center" />
+    <widget backgroundColor="KravenIBbg2" name="headline" position="30,30" size="1320,60" transparent="1" font="Regular;39" valign="center" halign="center" />
+    <widget backgroundColor="KravenIBbg2" name="version" position="1290,30" size="600,60" foregroundColor="KravenMFont2" transparent="1" font="Regular;39" valign="center" halign="right" />
+    <widget backgroundColor="Kravenbg2" source="global.CurrentTime" position="1290,75" size="600,82" render="Label" font="Regular;39" valign="center" halign="right"  foregroundColor="KravenFont1" transparent="1">
+        <convert type="ClockToText">Format:%A, %d.%m.%Y  %H:%M</convert>
+    </widget>
+    <widget name="video" position="1407,180" size="483,273" zPosition="5" backgroundColor="transparent" />
+    <eLabel backgroundColor="#00000000" position="1407,180" size="483,273" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="1407,180" size="483,4" transparent="0" zPosition="6" />
+    <eLabel backgroundColor="KravenBorder2" position="1407,448" size="483,4" transparent="0" zPosition="6" />
+    <eLabel backgroundColor="KravenBorder2" position="1407,180" size="4,273" transparent="0" zPosition="6" />
+    <eLabel backgroundColor="KravenBorder2" position="1885,180" size="4,273" transparent="0" zPosition="6" />
+    <widget backgroundColor="Kravenbg2" name="list" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="30,225" size="1320,630" zPosition="5" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="config" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="30,180" size="1305,720" zPosition="5" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="menu_list" position="30,180" size="1305,720" zPosition="5" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="log" position="30,180" size="1860,720" zPosition="5" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget name="popup_bg" position="255,240" size="900,585" backgroundColor="#00000000" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/popup_bg.png" transparent="1" zPosition="6" />
+    <widget backgroundColor="Kravenbg2" name="popup_list" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="285,270" size="840,525" zPosition="7" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="popup_list2" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="285,270" size="840,525" zPosition="8" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="Web_Channel" position="82,172" size="300,45" halign="left" font="Regular;37" foregroundColor="KravenFont2" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="STB_Channel" position="555,172" size="300,45" halign="left" font="Regular;37" foregroundColor="KravenFont2" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="alt_STB_Channel" position="915,172" size="300,45" halign="left" font="Regular;37" foregroundColor="KravenFont2" transparent="1" />
+    <widget name="separator" position="30,217" size="1320,3" backgroundColor="KravenLine" zPosition="6" />
+    <widget name="config_information" position="1407,480" zPosition="3" size="483,450" backgroundColor="transparent" />
+    <widget name="config_information_text" position="1422,487" size="453,435" backgroundColor="#00000000" transparent="1" halign="left" zPosition="5" font="Regular;21"/>
+    <widget name="info" position="30,180" size="1305,750" font="Regular;36" backgroundColor="Kravenbg2" scrollbarWidth="5" transparent="1" zPosition="1" />
+    <widget name="path" position="75,75" size="1230,82" backgroundColor="Kravenbg2" transparent="1" font="Regular;28" valign="center" halign="left" />
+    <widget name="bt_red" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/red_round.png" position="38,984" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_red" position="90,981" size="300,39" zPosition="1" font="Regular;28" halign="left" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
+    <widget name="bt_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/green_round.png" position="410,984" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_green" position="462,981" size="300,39" zPosition="1" font="Regular;28" halign="left" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
+    <widget name="bt_ok" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_ok.png" position="782,984" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_ok" position="834,981" size="300,39" zPosition="1" font="Regular;28" halign="left" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
+    <widget name="bt_yellow" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/yellow_round.png" position="1154,984" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_yellow" position="1206,981" size="300,39" zPosition="1" font="Regular;28" halign="left" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
+    <widget name="bt_blue" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/blue_round.png" position="1526,984" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_blue" position="1578,981" size="345,39" zPosition="1" font="Regular;28" halign="left" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
+    <widget name="bt_0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_0.png" position="38,1035" zPosition="3" size="32,32" alphatest="blend" />
+    <widget name="bt_5" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_5.png" position="38,1035" zPosition="2" size="32,32" alphatest="blend" />
+    <widget name="bt_exit" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_exit.png" position="38,1035" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_0" position="90,1032" size="300,39" zPosition="1" font="Regular;28" halign="left" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
+    <widget name="bt_1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_1.png" position="410,1035" zPosition="3" size="32,32" alphatest="blend" />
+    <widget name="bt_6" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_6.png" position="410,1035" zPosition="2" size="32,32" alphatest="blend" />
+    <widget name="bt_text" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_text.png" position="410,1035" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_1" position="462,1032" size="300,39" zPosition="1" font="Regular;28" halign="left" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
+    <widget name="bt_2" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_2.png" position="782,1035" zPosition="3" size="32,32" alphatest="blend" />
+    <widget name="bt_7" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_7.png" position="782,1035" zPosition="2" size="32,32" alphatest="blend" />
+    <widget name="bt_epg" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_epg.png" position="782,1035" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_2" position="834,1032" size="300,39" zPosition="1" font="Regular;28" halign="left" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
+    <widget name="bt_3" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_3.png" position="1154,1035" zPosition="3" size="32,32" alphatest="blend" />
+    <widget name="bt_8" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_8.png" position="1154,1035" zPosition="2" size="32,32" alphatest="blend" />
+    <widget name="bt_info" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_help.png" position="1154,1035" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_3" position="1206,1032" size="300,39" zPosition="1" font="Regular;28" halign="left" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
+    <widget name="bt_4" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_4.png" position="1526,1035" zPosition="3" size="32,32" alphatest="blend" />
+    <widget name="bt_9" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_9.png" position="1526,1035" zPosition="2" size="32,32" alphatest="blend" />
+    <widget name="bt_menu" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_menu.png" position="1526,1035" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_4" position="1578,1032" size="300,39" zPosition="1" font="Regular;28" halign="left" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
+    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1920,1080" transparent="0" zPosition="-10" />
+	<!-- Menu ibar -->
+  </screen>

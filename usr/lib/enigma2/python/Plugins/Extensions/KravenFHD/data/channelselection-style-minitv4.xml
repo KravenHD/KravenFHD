@@ -1,0 +1,32 @@
+<!-- /* ChannelSelection - MiniTV right -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection">
+    <widget backgroundColor="Kravenbg2" scrollbarMode="showOnDemand" scrollbarWidth="5" picServiceEventProgressbar="KravenFHD/progress/progress52.png" colorEventProgressbar="KravenProgress" colorEventProgressbarSelected="KravenProgress" foregroundColorMarkedSelected="green" foregroundColor="KravenFont1" colorEventProgressbarBorder="KravenBorder" colorEventProgressbarBorderSelected="KravenSelFont" colorServiceDescription="KravenFont2" colorServiceDescriptionSelected="KravenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="KravenNotAvailable" itemHeight="75" name="list" position="63,115" serviceInfoFont="Regular;34" serviceItemHeight="52" serviceNameFont="Regular;37" serviceNumberFont="Regular;37" size="1107,832" transparent="1"  />
+    <widget font="Regular;45" foregroundColor="KravenFont2" position="1233,105" halign="left" render="KravenFHDRunningText" options="movetype=running,startpoint=0,startdelay=5000,steptime=80,wrap=1,always=0,repeat=5,oneshot=1" size="624,60" source="ServiceEvent" backgroundColor="Kravenbg2" transparent="1" >
+      <convert type="KravenFHDEventName">Name</convert>
+    </widget>
+    <widget source="ServiceEvent" render="Label" position="1233,170" size="90,36" font="Regular;28" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" transparent="1" halign="left">
+      <convert type="KravenFHDEventTime">StartTime</convert>
+      <convert type="ClockToText">
+      </convert>
+    </widget>
+    <widget position="1335,185" size="372,7" render="Progress" source="ServiceEvent" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress248.png">
+      <convert type="KravenFHDEventTime">Progress</convert>
+    </widget>
+    <eLabel position="1335,188" size="372,1" backgroundColor="KravenLine" />
+    <widget source="ServiceEvent" render="Label" position="1719,170" size="90,36" font="Regular;28" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" transparent="1" halign="right">
+      <convert type="KravenFHDEventTime">EndTime</convert>
+      <convert type="ClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget source="session.VideoPicture" render="Pig" position="1233,216" size="576,324" zPosition="3" backgroundColor="transparent" />
+    <eLabel backgroundColor="#00000000" position="1233,216" size="576,324" transparent="0" zPosition="2" />
+    <eLabel backgroundColor="KravenBorder2" position="1233,216" size="576,4" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="1233,536" size="576,4" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="1233,216" size="4,324" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="1805,216" size="4,324" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1920,1080" transparent="0" zPosition="-10" />
+    <constant-widget name="ChannelSelection"/>
+    <constant-widget name="gradient-cs"/>
+    <constant-widget name="CSREPG32"/>
+    <!--<text="ChannelSelection - MiniTV right" position="63,0" />-->
+  </screen>
+  <!-- ChannelSelection MiniTV */-->

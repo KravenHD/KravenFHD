@@ -1,0 +1,16 @@
+    <ePixmap pixmap="KravenFHD/shift.png" position="-15,225" size="1357,255" zPosition="-9" alphatest="blend"/>
+    <widget name="state" position="82,330" size="165,36" font="Regular;42" foregroundColor="KravenIBFont1" halign="center" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="center" />
+    <widget source="session.CurrentService" render="Label" position="1000,322" size="150,45" font="Regular;36" halign="right" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top">
+      <convert type="ServicePosition">Remaining</convert>
+    </widget>
+    <eLabel text="bis live:" position="870,322" size="150,45" font="Regular;36" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" foregroundColor="KravenIBFont1" />
+    <eLabel text="min" position="1161,322" size="90,45" font="Regular;36" foregroundColor="KravenIBFont1" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" />
+    <widget source="session.CurrentService" render="Label" position="250,322" size="150,45" font="Regular;36" halign="right" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top">
+      <convert type="ServicePosition">Length</convert>
+    </widget>
+    <eLabel text="min" position="412,322" size="90,45" font="Regular;36" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" foregroundColor="KravenIBFont1" />
+    <eLabel position="507,322" size="345,48" text="timeshift aktiv" font="Regular;42" backgroundColor="KravenIBbg" transparent="1" zPosition="10" valign="center" foregroundColor="red" halign="center" />
+    <widget position="102,372" render="Progress" backgroundColor="KravenIBbg" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress749.png" transparent="1" size="1123,7" source="session.CurrentService" zPosition="17">
+      <convert type="ServicePosition">Position</convert>
+    </widget>
+    <eLabel backgroundColor="KravenLine" position="102,375" size="1123,1" zPosition="16" />

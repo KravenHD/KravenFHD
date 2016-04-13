@@ -1,0 +1,37 @@
+	<!-- SplitScreen -->
+  <screen name="SplitScreen" position="0,0" zPosition="-1" size="1920,1080" flags="wfNoBorder" backgroundColor="Kravenbg2" >
+    <widget name="zap_focus" position="63,18" size="1062,45" font="Regular2;36" backgroundColor="KravenIBbg2" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+    <widget source="MasterService" render="Picon" position="63,172" zPosition="1" size="195,117" transparent="1" alphatest="blend">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget source="MasterService" render="Label" position="288,172" size="639,117" font="Regular;39" backgroundColor="Kravenbg" transparent="1" foregroundColor="KravenMFont2" valign="center" halign="left">
+      <convert type="ServiceName" />
+    </widget>
+    <widget name="video1" position="63,307" size="864,486" zPosition="3" backgroundColor="transparent" />
+    <eLabel backgroundColor="#00000000" position="63,307" size="864,486" transparent="0" zPosition="2" />
+    <eLabel backgroundColor="KravenBorder2" position="63,307" size="864,4" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="63,789" size="864,4" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="63,307" size="4,486" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="922,307" size="4,486" transparent="0" zPosition="4" />
+    <widget source="MasterService" render="Label" position="63,817" size="864,45" font="Regular2;36" backgroundColor="Kravenbg2" transparent="1" foregroundColor="KravenFont2" halign="left">
+      <convert type="EventName" />
+    </widget>
+    <widget source="SlaveService" render="Picon" position="993,172" zPosition="1" size="195,117" transparent="1" alphatest="blend">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget source="SlaveService" render="Label" position="1218,172" size="639,117" font="Regular;39" backgroundColor="Kravenbg2" transparent="1" foregroundColor="KravenMFont2" valign="center" halign="left">
+      <convert type="ServiceName" />
+    </widget>
+    <widget name="video2" position="993,307" size="864,486" zPosition="3" backgroundColor="transparent" />
+    <eLabel backgroundColor="#00000000" position="993,307" size="864,486" transparent="0" zPosition="2" />
+    <eLabel backgroundColor="KravenBorder2" position="993,307" size="864,4" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="993,789" size="864,4" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="993,307" size="4,486" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="1852,307" size="4,486" transparent="0" zPosition="4" />
+    <widget source="SlaveService" render="Label" position="993,817" size="864,45" font="Regular2;36" backgroundColor="Kravenbg2" transparent="1" foregroundColor="KravenFont2" halign="left">
+      <convert type="EventName" />
+    </widget>
+    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1920,1080" transparent="0" zPosition="-10" />
+    <constant-widget name="gradient-split1"/>
+    <!--<text="SplitScreen - without description" position="105,0" />-->
+  </screen>

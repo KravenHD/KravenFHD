@@ -1,0 +1,38 @@
+<!--/* NumberZapExt -->
+<screen backgroundColor="transparent" flags="wfNoBorder" name="NumberZapExt" position="396,324" size="1071,364" title="QuickZap">
+  <widget name="chPicon" backgroundColor="Kravenbg" position="558,112" size="337,141" transparent="1" zPosition="1" alphatest="blend" />
+  <widget backgroundColor="Kravenbg" font="Regular;120" foregroundColor="KravenFont1" halign="center" name="chNum" position="145,108" size="204,150" transparent="0" zPosition="0" />
+  <widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont1" halign="center" name="chName" noWrap="1" position="442,268" size="580,39" transparent="0" zPosition="0" />
+  <eLabel backgroundColor="Kravenbg" halign="center" position="405,48" size="640,271" zPosition="-1" />
+  <eLabel backgroundColor="KravenBorder" position="1041,52" size="1,262" />
+  <eLabel backgroundColor="KravenBorder" position="411,52" size="630,1" />
+  <eLabel backgroundColor="Kravenbg" halign="center" position="69,69" size="337,231" zPosition="-1" />
+  <eLabel backgroundColor="KravenBorder" position="73,73" size="1,220" />
+  <eLabel backgroundColor="KravenBorder" position="73,73" size="352,1" />
+  <eLabel backgroundColor="KravenBorder" position="426,73" size="1,220" />
+  <eLabel backgroundColor="KravenBorder" position="73,292" size="352,1" />
+  <eLabel backgroundColor="KravenBorder" position="411,313" size="630,1" />
+  <eLabel backgroundColor="KravenBorder" position="411,294" size="1,21" />
+  <eLabel backgroundColor="KravenBorder" position="411,52" size="1,21" />
+</screen>
+<!-- NumberZapExt */-->
+<!--/* NumberZapWithName -->
+<screen backgroundColor="transparent" flags="wfNoBorder" name="NumberZapWithName" position="396,324" size="1071,364" title="Kanal">
+  <widget alphatest="blend" position="558,112" render="Picon" backgroundColor="Kravenbg" size="337,141" source="Service" transparent="1" zPosition="1">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget backgroundColor="Kravenbg" font="Regular;120" foregroundColor="KravenFont1" halign="center" name="servicenumber" position="145,108" size="204,150" transparent="0" zPosition="0" />
+  <widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont1" halign="center" name="servicename" noWrap="1" position="442,268" size="580,39" transparent="0" zPosition="0" />
+  <eLabel backgroundColor="Kravenbg" halign="center" position="405,48" size="640,271" zPosition="-1" />
+  <eLabel backgroundColor="KravenBorder" position="1041,52" size="1,262" />
+  <eLabel backgroundColor="KravenBorder" position="411,52" size="630,1" />
+  <eLabel backgroundColor="Kravenbg" halign="center" position="69,69" size="337,231" zPosition="-1" />
+  <eLabel backgroundColor="KravenBorder" position="73,73" size="1,220" />
+  <eLabel backgroundColor="KravenBorder" position="73,73" size="352,1" />
+  <eLabel backgroundColor="KravenBorder" position="426,73" size="1,220" />
+  <eLabel backgroundColor="KravenBorder" position="73,292" size="352,1" />
+  <eLabel backgroundColor="KravenBorder" position="411,313" size="630,1" />
+  <eLabel backgroundColor="KravenBorder" position="411,294" size="1,21" />
+  <eLabel backgroundColor="KravenBorder" position="411,52" size="1,21" />
+</screen>
+<!-- NumberZapWithName */-->

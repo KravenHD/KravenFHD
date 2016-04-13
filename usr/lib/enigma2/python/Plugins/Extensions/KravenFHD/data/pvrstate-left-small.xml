@@ -1,0 +1,9 @@
+  <!-- PVRState -->
+  <screen name="PVRState" position="45,30" size="165,67" flags="wfNoBorder" backgroundColor="transparent" zPosition="10">
+    <eLabel backgroundColor="KravenIBbg" position="0,0" size="165,67" transparent="0" zPosition="-10" />
+    <!--<eLabel position="0,0" backgroundColor="KravenIBLine" size="165,3" zPosition="-8" />
+    <eLabel backgroundColor="KravenIBLine" position="0,64" size="165,3" zPosition="-8" />
+    <eLabel backgroundColor="KravenIBLine" position="0,3" size="3,64" zPosition="-8" />
+    <eLabel backgroundColor="KravenIBLine" position="162,3" size="3,64" zPosition="-8" />-->
+    <widget backgroundColor="KravenIBbg" font="Regular;45" foregroundColor="KravenIBFont1" halign="center" name="state" position="0,0" size="165,67" text="&gt;&gt; 256" transparent="1" valign="center" zPosition="5" />
+  </screen>

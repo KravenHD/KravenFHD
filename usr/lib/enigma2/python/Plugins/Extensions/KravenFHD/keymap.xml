@@ -1,0 +1,6 @@
+<keymap>
+	<map context="KravenFHDConfigActions">
+		<key id="KEY_CHANNELUP" mapto="pageup" flags="m" />
+		<key id="KEY_CHANNELDOWN" mapto="papedown" flags="m" />
+	</map>
+</keymap>

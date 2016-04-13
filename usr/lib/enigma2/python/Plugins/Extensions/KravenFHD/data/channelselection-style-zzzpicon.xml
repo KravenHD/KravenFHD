@@ -1,0 +1,29 @@
+<!-- /* ChannelSelection - ZZZ-Picons -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection">
+    <widget font="Regular;45" foregroundColor="KravenFont2" position="63,105" halign="left" render="KravenFHDRunningText" options="movetype=running,startpoint=0,startdelay=5000,steptime=80,wrap=1,always=0,repeat=5,oneshot=1" size="624,60" source="ServiceEvent" backgroundColor="Kravenbg4" transparent="1" >
+      <convert type="KravenFHDEventName">Name</convert>
+    </widget>
+    <widget source="ServiceEvent" render="Label" position="63,170" size="90,36" font="Regular;28" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" transparent="1" halign="left">
+      <convert type="KravenFHDEventTime">StartTime</convert>
+      <convert type="ClockToText">
+      </convert>
+    </widget>
+    <widget position="153,185" size="444,7" render="Progress" source="ServiceEvent" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress300.png">
+      <convert type="KravenFHDEventTime">Progress</convert>
+    </widget>
+    <eLabel position="153,188" size="444,1" backgroundColor="KravenLine" />
+    <widget source="ServiceEvent" render="Label" position="597,170" size="90,36" font="Regular;28" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" transparent="1" halign="right">
+      <convert type="KravenFHDEventTime">EndTime</convert>
+      <convert type="ClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget alphatest="blend" position="75,230" render="KravenFHDXPicon" size="600,360" source="ServiceEvent" transparent="1" zPosition="4">
+      <convert type="KravenFHDRefString">ServicelistRef</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg4" scrollbarMode="showOnDemand" scrollbarWidth="5" picServiceEventProgressbar="KravenFHD/progress/progress52.png" colorEventProgressbar="KravenProgress" colorEventProgressbarSelected="KravenProgress" foregroundColorMarkedSelected="green" foregroundColor="KravenFont1" colorEventProgressbarBorder="KravenBorder" colorEventProgressbarBorderSelected="KravenSelFont" colorServiceDescription="KravenFont2" colorServiceDescriptionSelected="KravenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="KravenNotAvailable" itemHeight="75" name="list" position="750,115" serviceInfoFont="Regular;34" serviceItemHeight="52" serviceNameFont="Regular;37" serviceNumberFont="Regular;37" size="1107,832" transparent="1"  />
+    <eLabel backgroundColor="Kravenbg4" position="0,0" size="1920,1080" transparent="0" zPosition="-10" />
+    <constant-widget name="ChannelSelection"/>
+    <constant-widget name="gradient-cs"/>
+    <constant-widget name="CSZZZEPG32"/>
+    <!--<text="ChannelSelection - ZZZ-Picons" position="63,0" />-->
+  </screen>
+<!-- ChannelSelection ZZZPicon */-->

@@ -1,0 +1,3 @@
+  <!-- PVRState -->
+  <screen name="PVRState" position="0,0" size="0,0" flags="wfNoBorder" backgroundColor="transparent" zPosition="10">
+  </screen>
