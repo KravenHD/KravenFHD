@@ -1249,4 +1249,189 @@
     <constant-widget name="Colorbuttons"/>
     <constant-widget name="OKExit"/>
   </screen>
+  <!-- PermanentClockMenu -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="PermanentClockMenu" position="0,0" size="1920,1080" title=" ">
+	<eLabel text="Permanent Clock" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="list" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="PermanentClockMenu" position="105,0" />-->
+  </screen>
+  <!-- PermanentClockScreen -->
+  <screen backgroundColor="KravenIBbg" flags="wfNoBorder" name="PermanentClockScreen" position="0,0" size="180,45" zPosition="10" title=" ">
+    <widget backgroundColor="KravenIBbg" source="global.CurrentTime" render="Label" position="1,1" size="180,45" font="Regular;39" foregroundColor="KravenIBFont1" valign="center" halign="center" transparent="1">
+	  <convert type="ClockToText">Default</convert>
+	</widget>
+  </screen>
+  <!-- OscamButler -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="OscamButler" position="0,0" size="1920,1080" title="OscamButler">
+    <widget backgroundColor="KravenIBbg3" name="title" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" noWrap="1" />
+	<widget backgroundColor="Kravenbg3" name="config" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,675" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<widget backgroundColor="Kravenbg3" name="info_txt" font="Regular2;33" foregroundColor="KravenFont2" position="105,820" size="1062,82" valign="center" halign="center" zPosition="2" />
+    <widget font="Regular;30" halign="left" valign="center" name="buttonred" position="105,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="buttongreen" position="480,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="buttonblue" position="1230,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="OscamButler" position="105,0" />-->
+  </screen>
+  <!-- EcmInfoConfigMenu -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="EcmInfoConfigMenu" position="0,0" size="1920,1080" title=" ">
+	<eLabel text="Ecm Info" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="config" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="EcmInfoConfigMenu" position="105,0" />-->
+  </screen>
+  <!-- CCcamInfoMain -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="CCcamInfoMain" position="0,0" size="1920,1080" title=" ">
+	<eLabel text="CCcam Info" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="menu" font="Regular;33" foregroundColor="KravenFont1" itemHeight="30" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="CCcamInfoMain" position="105,0" />-->
+  </screen>
+  <!-- CCcamInfoEcmInfoSelection -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="CCcamInfoEcmInfoSelection" position="0,0" size="1920,1080" title=" ">
+	<eLabel text="CCcam Info" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="list" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="CCcamInfoEcmInfoSelection" position="105,0" />-->
+  </screen>
+  <!-- CCcamInfoInfoScreen -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="CCcamInfoInfoScreen" position="0,0" size="1920,1080" title=" ">
+	<eLabel text="CCcam Info" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="text" font="Regular;33" foregroundColor="KravenFont1" position="105,120" size="1062,810" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="CCcamInfoInfoScreen" position="105,0" />-->
+  </screen>
+  <!-- CCcamShareViewMenu -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="CCcamShareViewMenu" position="0,0" size="1920,1080" title="Share View">
+    <widget backgroundColor="KravenIBbg3" name="title" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" noWrap="1" />
+	<widget backgroundColor="Kravenbg3" name="list" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,540" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<widget backgroundColor="Kravenbg3" name="uphops" font="Regular;33" foregroundColor="KravenFont1" position="105,705" size="500,41" />
+	<widget backgroundColor="Kravenbg3" name="cards" font="Regular;33" foregroundColor="KravenFont1" position="667,750" size="500,41" halign="right" />
+	<widget backgroundColor="Kravenbg3" name="providers" font="Regular;33" foregroundColor="KravenFont1" position="105,705" size="500,41" />
+	<widget backgroundColor="Kravenbg3" name="reshare" font="Regular;33" foregroundColor="KravenFont1" position="667,750" size="500,41" halign="right" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="CCcamShareViewMenu" position="105,0" />-->
+  </screen>
+  <!-- CCcamInfoSubMenu -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="CCcamInfoSubMenu" position="0,0" size="1920,1080" title=" ">
+	<eLabel text="CCcam Info" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="list" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,450" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<widget backgroundColor="Kravenbg3" name="info" font="Regular2;33" foregroundColor="KravenFont2" position="105,615" size="1062,315" halign="center" valign="center" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="CCcamInfoSubMenu" position="105,0" />-->
+  </screen>
+  <!-- CCcamInfoServerMenu -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="CCcamInfoServerMenu" position="0,0" size="1920,1080" title=" ">
+	<eLabel text="CCcam Info" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="list" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,450" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<widget backgroundColor="Kravenbg3" name="info" font="Regular2;33" foregroundColor="KravenFont2" position="105,615" size="1062,315" halign="center" valign="center" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="CCcamInfoServerMenu" position="105,0" />-->
+  </screen>
+  <!-- CCcamInfoConfigMenu -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="CCcamInfoConfigMenu" position="0,0" size="1920,1080" title=" ">
+	<eLabel text="CCcam Info" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="config" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="CCcamInfoConfigMenu" position="105,0" />-->
+  </screen>
+  <!-- CCcamInfoRemoteBoxMenu -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="CCcamInfoRemoteBoxMenu" position="0,0" size="1920,1080" title=" ">
+	<eLabel text="CCcam Info" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="list" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="NameRedGreenYellowBlue"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="CCcamInfoRemoteBoxMenu" position="105,0" />-->
+  </screen>
+  <!-- CCcamInfoShareInfo -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="CCcamInfoShareInfo" position="0,0" size="1920,1080" title=" ">
+	<eLabel text="CCcam Info" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="list" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="NameRedGreenYellowBlue"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="CCcamInfoShareInfo" position="105,0" />-->
+  </screen>
+  <!-- CCcamInfoConfigSwitcher -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="CCcamInfoConfigSwitcher" position="0,0" size="1920,1080" title=" ">
+	<eLabel text="CCcam Info" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="list" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="NameRedGreenYellowBlue"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="CCcamInfoConfigSwitcher" position="105,0" />-->
+  </screen>
+  <!-- CCcamInfoMenuConfig -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="CCcamInfoMenuConfig" position="0,0" size="1920,1080" title=" ">
+	<eLabel text="CCcam Info" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="list" font="Regular;33" foregroundColor="KravenFont1" itemHeight="30" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="NameRedGreen"/>
+    <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <constant-widget name="OKExit"/>
+    <!--<text="CCcamInfoMenuConfig" position="105,0" />-->
+  </screen>
+  <!-- SeriesPluginConfiguration -->
+  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="SeriesPluginConfiguration" position="0,0" size="1920,1080" title="SeriesPlugin Setup">
+	<widget backgroundColor="Kravenbg" name="config" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1752,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+    <constant-widget name="Title-big"/>
+    <constant-widget name="Background"/>
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="NameRedGreenYellowBlue"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="SeriesPluginConfiguration" position="105,0" />-->
+  </screen>
+  <!-- SeriesPluginChannelEditor -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="SeriesPluginChannelEditor" position="0,0" size="1920,1080" title="Channel Editor">
+	<widget backgroundColor="Kravenbg3" name="list" font="Regular;33" foregroundColor="KravenFont1" itemHeight="30" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+    <constant-widget name="Title-big"/>
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="NameRedGreenYellowBlue"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="SeriesPluginChannelEditor" position="105,0" />-->
+  </screen>
+  <!-- SeriesPluginInfoScreen -->
+  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="SeriesPluginInfoScreen" position="0,0" size="1920,1080" title="SeriesPlugin">
+	<widget name="logo" position="105,120" size="400,64" alphatest="on" />
+	<widget name="cover" position="105,120" size="540,80" alphatest="on" />
+	<widget name="state" position="105,120" size="540,80" alphatest="on" />
+	<widget backgroundColor="Kravenbg" name="event_title" position="105,220" size="1752,42" font="Regular;33" foregroundColor="KravenFont1" />
+	<widget backgroundColor="Kravenbg" name="event_episode" position="105,262" size="1752,84" font="Regular;33" foregroundColor="KravenFont1" />
+	<widget backgroundColor="Kravenbg" name="event_description" position="105,346" size="1752,462" font="Regular;33" foregroundColor="KravenFont1" />
+	<widget backgroundColor="Kravenbg" name="datetime" position="105,850" size="300,42" font="Regular;33" foregroundColor="KravenFont2" halign="left" />
+	<widget backgroundColor="Kravenbg" name="channel" position="706,850" size="550,42" font="Regular;33" foregroundColor="KravenFont1" halign="center" />
+	<widget backgroundColor="Kravenbg" name="duration" position="1700,850" size="157,42" font="Regular;33" foregroundColor="KravenFont2" halign="right" />
+    <constant-widget name="Title-big2"/>
+    <constant-widget name="Background"/>
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="NameRedGreenYellowBlue"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="SeriesPluginInfoScreen" position="105,0" />-->
+  </screen>
 <!-- plugins -->

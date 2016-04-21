@@ -7,21 +7,19 @@
     <widget backgroundColor="Kravenbg" font="Regular2;36" foregroundColor="KravenFont2" noWrap="1" position="1233,112" render="Label" size="624,45" source="Service" transparent="1" zPosition="1">
       <convert type="KravenFHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont1" position="1233,165" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,342" source="Service" transparent="1" valign="top">
-      <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
-    </widget>
-	<widget source="Service" render="Cover" position="1410,519" size="270,405" zPosition="4" backgroundColor="Kravenbg" alphatest="blend" transparent="1" />
-    <widget backgroundColor="Kravenbg" font="Regular2;25" foregroundColor="KravenFont2" halign="left" position="1233,931" render="Label" size="105,36" source="Service" transparent="1" zPosition="1">
+	<widget source="Service" render="Cover" position="1410,515" size="270,405" zPosition="4" backgroundColor="Kravenbg" alphatest="blend" transparent="1" />
+    <widget backgroundColor="Kravenbg2" font="Regular2;28" foregroundColor="KravenFont2" halign="left" position="1233,926" render="Label" size="105,36" source="Service" transparent="1" zPosition="1">
       <convert type="ServiceTime">Duration</convert>
       <convert type="ClockToText">AsLength</convert>
     </widget>
-    <widget backgroundColor="Kravenbg" font="Regular;25" foregroundColor="KravenFont1" halign="center" position="1410,931" render="Label" size="270,36" source="Service" transparent="1" zPosition="1">
+    <widget backgroundColor="Kravenbg2" font="Regular;28" foregroundColor="KravenFont1" noWrap="1" halign="center" position="1350,926" render="Label" size="320,36" source="Service" transparent="1" zPosition="1">
       <convert type="MovieInfo">RecordServiceName</convert>
     </widget>
-    <widget backgroundColor="Kravenbg" font="Regular2;25" foregroundColor="KravenFont2" halign="right" position="1683,931" render="Label" size="174,36" source="Service" transparent="1" zPosition="1">
+    <widget backgroundColor="Kravenbg2" font="Regular2;28" foregroundColor="KravenFont2" halign="right" position="1683,926" render="Label" size="174,36" source="Service" transparent="1" zPosition="1">
       <convert type="MovieInfo">FileSize</convert>
     </widget>
     <eLabel backgroundColor="Kravenbg" position="0,0" size="1920,1080" transparent="0" zPosition="-10" />
+	<constant-widget name="msbc33"/>
 	<constant-widget name="EMCSelection"/>
     <constant-widget name="gradient-emc"/>
     <!--<text="MovieSelection - big Cover" position="105,0" />-->

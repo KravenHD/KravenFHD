@@ -146,9 +146,9 @@
   <parameters>
     <!-- Choicelist -->
     <parameter name="ChoicelistItemHeight" value="45" />
-    <parameter name="ChoicelistFont" value="Regular;30" />
+    <parameter name="ChoicelistFont" value="Regular;33" />
     <parameter name="ChoicelistFontSize" value="30" />
-    <parameter name="ChoicelistName" value="70,5,1720,36" />
+    <parameter name="ChoicelistName" value="70,1,1720,42" />
     <parameter name="ChoicelistIcon" value="10,5,60,40" />
     <parameter name="ChoicelistDash" value="0,36,1720,30" />
     <!-- MovieList -->
@@ -164,13 +164,13 @@
     <parameter name="MovieListProgressBarXtraYOffsetVTIStyle" value="5" />
     <parameter name="MovieListIcon" value="10,5,40,40" />
     <parameter name="MovieListMinimalItemHeight" value="45" />
-    <parameter name="MovieListMinimalVTITitle" value="40,0,1020,40" />
-    <parameter name="MovieListMinimalVTIService" value="980,2,0,38" />
-    <parameter name="MovieListMinimalVTIBegin" value="1110,2,0,38" />
-    <parameter name="MovieListMinimalVTILength" value="1135,2,0,38" />
-    <parameter name="MovieListMinimalVTISize" value="0, 0, 0, 0" />
+    <parameter name="MovieListMinimalVTITitle" value="40,0,1000,40" />
+    <parameter name="MovieListMinimalVTIPicon" value="815,2,60,40" />
+    <parameter name="MovieListMinimalVTIBegin" value="825,2,70,38" />
+    <parameter name="MovieListMinimalVTILength" value="895,2,70,38" />
+    <parameter name="MovieListMinimalVTISize" value="965,2,70,38" />
+    <parameter name="MovieListMinimalVTIService" value="0, 0, 0, 0" />
     <parameter name="MovieListMinimalVTIDescription" value="0, 0, 0, 0" />
-    <parameter name="MovieListMinimalVTIPicon" value="0, 0, 0, 0" />
     <parameter name="MovieListMinimalVTITags" value="0, 0, 0, 0" />
     <parameter name="MovieListMinimalVTIServiceTags" value="0, 0, 0, 0" />
     <parameter name="MovieListItemHeight" value="45" />
@@ -379,8 +379,8 @@
     <color color="KravenMarked" name="ListboxMarkedForeground" />
     <color color="KravenSelection" name="ListboxMarkedAndSelectedBackground" />
     <color color="KravenMarked" name="ListboxMarkedAndSelectedForeground" />
-    <color color="KravenFont1" name="WindowTitleForeground" />
-    <color color="Kravenbg" name="WindowTitleBackground" />
+    <color color="white" name="WindowTitleForeground" />
+    <color color="black" name="WindowTitleBackground" />
     <borderset name="bsWindow">
       <pixmap filename="KravenFHD/bsWindow/bs_tl.png" pos="bpTopLeft" />
       <pixmap filename="KravenFHD/bsWindow/bs_t.png" pos="bpTop" />

@@ -489,6 +489,11 @@ config.plugins.KravenFHD.MovieSelection = ConfigSelection(default="movieselectio
 				("movieselection-minitv-cover", _("MiniTV + Cover"))
 				])
 
+config.plugins.KravenFHD.MovieSelectionEPGSize = ConfigSelection(default="small", choices = [
+				("small", _("small")),
+				("big", _("big"))
+				])
+
 config.plugins.KravenFHD.EMCStyle = ConfigSelection(default="emc-minitv", choices = [
 				("emc-nocover", _("no Cover")),
 				("emc-nocover2", _("no Cover2")),
@@ -500,6 +505,11 @@ config.plugins.KravenFHD.EMCStyle = ConfigSelection(default="emc-minitv", choice
 				("emc-verybigcover2", _("very big Cover2")),
 				("emc-minitv", _("MiniTV")),
 				("emc-minitv2", _("MiniTV2"))
+				])
+
+config.plugins.KravenFHD.EMCEPGSize = ConfigSelection(default="small", choices = [
+				("small", _("small")),
+				("big", _("big"))
 				])
 
 config.plugins.KravenFHD.RunningText = ConfigSelection(default="startdelay=4000", choices = [
@@ -628,11 +638,13 @@ config.plugins.KravenFHD.Infobox = ConfigSelection(default="sat", choices = [
 				])
 
 config.plugins.KravenFHD.tuner = ConfigSelection(default="4-tuner", choices = [
+				("2-tuner", _("2 Tuner")),
 				("4-tuner", _("4 Tuner")),
 				("8-tuner", _("8 Tuner"))
 				])
 
 config.plugins.KravenFHD.tuner2 = ConfigSelection(default="4-tuner", choices = [
+				("2-tuner", _("2 Tuner")),
 				("4-tuner", _("4 Tuner")),
 				("8-tuner", _("8 Tuner")),
 				("10-tuner", _("10 Tuner"))
@@ -790,6 +802,10 @@ config.plugins.KravenFHD.CategoryViews = ConfigSelection(default="category", cho
 				("category", _(" "))
 				])
 
+config.plugins.KravenFHD.CategoryMovieSelection = ConfigSelection(default="category", choices = [
+				("category", _(" "))
+				])
+
 config.plugins.KravenFHD.CategoryChannellist = ConfigSelection(default="category", choices = [
 				("category", _(" "))
 				])
@@ -834,7 +850,7 @@ class KravenFHD(ConfigListScreen, Screen):
     <convert type="ClockToText">Default</convert>
   </widget>
   <eLabel position="830,80" size="402,46" text="KravenFHD" font="Regular; 36" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00f0a30a" />
-  <eLabel position="845,126" size="372,40" text="Version: 1.0.0" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
+  <eLabel position="845,126" size="372,40" text="Version: 1.1.0" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
   <widget name="helperimage" position="801,172" size="460,259" zPosition="1" backgroundColor="#00000000" />
   <widget source="Canvas" render="Canvas" position="801,172" size="460,259" zPosition="-1" backgroundColor="#00000000" />
   <widget source="help" render="Label" position="847,440" size="368,196" font="Regular;20" backgroundColor="#00000000" foregroundColor="#00f0a30a" halign="center" valign="top" transparent="1" />
@@ -1093,7 +1109,6 @@ class KravenFHD(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("VIEWS _____________________________________________________________________"), config.plugins.KravenFHD.CategoryViews, _("This sections offers all settings for skinned plugins.")))
 		list.append(getConfigListEntry(_("Volume"), config.plugins.KravenFHD.Volume, _("Choose from different styles for the volume display.")))
 		list.append(getConfigListEntry(_("CoolTVGuide"), config.plugins.KravenFHD.CoolTVGuide, _("Choose from different styles for CoolTVGuide.")))
-		list.append(getConfigListEntry(_("MovieSelection"), config.plugins.KravenFHD.MovieSelection, _("Choose from different styles for MovieSelection.")))
 		list.append(getConfigListEntry(_("SecondInfobar"), config.plugins.KravenFHD.SIB, _("Choose from different styles for SecondInfobar.")))
 		list.append(getConfigListEntry(_("SerienRecorder"), config.plugins.KravenFHD.SerienRecorder, _("Choose whether you want the Kraven skin to be applied to 'Serienrecorder' or not. Activation of this option prohibits the skin selection in the SR-plugin.")))
 		if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/plugin.py"):
@@ -1102,8 +1117,14 @@ class KravenFHD(ConfigListScreen, Screen):
 			emptyLines+=1
 		list.append(getConfigListEntry(_("NumberZap"), config.plugins.KravenFHD.NumberZapExt, _("Choose from different styles for NumberZap.")))
 		list.append(getConfigListEntry(_("SplitScreen"), config.plugins.KravenFHD.SplitScreen, _("Choose from different styles to display SplitScreen.")))
-		for i in range(emptyLines+3):
+		for i in range(emptyLines+1):
 			list.append(getConfigListEntry(_(" "), ))
+		
+		# page 5 (category 3)
+		emptyLines=0
+		list.append(getConfigListEntry(_("MOVIESELECTION ____________________________________________________________"), config.plugins.KravenFHD.CategoryMovieSelection, _("This sections offers all settings for MovieSelection.")))
+		list.append(getConfigListEntry(_("MovieSelection-Style"), config.plugins.KravenFHD.MovieSelection, _("Choose from different styles for MovieSelection.")))
+		list.append(getConfigListEntry(_("EPG Fontsize"), config.plugins.KravenFHD.MovieSelectionEPGSize, _("Choose the font size of event description.")))
 		
 		# page 6
 		emptyLines=0
@@ -1148,6 +1169,7 @@ class KravenFHD(ConfigListScreen, Screen):
 		emptyLines=0
 		list.append(getConfigListEntry(_("ENHANCED MOVIE CENTER _____________________________________________________"), config.plugins.KravenFHD.CategoryEMC, _("This sections offers all settings for EMC ('EnhancedMovieCenter').")))
 		list.append(getConfigListEntry(_("EMC-Style"), config.plugins.KravenFHD.EMCStyle, _("Choose from different styles for EnhancedMovieCenter.")))
+		list.append(getConfigListEntry(_("EPG Fontsize"), config.plugins.KravenFHD.EMCEPGSize, _("Choose the font size of event description.")))
 		list.append(getConfigListEntry(_("Custom EMC-Selection-Colors"), config.plugins.KravenFHD.EMCSelectionColors, _("Choose whether you want to customize the selection-colors for EnhancedMovieCenter.")))
 		if config.plugins.KravenFHD.EMCSelectionColors.value == "emc-colors-on":
 			list.append(getConfigListEntry(_("EMC-Listselection"), config.plugins.KravenFHD.EMCSelectionBackground, _("Choose the background color of selection bars for EnhancedMovieCenter.")))
@@ -1178,7 +1200,7 @@ class KravenFHD(ConfigListScreen, Screen):
 			list.append(getConfigListEntry(_("Screens"), config.plugins.KravenFHD.ScreensAntialias, _("Reduce distortions (faint/blurry) or color frames around fonts at top and bottom of screens by adjusting the antialiasing brightness.")))
 		else:
 			emptyLines+=4
-		for i in range(emptyLines+3):
+		for i in range(emptyLines+2):
 			list.append(getConfigListEntry(_(" "), ))
 
 		# page 8
@@ -1224,24 +1246,29 @@ class KravenFHD(ConfigListScreen, Screen):
 			else:
 				self["key_yellow"].setText("<< " + _("clock"))
 			self["key_blue"].setText(_("views") + " >>")
-		if (78 <= position <= 89):
+		if (78 <= position <= 85):
 			self["key_yellow"].setText("<< " + _("ECM infos"))
-			self["key_blue"].setText(_("channellist") + " >>")
-		if (90 <= position <= 107):
+			self["key_blue"].setText(_("MovieSelection") + " >>")
+			
+		if (87 <= position <= 89):
 			self["key_yellow"].setText("<< " + _("views"))
+			self["key_blue"].setText(_("channellist") + " >>")
+			
+		if (90 <= position <= 107):
+			self["key_yellow"].setText("<< " + _("MovieSelection"))
 			self["key_blue"].setText(_("EMC") + " >>")
-		if (108 <= position <= 112):
+		if (108 <= position <= 113):
 			self["key_yellow"].setText("<< " + _("channellist"))
 			self["key_blue"].setText(_("player") + " >>")
 		if config.plugins.KravenFHD.IBStyle.value == "box":
-			if (114 <= position <= 117):
+			if (115 <= position <= 118):
 				self["key_yellow"].setText("<< " + _("EMC"))
 				self["key_blue"].setText(_("debug") + " >>")
 		else:
-			if (114 <= position <= 117):
+			if (115 <= position <= 118):
 				self["key_yellow"].setText("<< " + _("EMC"))
 				self["key_blue"].setText(_("antialiasing") + " >>")
-		if (119 <= position <= 122):
+		if (120 <= position <= 123):
 			self["key_yellow"].setText("<< " + _("player"))
 			self["key_blue"].setText(_("debug") + " >>")
 		if (126 <= position <= 127):
@@ -1275,11 +1302,15 @@ class KravenFHD(ConfigListScreen, Screen):
 			elif option.value == "infobar-x2-z1_top3":
 				self.showText(62,_("8 Tuner"))
 		elif option == config.plugins.KravenFHD.tuner:
+			if option.value == "2-tuner":
+				self.showText(62,_("2 Tuner"))
 			if option.value == "4-tuner":
 				self.showText(62,_("4 Tuner"))
 			elif option.value == "8-tuner":
 				self.showText(62,_("8 Tuner"))
 		elif option == config.plugins.KravenFHD.tuner2:
+			if option.value == "2-tuner":
+				self.showText(62,_("2 Tuner"))
 			if option.value == "4-tuner":
 				self.showText(62,_("4 Tuner"))
 			elif option.value == "8-tuner":
@@ -1369,6 +1400,16 @@ class KravenFHD(ConfigListScreen, Screen):
 				self.showText(36,_("description - 32 Pixel \nEPG list - 32 Pixel \nprimetime - 32 Pixel"))
 			elif config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
 				self.showText(36,_("description - 36 Pixel \nEPG list - 36 Pixel \nprimetime - 36 Pixel"))
+		elif option == config.plugins.KravenFHD.MovieSelectionEPGSize:
+			if config.plugins.KravenFHD.MovieSelectionEPGSize.value == "small":
+				self.showText(44,_("33 Pixel"))
+			elif config.plugins.KravenFHD.MovieSelectionEPGSize.value == "big":
+				self.showText(48,_("36 Pixel"))
+		elif option == config.plugins.KravenFHD.EMCEPGSize:
+			if config.plugins.KravenFHD.EMCEPGSize.value == "small":
+				self.showText(44,_("33 Pixel"))
+			elif config.plugins.KravenFHD.EMCEPGSize.value == "big":
+				self.showText(48,_("36 Pixel"))
 		elif option == config.plugins.KravenFHD.ClockIconSize:
 			if config.plugins.KravenFHD.ClockIconSize.value == "size-144":
 				self.showText(60,"144 Pixel")
@@ -1582,21 +1623,23 @@ class KravenFHD(ConfigListScreen, Screen):
 				self["config"].instance.moveSelectionTo(54)
 			else:
 				self["config"].instance.moveSelectionTo(64)
-		if (78 <= position <= 89):
+		if (78 <= position <= 85):
 			self["config"].instance.moveSelectionTo(72)
-		if (90 <= position <= 107):
+		if (87 <= position <= 89):
 			self["config"].instance.moveSelectionTo(78)
-		if (108 <= position <= 112):
+		if (90 <= position <= 107):
+			self["config"].instance.moveSelectionTo(87)
+		if (108 <= position <= 113):
 			self["config"].instance.moveSelectionTo(90)
-		if (114 <= position <= 117):
+		if (115 <= position <= 118):
 			self["config"].instance.moveSelectionTo(108)
-		if (119 <= position <= 122):
-			self["config"].instance.moveSelectionTo(114)
+		if (120 <= position <= 123):
+			self["config"].instance.moveSelectionTo(115)
 		if (126 <= position <= 127):
 			if config.plugins.KravenFHD.IBStyle.value == "box":
-				self["config"].instance.moveSelectionTo(114)
+				self["config"].instance.moveSelectionTo(115)
 			else:
-				self["config"].instance.moveSelectionTo(119)
+				self["config"].instance.moveSelectionTo(120)
 		self.mylist()
 
 	def categoryUp(self):
@@ -1621,19 +1664,21 @@ class KravenFHD(ConfigListScreen, Screen):
 			self["config"].instance.moveSelectionTo(72)
 		if (72 <= position <= 76):
 			self["config"].instance.moveSelectionTo(78)
-		if (78 <= position <= 89):
+		if (78 <= position <= 85):
+			self["config"].instance.moveSelectionTo(87)
+		if (87 <= position <= 89):
 			self["config"].instance.moveSelectionTo(90)
 		if (90 <= position <= 107):
 			self["config"].instance.moveSelectionTo(108)
-		if (108 <= position <= 112):
-			self["config"].instance.moveSelectionTo(114)
+		if (108 <= position <= 113):
+			self["config"].instance.moveSelectionTo(115)
 		if config.plugins.KravenFHD.IBStyle.value == "box":
-			if (114 <= position <= 117):
+			if (115 <= position <= 118):
 					self["config"].instance.moveSelectionTo(126)
 		else:
-			if (114 <= position <= 117):
-				self["config"].instance.moveSelectionTo(119)
-		if (119 <= position <= 122):
+			if (115 <= position <= 118):
+				self["config"].instance.moveSelectionTo(120)
+		if (120 <= position <= 123):
 			self["config"].instance.moveSelectionTo(126)
 		if (126 <= position <= 127):
 			self["config"].instance.moveSelectionTo(0)
@@ -1784,14 +1829,6 @@ class KravenFHD(ConfigListScreen, Screen):
 			self.skinSearchAndReplace.append(['name="KravenIBbg3" value="#00000000', 'name="KravenIBbg3" value="#00' + config.plugins.KravenFHD.MenuColorTrans.value + self.skincolorbackgroundcolor])
 			self.skinSearchAndReplace.append(['name="KravenIBbg4" value="#00000000', 'name="KravenIBbg4" value="#00' + config.plugins.KravenFHD.ChannelSelectionTrans.value + self.skincolorbackgroundcolor])
 
-		### Selection Background
-		if config.plugins.KravenFHD.EMCSelectionColors.value == "none":
-			self.skinSearchAndReplace.append(['name="KravenSelection" value="#000050EF', 'name="KravenSelection" value="#' + config.plugins.KravenFHD.SelectionBackground.value])
-			self.skinSearchAndReplace.append(['name="KravenEMCSelection" value="#000050EF', 'name="KravenEMCSelection" value="#' + config.plugins.KravenFHD.SelectionBackground.value])
-		else:
-			self.skinSearchAndReplace.append(['name="KravenSelection" value="#000050EF', 'name="KravenSelection" value="#' + config.plugins.KravenFHD.SelectionBackground.value])
-			self.skinSearchAndReplace.append(['name="KravenEMCSelection" value="#000050EF', 'name="KravenEMCSelection" value="#' + config.plugins.KravenFHD.EMCSelectionBackground.value])
-
 		### Menu
 		if config.plugins.KravenFHD.Logo.value == "minitv":
 			self.skinSearchAndReplace.append(['<!-- Logo -->', '<constant-widget name="Logo1"/>'])
@@ -1885,12 +1922,14 @@ class KravenFHD(ConfigListScreen, Screen):
 		self.skinSearchAndReplace.append(['name="KravenFont2" value="#00F0A30A', 'name="KravenFont2" value="#' + config.plugins.KravenFHD.Font2.value])
 		self.skinSearchAndReplace.append(['name="KravenIBFont1" value="#00ffffff', 'name="KravenIBFont1" value="#' + config.plugins.KravenFHD.IBFont1.value])
 		self.skinSearchAndReplace.append(['name="KravenIBFont2" value="#00F0A30A', 'name="KravenIBFont2" value="#' + config.plugins.KravenFHD.IBFont2.value])
+		self.skinSearchAndReplace.append(['name="KravenSelFont" value="#00ffffff', 'name="KravenSelFont" value="#' + config.plugins.KravenFHD.SelectionFont.value])
+		self.skinSearchAndReplace.append(['name="KravenSelection" value="#000050EF', 'name="KravenSelection" value="#' + config.plugins.KravenFHD.SelectionBackground.value])
 		if config.plugins.KravenFHD.EMCSelectionColors.value == "none":
-			self.skinSearchAndReplace.append(['name="KravenSelFont" value="#00ffffff', 'name="KravenSelFont" value="#' + config.plugins.KravenFHD.SelectionFont.value])
 			self.skinSearchAndReplace.append(['name="KravenEMCSelFont" value="#00ffffff', 'name="KravenEMCSelFont" value="#' + config.plugins.KravenFHD.SelectionFont.value])
+			self.skinSearchAndReplace.append(['name="KravenEMCSelection" value="#000050EF', 'name="KravenEMCSelection" value="#' + config.plugins.KravenFHD.SelectionBackground.value])
 		else:
-			self.skinSearchAndReplace.append(['name="KravenSelFont" value="#00ffffff', 'name="KravenSelFont" value="#' + config.plugins.KravenFHD.SelectionFont.value])
 			self.skinSearchAndReplace.append(['name="KravenEMCSelFont" value="#00ffffff', 'name="KravenEMCSelFont" value="#' + config.plugins.KravenFHD.EMCSelectionFont.value])
+			self.skinSearchAndReplace.append(['name="KravenEMCSelection" value="#000050EF', 'name="KravenEMCSelection" value="#' + config.plugins.KravenFHD.EMCSelectionBackground.value])
 		self.skinSearchAndReplace.append(['name="selectedFG" value="#00ffffff', 'name="selectedFG" value="#' + config.plugins.KravenFHD.SelectionFont.value])
 		self.skinSearchAndReplace.append(['name="KravenMarked" value="#00ffffff', 'name="KravenMarked" value="#' + config.plugins.KravenFHD.MarkedFont.value])
 		self.skinSearchAndReplace.append(['name="KravenECM" value="#00ffffff', 'name="KravenECM" value="#' + config.plugins.KravenFHD.ECMFont.value])
@@ -1898,6 +1937,7 @@ class KravenFHD(ConfigListScreen, Screen):
 		self.skinSearchAndReplace.append(['name="KravenButton" value="#00ffffff', 'name="KravenButton" value="#' + config.plugins.KravenFHD.ButtonText.value])
 		self.skinSearchAndReplace.append(['name="KravenAndroid" value="#00ffffff', 'name="KravenAndroid" value="#' + config.plugins.KravenFHD.Android.value])
 		self.skinSearchAndReplace.append(['name="KravenAndroid2" value="#00ffffff', 'name="KravenAndroid2" value="#' + config.plugins.KravenFHD.Android2.value])
+		self.skinSearchAndReplace.append(['name="KravenPrime" value="#0070AD11', 'name="KravenPrime" value="#' + config.plugins.KravenFHD.PrimetimeFont.value])
 
 		### ChannelSelection (Servicename, Servicenumber, Serviceinfo) Font-Size
 		if not self.actChannelselectionstyle in ("channelselection-style-nobile","channelselection-style-nobile2","channelselection-style-nobile-minitv","channelselection-style-nobile-minitv3","channelselection-style-nobile-minitv33"):
@@ -2227,9 +2267,9 @@ class KravenFHD(ConfigListScreen, Screen):
 			if config.plugins.KravenFHD.IBStyle.value == "box":
 				### Menu
 				menubox = """<eLabel position="0,960" size="1920,120" backgroundColor="KravenIBbg2" zPosition="-9" />
-	<eLabel position="0,960" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
-	<eLabel position="0,0" size="1920,88" backgroundColor="KravenIBbg2" zPosition="-9" />
-	<eLabel position="0,87" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />"""
+	  <eLabel position="0,960" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	  <eLabel position="0,0" size="1920,88" backgroundColor="KravenIBbg2" zPosition="-9" />
+	  <eLabel position="0,87" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />"""
 				self.skinSearchAndReplace.append(['<!-- Menu ibar -->', menubox])
 
 				self.skinSearchAndReplace.append(['<constant-widget name="gradient-cs"/>', '<constant-widget name="box-cs"/>'])
@@ -2244,12 +2284,6 @@ class KravenFHD(ConfigListScreen, Screen):
 
 				### Title (ChannelSelection, EMC) - Position
 				self.skinSearchAndReplace.append(['position="63,18"','position="63,12"'])
-
-				### Title (CoolTVGuide) - Position
-				self.skinSearchAndReplace.append(['position="63,27"','position="63,16"'])
-
-				### date (CoolTVGuide) - Position
-				self.skinSearchAndReplace.append(['name="date" position="1425,33"','name="date" position="1425,24"'])
 
 				### Clock - Position
 				self.skinSearchAndReplace.append(['position="1707,33"','position="1707,25"'])
@@ -2313,7 +2347,7 @@ class KravenFHD(ConfigListScreen, Screen):
 			else:
 				### Menu
 				menugradient = """<ePixmap pixmap="KravenFHD/ibar.png" position="0,825" size="1920,600" alphatest="blend" zPosition="-9" />
-	<ePixmap pixmap="KravenFHD/ibaro.png" position="0,-90" size="1920,664" alphatest="blend" zPosition="-9" />"""
+	  <ePixmap pixmap="KravenFHD/ibaro.png" position="0,-90" size="1920,664" alphatest="blend" zPosition="-9" />"""
 				self.skinSearchAndReplace.append(['<!-- Menu ibar -->', menugradient])
 
 		self.skinSearchAndReplace.append(['backgroundColor="KravenSIBbg2"', 'backgroundColor="KravenIBbg2"'])
@@ -2326,6 +2360,8 @@ class KravenFHD(ConfigListScreen, Screen):
 		self.skinSearchAndReplace.append(["analog.png", self.analog])
 
 		### Header
+		if config.usage.movielist_show_picon.value == True:
+			self.skinSearchAndReplace.append(['<parameter name="MovieListMinimalVTITitle" value="40,0,1000,40" />', '<parameter name="MovieListMinimalVTITitle" value="40,0,800,40" />'])
 		self.appendSkinFile(self.daten + "header_begin.xml")
 		if not config.plugins.KravenFHD.SelectionBorder.value == "none":
 			self.appendSkinFile(self.daten + "header_middle.xml")
@@ -2445,34 +2481,44 @@ class KravenFHD(ConfigListScreen, Screen):
 
 		### Infobar_main
 		if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-nopicon":
-			if config.plugins.KravenFHD.tuner2.value == "8-tuner":
+			if config.plugins.KravenFHD.tuner2.value == "2-tuner":
 				self.appendSkinFile(self.daten + "infobar-style-nopicon_main2.xml")
+			elif config.plugins.KravenFHD.tuner2.value == "4-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-nopicon_main4.xml")
+			elif config.plugins.KravenFHD.tuner2.value == "8-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-nopicon_main8.xml")
 			elif config.plugins.KravenFHD.tuner2.value == "10-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-nopicon_main3.xml")
-			else:
-				self.appendSkinFile(self.daten + "infobar-style-nopicon_main.xml")
+				self.appendSkinFile(self.daten + "infobar-style-nopicon_main10.xml")
 		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
-			if config.plugins.KravenFHD.tuner2.value == "8-tuner":
+			if config.plugins.KravenFHD.tuner2.value == "2-tuner":
 				self.appendSkinFile(self.daten + "infobar-style-x1_main2.xml")
+			elif config.plugins.KravenFHD.tuner2.value == "4-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-x1_main4.xml")
+			elif config.plugins.KravenFHD.tuner2.value == "8-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-x1_main8.xml")
 			elif config.plugins.KravenFHD.tuner2.value == "10-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-x1_main3.xml")
-			else:
-				self.appendSkinFile(self.daten + "infobar-style-x1_main.xml")
+				self.appendSkinFile(self.daten + "infobar-style-x1_main10.xml")
 		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz1":
-			if config.plugins.KravenFHD.tuner.value == "8-tuner":
+			if config.plugins.KravenFHD.tuner.value == "2-tuner":
 				self.appendSkinFile(self.daten + "infobar-style-zz1_main2.xml")
-			else:
-				self.appendSkinFile(self.daten + "infobar-style-zz1_main.xml")
+			elif config.plugins.KravenFHD.tuner.value == "4-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-zz1_main4.xml")
+			elif config.plugins.KravenFHD.tuner.value == "8-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-zz1_main8.xml")
 		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz4":
-			if config.plugins.KravenFHD.tuner.value == "8-tuner":
+			if config.plugins.KravenFHD.tuner.value == "2-tuner":
 				self.appendSkinFile(self.daten + "infobar-style-zz4_main2.xml")
-			else:
-				self.appendSkinFile(self.daten + "infobar-style-zz4_main.xml")
+			elif config.plugins.KravenFHD.tuner.value == "4-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-zz4_main4.xml")
+			elif config.plugins.KravenFHD.tuner.value == "8-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-zz4_main8.xml")
 		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zzz1":
-			if config.plugins.KravenFHD.tuner.value == "8-tuner":
+			if config.plugins.KravenFHD.tuner.value == "2-tuner":
 				self.appendSkinFile(self.daten + "infobar-style-zzz1_main2.xml")
-			else:
-				self.appendSkinFile(self.daten + "infobar-style-zzz1_main.xml")
+			elif config.plugins.KravenFHD.tuner.value == "4-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-zzz1_main4.xml")
+			elif config.plugins.KravenFHD.tuner.value == "8-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-zzz1_main8.xml")
 		else:
 			self.appendSkinFile(self.daten + config.plugins.KravenFHD.InfobarStyle.value + "_main.xml")
 
@@ -2692,19 +2738,23 @@ class KravenFHD(ConfigListScreen, Screen):
 
 		### SIB_main
 		if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-nopicon":
-			if config.plugins.KravenFHD.tuner2.value == "8-tuner":
+			if config.plugins.KravenFHD.tuner2.value == "2-tuner":
 				self.appendSkinFile(self.daten + "infobar-style-nopicon_main2.xml")
+			elif config.plugins.KravenFHD.tuner2.value == "4-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-nopicon_main4.xml")
+			elif config.plugins.KravenFHD.tuner2.value == "8-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-nopicon_main8.xml")
 			elif config.plugins.KravenFHD.tuner2.value == "10-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-nopicon_main3.xml")
-			else:
-				self.appendSkinFile(self.daten + "infobar-style-nopicon_main.xml")
+				self.appendSkinFile(self.daten + "infobar-style-nopicon_main10.xml")
 		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
-			if config.plugins.KravenFHD.tuner2.value == "8-tuner":
+			if config.plugins.KravenFHD.tuner2.value == "2-tuner":
 				self.appendSkinFile(self.daten + "infobar-style-x1_main2.xml")
+			elif config.plugins.KravenFHD.tuner2.value == "4-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-x1_main4.xml")
+			elif config.plugins.KravenFHD.tuner2.value == "8-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-x1_main8.xml")
 			elif config.plugins.KravenFHD.tuner2.value == "10-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-x1_main3.xml")
-			else:
-				self.appendSkinFile(self.daten + "infobar-style-x1_main.xml")
+				self.appendSkinFile(self.daten + "infobar-style-x1_main10.xml")
 		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x2":
 			self.appendSkinFile(self.daten + "infobar-style-x2_main.xml")
 		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x3":
@@ -2716,10 +2766,12 @@ class KravenFHD(ConfigListScreen, Screen):
 		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz1":
 			self.skinSearchAndReplace.append(['size="1798,276">', 'size="1798,230">'])
 			self.skinSearchAndReplace.append([',441">', ',392">'])
-			if config.plugins.KravenFHD.tuner.value == "8-tuner":
+			if config.plugins.KravenFHD.tuner.value == "2-tuner":
 				self.appendSkinFile(self.daten + "infobar-style-zz1_main2.xml")
-			else:
-				self.appendSkinFile(self.daten + "infobar-style-zz1_main.xml")
+			elif config.plugins.KravenFHD.tuner.value == "4-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-zz1_main4.xml")
+			elif config.plugins.KravenFHD.tuner.value == "8-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-zz1_main8.xml")
 		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz2":
 			self.skinSearchAndReplace.append(['size="1798,276">', 'size="1798,230">'])
 			self.skinSearchAndReplace.append([',441">', ',392">'])
@@ -2731,18 +2783,22 @@ class KravenFHD(ConfigListScreen, Screen):
 		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz4":
 			self.skinSearchAndReplace.append(['size="1798,276">', 'size="1798,230">'])
 			self.skinSearchAndReplace.append([',441">', ',392">'])
-			if config.plugins.KravenFHD.tuner.value == "8-tuner":
+			if config.plugins.KravenFHD.tuner.value == "2-tuner":
 				self.appendSkinFile(self.daten + "infobar-style-zz4_main2.xml")
-			else:
-				self.appendSkinFile(self.daten + "infobar-style-zz4_main.xml")
+			elif config.plugins.KravenFHD.tuner.value == "4-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-zz4_main4.xml")
+			elif config.plugins.KravenFHD.tuner.value == "8-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-zz4_main8.xml")
 		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zzz1":
 			self.skinSearchAndReplace.append(['size="855,588">', 'size="855,490">'])
 			self.skinSearchAndReplace.append(['size="1798,276">', 'size="1798,184">'])
 			self.skinSearchAndReplace.append([',441">', ',343">'])
-			if config.plugins.KravenFHD.tuner.value == "8-tuner":
+			if config.plugins.KravenFHD.tuner.value == "2-tuner":
 				self.appendSkinFile(self.daten + "infobar-style-zzz1_main2.xml")
-			else:
-				self.appendSkinFile(self.daten + "infobar-style-zzz1_main.xml")
+			elif config.plugins.KravenFHD.tuner.value == "4-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-zzz1_main4.xml")
+			elif config.plugins.KravenFHD.tuner.value == "8-tuner":
+				self.appendSkinFile(self.daten + "infobar-style-zzz1_main8.xml")
 		self.appendSkinFile(self.daten + config.plugins.KravenFHD.SIB.value + ".xml")
 		if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/SecondInfoBar/plugin.py"):
 			config.plugins.SecondInfoBar.HideNormalIB.value = True
@@ -2767,34 +2823,44 @@ class KravenFHD(ConfigListScreen, Screen):
 
 			### Timeshift_Infobar_main
 			if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-nopicon":
-				if config.plugins.KravenFHD.tuner.value == "8-tuner":
+				if config.plugins.KravenFHD.tuner.value == "2-tuner":
 					self.appendSkinFile(self.daten + "infobar-style-nopicon_main2.xml")
+				elif config.plugins.KravenFHD.tuner2.value == "4-tuner":
+					self.appendSkinFile(self.daten + "infobar-style-nopicon_main4.xml")
+				elif config.plugins.KravenFHD.tuner2.value == "8-tuner":
+					self.appendSkinFile(self.daten + "infobar-style-nopicon_main8.xml")
 				elif config.plugins.KravenFHD.tuner2.value == "10-tuner":
-					self.appendSkinFile(self.daten + "infobar-style-nopicon_main3.xml")
-				else:
-					self.appendSkinFile(self.daten + "infobar-style-nopicon_main.xml")
+					self.appendSkinFile(self.daten + "infobar-style-nopicon_main10.xml")
 			elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
-				if config.plugins.KravenFHD.tuner2.value == "8-tuner":
+				if config.plugins.KravenFHD.tuner2.value == "2-tuner":
 					self.appendSkinFile(self.daten + "infobar-style-x1_main2.xml")
+				elif config.plugins.KravenFHD.tuner2.value == "4-tuner":
+					self.appendSkinFile(self.daten + "infobar-style-x1_main4.xml")
+				elif config.plugins.KravenFHD.tuner2.value == "8-tuner":
+					self.appendSkinFile(self.daten + "infobar-style-x1_main8.xml")
 				elif config.plugins.KravenFHD.tuner2.value == "10-tuner":
-					self.appendSkinFile(self.daten + "infobar-style-x1_main3.xml")
-				else:
-					self.appendSkinFile(self.daten + "infobar-style-x1_main.xml")
+					self.appendSkinFile(self.daten + "infobar-style-x1_main10.xml")
 			elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz1":
-				if config.plugins.KravenFHD.tuner.value == "8-tuner":
+				if config.plugins.KravenFHD.tuner.value == "2-tuner":
 					self.appendSkinFile(self.daten + "infobar-style-zz1_main2.xml")
-				else:
-					self.appendSkinFile(self.daten + "infobar-style-zz1_main.xml")
+				elif config.plugins.KravenFHD.tuner.value == "4-tuner":
+					self.appendSkinFile(self.daten + "infobar-style-zz1_main4.xml")
+				elif config.plugins.KravenFHD.tuner.value == "8-tuner":
+					self.appendSkinFile(self.daten + "infobar-style-zz1_main8.xml")
 			elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz4":
-				if config.plugins.KravenFHD.tuner.value == "8-tuner":
+				if config.plugins.KravenFHD.tuner.value == "2-tuner":
 					self.appendSkinFile(self.daten + "infobar-style-zz4_main2.xml")
-				else:
-					self.appendSkinFile(self.daten + "infobar-style-zz4_main.xml")
+				elif config.plugins.KravenFHD.tuner.value == "4-tuner":
+					self.appendSkinFile(self.daten + "infobar-style-zz4_main4.xml")
+				elif config.plugins.KravenFHD.tuner.value == "8-tuner":
+					self.appendSkinFile(self.daten + "infobar-style-zz4_main8.xml")
 			elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zzz1":
-				if config.plugins.KravenFHD.tuner.value == "8-tuner":
+				if config.plugins.KravenFHD.tuner.value == "2-tuner":
 					self.appendSkinFile(self.daten + "infobar-style-zzz1_main2.xml")
-				else:
-					self.appendSkinFile(self.daten + "infobar-style-zzz1_main.xml")
+				elif config.plugins.KravenFHD.tuner.value == "4-tuner":
+					self.appendSkinFile(self.daten + "infobar-style-zzz1_main4.xml")
+				elif config.plugins.KravenFHD.tuner.value == "8-tuner":
+					self.appendSkinFile(self.daten + "infobar-style-zzz1_main8.xml")
 			else:
 				self.appendSkinFile(self.daten + config.plugins.KravenFHD.InfobarStyle.value + "_main.xml")
 
@@ -2931,19 +2997,45 @@ class KravenFHD(ConfigListScreen, Screen):
 		self.appendSkinFile(self.daten + config.plugins.KravenFHD.PlayerClock.value + ".xml")
 		self.appendSkinFile(self.daten + "screen_end.xml")
 
-		### Plugins XML
+		### Plugins
 		self.appendSkinFile(self.daten + "plugins.xml")
 		if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/plugin.py"):
 			config.plugins.pts.showinfobar.value = False
 			config.plugins.pts.showinfobar.save()
 
-		### EMCSTYLE
+		### EMC (Event-Description) Font-Size
+		if config.plugins.KravenFHD.EMCStyle.value in ("emc-bigcover","emc-minitv"):
+			if config.plugins.KravenFHD.EMCEPGSize.value == "big":
+				self.skinSearchAndReplace.append(['<constant-widget name="emcmbc33"/>', '<constant-widget name="emcmbc36"/>'])
+		elif config.plugins.KravenFHD.EMCStyle.value in ("emc-bigcover2","emc-minitv2"):
+			if config.plugins.KravenFHD.EMCEPGSize.value == "big":
+				self.skinSearchAndReplace.append(['<constant-widget name="emcm2bc233"/>', '<constant-widget name="emcm2bc236"/>'])
+		elif config.plugins.KravenFHD.EMCStyle.value == "emc-nocover":
+			if config.plugins.KravenFHD.EMCEPGSize.value == "big":
+				self.skinSearchAndReplace.append(['<constant-widget name="emcnc33"/>', '<constant-widget name="emcnc36"/>'])
+		elif config.plugins.KravenFHD.EMCStyle.value == "emc-nocover2":
+			if config.plugins.KravenFHD.EMCEPGSize.value == "big":
+				self.skinSearchAndReplace.append(['<constant-widget name="emcnc233"/>', '<constant-widget name="emcnc236"/>'])
+		elif config.plugins.KravenFHD.EMCStyle.value == "emc-smallcover":
+			if config.plugins.KravenFHD.EMCEPGSize.value == "big":
+				self.skinSearchAndReplace.append(['<constant-widget name="emcsc33"/>', '<constant-widget name="emcsc36"/>'])
+		elif config.plugins.KravenFHD.EMCStyle.value == "emc-smallcover2":
+			if config.plugins.KravenFHD.EMCEPGSize.value == "big":
+				self.skinSearchAndReplace.append(['<constant-widget name="emcsc233"/>', '<constant-widget name="emcsc236"/>'])
+		elif config.plugins.KravenFHD.EMCStyle.value == "emc-verybigcover":
+			if config.plugins.KravenFHD.EMCEPGSize.value == "big":
+				self.skinSearchAndReplace.append(['<constant-widget name="emcvbc33"/>', '<constant-widget name="emcvbc36"/>'])
+		elif config.plugins.KravenFHD.EMCStyle.value == "emc-verybigcover2":
+			if config.plugins.KravenFHD.EMCEPGSize.value == "big":
+				self.skinSearchAndReplace.append(['<constant-widget name="emcvbc233"/>', '<constant-widget name="emcvbc236"/>'])
+
+		### EMC
 		self.appendSkinFile(self.daten + config.plugins.KravenFHD.EMCStyle.value + ".xml")
 		if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/EnhancedMovieCenter/plugin.py"):
 			config.EMC.skin_able.value = True
 			config.EMC.skin_able.save()
 
-		### NumberZapExtStyle
+		### NumberZapExt
 		self.appendSkinFile(self.daten + config.plugins.KravenFHD.NumberZapExt.value + ".xml")
 		if not config.plugins.KravenFHD.NumberZapExt.value == "none":
 			config.usage.numberzap_show_picon.value = True
@@ -2957,13 +3049,30 @@ class KravenFHD(ConfigListScreen, Screen):
 		### SplitScreen
 		self.appendSkinFile(self.daten + config.plugins.KravenFHD.SplitScreen.value + ".xml")
 
-		### cooltv XML
+		### cooltv
 		self.appendSkinFile(self.daten + config.plugins.KravenFHD.CoolTVGuide.value + ".xml")
 
-		### MovieSelection XML
+		### MovieSelection (Event-Description) Font-Size
+		if config.plugins.KravenFHD.MovieSelection.value == "movieselection-no-cover":
+			if config.plugins.KravenFHD.MovieSelectionEPGSize.value == "big":
+				self.skinSearchAndReplace.append(['<constant-widget name="msnc33"/>', '<constant-widget name="msnc36"/>'])
+		elif config.plugins.KravenFHD.MovieSelection.value == "movieselection-small-cover":
+			if config.plugins.KravenFHD.MovieSelectionEPGSize.value == "big":
+				self.skinSearchAndReplace.append(['<constant-widget name="mssc33"/>', '<constant-widget name="mssc36"/>'])
+		elif config.plugins.KravenFHD.MovieSelection.value == "movieselection-big-cover":
+			if config.plugins.KravenFHD.MovieSelectionEPGSize.value == "big":
+				self.skinSearchAndReplace.append(['<constant-widget name="msbc33"/>', '<constant-widget name="msbc36"/>'])
+		elif config.plugins.KravenFHD.MovieSelection.value == "movieselection-minitv":
+			if config.plugins.KravenFHD.MovieSelectionEPGSize.value == "big":
+				self.skinSearchAndReplace.append(['<constant-widget name="msm33"/>', '<constant-widget name="msm36"/>'])
+		elif config.plugins.KravenFHD.MovieSelection.value == "movieselection-minitv-cover":
+			if config.plugins.KravenFHD.MovieSelectionEPGSize.value == "big":
+				self.skinSearchAndReplace.append(['<constant-widget name="msmc33"/>', '<constant-widget name="msmc36"/>'])
+
+		### MovieSelection
 		self.appendSkinFile(self.daten + config.plugins.KravenFHD.MovieSelection.value + ".xml")
 
-		### SerienRecorder XML
+		### SerienRecorder
 		self.appendSkinFile(self.daten + config.plugins.KravenFHD.SerienRecorder.value + ".xml")
 
 		### MediaPortal

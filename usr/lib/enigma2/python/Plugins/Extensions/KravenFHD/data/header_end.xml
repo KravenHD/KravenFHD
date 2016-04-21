@@ -104,7 +104,7 @@
 	  <eLabel backgroundColor="KravenBorder2" position="1233,467" size="624,4" transparent="0" zPosition="4" />
 	  <eLabel backgroundColor="KravenBorder2" position="1233,120" size="4,351" transparent="0" zPosition="4" />
 	  <eLabel backgroundColor="KravenBorder2" position="1853,120" size="4,351" transparent="0" zPosition="4" />
-	  <widget position="1353,540" size="384,384" render="KravenFHDMenuIcon" source="Title" alphatest="blend">
+	  <widget position="1353,523" size="384,384" render="KravenFHDMenuIcon" source="Title" alphatest="blend">
 	    <convert type="KravenFHDMenuIconPath"></convert>
 	  </widget>
 	  <!-- Menu ibar -->
@@ -198,7 +198,7 @@
 	  <eLabel backgroundColor="KravenBorder2" position="1233,467" size="624,4" transparent="0" zPosition="4" />
 	  <eLabel backgroundColor="KravenBorder2" position="1233,120" size="4,351" transparent="0" zPosition="4" />
 	  <eLabel backgroundColor="KravenBorder2" position="1853,120" size="4,351" transparent="0" zPosition="4" />
-	  <widget position="1353,540" size="384,384" render="KravenFHDMenuIcon" source="menu" alphatest="blend">
+	  <widget position="1353,523" size="384,384" render="KravenFHDMenuIcon" source="menu" alphatest="blend">
 	    <convert type="KravenFHDMenuIconPath"></convert>
 	  </widget>
 	  <!-- Menu ibar -->
@@ -369,7 +369,7 @@
 	</constant-widget>
 	
 	<constant-widget name="CoolTV">
-      <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBCoolbg" foregroundColor="KravenMFont1" position="1707,33" size="150,42" font="Regular;39" halign="right" transparent="1" valign="center">
+      <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBCoolbg" foregroundColor="KravenMFont1" position="1707,25" size="150,42" font="Regular;39" halign="right" transparent="1" valign="center">
         <convert type="ClockToText">Default</convert>
       </widget>
       <ePixmap alphatest="blend" pixmap="KravenFHD/buttons/key_red1.png" position="56,1038" size="300,7" />
@@ -1187,7 +1187,7 @@
       <eLabel position="0,864" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
 	</constant-widget>
 	
-	<constant-widget name="gradient-ib-z1-z1">
+	<constant-widget name="gradient-ib-z1-z2">
       <ePixmap pixmap="KravenFHD/ibar.png" position="0,705" size="1920,465" zPosition="-9" alphatest="blend" />
 	</constant-widget>
 	
@@ -1230,5 +1230,161 @@
 	<constant-widget name="box-ib-zzz1">
 	  <eLabel position="0,709" size="1920,371" backgroundColor="KravenIBbg" zPosition="-9" />
 	  <eLabel position="0,709" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	</constant-widget>
+	
+	<constant-widget name="msm33">
+      <widget backgroundColor="Kravenbg2" font="Regular;33" foregroundColor="KravenFont1" position="1233,510" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,378" source="Service" transparent="1" valign="top">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="msm36">
+      <widget backgroundColor="Kravenbg2" font="Regular;36" foregroundColor="KravenFont1" position="1233,500" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,414" source="Service" transparent="1" valign="top">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="msmc33">
+      <widget backgroundColor="Kravenbg2" font="Regular;33" foregroundColor="KravenFont1" position="1233,407" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,504" source="Service" transparent="1" valign="top">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="msmc36">
+      <widget backgroundColor="Kravenbg2" font="Regular;36" foregroundColor="KravenFont1" position="1233,406" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,506" source="Service" transparent="1" valign="top">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="msnc33">
+      <widget backgroundColor="Kravenbg" font="Regular;33" foregroundColor="KravenFont1" position="1233,225" render="Label" size="624,672" source="Service" transparent="1" valign="top">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="msnc36">
+      <widget backgroundColor="Kravenbg" font="Regular;36" foregroundColor="KravenFont1" position="1233,220" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,690" source="Service" transparent="1" valign="top">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="mssc33">
+      <widget backgroundColor="Kravenbg" font="Regular;33" foregroundColor="KravenFont1" position="1233,355" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,546" source="Service" transparent="1" valign="top">
+        <convert type="KravenFHDEventName">ExtendedDescription</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="mssc36">
+      <widget backgroundColor="Kravenbg" font="Regular;36" foregroundColor="KravenFont1" position="1233,352" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,552" source="Service" transparent="1" valign="top">
+        <convert type="KravenFHDEventName">ExtendedDescription</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="msbc33">
+      <widget backgroundColor="Kravenbg" font="Regular;33" foregroundColor="KravenFont1" position="1233,170" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,328" source="Service" transparent="1" valign="top">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="msbc36">
+      <widget backgroundColor="Kravenbg" font="Regular;36" foregroundColor="KravenFont1" position="1233,173" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,322" source="Service" transparent="1" valign="top">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="emcmbc33">
+	  <widget source="Service" render="KravenFHDRunningText" position="735,714" size="1132,252" font="Regular;33" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" halign="left" valign="top">
+	    <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+	  </widget>
+	</constant-widget>
+	
+	<constant-widget name="emcmbc36">
+	  <widget source="Service" render="KravenFHDRunningText" position="735,690" size="1132,276" font="Regular;36" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" halign="left" valign="top">
+	    <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+	  </widget>
+	</constant-widget>
+	
+	<constant-widget name="emcm2bc233">
+      <widget source="Service" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" position="63,714" size="1132,252" font="Regular;33" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" zPosition="2" halign="left" valign="top">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="emcm2bc236">
+      <widget source="Service" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" position="63,690" size="1132,276" font="Regular;36" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" zPosition="2" halign="left" valign="top">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="emcnc33">
+	  <widget source="Service" render="KravenFHDRunningText" position="63,315" size="648,588" font="Regular;33" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" halign="left" valign="top">
+	    <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+	  </widget>
+	</constant-widget>
+	
+	<constant-widget name="emcnc36">
+	  <widget source="Service" render="KravenFHDRunningText" position="63,310" size="648,598" font="Regular;36" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" halign="left" valign="top">
+	    <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+	  </widget>
+	</constant-widget>
+	
+	<constant-widget name="emcnc233">
+	  <widget source="Service" render="KravenFHDRunningText" position="1224,315" size="648,588" font="Regular;33" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" halign="left" valign="top">
+	    <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+	  </widget>
+	</constant-widget>
+	
+	<constant-widget name="emcnc236">
+	  <widget source="Service" render="KravenFHDRunningText" position="1224,310" size="648,598" font="Regular;36" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" halign="left" valign="top">
+	    <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+	  </widget>
+	</constant-widget>
+	
+	<constant-widget name="emcsc33">
+	  <widget source="Service" render="KravenFHDRunningText" position="63,355" size="648,546" font="Regular;33" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" halign="left" valign="top">
+	    <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+	  </widget>
+	</constant-widget>
+	
+	<constant-widget name="emcsc36">
+	  <widget source="Service" render="KravenFHDRunningText" position="63,352" size="648,552" font="Regular;36" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" halign="left" valign="top">
+	    <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+	  </widget>
+	</constant-widget>
+	
+	<constant-widget name="emcsc233">
+	  <widget source="Service" render="KravenFHDRunningText" position="1224,355" size="648,546" font="Regular;33" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" halign="left" valign="top">
+	    <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+	  </widget>
+	</constant-widget>
+	
+	<constant-widget name="emcsc236">
+	  <widget source="Service" render="KravenFHDRunningText" position="1224,352" size="648,552" font="Regular;36" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" halign="left" valign="top">
+	    <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+	  </widget>
+	</constant-widget>
+	
+	<constant-widget name="emcvbc33">
+	  <widget source="Service" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" position="691,758" size="1165,210" font="Regular;33" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" zPosition="2" halign="left" valign="top">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="emcvbc36">
+	  <widget source="Service" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" position="691,745" size="1165,230" font="Regular;36" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" zPosition="2" halign="left" valign="top">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="emcvbc233">
+	  <widget source="Service" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" position="63,680" size="1132,294" font="Regular;33" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" zPosition="2" halign="left" valign="top">
+	    <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+	  </widget>
+	</constant-widget>
+	
+	<constant-widget name="emcvbc236">
+	  <widget source="Service" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" position="63,690" size="1132,276" font="Regular;36" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" zPosition="2" halign="left" valign="top">
+	    <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+	  </widget>
 	</constant-widget>
   </constant-widgets>

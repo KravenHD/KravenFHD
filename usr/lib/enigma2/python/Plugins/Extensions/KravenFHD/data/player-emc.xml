@@ -50,5 +50,8 @@
       <convert type="KravenFHDServiceEndTime">EndTime</convert>
     </widget>
     <eLabel backgroundColor="KravenIBbg" font="Regular;30" halign="right" position="1542,1015" size="60,45" text="Uhr" transparent="1" valign="center" zPosition="1" foregroundColor="KravenIBFont1" />
-    <widget name="Cover" zPosition="1" alphatest="on" position="37,705" size="240,360" />
+    <widget source="session.CurrentService" render="KravenFHDXPicon" alphatest="blend" position="37,926" size="240,144" transparent="1" zPosition="1">
+      <convert type="KravenFHDMovieReference" />
+    </widget>
+    <widget name="Cover" zPosition="1" alphatest="on" position="37,548" size="240,360" />
     <constant-widget name="gradient-player"/>

@@ -126,7 +126,7 @@
 				{"template": [
 							MultiContentEntryText(pos = (165, 6), size = (855, 39), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0), # index 2 is the description
 							MultiContentEntryText(pos = (165, 45), size = (855, 39), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 2 is the description
-							MultiContentEntryPixmapAlphaTest(pos = (3, 5), size = (150, 75), png = 3), # index 4 is the status pixmap
+							MultiContentEntryPixmapAlphaTest(pos = (30, 17), size = (100, 50), png = 3), # index 4 is the status pixmap
 					],
 				"fonts": [gFont("Regular", 33),gFont("Regular", 24)],
 				"itemHeight": 84
@@ -210,7 +210,7 @@
 	  <convert type="TemplatedMultiContent">
 				{"template":
 					[
-						MultiContentEntryPixmapAlphaTest(pos = (3, 3), size = (66, 66), png = 3), # index 4 is the status pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (19, 15), size = (44, 44), png = 3), # index 4 is the status pixmap
 						MultiContentEntryText(pos = (78, 3), size = (900, 36), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 0 is the MenuText,
 						MultiContentEntryText(pos = (78, 39), size = (900, 30), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 0 is the MenuText,
 					],
@@ -1592,10 +1592,10 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
   </screen>
   <!-- TimerEntry -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="TimerEntry" position="0,0" size="1920,1080" title="Timer entry">
+    <eLabel text="Timer entry" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="center" />
     <widget backgroundColor="Kravenbg3" name="config" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,585" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
     <widget font="Regular;30" halign="left" valign="center" name="canceltext" position="105,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <widget font="Regular;30" halign="left" valign="center" name="oktext" position="480,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-    <constant-widget name="Title-big"/>
     <constant-widget name="Colorbuttons"/>
 	<!-- Logo -->
     <constant-widget name="OKExit"/>
@@ -1726,12 +1726,12 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
   <!-- ********** Messages ********** -->
   <!-- MessageBox -->
   <screen name="MessageBox" flags="wfNoBorder" position="360,265" size="1200,15" zPosition="1" title="Message" backgroundColor="Kravenbg">
-    <widget backgroundColor="Kravenbg" font="Regular2;33" foregroundColor="KravenFont2" halign="left" position="10,6" render="Label" size="771,42" source="Title" transparent="1" zPosition="1" />
+    <widget backgroundColor="Kravenbg" font="Regular2;33" foregroundColor="KravenFont2" halign="left" position="30,6" render="Label" size="771,42" source="Title" transparent="1" zPosition="1" />
     <widget name="text" position="141,73" size="1020,0" font="Regular;33" foregroundColor="KravenFont1" backgroundColor="Kravenbg" />
     <widget name="ErrorPixmap" pixmap="KravenFHD/global-icons/attention.png" position="30,75" size="79,79" alphatest="blend" />
     <widget name="QuestionPixmap" pixmap="KravenFHD/global-icons/question.png" position="30,75" size="79,79" alphatest="blend" />
     <widget name="InfoPixmap" pixmap="KravenFHD/global-icons/info.png" position="30,75" size="79,79" alphatest="blend" />
-    <widget backgroundColor="Kravenbg" name="list" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="31,204" size="1140,450" transparent="1" />
+    <widget backgroundColor="Kravenbg" name="list" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="30,204" size="1140,450" transparent="1" />
     <applet type="onLayoutFinish">
 # this should be factored out into some helper code,but currently demonstrates applets.
 from enigma import eSize,ePoint
@@ -1756,8 +1756,8 @@ self.instance.resize(eSize(*wsize))
 self["text"].instance.resize(eSize(*textsize))
 
 # move list
-listsize = (wsizex - 30, 96)
-self["list"].instance.move(ePoint(15,textsize[1] + 41))
+listsize = (wsizex - 60, 96)
+self["list"].instance.move(ePoint(30,textsize[1] + 60))
 self["list"].instance.resize(eSize(*listsize))
 
 # center window

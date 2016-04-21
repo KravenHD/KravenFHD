@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenFHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2016-04-08 21:53+0100\n"
+"PO-Revision-Date: 2016-04-20 18:26+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -1409,10 +1409,6 @@ msgid "Infobar"
 msgstr "Infoleiste"
 
 #: KravenFHD.py
-msgid "Screens"
-msgstr "Bildschirmseiten"
-
-#: KravenFHD.py
 msgid "Reduce distortions (faint/blurry) or color frames around fonts in the infobar and widgets by adjusting the antialiasing brightness."
 msgstr "Verringern Sie Störungen (undeutlich/verschwommen) oder farbige Rahmen um Schriften in der Infoleiste und in Infofenstern durch Anpassen der Kantenglättungs-Helligkeit."
 
@@ -1637,6 +1633,14 @@ msgid "Choose the font size of event description, EPG list and primetime."
 msgstr "Wählen Sie die Schriftgrösse für die Sendungsbeschreibung, EPG-Liste und Primetime."
 
 #: KravenFHD.py
+msgid "MovieSelection-Style"
+msgstr "MovieSelection-Stil"
+
+#: KravenFHD.py
+msgid "Choose the font size of event description."
+msgstr "Wählen Sie die Schriftgrösse für die Sendungsbeschreibung."
+
+#: KravenFHD.py
 msgid "Choose the font size of EPG list and primetime."
 msgstr "Wählen Sie die Schriftgrösse für die EPG-Liste und Primetime."
 
@@ -1835,6 +1839,10 @@ msgstr "In diesem Abschnitt finden Sie alle Einstellungen zu den Entschlüsselun
 #: KravenFHD.py
 msgid "This sections offers all settings for skinned plugins."
 msgstr "In diesem Abschnitt finden Sie alle Einstellungen zu geskinnten Plugins."
+
+#: KravenFHD.py
+msgid "This sections offers all settings for MovieSelection."
+msgstr "In diesem Abschnitt finden Sie alle Einstellungen zu MovieSelection."
 
 #: KravenFHD.py
 msgid "This sections offers all channellist settings."
