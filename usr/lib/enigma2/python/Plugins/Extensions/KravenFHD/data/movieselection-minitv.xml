@@ -3,7 +3,7 @@
     <widget name="waitingtext" position="0,0" size="0,0" />
 	<eLabel text="MovieSelection" position="105,18" size="1500,69" backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
     <widget backgroundColor="Kravenbg2" font="Regular;28" foregroundColor="KravenFont2" halign="right" name="freeDiskSpace" position="105,112" size="1062,37" transparent="1" valign="center" />
-    <widget name="list" position="105,157" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget name="list" position="105,157" size="1062,810" UnwatchedColor="unwatched" WatchingColor="watching" FinishedColor="finished" RecordingColor="red" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
 	<widget source="session.VideoPicture" render="KravenFHDPig3" position="1233,112" size="576,324" zPosition="3" backgroundColor="transparent" />
     <eLabel backgroundColor="#00000000" position="1233,112" size="576,324" transparent="0" zPosition="2" />
     <eLabel backgroundColor="KravenBorder2" position="1233,112" size="576,4" transparent="0" zPosition="4" />
@@ -23,7 +23,7 @@
     <widget backgroundColor="Kravenbg2" font="Regular2;28" foregroundColor="KravenFont2" halign="right" position="1683,926" render="Label" size="174,36" source="Service" transparent="1" zPosition="1">
       <convert type="MovieInfo">FileSize</convert>
     </widget>
-    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1920,1080" transparent="0" zPosition="-10" />
+    <!-- nontransbg */-->
     <constant-widget name="msm33"/>
 	<constant-widget name="EMCSelection"/>
     <constant-widget name="gradient-emc"/>

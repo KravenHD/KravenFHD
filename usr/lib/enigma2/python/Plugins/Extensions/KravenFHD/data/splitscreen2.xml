@@ -37,7 +37,7 @@
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget name="zap_focus" position="63,1005" size="864,45" font="Regular2;36" backgroundColor="KravenIBbg2" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
-    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1920,1080" transparent="0" zPosition="-10" />
+    <!-- nontransbg */-->
     <constant-widget name="gradient-split2"/>
     <!--<text="SplitScreen - with description" position="105,0" />-->
   </screen>

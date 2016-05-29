@@ -21,8 +21,7 @@
   </widget>
   <eLabel position="657,990" size="871,1" backgroundColor="KravenLine" />
   <ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_rec_off.png" position="772,1009" size="65,33" zPosition="2" />
-  <widget source="session.FrontendInfo" render="Pixmap" pixmap="KravenFHD/infobar-icons/ico_rec_on.png" position="772,1009" zPosition="2" size="65,33" alphatest="blend">
-    <convert type="KravenFHDFrontendInfo">RECORD</convert>
+  <widget source="session.RecordState" render="Pixmap" pixmap="KravenFHD/infobar-icons/ico_rec_on.png" position="772,1009" zPosition="2" size="65,33" alphatest="blend">
     <convert type="ConditionalShowHide">recordblink</convert>
   </widget>
   <ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_hbbtv_off.png" position="855,1009" size="65,33" zPosition="1" />

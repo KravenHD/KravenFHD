@@ -31,7 +31,7 @@
     <widget source="SlaveService" render="Label" position="993,817" size="864,45" font="Regular2;36" backgroundColor="Kravenbg2" transparent="1" foregroundColor="KravenFont2" halign="left">
       <convert type="EventName" />
     </widget>
-    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1920,1080" transparent="0" zPosition="-10" />
+    <!-- nontransbg */-->
     <constant-widget name="gradient-split1"/>
     <!--<text="SplitScreen - without description" position="105,0" />-->
   </screen>

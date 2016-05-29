@@ -20,6 +20,7 @@
     <color name="Kravenbg3" value="#00000000" />
     <color name="Kravenbg4" value="#00000000" />
     <color name="Kravenbg5" value="#00000000" />
+    <color name="background" value="#00000000" />
     <color name="KravenIBbg" value="#001B1775" />
     <color name="KravenIBbg2" value="#00000000" />
     <color name="KravenIBbg3" value="#00000000" />
@@ -28,6 +29,7 @@
     <color name="KravenIBCoolbg" value="#00000000" />
     <color name="KravenFont1" value="#00ffffff" />
     <color name="KravenFont2" value="#00F0A30A" />
+    <color name="foreground" value="#00dddddd" />
     <color name="KravenIBFont1" value="#00ffffff" />
     <color name="KravenIBFont2" value="#00F0A30A" />
     <color name="KravenName" value="#00ffffff" />
@@ -60,7 +62,6 @@
     <color name="transparent" value="#ffffffff" />
     <color name="white" value="#00ffffff" />
     <color name="yellow" value="#00e5b243" />
-    <color name="background" value="#00000000" />
     <color name="blue2" value="#00010b52" />
     <color name="cyan" value="#000090e6" />
     <color name="cyan1" value="#0000deff" />
@@ -70,7 +71,6 @@
     <color name="darkgrey" value="#00999999" />
     <color name="epg" value="#002f4974" />
     <color name="epgselected" value="#00021943" />
-    <color name="foreground" value="#00dddddd" />
     <color name="green2" value="#00095201" />
     <color name="grey2" value="#00aaaaaa" />
     <color name="myblue" value="#004895fd" />
@@ -244,7 +244,7 @@
     <parameter name="TimerListFont1" value="Regular;33" />
     <parameter name="TimerListFont2" value="Regular;30" />
     <parameter name="TimerListState" value="800,80,235,35" />
-    <parameter name="TimerListIcon" value="0, 0, 0, 0" />
+    <parameter name="TimerListIcon" value="8,61,40,40" />
     <parameter name="TimerListIconHOffset" value="60" />
     <parameter name="TimerListNoIconHOffset" value="10" />
     <parameter name="TimerListTrimLength" value="70" />
@@ -326,7 +326,7 @@
     <parameter name="PiconManagerListItemHeight" value="45" />
     <!-- Channellist ServicelistService -->
     <parameter name="ServicelistCustomPiconSize" value="95,40" />
-    <parameter name="ServicelistDoubleSpacedMinHeight" value="70" />
+    <parameter name="ServicelistDoubleSpacedMinHeight" value="104" />
     <parameter name="ServicelistPiconXOffset" value="8" />
     <parameter name="ServicelistServiceNumber" value="0,0,80,0" />
     <parameter name="ServicelistServiceNumberOffset" value="100" />

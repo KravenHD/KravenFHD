@@ -112,10 +112,10 @@ class KravenFHDWeather_accu(Poll, Converter, object):
 		if WEATHER_LOAD == True:
 			try:
 				print "KravenWeather: Weather download from AccuWeather"
-				res = requests.request('get', URL)
+				res = requests.get(URL, timeout=0.1)
 				self.data = res.json()
 				WEATHER_DATA1 = self.data
-				res2 = requests.request('get', URL2)
+				res2 = requests.get(URL2, timeout=0.1)
 				self.data2 = res2.json()
 				WEATHER_DATA2 = self.data2
 				WEATHER_LOAD = False

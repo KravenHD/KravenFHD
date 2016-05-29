@@ -1,4 +1,4 @@
 <!--/* InfoBar -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="0,0" size="1920,1080" title="InfoBar">
-  <ePixmap pixmap="KravenFHD/backg.png" position="0,0" size="1920,1080" zPosition="-9" />
+  <ePixmap pixmap="KravenFHD/graphics/backg.png" position="0,0" size="1920,1080" zPosition="-9" />
   <!-- Infobar ibar -->

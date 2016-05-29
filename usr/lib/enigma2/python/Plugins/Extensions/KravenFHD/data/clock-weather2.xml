@@ -2,10 +2,10 @@
   <widget alphatest="blend" render="KravenFHDWetterPicon" position="1599,912" size="144,144" source="session.CurrentService" path="WetterIcons" transparent="1" zPosition="1">
     <convert type="KravenFHDWeather">Day_0,MeteoIcon </convert>
   </widget>
-  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenFont1" position="1759,939" size="135,42" font="Regular;39" halign="center" valign="center" transparent="1">
+  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" position="1759,939" size="135,42" font="Regular;39" halign="center" valign="center" transparent="1">
     <convert type="ClockToText">Default</convert>
   </widget>
-  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular2;36" foregroundColor="KravenFont2" render="Label" position="1759,1011" size="135,37" source="session.CurrentService" zPosition="2" halign="center" valign="center" transparent="1">
+  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular2;36" foregroundColor="KravenIBFont2" render="Label" position="1759,1011" size="135,37" source="session.CurrentService" zPosition="2" halign="center" valign="center" transparent="1">
     <convert type="KravenFHDWeather">Day_0,DayTemp</convert>
   </widget>
     <!--Clock */-->

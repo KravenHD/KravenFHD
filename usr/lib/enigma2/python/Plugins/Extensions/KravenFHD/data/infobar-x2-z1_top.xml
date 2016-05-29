@@ -78,7 +78,7 @@
     <convert type="ValueRange">3,3</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.FrontendInfo" render="Pixmap" pixmap="KravenFHD/infobar-icons/a_red.png" position="1387,34" zPosition="4" size="30,33" alphatest="blend">
+  <!--  <widget source="session.FrontendInfo" render="Pixmap" pixmap="KravenFHD/infobar-icons/a_red.png" position="1387,34" zPosition="4" size="30,33" alphatest="blend">
     <convert type="KravenFHDFrontendInfo">REC_0</convert>
     <convert type="ConditionalShowHide">tunerblink</convert>
   </widget>
@@ -93,14 +93,14 @@
   <widget source="session.FrontendInfo" render="Pixmap" pixmap="KravenFHD/infobar-icons/d_red.png" position="1498,34" zPosition="4" size="30,33" alphatest="blend">
     <convert type="KravenFHDFrontendInfo">REC_3</convert>
     <convert type="ConditionalShowHide">tunerblink</convert>
-  </widget>
+  </widget>  -->
   <ePixmap pixmap="KravenFHD/infobar-icons/aufloesung.png" position="1542,34" size="168,33" zPosition="1" alphatest="blend" />
   <widget source="session.CurrentService" render="Label" zPosition="3" position="1544,31" size="164,33" font="Regular;28" halign="center" backgroundColor="KravenIBbg" foregroundColor="KravenIcon" transparent="1">
     <convert type="KravenFHDExtraInfo">Resolution</convert>    
   </widget>
   <ePixmap pixmap="KravenFHD/infobar-icons/aufloesung2.png" position="1722,34" size="174,33" zPosition="1" alphatest="blend" />
   <widget backgroundColor="KravenIBbg" font="Regular;28" foregroundColor="KravenIcon" halign="left" position="1725,31" size="82,33" render="Label" source="session.CurrentService" transparent="1">
-    <convert  type="KravenFHDExtServiceInfo">OrbitalPosition</convert>
+    <convert  type="KravenFHDServiceName2">OrbitalPos</convert>
   </widget>
   <widget render="Label" font="Regular;28" position="1789,31" size="100,33" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIcon"  source="session.FrontendStatus">
     <convert  type="KravenFHDFrontendInfo">SNR</convert>

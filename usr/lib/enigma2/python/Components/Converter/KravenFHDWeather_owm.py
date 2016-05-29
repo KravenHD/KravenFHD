@@ -106,7 +106,7 @@ class KravenFHDWeather_owm(Poll, Converter, object):
 		if WEATHER_LOAD == True:
 			try:
 				print "KravenWeather: Weather download from OpenWeatherMap"
-				res = requests.request('get', URL)
+				res = requests.get(URL, timeout=0.1)
 				self.data = res.json()
 				WEATHER_DATA = self.data
 				WEATHER_LOAD = False
@@ -411,7 +411,7 @@ class KravenFHDWeather_owm(Poll, Converter, object):
 			elif weatherfont == 962:
 				weatherfont = unichr(int('EE22', 16)).encode('utf-8')
 			else:
-				weatherfont = 'N/A'
+				weatherfont = '?'
 			return str(weatherfont)
 		except:
-			return 'N/A'
+			return '?'

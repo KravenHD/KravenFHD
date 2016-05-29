@@ -459,8 +459,8 @@
   </screen>
   <!-- MovieEpgSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MovieEpgSetup" position="0,0" size="1920,1080" title="MovieEpg Setup">
-    <widget backgroundColor="Kravenbg3" name="config" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1050,600" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
-    <widget backgroundColor="Kravenbg3" font="Regular2;30" position="105,757" render="Label" size="1050,132" source="help" transparent="1" foregroundColor="KravenFont2" />
+    <widget backgroundColor="Kravenbg3" name="config" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,630" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget backgroundColor="Kravenbg3" font="Regular2;30" position="105,787" render="Label" size="1062,132" source="help" transparent="1" foregroundColor="KravenFont2" />
     <constant-widget name="Title-big"/>
     <constant-widget name="Colorbuttons"/>
 	<!-- Logo -->
@@ -481,7 +481,7 @@
     <!-- OpenWebifConfig -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="OpenWebifConfig" position="0,0" size="1920,1080" title="OpenWebif Configuration">
     <widget backgroundColor="Kravenbg3" font="Regular2;36" halign="center" name="lab1" position="105,120" size="1062,90" transparent="1" valign="top" zPosition="1" foregroundColor="KravenFont2" />
-    <widget backgroundColor="Kravenbg3" name="config" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,241" size="1062,615" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="config" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,241" size="1062,630" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
     <constant-widget name="Title-big"/>
     <constant-widget name="Colorbuttons"/>
 	<!-- Logo -->
@@ -830,7 +830,7 @@
     <!--<text="CrossEPG_Menu" position="105,0" />-->
   </screen>
   <!-- CrossEPG Configuration -->
-  <screen name="CrossEPG_Setup" position="0,0" size="1920,1080" title="CrossEPG Config" backgroundColor="transparent" flags="wfNoBorder"  >
+  <screen name="CrossEPG_Setup" position="0,0" size="1920,1080" title="CrossEPG Config" backgroundColor="transparent" flags="wfNoBorder" >
 	<constant-widget name="Title-big"/>
 	<widget backgroundColor="Kravenbg3" name="config" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,585" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" zPosition="1" transparent="1" />
 	<widget name="information" position="105,750" size="1062,180" halign="center" valign="center" font="Regular2;33" foregroundColor="KravenFont2" backgroundColor="Kravenbg3" transparent="1" />
@@ -928,7 +928,7 @@
     <!--<text="YoutubeTVSettings" position="105,0" />-->
   </screen>
   <!-- YouTubeTv Window -->
-  <screen name="YoutubeTVWindow" position="0,0" size="1920,1080" title="Start YouTube TV" backgroundColor="transparent" flags="wfNoBorder"  >
+  <screen name="YoutubeTVWindow" position="0,0" size="1920,1080" title="Start YouTube TV" backgroundColor="transparent" flags="wfNoBorder" >
     <constant-widget name="Title-big"/>
 	<widget name="infomation" position="105,120" size="1062,120" valign="center" halign="center" font="Regular;36" foregroundColor="KravenFont1" backgroundColor="Kravenbg3" transparent="1" zPosition="1" />
 	<widget name="startdesc" position="105,300" size="1062,60" valign="center" font="Regular;30" foregroundColor="KravenFont1" backgroundColor="Kravenbg3" transparent="1" zPosition="1" />
@@ -984,10 +984,10 @@
 	<ePixmap pixmap="KravenFHD/skin_default/buttons/key_1.png" zPosition="2" position="468,924" size="40,36" alphatest="blend" />
 	<ePixmap pixmap="KravenFHD/skin_default/buttons/key_2.png" zPosition="2" position="843,924" size="40,36" alphatest="blend" />
 	<ePixmap pixmap="KravenFHD/skin_default/buttons/key_3.png" zPosition="2" position="1218,924" size="40,36" alphatest="blend" />
-    <ePixmap backgroundColor="Kravenbg3" alphatest="blend" pixmap="KravenFHD/buttons/key_grey1.png" position="97,963" size="300,7" />
-    <ePixmap backgroundColor="Kravenbg3" alphatest="blend" pixmap="KravenFHD/buttons/key_grey1.png" position="472,963" size="300,7" />
-    <ePixmap backgroundColor="Kravenbg3" alphatest="blend" pixmap="KravenFHD/buttons/key_grey1.png" position="847,963" size="300,7" />
-    <ePixmap backgroundColor="Kravenbg3" alphatest="blend" pixmap="KravenFHD/buttons/key_grey1.png" position="1222,963" size="300,7" />
+    <ePixmap alphatest="blend" pixmap="KravenFHD/buttons/key_grey1.png" position="97,963" size="300,7" />
+    <ePixmap alphatest="blend" pixmap="KravenFHD/buttons/key_grey1.png" position="472,963" size="300,7" />
+    <ePixmap alphatest="blend" pixmap="KravenFHD/buttons/key_grey1.png" position="847,963" size="300,7" />
+    <ePixmap alphatest="blend" pixmap="KravenFHD/buttons/key_grey1.png" position="1222,963" size="300,7" />
     <widget name="key_0" position="157,922" size="300,39" font="Regular;30" halign="left" foregroundColor="KravenButton" backgroundColor="KravenIBbg3" transparent="1" zPosition="2" />
     <widget name="key_1" position="532,922" size="300,39" font="Regular;30" halign="left" foregroundColor="KravenButton" backgroundColor="KravenIBbg3" transparent="1" zPosition="2" />
     <widget name="key_2" position="907,922" size="300,39" font="Regular;30" halign="left" foregroundColor="KravenButton" backgroundColor="KravenIBbg3" transparent="1" zPosition="2" />
@@ -1258,12 +1258,6 @@
     <constant-widget name="OKExit"/>
     <!--<text="PermanentClockMenu" position="105,0" />-->
   </screen>
-  <!-- PermanentClockScreen -->
-  <screen backgroundColor="KravenIBbg" flags="wfNoBorder" name="PermanentClockScreen" position="0,0" size="180,45" zPosition="10" title=" ">
-    <widget backgroundColor="KravenIBbg" source="global.CurrentTime" render="Label" position="1,1" size="180,45" font="Regular;39" foregroundColor="KravenIBFont1" valign="center" halign="center" transparent="1">
-	  <convert type="ClockToText">Default</convert>
-	</widget>
-  </screen>
   <!-- OscamButler -->
   <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="OscamButler" position="0,0" size="1920,1080" title="OscamButler">
     <widget backgroundColor="KravenIBbg3" name="title" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" noWrap="1" />
@@ -1433,5 +1427,124 @@
     <constant-widget name="NameRedGreenYellowBlue"/>
     <constant-widget name="OKExit"/>
     <!--<text="SeriesPluginInfoScreen" position="105,0" />-->
+  </screen>
+  <!-- PictureCenterFS7 -->
+  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="PictureCenterFS7" position="0,0" size="1920,1080" title="PictureCenterFS">
+    <constant-widget name="Title-big2"/>
+    <constant-widget name="Background"/>
+	<widget backgroundColor="Kravenbg" source="pc_list" render="Listbox" foregroundColor="KravenFont1" foregroundColorSelected="KravenSelFont" backgroundColorSelected="KravenSelection" position="105,120" size="1062,765" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" zPosition="2" transparent="1" >
+		<convert type="TemplatedMultiContent">
+			{"template":[ 
+                    MultiContentEntryText(pos = (65, 1), size = (990, 42), flags = RT_HALIGN_LEFT, text = 1), 
+					MultiContentEntryPixmapAlphaTest(pos = (10, 4), size = (36, 36), png = 9), # index 9 is the status pixmap)
+			],
+			"fonts": [gFont("Regular", 33)],
+			"itemHeight": 45
+			}
+		</convert>
+	</widget>
+    <widget name="thumb" position="1277,120" zPosition="2" size="420,420" alphatest="blend" />
+ 	<widget name="Bez_sort" position="1277,650" size="150,40" font="Regular;30" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" />
+    <widget name="key_sort" position="1457,650" size="400,40" font="Regular;30" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" noWrap="1"/>
+    <widget name="button_ok" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PictureCenterFS/skin/fHD/pictures/keyFHD_ok.png" position="1277,700" size="50,40" zPosition="1" alphatest="blend" />
+    <widget name="key_ok" position="1357,700" zPosition="1" size="500,40" font="Regular;30" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" noWrap="1"/>
+    <widget name="button_0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PictureCenterFS/skin/fHD/pictures/keyFHD_0.png" position="1277,750" size="50,40" zPosition="1" alphatest="blend" />
+    <widget name="key_0" position="1357,750" zPosition="1" size="500,40" font="Regular;30" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" noWrap="1"/>
+    <widget name="button_epg" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PictureCenterFS/skin/fHD/pictures/keyFHD_epg.png" position="1277,800" size="50,40" zPosition="1" alphatest="blend" />
+    <ePixmap alphatest="blend" pixmap="KravenFHD/buttons/key_red1.png" position="97,1038" size="300,7" />
+    <ePixmap alphatest="blend" pixmap="KravenFHD/buttons/key_green1.png" position="497,1038" size="300,7" />
+    <ePixmap alphatest="blend" pixmap="KravenFHD/buttons/key_yellow1.png" position="897,1038" size="300,7" />
+    <ePixmap alphatest="blend" pixmap="KravenFHD/buttons/key_blue1.png" position="1297,1038" size="300,7" />
+    <widget font="Regular;30" halign="left" valign="top" name="key_red" position="105,997" size="380,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" noWrap="1"/>
+    <widget font="Regular;30" halign="left" valign="top" name="key_green" position="505,997" size="380,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" noWrap="1"/>
+    <widget font="Regular;30" halign="left" valign="top" name="key_yellow" position="905,997" size="380,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" noWrap="1"/>
+    <widget font="Regular;30" halign="left" valign="top" name="key_blue" position="1305,997" size="380,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="2" noWrap="1"/>
+    <ePixmap pixmap="KravenFHD/infobar-global-icons/key_menu.png" position="1717,1005" size="65,33" alphatest="blend" />
+    <ePixmap pixmap="KravenFHD/infobar-global-icons/key_exit.png" position="1792,1005" size="65,33" alphatest="blend" />
+    <!--<text="PictureCenterFS7" position="105,0" />-->
+  </screen>
+  <!-- PictureCenterFS7_Setup2 -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="PictureCenterFS7_Setup2" position="0,0" size="1920,1080" title="PictureCenterFS">
+	<widget backgroundColor="Kravenbg3" name="config" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,630" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<widget backgroundColor="Kravenbg3" name="balken" font="Regular2;33" foregroundColor="KravenFont2" position="105,770" size="1062,126" halign="center" valign="center" />
+    <constant-widget name="Title-big"/>
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="NameRedGreenYellowBlue"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="PictureCenterFS7_Setup2" position="105,0" />-->
+  </screen>
+  <!-- PictureCenterFS7_Edit -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="PictureCenterFS7_Edit" position="0,0" size="1920,1080" title="PictureCenterFS">
+	<widget backgroundColor="Kravenbg3" name="config" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,630" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<widget backgroundColor="Kravenbg3" name="balken" font="Regular2;33" foregroundColor="KravenFont2" position="105,770" size="1062,126" halign="center" valign="center" />
+    <constant-widget name="Title-big"/>
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="NameRedGreenYellowBlue"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="PictureCenterFS7_Edit" position="105,0" />-->
+  </screen>
+  <!-- PictureCenterFS_Filemenue -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="PictureCenterFS_Filemenue" position="0,0" size="1920,1080" title="PictureCenterFS">
+	<eLabel text="PictureCenterFS" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="list" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="PictureCenterFS_Filemenue" position="105,0" />-->
+  </screen>
+  <!-- Show_Exif -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="Show_Exif" position="0,0" size="1920,1080" title="PictureCenterFS">
+    <widget source="menu" render="Listbox" position="105,120" size="1062,630" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" >
+		<convert type="TemplatedMultiContent">
+		{
+			"template": [ 
+					MultiContentEntryText(pos = (10, 1), size = (250, 42), flags = RT_HALIGN_LEFT, text = 0), 
+					MultiContentEntryText(pos = (290, 1), size = (770, 42), flags = RT_HALIGN_LEFT, text = 1)],
+			"fonts": [gFont("Regular", 33)],
+			"itemHeight": 45
+		}
+		</convert>
+	</widget>
+	<widget backgroundColor="Kravenbg3" name="scrolltext" font="Regular2;33" foregroundColor="KravenFont2" position="105,770" size="1062,126" halign="center" valign="center" />
+    <constant-widget name="Title-big"/>
+	<!-- Logo -->
+    <widget font="Regular;30" halign="left" valign="center" source="key_red" render="Label" position="105,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="Show_Exif" position="105,0" />-->
+  </screen>
+  <!-- MediaInfoConfigScreen -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="MediaInfoConfigScreen" position="0,0" size="1920,1080" title="MediaInfo Config">
+    <constant-widget name="Title-big"/>
+	<widget backgroundColor="Kravenbg3" name="config" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="NameRedGreenYellowBlue"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="MediaInfoConfigScreen" position="105,0" />-->
+  </screen>
+  <!-- MediaInfoFolderScreen -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="MediaInfoFolderScreen" position="0,0" size="1920,1080" title="MediaInfo Folder">
+    <constant-widget name="Title-big"/>
+	<widget backgroundColor="Kravenbg3" name="media" font="Regular2;36" foregroundColor="KravenFont2" position="105,120" size="1062,45" zPosition="5" />
+	<widget backgroundColor="Kravenbg3" name="folderlist" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="105,172" size="1062,765" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="SourceRedGreen"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="MediaInfoFolderScreen" position="105,0" />-->
+  </screen>
+  <!-- MediaInfo -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="MediaInfo" position="0,0" size="1920,1080" title="MediaInfo">
+    <constant-widget name="Title-big"/>
+	<widget backgroundColor="Kravenbg3" name="head" font="Regular2;36" foregroundColor="KravenFont2" position="105,120" size="1062,45" zPosition="5" />
+	<widget backgroundColor="Kravenbg3" name="downloadList" font="Regular;33" foregroundColor="KravenFont1" itemHeight="75" position="105,172" size="1062,750" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="NameRedGreenYellowBlue"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="MediaInfo" position="105,0" />-->
   </screen>
 <!-- plugins -->

@@ -1,4 +1,7 @@
 #!/bin/sh
+if [ -f /tmp/graphics/backg.png ]; then
+    mv -f /tmp/graphics/*.* /usr/share/enigma2/KravenFHD/graphics
+fi
 if [ -f /tmp/ibar.png ]; then
     mv -f /tmp/ibar.png /usr/share/enigma2/KravenFHD
 fi
@@ -7,6 +10,15 @@ if [ -f /tmp/ibaro.png ]; then
 fi
 if [ -f /tmp/backg.png ]; then
     mv -f /tmp/backg.png /usr/share/enigma2/KravenFHD
+fi
+if [ -f /tmp/info.png ]; then
+    mv -f /tmp/info.png /usr/share/enigma2/KravenFHD
+fi
+if [ -f /tmp/shift.png ]; then
+    mv -f /tmp/shift.png /usr/share/enigma2/KravenFHD
+fi
+if [ -f /tmp/wsmall.png ]; then
+    mv -f /tmp/wsmall.png /usr/share/enigma2/KravenFHD
 fi
 if [ -f /tmp/skin-user.xml ]; then
     mv -f /tmp/skin-user.xml /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data

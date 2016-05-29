@@ -10,6 +10,6 @@
   <widget backgroundColor="KravenSIBbg" font="Regular2;36" foregroundColor="KravenFont2" halign="center" position="55,501" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" source="session.Event_Next" transparent="1" size="1798,276">
     <convert type="KravenFHDEventName">ExtendedDescription</convert>
   </widget>
-  <eLabel backgroundColor="KravenSIBbg" position="0,0" size="1920,1080" transparent="0" zPosition="-10" />
+  <!-- sibbg */-->
   <!--<text="Secondinfobar - top/bottom" position="60,0" />-->
 </screen>

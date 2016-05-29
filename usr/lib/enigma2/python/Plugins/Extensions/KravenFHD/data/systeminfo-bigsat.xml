@@ -1,5 +1,5 @@
 <!-- System-Info -->
-  <ePixmap pixmap="KravenFHD/info.png" position="1335,225" size="600,562" zPosition="-9" alphatest="blend" />
+  <ePixmap pixmap="KravenFHD/graphics/info.png" position="1335,225" size="600,562" zPosition="-9" alphatest="blend" />
   <eLabel text="Tuner:" position="1440,322" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2" />
   <eLabel text="Signal:" position="1440,352" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2" />
   <eLabel text="Video:" position="1440,382" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2" />
@@ -35,7 +35,7 @@
     <convert type="KravenFHDLayoutInfo">LoadAvg</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" font="Regular;24" position="1560,517" size="75,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
-    <convert type="KravenFHDExtServiceInfo">OrbitalPosition</convert>
+    <convert type="KravenFHDServiceName2">OrbitalPos</convert>
   </widget>
   <widget source="session.FrontendStatus" render="Label" font="Regular;24" position="1770,517" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
     <convert type="KravenFHDFrontendInfo">SNR</convert>

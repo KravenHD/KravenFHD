@@ -13,7 +13,6 @@ class KravenFHDFrontendInfo(Poll, Converter, object):
 	SLOT_NUMBER = 5
 	TUNER_TYPE = 6
 	REC_TUNER = 7
-	RECORD = 8
 
 	def __init__(self, type):
 		Poll.__init__(self)
@@ -35,8 +34,6 @@ class KravenFHDFrontendInfo(Poll, Converter, object):
 		elif type.split("_")[0] == "REC":
 			self.type = self.REC_TUNER
 			self.tunernum = type.split("_")[1]
-		elif type == "RECORD":
-			self.type = self.RECORD
 		else:
 			self.type = self.LOCK
 
@@ -67,7 +64,7 @@ class KravenFHDFrontendInfo(Poll, Converter, object):
 
 	@cached
 	def getBool(self):
-		assert self.type in (self.LOCK, self.BER, self.REC_TUNER), "the boolean output of FrontendInfo can only be used for lock or BER info or Tuner-Rec "
+		assert self.type in (self.LOCK, self.BER, self.REC_TUNER), "the boolean output of FrontendInfo can only be used for lock or BER info or Tuner-Rec"
 		if self.type == self.LOCK:
 			lock = self.source.lock
 			if lock is None:
@@ -88,11 +85,6 @@ class KravenFHDFrontendInfo(Poll, Converter, object):
 						tuner = data.get('tuner_number', -1)
 						if tuner is not None and tuner > -1 and tuner == int(self.tunernum):
 							return True
-			return False
-		elif self.type == self.RECORD:
-			for timer in NavigationInstance.instance.RecordTimer.timer_list:
-				if timer.isRunning() and not timer.justplay:
-					return True
 			return False
 
 	text = property(getText)

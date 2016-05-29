@@ -23,7 +23,7 @@
     <eLabel backgroundColor="KravenBorder2" position="1233,536" size="576,4" transparent="0" zPosition="4" />
     <eLabel backgroundColor="KravenBorder2" position="1233,216" size="4,324" transparent="0" zPosition="4" />
     <eLabel backgroundColor="KravenBorder2" position="1805,216" size="4,324" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1920,1080" transparent="0" zPosition="-10" />
+    <!-- nontransbg */-->
     <constant-widget name="ChannelSelection"/>
     <constant-widget name="gradient-cs"/>
     <constant-widget name="CSREPG32"/>

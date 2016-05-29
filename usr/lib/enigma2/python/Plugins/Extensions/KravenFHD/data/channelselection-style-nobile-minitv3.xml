@@ -1,4 +1,4 @@
-<!-- /* ChannelSelection - Nobile Preview -->
+  <!-- /* ChannelSelection - Nobile Preview -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection">
     <widget backgroundColor="Kravenbg2" scrollbarMode="showOnDemand" scrollbarWidth="5" picServiceEventProgressbar="KravenFHD/progress/progress52.png" colorEventProgressbar="KravenProgress" colorEventProgressbarSelected="KravenProgress" foregroundColorMarkedSelected="green" foregroundColor="KravenFont1" colorEventProgressbarBorder="KravenBorder" colorEventProgressbarBorderSelected="KravenSelFont" colorServiceDescription="KravenFont2" colorServiceDescriptionSelected="KravenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="KravenNotAvailable" name="list" position="25,449" serviceInfoFont="Regular;30" serviceItemHeight="43" serviceNameFont="Regular;30" serviceNumberFont="Regular;30" size="658,516" transparent="1" />
     <widget source="ServiceEvent" render="KravenFHDPig" position="90,104" size="576,324" zPosition="3" backgroundColor="transparent" />
@@ -34,7 +34,7 @@
     <eLabel position="711,570" size="669,1" backgroundColor="KravenLine" />
     <eLabel position="697,105" size="1,860" backgroundColor="KravenLine" />
     <eLabel position="1392,105" size="1,860" backgroundColor="KravenLine" />
-    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1920,1080" transparent="0" zPosition="-10" />
+    <!-- nontransbg */-->
     <constant-widget name="ChannelSelection"/>
     <constant-widget name="gradient-cs"/>
     <constant-widget name="CSNMTEPG28"/>

@@ -1,6 +1,6 @@
   <!-- PVRState -->
   <screen name="PVRState" position="center,center" size="330,135" flags="wfNoBorder" backgroundColor="transparent" zPosition="10">
-    <eLabel backgroundColor="KravenIBbg" position="0,0" size="330,135" transparent="0" zPosition="-10" />
+    <constant-widget name="pvrstate-bg"/>
     <!--<eLabel position="0,0" backgroundColor="KravenIBLine" size="330,3" zPosition="-8" />
     <eLabel backgroundColor="KravenIBLine" position="0,132" size="330,3" zPosition="-8" />
     <eLabel backgroundColor="KravenIBLine" position="0,3" size="3,132" zPosition="-8" />

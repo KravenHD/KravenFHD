@@ -109,7 +109,7 @@ class KravenFHDWeather_realtek(Poll, Converter, object):
 				print "KravenWeather: Weather download from RealTek"
 				self.data = {}
 				index = 0
-				res = requests.request('get', URL)
+				res = requests.get(URL, timeout=0.1)
 				root = fromstring(res.text.replace('xmlns="http://www.accuweather.com"',''))
 				for child in root.findall('currentconditions'):
 					self.data['Day_%s' % str(index)] = {}

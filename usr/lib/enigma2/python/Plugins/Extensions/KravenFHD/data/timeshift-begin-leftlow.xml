@@ -1,4 +1,4 @@
-    <ePixmap pixmap="KravenFHD/shift.png" position="-15,225" size="1357,255" zPosition="-9" alphatest="blend"/>
+    <ePixmap pixmap="KravenFHD/graphics/shift.png" position="-15,225" size="1357,255" zPosition="-9" alphatest="blend"/>
     <widget name="state" position="82,330" size="165,36" font="Regular;42" foregroundColor="KravenIBFont1" halign="center" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="center" />
     <widget source="session.CurrentService" render="Label" position="1000,322" size="150,45" font="Regular;36" halign="right" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top">
       <convert type="ServicePosition">Remaining</convert>

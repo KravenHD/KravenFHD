@@ -19,12 +19,12 @@
     <eLabel backgroundColor="KravenIBLine" position="0,90" size="1177,3" zPosition="-8" />
     <eLabel backgroundColor="KravenIBLine" position="0,3" size="3,87" zPosition="-8" />
     <eLabel backgroundColor="KravenIBLine" position="1174,3" size="3,87" zPosition="-8" />
-    <eLabel backgroundColor="KravenIBbg" position="0,0" size="1177,93" zPosition="-9" />
+    <constant-widget name="timeshift-bg"/>
   </screen>
   <!-- InfoBarTunerState -->
   <screen name="TunerState" title="Tuner State" flags="wfNoBorder" position="0,294" size="1920,48" zPosition="5" padding="20" spacing="15" backgroundColor="transparent">
 	<widget name="Background" backgroundColor="KravenIBbg" borderWidth="2" borderColor="KravenIBLine" position="0,0" size="1920,48" zPosition="-1" transparent="1" />
-    <eLabel backgroundColor="KravenIBbg" position="0,0" size="1920,48" zPosition="-2" />
+    <constant-widget name="ibts-bg"/>
 	<widget name="Type" pixmaps="KravenFHD/InfoBarTunerState/record.png,KravenFHD/InfoBarTunerState/stream.png,KravenFHD/InfoBarTunerState/finished.png,KravenFHD/InfoBarTunerState/info.png" position="0,0" size="48,48" zPosition="1" backgroundColor="KravenIBbg" transparent="1" alphatest="on"/>
 	<widget name="Progress" pixmap="KravenFHD/InfoBarTunerState/progress.png" position="0,0" size="120,15" zPosition="1" borderWidth="2" borderColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1"/>
 	<widget name="Field0" font="Regular;33" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
@@ -45,5 +45,5 @@
     <eLabel backgroundColor="KravenIBLine" position="0,0" size="378,3" zPosition="-8" />
     <eLabel backgroundColor="KravenIBLine" position="0,90" size="378,3" zPosition="-8" />
     <eLabel backgroundColor="KravenIBLine" position="375,3" size="3,87" zPosition="-8" />
-    <eLabel backgroundColor="KravenIBbg" position="0,0" size="378,93" zPosition="-9" />
+    <constant-widget name="autoresolution-bg"/>
   </screen>

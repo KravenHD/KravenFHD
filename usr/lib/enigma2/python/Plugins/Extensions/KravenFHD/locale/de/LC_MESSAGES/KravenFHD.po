@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenFHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2016-04-20 18:26+0100\n"
+"PO-Revision-Date: 2016-05-24 22:32+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -1725,6 +1725,10 @@ msgid "Choose from different styles to display SplitScreen."
 msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für 'SplitScreen'."
 
 #: KravenFHD.py
+msgid "Choose from different styles to display EPGSelection."
+msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für 'EPGSelection'."
+
+#: KravenFHD.py
 msgid "about"
 msgstr "Über"
 
@@ -1891,3 +1895,75 @@ msgstr "Record & Tuner leuchtet"
 #: KravenFHD.py
 msgid "Record-State"
 msgstr "Aufnahmezustand"
+
+#: KravenFHD.py
+msgid "unskinned Colors"
+msgstr "ungeskinnte Farben"
+
+#: KravenFHD.py
+msgid "Choose whether some foreground and background colors of unskinned screens are changed or not."
+msgstr "Wählen Sie, ob einige Schrift- und Hintergrundfarben von ungeskinnten Screens geändert werden oder nicht."
+
+#: KravenFHD.py
+msgid "Unwatched Color"
+msgstr "ungesehene Filme"
+
+#: KravenFHD.py
+msgid "Watching Color"
+msgstr "teils gesehene Filme"
+
+#: KravenFHD.py
+msgid "Finished Color"
+msgstr "gesehene Filme"
+
+#: KravenFHD.py
+msgid "Choose the font color of unwatched movies."
+msgstr "Wählen Sie die Schriftfarbe für noch nicht gesehene Filme."
+
+#: KravenFHD.py
+msgid "Choose the font color of watching movies."
+msgstr "Wählen Sie die Schriftfarbe für teilweise gesehene Filme."
+
+#: KravenFHD.py
+msgid "Choose the font color of watched movies."
+msgstr "Wählen Sie die Schriftfarbe für gesehene Filme."
+
+#: KravenFHD.py
+msgid "infobar colors"
+msgstr "Infoleisten Farben"
+
+#: KravenFHD.py
+msgid "Choose the colors of PermanentClock."
+msgstr "Wählen Sie die Farben für 'PermanentClock'."
+
+#: KravenFHD.py
+msgid "          Primary Color"
+msgstr "          Primäre Farbe"
+
+#: KravenFHD.py
+msgid "          Secondary Color"
+msgstr "          Sekundäre Farbe"
+
+#: KravenFHD.py
+msgid "Choose the primary color for the background gradient."
+msgstr "Wählen Sie die primäre Farbe für den Hintergrund-Verlauf."
+
+#: KravenFHD.py
+msgid "Choose the secondary color for the background gradient."
+msgstr "Wählen Sie die sekundäre Farbe für den Hintergrund-Verlauf."
+
+#: KravenFHD.py
+msgid "Choose the primary color for the infobar gradient."
+msgstr "Wählen Sie die primäre Farbe für den Infoleisten-Verlauf."
+
+#: KravenFHD.py
+msgid "Choose the secondary color for the infobar gradient."
+msgstr "Wählen Sie die sekundäre Farbe für den Infoleisten-Verlauf."
+
+#: KravenFHD.py
+msgid "          Info Panels"
+msgstr "          Infofelder"
+
+#: KravenFHD.py
+msgid "Choose gradient or color for the info panels (Sysinfos, Timeshiftbar etc.)."
+msgstr "Wählen Sie Verlauf oder eine Farbe für die Infofelder (Sysinfos, Timeshiftbar etc.)."
