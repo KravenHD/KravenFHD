@@ -242,7 +242,8 @@ config.plugins.KravenFHD.Volume = ConfigSelection(default="volume-border", choic
 				("volume-border", _("with Border")),
 				("volume-left", _("left")),
 				("volume-right", _("right")),
-				("volume-top", _("top"))
+				("volume-top", _("top")),
+				("volume-center", _("center"))
 				])
 
 config.plugins.KravenFHD.MenuColorTrans = ConfigSelection(default="32", choices = TransList)
@@ -900,7 +901,7 @@ class KravenFHD(ConfigListScreen, Screen):
     <convert type="ClockToText">Default</convert>
   </widget>
   <eLabel position="830,80" size="402,46" text="KravenFHD" font="Regular; 36" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00f0a30a" />
-  <eLabel position="845,126" size="372,40" text="Version: 2.0.0" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
+  <eLabel position="845,126" size="372,40" text="Version: 2.0.1" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
   <widget name="helperimage" position="801,172" size="460,259" zPosition="1" backgroundColor="#00000000" />
   <widget source="Canvas" render="Canvas" position="801,172" size="460,259" zPosition="-1" backgroundColor="#00000000" />
   <widget source="help" render="Label" position="847,440" size="368,196" font="Regular;20" backgroundColor="#00000000" foregroundColor="#00f0a30a" halign="center" valign="top" transparent="1" />
