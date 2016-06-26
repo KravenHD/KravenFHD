@@ -806,7 +806,7 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
     <widget font="Regular;60" backgroundColor="#7F7F7F7F" halign="left" noWrap="1" foregroundColor="KravenIBFont2" position="97,68" size="1500,78" render="Label" source="Service" transparent="1" zPosition="1">
       <convert type="ServiceName">Name</convert>
     </widget>
-    <widget backgroundColor="KravenIBbg2" alphatest="blend" position="97,178" render="KravenFHDXPicon" size="300,180" source="Service" transparent="1" zPosition="4">
+    <widget backgroundColor="KravenIBbg2" alphatest="blend" position="97,178" render="Picon" size="300,180" source="Service" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
 	<widget backgroundColor="KravenIBbg2" name="list" font="Regular;33" foregroundColor="KravenIBFont2" itemHeight="45" position="437,178" size="746,180" zPosition="3" transparent="1" />
@@ -1873,7 +1873,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 	<eLabel backgroundColor="Kravenbg" position="0,0" size="1920,1080" transparent="0" zPosition="-10" />
   </screen>
   <!-- AudioSelection -->
-  <screen name="AudioSelection" title="Audio" position="center,center" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="AudioSelection" title="Audio" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
     <constant-widget name="Title-big"/>
     <widget backgroundColor="Kravenbg3" name="config" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="165,117" size="1002,405" transparent="1" zPosition="3" />
     <widget source="key_red" render="Pixmap" pixmap="KravenFHD/buttons/red.png" position="105,120" size="36,36" alphatest="blend">
@@ -1891,19 +1891,19 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget source="streams" render="Listbox" position="165,540" size="1002,375" backgroundColor="Kravenbg3" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" zPosition="3" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"templates":
-					{"default": (38, [
-						MultiContentEntryText(pos = (0, 0),   size = (30, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
-						MultiContentEntryText(pos = (53, 0),  size = (40, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # number,
-						MultiContentEntryText(pos = (120, 0), size = (225, 38), font = 0, flags = RT_HALIGN_LEFT,  text = 3), # description,
-						MultiContentEntryText(pos = (353, 0), size = (492, 38), font = 0, flags = RT_HALIGN_LEFT,  text = 4), # language,
-						MultiContentEntryText(pos = (852, 3), size = (150, 38),  font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
+					{"default": (37, [
+						MultiContentEntryText(pos = (0, 0),   size = (45, 37),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
+						MultiContentEntryText(pos = (53, 0),  size = (60, 37),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # number,
+						MultiContentEntryText(pos = (120, 0), size = (225, 37), font = 0, flags = RT_HALIGN_LEFT,  text = 3), # description,
+						MultiContentEntryText(pos = (353, 0), size = (492, 37), font = 0, flags = RT_HALIGN_LEFT,  text = 4), # language,
+						MultiContentEntryText(pos = (852, 3), size = (150, 37),  font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
 					], True, "showOnDemand"),
-					"notselected": (38, [
-						MultiContentEntryText(pos = (0, 0),   size = (30, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
-						MultiContentEntryText(pos = (53, 0),  size = (40, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # number,
-						MultiContentEntryText(pos = (120, 0), size = (225, 38), font = 0, flags = RT_HALIGN_LEFT,  text = 3), # description,
-						MultiContentEntryText(pos = (353, 0), size = (492, 38), font = 0, flags = RT_HALIGN_LEFT,  text = 4), # language,
-						MultiContentEntryText(pos = (852, 3), size = (150, 38),  font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
+					"notselected": (37, [
+						MultiContentEntryText(pos = (0, 0),   size = (45, 37),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
+						MultiContentEntryText(pos = (53, 0),  size = (60, 37),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # number,
+						MultiContentEntryText(pos = (120, 0), size = (225, 37), font = 0, flags = RT_HALIGN_LEFT,  text = 3), # description,
+						MultiContentEntryText(pos = (353, 0), size = (492, 37), font = 0, flags = RT_HALIGN_LEFT,  text = 4), # language,
+						MultiContentEntryText(pos = (852, 3), size = (150, 37),  font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
 					], False, "showOnDemand")
 					},
 				"fonts": [gFont("Regular", 30), gFont("Regular", 24)],

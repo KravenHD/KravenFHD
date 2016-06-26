@@ -522,6 +522,16 @@ config.plugins.KravenFHD.EPGSelection = ConfigSelection(default="epgselection-st
 				("epgselection-minitv", _("MiniTV"))
 				])
 
+config.plugins.KravenFHD.EPGSelectionEPGSize = ConfigSelection(default="small", choices = [
+				("small", _("small")),
+				("big", _("big"))
+				])
+
+config.plugins.KravenFHD.EPGListSize = ConfigSelection(default="small", choices = [
+				("small", _("small")),
+				("big", _("big"))
+				])
+
 config.plugins.KravenFHD.EMCStyle = ConfigSelection(default="emc-minitv", choices = [
 				("emc-nocover", _("no Cover")),
 				("emc-nocover2", _("no Cover2")),
@@ -841,6 +851,10 @@ config.plugins.KravenFHD.CategoryMovieSelection = ConfigSelection(default="categ
 				("category", _(" "))
 				])
 
+config.plugins.KravenFHD.CategoryEPGSelection = ConfigSelection(default="category", choices = [
+				("category", _(" "))
+				])
+
 config.plugins.KravenFHD.CategoryChannellist = ConfigSelection(default="category", choices = [
 				("category", _(" "))
 				])
@@ -901,7 +915,7 @@ class KravenFHD(ConfigListScreen, Screen):
     <convert type="ClockToText">Default</convert>
   </widget>
   <eLabel position="830,80" size="402,46" text="KravenFHD" font="Regular; 36" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00f0a30a" />
-  <eLabel position="845,126" size="372,40" text="Version: 2.0.1" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
+  <eLabel position="845,126" size="372,40" text="Version: 2.1.1" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
   <widget name="helperimage" position="801,172" size="460,259" zPosition="1" backgroundColor="#00000000" />
   <widget source="Canvas" render="Canvas" position="801,172" size="460,259" zPosition="-1" backgroundColor="#00000000" />
   <widget source="help" render="Label" position="847,440" size="368,196" font="Regular;20" backgroundColor="#00000000" foregroundColor="#00f0a30a" halign="center" valign="top" transparent="1" />
@@ -1196,9 +1210,8 @@ class KravenFHD(ConfigListScreen, Screen):
 			emptyLines+=1
 		list.append(getConfigListEntry(_("NumberZap"), config.plugins.KravenFHD.NumberZapExt, _("Choose from different styles for NumberZap.")))
 		list.append(getConfigListEntry(_("SplitScreen"), config.plugins.KravenFHD.SplitScreen, _("Choose from different styles to display SplitScreen.")))
-		list.append(getConfigListEntry(_("EPGSelection"), config.plugins.KravenFHD.EPGSelection, _("Choose from different styles to display EPGSelection.")))
 		list.append(getConfigListEntry(_("PermanentClock"), config.plugins.KravenFHD.PermanentClock, _("Choose the colors of PermanentClock.")))
-		for i in range(emptyLines+2):
+		for i in range(emptyLines+3):
 			list.append(getConfigListEntry(_(" "), ))
 		
 		# page 6
@@ -1242,13 +1255,11 @@ class KravenFHD(ConfigListScreen, Screen):
 		
 		# page 6 (category 2)
 		emptyLines=0
-		list.append(getConfigListEntry(_("MOVIESELECTION ____________________________________________________________"), config.plugins.KravenFHD.CategoryMovieSelection, _("This sections offers all settings for MovieSelection.")))
-		list.append(getConfigListEntry(_("MovieSelection-Style"), config.plugins.KravenFHD.MovieSelection, _("Choose from different styles for MovieSelection.")))
-		list.append(getConfigListEntry(_("EPG Fontsize"), config.plugins.KravenFHD.MovieSelectionEPGSize, _("Choose the font size of event description.")))
-		list.append(getConfigListEntry(_("Unwatched Color"), config.plugins.KravenFHD.UnwatchedColor, _("Choose the font color of unwatched movies.")))
-		list.append(getConfigListEntry(_("Watching Color"), config.plugins.KravenFHD.WatchingColor, _("Choose the font color of watching movies.")))
-		list.append(getConfigListEntry(_("Finished Color"), config.plugins.KravenFHD.FinishedColor, _("Choose the font color of watched movies.")))
-		for i in range(emptyLines):
+		list.append(getConfigListEntry(_("EPGSELECTION ____________________________________________________________"), config.plugins.KravenFHD.CategoryEPGSelection, _("This sections offers all settings for EPGSelection.")))
+		list.append(getConfigListEntry(_("EPGSelection-Style"), config.plugins.KravenFHD.EPGSelection, _("Choose from different styles to display EPGSelection.")))
+		list.append(getConfigListEntry(_("EPG-List Fontsize"), config.plugins.KravenFHD.EPGListSize, _("Choose the font size of EPG-List.")))
+		list.append(getConfigListEntry(_("EPG Fontsize"), config.plugins.KravenFHD.EPGSelectionEPGSize, _("Choose the font size of event description.")))
+		for i in range(emptyLines+2):
 			list.append(getConfigListEntry(_(" "), ))
 		
 		# page 7
@@ -1267,6 +1278,17 @@ class KravenFHD(ConfigListScreen, Screen):
 		
 		# page 7 (category 2)
 		emptyLines=0
+		list.append(getConfigListEntry(_("MOVIESELECTION ____________________________________________________________"), config.plugins.KravenFHD.CategoryMovieSelection, _("This sections offers all settings for MovieSelection.")))
+		list.append(getConfigListEntry(_("MovieSelection-Style"), config.plugins.KravenFHD.MovieSelection, _("Choose from different styles for MovieSelection.")))
+		list.append(getConfigListEntry(_("EPG Fontsize"), config.plugins.KravenFHD.MovieSelectionEPGSize, _("Choose the font size of event description.")))
+		list.append(getConfigListEntry(_("Unwatched Color"), config.plugins.KravenFHD.UnwatchedColor, _("Choose the font color of unwatched movies.")))
+		list.append(getConfigListEntry(_("Watching Color"), config.plugins.KravenFHD.WatchingColor, _("Choose the font color of watching movies.")))
+		list.append(getConfigListEntry(_("Finished Color"), config.plugins.KravenFHD.FinishedColor, _("Choose the font color of watched movies.")))
+		for i in range(emptyLines+1):
+			list.append(getConfigListEntry(_(" "), ))
+		
+		# page 7 (category 3)
+		emptyLines=0
 		list.append(getConfigListEntry(_("PLAYER ____________________________________________________________________"), config.plugins.KravenFHD.CategoryPlayers, _("This sections offers all settings for the movie players.")))
 		list.append(getConfigListEntry(_("Clock"), config.plugins.KravenFHD.PlayerClock, _("Choose from different options to show the clock in the players.")))
 		if config.plugins.KravenFHD.PlayerClock.value == "player-android":
@@ -1277,19 +1299,20 @@ class KravenFHD(ConfigListScreen, Screen):
 		for i in range(emptyLines+1):
 			list.append(getConfigListEntry(_(" "), ))
 		
-		# page 7 (category 3)
+		# page 8
 		emptyLines=0
 		if config.plugins.KravenFHD.IBStyle.value == "gradient":
 			list.append(getConfigListEntry(_("ANTIALIASING BRIGHTNESS ________________________________________________________________"), config.plugins.KravenFHD.CategoryAntialiasing, _("This sections offers all antialiasing settings. Distortions or color frames around fonts can be reduced by this settings.")))
 			list.append(getConfigListEntry(_("Infobar"), config.plugins.KravenFHD.InfobarAntialias, _("Reduce distortions (faint/blurry) or color frames around fonts in the infobar and widgets by adjusting the antialiasing brightness.")))
 			list.append(getConfigListEntry(_("ECM Infos"), config.plugins.KravenFHD.ECMLineAntialias, _("Reduce distortions (faint/blurry) or color frames around the ECM information in the infobar by adjusting the antialiasing brightness.")))
 			list.append(getConfigListEntry(_("Screens"), config.plugins.KravenFHD.ScreensAntialias, _("Reduce distortions (faint/blurry) or color frames around fonts at top and bottom of screens by adjusting the antialiasing brightness.")))
+			emptyLines=1
 		else:
-			emptyLines+=4
-		for i in range(emptyLines+2):
+			emptyLines+=0
+		for i in range(emptyLines):
 			list.append(getConfigListEntry(_(" "), ))
 
-		# page 8
+		# page 8 (category 2)
 		list.append(getConfigListEntry(_("DEBUG _____________________________________________________________________"), config.plugins.KravenFHD.CategoryDebug, _("This sections offers all debug settings.")))
 		list.append(getConfigListEntry(_("Screennames"), config.plugins.KravenFHD.DebugNames, _("Activate or deactivate small screen names for debugging purposes.")))
 
@@ -1300,67 +1323,72 @@ class KravenFHD(ConfigListScreen, Screen):
 		self.ShowPicture()
 
 		position = self["config"].instance.getCurrentIndex()
-		if position == 0:
+		if position == 0: # about
 			self["key_yellow"].setText("<< " + _("debug"))
 			self["key_blue"].setText(_("profiles") + " >>")
-		if (2 <= position <= 4):
+		if (2 <= position <= 4): # profiles
 			self["key_yellow"].setText("<< " + _("about"))
 			self["key_blue"].setText(_("system") + " >>")
-		if (6 <= position <= 17):
+		if (6 <= position <= 17): # system
 			self["key_yellow"].setText("<< " + _("profiles"))
 			self["key_blue"].setText(_("global colors") + " >>")
-		if (18 <= position <= 35):
+		if (18 <= position <= 35): # global colors
 			self["key_yellow"].setText("<< " + _("system"))
 			self["key_blue"].setText(_("infobar") + " >>")
-		if (36 <= position <= 53):
+		if (36 <= position <= 53): # infobar
 			self["key_yellow"].setText("<< " + _("global colors"))
 			self["key_blue"].setText(_("weather") + " >>")
 		if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz4":
-			if (54 <= position <= 62):
+			if (54 <= position <= 62): # weather
 				self["key_yellow"].setText("<< " + _("infobar"))
 				self["key_blue"].setText(_("ECM infos") + " >>")
 		else:
-			if (54 <= position <= 62):
+			if (54 <= position <= 62): # weather
 				self["key_yellow"].setText("<< " + _("infobar"))
 				self["key_blue"].setText(_("clock") + " >>")
-		if (64 <= position <= 66):
+		if (64 <= position <= 66): # clock
 			self["key_yellow"].setText("<< " + _("weather"))
 			self["key_blue"].setText(_("ECM infos") + " >>")
-		if (72 <= position <= 76):
+		if (72 <= position <= 76): # ecm infos
 			if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz4":
 				self["key_yellow"].setText("<< " + _("weather"))
 			else:
 				self["key_yellow"].setText("<< " + _("clock"))
 			self["key_blue"].setText(_("views") + " >>")
-		if (78 <= position <= 89):
+		if (78 <= position <= 89): # views
 			self["key_yellow"].setText("<< " + _("ECM infos"))
 			self["key_blue"].setText(_("channellist") + " >>")
-		if (90 <= position <= 100):
+		if (90 <= position <= 100): # channellist
 			self["key_yellow"].setText("<< " + _("views"))
-			self["key_blue"].setText(_("MovieSelection") + " >>")
-		if (102 <= position <= 107):
+			self["key_blue"].setText(_("EPGSelection") + " >>")
+		if (102 <= position <= 107): # epgselection
 			self["key_yellow"].setText("<< " + _("channellist"))
 			self["key_blue"].setText(_("EMC") + " >>")
-		if (108 <= position <= 113):
-			self["key_yellow"].setText("<< " + _("MovieSelection"))
+		if (108 <= position <= 113): # emc
+			self["key_yellow"].setText("<< " + _("EPGSelection"))
+			self["key_blue"].setText(_("MovieSelection") + " >>")
+		if (115 <= position <= 120): # movieselection
+			self["key_yellow"].setText("<< " + _("EMC"))
 			self["key_blue"].setText(_("player") + " >>")
 		if config.plugins.KravenFHD.IBStyle.value == "box":
-			if (115 <= position <= 118):
-				self["key_yellow"].setText("<< " + _("EMC"))
+			if (122 <= position <= 125): # player
+				self["key_yellow"].setText("<< " + _("MovieSelection"))
 				self["key_blue"].setText(_("debug") + " >>")
 		else:
-			if (115 <= position <= 118):
-				self["key_yellow"].setText("<< " + _("EMC"))
+			if (122 <= position <= 125): # player
+				self["key_yellow"].setText("<< " + _("MovieSelection"))
 				self["key_blue"].setText(_("antialiasing") + " >>")
-		if (120 <= position <= 123):
-			self["key_yellow"].setText("<< " + _("player"))
-			self["key_blue"].setText(_("debug") + " >>")
-		if (126 <= position <= 127):
-			if config.plugins.KravenFHD.IBStyle.value == "box":
+		if config.plugins.KravenFHD.IBStyle.value == "box":
+			if (126 <= position <= 127): # debug
 				self["key_yellow"].setText("<< " + _("player"))
-			else:
+				self["key_blue"].setText(_("about") + " >>")
+		else:
+			if (126 <= position <= 129): # antialiasing
+				self["key_yellow"].setText("<< " + _("player"))
+				self["key_blue"].setText(_("debug") + " >>")
+			if (131 <= position <= 132): # debug
 				self["key_yellow"].setText("<< " + _("antialiasing"))
-			self["key_blue"].setText(_("about") + " >>")
+				self["key_blue"].setText(_("about") + " >>")
 
 		option = self["config"].getCurrent()[1]
 		if option == config.plugins.KravenFHD.customProfile:
@@ -1488,6 +1516,16 @@ class KravenFHD(ConfigListScreen, Screen):
 			if config.plugins.KravenFHD.MovieSelectionEPGSize.value == "small":
 				self.showText(44,_("33 Pixel"))
 			elif config.plugins.KravenFHD.MovieSelectionEPGSize.value == "big":
+				self.showText(48,_("36 Pixel"))
+		elif option == config.plugins.KravenFHD.EPGSelectionEPGSize:
+			if config.plugins.KravenFHD.EPGSelectionEPGSize.value == "small":
+				self.showText(44,_("33 Pixel"))
+			elif config.plugins.KravenFHD.EPGSelectionEPGSize.value == "big":
+				self.showText(48,_("36 Pixel"))
+		elif option == config.plugins.KravenFHD.EPGListSize:
+			if config.plugins.KravenFHD.EPGListSize.value == "small":
+				self.showText(44,_("22 Pixel"))
+			elif config.plugins.KravenFHD.EPGListSize.value == "big":
 				self.showText(48,_("36 Pixel"))
 		elif option == config.plugins.KravenFHD.EMCEPGSize:
 			if config.plugins.KravenFHD.EMCEPGSize.value == "small":
@@ -1714,84 +1752,93 @@ class KravenFHD(ConfigListScreen, Screen):
 
 	def categoryDown(self):
 		position = self["config"].instance.getCurrentIndex()
-		if position == 0:
-			self["config"].instance.moveSelectionTo(126)
-		if (2 <= position <= 4):
+		if config.plugins.KravenFHD.IBStyle.value == "box":
+			if position == 0: # about
+				self["config"].instance.moveSelectionTo(126)
+		else:
+			if position == 0: # about
+				self["config"].instance.moveSelectionTo(131)
+		if (2 <= position <= 4): # profiles
 			self["config"].instance.moveSelectionTo(0)
-		if (6 <= position <= 17):
+		if (6 <= position <= 17): # system
 			self["config"].instance.moveSelectionTo(2)
-		if (18 <= position <= 35):
+		if (18 <= position <= 35): # global colors
 			self["config"].instance.moveSelectionTo(6)
-		if (36 <= position <= 53):
+		if (36 <= position <= 53): # infobar
 			self["config"].instance.moveSelectionTo(18)
-		if (54 <= position <= 62):
+		if (54 <= position <= 62): # weather
 			self["config"].instance.moveSelectionTo(36)
-		if (64 <= position <= 66):
+		if (64 <= position <= 66): # clock
 			self["config"].instance.moveSelectionTo(54)
-		if (72 <= position <= 76):
+		if (72 <= position <= 76): # ecm infos
 			if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz4":
 				self["config"].instance.moveSelectionTo(54)
 			else:
 				self["config"].instance.moveSelectionTo(64)
-		if (78 <= position <= 89):
+		if (78 <= position <= 89): # views
 			self["config"].instance.moveSelectionTo(72)
-		if (90 <= position <= 100):
+		if (90 <= position <= 100): # channellist
 			self["config"].instance.moveSelectionTo(78)
-		if (102 <= position <= 107):
+		if (102 <= position <= 107): # epgselection
 			self["config"].instance.moveSelectionTo(90)
-		if (108 <= position <= 113):
+		if (108 <= position <= 113): # emc
 			self["config"].instance.moveSelectionTo(102)
-		if (115 <= position <= 118):
+		if (115 <= position <= 120): # movieselection
 			self["config"].instance.moveSelectionTo(108)
-		if (120 <= position <= 123):
+		if (122 <= position <= 125): # player
 			self["config"].instance.moveSelectionTo(115)
-		if (126 <= position <= 127):
-			if config.plugins.KravenFHD.IBStyle.value == "box":
-				self["config"].instance.moveSelectionTo(115)
-			else:
-				self["config"].instance.moveSelectionTo(120)
+		if config.plugins.KravenFHD.IBStyle.value == "box":
+			if (126 <= position <= 127): # debug
+				self["config"].instance.moveSelectionTo(122)
+		else:
+			if (126 <= position <= 129): # antialiasing
+				self["config"].instance.moveSelectionTo(122)
+			if (131 <= position <= 132): # debug
+				self["config"].instance.moveSelectionTo(126)
 		self.mylist()
 
 	def categoryUp(self):
 		position = self["config"].instance.getCurrentIndex()
-		if position == 0:
+		if position == 0: # about
 			self["config"].instance.moveSelectionTo(2)
-		if (2 <= position <= 4):
+		if (2 <= position <= 4): # profiles
 			self["config"].instance.moveSelectionTo(6)
-		if (6 <= position <= 17):
+		if (6 <= position <= 17): # system
 			self["config"].instance.moveSelectionTo(18)
-		if (18 <= position <= 35):
+		if (18 <= position <= 35): # global colors
 			self["config"].instance.moveSelectionTo(36)
-		if (36 <= position <= 53):
+		if (36 <= position <= 53): # infobar
 			self["config"].instance.moveSelectionTo(54)
 		if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz4":
-			if (54 <= position <= 63):
+			if (54 <= position <= 63): # weather
 				self["config"].instance.moveSelectionTo(72)
 		else:
-			if (54 <= position <= 63):
+			if (54 <= position <= 63): # weather
 				self["config"].instance.moveSelectionTo(64)
-		if (64 <= position <= 66):
+		if (64 <= position <= 66): # clock
 			self["config"].instance.moveSelectionTo(72)
-		if (72 <= position <= 76):
+		if (72 <= position <= 76): # ecm infos
 			self["config"].instance.moveSelectionTo(78)
-		if (78 <= position <= 89):
+		if (78 <= position <= 89): # views
 			self["config"].instance.moveSelectionTo(90)
-		if (90 <= position <= 100):
+		if (90 <= position <= 100): # channellist
 			self["config"].instance.moveSelectionTo(102)
-		if (102 <= position <= 107):
+		if (102 <= position <= 107): # epgselection
 			self["config"].instance.moveSelectionTo(108)
-		if (108 <= position <= 113):
+		if (108 <= position <= 113): # emc
 			self["config"].instance.moveSelectionTo(115)
-		if config.plugins.KravenFHD.IBStyle.value == "box":
-			if (115 <= position <= 118):
-					self["config"].instance.moveSelectionTo(126)
-		else:
-			if (115 <= position <= 118):
-				self["config"].instance.moveSelectionTo(120)
-		if (120 <= position <= 123):
+		if (115 <= position <= 120): # movieselection
+			self["config"].instance.moveSelectionTo(122)
+		if (122 <= position <= 125): # player
 			self["config"].instance.moveSelectionTo(126)
-		if (126 <= position <= 127):
-			self["config"].instance.moveSelectionTo(0)
+		if config.plugins.KravenFHD.IBStyle.value == "box":
+			if (126 <= position <= 127): # debug
+				self["config"].instance.moveSelectionTo(0)
+		else:
+			if (126 <= position <= 129): # antialiasing
+				self["config"].instance.moveSelectionTo(131)
+			if (131 <= position <= 132): # debug
+				self["config"].instance.moveSelectionTo(0)
 		self.mylist()
 
 	def keyVirtualKeyBoardCallBack(self, callback):
@@ -2554,7 +2601,7 @@ class KravenFHD(ConfigListScreen, Screen):
 				self.skinSearchAndReplace.append(['position="1555,999"','position="1555,1006"'])
 
 				### EPGSelection - Position
-				self.skinSearchAndReplace.append(['position="1230,24" render="KravenFHDXPicon"','position="1230,16" render="KravenFHDXPicon"'])
+				self.skinSearchAndReplace.append(['position="1230,24" render="Picon"','position="1230,16" render="Picon"'])
 
 			else:
 				### Menu
@@ -2586,6 +2633,13 @@ class KravenFHD(ConfigListScreen, Screen):
 		self.skinSearchAndReplace.append(["analog.png", self.analog])
 
 		### Header
+		if config.plugins.KravenFHD.EPGListSize.value == "big":
+			self.skinSearchAndReplace.append(['<parameter name="EPGlistFont1" value="Regular;33" />', '<parameter name="EPGlistFont1" value="Regular;36" />'])
+			self.skinSearchAndReplace.append(['<parameter name="EPGlistText1" value="0,5,40,40" />', '<parameter name="EPGlistText1" value="0,4,50,45" />'])
+			self.skinSearchAndReplace.append(['<parameter name="EPGlistText2" value="0,5,250,40" />', '<parameter name="EPGlistText2" value="15,4,250,45" />'])
+			self.skinSearchAndReplace.append(['<parameter name="EPGlistText3" value="280,0,700,40" />', '<parameter name="EPGlistText3" value="280,0,700,45" />'])
+			self.skinSearchAndReplace.append(['<parameter name="EPGlistRecText" value="320,5,720,40" />', '<parameter name="EPGlistRecText" value="320,4,720,45" />'])
+			self.skinSearchAndReplace.append(['<parameter name="EPGlistNonRecText" value="280,5,745,40" />', '<parameter name="EPGlistNonRecText" value="280,4,745,45" />'])
 		if config.usage.movielist_show_picon.value == True:
 			self.skinSearchAndReplace.append(['<parameter name="MovieListMinimalVTITitle" value="40,0,1000,40" />', '<parameter name="MovieListMinimalVTITitle" value="40,0,800,40" />'])
 		self.appendSkinFile(self.daten + "header_begin.xml")
@@ -3310,6 +3364,20 @@ class KravenFHD(ConfigListScreen, Screen):
 		self.appendSkinFile(self.daten + config.plugins.KravenFHD.SplitScreen.value + ".xml")
 
 		### EPGSelection
+		if config.plugins.KravenFHD.EPGListSize.value == "big":
+			self.skinSearchAndReplace.append(['font="Regular;33" foregroundColor="EPGSelection" itemHeight="45"', 'font="Regular;36" foregroundColor="KravenFont1" itemHeight="54"'])
+		else:
+			self.skinSearchAndReplace.append(['font="Regular;33" foregroundColor="EPGSelection" itemHeight="45"', 'font="Regular;33" foregroundColor="KravenFont1" itemHeight="45"'])
+		if config.plugins.KravenFHD.EPGSelectionEPGSize.value == "big":
+			self.skinSearchAndReplace.append(['font="Regular;33" foregroundColor="EPGSelection" position="1230,493" size="627,420"', 'font="Regular;36" foregroundColor="KravenFont1" position="1230,493" size="627,414"'])
+			self.skinSearchAndReplace.append(['font="Regular;33" foregroundColor="EPGSelection" position="1230,440" size="627,462"', 'font="Regular;36" foregroundColor="KravenFont1" position="1230,440" size="627,460"'])
+			self.skinSearchAndReplace.append(['font="Regular;33" foregroundColor="EPGSelection" position="1230,165" size="627,756"', 'font="Regular;36" foregroundColor="KravenFont1" position="1230,165" size="627,736"'])
+			self.skinSearchAndReplace.append(['font="Regular;33" foregroundColor="EPGSelection" position="1230,112" size="627,798"', 'font="Regular;36" foregroundColor="KravenFont1" position="1230,112" size="627,782"'])
+		else:
+			self.skinSearchAndReplace.append(['font="Regular;33" foregroundColor="EPGSelection" position="1230,493" size="627,420"', 'font="Regular;33" foregroundColor="KravenFont1" position="1230,493" size="627,420"'])
+			self.skinSearchAndReplace.append(['font="Regular;33" foregroundColor="EPGSelection" position="1230,440" size="627,462"', 'font="Regular;33" foregroundColor="KravenFont1" position="1230,440" size="627,462"'])
+			self.skinSearchAndReplace.append(['font="Regular;33" foregroundColor="EPGSelection" position="1230,165" size="627,756"', 'font="Regular;33" foregroundColor="KravenFont1" position="1230,165" size="627,756"'])
+			self.skinSearchAndReplace.append(['font="Regular;33" foregroundColor="EPGSelection" position="1230,112" size="627,798"', 'font="Regular;33" foregroundColor="KravenFont1" position="1230,112" size="627,798"'])
 		self.appendSkinFile(self.daten + config.plugins.KravenFHD.EPGSelection.value + ".xml")
 
 		### cooltv
