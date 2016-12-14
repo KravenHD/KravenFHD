@@ -34,6 +34,6 @@
     <convert type="KravenFHDEventTime">EndTime</convert>
     <convert type="ClockToText">Default</convert>
   </widget>
-  <widget alphatest="blend" position="30,927" size="330,141" render="KravenFHDXPicon" source="session.CurrentService" transparent="1" zPosition="4">
+  <widget alphatest="blend" position="30,927" size="330,141" render="Picon" source="session.CurrentService" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>

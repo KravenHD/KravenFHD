@@ -4,16 +4,16 @@
   <widget backgroundColor="Kravenbg" font="Regular;120" foregroundColor="KravenFont1" halign="center" name="chNum" position="97,166" size="300,180" transparent="0" zPosition="0" />
   <widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont1" halign="center" name="chName" noWrap="1" position="438,423" size="580,39" transparent="0" zPosition="0" />
   <eLabel backgroundColor="Kravenbg" halign="center" position="406,48" size="640,421" zPosition="-1" />
-  <eLabel backgroundColor="KravenBorder" position="1041,52" size="1,412" />
-  <eLabel backgroundColor="KravenBorder" position="411,52" size="630,1" />
+  <eLabel backgroundColor="KravenNZBorder" position="1041,52" size="1,412" />
+  <eLabel backgroundColor="KravenNZBorder" position="411,52" size="630,1" />
   <eLabel backgroundColor="Kravenbg" halign="center" position="69,142" size="337,229" zPosition="-1" />
-  <eLabel backgroundColor="KravenBorder" position="73,147" size="1,220" />
-  <eLabel backgroundColor="KravenBorder" position="73,147" size="349,1" />
-  <eLabel backgroundColor="KravenBorder" position="423,147" size="1,220" />
-  <eLabel backgroundColor="KravenBorder" position="73,366" size="349,1" />
-  <eLabel backgroundColor="KravenBorder" position="411,463" size="630,1" />
-  <eLabel backgroundColor="KravenBorder" position="411,366" size="1,97" />
-  <eLabel backgroundColor="KravenBorder" position="411,52" size="1,96" />
+  <eLabel backgroundColor="KravenNZBorder" position="73,147" size="1,220" />
+  <eLabel backgroundColor="KravenNZBorder" position="73,147" size="349,1" />
+  <eLabel backgroundColor="KravenNZBorder" position="423,147" size="1,220" />
+  <eLabel backgroundColor="KravenNZBorder" position="73,366" size="349,1" />
+  <eLabel backgroundColor="KravenNZBorder" position="411,463" size="630,1" />
+  <eLabel backgroundColor="KravenNZBorder" position="411,366" size="1,97" />
+  <eLabel backgroundColor="KravenNZBorder" position="411,52" size="1,96" />
 </screen>
 <!-- NumberZapExt */-->
 <!--/* NumberZapWithName -->
@@ -24,15 +24,15 @@
   <widget backgroundColor="Kravenbg" font="Regular;120" foregroundColor="KravenFont1" halign="center" name="servicenumber" position="97,166" size="300,180" transparent="0" zPosition="0" />
   <widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont1" halign="center" name="servicename" noWrap="1" position="438,423" size="580,39" transparent="0" zPosition="0" />
   <eLabel backgroundColor="Kravenbg" halign="center" position="406,48" size="640,421" zPosition="-1" />
-  <eLabel backgroundColor="KravenBorder" position="1041,52" size="1,412" />
-  <eLabel backgroundColor="KravenBorder" position="411,52" size="630,1" />
+  <eLabel backgroundColor="KravenNZBorder" position="1041,52" size="1,412" />
+  <eLabel backgroundColor="KravenNZBorder" position="411,52" size="630,1" />
   <eLabel backgroundColor="Kravenbg" halign="center" position="69,142" size="337,229" zPosition="-1" />
-  <eLabel backgroundColor="KravenBorder" position="73,147" size="1,220" />
-  <eLabel backgroundColor="KravenBorder" position="73,147" size="349,1" />
-  <eLabel backgroundColor="KravenBorder" position="423,147" size="1,220" />
-  <eLabel backgroundColor="KravenBorder" position="73,366" size="349,1" />
-  <eLabel backgroundColor="KravenBorder" position="411,463" size="630,1" />
-  <eLabel backgroundColor="KravenBorder" position="411,366" size="1,97" />
-  <eLabel backgroundColor="KravenBorder" position="411,52" size="1,96" />
+  <eLabel backgroundColor="KravenNZBorder" position="73,147" size="1,220" />
+  <eLabel backgroundColor="KravenNZBorder" position="73,147" size="349,1" />
+  <eLabel backgroundColor="KravenNZBorder" position="423,147" size="1,220" />
+  <eLabel backgroundColor="KravenNZBorder" position="73,366" size="349,1" />
+  <eLabel backgroundColor="KravenNZBorder" position="411,463" size="630,1" />
+  <eLabel backgroundColor="KravenNZBorder" position="411,366" size="1,97" />
+  <eLabel backgroundColor="KravenNZBorder" position="411,52" size="1,96" />
 </screen>
 <!-- NumberZapWithName */-->

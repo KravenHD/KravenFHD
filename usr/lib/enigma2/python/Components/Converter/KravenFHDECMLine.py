@@ -244,7 +244,7 @@ class KravenFHDECMLine(Poll, Converter, object):
 
 				elif using == 'emu':
 					active = 'EMU'
-					if self.type == self.VERYSHORT:
+					if self.type in (self.SATINFO,self.VERYSHORTCAID,self.VERYSHORTREADER):
 						ecmline = caid + ', ' + ecmtime
 					else:
 						ecmline = active + ' - ' + caid + ' - ' + ecmtime

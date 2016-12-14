@@ -184,6 +184,7 @@ class KravenFHDWeather_realtek(Poll, Converter, object):
 			weather = weather.replace("Ã„","Ä")
 			weather = weather.replace("Ã–","Ö")
 			weather = weather.replace("Ãœ","Ü")
+			weather = weather.replace("Ã","Ü") #if x9C is not present in charset
 			return str(weather)
 		except:
 			return ''

@@ -7,27 +7,18 @@
   <widget backgroundColor="Kravenbg2" font="Regular2;45" foregroundColor="KravenFont1" halign="left" noWrap="1" position="480,105" render="Label" size="630,57" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
     <convert type="ServiceName">Name</convert>
   </widget>
-  <widget backgroundColor="Kravenbg2" font="Regular2;42" foregroundColor="KravenFont1" halign="left" noWrap="1" valign="top" position="480,171" render="Label" size="630,108" source="session.Event_Now" transparent="1">
+  <widget backgroundColor="Kravenbg2" font="Regular2;42" foregroundColor="KravenFont1" halign="left" valign="top" position="480,178" render="Label" size="630,162" source="session.Event_Now" transparent="1">
     <convert type="KravenFHDEventName">Name</convert>
-  </widget>
-  <widget backgroundColor="Kravenbg2" font="Regular2;38" foregroundColor="KravenFont1" halign="left" noWrap="1" position="480,283" render="Label" size="630,49" source="session.Event_Now" transparent="1">
-    <convert type="KravenFHDEventName">Description</convert>
   </widget>
   <widget backgroundColor="Kravenbg2" font="Regular2;38" foregroundColor="KravenFont1" halign="left" position="60,360" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" source="session.Event_Now" transparent="1" size="1050,441">
-    <convert type="KravenFHDEventName">ExtendedDescription</convert>
+    <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
   </widget>
-  <widget backgroundColor="Kravenbg2" font="Regular2;45" foregroundColor="KravenFont2" halign="left" noWrap="1" position="1155,105" render="Label" size="705,57" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
-    <convert type="ServiceName">Name</convert>
-  </widget>
-  <eLabel backgroundColor="Kravenbg2" font="Regular2;42" foregroundColor="KravenFont2" halign="left" text="es folgt:" position="1155,168" size="705,60" transparent="1" />
-  <widget backgroundColor="Kravenbg2" font="Regular2;42" foregroundColor="KravenFont2" halign="left" noWrap="1" position="1155,222" render="Label" size="705,54" source="session.Event_Next" transparent="1">
+  <eLabel backgroundColor="Kravenbg2" font="Regular2;42" foregroundColor="KravenFont2" halign="left" text="es folgt:" position="1155,112" size="705,60" transparent="1" />
+  <widget backgroundColor="Kravenbg2" font="Regular2;42" foregroundColor="KravenFont2" halign="left" valign="top" position="1155,178" render="Label" size="705,162" source="session.Event_Next" transparent="1">
     <convert type="KravenFHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="Kravenbg2" font="Regular2;38" foregroundColor="KravenFont2" halign="left" noWrap="1" position="1155,285" render="Label" size="705,49" source="session.Event_Next" transparent="1">
-    <convert type="KravenFHDEventName">Description</convert>
-  </widget>
   <widget backgroundColor="Kravenbg2" font="Regular2;38" foregroundColor="KravenFont2" halign="left" position="1155,360" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" source="session.Event_Next" transparent="1" size="705,441">
-    <convert type="KravenFHDEventName">ExtendedDescription</convert>
+    <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
   </widget>
   <!-- nontransbg */-->
   <!--<text="Secondinfobar - MiniTV2" position="60,0" />-->

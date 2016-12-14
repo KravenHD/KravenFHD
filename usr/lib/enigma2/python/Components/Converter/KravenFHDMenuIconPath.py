@@ -127,6 +127,8 @@ class KravenFHDMenuIconPath(Poll,Converter,object):
 		("moviebrowser","plugin.png"),
 		("multi_quick","remotecontrol.png"), #ATV
 		("multi_quick","mqb.png"),
+		("multi_quick","keyb.png"),
+		("multi_quick","plugin.png"),
 		("netafp_setup","net.png"),
 		("netftp_setup","net.png"),
 		("netmounts_setup","net.png"),
@@ -184,6 +186,8 @@ class KravenFHDMenuIconPath(Poll,Converter,object):
 		("saveepgcache","movie_list.png"),
 		("scart_switch","scart.png"), #ATV
 		("scart_switch","setup.png"),
+		("select_menu","movie.png"),
+		("select_menu","plugin.png"),
 		("service_info_screen","info.png"), #ATV
 		("service_info_screen","service_info.png"),
 		("service_searching_selection","tuner.png"),
@@ -285,6 +289,7 @@ class KravenFHDMenuIconPath(Poll,Converter,object):
 				name=self.path+"plugin.png"
 				if fileExists(name):
 					return name
+			return self.logo
 		except:
 			try: # is it a menu? then we handle it according to current selection
 				cur = self.source.current
@@ -299,13 +304,12 @@ class KravenFHDMenuIconPath(Poll,Converter,object):
 					name=""
 					for pair in self.names:
 						if pair[0] == selection.lower():
-							break
-					name=self.userpath+pair[1]
-					if name != "" and fileExists(name):
-						return name
-					name=self.path+pair[1]
-					if name != "" and fileExists(name):
-						return name
+							name=self.userpath+pair[1]
+							if name != "" and fileExists(name):
+								return name
+							name=self.path+pair[1]
+							if name != "" and fileExists(name):
+								return name
 			except:
 				pass
 		name=self.userpath+"setup.png"

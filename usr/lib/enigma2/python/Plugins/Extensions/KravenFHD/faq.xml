@@ -16,15 +16,17 @@
 \n\nWie kann ich zwischen den Einstellungs-Profilen wechseln ? ____________
 \nDie Profile können Sie im Plugin mit rechts/links auf dem Punkt 'Aktives Profil' wechseln. Beim Wechsel wird das vorige Profil automatisch gespeichert und das neue geladen. Wenn das neue noch nicht existiert, wird es mit den Einstellungen des vorigen erzeugt.
 \n\nWie kann ich meine Einstellungen auf eine andere Box kopieren ? ______
-\nSie finden die Profile unter /etc/enigma2/kraven_profile_x. Kopieren Sie einfach das gewünschte Profil auf die Zielbox, wählen Sie es dort im Plugin aus und erzeugen Ihr Skin damit neu.
+\nSie finden die Profile unter /etc/enigma2/kravenfhd_profile_x. Kopieren Sie einfach das gewünschte Profil auf die Zielbox, wählen Sie es dort im Plugin aus und erzeugen Ihr Skin damit neu.
 \nWie kann ich ein Profil klonen, um Einstellungen zu übernehmen ? _____
-\nSie finden die Profile unter /etc/enigma2/kraven_profile_x. Kopieren Sie einfach das Ausgangsprofil über das Zielprofil. Sie können auf diese Weise auch neue Standardprofile erzeugen. Kopieren Sie das Ausgangsprofil einfach nach /etc/enigma2/kraven_default_x.
+\nSie finden die Profile unter /etc/enigma2/kravenfhd_profile_x. Kopieren Sie einfach das Ausgangsprofil über das Zielprofil.
 \n\nWas kann ich gegen gestörte Schriften oder Farbränder tun ? __________
 \nUnsaubere Schriften und Farbränder werden manchmal von der Kantenglättung verursacht. Gehen Sie im Plugin zum Punkt 'Kantenglättungs-Helligkeit' und passen die Werte je nach Situation an.
 \n\nWie kann ich meine eigenen Menü-Icons einfügen ? ____________________
 \nErstellen Sie ein Verzeichnis /usr/share/enigma2/Kraven-user-icons und kopieren Sie Ihre Icons dorthin. Diese Icons haben Vorrang vor den internen Icons. Es werden nur Metrix-Iconsätze unterstützt.
 \n\nWie kann ich meine eigenen Wetter-Icons einfügen ? ___________________
-\nErstellen Sie ein Verzeichnis /usr/share/enigma2/Kraven-user-icons und kopieren Sie Ihre Icons dorthin. Diese Icons haben Vorrang vor den internen Icons. Es werden nur YWeather-Iconsätze unterstützt."/>
+\nErstellen Sie ein Verzeichnis /usr/share/enigma2/Kraven-user-icons und kopieren Sie Ihre Icons dorthin. Diese Icons haben Vorrang vor den internen Icons. Es werden nur YWeather-Iconsätze unterstützt.
+\n\n\nWie kann ich meine eigenen Texturen einfügen ? ______________________
+\nSie können jede kachelbar (x-/y-wiederholbare).png oder .jpg Textur jeder Größe nutzen. Benennen Sie Ihre Texturen usertexture1, usertexture2 etc. unter Beibehaltung der Endung. Erstellen Sie ein Verzeichnis /usr/share/enigma2/Kraven-user-icons und kopieren Sie Ihre Dateien dorthin. Die Texturen werden automatisch zur Auswahl im Plugin hinzugefügt."/>
 	</page>
 	<page title="FAQ">
 		<text value="Why is there no KravenFHD in the skin selection ? ______________________
@@ -42,14 +44,16 @@
 \n\nHow can I switch the settings profiles ? _________________________________
 \nYou can switch the profiles with right/left on the 'active profile' option. On switching the prior profile gets saved automatically and the new one gets loaded. If the new one doesnt exist, it gets generated based on the settings of the prior one.
 \n\nHow can I copy my settings to a different box ? _________________________
-\nYou can find the profiles under /etc/enigma2/kraven_profile_x. Just copy the file with your profile to the target box, choose it in the plugin there and create your skin again.
+\nYou can find the profiles under /etc/enigma2/kravenfhd_profile_x. Just copy the file with your profile to the target box, choose it in the plugin there and create your skin again.
 \nHow can I clone a profile to take over certain settings ? ________________
-\nYou can find the profiles under /etc/enigma2/kraven_profile_x. Just copy the source profile over the target profile. You can also create new default profiles in this way. Just copy the source profile to /etc/enigma2/kraven_default_x.
+\nYou can find the profiles under /etc/enigma2/kravenfhd_profile_x. Just copy the source profile over the target profile.
 \n\nWhat can I do against distorted fonts or color frames ? ________________
 \nDistorted fonts and color frames are sometimes caused by antialiasing. Navigate to 'Antialiasing Brightness' in the plugin and adjust the values according to the situation.
 \n\nHow can I insert my own menu icons ? _________________________________
 \nCreate a directory /usr/share/enigma2/Kraven-user-icons and copy your icons there. These icons have priority over the internal icons. Only Metrix icon sets are supported.
 \n\nHow can I insert my own weather icons ? _______________________________
-\nCreate a directory /usr/share/enigma2/Kraven-user-icons and copy your icons there. These icons have priority over the internal icons. Only YWeather icon sets are supported."/>
+\nCreate a directory /usr/share/enigma2/Kraven-user-icons and copy your icons there. These icons have priority over the internal icons. Only YWeather icon sets are supported.
+\n\n\nHow can I insert my own textures ? _____________________________________
+\nYou can use any tileable (x-/y-repeatable) .png or .jpg texture of any size. Rename your textures to usertexture1, usertexture2 etc. keeping the extension. Create a directory /usr/share/enigma2/Kraven-user-icons and copy your files there. The textures are added automatically to the selection in the plugin."/>
 	</page>
 </mphelp>

@@ -1,11 +1,11 @@
     <!--/* Clock -->
-  <widget alphatest="blend" render="KravenFHDWetterPicon" position="1635,922" size="150,150" source="session.CurrentService" path="WetterIcons" transparent="1" zPosition="1">
+  <widget alphatest="blend" render="KravenFHDWetterPicon" position="1635,922" size="150,150" source="Title" path="WetterIcons" transparent="1" zPosition="1">
     <convert type="KravenFHDWeather">Day_0,MeteoIcon </convert>
   </widget>
   <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" position="1785,949" size="120,42" font="Regular;39" halign="right" valign="center" transparent="1">
     <convert type="ClockToText">Default</convert>
   </widget>
-  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular2;36" foregroundColor="KravenIBFont2" render="Label" position="1785,1021" size="120,37" source="session.CurrentService" zPosition="2" halign="right" valign="center" transparent="1">
+  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular2;36" foregroundColor="KravenIBFont2" render="Label" position="1785,1021" size="120,37" source="Title" zPosition="2" halign="right" valign="center" transparent="1">
     <convert type="KravenFHDWeather">Day_0,DayTemp</convert>
   </widget>
     <!--Clock */-->

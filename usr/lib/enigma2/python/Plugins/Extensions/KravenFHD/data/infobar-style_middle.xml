@@ -3,11 +3,11 @@
 <!-- SecondInfoBar -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="SecondInfoBar" position="0,0" size="1920,1080" title="SecondInfoBar">
   <eLabel text="Flash:" position="60,24" size="75,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" foregroundColor="KravenSIBFont2" />
-  <widget source="session.CurrentService" render="Label" font="Regular;24" position="123,24" size="270,30" halign="left" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" noWrap="1" foregroundColor="KravenSIBFont1">
+  <widget source="Title" render="Label" font="Regular;24" position="123,24" size="270,30" halign="left" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" noWrap="1" foregroundColor="KravenSIBFont1">
     <convert type="KravenFHDLayoutInfo">FlashInfo,Free</convert>
   </widget>
   <eLabel text="HDD:" position="405,24" size="75,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" foregroundColor="KravenSIBFont2" />
-  <widget source="session.CurrentService" render="Label" font="Regular;24" position="462,24" size="255,30" halign="left" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" noWrap="1" foregroundColor="KravenSIBFont1">
+  <widget source="Title" render="Label" font="Regular;24" position="462,24" size="255,30" halign="left" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" noWrap="1" foregroundColor="KravenSIBFont1">
     <convert type="KravenFHDLayoutInfo">HddInfo,Free</convert>
   </widget>
   <eLabel text="Video:" position="735,24" size="75,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" foregroundColor="KravenSIBFont2" />
@@ -15,19 +15,19 @@
     <convert type="KravenFHDExtraInfo">VideoInfo</convert>
   </widget>
   <eLabel text="SYS:" position="1194,24" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" foregroundColor="KravenSIBFont2" />
-  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1236,24" size="52,30" halign="right" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" noWrap="1" foregroundColor="KravenSIBFont1">
+  <widget source="Title" render="Label" font="Regular;24" position="1236,24" size="52,30" halign="right" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" noWrap="1" foregroundColor="KravenSIBFont1">
     <convert type="KravenFHDTempFanInfo">TempInfo</convert>   
   </widget>
   <eLabel text="U/m:" position="1303,24" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" foregroundColor="KravenSIBFont2" />
-  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1357,24" size="52,30" halign="right" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" noWrap="1" foregroundColor="KravenSIBFont1">
+  <widget source="Title" render="Label" font="Regular;24" position="1357,24" size="52,30" halign="right" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" noWrap="1" foregroundColor="KravenSIBFont1">
     <convert type="KravenFHDTempFanInfo">FanInfo</convert>
   </widget>
   <eLabel text="CPU:" position="1425,24" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" foregroundColor="KravenSIBFont2" />
-  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1470,24" size="52,30" halign="right" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" noWrap="1" foregroundColor="KravenSIBFont1">
+  <widget source="Title" render="Label" font="Regular;24" position="1470,24" size="52,30" halign="right" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" noWrap="1" foregroundColor="KravenSIBFont1">
     <convert type="KravenFHDCpuUsage">$0</convert>   
   </widget>
   <eLabel text="Last:" position="1539,24" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" foregroundColor="KravenSIBFont2" />
-  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1582,24" size="52,30" halign="right" valign="bottom" backgroundColor="KravenSIBbg2" transparent="10" noWrap="1" foregroundColor="KravenSIBFont1">
+  <widget source="Title" render="Label" font="Regular;24" position="1582,24" size="52,30" halign="right" valign="bottom" backgroundColor="KravenSIBbg2" transparent="10" noWrap="1" foregroundColor="KravenSIBFont1">
     <convert type="KravenFHDLayoutInfo">LoadAvg</convert>
   </widget>
   <eLabel text="Sat:" position="1650,24" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" foregroundColor="KravenSIBFont2" />

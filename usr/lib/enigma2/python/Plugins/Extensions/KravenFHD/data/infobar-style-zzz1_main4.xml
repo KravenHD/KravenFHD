@@ -151,6 +151,6 @@
     <convert  type="KravenFHDFrontendInfo">SNR</convert>
   </widget>
   <!--<eLabel text="  S:"  font="Regular;28" position="1082,1027" size="45,33" halign="left" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIcon" />-->
-  <widget alphatest="blend" position="30,714" size="600,360" render="KravenFHDXPicon" source="session.CurrentService" transparent="1" zPosition="4">
+  <widget alphatest="blend" position="30,714" size="600,360" render="Picon" source="session.CurrentService" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>

@@ -1,48 +1,8 @@
 #!/bin/sh
 echo "Checking for previous installations..."
-if [ -f /usr/share/enigma2/KravenFHD/graphics/backg.png ]; then
+if [ -d /usr/share/enigma2/KravenFHD/graphics ]; then
     mkdir /tmp/graphics
     cp /usr/share/enigma2/KravenFHD/graphics/*.* /tmp/graphics
-fi
-if [ -f /usr/share/enigma2/KravenFHD/ibar.png ]; then
-    cp /usr/share/enigma2/KravenFHD/ibar.png /tmp
-fi
-if [ -f /usr/share/enigma2/KravenFHD/ibaro.png ]; then
-    cp /usr/share/enigma2/KravenFHD/ibaro.png /tmp
-fi
-if [ -f /usr/share/enigma2/KravenFHD/backg.png ]; then
-    cp /usr/share/enigma2/KravenFHD/backg.png /tmp
-fi
-if [ -f /usr/share/enigma2/KravenFHD/info.png ]; then
-    cp /usr/share/enigma2/KravenFHD/info.png /tmp
-fi
-if [ -f /usr/share/enigma2/KravenFHD/shift.png ]; then
-    cp /usr/share/enigma2/KravenFHD/shift.png /tmp
-fi
-if [ -f /usr/share/enigma2/KravenFHD/wsmall.png ]; then
-    cp /usr/share/enigma2/KravenFHD/wsmall.png /tmp
-fi
-if [ -f /etc/kraven_profile_1 ]; then
-    mv /etc/kraven_profile_* /etc/enigma2
-fi
-if [ -f /etc/kraven_default_1 ]; then
-    cp /etc/kraven_default_* /etc/enigma2
-fi
-if [ -f /usr/share/enigma2/KravenFHD/icons-dark/icons/key_ok.png ]; then
-    mkdir /tmp/icons-dark
-    mkdir /tmp/icons-dark/icons
-    mkdir /tmp/icons-dark/infobar
-    mkdir /tmp/icons-dark/message
-	cp /usr/share/enigma2/KravenFHD/icons-dark/icons/*.* /tmp/icons-dark/icons
-	cp /usr/share/enigma2/KravenFHD/icons-dark/infobar/*.* /tmp/icons-dark/infobar
-	cp /usr/share/enigma2/KravenFHD/icons-dark/message/*.* /tmp/icons-dark/message
-    mkdir /tmp/icons-light
-    mkdir /tmp/icons-light/icons
-    mkdir /tmp/icons-light/infobar
-    mkdir /tmp/icons-light/message
-	cp /usr/share/enigma2/KravenFHD/icons-light/icons/*.* /tmp/icons-light/icons
-	cp /usr/share/enigma2/KravenFHD/icons-light/infobar/*.* /tmp/icons-light/infobar
-	cp /usr/share/enigma2/KravenFHD/icons-light/message/*.* /tmp/icons-light/message
 fi
 if [ -f /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/skin-user.xml ]; then
     cp /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/skin-user.xml /tmp

@@ -139,7 +139,7 @@
     <convert type="KravenFHDEventTime">RunTime</convert>
     <convert type="KravenFHDRemainingToText">InMinutes</convert>
   </widget>
-  <widget alphatest="blend" position="30,813" size="600,255" render="KravenFHDXPicon" source="session.CurrentService" transparent="1" zPosition="4">
+  <widget alphatest="blend" position="30,813" size="600,255" render="Picon" source="session.CurrentService" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>
   <ePixmap pixmap="KravenFHD/infobar-icons/aufloesung.png" position="822,1030" size="168,33" zPosition="1" alphatest="blend" />

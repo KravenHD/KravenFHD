@@ -8,10 +8,10 @@
   <widget backgroundColor="KravenIBbg" font="Regular2;24" foregroundColor="KravenIBFont2" halign="center" position="1581,1027" size="300,45" render="Label" source="global.CurrentTime" transparent="1" valign="top" zPosition="2">
     <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
   </widget>
-  <widget alphatest="blend" render="KravenFHDAndroidPicon" position="1581,852" size="300,183" source="session.CurrentService" path="clock" transparent="1" zPosition="1">
+  <widget alphatest="blend" render="KravenFHDAndroidPicon" position="1581,852" size="300,183" source="Title" path="clock" transparent="1" zPosition="1">
     <convert type="KravenFHDWeather">Day_0,MeteoIcon </convert>
   </widget>
-  <widget noWrap="1" backgroundColor="#00666666" font="Regular2;30" foregroundColor="KravenAndroid" render="Label" position="1695,982" size="150,37" source="session.CurrentService" zPosition="2" halign="right" valign="center" transparent="1">
+  <widget noWrap="1" backgroundColor="#00666666" font="Regular2;30" foregroundColor="KravenAndroid" render="Label" position="1695,982" size="150,37" source="Title" zPosition="2" halign="right" valign="center" transparent="1">
     <convert type="KravenFHDWeather">Day_0,DayTemp</convert>
   </widget>
     <!--Clock */-->

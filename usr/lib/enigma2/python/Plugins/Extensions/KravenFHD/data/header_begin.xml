@@ -29,6 +29,7 @@
     <color name="KravenIBCoolbg" value="#00000000" />
     <color name="KravenFont1" value="#00ffffff" />
     <color name="KravenFont2" value="#00F0A30A" />
+    <color name="KravenPermanentClock" value="#00ffffff" />
     <color name="foreground" value="#00dddddd" />
     <color name="KravenIBFont1" value="#00ffffff" />
     <color name="KravenIBFont2" value="#00F0A30A" />
@@ -41,6 +42,10 @@
     <color name="KravenIcon" value="#00fff0e0" />
     <color name="KravenBorder" value="#00ffffff" />
     <color name="KravenBorder2" value="#003F3F3F" />
+    <color name="KravenNZBorder" value="#00ffffff" />
+    <color name="KravenGMEBorder" value="#00ffffff" />
+    <color name="KravenGMErunningbg" value="#00389416" />
+    <color name="KravenVEPGBorder" value="#00ffffff" />
     <color name="KravenLine" value="#00ffffff" />
     <color name="KravenIBLine" value="#00ffffff" />
     <color name="KravenProgress" value="#00C3461B" />
@@ -146,13 +151,13 @@
   <parameters>
     <!-- Choicelist -->
     <parameter name="ChoicelistItemHeight" value="45" />
-    <parameter name="ChoicelistFont" value="Regular;33" />
+    <parameter name="ChoicelistFont" value="Regular;32" />
     <parameter name="ChoicelistFontSize" value="30" />
     <parameter name="ChoicelistName" value="70,1,1720,42" />
     <parameter name="ChoicelistIcon" value="10,5,60,40" />
     <parameter name="ChoicelistDash" value="0,36,1720,30" />
     <!-- MovieList -->
-    <parameter name="MovieListFontSize1" value="33" />
+    <parameter name="MovieListFontSize1" value="32" />
     <parameter name="MovieListFontSize2" value="30" />
     <parameter name="MovieListDirIcon" value="10,7,40,40" />
     <parameter name="MovieListDirectoryIcon" value="55, 0, 1000, 36" />
@@ -174,19 +179,19 @@
     <parameter name="MovieListMinimalVTITags" value="0, 0, 0, 0" />
     <parameter name="MovieListMinimalVTIServiceTags" value="0, 0, 0, 0" />
     <parameter name="MovieListItemHeight" value="45" />
-    <parameter name="MovieListMinimalFont1" value="Regular;33" />
+    <parameter name="MovieListMinimalFont1" value="Regular;32" />
     <parameter name="MovieListMinimalFont2" value="Regular;30" />
-    <parameter name="MovieListMinimalFontSize1" value="33" />
+    <parameter name="MovieListMinimalFontSize1" value="32" />
     <parameter name="MovieListMinimalFontSize2" value="30" />
     <parameter name="MovieListMinimalTitleDesc" value="40,10,790,40" />
     <parameter name="MovieListMinimalBegin" value="805,12,230,38" />
     <parameter name="MovieListMinimalTitle" value="0, 0, 0, 0" />
     <parameter name="MovieListMinimalLength" value="0, 0, 0, 0" />
     <parameter name="MovieListOriginalItemHeight" value="45" />
-    <parameter name="MovieListOriginalFont1" value="Regular;33" />
+    <parameter name="MovieListOriginalFont1" value="Regular;32" />
     <parameter name="MovieListOriginalFont2" value="Regular;30" />
     <parameter name="MovieListOriginalFont3" value="Regular;30" />
-    <parameter name="MovieListOriginalFontSize1" value="33" />
+    <parameter name="MovieListOriginalFontSize1" value="32" />
     <parameter name="MovieListOriginalFontSize2" value="30" />
     <parameter name="MovieListOriginalFontSize3" value="30" />
     <parameter name="MovieListOriginalTitle" value="40,0,750,40" />
@@ -198,9 +203,9 @@
     <parameter name="MovieListOriginalTags" value="0, 0, 0, 0" />
     <parameter name="MovieListOriginalServiceTags" value="0, 0, 0, 0" />
     <parameter name="MovieListCompactItemHeight" value="90" />
-    <parameter name="MovieListCompactFont1" value="Regular;33" />
+    <parameter name="MovieListCompactFont1" value="Regular;32" />
     <parameter name="MovieListCompactFont2" value="Regular;30" />
-    <parameter name="MovieListCompactFontSize1" value="33" />
+    <parameter name="MovieListCompactFontSize1" value="32" />
     <parameter name="MovieListCompactFontSize2" value="30" />
     <parameter name="MovieListCompactTitle" value="40,0,900,40" />
     <parameter name="MovieListCompactLength" value="915,0,120,40" />
@@ -235,13 +240,13 @@
     <parameter name="MediaPlayerPlayListFont" value="Regular;30" />
     <!-- VirtualKeyboard -->
     <parameter name="VirtualKeyboardFont" value="Regular;42" />
-    <parameter name="VirtualKeyboard" value="67,67" />
+	<parameter name="VirtualKeyboard" value="67" />
     <!-- TimerList -->
     <parameter name="TimerListItemHeight" value="116" />
     <parameter name="TimerListNoStyleName" value="0,2,1035,40" />
     <parameter name="TimerListNoStyleDesc" value="0,42,1035,36" />
     <parameter name="TimerListTime" value="0,80,780,30" />
-    <parameter name="TimerListFont1" value="Regular;33" />
+    <parameter name="TimerListFont1" value="Regular;32" />
     <parameter name="TimerListFont2" value="Regular;30" />
     <parameter name="TimerListState" value="800,80,235,35" />
     <parameter name="TimerListIcon" value="8,61,40,40" />
@@ -254,8 +259,8 @@
     <parameter name="TimerListInstantRecord" value="0, 0, 0, 0" />
     <parameter name="TimerListRedTimer" value="550,7,40,40" />
     <!-- EPGlist -->
-    <parameter name="EPGlistFont1" value="Regular;30" />
-    <parameter name="EPGlistFont2" value="Regular;28" />
+    <parameter name="EPGlistFont1" value="Regular;32" />
+    <parameter name="EPGlistFont2" value="Regular;30" />
     <parameter name="EPGlistText1" value="0,5,40,40" />
     <parameter name="EPGlistText2" value="0,5,250,40" />
     <parameter name="EPGlistText3" value="280,0,700,40" />
@@ -277,29 +282,26 @@
     <parameter name="EPGlistEPGBarText1" value="30,0,950,40" />
     <parameter name="EPGlistEPGBarText2" value="5,0,950,40" />
     <parameter name="EPGlistMultiRecIcon" value="0,8,40,40" />
+    <!-- EPGShare -->
+	<parameter name="EPGShareListItemHeight" value="45" />
+	<parameter name="EPGShareListWidth" value="1035" />
+	<parameter name="EPGShareListMarginLeft" value="15" />
+	<parameter name="EPGShareListFont" value="Regular;32" />
     <!-- GMultiEPGTimeline -->
     <parameter name="GMultiEPGTimelineFont" value="Regular;28" />
     <parameter name="GMultiEPGTimelineItemHeight" value="28" />
     <parameter name="GMultiEPGTimelineItemSize" value="100,30" />
-    <!-- FileList -->
-    <parameter name="FileListName" value="45,1,1200,45" />
-    <parameter name="FileListIcon" value="10,6,40,40" />
-    <parameter name="FileListMultiName" value="55,1,1200,36" />
-    <parameter name="FileListMultiIcon" value="15,6,40,40" />
-    <parameter name="FileListMultiLock" value="0,5,40,40" />
-    <parameter name="FileListFont" value="Regular;30" />
-    <parameter name="FileListItemHeight" value="45" />
     <!-- HelpMenuList -->
-    <parameter name="HelpMenuListHlp" value="10,6,1000,45" />
-    <parameter name="HelpMenuListFont0" value="Regular;33" />
-    <parameter name="HelpMenuListFontSize1" value="33" />
-    <parameter name="HelpMenuListExtFontSize1" value="33" />
+    <parameter name="HelpMenuListHlp" value="10,2,1000,45" />
+    <parameter name="HelpMenuListFont0" value="Regular;32" />
+    <parameter name="HelpMenuListFontSize1" value="32" />
+    <parameter name="HelpMenuListExtFontSize1" value="32" />
     <parameter name="HelpMenuListExtFontSize2" value="30" />
     <parameter name="HelpMenuListItemHeight" value="45" />
-    <parameter name="HelpMenuListExtHlp0" value="0,6,500,45" />
-    <parameter name="HelpMenuListExtendedFont0" value="Regular;33" />
+    <parameter name="HelpMenuListExtHlp0" value="0,2,500,45" />
+    <parameter name="HelpMenuListExtendedFont0" value="Regular;32" />
     <parameter name="HelpMenuListExtHlp1" value="0,36,500,45" />
-    <parameter name="HelpMenuListExtendedFont1" value="Regular;33" />
+    <parameter name="HelpMenuListExtendedFont1" value="Regular;32" />
     <parameter name="HelpMenuListExtendedItemHeight" value="50" />
     <!-- PluginList -->
     <parameter name="PluginListFont1" value="Regular;30" />
@@ -307,10 +309,10 @@
     <parameter name="PluginListItemHeight" value="80" />
     <parameter name="PluginListName" value="180,2,867,37" />
     <parameter name="PluginListDescription" value="180,40,867,32" />
-    <parameter name="PluginListIcon" value="10,8,150,75" />
-    <parameter name="PluginListCategoryIcon" value="10,8,150,75" />
+    <parameter name="PluginListIcon" value="30,18,100,40" />
+    <parameter name="PluginListCategoryIcon" value="10,8,150,60" />
     <!-- SelectionList -->
-    <parameter name="SelectionListFont" value="Regular;33" />
+    <parameter name="SelectionListFont" value="Regular;32" />
     <parameter name="SelectionListItemHeight" value="45" />
     <parameter name="SelectionListDescription" value="55,0,997,40" />
     <parameter name="SelectionListIcon" value="10,5,40,40" />
@@ -322,7 +324,7 @@
     <parameter name="MultiQuickButtonListItemHeight" value="45" />
     <!-- PiconManagerList -->
     <parameter name="PiconManagerList" value="10,5,1675,40" />
-    <parameter name="PiconManagerListFont" value="Regular;33" />
+    <parameter name="PiconManagerListFont" value="Regular;32" />
     <parameter name="PiconManagerListItemHeight" value="45" />
     <!-- Channellist ServicelistService -->
     <parameter name="ServicelistCustomPiconSize" value="95,40" />
@@ -345,11 +347,59 @@
     <parameter name="ServicelistServiceEventProgressbar" value="0,0,52,0" />
     <parameter name="ServicelistRecordServicePixmap" value="-35,8,40,40" />
     <parameter name="ServicelistServiceName" value="0,0,1145,0" />
+	<parameter name="ServicelistAdvertismentIconPixmap" value="-40,0,45,45" />
+	<parameter name="ServicelistTextOffsetForIcon" value="40" />
     <!-- ServiceInfo -->
     <parameter name="ServiceInfoFont" value="Regular;30" />
     <parameter name="ServiceInfo_I" value="20,0,1100,40" />
     <parameter name="ServiceInfo_II" value="20,0,1100,40" />
     <parameter name="ServiceInfo_III" value="630,0,1100,40" />
+    <!-- AudioSelection -->
+    <parameter name="AudioSelectionSliderSeparation" value="300" />
+    <!-- general slider separation in config menues -->
+    <parameter name="ConfigListSliderSeparation" value="300" />
+    <!-- TMDb -->
+    <parameter name="TMDbListFont" value="Regular;32" />
+    <parameter name="TMDbListName" value="15,1,1032,44" />
+	<!-- VerticalEPGView -->
+	<parameter name="VertEPGListFont_01" value="Regular;30" />
+	<parameter name="VertEPGListFont_02" value="Regular;32" />
+	<parameter name="VertEPGDate" value="0, 0, 0, 0" />
+	<parameter name="VertEPGBeginEndDuration" value="4, 0, 322, 36" />
+	<parameter name="VertEPGPrimeTimePic" value="0, 0, 0, 0" />
+	<parameter name="VertEPGText" value="4, 37, 322, 82" />
+	<parameter name="VertEPGDivLine" value="4, 122, 322, 1" />
+	<parameter name="VertEPGColumnsCount" value="5" />
+	<!-- ChannelSelectionHorizontal -->
+	<parameter name="ServicelistHorServiceTypeIcon" value="0,0,0,0" />
+	<parameter name="ServicelistHorServiceTime" value="0,0,0,0" />
+	<parameter name="ServicelistHorProgressbar" value="0,0,0,0" />
+	<parameter name="ServicelistHorPreViewPic" value="0,0,0,0" />
+	<parameter name="ServicelistHorPicon" value="37,21,216,122" />
+	<parameter name="ServicelistHorNumber" value="0,0,0,0" />
+	<parameter name="ServicelistHorName" value="3,150,286,45" />
+	<parameter name="ServicelistHorServiceInfo" value="4,210,286,81" />
+	<parameter name="ServicelistHorCustomPiconSize" value="216,122" />
+    <!-- FileList -->
+    <parameter name="FileListName" value="50,0,1000,45" />
+    <parameter name="FileListIcon" value="15,10,40,40" />
+    <parameter name="FileListMultiName" value="50,0,1000,45" />
+    <parameter name="FileListMultiIcon" value="15,10,40,40" />
+    <parameter name="FileListMultiLock" value="15,10,40,40" />
+    <parameter name="FileListFont" value="Regular;32" />
+    <parameter name="FileListItemHeight" value="45" />
+	<!-- FilebrowserVTi -->
+	<parameter name="FileListmodName" value="50,0,1000,45" />
+	<parameter name="FileListmodIcon" value="15,10,40,40" />
+	<parameter name="FileListmodFont" value="Regular;32" />
+	<parameter name="FileListmodItemHeight" value="45" />
+	<parameter name="FileListmodMultiName" value="50,0,1000,45" />
+	<parameter name="FileListmodMultiIcon" value="15,10,40,40" />
+	<parameter name="FileListmodMultiLock" value="15,10,40,40" />
+	<parameter name="SelectionListmodDescription" value="50,0,1000,45" />
+	<parameter name="SelectionListmodFont" value="Regular;32" />
+	<parameter name="SelectionListmodItemHeight" value="45" />
+	<parameter name="SelectionListmodIcon" value="15,10,40,40" />
   </parameters>
   <fonts>
     <font filename="lcd.ttf" name="LCD" scale="100" />
@@ -360,6 +410,9 @@
     <font filename="KravenFHD/fonts/OpenSans-Semibold.ttf" name="Regular2" scale="95" />
     <font filename="KravenFHD/fonts/meteocons.ttf" name="Meteo" scale="100" />
 	<font filename="KravenFHD/fonts/owfont-regular.ttf" name="Meteo2" scale="100" />
+	<alias name="FileList" font="Regular" size="32" height="41" />
+	<alias name="FileListMulti" font="Regular" size="32" height="41" />
+	<alias name="VirtualKeyboard" font="Regular" size="42" height="67"/>
   </fonts>
   <subtitles>
     <sub font="Regular;45" name="Subtitle_TTX" shadowColor="shadow" shadowOffset="3,3" />

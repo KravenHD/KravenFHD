@@ -1,4 +1,4 @@
-  <screen name="SerienRecorder3.0" position="0,0" size="1920,1080" title="Serien Recorder" flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="SerienRecorder3.0" position="0,0" size="1920,1080" title="Serien Recorder" flags="wfNoBorder" backgroundColor="Kravenbg2">
     <widget name="title" position="30,75" size="1320,82" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" transparent="1" font="Regular;39" valign="center" halign="center" />
     <widget backgroundColor="KravenIBbg2" name="headline" position="30,30" size="1320,60" transparent="1" font="Regular;39" valign="center" halign="center" />
     <widget backgroundColor="KravenIBbg2" name="version" position="1290,30" size="600,60" foregroundColor="KravenMFont2" transparent="1" font="Regular;39" valign="center" halign="right" />
