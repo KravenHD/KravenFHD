@@ -1,0 +1,41 @@
+  <!-- ChannelSelectionHorizontal -->
+  <screen name="ChannelSelectionHorizontal" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+    <widget backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" render="Label" size="1500,69" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
+    <widget font="Regular;39" foregroundColor="KravenFont2" position="105,105" halign="left" valign="top" render="Label" size="1752,50" source="ServiceEvent" backgroundColor="Kravenbg2" transparent="1" >
+      <convert type="KravenFHDEventName">Name</convert>
+    </widget>
+    <widget source="ServiceEvent" render="Label" position="105,170" size="90,36" font="Regular;28" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" transparent="1" halign="left">
+      <convert type="KravenFHDEventTime">StartTime</convert>
+      <convert type="ClockToText">
+      </convert>
+    </widget>
+    <widget position="198,185" size="330,7" render="Progress" source="ServiceEvent" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress220.png">
+      <convert type="KravenFHDEventTime">Progress</convert>
+    </widget>
+    <eLabel position="198,188" size="330,1" backgroundColor="KravenLine" />
+    <widget source="ServiceEvent" render="Label" position="527,170" size="90,36" font="Regular;28" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" transparent="1" halign="right">
+      <convert type="KravenFHDEventTime">EndTime</convert>
+      <convert type="ClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget source="session.VideoPicture" render="Pig" position="105,216" size="512,288" zPosition="3" backgroundColor="transparent" />
+    <eLabel backgroundColor="#00000000" position="105,216" size="512,288" transparent="0" zPosition="2" />
+    <eLabel backgroundColor="KravenBorder2" position="105,216" size="512,4" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="105,500" size="512,4" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="105,216" size="4,288" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="613,216" size="4,288" transparent="0" zPosition="4" />
+    <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont1" font="Regular;33" position="694,170" size="1163,336" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" transparent="1">
+      <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+    </widget>
+	<eLabel position="106,652" size="290,300" backgroundColor="Kravenbg2" />
+	<eLabel position="398,652" size="290,300" backgroundColor="Kravenbg2" />
+	<eLabel position="690,652" size="290,300" backgroundColor="Kravenbg2" />
+	<eLabel position="982,652" size="290,300" backgroundColor="Kravenbg2" />
+	<eLabel position="1274,652" size="290,300" backgroundColor="Kravenbg2" />
+	<eLabel position="1566,652" size="290,300" backgroundColor="Kravenbg2" />
+	<widget name="list" itemWidth="292" position="105,637" size="1752,315" zPosition="3" backgroundColor="Kravenbg2" boxOrientation="horizontal" colorServiceDescription="KravenFont2" colorServiceDescriptionSelected="KravenSelFont" enableWrapAround="1" foregroundColorSelected="KravenSelFont" foregroundColorServiceNotAvail="KravenNotAvailable" colorServiceRecording="red" onlyFullListEntries="true" scrollbarMode="showNever" serviceInfoAlign="center" serviceInfoFont="Regular;33" serviceNameAlign="center" serviceNameFont="Regular2;36" serviceNumberAlign="right" transparent="1" />
+    <!-- nontransbg */-->
+	<constant-widget name="CSHORMT"/>
+    <constant-widget name="MovieSelection"/>
+    <constant-widget name="gradient-cs"/>
+    <!--<text="ChannelSelectionHorizontal - MiniTV" position="105,0" />-->
+  </screen>

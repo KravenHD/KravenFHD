@@ -241,23 +241,6 @@
     <!-- VirtualKeyboard -->
     <parameter name="VirtualKeyboardFont" value="Regular;42" />
 	<parameter name="VirtualKeyboard" value="67" />
-    <!-- TimerList -->
-    <parameter name="TimerListItemHeight" value="116" />
-    <parameter name="TimerListNoStyleName" value="0,2,1035,40" />
-    <parameter name="TimerListNoStyleDesc" value="0,42,1035,36" />
-    <parameter name="TimerListTime" value="0,80,780,30" />
-    <parameter name="TimerListFont1" value="Regular;32" />
-    <parameter name="TimerListFont2" value="Regular;30" />
-    <parameter name="TimerListState" value="800,80,235,35" />
-    <parameter name="TimerListIcon" value="8,61,40,40" />
-    <parameter name="TimerListIconHOffset" value="60" />
-    <parameter name="TimerListNoIconHOffset" value="10" />
-    <parameter name="TimerListTrimLength" value="70" />
-    <parameter name="TimerListPngTimer" value="8,7,40,40" />
-    <parameter name="TimerListZapTimer" value="8,7,40,40" />
-    <parameter name="TimerListDisabledTimer" value="8,7,40,40" />
-    <parameter name="TimerListInstantRecord" value="0, 0, 0, 0" />
-    <parameter name="TimerListRedTimer" value="550,7,40,40" />
     <!-- EPGlist -->
     <parameter name="EPGlistFont1" value="Regular;32" />
     <parameter name="EPGlistFont2" value="Regular;30" />
@@ -291,18 +274,6 @@
     <parameter name="GMultiEPGTimelineFont" value="Regular;28" />
     <parameter name="GMultiEPGTimelineItemHeight" value="28" />
     <parameter name="GMultiEPGTimelineItemSize" value="100,30" />
-    <!-- HelpMenuList -->
-    <parameter name="HelpMenuListHlp" value="10,2,1000,45" />
-    <parameter name="HelpMenuListFont0" value="Regular;32" />
-    <parameter name="HelpMenuListFontSize1" value="32" />
-    <parameter name="HelpMenuListExtFontSize1" value="32" />
-    <parameter name="HelpMenuListExtFontSize2" value="30" />
-    <parameter name="HelpMenuListItemHeight" value="45" />
-    <parameter name="HelpMenuListExtHlp0" value="0,2,500,45" />
-    <parameter name="HelpMenuListExtendedFont0" value="Regular;32" />
-    <parameter name="HelpMenuListExtHlp1" value="0,36,500,45" />
-    <parameter name="HelpMenuListExtendedFont1" value="Regular;32" />
-    <parameter name="HelpMenuListExtendedItemHeight" value="50" />
     <!-- PluginList -->
     <parameter name="PluginListFont1" value="Regular;30" />
     <parameter name="PluginListFont2" value="Regular;25" />
@@ -400,6 +371,17 @@
 	<parameter name="SelectionListmodFont" value="Regular;32" />
 	<parameter name="SelectionListmodItemHeight" value="45" />
 	<parameter name="SelectionListmodIcon" value="15,10,40,40" />
+	<!-- PluginBrowser -->
+	<parameter name="PluginBrowserName" value="180,3,45"/>
+	<parameter name="PluginBrowserDescr" value="180,42,39"/>
+	<parameter name="PluginBrowserIcon" value="2,0,160,70"/>
+	<parameter name="PluginBrowserDownloadName" value="125,3,45"/>
+	<parameter name="PluginBrowserDownloadDescr" value="125,42,39"/>
+	<parameter name="PluginBrowserDownloadIcon" value="2,0,120,75"/>
+	<!-- ServiceInfo -->
+	<parameter name="ServiceInfo" value="0,0,450,50" />
+    <parameter name="ServiceInfoLeft" value="0,0,450,45" />
+    <parameter name="ServiceInfoRight" value="450,0,1000,45" />
   </parameters>
   <fonts>
     <font filename="lcd.ttf" name="LCD" scale="100" />
@@ -413,6 +395,13 @@
 	<alias name="FileList" font="Regular" size="32" height="41" />
 	<alias name="FileListMulti" font="Regular" size="32" height="41" />
 	<alias name="VirtualKeyboard" font="Regular" size="42" height="67"/>
+	<alias name="ServiceInfo" font="Regular" size="32" height="45"/>
+	<alias name="PluginBrowser0" font="Regular" size="32" height="75"/>
+	<alias name="PluginBrowser1" font="Regular" size="22"/>
+	<alias name="HelpMenuList" font="Regular" size="30" height="45"/>
+	<alias name="HelpMenuListExt0" font="Regular" size="32" height="75"/>
+	<alias name="HelpMenuListExt1" font="Regular" size="28"/>
+	<alias name="ChoiceList" font="Regular" size="32" height="45" />
   </fonts>
   <subtitles>
     <sub font="Regular;45" name="Subtitle_TTX" shadowColor="shadow" shadowOffset="3,3" />

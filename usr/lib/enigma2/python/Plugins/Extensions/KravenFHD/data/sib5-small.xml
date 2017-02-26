@@ -1,0 +1,25 @@
+  <widget source="session.VideoPicture" render="KravenFHDPig3" position="60,112" size="384,216" zPosition="3" backgroundColor="transparent" />
+  <eLabel backgroundColor="#00000000" position="60,112" size="384,216" transparent="0" zPosition="2" />
+  <eLabel backgroundColor="KravenBorder2" position="60,112" size="384,4" transparent="0" zPosition="4" />
+  <eLabel backgroundColor="KravenBorder2" position="60,324" size="384,4" transparent="0" zPosition="4" />
+  <eLabel backgroundColor="KravenBorder2" position="60,112" size="4,216" transparent="0" zPosition="4" />
+  <eLabel backgroundColor="KravenBorder2" position="440,112" size="4,216" transparent="0" zPosition="4" />
+  <widget backgroundColor="Kravenbg2" font="Regular2;39" foregroundColor="KravenFont1" halign="left" valign="center" noWrap="1" position="480,105" render="Label" size="630,57" source="session.CurrentService" transparent="1" zPosition="1">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <widget backgroundColor="Kravenbg2" font="Regular2;36" foregroundColor="KravenFont1" halign="left" valign="top" position="480,178" render="Label" size="630,162" source="session.Event_Now" transparent="1">
+    <convert type="KravenFHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont1" halign="left" position="60,360" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" source="session.Event_Now" transparent="1" font="Regular2; 33" size="1050,420">
+    <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+  </widget>
+  <eLabel backgroundColor="Kravenbg2" font="Regular2;36" foregroundColor="KravenFont2" halign="left" valign="center" text="es folgt:" position="1155,112" size="705,60" transparent="1" />
+  <widget backgroundColor="Kravenbg2" font="Regular2;36" foregroundColor="KravenFont2" halign="left" valign="top" position="1155,178" render="Label" size="705,162" source="session.Event_Next" transparent="1">
+    <convert type="KravenFHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" halign="left" position="1155,360" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" source="session.Event_Next" transparent="1" font="Regular2; 33" size="705,420">
+    <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+  </widget>
+  <!-- nontransbg */-->
+  <!--<text="Secondinfobar - MiniTV2" position="60,0" />-->
+</screen>

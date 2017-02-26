@@ -1,0 +1,36 @@
+  <!-- MSNWeatherPlugin -->
+  <screen name="MSNWeatherPlugin" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080" title="Weather Plugin">
+	<widget render="Label" source="caption" position="232,120" size="900,45" font="Regular;34" backgroundColor="Kravenbg" foregroundColor="KravenFont1" halign="left" transparent="1" />
+	<widget render="Label" source="observationpoint" position="1383,120" size="450,45" font="Regular;34" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" halign="center" />
+	<widget render="Label" source="observationtime" position="1494,189" size="225,45" font="Regular;34" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" halign="center" />
+	<eLabel font="Regular;30" halign="left" position="232,201" size="900,45" text="Today" backgroundColor="Kravenbg" foregroundColor="KravenFont1" render="Label" transparent="1" />
+	<widget name="currenticon" position="1449,309" zPosition="1" size="330,330" alphatest="blend" />
+	<widget render="Label" source="condition" position="1471,643" size="292,82" font="Regular;24" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" zPosition="2" halign="center" />
+	<eLabel render="Label" text="Aktuell:" position="232,285" size="150,45" font="Regular;33" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+	<widget render="Label" source="currentTemp" position="450,285" size="150,45" font="Regular;33" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+	<widget render="Label" source="feelsliketemp" position="552,285" size="300,45" font="Regular;33" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+	<eLabel render="Label" text="Max./Min.:" position="232,345" size="150,45" font="Regular;33" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+	<widget render="Label" source="weekday1_temp" position="457,330" size="450,90" font="Regular;33" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" zPosition="10" />
+	<eLabel render="Label" text="Wind:" position="232,435" size="150,45" font="Regular;33" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+	<widget render="Label" source="wind_condition" position="457,435" size="450,45" font="Regular;33" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" />
+	<widget render="Label" source="humidity" position="232,496" size="450,45" font="Regular;33" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+	<widget render="Label" source="weekday2" position="232,600" zPosition="1" size="157,60" halign="center" valign="center" font="Regular;27" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+	<widget name="weekday2_icon" position="270,667" zPosition="1" size="82,67" alphatest="blend" />
+	<widget render="Label" source="weekday2_temp" position="232,750" zPosition="1" size="157,90" halign="center" valign="bottom" font="Regular;24" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+	<widget render="Label" source="weekday3" position="412,600" zPosition="1" size="157,60" halign="center" valign="center" font="Regular;27" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+	<widget name="weekday3_icon" position="450,667" zPosition="1" size="82,67" alphatest="blend" />
+	<widget render="Label" source="weekday3_temp" position="412,750" zPosition="1" size="157,90" halign="center" valign="bottom" font="Regular;24" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+	<widget render="Label" source="weekday4" position="592,600" zPosition="1" size="157,60" halign="center" valign="center" font="Regular;27" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+	<widget name="weekday4_icon" position="630,667" zPosition="1" size="82,67" alphatest="blend" />
+	<widget render="Label" source="weekday4_temp" position="592,750" zPosition="1" size="157,90" halign="center" valign="bottom" font="Regular;24" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+	<widget render="Label" source="weekday5" position="772,600" zPosition="1" size="157,60" halign="center" valign="center" font="Regular;27" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+	<widget name="weekday5_icon" position="810,667" zPosition="1" size="82,67" alphatest="blend" />
+	<widget render="Label" source="weekday5_temp" position="772,750" zPosition="1" size="157,90" halign="center" valign="bottom" font="Regular;24" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+	<widget render="Label" source="statustext" position="105,1006" zPosition="1" size="1200,36" font="Regular;30" backgroundColor="KravenIBbg2" foregroundColor="KravenIBFont1" valign="center" transparent="1" />
+    <constant-widget name="Title-big2"/>
+    <constant-widget name="Background"/>
+	<ePixmap pixmap="KravenVB/infobar-global-icons/key_menu.png" position="1717,1005" size="64,33" alphatest="blend" />
+    <ePixmap pixmap="KravenVB/infobar-global-icons/key_exit.png" position="1792,1005" size="64,33" alphatest="blend" />
+    <!--<text="MSNWeatherPlugin" position="105,0" />-->
+  </screen>
+  

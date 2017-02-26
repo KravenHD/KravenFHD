@@ -4,10 +4,10 @@
   <widget backgroundColor="KravenSIBbg" font="Regular2;45" halign="left" noWrap="1" position="990,94" render="Label" size="855,57" source="session.Event_Next" transparent="1" foregroundColor="KravenFont2">
     <convert type="KravenFHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="KravenSIBbg" font="Regular2;38" foregroundColor="KravenFont1" halign="left" position="60,195" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" source="session.Event_Now" transparent="1" size="855,588">
+  <widget backgroundColor="KravenSIBbg" foregroundColor="KravenFont1" halign="left" position="60,195" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" source="session.Event_Now" transparent="1" font="Regular2; 38" size="855,588">
     <convert type="KravenFHDEventName">ExtendedDescription</convert>
   </widget>
-  <widget backgroundColor="KravenSIBbg" font="Regular2;38" foregroundColor="KravenFont2" halign="left" position="990,195" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" source="session.Event_Next" transparent="1" size="855,588">
+  <widget backgroundColor="KravenSIBbg" foregroundColor="KravenFont2" halign="left" position="990,195" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" source="session.Event_Next" transparent="1" font="Regular2; 38" size="855,588">
     <convert type="KravenFHDEventName">ExtendedDescription</convert>
   </widget>
   <!-- sibbg */-->

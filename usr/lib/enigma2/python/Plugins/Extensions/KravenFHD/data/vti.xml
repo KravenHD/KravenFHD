@@ -1,0 +1,74 @@
+  <!-- Animation Setup -->
+  <screen name="AnimationSetupScreen" position="0,0" size="1920,1080" title="Animation Setup" flags="wfNoBorder" backgroundColor="Kravenbg3">
+	<eLabel text="Animation Setup" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,765" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="SourceRedGreen"/>
+	<!-- Logo -->
+    <constant-widget name="OKExit"/>
+    <!--<text="AnimationSetupScreen" position="105,0" />-->
+  </screen>
+  <!-- HelpMenu -->
+  <parameters>
+    <parameter name="HelpMenuListHlp" value="10,2,1000,45" />
+    <parameter name="HelpMenuListFont0" value="Regular;32" />
+    <parameter name="HelpMenuListFontSize1" value="32" />
+    <parameter name="HelpMenuListExtFontSize1" value="32" />
+    <parameter name="HelpMenuListExtFontSize2" value="30" />
+    <parameter name="HelpMenuListItemHeight" value="45" />
+    <parameter name="HelpMenuListExtHlp0" value="0,2,500,45" />
+    <parameter name="HelpMenuListExtendedFont0" value="Regular;32" />
+    <parameter name="HelpMenuListExtHlp1" value="0,36,500,45" />
+    <parameter name="HelpMenuListExtendedFont1" value="Regular;32" />
+    <parameter name="HelpMenuListExtendedItemHeight" value="50" />
+  </parameters>
+  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="HelpMenu" position="0,0" size="1920,1080" title="Menu">
+	<eLabel text="help..." position="105,18" size="1500,69" backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+    <widget alphatest="blend" name="rc" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png" position="283,220" size="154,500" zPosition="10" />
+    <widget backgroundColor="Kravenbg" font="Regular2;36" foregroundColor="KravenFont2" halign="center" name="long_key" position="135,810" size="450,45" transparent="1" />
+    <widget backgroundColor="Kravenbg" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="750,180" size="1080,675" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget alphatest="blend" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-150,-150" size="55,105" zPosition="11" />
+    <widget alphatest="blend" name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-150,-150" size="55,105" zPosition="11" />
+    <widget alphatest="blend" name="arrowup" pixmap="skin_default/arrowup.png" position="-150,-150" size="55,105" zPosition="11" />
+    <widget alphatest="blend" name="arrowup2" pixmap="skin_default/arrowup.png" position="-150,-150" size="55,105" zPosition="11" />
+    <constant-widget name="Background"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="HelpMenu" position="105,0" />-->
+  </screen>
+  <!-- NetworkBrowser -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="NetworkBrowser" position="0,0" size="1920,1080" title="Network Neighbourhood">
+    <widget position="105,120" render="Listbox" size="1062,720" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" source="list" transparent="1" zPosition="3">
+      <convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryPixmapAlphaTest(pos = (15, 9), size = (72, 72), png = 1), # index 1 is the expandable/expanded/verticalline icon
+						MultiContentEntryText(pos = (105, 6), size = (900, 39), font=2, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the Hostname
+						MultiContentEntryText(pos = (240, 8), size = (765, 38), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is the sharename
+						MultiContentEntryText(pos = (240, 48), size = (765, 26), font=1, flags = RT_HALIGN_LEFT, text = 4), # index 4 is the sharedescription
+						MultiContentEntryPixmapAlphaTest(pos = (98, 9), size = (72, 72), png = 5), # index 5 is the nfs/cifs icon
+						MultiContentEntryPixmapAlphaTest(pos = (165, 9), size = (72, 72), png = 6), # index 6 is the isMounted icon
+					],
+				"fonts": [gFont("Regular", 33),gFont("Regular2", 26),gFont("Regular2", 36)],
+				"itemHeight": 90
+				}
+			</convert>
+    </widget>
+    <widget font="Regular2;33" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" halign="center" position="105,877" render="Label" size="1062,45" source="infotext" transparent="1" zPosition="3" />
+    <constant-widget name="Title-big"/>
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="SourceRedGreen"/>
+    <widget font="Regular;30" halign="left" valign="center" source="key_yellow" position="855,958" size="330,78" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" source="key_blue" position="1230,997" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<!-- Logo -->
+    <constant-widget name="OKExit"/>
+    <!--<text="NetworkBrowser" position="105,0" />-->
+  </screen>
+  <!-- CronManager -->
+  <screen flags="wfNoBorder" name="CronManager" position="0,0" size="1920,1080" title="CronManager" backgroundColor="Kravenbg3">
+    <widget backgroundColor="Kravenbg3" name="showjobs" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <constant-widget name="title-small"/>
+    <constant-widget name="Colorbuttons"/>
+	<!-- Logo -->
+    <constant-widget name="SourceRedGreenYellowBlue"/>
+    <constant-widget name="Exit"/>
+    <!--<text="CronManager" position="105,0" />-->
+  </screen>

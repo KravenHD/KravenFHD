@@ -1,6 +1,0 @@
-  <!-- PermanentClockScreen -->
-  <screen backgroundColor="KravenIBbg" flags="wfNoBorder" name="PermanentClockScreen" position="0,0" size="180,45" zPosition="10" title=" ">
-    <widget backgroundColor="KravenIBbg" source="global.CurrentTime" render="Label" position="1,1" size="180,45" font="Regular;39" foregroundColor="KravenIBFont1" valign="center" halign="center" transparent="1">
-	  <convert type="ClockToText">Default</convert>
-	</widget>
-  </screen>

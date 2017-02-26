@@ -1,0 +1,149 @@
+  <!-- /* Timer standard layout -->
+  <!-- ********** parameters ********** -->
+  <parameters>
+    <!-- TimerList -->
+    <parameter name="TimerListItemHeight" value="80" />
+    <parameter name="TimerListNoStyleName" value="0,39,530,37" />
+    <parameter name="TimerListNoStyleDesc" value="0,2,1750,37" />
+    <parameter name="TimerListStyle1Name" value="0,2,1190,37" />
+    <parameter name="TimerListStyle1Desc" value="1220,2,530,37" />
+    <parameter name="TimerListStyle1Desc1" value="0,39,620,37" />
+    <parameter name="TimerListStyle2Name" value="0,2,1750,37" />
+    <parameter name="TimerListStyle2Desc" value="0,39,670,36" />
+    <parameter name="TimerListStyle4Name" value="0,2,750,37" />
+    <parameter name="TimerListStyle4Desc" value="750,2,450,37" />
+    <parameter name="TimerListStyle4Desc1" value="0,39,750,37" />
+    <parameter name="TimerListStyle4Tags" value="1200,2,550,37" />
+    <parameter name="TimerListStateStyle4" value="1200,2,550,37" />
+    <parameter name="TimerListStyle5Name" value="0,2,800,37" />
+    <parameter name="TimerListStyle5Desc" value="820,2,530,37" />
+    <parameter name="TimerListStyle5Desc1" value="0,39,620,37" />
+    <parameter name="TimerListStyle5Tags" value="1350,2,400,37" />
+    <parameter name="TimerListTime" value="650,39,950,37" />
+    <parameter name="TimerListFont1" value="Regular;33" />
+    <parameter name="TimerListFont2" value="Regular;33" />
+    <parameter name="TimerListState" value="1510,39,240,37" />
+    <parameter name="TimerListIcon" value="8,39,37,37" />
+    <parameter name="TimerListIconHOffset" value="60" />
+    <parameter name="TimerListNoIconHOffset" value="10" />
+    <parameter name="TimerListTrimLength" value="70" />
+    <parameter name="TimerListPngTimer" value="8,2,37,37" />
+    <parameter name="TimerListZapTimer" value="8,2,37,37" />
+    <parameter name="TimerListDisabledTimer" value="8,2,37,37" />
+    <parameter name="TimerListInstantRecord" value="0, 0, 0, 0" />
+    <parameter name="TimerListRedTimer" value="1710,2,37,37" />
+  </parameters>
+  <!-- ********** Screens ********** -->
+  <!-- ********** Timer ********** -->
+  <!-- TimeInput -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="TimeInput" position="0,0" size="1920,1080" title="Time Input">
+    <constant-widget name="Title-big"/>
+    <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,135" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <constant-widget name="Colorbuttons"/>
+	<!-- Logo -->
+    <constant-widget name="NameRedGreen"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="TimeInput" position="105,0" />-->
+  </screen>
+  <!-- TimerSelection -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="TimerSelection" position="0,0" size="1920,1080" title="Timer selection">
+    <eLabel text="Timer Editor" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="center" />
+    <widget backgroundColor="Kravenbg3" name="timerlist" font="Regular;33" foregroundColor="KravenFont1" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+	<!-- Logo -->
+    <constant-widget name="OKExit"/>
+    <!--<text="TimerSelection" position="105,0" />-->
+  </screen>
+  <!-- TimerEditList -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="TimerEditList" position="0,0" size="1920,1080" title="Timer Editor">
+    <widget backgroundColor="Kravenbg3" name="timerlist" font="Regular;33" foregroundColor="KravenFont1" position="63,450" size="1794,482" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <constant-widget name="Title-big"/>
+    <constant-widget name="Colorbuttons"/>
+	<!-- menubg */-->
+	<widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenFont1" position="1707,33" size="150,42" font="Regular;39" halign="right" transparent="1" valign="center">
+	  <convert type="ClockToText">Default</convert>
+	</widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;36" foregroundColor="KravenFont1" position="675,95" render="Label" size="600,45" source="ServiceEvent" halign="left" valign="center" transparent="1" zPosition="3">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;36" foregroundColor="KravenFont1" halign="left" valign="top" position="675,146" render="Label" size="120,45" source="Event" transparent="1">
+      <convert type="KravenFHDEventTime">StartTime</convert>
+      <convert type="ClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;36" foregroundColor="KravenFont1" halign="left" valign="top" position="783,146" render="Label" size="150,45" source="Event" transparent="1">
+      <convert type="KravenFHDEventTime">EndTime</convert>
+      <convert type="ClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular2;36" foregroundColor="KravenFont2" halign="left" valign="top" position="948,146" render="Label" size="900,45" source="Event" transparent="1">
+      <convert type="KravenFHDEventName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;33" foregroundColor="KravenFont1" position="675,200" render="KravenFHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=5,startdelay=5000,wrap,always=0" size="1185,210" source="Event" transparent="1" halign="left" valign="center" zPosition="1">
+      <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+    </widget>
+    <widget source="session.VideoPicture" render="KravenFHDPig3" position="63,97" size="552,310" zPosition="3" backgroundColor="transparent" />
+    <eLabel backgroundColor="#00000000" position="63,97" size="552,310" transparent="0" zPosition="2" />
+    <eLabel backgroundColor="KravenBorder2" position="63,97" size="552,4" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="63,403" size="552,4" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="63,97" size="4,310" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="611,97" size="4,310" transparent="0" zPosition="4" />
+    <constant-widget name="NameRedGreenYellowBlue"/>
+	<!-- Menu ibar -->
+    <constant-widget name="OKExit"/>
+    <!--<text="TimerEditList" position="105,0" />-->
+  </screen>
+  <!-- TimerEntry -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="TimerEntry" position="0,0" size="1920,1080" title="Timer entry">
+    <eLabel text="Timer entry" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="center" />
+    <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,585" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="canceltext" position="105,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="oktext" position="480,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <constant-widget name="Colorbuttons"/>
+	<!-- Logo -->
+    <constant-widget name="OKExit"/>
+    <!--<text="TimerEntry" position="105,0" />-->
+  </screen>
+  <!-- TimerLog -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="TimerLog" position="0,0" size="1920,1080" title="Timer log">
+    <widget backgroundColor="Kravenbg3" name="loglist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,405" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="logentry" font="Regular2;30" foregroundColor="KravenFont2" position="105,558" size="1062,195" transparent="1" />
+    <constant-widget name="Title-big"/>
+    <constant-widget name="Colorbuttons"/>
+	<!-- Logo -->
+    <constant-widget name="NameRedGreenYellowBlue"/>
+    <constant-widget name="Exit"/>
+    <!--<text="TimerLog" position="105,0" />-->
+  </screen>
+  <!-- TimerSanityConflict -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="TimerSanityConflict" position="0,0" size="1920,1080" title="Timer sanity error">
+    <widget backgroundColor="Kravenbg3" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,135" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="timer1" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,285" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" size="1062,135" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="timer2" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,570" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" size="1062,135" transparent="1" />
+    <ePixmap pixmap="KravenFHD/buttons/key_red1.png" position="105,520" size="300,7" alphatest="blend" />
+    <ePixmap pixmap="KravenFHD/buttons/key_green1.png" position="555,520" size="300,7" alphatest="blend" />
+    <ePixmap pixmap="KravenFHD/buttons/key_yellow1.png" position="105,805" size="300,7" alphatest="blend" />
+    <ePixmap pixmap="KravenFHD/buttons/key_blue1.png" position="555,805" size="300,7" alphatest="blend" />
+    <widget font="Regular;30" halign="left" valign="center" name="key_red" position="112,480" size="330,39" foregroundColor="KravenButton" backgroundColor="Kravenbg3" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="key_green" position="562,480" size="330,39" foregroundColor="KravenButton" backgroundColor="Kravenbg3" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="112,765" size="330,39" foregroundColor="KravenButton" backgroundColor="Kravenbg3" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="562,765" size="330,39" foregroundColor="KravenButton" backgroundColor="Kravenbg3" transparent="1" zPosition="1" />
+    <constant-widget name="Title-big"/>
+	<!-- Logo -->
+    <constant-widget name="Exit"/>
+    <!--<text="TimerSanityConflict" position="105,0" />-->
+  </screen>
+  <!-- SleepTimerEdit -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="SleepTimerEdit" position="0,0" size="1920,1080" title="Sleep Timer">
+    <widget backgroundColor="Kravenbg3" font="Regular2;33" foregroundColor="KravenFont2" name="pretext" position="150,210" size="375,37" transparent="1" />
+    <widget backgroundColor="Kravenbg3" font="Regular2;33" foregroundColor="KravenFont2" name="input" position="525,210" size="75,37" transparent="1" />
+    <widget backgroundColor="Kravenbg3" font="Regular2;33" foregroundColor="KravenFont2" name="aftertext" position="600,210" size="180,37" transparent="1" />
+    <widget backgroundColor="Kravenbg3" font="Regular2;33" foregroundColor="KravenFont2" name="current_status" position="150,270" size="1035,45" transparent="1" />
+    <constant-widget name="Title-big"/>
+    <constant-widget name="Colorbuttons"/>
+	<!-- Logo -->
+    <widget font="Regular;30" halign="left" valign="center" name="red_text" position="105,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="green_text" position="480,958" size="330,78" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="yellow_text" position="855,958" size="330,78" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="blue_text" position="1230,958" size="330,78" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="2" />
+    <constant-widget name="Exit"/>
+    <!--<text="SleepTimerEdit" position="105,0" />-->
+  </screen>
+  <!-- Timer standard layout */ -->

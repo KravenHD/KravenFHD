@@ -80,7 +80,7 @@ class KravenFHDFrontendInfo(Poll, Converter, object):
 				if timer.isRunning() and not timer.justplay:
 					service = timer.record_service
 					feinfo = service and service.frontendInfo()
-					data = feinfo and feinfo.getAll(False)
+					data = feinfo and feinfo.getFrontendData()
 					if data:
 						tuner = data.get('tuner_number', -1)
 						if tuner is not None and tuner > -1 and tuner == int(self.tunernum):

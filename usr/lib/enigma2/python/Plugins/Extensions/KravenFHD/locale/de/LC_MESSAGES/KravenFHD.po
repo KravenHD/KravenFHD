@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenFHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2016-12-05 21:57+0100\n"
+"PO-Revision-Date: 2017-02-25 15:13+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -1269,10 +1269,6 @@ msgid "Choose from different styles for MovieSelection."
 msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für die Filmauswahl."
 
 #: KravenFHD.py
-msgid "Choose from different styles for SecondInfobar."
-msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für \"SecondInfoBar\"."
-
-#: KravenFHD.py
 msgid "Choose from different styles for NumberZap."
 msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für \"NumberZap\"."
 
@@ -1405,8 +1401,12 @@ msgid "ANTIALIASING BRIGHTNESS _________________________________________________
 msgstr "KANTENGLÄTTUNGS-HELLIGKEIT ________________________________________________________________"
 
 #: KravenFHD.py
-msgid "INFOBAR ___________________________________________________________________"
-msgstr "INFOLEISTE ___________________________________________________________________"
+msgid "INFOBAR-LOOK _________________________________________________________________"
+msgstr "INFOLEISTEN-AUSSEHEN ____________________________________________________________"
+
+#: KravenFHD.py
+msgid "INFOBAR-CONTENTS _____________________________________________________________"
+msgstr "INFOLEISTEN-INHALTE _____________________________________________________________"
 
 #: KravenFHD.py
 msgid "Infobar"
@@ -1749,8 +1749,12 @@ msgid "global colors"
 msgstr "Globale Farben"
 
 #: KravenFHD.py
-msgid "infobar"
-msgstr "Infoleiste"
+msgid "infobar-look"
+msgstr "Info-Aussehen"
+
+#: KravenFHD.py
+msgid "infobar-contents"
+msgstr "Info-Inhalte"
 
 #: KravenFHD.py
 msgid "weather"
@@ -1829,8 +1833,12 @@ msgid "This sections offers offers all basic color settings."
 msgstr "In diesem Abschnitt finden Sie alle grundlegenden Farb-Einstellungen."
 
 #: KravenFHD.py
-msgid "This sections offers all settings for the infobar."
-msgstr "In diesem Abschnitt finden Sie alle Einstellungen zur Infoleiste."
+msgid "This sections offers all settings for the infobar-look."
+msgstr "In diesem Abschnitt finden Sie alle Einstellungen zu Infoleisten-Aussehen."
+
+#: KravenFHD.py
+msgid "This sections offers all settings for infobar-contents."
+msgstr "In diesem Abschnitt finden Sie alle Einstellungen zu Infoleisten-Inhalten."
 
 #: KravenFHD.py
 msgid "This sections offers all weather settings."
@@ -1897,6 +1905,26 @@ msgid "record & tuner shine"
 msgstr "Record & Tuner leuchtet"
 
 #: KravenFHD.py
+msgid "record blink, tuner shine"
+msgstr "Record blinkt, Tuner leuchtet"
+
+#: KravenFHD.py
+msgid "record shine, tuner blink"
+msgstr "Record leuchtet, Tuner blinkt"
+
+#: KravenFHD.py
+msgid "record blink, no record tuner"
+msgstr "Record blinkt, keine Aufnahmeanzeige für Tuner"
+
+#: KravenFHD.py
+msgid "record shine, no record tuner"
+msgstr "Record leuchtet, keine Aufnahmeanzeige für Tuner"
+
+#: KravenFHD.py
+msgid "no record tuner"
+msgstr "keine Aufnahmeanzeige für Tuner"
+
+#: KravenFHD.py
 msgid "Record-State"
 msgstr "Aufnahmezustand"
 
@@ -1933,8 +1961,28 @@ msgid "Choose the font color of watched movies."
 msgstr "Wählen Sie die Schriftfarbe für gesehene Filme."
 
 #: KravenFHD.py
-msgid "infobar colors"
-msgstr "Infoleisten Farben"
+msgid "infobar colors big"
+msgstr "Infoleisten-Farben groß"
+
+#: KravenFHD.py
+msgid "infobar colors small"
+msgstr "Infoleisten-Farben klein"
+
+#: KravenFHD.py
+msgid "global colors big"
+msgstr "Globale-Farben groß"
+
+#: KravenFHD.py
+msgid "global colors small"
+msgstr "Globale-Farben klein"
+
+#: KravenFHD.py
+msgid "transparent big"
+msgstr "transparent groß"
+
+#: KravenFHD.py
+msgid "transparent small"
+msgstr "transparent klein"
 
 #: KravenFHD.py
 msgid "Choose the colors of PermanentClock."
@@ -2111,3 +2159,95 @@ msgstr "Sendungsbeschreibung"
 #: KravenFHD.py
 msgid "full"
 msgstr "voll"
+
+#: KravenFHD.py
+msgid "Eventname Fontsize"
+msgstr "Sendungsname Schriftgrösse"
+
+#: KravenFHD.py
+msgid "Choose the font size of eventname."
+msgstr "Wählen Sie die Schriftgrösse für den Sendungsnamen."
+
+#: KravenFHD.py
+msgid "standard layout"
+msgstr "standard Ansicht"
+
+#: KravenFHD.py
+msgid "medium font with EPG Info"
+msgstr "mittlere Schrift mit EPG Info"
+
+#: KravenFHD.py
+msgid "big font with EPG Info"
+msgstr "grosse Schrift mit EPG Info"
+
+#: KravenFHD.py
+msgid "Choose from different styles to display TimerEditScreen."
+msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für 'TimerEditScreen'."
+
+#: KravenFHD.py
+msgid "This sections offers all settings for TimerEditScreen."
+msgstr "In diesem Abschnitt finden Sie alle Einstellungen zu 'TimerEditScreen'."
+
+#: KravenFHD.py
+msgid "TimerEdit-Style"
+msgstr "TimerEdit-Stil"
+
+#: KravenFHD.py
+msgid "TimerList-Style"
+msgstr "TimerList-Stil"
+
+#: KravenFHD.py
+msgid "Choose from different styles to display TimerList."
+msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für die TimerListe."
+
+#: KravenFHD.py
+msgid "This sections offers all settings for SecondInfobar."
+msgstr "In diesem Abschnitt finden Sie alle Einstellungen zu SecondInfobar."
+
+#: KravenFHD.py
+msgid "SecondInfobar-Style"
+msgstr "SecondInfobar-Stil"
+
+#: KravenFHD.py
+msgid "Choose from different styles for SecondInfobar."
+msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für \"SecondInfobar\"."
+
+#: KravenFHD.py
+msgid "SecondInfobar Fontsize"
+msgstr "SecondInfobar Schriftgrösse"
+
+#: KravenFHD.py
+msgid "Choose the font size of SecondInfobar."
+msgstr "Wählen Sie die Schriftgrösse für SecondInfobar."
+
+#: KravenFHD.py
+msgid "use alternative (horizontal) channellist"
+msgstr "Alternative (horizontale) Kanalliste verwenden"
+
+#: KravenFHD.py
+msgid "Choose whether use alternative horizontal channellist or not."
+msgstr "Wählen Sie, ob Sie die alternative horizontale Kanalliste verwenden möchten oder nicht."
+
+#: KravenFHD.py
+msgid "show Picons in channellist"
+msgstr "Picons in Kanalliste anzeigen"
+
+#: KravenFHD.py
+msgid "Choose whether picons are shown in channellist or not."
+msgstr "Wählen Sie, ob Picons in der Kanalliste angezeigt werden oder nicht."
+
+#: KravenFHD.py
+msgid "Eventname effect"
+msgstr "Sendungsname Effekt"
+
+#: KravenFHD.py
+msgid "Choose from different effects to display eventname."
+msgstr "Wählen Sie aus verschiedenen Effekten für die Anzeige des Sendungsnamens."
+
+#: KravenFHD.py
+msgid "runningtext"
+msgstr "Laufschrift"
+
+#: KravenFHD.py
+msgid "typewriter"
+msgstr "Schreibmaschine"

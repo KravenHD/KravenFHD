@@ -1,0 +1,15 @@
+  <widget backgroundColor="KravenSIBbg" font="Regular2;39" halign="center" valign="center" noWrap="1" position="55,82" render="Label" size="1798,57" source="session.Event_Now" transparent="1" foregroundColor="KravenFont1">
+    <convert type="KravenFHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="KravenSIBbg" font="Regular2;33" foregroundColor="KravenFont1" halign="center" position="55,145" size="1798,252" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" source="session.Event_Now" transparent="1">
+    <convert type="KravenFHDEventName">ExtendedDescription</convert>
+  </widget>
+  <widget backgroundColor="KravenSIBbg" font="Regular2;39" halign="center" valign="center" noWrap="1" position="55,438" render="Label" size="1798,57" source="session.Event_Next" transparent="1" foregroundColor="KravenFont2">
+    <convert type="KravenFHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="KravenSIBbg" foregroundColor="KravenFont2" halign="center" position="55,501" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" source="session.Event_Next" transparent="1" font="Regular2; 33" size="1798,252">
+    <convert type="KravenFHDEventName">ExtendedDescription</convert>
+  </widget>
+  <!-- sibbg */-->
+  <!--<text="Secondinfobar - top/bottom" position="60,0" />-->
+</screen>

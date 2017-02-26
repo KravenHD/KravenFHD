@@ -1686,4 +1686,8 @@
     <constant-widget name="OKExit"/>
     <!--<text="FCCSetup" position="105,0" />-->
   </screen>
+  <!-- PermanentClockScreen -->
+  <screen backgroundColor="KravenIBbg" name="PermanentClockScreen" size="180,45" position="0,0" flags="wfNoBorder" zPosition="10" title=" ">
+    <constant-widget name="permanentclock-infobar-big"/>
+  </screen>
 <!-- plugins -->

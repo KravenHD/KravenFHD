@@ -3,9 +3,16 @@
     <convert type="ServiceInfo">HasTelext</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_dolby_off.png" position="927,34" size="65,33" zPosition="1" />
-  <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_dolby_on.png" position="927,34" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
-    <convert type="ServiceInfo">IsMultichannel</convert>
+  <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_dolby_off.png" position="927,34" render="Pixmap" size="65,33" source="session.Event_Now" zPosition="1">
+    <convert type="KravenFHDEventName">Dolby_off</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_dolby_51.png" position="927,34" render="Pixmap" size="65,33" source="session.Event_Now" zPosition="2">
+    <convert type="KravenFHDEventName">Dolby51</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_dolby_20.png" position="927,34" render="Pixmap" size="65,33" source="session.Event_Now" zPosition="3">
+    <convert type="KravenFHDEventName">Dolby20</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_format_off.png" position="1002,34" size="65,33" zPosition="1" />
