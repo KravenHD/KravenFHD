@@ -1938,7 +1938,7 @@ class KravenFHD(ConfigListScreen, Screen):
 				self.showText(48,_("36 Pixel"))
 		elif option == config.plugins.KravenFHD.EPGListSize:
 			if config.plugins.KravenFHD.EPGListSize.value == "small":
-				self.showText(44,_("22 Pixel"))
+				self.showText(44,_("33 Pixel"))
 			elif config.plugins.KravenFHD.EPGListSize.value == "big":
 				self.showText(48,_("36 Pixel"))
 		elif option == config.plugins.KravenFHD.EMCEPGSize:

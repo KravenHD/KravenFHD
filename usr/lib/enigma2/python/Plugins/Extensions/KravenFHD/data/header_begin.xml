@@ -242,7 +242,7 @@
     <parameter name="VirtualKeyboardFont" value="Regular;42" />
 	<parameter name="VirtualKeyboard" value="67" />
     <!-- EPGlist -->
-    <parameter name="EPGlistFont1" value="Regular;32" />
+    <parameter name="EPGlistFont1" value="Regular;33" />
     <parameter name="EPGlistFont2" value="Regular;30" />
     <parameter name="EPGlistText1" value="0,5,40,40" />
     <parameter name="EPGlistText2" value="0,5,250,40" />
