@@ -1584,61 +1584,61 @@
 	
 	<constant-widget name="msm33">
       <widget backgroundColor="Kravenbg2" font="Regular;33" foregroundColor="KravenFont1" position="1233,510" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,378" source="Service" transparent="1" valign="top">
-        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+        <convert type="EventName">FullDescription</convert>
       </widget>
 	</constant-widget>
 	
 	<constant-widget name="msm36">
       <widget backgroundColor="Kravenbg2" font="Regular;36" foregroundColor="KravenFont1" position="1233,500" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,414" source="Service" transparent="1" valign="top">
-        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+        <convert type="EventName">FullDescription</convert>
       </widget>
 	</constant-widget>
 	
 	<constant-widget name="msmc33">
       <widget backgroundColor="Kravenbg2" font="Regular;33" foregroundColor="KravenFont1" position="1233,407" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,504" source="Service" transparent="1" valign="top">
-        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+        <convert type="EventName">FullDescription</convert>
       </widget>
 	</constant-widget>
 	
 	<constant-widget name="msmc36">
       <widget backgroundColor="Kravenbg2" font="Regular;36" foregroundColor="KravenFont1" position="1233,406" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,506" source="Service" transparent="1" valign="top">
-        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+        <convert type="EventName">FullDescription</convert>
       </widget>
 	</constant-widget>
 	
 	<constant-widget name="msnc33">
       <widget backgroundColor="Kravenbg" font="Regular;33" foregroundColor="KravenFont1" position="1233,225" render="Label" size="624,672" source="Service" transparent="1" valign="top">
-        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+        <convert type="EventName">FullDescription</convert>
       </widget>
 	</constant-widget>
 	
 	<constant-widget name="msnc36">
       <widget backgroundColor="Kravenbg" font="Regular;36" foregroundColor="KravenFont1" position="1233,220" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,690" source="Service" transparent="1" valign="top">
-        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+        <convert type="EventName">FullDescription</convert>
       </widget>
 	</constant-widget>
 	
 	<constant-widget name="mssc33">
       <widget backgroundColor="Kravenbg" font="Regular;33" foregroundColor="KravenFont1" position="1233,355" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,546" source="Service" transparent="1" valign="top">
-        <convert type="KravenFHDEventName">ExtendedDescription</convert>
+        <convert type="EventName">ExtendedDescription</convert>
       </widget>
 	</constant-widget>
 	
 	<constant-widget name="mssc36">
       <widget backgroundColor="Kravenbg" font="Regular;36" foregroundColor="KravenFont1" position="1233,352" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,552" source="Service" transparent="1" valign="top">
-        <convert type="KravenFHDEventName">ExtendedDescription</convert>
+        <convert type="EventName">ExtendedDescription</convert>
       </widget>
 	</constant-widget>
 	
 	<constant-widget name="msbc33">
       <widget backgroundColor="Kravenbg" font="Regular;33" foregroundColor="KravenFont1" position="1233,170" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,328" source="Service" transparent="1" valign="top">
-        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+        <convert type="EventName">FullDescription</convert>
       </widget>
 	</constant-widget>
 	
 	<constant-widget name="msbc36">
       <widget backgroundColor="Kravenbg" font="Regular;36" foregroundColor="KravenFont1" position="1233,173" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,322" source="Service" transparent="1" valign="top">
-        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+        <convert type="EventName">FullDescription</convert>
       </widget>
 	</constant-widget>
 	
