@@ -221,6 +221,24 @@
     <constant-widget name="OKExit"/>
     <!--<text="imdbSetup" position="105,0" />-->
   </screen>
+  <!-- IMDB -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="IMDB" position="0,0" size="1920,1080" title="IMDb Details Plugin">
+    <widget backgroundColor="Kravenbg3" name="menu" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,330" size="1062,540" scrollbarMode="showOnDemand" transparent="1" />
+    <widget alphatest="blend" name="starsbg" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_empty.png" position="892,172" size="210,21" zPosition="2" />
+    <widget name="stars" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_filled.png" position="892,172" size="210,21" transparent="1" zPosition="3" />
+    <widget backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont1" halign="center" name="ratinglabel" position="840,201" size="315,38" transparent="1" />
+    <widget alphatest="blend" name="poster" position="105,255" size="165,270" />
+    <widget backgroundColor="Kravenbg3" font="Regular2;30" name="detailslabel" position="298,255" size="855,262" transparent="1" foregroundColor="KravenFont2" />
+    <widget backgroundColor="Kravenbg3" font="Regular;30" name="castlabel" position="105,547" size="1062,330" transparent="1" />
+    <widget backgroundColor="Kravenbg3" font="Regular;30" name="extralabel" position="105,255" size="1062,525" transparent="1" />
+    <widget backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" name="statusbar" position="105,892" size="1062,42" transparent="1" />
+    <constant-widget name="Title-big"/>
+    <constant-widget name="Colorbuttons"/>
+	<!-- Logo -->
+    <constant-widget name="NameRedGreenYellowBlue"/>
+    <constant-widget name="Exit"/>
+    <!--<text="IMDB" position="105,0" />-->
+  </screen>
   <!-- getCover -->
   <screen name="getCover" position="0,0" size="1920,1080" title="EMC Cover Selecter" flags="wfNoBorder" backgroundColor="Kravenbg">
     <ePixmap  pixmap="KravenFHD/global-icons/key_ok.png" position="1497,652" size="65,33" alphatest="blend" />

@@ -1088,13 +1088,34 @@
   <!-- Volume_adjust -->
   <screen name="Volume_adjust" position="0,0" size="1920,1080" title="Volume Adjust" flags="wfNoBorder" backgroundColor="transparent">
     <widget backgroundColor="Kravenbg3" name="ServiceList" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,675" scrollbarMode="showOnDemand" transparent="1" />
-    <widget source="press_menu" render="Label" position="105,877" zPosition="1" size="1062,42" font="Regular2;33" foregroundColor="KravenFont2" halign="left" valign="center" backgroundColor="Kravenbg3" transparent="1" />
+    <widget backgroundColor="Kravenbg3" source="press_menu" render="Label" position="105,825" size="1062,82" font="Regular2;33" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
     <constant-widget name="Title-big"/>
 	<!-- Logo -->
     <constant-widget name="Colorbuttons"/>
     <constant-widget name="SourceRedGreenYellowBlue"/>
-    <constant-widget name="Exit"/>
+    <constant-widget name="MenuOKExit"/>
     <!--<text="Volume_adjust" position="105,0" />-->
+  </screen>
+  <!-- Volume_Config -->
+  <screen name="Volume_Config" position="0,0" size="1920,1080" title="Volume Config" flags="wfNoBorder" backgroundColor="transparent">
+    <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,360" scrollbarMode="showOnDemand" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="infotext" position="105,510" size="105,378" font="Regular2;33" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
+    <constant-widget name="Title-big"/>
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="SourceRedGreenYellowBlue"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="Volume_Config" position="105,0" />-->
+  </screen>
+  <!-- Change_volume -->
+  <screen name="Change_volume" position="0,0" size="1920,1080" title="Change Volume offset" flags="wfNoBorder" backgroundColor="transparent">
+    <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" scrollbarMode="showOnDemand" transparent="1" />
+    <constant-widget name="Title-big"/>
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="SourceRedGreenYellowBlue"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="Change_volume" position="105,0" />-->
   </screen>
   <!-- CronManager -->
   <screen flags="wfNoBorder" name="CronManager" position="0,0" size="1920,1080" title="CronManager" backgroundColor="Kravenbg3">
@@ -1105,6 +1126,20 @@
     <constant-widget name="SourceRedGreenYellowBlue"/>
     <constant-widget name="Exit"/>
     <!--<text="CronManager" position="105,0" />-->
+  </screen>
+  <!-- ScriptRunner -->
+  <screen name="ScriptRunner" position="0,0" size="1920,1080" title="Script Runner" flags="wfNoBorder" backgroundColor="transparent">
+    <widget backgroundColor="Kravenbg3" name="lab1" position="105,120" size="1062,42" font="Regular2;33" alphatest="blend" transparent="1" foregroundColor="KravenFont2" />
+    <widget backgroundColor="Kravenbg3" name="list" position="105,210" size="1062,555" scrollbarMode="showOnDemand" alphatest="blend" transparent="1" />
+	  <applet type="onLayoutFinish">
+			self["list"].instance.setItemHeight(37)
+	  </applet>
+    <constant-widget name="Title-big"/>
+    <constant-widget name="Colorbuttons"/>
+	<!-- Logo -->
+    <constant-widget name="NameRedGreenYellowBlue"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="ScriptRunner" position="105,0" />-->
   </screen>
     <!-- MerlinMusicPlayerFileList -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MerlinMusicPlayerFileList" position="0,0" size="1920,1065" title="Merlin Music Player">
