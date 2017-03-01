@@ -410,7 +410,7 @@
       <convert type="KravenFHDEventName">ExtendedDescription</convert>
     </widget>
     <widget name="timeline_text" position="37,390" selectionDisabled="1" size="1845,37" transparent="1" />
-    <widget EntryBackgroundColor="Kravenbg" EntryBackgroundColorSelected="KravenFont1" EntryBorderColor="KravenFont1" itemHeight="90" name="list" position="37,430" size="1845,517" transparent="1" />
+    <widget EntryBackgroundColor="Kravenbg" EntryBackgroundColorSelected="KravenSelection" EntryBorderColor="KravenBorder" itemHeight="90" name="list" position="37,430" size="1845,517" transparent="1" />
     <widget name="timeline_now" position="120,426" zPosition="2" size="19,532" pixmap="KravenFHD/epg/timeline-now.png" alphatest="blend" />
     <eLabel position="151,178" size="1485,1" backgroundColor="KravenFont1" />
     <constant-widget name="Background" />
