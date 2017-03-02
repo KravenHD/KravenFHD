@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenFHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2017-02-25 15:13+0100\n"
+"PO-Revision-Date: 2017-03-02 23:57+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -2121,12 +2121,48 @@ msgid "Choose the border color for GraphMultiEPG."
 msgstr "Wählen Sie die Rahmenfarbe für \"GraphMultiEPG\"."
 
 #: KravenFHD.py
-msgid "Running-Background"
-msgstr "laufender Hintergrund"
+msgid "selected Event Background"
+msgstr "Farbe der ausgewählten Sendung"
 
 #: KravenFHD.py
-msgid "Choose the background color of running events for GraphMultiEPG."
-msgstr "Wählen Sie die Hintergrundfarbe der laufenden Sendung für \"GraphMultiEPG\"."
+msgid "Choose the background color of selected events for GraphMultiEPG."
+msgstr "Wählen Sie die Hintergrundfarbe der ausgewählten Sendung für \"GraphMultiEPG\"."
+
+#: KravenFHD.py
+msgid "GRAPHICALEPG _____________________________________________________________"
+msgstr "GRAFISCHES EPG ___________________________________________________________"
+
+#: KravenFHD.py
+msgid "This sections offers all settings for GraphicalEPG."
+msgstr "In diesem Abschnitt finden Sie alle Einstellungen zum Grafischen EPG."
+
+#: KravenFHD.py
+msgid "GraphicalEPG-Style"
+msgstr "Graphisches EPG Stil"
+
+#: KravenFHD.py
+msgid "Choose from different styles for GraphicalEPG."
+msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für \"Graphisches EPG\"."
+
+#: KravenFHD.py
+msgid "Choose the border color for GraphicalEPG."
+msgstr "Wählen Sie die Rahmenfarbe für \"Graphisches EPG\"."
+
+#: KravenFHD.py
+msgid "Choose the background color of selected events for GraphicalEPG."
+msgstr "Wählen Sie die Hintergrundfarbe der ausgewählten Sendung für \"Graphisches EPG\"."
+
+#: KravenFHD.py
+msgid "Text with MiniTV"
+msgstr "Text mit MiniTV"
+
+#: KravenFHD.py
+msgid "graphical"
+msgstr "grafisch"
+
+#: KravenFHD.py
+msgid "graphical with MiniTV"
+msgstr "grafisch mit MiniTV"
 
 #: KravenFHD.py
 msgid "This sections offers all settings for VerticalEPG."

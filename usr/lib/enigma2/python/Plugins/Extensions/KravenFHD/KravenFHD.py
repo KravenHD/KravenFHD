@@ -577,6 +577,13 @@ config.plugins.KravenFHD.GraphMultiEPG = ConfigSelection(default="graphmultiepg-
 				("graphmultiepg", _("no MiniTV"))
 				])
 
+config.plugins.KravenFHD.GraphicalEPG = ConfigSelection(default="text-minitv", choices = [
+				("text", _("Text")),
+				("text-minitv", _("Text with MiniTV")),
+				("graphical", _("graphical")),
+				("graphical-minitv", _("graphical with MiniTV"))
+				])
+
 config.plugins.KravenFHD.GMErunningbg = ConfigSelection(default="00389416", choices = [
 				("00389416", _("green")),
 				("000064c7", _("blue"))
@@ -1002,6 +1009,10 @@ config.plugins.KravenFHD.CategoryGraphMultiEPG = ConfigSelection(default="catego
 				("category", _(" "))
 				])
 
+config.plugins.KravenFHD.CategoryGraphicalEPG = ConfigSelection(default="category", choices = [
+				("category", _(" "))
+				])
+
 config.plugins.KravenFHD.CategoryVerticalEPG = ConfigSelection(default="category", choices = [
 				("category", _(" "))
 				])
@@ -1080,7 +1091,7 @@ class KravenFHD(ConfigListScreen, Screen):
     <convert type="ClockToText">Default</convert>
   </widget>
   <eLabel position="830,80" size="402,46" text="KravenFHD" font="Regular; 36" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00f0a30a" />
-  <eLabel position="845,126" size="372,40" text="Version: 3.2.17" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
+  <eLabel position="845,126" size="372,40" text="Version: 3.2.18" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
   <widget name="helperimage" position="801,172" size="460,259" zPosition="1" backgroundColor="#00000000" />
   <widget source="Canvas" render="Canvas" position="801,172" size="460,259" zPosition="-1" backgroundColor="#00000000" />
   <widget source="help" render="Label" position="847,440" size="368,196" font="Regular;20" backgroundColor="#00000000" foregroundColor="#00f0a30a" halign="center" valign="top" transparent="1" />
@@ -1108,7 +1119,7 @@ class KravenFHD(ConfigListScreen, Screen):
     <convert type="ClockToText">Default</convert>
   </widget>
   <eLabel position="1245,120" size="603,69" text="KravenFHD" font="Regular;54" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00f0a30a" />
-  <eLabel position="1267,208" size="558,60" text="Version: 3.2.17" font="Regular; 45" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
+  <eLabel position="1267,208" size="558,60" text="Version: 3.2.18" font="Regular; 45" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
   <widget name="helperimage" position="1316,340" size="460,259" zPosition="1" backgroundColor="#00000000" />
   <widget source="Canvas" render="Canvas" position="1316,340" size="460,259" zPosition="-1" backgroundColor="#00000000" />
   <widget source="help" render="Label" position="1270,660" size="552,294" font="Regular;30" backgroundColor="#00000000" foregroundColor="#00f0a30a" halign="center" valign="top" transparent="1" />
@@ -1572,10 +1583,19 @@ class KravenFHD(ConfigListScreen, Screen):
 		
 		# page 8 (category 2)
 		emptyLines=0
-		list.append(getConfigListEntry(_("GRAPHMULTIEPG ___________________________________________________________"), config.plugins.KravenFHD.CategoryGraphMultiEPG, _("This sections offers all settings for GraphMultiEPG.")))
-		list.append(getConfigListEntry(_("GraphMultiEPG-Style"), config.plugins.KravenFHD.GraphMultiEPG, _("Choose from different styles for GraphMultiEPG.")))
-		list.append(getConfigListEntry(_("Border Color"), config.plugins.KravenFHD.GMEBorder, _("Choose the border color for GraphMultiEPG.")))
-		list.append(getConfigListEntry(_("Running-Background"), config.plugins.KravenFHD.GMErunningbg, _("Choose the background color of running events for GraphMultiEPG.")))
+		if self.gete2distroversion() == "VTi":
+			list.append(getConfigListEntry(_("GRAPHMULTIEPG ___________________________________________________________"), config.plugins.KravenFHD.CategoryGraphMultiEPG, _("This sections offers all settings for GraphMultiEPG.")))
+			list.append(getConfigListEntry(_("GraphMultiEPG-Style"), config.plugins.KravenFHD.GraphMultiEPG, _("Choose from different styles for GraphMultiEPG.")))
+			list.append(getConfigListEntry(_("Border Color"), config.plugins.KravenFHD.GMEBorder, _("Choose the border color for GraphMultiEPG.")))
+			list.append(getConfigListEntry(_("selected Event Background"), config.plugins.KravenFHD.GMErunningbg, _("Choose the background color of selected events for GraphMultiEPG.")))
+		elif self.gete2distroversion() == "openatv":
+			list.append(getConfigListEntry(_("GRAPHICALEPG _____________________________________________________________"), config.plugins.KravenFHD.CategoryGraphicalEPG, _("This sections offers all settings for GraphicalEPG.")))
+			list.append(getConfigListEntry(_("GraphicalEPG-Style"), config.plugins.KravenFHD.GraphicalEPG, _("Choose from different styles for GraphicalEPG.")))
+			if config.plugins.KravenFHD.GraphicalEPG.value in ("text","text-minitv"):
+				list.append(getConfigListEntry(_("Border Color"), config.plugins.KravenFHD.GMEBorder, _("Choose the border color for GraphicalEPG.")))
+				list.append(getConfigListEntry(_("selected Event Background"), config.plugins.KravenFHD.GMErunningbg, _("Choose the background color of selected events for GraphicalEPG.")))
+			else:
+				emptyLines+=2
 		for i in range(emptyLines+1):
 			list.append(getConfigListEntry(_(" "), ))
 		
@@ -1744,12 +1764,12 @@ class KravenFHD(ConfigListScreen, Screen):
 			self["key_blue"].setText(_("EPGSelection") + " >>")
 		if (126 <= position <= 129): # epgselection
 			self["key_yellow"].setText("<< " + _("NumberZap"))
-			self["key_blue"].setText(_("GraphMultiEPG") + " >>")
-		if (131 <= position <= 134): # graphmultiepg
+			self["key_blue"].setText(_("GraphEPG") + " >>")
+		if (131 <= position <= 134): # graphepg
 			self["key_yellow"].setText("<< " + _("EPGSelection"))
 			self["key_blue"].setText(_("VerticalEPG") + " >>")
 		if (136 <= position <= 138): # verticalepg
-			self["key_yellow"].setText("<< " + _("GraphMultiEPG"))
+			self["key_yellow"].setText("<< " + _("GraphEPG"))
 			self["key_blue"].setText(_("TimerEditScreen") + " >>")
 		if (140 <= position <= 142): # timereditscreen
 			self["key_yellow"].setText("<< " + _("VerticalEPG"))
@@ -2277,7 +2297,7 @@ class KravenFHD(ConfigListScreen, Screen):
 			self["config"].instance.moveSelectionTo(108)
 		if (126 <= position <= 129): # epgselection
 			self["config"].instance.moveSelectionTo(121)
-		if (131 <= position <= 134): # graphmultiepg
+		if (131 <= position <= 134): # graphepg
 			self["config"].instance.moveSelectionTo(126)
 		if (136 <= position <= 138): # verticalepg
 			self["config"].instance.moveSelectionTo(131)
@@ -2335,7 +2355,7 @@ class KravenFHD(ConfigListScreen, Screen):
 			self["config"].instance.moveSelectionTo(126)
 		if (126 <= position <= 129): # epgselection
 			self["config"].instance.moveSelectionTo(131)
-		if (131 <= position <= 134): # graphmultiepg
+		if (131 <= position <= 134): # graphepg
 			self["config"].instance.moveSelectionTo(136)
 		if (136 <= position <= 138): # verticalepg
 			self["config"].instance.moveSelectionTo(140)
@@ -2916,7 +2936,7 @@ class KravenFHD(ConfigListScreen, Screen):
 		### ChannelSelection 'not available' Font
 		self.skinSearchAndReplace.append(['name="KravenNotAvailable" value="#00FFEA04', 'name="KravenNotAvailable" value="#' + config.plugins.KravenFHD.ChannelSelectionServiceNA.value])
 
-		### GraphMultiEPG running background color
+		### GraphEPG selected background color
 		self.skinSearchAndReplace.append(['name="KravenGMErunningbg" value="#00389416', 'name="KravenGMErunningbg" value="#' + config.plugins.KravenFHD.GMErunningbg.value])
 
 		### Debug-Names
@@ -3052,7 +3072,7 @@ class KravenFHD(ConfigListScreen, Screen):
 		if not config.plugins.KravenFHD.NumberZapExt.value == "none":
 			self.skinSearchAndReplace.append(['name="KravenNZBorder" value="#00ffffff', 'name="KravenNZBorder" value="#' + config.plugins.KravenFHD.NZBorder.value])
 
-		### GraphMultiEPG Border
+		### GraphEPG Border
 		self.skinSearchAndReplace.append(['name="KravenGMEBorder" value="#00ffffff', 'name="KravenGMEBorder" value="#' + config.plugins.KravenFHD.GMEBorder.value])
 
 		### VerticalEPG Border
@@ -4237,8 +4257,30 @@ class KravenFHD(ConfigListScreen, Screen):
 		### CoolTVGuide
 		self.appendSkinFile(self.daten + config.plugins.KravenFHD.CoolTVGuide.value + ".xml")
 
-		### GraphMultiEPG
-		self.appendSkinFile(self.daten + config.plugins.KravenFHD.GraphMultiEPG.value + ".xml")
+		### GraphEPG
+		if self.gete2distroversion() == "VTi":
+			self.appendSkinFile(self.daten + config.plugins.KravenFHD.GraphMultiEPG.value + ".xml")
+		elif self.gete2distroversion() == "openatv":
+			if config.plugins.KravenFHD.GraphicalEPG.value == "text":
+				config.epgselection.graph_type_mode.value = False
+				config.epgselection.graph_type_mode.save()
+				config.epgselection.graph_pig.value = False
+				config.epgselection.graph_pig.save()
+			elif config.plugins.KravenFHD.GraphicalEPG.value == "text-minitv":
+				config.epgselection.graph_type_mode.value = False
+				config.epgselection.graph_type_mode.save()
+				config.epgselection.graph_pig.value = "true"
+				config.epgselection.graph_pig.save()
+			elif config.plugins.KravenFHD.GraphicalEPG.value == "graphical":
+				config.epgselection.graph_type_mode.value = "graphics"
+				config.epgselection.graph_type_mode.save()
+				config.epgselection.graph_pig.value = False
+				config.epgselection.graph_pig.save()
+			elif config.plugins.KravenFHD.GraphicalEPG.value == "graphical-minitv":
+				config.epgselection.graph_type_mode.value = "graphics"
+				config.epgselection.graph_type_mode.save()
+				config.epgselection.graph_pig.value = "true"
+				config.epgselection.graph_pig.save()
 
 		### VerticalEPG
 		if self.gete2distroversion() == "VTi":
