@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenFHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2017-03-02 23:57+0100\n"
+"PO-Revision-Date: 2017-03-04 15:34+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -2121,8 +2121,12 @@ msgid "Choose the border color for GraphMultiEPG."
 msgstr "Wählen Sie die Rahmenfarbe für \"GraphMultiEPG\"."
 
 #: KravenFHD.py
-msgid "selected Event Background"
+msgid "Selected Event Background"
 msgstr "Farbe der ausgewählten Sendung"
+
+#: KravenFHD.py
+msgid "Event Description Fontsize"
+msgstr "Sendungsbeschreibung Schriftgrösse"
 
 #: KravenFHD.py
 msgid "Choose the background color of selected events for GraphMultiEPG."
@@ -2151,6 +2155,10 @@ msgstr "Wählen Sie die Rahmenfarbe für \"Graphisches EPG\"."
 #: KravenFHD.py
 msgid "Choose the background color of selected events for GraphicalEPG."
 msgstr "Wählen Sie die Hintergrundfarbe der ausgewählten Sendung für \"Graphisches EPG\"."
+
+#: KravenFHD.py
+msgid "global selection background"
+msgstr "globaler Auswahlbalken-Hintergrund"
 
 #: KravenFHD.py
 msgid "Text with MiniTV"

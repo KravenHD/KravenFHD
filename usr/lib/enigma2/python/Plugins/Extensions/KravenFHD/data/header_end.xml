@@ -408,9 +408,6 @@
 	    <convert type="EventTime">StartTime</convert>
 	    <convert type="ClockToText">Format:%a %d.%b</convert>
 	  </widget>
-      <widget backgroundColor="Kravenbg" font="Regular;33" position="105,228" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1729,210" source="Event" valign="top" zPosition="-8" foregroundColor="KravenFont1" transparent="1">
-        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
-      </widget>
 	  <widget name="timeline_text" position="3,457" size="1912,37" selectionDisabled="1" transparent="1" zPosition="5" backgroundColor="Kravenbg" foregroundColor="KravenFont1" />
 	  <widget name="JumpInterval" position="1559,450" size="300,38" font="Regular;30" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1" halign="right" />
       <widget name="timeline0" backgroundColor="orange" position="0,498" size="1,450" zPosition="1" />
@@ -448,9 +445,6 @@
 	    <convert type="EventTime">StartTime</convert>
 	    <convert type="ClockToText">Format:%a %d.%b</convert>
 	  </widget>
-      <widget backgroundColor="Kravenbg2" font="Regular;33" position="105,228" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1140,210" source="Event" valign="top" zPosition="-8" foregroundColor="KravenFont1" transparent="1">
-        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
-      </widget>
       <widget source="session.VideoPicture" render="Pig" position="1305,120" size="552,310" zPosition="3" backgroundColor="transparent" />
       <eLabel backgroundColor="#00000000" position="1305,120" size="552,310" transparent="0" zPosition="2" />
       <eLabel backgroundColor="KravenBorder2" position="1305,120" size="552,4" transparent="0" zPosition="4" />
@@ -499,9 +493,6 @@
 	    <convert type="EventTime">StartTime</convert>
 	    <convert type="ClockToText">Format:%a %d.%b</convert>
 	  </widget>
-      <widget backgroundColor="Kravenbg2" font="Regular;33" position="717,228" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1140,210" source="Event" valign="top" zPosition="-8" foregroundColor="KravenFont1" transparent="1">
-        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
-      </widget>
       <widget source="session.VideoPicture" render="Pig" position="105,120" size="552,310" zPosition="3" backgroundColor="transparent" />
       <eLabel backgroundColor="#00000000" position="105,120" size="552,310" transparent="0" zPosition="2" />
       <eLabel backgroundColor="KravenBorder2" position="105,120" size="552,4" transparent="0" zPosition="4" />
@@ -1896,6 +1887,42 @@
 	  </widget>
 	  <widget backgroundColor="Kravenbg2" foregroundColor="KravenPrime" font="Regular;32" source="ServiceEvent" render="Label" position="105,592" size="1752,41" transparent="1" noWrap="1">
 	    <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="GE33">
+      <widget backgroundColor="Kravenbg" font="Regular;33" position="105,228" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1729,210" source="Event" valign="top" zPosition="-8" foregroundColor="KravenFont1" transparent="1">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="GE36">
+      <widget backgroundColor="Kravenbg" font="Regular;36" position="105,230" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1729,184" source="Event" valign="top" zPosition="-8" foregroundColor="KravenFont1" transparent="1">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="GEMTR33">
+      <widget backgroundColor="Kravenbg2" font="Regular;33" position="105,228" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1140,210" source="Event" valign="top" zPosition="-8" foregroundColor="KravenFont1" transparent="1">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="GEMTR36">
+      <widget backgroundColor="Kravenbg2" font="Regular;36" position="105,230" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1140,184" source="Event" valign="top" zPosition="-8" foregroundColor="KravenFont1" transparent="1">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="GEMTL33">
+      <widget backgroundColor="Kravenbg2" font="Regular;33" position="717,228" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1140,210" source="Event" valign="top" zPosition="-8" foregroundColor="KravenFont1" transparent="1">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="GEMTL36">
+      <widget backgroundColor="Kravenbg2" font="Regular;36" position="717,230" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1140,184" source="Event" valign="top" zPosition="-8" foregroundColor="KravenFont1" transparent="1">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
 	</constant-widget>
   </constant-widgets>

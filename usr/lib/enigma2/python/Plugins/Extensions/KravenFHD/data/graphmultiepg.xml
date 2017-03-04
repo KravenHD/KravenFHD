@@ -1,6 +1,7 @@
   <!-- GraphMultiEPG -->
   <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="GraphMultiEPG" position="0,0" size="1920,1080" title="Electronic Program Guide">
 	<widget name="list" position="105,498" size="1752,450" valign="top" FontSize1="30" FontSize2="33" itemHeight="90" piconWidth="151" ServiceNameForegroundColor="KravenFont1" ServiceNameBackgroundColor="Kravenbg" EntryBorderColor="KravenGMEBorder" EntryBackgroundColor="Kravenbg" EntryBackgroundColorSelected="KravenSelection" EntryNowForegroundColorSelected="KravenSelFont" EntryNowBackgroundColor="KravenGMErunningbg" EntryNowBackgroundColorSelected="KravenSelection" EntryRecColor="red" EntryPreColor="yellow" />
+    <constant-widget name="GE33"/>
     <constant-widget name="GraphMultiEPG"/>
     <constant-widget name="Colorbuttons"/>
     <constant-widget name="Background"/>
@@ -10,6 +11,7 @@
   <!-- GraphMultiEPG1 -->
   <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="GraphMultiEPG1" position="0,0" size="1920,1080" title="Electronic Program Guide">
 	<widget name="list" position="105,498" size="1752,450" valign="top" FontSize1="30" FontSize2="30" itemHeight="75" piconWidth="127" ServiceNameForegroundColor="KravenFont1" ServiceNameBackgroundColor="Kravenbg" EntryBorderColor="KravenGMEBorder" EntryBackgroundColor="Kravenbg" EntryBackgroundColorSelected="KravenSelection" EntryNowForegroundColorSelected="KravenSelFont" EntryNowBackgroundColor="KravenGMErunningbg" EntryNowBackgroundColorSelected="KravenSelection" EntryRecColor="red" EntryPreColor="yellow" />
+    <constant-widget name="GE33"/>
     <constant-widget name="GraphMultiEPG"/>
     <constant-widget name="Colorbuttons"/>
     <constant-widget name="Background"/>
@@ -19,6 +21,7 @@
   <!-- GraphMultiEPG2 -->
   <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="GraphMultiEPG2" position="0,0" size="1920,1080" title="Electronic Program Guide">
 	<widget name="list" position="105,498" size="1752,450" valign="top" FontSize1="30" FontSize2="33" itemHeight="45" piconWidth="75" ServiceNameForegroundColor="KravenFont1" ServiceNameBackgroundColor="Kravenbg" EntryBorderColor="KravenGMEBorder" EntryBackgroundColor="Kravenbg" EntryBackgroundColorSelected="KravenSelection" EntryNowForegroundColorSelected="KravenSelFont" EntryNowBackgroundColor="KravenGMErunningbg" EntryNowBackgroundColorSelected="KravenSelection" EntryRecColor="red" EntryPreColor="yellow" />
+    <constant-widget name="GE33"/>
     <constant-widget name="GraphMultiEPG"/>
     <constant-widget name="Colorbuttons"/>
     <constant-widget name="Background"/>
