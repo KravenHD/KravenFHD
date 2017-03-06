@@ -1745,6 +1745,12 @@
 	  <!-- MediaPortal playercolor */-->
 	</constant-widget>
 	
+	<constant-widget name="progress-mpplayer">
+      <widget borderWidth="0" position="315,1002" render="Progress" size="1287,7" source="session.CurrentService" transparent="1" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress858.png">
+        <convert type="MPServicePosition">Position</convert>
+      </widget>
+	</constant-widget>
+	
 	<constant-widget name="timeshift-bg">
 	  <eLabel backgroundColor="KravenIBbg" position="0,0" size="1177,93" zPosition="-9" />
 	</constant-widget>

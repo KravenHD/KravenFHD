@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenFHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2017-03-04 15:34+0100\n"
+"PO-Revision-Date: 2017-03-05 12:55+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -2295,3 +2295,11 @@ msgstr "Laufschrift"
 #: KravenFHD.py
 msgid "typewriter"
 msgstr "Schreibmaschine"
+
+#: KravenFHD.py
+msgid "Choose whether scrollbars should be shown."
+msgstr "Wählen Sie, ob Scrollbalken angezeigt werden sollen."
+
+#: KravenFHD.py
+msgid "not available for openATV"
+msgstr "nicht verfügbar für openATV"

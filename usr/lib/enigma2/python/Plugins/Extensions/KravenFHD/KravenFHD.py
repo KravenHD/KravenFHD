@@ -827,11 +827,6 @@ config.plugins.KravenFHD.record3 = ConfigSelection(default="no-record-tuner", ch
 				("no-record-tuner", _("no record tuner"))
 				])
 
-config.plugins.KravenFHD.record4 = ConfigSelection(default="record-shine", choices = [
-				("record-blink", _("record blink")),
-				("record-shine", _("record shine"))
-				])
-
 config.plugins.KravenFHD.IBColor = ConfigSelection(default="all-screens", choices = [
 				("all-screens", _("in all Screens")),
 				("only-infobar", _("only Infobar, SecondInfobar & Players"))
@@ -1097,7 +1092,7 @@ class KravenFHD(ConfigListScreen, Screen):
     <convert type="ClockToText">Default</convert>
   </widget>
   <eLabel position="830,80" size="402,46" text="KravenFHD" font="Regular; 36" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00f0a30a" />
-  <eLabel position="845,126" size="372,40" text="Version: 3.2.20" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
+  <eLabel position="845,126" size="372,40" text="Version: 3.2.22" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
   <widget name="helperimage" position="801,172" size="460,259" zPosition="1" backgroundColor="#00000000" />
   <widget source="Canvas" render="Canvas" position="801,172" size="460,259" zPosition="-1" backgroundColor="#00000000" />
   <widget source="help" render="Label" position="847,440" size="368,196" font="Regular;20" backgroundColor="#00000000" foregroundColor="#00f0a30a" halign="center" valign="top" transparent="1" />
@@ -1125,7 +1120,7 @@ class KravenFHD(ConfigListScreen, Screen):
     <convert type="ClockToText">Default</convert>
   </widget>
   <eLabel position="1245,120" size="603,69" text="KravenFHD" font="Regular;54" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00f0a30a" />
-  <eLabel position="1267,208" size="558,60" text="Version: 3.2.20" font="Regular; 45" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
+  <eLabel position="1267,208" size="558,60" text="Version: 3.2.22" font="Regular; 45" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
   <widget name="helperimage" position="1316,340" size="460,259" zPosition="1" backgroundColor="#00000000" />
   <widget source="Canvas" render="Canvas" position="1316,340" size="460,259" zPosition="-1" backgroundColor="#00000000" />
   <widget source="help" render="Label" position="1270,660" size="552,294" font="Regular;30" backgroundColor="#00000000" foregroundColor="#00f0a30a" halign="center" valign="top" transparent="1" />
@@ -1321,29 +1316,17 @@ class KravenFHD(ConfigListScreen, Screen):
 			list.append(getConfigListEntry(_("Tuner number"), config.plugins.KravenFHD.tuner, _("Choose from different options to display tuner.")))
 		else:
 			emptyLines+=1
-		try:
-			f=open("/proc/stb/info/vumodel","r")
-			vumodel=f.read().strip()
-			f.close()
-		except IOError:
-			pass
-		if vumodel.lower() == "ultimo":
-			if not config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x3","infobar-style-z2","infobar-style-zz3"):
-				list.append(getConfigListEntry(_("Record-State"), config.plugins.KravenFHD.record4, _("Choose from different options to display recording state.")))
-			else:
-				emptyLines+=1
-		else:
-			if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-zz1","infobar-style-zz4","infobar-style-zzz1"):
+		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-zz1","infobar-style-zz4","infobar-style-zzz1"):
+			list.append(getConfigListEntry(_("Record-State"), config.plugins.KravenFHD.record2, _("Choose from different options to display recording state.")))
+		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz2":
+			list.append(getConfigListEntry(_("Record-State"), config.plugins.KravenFHD.record, _("Choose from different options to display recording state.")))
+		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
+			if config.plugins.KravenFHD.IBtop.value == "infobar-x2-z1_top2":
 				list.append(getConfigListEntry(_("Record-State"), config.plugins.KravenFHD.record2, _("Choose from different options to display recording state.")))
-			elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz2":
-				list.append(getConfigListEntry(_("Record-State"), config.plugins.KravenFHD.record, _("Choose from different options to display recording state.")))
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
-				if config.plugins.KravenFHD.IBtop.value == "infobar-x2-z1_top2":
-					list.append(getConfigListEntry(_("Record-State"), config.plugins.KravenFHD.record2, _("Choose from different options to display recording state.")))
-				else:
-					list.append(getConfigListEntry(_("Record-State"), config.plugins.KravenFHD.record3, _("Choose from different options to display recording state.")))
 			else:
-				emptyLines+=1
+				list.append(getConfigListEntry(_("Record-State"), config.plugins.KravenFHD.record3, _("Choose from different options to display recording state.")))
+		else:
+			emptyLines+=1
 		if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
 			if not config.plugins.KravenFHD.tuner2.value == "10-tuner":
 				if self.gete2distroversion() == "VTi":
@@ -1594,14 +1577,14 @@ class KravenFHD(ConfigListScreen, Screen):
 			list.append(getConfigListEntry(_("GraphMultiEPG-Style"), config.plugins.KravenFHD.GraphMultiEPG, _("Choose from different styles for GraphMultiEPG.")))
 			list.append(getConfigListEntry(_("Event Description Fontsize"), config.plugins.KravenFHD.GMEDescriptionSize, _("Choose the font size of event description.")))
 			list.append(getConfigListEntry(_("Border Color"), config.plugins.KravenFHD.GMEBorder, _("Choose the border color for GraphMultiEPG.")))
-			list.append(getConfigListEntry(_("selected Event Background"), config.plugins.KravenFHD.GMErunningbg, _("Choose the background color of selected events for GraphMultiEPG.")))
+			list.append(getConfigListEntry(_("Selected Event Background"), config.plugins.KravenFHD.GMErunningbg, _("Choose the background color of selected events for GraphMultiEPG.")))
 		elif self.gete2distroversion() == "openatv":
 			list.append(getConfigListEntry(_("GRAPHICALEPG _____________________________________________________________"), config.plugins.KravenFHD.CategoryGraphicalEPG, _("This sections offers all settings for GraphicalEPG.")))
 			list.append(getConfigListEntry(_("GraphicalEPG-Style"), config.plugins.KravenFHD.GraphicalEPG, _("Choose from different styles for GraphicalEPG.")))
 			list.append(getConfigListEntry(_("Event Description Fontsize"), config.plugins.KravenFHD.GMEDescriptionSize, _("Choose the font size of event description.")))
 			if config.plugins.KravenFHD.GraphicalEPG.value in ("text","text-minitv"):
 				list.append(getConfigListEntry(_("Border Color"), config.plugins.KravenFHD.GMEBorder, _("Choose the border color for GraphicalEPG.")))
-				list.append(getConfigListEntry(_("selected Event Background"), config.plugins.KravenFHD.GMErunningbg, _("Choose the background color of selected events for GraphicalEPG.")))
+				list.append(getConfigListEntry(_("Selected Event Background"), config.plugins.KravenFHD.GMErunningbg, _("Choose the background color of selected events for GraphicalEPG.")))
 			else:
 				emptyLines+=2
 		for i in range(emptyLines+1):
@@ -2207,6 +2190,10 @@ class KravenFHD(ConfigListScreen, Screen):
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/images/infobar-style-x3.jpg"
 			elif returnValue in ("0C","18","32","58","7E"):
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/images/transparent.jpg"
+			elif returnValue == "showOnDemand":
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/images/scrollbarWidth=15.jpg"
+			elif returnValue == "showNever":
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/images/scrollbarWidth=0.jpg"
 			elif fileExists("/usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/images/" + returnValue + ".jpg"):
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/images/" + returnValue + ".jpg"
 			if fileExists(path):
@@ -3453,20 +3440,40 @@ class KravenFHD(ConfigListScreen, Screen):
 					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert  type="KravenFHDFrontendInfo">SNRdB'])
 
 		### Record State
-		try:
-			f=open("/proc/stb/info/vumodel","r")
-			vumodel=f.read().strip()
-			f.close()
-		except IOError:
-			pass
-		if vumodel.lower() == "ultimo":
-			if not config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x3","infobar-style-z2","infobar-style-zz3"):
-				if config.plugins.KravenFHD.record4.value == "record-blink":
-					self.skinSearchAndReplace.append(['>recordblink</convert>', '>Blink</convert>'])
-				else:
-					self.skinSearchAndReplace.append(['>recordblink</convert>', ' />'])
-		else:
-			if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-zz1","infobar-style-zz4","infobar-style-zzz1"):
+		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-zz1","infobar-style-zz4","infobar-style-zzz1"):
+			if config.plugins.KravenFHD.record2.value == "record-blink+tuner-shine":
+				self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
+				self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
+				self.skinSearchAndReplace.append(['>recordblink</convert>', '>Blink</convert>'])
+				self.skinSearchAndReplace.append(['>tunerblink</convert>', ' />'])
+				self.skinSearchAndReplace.append(['source="session.FrontendInfo" zPosition="3"', 'source="session.FrontendInfo" zPosition="5"'])
+			elif config.plugins.KravenFHD.record2.value == "record-shine+tuner-blink":
+				self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
+				self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
+				self.skinSearchAndReplace.append(['>recordblink</convert>', ' />'])
+				self.skinSearchAndReplace.append(['>tunerblink</convert>', '>Blink</convert>'])
+			elif config.plugins.KravenFHD.record2.value == "record+tuner-blink":
+				self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
+				self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
+				self.skinSearchAndReplace.append(['>recordblink</convert>', '>Blink</convert>'])
+				self.skinSearchAndReplace.append(['>tunerblink</convert>', '>Blink</convert>'])
+			elif config.plugins.KravenFHD.record2.value == "record+tuner-shine":
+				self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
+				self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
+				self.skinSearchAndReplace.append(['>recordblink</convert>', ' />'])
+				self.skinSearchAndReplace.append(['>tunerblink</convert>', ' />'])
+				self.skinSearchAndReplace.append(['source="session.FrontendInfo" zPosition="3"', 'source="session.FrontendInfo" zPosition="5"'])
+			elif config.plugins.KravenFHD.record2.value == "record-blink+no-record-tuner":
+				self.skinSearchAndReplace.append(['>recordblink</convert>', '>Blink</convert>'])
+			else:
+				self.skinSearchAndReplace.append(['>recordblink</convert>', ' />'])
+		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz2":
+			if config.plugins.KravenFHD.record.value == "record-blink":
+				self.skinSearchAndReplace.append(['>recordblink</convert>', '>Blink</convert>'])
+			else:
+				self.skinSearchAndReplace.append(['>recordblink</convert>', ' />'])
+		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
+			if config.plugins.KravenFHD.IBtop.value == "infobar-x2-z1_top2":
 				if config.plugins.KravenFHD.record2.value == "record-blink+tuner-shine":
 					self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
 					self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
@@ -3493,49 +3500,16 @@ class KravenFHD(ConfigListScreen, Screen):
 					self.skinSearchAndReplace.append(['>recordblink</convert>', '>Blink</convert>'])
 				else:
 					self.skinSearchAndReplace.append(['>recordblink</convert>', ' />'])
-			elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz2":
-				if config.plugins.KravenFHD.record.value == "record-blink":
-					self.skinSearchAndReplace.append(['>recordblink</convert>', '>Blink</convert>'])
-				else:
-					self.skinSearchAndReplace.append(['>recordblink</convert>', ' />'])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
-				if config.plugins.KravenFHD.IBtop.value == "infobar-x2-z1_top2":
-					if config.plugins.KravenFHD.record2.value == "record-blink+tuner-shine":
-						self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
-						self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
-						self.skinSearchAndReplace.append(['>recordblink</convert>', '>Blink</convert>'])
-						self.skinSearchAndReplace.append(['>tunerblink</convert>', ' />'])
-						self.skinSearchAndReplace.append(['source="session.FrontendInfo" zPosition="3"', 'source="session.FrontendInfo" zPosition="5"'])
-					elif config.plugins.KravenFHD.record2.value == "record-shine+tuner-blink":
-						self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
-						self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
-						self.skinSearchAndReplace.append(['>recordblink</convert>', ' />'])
-						self.skinSearchAndReplace.append(['>tunerblink</convert>', '>Blink</convert>'])
-					elif config.plugins.KravenFHD.record2.value == "record+tuner-blink":
-						self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
-						self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
-						self.skinSearchAndReplace.append(['>recordblink</convert>', '>Blink</convert>'])
-						self.skinSearchAndReplace.append(['>tunerblink</convert>', '>Blink</convert>'])
-					elif config.plugins.KravenFHD.record2.value == "record+tuner-shine":
-						self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
-						self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
-						self.skinSearchAndReplace.append(['>recordblink</convert>', ' />'])
-						self.skinSearchAndReplace.append(['>tunerblink</convert>', ' />'])
-						self.skinSearchAndReplace.append(['source="session.FrontendInfo" zPosition="3"', 'source="session.FrontendInfo" zPosition="5"'])
-					elif config.plugins.KravenFHD.record2.value == "record-blink+no-record-tuner":
-						self.skinSearchAndReplace.append(['>recordblink</convert>', '>Blink</convert>'])
-					else:
-						self.skinSearchAndReplace.append(['>recordblink</convert>', ' />'])
-				else:
-					if config.plugins.KravenFHD.record3.value == "tuner-blink":
-						self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
-						self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
-						self.skinSearchAndReplace.append(['>tunerblink</convert>', '>Blink</convert>'])
-					elif config.plugins.KravenFHD.record3.value == "tuner-shine":
-						self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
-						self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
-						self.skinSearchAndReplace.append(['>tunerblink</convert>', ' />'])
-						self.skinSearchAndReplace.append(['source="session.FrontendInfo" zPosition="3"', 'source="session.FrontendInfo" zPosition="5"'])
+			else:
+				if config.plugins.KravenFHD.record3.value == "tuner-blink":
+					self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
+					self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
+					self.skinSearchAndReplace.append(['>tunerblink</convert>', '>Blink</convert>'])
+				elif config.plugins.KravenFHD.record3.value == "tuner-shine":
+					self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
+					self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
+					self.skinSearchAndReplace.append(['>tunerblink</convert>', ' />'])
+					self.skinSearchAndReplace.append(['source="session.FrontendInfo" zPosition="3"', 'source="session.FrontendInfo" zPosition="5"'])
 
 		### Infobar_begin
 		self.appendSkinFile(self.daten + "infobar-begin.xml")
@@ -4286,6 +4260,7 @@ class KravenFHD(ConfigListScreen, Screen):
 		if self.gete2distroversion() == "VTi":
 			self.appendSkinFile(self.daten + config.plugins.KravenFHD.GraphMultiEPG.value + ".xml")
 		elif self.gete2distroversion() == "openatv":
+			self.appendSkinFile(self.daten + "graphmultiepg-minitv.xml")
 			if config.plugins.KravenFHD.GraphicalEPG.value == "text":
 				config.epgselection.graph_type_mode.value = False
 				config.epgselection.graph_type_mode.save()

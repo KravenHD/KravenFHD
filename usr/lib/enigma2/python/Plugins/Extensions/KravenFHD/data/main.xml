@@ -787,8 +787,20 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
   <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="EventView" position="0,0" size="1920,1080" title="Eventview">
     <widget backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" position="63,18" render="Label" size="1500,69" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
     <widget backgroundColor="Kravenbg" font="Regular2;39" name="epg_description" scrollbarWidth="5" position="63,232" size="1794,664" transparent="1" />
+    <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_dolby_off.png" position="63,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
+      <convert type="KravenFHDDolby">Dolby_off</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
     <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_dolby_on.png" position="63,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
-      <convert type="ServiceInfo">IsMultichannel</convert>
+      <convert type="KravenFHDDolby">Dolby</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_dolby_20.png" position="63,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
+      <convert type="KravenFHDDolby">Dolby20</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_dolby_51.png" position="63,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
+      <convert type="KravenFHDDolby">Dolby51</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_format_on.png" position="138,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
@@ -814,6 +826,50 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
     <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1188,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="2" />
     <constant-widget name="MenuOKExit"/>
     <!--<text="EventView" position="63,0" />-->
+  </screen>
+  <!-- EventViewSimple -->
+  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="EventViewSimple" position="0,0" size="1920,1080" title="Eventview">
+    <widget backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" position="63,18" render="Label" size="1500,69" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
+    <widget backgroundColor="Kravenbg" font="Regular2;39" name="epg_description" scrollbarWidth="5" position="63,232" size="1794,664" transparent="1" />
+    <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_dolby_off.png" position="63,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
+      <convert type="KravenFHDDolby">Dolby_off</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_dolby_on.png" position="63,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
+      <convert type="KravenFHDDolby">Dolby</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_dolby_20.png" position="63,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
+      <convert type="KravenFHDDolby">Dolby20</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_dolby_51.png" position="63,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
+      <convert type="KravenFHDDolby">Dolby51</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_format_on.png" position="138,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
+      <convert type="ServiceInfo">IsWidescreen</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_hd_on.png" position="213,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
+      <convert type="ServiceInfo">VideoWidth</convert>
+      <convert type="ValueRange">721,1980</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget backgroundColor="Kravenbg" foregroundColor="KravenFont2" font="Regular2;52" halign="left" name="channel" position="63,127" size="1281,90" transparent="1" />
+    <widget backgroundColor="Kravenbg" foregroundColor="KravenFont2" font="Regular2;45" halign="right" name="datetime" position="1392,127" size="465,90" transparent="1" valign="center" />
+    <widget backgroundColor="Kravenbg" font="Regular2;36" halign="right" name="duration" position="1447,904" size="409,60" transparent="1" foregroundColor="KravenFont2" />
+    <ePixmap alphatest="blend" pixmap="KravenFHD/buttons/key_red1.png" position="56,1038" size="300,7" />
+    <ePixmap alphatest="blend" pixmap="KravenFHD/buttons/key_green1.png" position="431,1038" size="300,7" />
+    <ePixmap alphatest="blend" pixmap="KravenFHD/buttons/key_yellow1.png" position="806,1038" size="300,7" />
+    <ePixmap alphatest="blend" pixmap="KravenFHD/buttons/key_blue1.png" position="1181,1038" size="300,7" />
+    <constant-widget name="Background"/>
+    <widget font="Regular;30" halign="left" valign="center" name="key_red" position="63,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="key_green" position="438,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="813,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1188,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="2" />
+    <constant-widget name="MenuOKExit"/>
+    <!--<text="EventViewSimple" position="63,0" />-->
   </screen>
   <!-- EPGSelectionMulti -->
   <screen name="EPGSelectionMulti" position="0,0" size="1920,1080" title="EPG Selection" flags="wfNoBorder" backgroundColor="Kravenbg">
@@ -1528,6 +1584,47 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
     <!--<text="myChannelSelection" position="105,0" />-->
   </screen>
   <!-- ********** Messages ********** -->
+  <!-- MessageBoxSimple -->
+  <screen name="MessageBoxSimple" flags="wfNoBorder" position="360,265" size="1200,15" zPosition="1" title="Message" backgroundColor="Kravenbg">
+    <widget backgroundColor="Kravenbg" font="Regular2;33" foregroundColor="KravenFont2" halign="left" position="20,6" render="Label" size="771,42" source="Title" transparent="1" zPosition="1" />
+    <widget name="text" position="140,73" size="1020,0" font="Regular;33" foregroundColor="KravenFont1" backgroundColor="Kravenbg" />
+    <widget name="ErrorPixmap" pixmap="KravenFHD/global-icons/attention.png" position="30,75" size="79,79" alphatest="blend" />
+    <widget name="QuestionPixmap" pixmap="KravenFHD/global-icons/question.png" position="30,75" size="79,79" alphatest="blend" />
+    <widget name="InfoPixmap" pixmap="KravenFHD/global-icons/info.png" position="30,75" size="79,79" alphatest="blend" />
+    <widget backgroundColor="Kravenbg" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="20,204" size="1140,450" transparent="1" />
+    <applet type="onLayoutFinish">
+# this should be factored out into some helper code,but currently demonstrates applets.
+from enigma import eSize,ePoint
+orgwidth = self.instance.size().width()
+orgpos = self.instance.position()
+textsize = self["text"].getSize()
+
+textsize = (textsize[0] + 90,textsize[1] + 90)
+offset = 45
+if self.type == self.TYPE_YESNO:
+	offset = 161
+wsizex = textsize[0] + 107
+wsizey = textsize[1] + offset
+if (420 &gt; wsizex):
+	wsizex = 420
+wsize = (wsizex,wsizey)
+
+# resize
+self.instance.resize(eSize(*wsize))
+
+# resize label
+self["text"].instance.resize(eSize(*textsize))
+
+# move list
+listsize = (wsizex - 40, 96)
+self["list"].instance.move(ePoint(20,textsize[1] + 60))
+self["list"].instance.resize(eSize(*listsize))
+
+# center window
+newwidth = wsize[0]
+self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
+		</applet>
+  </screen>
   <!-- MessageBox -->
   <screen name="MessageBox" flags="wfNoBorder" position="360,265" size="1200,15" zPosition="1" title="Message" backgroundColor="Kravenbg">
     <widget backgroundColor="Kravenbg" font="Regular2;33" foregroundColor="KravenFont2" halign="left" position="20,6" render="Label" size="771,42" source="Title" transparent="1" zPosition="1" />

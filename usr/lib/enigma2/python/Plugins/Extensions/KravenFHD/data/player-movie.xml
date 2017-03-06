@@ -18,11 +18,22 @@
 	<widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_rec_on.png" position="540,1020" render="Pixmap" size="65,33" source="session.RecordState" zPosition="5">
 	  <convert type="ConditionalShowHide" />
 	</widget>
-	<ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_dolby_off.png" position="315,1020" size="65,33" zPosition="1" />
-	<widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_dolby_on.png" position="315,1020" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
-	  <convert type="ServiceInfo">IsMultichannel</convert>
-	  <convert type="ConditionalShowHide" />
-	</widget>
+    <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_dolby_off.png" position="315,1020" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
+      <convert type="KravenFHDDolby">Dolby_off</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_dolby_on.png" position="315,1020" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
+      <convert type="KravenFHDDolby">Dolby</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_dolby_20.png" position="315,1020" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
+      <convert type="KravenFHDDolby">Dolby20</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_dolby_51.png" position="315,1020" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
+      <convert type="KravenFHDDolby">Dolby51</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
 	<ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_format_off.png" position="390,1020" size="65,33" zPosition="1" />
 	<widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_format_on.png" position="390,1020" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
 	  <convert type="ServiceInfo">IsWidescreen</convert>
