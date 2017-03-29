@@ -1,6 +1,6 @@
     <borderset name="bsListboxEntry" value="2">
-      <pixmap filename="KravenFHD/bordersets/borset.png" pos="bpTop" />
-      <pixmap filename="KravenFHD/bordersets/borset.png" pos="bpBottom" />
-      <pixmap filename="KravenFHD/bordersets/borset.png" pos="bpLeft" />
-      <pixmap filename="KravenFHD/bordersets/borset.png" pos="bpRight" />
+      <pixmap filename="KravenFHD/graphics/borset.png" pos="bpTop" />
+      <pixmap filename="KravenFHD/graphics/borset.png" pos="bpBottom" />
+      <pixmap filename="KravenFHD/graphics/borset.png" pos="bpLeft" />
+      <pixmap filename="KravenFHD/graphics/borset.png" pos="bpRight" />
     </borderset>

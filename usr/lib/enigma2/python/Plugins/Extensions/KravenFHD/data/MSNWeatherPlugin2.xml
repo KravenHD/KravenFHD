@@ -29,8 +29,8 @@
 	<widget render="Label" source="statustext" position="105,1006" zPosition="1" size="1200,36" font="Regular;30" backgroundColor="KravenIBbg2" foregroundColor="KravenIBFont1" valign="center" transparent="1" />
     <constant-widget name="Title-big2"/>
     <constant-widget name="Background"/>
-	<ePixmap pixmap="KravenVB/infobar-global-icons/key_menu.png" position="1717,1005" size="64,33" alphatest="blend" />
-    <ePixmap pixmap="KravenVB/infobar-global-icons/key_exit.png" position="1792,1005" size="64,33" alphatest="blend" />
+	<ePixmap pixmap="KravenFHD/infobar-global-icons/key_menu.png" position="1717,1005" size="64,33" alphatest="blend" />
+    <ePixmap pixmap="KravenFHD/infobar-global-icons/key_exit.png" position="1792,1005" size="64,33" alphatest="blend" />
     <!--<text="MSNWeatherPlugin" position="105,0" />-->
   </screen>
   

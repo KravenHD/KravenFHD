@@ -25,6 +25,7 @@ from enigma import eTimer
 from datetime import datetime
 import os, gettext, requests
 from Poll import Poll
+from Plugins.Extensions.KravenFHD import ping
 
 lang = language.getLanguage()
 os.environ["LANGUAGE"] = lang[:2]
@@ -106,34 +107,36 @@ class KravenFHDWeather_realtek(Poll, Converter, object):
 		global WEATHER_LOAD
 		if WEATHER_LOAD == True:
 			try:
-				print "KravenWeather: Weather download from RealTek"
-				self.data = {}
-				index = 0
-				res = requests.get(URL, timeout=0.1)
-				root = fromstring(res.text.replace('xmlns="http://www.accuweather.com"',''))
-				for child in root.findall('currentconditions'):
-					self.data['Day_%s' % str(index)] = {}
-					self.data['Day_%s' % str(index)]['temp'] = child.find('temperature').text
-					self.data['Day_%s' % str(index)]['skytextday'] = child.find('weathertext').text
-					self.data['Day_%s' % str(index)]['skycodeday'] = child.find('weathericon').text
-					self.data['Day_%s' % str(index)]['humidity'] = child.find('humidity').text
-					self.data['Day_%s' % str(index)]['winddisplay'] = child.find('winddirection').text
-					self.data['Day_%s' % str(index)]['windspeed'] = child.find('windspeed').text
-					self.data['Day_%s' % str(index)]['feelslike'] = child.find('realfeel').text
-				for child in root.findall('forecast'):
-					for item in child.findall('day'):
-						for entrie in item.findall('daytime'):
-							if index > 0:
-								self.data['Day_%s' % str(index)] = {}
-								self.data['Day_%s' % str(index)]['skycodeday'] = entrie.find('weathericon').text
-								self.data['Day_%s' % str(index)]['skytextday'] = entrie.find('txtshort').text
-							self.data['Day_%s' % str(index)]['day'] = item.find('obsdate').text
-							self.data['Day_%s' % str(index)]['low'] = entrie.find('lowtemperature').text
-							self.data['Day_%s' % str(index)]['high'] = entrie.find('hightemperature').text
-							self.data['Day_%s' % str(index)]['precip'] = entrie.find('rainamount').text
-							index += 1
-				WEATHER_DATA = self.data
-				WEATHER_LOAD = False
+				r = ping.doOne("8.8.8.8",0.5)
+				if r != None and r <= 0.5:
+					print "KravenWeather: Weather download from RealTek"
+					self.data = {}
+					index = 0
+					res = requests.get(URL, timeout=0.1)
+					root = fromstring(res.text.replace('xmlns="http://www.accuweather.com"',''))
+					for child in root.findall('currentconditions'):
+						self.data['Day_%s' % str(index)] = {}
+						self.data['Day_%s' % str(index)]['temp'] = child.find('temperature').text
+						self.data['Day_%s' % str(index)]['skytextday'] = child.find('weathertext').text
+						self.data['Day_%s' % str(index)]['skycodeday'] = child.find('weathericon').text
+						self.data['Day_%s' % str(index)]['humidity'] = child.find('humidity').text
+						self.data['Day_%s' % str(index)]['winddisplay'] = child.find('winddirection').text
+						self.data['Day_%s' % str(index)]['windspeed'] = child.find('windspeed').text
+						self.data['Day_%s' % str(index)]['feelslike'] = child.find('realfeel').text
+					for child in root.findall('forecast'):
+						for item in child.findall('day'):
+							for entrie in item.findall('daytime'):
+								if index > 0:
+									self.data['Day_%s' % str(index)] = {}
+									self.data['Day_%s' % str(index)]['skycodeday'] = entrie.find('weathericon').text
+									self.data['Day_%s' % str(index)]['skytextday'] = entrie.find('txtshort').text
+								self.data['Day_%s' % str(index)]['day'] = item.find('obsdate').text
+								self.data['Day_%s' % str(index)]['low'] = entrie.find('lowtemperature').text
+								self.data['Day_%s' % str(index)]['high'] = entrie.find('hightemperature').text
+								self.data['Day_%s' % str(index)]['precip'] = entrie.find('rainamount').text
+								index += 1
+					WEATHER_DATA = self.data
+					WEATHER_LOAD = False
 			except:
 				pass
 			timeout = int(config.plugins.KravenFHD.refreshInterval.value) * 1000.0 * 60.0

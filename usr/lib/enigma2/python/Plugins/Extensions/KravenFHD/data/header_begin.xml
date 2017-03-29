@@ -392,8 +392,8 @@
     <font filename="KravenFHD/fonts/OpenSans-Semibold.ttf" name="Regular2" scale="95" />
     <font filename="KravenFHD/fonts/meteocons.ttf" name="Meteo" scale="100" />
 	<font filename="KravenFHD/fonts/owfont-regular.ttf" name="Meteo2" scale="100" />
-	<alias name="FileList" font="Regular" size="32" height="41" />
-	<alias name="FileListMulti" font="Regular" size="32" height="41" />
+	<alias name="FileList" font="Regular" size="32" height="45" />
+	<alias name="FileListMulti" font="Regular" size="32" height="45" />
 	<alias name="VirtualKeyboard" font="Regular" size="42" height="67"/>
 	<alias name="ServiceInfo" font="Regular" size="32" height="45"/>
 	<alias name="PluginBrowser0" font="Regular" size="32" height="75"/>
@@ -402,6 +402,10 @@
 	<alias name="HelpMenuListExt0" font="Regular" size="32" height="75"/>
 	<alias name="HelpMenuListExt1" font="Regular" size="28"/>
 	<alias name="ChoiceList" font="Regular" size="32" height="45" />
+	<alias name="MaxCubeRoom" font="Regular" size="24" height="70"/>
+	<alias name="MaxCubeTemp" font="Regular2" size="45" height="70"/>
+	<alias name="iDreamListFont0" font="Regular" size="22"/>
+	<alias name="iDreamListFont1" font="Regular" size="22"/>
   </fonts>
   <subtitles>
     <sub font="Regular;45" name="Subtitle_TTX" shadowColor="shadow" shadowOffset="3,3" />

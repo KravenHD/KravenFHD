@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenFHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2017-03-05 12:55+0100\n"
+"PO-Revision-Date: 2017-03-18 22:39+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -471,6 +471,10 @@ msgid "green very dark"
 msgstr "grün sehr dunkel"
 
 #: KravenFHD.py
+msgid "emerald"
+msgstr "smaragdgrün"
+
+#: KravenFHD.py
 msgid "Kraven dark"
 msgstr "Kraven dunkel"
 
@@ -864,7 +868,7 @@ msgstr ""
 "\n"
 "Wollen Sie jetzt neu starten?"
 
-#: plugin.py
+#: plugin.py, KravenFHD.py
 msgid "Configuration tool for KravenFHD"
 msgstr "Konfigurationstool für KravenFHD"
 
@@ -1057,44 +1061,44 @@ msgid "Choose the degree of background transparency for all screens except syste
 msgstr "Wählen Sie den Grad der Hintergrundtransparenz für alle Seiten außer Systemmenüs und Kanallisten."
 
 #: KravenFHD.py
-msgid "Choose the background color of selection bars."
-msgstr "Wählen Sie die Hintergrundfarbe der Auswahlbalken."
+msgid "Choose the background color of selection bars. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Hintergrundfarbe der Auswahlbalken. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
-msgid "Choose the border color of selection bars or deactivate borders completely."
-msgstr "Wählen Sie die Rahmenfarbe der Auswahlbalken oder deaktivieren Sie die Rahmen komplett."
+msgid "Choose the border color of selection bars or deactivate borders completely. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Rahmenfarbe der Auswahlbalken oder deaktivieren Sie die Rahmen komplett. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
-msgid "Choose the color of progress bars."
-msgstr "Wählen Sie die Farbe der Fortschrittsbalken."
+msgid "Choose the color of progress bars. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Farbe der Fortschrittsbalken. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
-msgid "Choose the border color of progress bars."
-msgstr "Wählen Sie die Rahmenfarbe der Fortschrittsbalken."
+msgid "Choose the border color of progress bars. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Rahmenfarbe der Fortschrittsbalken. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
-msgid "Choose the color of all lines. This affects dividers as well as the line in the center of some progress bars."
-msgstr "Wählen Sie die Farbe für alle Linien. Dies betrifft Trennlinien sowie die Linie in der Mitte einiger Fortschrittsbalken."
+msgid "Choose the color of all lines. This affects dividers as well as the line in the center of some progress bars. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Farbe für alle Linien. Dies betrifft Trennlinien sowie die Linie in der Mitte einiger Fortschrittsbalken. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
-msgid "Choose the color of the primary font. The primary font is used for list items, textboxes and other important information."
-msgstr "Wählen Sie die Farbe der primären Schrift. Die primäre Schrift wird für Listeneinträge, Textfelder und andere wichtige Informationen verwendet."
+msgid "Choose the color of the primary font. The primary font is used for list items, textboxes and other important information. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Farbe der primären Schrift. Die primäre Schrift wird für Listeneinträge, Textfelder und andere wichtige Informationen verwendet. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
-msgid "Choose the color of the secondary font. The secondary font is used for headers, labels and other additional information."
-msgstr "Wählen Sie die Farbe der sekundären Schrift. Die sekundäre Schrift wird für Überschriften, Labels und andere zusätzliche Informationen verwendet."
+msgid "Choose the color of the secondary font. The secondary font is used for headers, labels and other additional information. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Farbe der sekundären Schrift. Die sekundäre Schrift wird für Überschriften, Labels und andere zusätzliche Informationen verwendet. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
-msgid "Choose the color of the font in selection bars."
-msgstr "Wählen Sie die Farbe der Schrift in Auswahlbalken."
+msgid "Choose the color of the font in selection bars. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Farbe der Schrift in Auswahlbalken. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
-msgid "Choose the font color of marked list items."
-msgstr "Wählen Sie die Schriftfarbe von markierten Listenelementen."
+msgid "Choose the font color of marked list items. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Schriftfarbe von markierten Listenelementen. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
-msgid "Choose the font color of the color button labels."
-msgstr "Wählen Sie die Schriftfarbe der Farbtastenbeschriftungen."
+msgid "Choose the font color of the color button labels. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Schriftfarbe der Farbtastenbeschriftungen. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "Choose the frequency of loading weather data from the internet."
@@ -1157,8 +1161,8 @@ msgid "Choose from different options to show the channel name and number in the 
 msgstr "Wählen Sie eine von verschiedenen Varianten, um Kanal-Namen und -Nummer in der Infoleiste anzuzeigen."
 
 #: KravenFHD.py
-msgid "Choose the font color of channel name and number"
-msgstr "Wählen Sie die Schriftfarbe für Kanal-Name und -Nummer"
+msgid "Choose the font color of channel name and number. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Schriftfarbe für Kanal-Name und -Nummer. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "Choose from different options to show the clock in the infobar."
@@ -1189,8 +1193,8 @@ msgid "Choose whether 'free to air' is displayed or not for unencrypted channels
 msgstr "Wählen Sie, ob \"Frei empfangbar\" für unverschlüsselte Sender angezeigt wird oder nicht."
 
 #: KravenFHD.py
-msgid "Choose the font color of the ECM information."
-msgstr "Wählen Sie die Schriftfarbe der ECM-Informationen."
+msgid "Choose the font color of the ECM information. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Schriftfarbe der ECM-Informationen. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "Choose from different styles for the channel selection screen."
@@ -1205,8 +1209,8 @@ msgid "Specify the time for your primetime."
 msgstr "Geben Sie die Uhrzeit für Ihre Hauptsendezeit ein."
 
 #: KravenFHD.py
-msgid "Choose the font color of the primetime information."
-msgstr "Wählen Sie die Schriftfarbe der Hauptsendezeit-Informationen."
+msgid "Choose the font color of the primetime information. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Schriftfarbe der Hauptsendezeit-Informationen. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "Choose from different styles for the volume display."
@@ -1233,16 +1237,16 @@ msgid "EMC-Listselection"
 msgstr "EMC-Auswahlbalken"
 
 #: KravenFHD.py
-msgid "Choose the background color of selection bars for EnhancedMovieCenter."
-msgstr "Wählen Sie die Hintergrundfarbe der Auswahlbalken für EnhancedMovieCenter."
+msgid "Choose the background color of selection bars for EnhancedMovieCenter. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Hintergrundfarbe der Auswahlbalken für EnhancedMovieCenter. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "EMC-Selection-Font"
 msgstr "EMC-Auswahl-Schrift"
 
 #: KravenFHD.py
-msgid "Choose the color of the font in selection bars for EnhancedMovieCenter."
-msgstr "Wählen Sie die Farbe der Schrift in Auswahlbalken für EnhancedMovieCenter."
+msgid "Choose the color of the font in selection bars for EnhancedMovieCenter. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Farbe der Schrift in Auswahlbalken für EnhancedMovieCenter. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "Choose from different styles for EnhancedMovieCenter."
@@ -1389,12 +1393,12 @@ msgid "Secondary-Infobar-Font"
 msgstr "Sekundäre Infoleisten-Schrift"
 
 #: KravenFHD.py
-msgid "Choose the color of the primary infobar font."
-msgstr "Wählen Sie die Farbe der primären Infoleisten-Schrift."
+msgid "Choose the color of the primary infobar font. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Farbe der primären Infoleisten-Schrift. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
-msgid "Choose the color of the secondary infobar font."
-msgstr "Wählen Sie die Farbe der sekundären Infoleisten-Schrift."
+msgid "Choose the color of the secondary infobar font. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Farbe der sekundären Infoleisten-Schrift. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "ANTIALIASING BRIGHTNESS ________________________________________________________________"
@@ -1461,8 +1465,8 @@ msgid "MiniTV-Border"
 msgstr "MiniTV-Rahmen"
 
 #: KravenFHD.py
-msgid "Choose the border color of MiniTV's."
-msgstr "Wählen Sie die Rahmenfarbe für MiniTV's."
+msgid "Choose the border color of MiniTV's. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Rahmenfarbe für MiniTV's. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "Choose whether you want the Kraven skin to be applied to 'MediaPortal' or not. To remove it again, you must deactivate it here and activate another skin in 'MediaPortal'."
@@ -1481,8 +1485,8 @@ msgid "'Not available'-Font"
 msgstr "'Nicht verfügbar'-Schrift"
 
 #: KravenFHD.py
-msgid "Choose the font color of channels that are unavailable at the moment."
-msgstr "Wählen Sie die Schriftfarbe von Kanälen, die derzeit nicht verfügbar sind."
+msgid "Choose the font color of channels that are unavailable at the moment. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Schriftfarbe von Kanälen, die derzeit nicht verfügbar sind. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "Choose from different options to display the PVR state."
@@ -1585,8 +1589,8 @@ msgid "No Accu ID found"
 msgstr "Keine Accu-ID gefunden"
 
 #: KravenFHD.py
-msgid "Choose the font color of android-clock temperature."
-msgstr "Wählen Sie die Schriftfarbe für die Temperatur-Anzeige der Android-Uhr."
+msgid "Choose the font color of android-clock temperature. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Schriftfarbe für die Temperatur-Anzeige der Android-Uhr. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "Android-Temp-Color"
@@ -1625,8 +1629,8 @@ msgid "Choose from different infobar background styles."
 msgstr "Wählen Sie eine von verschiedenen Infoleisten-Hintergrund-Varianten."
 
 #: KravenFHD.py
-msgid "Choose the color of the infobar box lines."
-msgstr "Wählen Sie die Farbe für die Begrenzungslinien der Infoleisten-Boxen."
+msgid "Choose the color of the infobar box lines. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Farbe für die Begrenzungslinien der Infoleisten-Boxen. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "EPG Fontsize"
@@ -1949,16 +1953,16 @@ msgid "Finished Color"
 msgstr "gesehene Filme"
 
 #: KravenFHD.py
-msgid "Choose the font color of unwatched movies."
-msgstr "Wählen Sie die Schriftfarbe für noch nicht gesehene Filme."
+msgid "Choose the font color of unwatched movies. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Schriftfarbe für noch nicht gesehene Filme. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
-msgid "Choose the font color of watching movies."
-msgstr "Wählen Sie die Schriftfarbe für teilweise gesehene Filme."
+msgid "Choose the font color of watching movies. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Schriftfarbe für teilweise gesehene Filme. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
-msgid "Choose the font color of watched movies."
-msgstr "Wählen Sie die Schriftfarbe für gesehene Filme."
+msgid "Choose the font color of watched movies. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Schriftfarbe für gesehene Filme. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "infobar colors big"
@@ -1997,8 +2001,8 @@ msgid "PermanentClock-Color"
 msgstr "PermanentClock-Farbe"
 
 #: KravenFHD.py
-msgid "Choose the fontcolor of PermanentClock."
-msgstr "Wählen Sie die Schriftfarbe für 'PermanentClock'."
+msgid "Choose the font color of PermanentClock. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Schriftfarbe für 'PermanentClock'. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "          Primary Color"
@@ -2009,20 +2013,20 @@ msgid "          Secondary Color"
 msgstr "          Sekundäre Farbe"
 
 #: KravenFHD.py
-msgid "Choose the primary color for the background gradient."
-msgstr "Wählen Sie die primäre Farbe für den Hintergrund-Verlauf."
+msgid "Choose the primary color for the background gradient. Press OK to define your own RGB color."
+msgstr "Wählen Sie die primäre Farbe für den Hintergrund-Verlauf. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
-msgid "Choose the secondary color for the background gradient."
-msgstr "Wählen Sie die sekundäre Farbe für den Hintergrund-Verlauf."
+msgid "Choose the secondary color for the background gradient. Press OK to define your own RGB color."
+msgstr "Wählen Sie die sekundäre Farbe für den Hintergrund-Verlauf. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
-msgid "Choose the primary color for the infobar gradient."
-msgstr "Wählen Sie die primäre Farbe für den Infoleisten-Verlauf."
+msgid "Choose the primary color for the infobar gradient. Press OK to define your own RGB color."
+msgstr "Wählen Sie die primäre Farbe für den Infoleisten-Verlauf. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
-msgid "Choose the secondary color for the infobar gradient."
-msgstr "Wählen Sie die sekundäre Farbe für den Infoleisten-Verlauf."
+msgid "Choose the secondary color for the infobar gradient. Press OK to define your own RGB color."
+msgstr "Wählen Sie die sekundäre Farbe für den Infoleisten-Verlauf. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "          Info Panels"
@@ -2069,16 +2073,16 @@ msgid "Choose the texture for the background."
 msgstr "Wählen Sie die Textur für den Hintergrund."
 
 #: KravenFHD.py
-msgid "Choose the alternate color for the background. It should match the texture at the best."
-msgstr "Wählen Sie die Ersatz-Farbe für den Hintergrund. Diese sollte der Textur bestmöglich entsprechen."
+msgid "Choose the alternate color for the background. It should match the texture at the best. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Ersatz-Farbe für den Hintergrund. Diese sollte der Textur bestmöglich entsprechen. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "Choose the texture for the infobars."
 msgstr "Wählen Sie die Textur für die Infoleisten."
 
 #: KravenFHD.py
-msgid "Choose the alternate color for the infobars. It should match the texture at the best."
-msgstr "Wählen Sie die Ersatz-Farbe für die Infoleisten. Diese sollte der Textur bestmöglich entsprechen."
+msgid "Choose the alternate color for the infobars. It should match the texture at the best. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Ersatz-Farbe für die Infoleisten. Diese sollte der Textur bestmöglich entsprechen. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "This sections offers all settings for PermanentClock."
@@ -2093,8 +2097,8 @@ msgid "NumberZap-Style"
 msgstr "NumberZap-Stil"
 
 #: KravenFHD.py
-msgid "Choose the border color for NumberZap."
-msgstr "Wählen Sie die Rahmenfarbe für \"NumberZap\"."
+msgid "Choose the border color for NumberZap. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Rahmenfarbe für \"NumberZap\". Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "Border Color"
@@ -2117,8 +2121,8 @@ msgid "no MiniTV"
 msgstr "kein MiniTV"
 
 #: KravenFHD.py
-msgid "Choose the border color for GraphMultiEPG."
-msgstr "Wählen Sie die Rahmenfarbe für \"GraphMultiEPG\"."
+msgid "Choose the border color for GraphMultiEPG. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Rahmenfarbe für \"GraphMultiEPG\". Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "Selected Event Background"
@@ -2129,8 +2133,8 @@ msgid "Event Description Fontsize"
 msgstr "Sendungsbeschreibung Schriftgrösse"
 
 #: KravenFHD.py
-msgid "Choose the background color of selected events for GraphMultiEPG."
-msgstr "Wählen Sie die Hintergrundfarbe der ausgewählten Sendung für \"GraphMultiEPG\"."
+msgid "Choose the background color of selected events for GraphMultiEPG. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Hintergrundfarbe der ausgewählten Sendung für \"GraphMultiEPG\". Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "GRAPHICALEPG _____________________________________________________________"
@@ -2149,12 +2153,12 @@ msgid "Choose from different styles for GraphicalEPG."
 msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für \"Graphisches EPG\"."
 
 #: KravenFHD.py
-msgid "Choose the border color for GraphicalEPG."
-msgstr "Wählen Sie die Rahmenfarbe für \"Graphisches EPG\"."
+msgid "Choose the border color for GraphicalEPG. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Rahmenfarbe für \"Graphisches EPG\". Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
-msgid "Choose the background color of selected events for GraphicalEPG."
-msgstr "Wählen Sie die Hintergrundfarbe der ausgewählten Sendung für \"Graphisches EPG\"."
+msgid "Choose the background color of selected events for GraphicalEPG. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Hintergrundfarbe der ausgewählten Sendung für \"Graphisches EPG\". Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "global selection background"
@@ -2185,8 +2189,8 @@ msgid "VerticalEPG-Style"
 msgstr "Spalten-EPG-Stil"
 
 #: KravenFHD.py
-msgid "Choose the border color for VerticalEPG."
-msgstr "Wählen Sie die Rahmenfarbe für \"Spalten-EPG\"."
+msgid "Choose the border color for VerticalEPG. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Rahmenfarbe für \"Spalten-EPG\". Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "VERTICALEPG ______________________________________________________________"
@@ -2303,3 +2307,15 @@ msgstr "Wählen Sie, ob Scrollbalken angezeigt werden sollen."
 #: KravenFHD.py
 msgid "not available for openATV"
 msgstr "nicht verfügbar für openATV"
+
+#: ColorSelection.py
+msgid "Color Selection"
+msgstr "Farbauswahl"
+
+#: ColorSelection.py
+msgid "Save Color"
+msgstr "Farbe speichern"
+
+#: KravenFHD.py
+msgid "You have no internet connection. This function is disabled."
+msgstr "Sie haben keine Internetverbindung. Diese Funktion ist deaktiviert."

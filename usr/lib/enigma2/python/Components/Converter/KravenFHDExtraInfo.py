@@ -79,13 +79,23 @@ class KravenFHDExtraInfo(Poll, Converter, object):
 	def createFrequency(self,fedata):
 		frequency = fedata.get("frequency")
 		if frequency:
-			return str(frequency / 1000)
+			try:
+				from boxbranding import getImageDistro
+				if getImageDistro() == "openatv":
+					return frequency[0:5]
+			except ImportError:
+				return str(frequency / 1000)
 		return ""
 
 	def createSymbolRate(self,fedata):
 		symbolrate = fedata.get("symbol_rate")
 		if symbolrate:
-			return str(symbolrate / 1000)
+			try:
+				from boxbranding import getImageDistro
+				if getImageDistro() == "openatv":
+					return str(symbolrate)
+			except ImportError:
+				return str(symbolrate / 1000)
 		return ""
 
 	def createPolarization(self,fedata):

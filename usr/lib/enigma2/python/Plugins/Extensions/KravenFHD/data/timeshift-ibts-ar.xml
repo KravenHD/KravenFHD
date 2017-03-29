@@ -40,8 +40,8 @@
   </screen>
   <!-- AutoResolution -->
   <screen name="ResolutionLabel" backgroundColor="transparent" position="0,187" size="378,93" flags="wfNoBorder">
-	<widget name="content" position="22,16" size="352,30" font="Regular;24" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" halign="left" valign="center" transparent="1" zPosition="-1" />
-	<widget name="restxt" position="22,46" size="352,30" font="Regular;24" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" halign="left" valign="center" transparent="1" zPosition="-1" />
+	<widget name="content" position="15,16" size="357,30" font="Regular;23" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" noWrap="1" halign="left" valign="center" transparent="1" zPosition="-1" />
+	<widget name="restxt" position="15,47" size="357,30" font="Regular;23" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" noWrap="1" halign="left" valign="center" transparent="1" zPosition="-1" />
     <eLabel backgroundColor="KravenIBLine" position="0,0" size="378,3" zPosition="-8" />
     <eLabel backgroundColor="KravenIBLine" position="0,90" size="378,3" zPosition="-8" />
     <eLabel backgroundColor="KravenIBLine" position="375,3" size="3,87" zPosition="-8" />

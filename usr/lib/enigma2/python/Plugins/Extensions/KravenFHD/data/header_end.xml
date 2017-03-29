@@ -1120,7 +1120,7 @@
 	
 	<constant-widget name="gradient-menu">
 	  <ePixmap pixmap="KravenFHD/graphics/ibar.png" position="0,825" size="1920,600" zPosition="-9" alphatest="blend" />
-	  <ePixmap pixmap="KravenFHD/graphics/ibaro.png" position="0,-90" size="1920,664" zPosition="-9" alphatest="blend" />
+	  <ePixmap pixmap="KravenFHD/graphics/ibaro2.png" position="0,0" size="1920,247" zPosition="-9" alphatest="blend" />
 	</constant-widget>
 	
 	<constant-widget name="box-menu">
@@ -1146,7 +1146,7 @@
 	
 	<constant-widget name="gradient-cs">
 	  <ePixmap pixmap="KravenFHD/graphics/ibar.png" position="0,855" size="1920,600" zPosition="-9" alphatest="blend" />
-	  <ePixmap pixmap="KravenFHD/graphics/ibaro.png" position="0,-90" size="1920,664" zPosition="-9" alphatest="blend" />
+	  <ePixmap pixmap="KravenFHD/graphics/ibaro2.png" position="0,0" size="1920,247" zPosition="-9" alphatest="blend" />
 	</constant-widget>
 	
 	<constant-widget name="box-cs">
@@ -1172,7 +1172,7 @@
 	
 	<constant-widget name="gradient-cooltv">
       <ePixmap pixmap="KravenFHD/graphics/ibar.png" position="0,855" size="1920,600" zPosition="-9" alphatest="blend" />
-      <ePixmap pixmap="KravenFHD/graphics/ibaro.png" position="0,-90" size="1920,664" zPosition="-9" alphatest="blend" />
+      <ePixmap pixmap="KravenFHD/graphics/ibaro2.png" position="0,0" size="1920,247" zPosition="-9" alphatest="blend" />
 	</constant-widget>
 	
 	<constant-widget name="box-cooltv">
@@ -1198,7 +1198,7 @@
 	
 	<constant-widget name="gradient-emc">
 	  <ePixmap pixmap="KravenFHD/graphics/ibar.png" position="0,855" size="1920,600" zPosition="-9" alphatest="blend" />
-	  <ePixmap pixmap="KravenFHD/graphics/ibaro.png" position="0,-90" size="1920,664" zPosition="-9" alphatest="blend" />
+	  <ePixmap pixmap="KravenFHD/graphics/ibaro2.png" position="0,0" size="1920,247" zPosition="-9" alphatest="blend" />
 	</constant-widget>
 	
 	<constant-widget name="box-emc">
@@ -1224,7 +1224,7 @@
 	
 	<constant-widget name="gradient-wrr">
 	  <ePixmap pixmap="KravenFHD/graphics/ibar.png" position="0,825" size="570,600" zPosition="-9" alphatest="blend" />
-	  <ePixmap pixmap="KravenFHD/graphics/ibaro.png" position="0,-90" size="570,664" zPosition="-9" alphatest="blend" />
+	  <ePixmap pixmap="KravenFHD/graphics/ibaro2.png" position="0,0" size="570,247" zPosition="-9" alphatest="blend" />
 	</constant-widget>
 	
 	<constant-widget name="box-wrr">
@@ -1250,7 +1250,7 @@
 	
 	<constant-widget name="gradient-split1">
 	  <ePixmap pixmap="KravenFHD/graphics/ibar.png" position="0,825" size="1920,600" zPosition="-9" alphatest="blend" />
-	  <ePixmap pixmap="KravenFHD/graphics/ibaro.png" position="0,-90" size="1920,664" zPosition="-9" alphatest="blend" />
+	  <ePixmap pixmap="KravenFHD/graphics/ibaro2.png" position="0,0" size="1920,247" zPosition="-9" alphatest="blend" />
 	</constant-widget>
 	
 	<constant-widget name="box-split1">
@@ -1276,7 +1276,7 @@
 	
 	<constant-widget name="gradient-split2">
 	  <ePixmap pixmap="KravenFHD/graphics/ibar.png" position="0,825" size="1920,600" zPosition="-9" alphatest="blend" />
-	  <ePixmap pixmap="KravenFHD/graphics/ibaro.png" position="0,-90" size="1920,664" zPosition="-9" alphatest="blend" />
+	  <ePixmap pixmap="KravenFHD/graphics/ibaro2.png" position="0,0" size="1920,247" zPosition="-9" alphatest="blend" />
 	</constant-widget>
 	
 	<constant-widget name="box-split2">
@@ -1301,7 +1301,7 @@
 	</constant-widget>
 	
 	<constant-widget name="gradient-sib">
-	  <ePixmap pixmap="KravenFHD/graphics/ibaro.png" position="0,-75" size="1920,664" zPosition="-9" alphatest="blend" />
+	  <ePixmap pixmap="KravenFHD/graphics/ibaro2.png" position="0,0" size="1920,247" zPosition="-9" alphatest="blend" />
 	</constant-widget>
 	
 	<constant-widget name="box-sib">
@@ -1320,8 +1320,8 @@
 	</constant-widget>
 	
 	<constant-widget name="gradient-csr">
-      <ePixmap pixmap="KravenFHD/graphics/ibaro.png" position="0,997" size="1920,664" zPosition="-9" alphatest="blend" />
-      <ePixmap pixmap="KravenFHD/graphics/ibaro.png" position="0,-90" size="1920,663" zPosition="-9" alphatest="blend" />
+      <ePixmap pixmap="KravenFHD/graphics/ibaro.png" position="0,997" size="1920,247" zPosition="-9" alphatest="blend" />
+      <ePixmap pixmap="KravenFHD/graphics/ibaro2.png" position="0,0" size="1920,247" zPosition="-9" alphatest="blend" />
 	</constant-widget>
 	
 	<constant-widget name="box-csr">
@@ -1498,7 +1498,7 @@
 	</constant-widget>
 	
 	<constant-widget name="gradient-ib-top">
-      <ePixmap pixmap="KravenFHD/graphics/ibaro.png" position="0,-30" size="1920,247" zPosition="-9" alphatest="blend" />
+      <ePixmap pixmap="KravenFHD/graphics/ibaro3.png" position="0,0" size="1920,247" zPosition="-9" alphatest="blend" />
 	</constant-widget>
 	
 	<constant-widget name="box-ib-top">

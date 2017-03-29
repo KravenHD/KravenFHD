@@ -23,6 +23,7 @@ from Components.config import config
 from enigma import eTimer
 import requests, time, os, gettext
 from Poll import Poll
+from Plugins.Extensions.KravenFHD import ping
 
 lang = language.getLanguage()
 os.environ["LANGUAGE"] = lang[:2]
@@ -36,7 +37,7 @@ def _(txt):
 		t = gettext.gettext(txt)
 	return t
 
-URL = 'http://api.openweathermap.org/data/2.5/forecast/daily?' + config.plugins.KravenFHD.weather_owm_latlon.value + '&cnt=5&mode=json&appid=89b59e4d7d07894243b5acd24e7f18a3'
+URL = 'http://api.openweathermap.org/data/2.5/forecast/daily?' + config.plugins.KravenFHD.weather_owm_latlon.value + '&cnt=5&mode=json&appid=18e71a506ce3be00c0468bee55df993b'
 WEATHER_DATA = None
 WEATHER_LOAD = True
 
@@ -105,11 +106,13 @@ class KravenFHDWeather_owm(Poll, Converter, object):
 		global WEATHER_LOAD
 		if WEATHER_LOAD == True:
 			try:
-				print "KravenWeather: Weather download from OpenWeatherMap"
-				res = requests.get(URL, timeout=0.1)
-				self.data = res.json()
-				WEATHER_DATA = self.data
-				WEATHER_LOAD = False
+				r = ping.doOne("8.8.8.8",0.5)
+				if r != None and r <= 0.5:
+					print "KravenWeather: Weather download from OpenWeatherMap"
+					res = requests.get(URL, timeout=0.1)
+					self.data = res.json()
+					WEATHER_DATA = self.data
+					WEATHER_LOAD = False
 			except:
 				pass
 			timeout = int(config.plugins.KravenFHD.refreshInterval.value) * 1000.0 * 60.0

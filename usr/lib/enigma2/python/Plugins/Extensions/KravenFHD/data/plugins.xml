@@ -7,12 +7,10 @@
     <widget font="Regular;30" halign="left" valign="center" source="key_yellow" position="855,997" size="330,39" render="Label" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <widget font="Regular;30" halign="left" valign="center" source="key_blue" position="1230,997" size="330,39" render="Label" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <widget backgroundColor="Kravenbg" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,127" size="1062,810" transparent="1" enableWrapAround="1" scrollbarMode="showAlways" scrollbarWidth="6" zPosition="1" />
-    <eLabel position="105,18" size="1500,69" text="KravenFHD - Konfigurationstool" backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" valign="center" halign="left" transparent="1" />
     <eLabel position="1313,337" size="466,3" backgroundColor="KravenBorder" />
     <eLabel position="1313,599" size="466,3" backgroundColor="KravenBorder" />
     <eLabel position="1313,340" size="3,259" backgroundColor="KravenBorder" />
     <eLabel position="1776,340" size="3,259" backgroundColor="KravenBorder" />
-    <constant-widget name="Background"/>
     <ePixmap pixmap="KravenFHD/buttons/key_red1.png" position="97,1038" size="300,7" alphatest="blend" />
     <ePixmap pixmap="KravenFHD/buttons/key_green1.png" position="472,1038" size="300,7" alphatest="blend" />
     <ePixmap pixmap="KravenFHD/buttons/key_yellow1.png" position="847,1038" size="300,7" alphatest="blend" />
@@ -24,6 +22,8 @@
     <widget name="helperimage" position="1316,340" size="460,259" zPosition="1" backgroundColor="Kravenbg" />
     <widget source="Canvas" render="Canvas" position="1316,340" size="460,259" zPosition="-1" backgroundColor="Kravenbg" />
     <widget source="help" render="Label" position="1270,660" size="552,294" font="Regular2;30" backgroundColor="Kravenbg" foregroundColor="KravenFont2" halign="center" valign="top" transparent="1" />
+    <constant-widget name="Title-big"/>
+    <constant-widget name="Background"/>
     <constant-widget name="OKExit"/>
     <!--<text="KravenFHD" position="105,0" />-->
   </screen>
@@ -34,12 +34,10 @@
     <widget font="Regular;30" halign="left" valign="center" source="key_yellow" position="855,997" size="330,39" render="Label" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <widget font="Regular;30" halign="left" valign="center" source="key_blue" position="1230,997" size="330,39" render="Label" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <widget backgroundColor="Kravenbg" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,127" size="1062,810" transparent="1" enableWrapAround="1" scrollbarMode="showAlways" scrollbarWidth="6" zPosition="1" />
-    <eLabel position="105,18" size="1500,69" text="KravenVB - Konfigurationstool" backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" valign="center" halign="left" transparent="1" />
     <eLabel position="1359,363" size="374,3" backgroundColor="KravenBorder" />
     <eLabel position="1359,573" size="374,3" backgroundColor="KravenBorder" />
     <eLabel position="1359,366" size="3,207" backgroundColor="KravenBorder" />
     <eLabel position="1730,366" size="3,207" backgroundColor="KravenBorder" />
-    <constant-widget name="Background"/>
     <ePixmap pixmap="KravenFHD/buttons/key_red1.png" position="97,1038" size="300,7" alphatest="blend" />
     <ePixmap pixmap="KravenFHD/buttons/key_green1.png" position="472,1038" size="300,7" alphatest="blend" />
     <ePixmap pixmap="KravenFHD/buttons/key_yellow1.png" position="847,1038" size="300,7" alphatest="blend" />
@@ -51,8 +49,40 @@
     <widget name="helperimage" position="1362,366" size="368,207" zPosition="1" backgroundColor="Kravenbg" />
     <widget source="Canvas" render="Canvas" position="1362,366" size="368,207" zPosition="-1" backgroundColor="Kravenbg" />
     <widget source="help" render="Label" position="1270,660" size="552,294" font="Regular2;30" backgroundColor="Kravenbg" foregroundColor="KravenFont2" halign="center" valign="top" transparent="1" />
+    <constant-widget name="Title-big"/>
+    <constant-widget name="Background"/>
     <constant-widget name="OKExit"/>
     <!--<text="KravenVB" position="105,0" />-->
+  </screen>
+  <!-- KravenFHDColorSelection -->
+  <screen name="KravenFHDColorSelection" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+    <widget backgroundColor="Kravenbg2" source="Title" render="Label" font="Regular2;42" foregroundColor="KravenFont2" position="429,390" size="810,54" valign="center" transparent="1" zPosition="1" />
+    <widget backgroundColor="Kravenbg2" source="Title" render="Label" font="Regular;42" foregroundColor="KravenFont1" position="1266,390" size="225,54" halign="right" transparent="1" valign="center">
+      <convert type="KravenFHDColorInfo">Kraven</convert>
+    </widget>
+    <widget name="config" position="429,468" size="1062,135" itemHeight="45" font="Regular;32" foregroundColor="KravenFont1" transparent="1" enableWrapAround="1" zPosition="2" backgroundColor="Kravenbg2" />
+    <widget source="preview" render="Canvas" position="0,0" size="1920,1080" zPosition="-2" backgroundColor="Kravenbg2" />
+    <widget font="Regular;30" halign="left" valign="center" source="key_red" position="429,622" size="330,39" render="Label" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" source="key_green" position="804,622" size="330,39" render="Label" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" transparent="1" zPosition="1" />
+    <ePixmap pixmap="KravenFHD/buttons/key_red1.png" position="421,663" size="300,7" alphatest="blend" />
+    <ePixmap pixmap="KravenFHD/buttons/key_green1.png" position="796,663" size="300,7" alphatest="blend" />
+    <eLabel backgroundColor="Kravenbg2" position="399,375" size="1122,330" transparent="0" zPosition="-1" />
+    <!--<text="KravenFHDColorSelection" position="105,0" />-->
+  </screen>
+  <!-- KravenVBColorSelection -->
+  <screen name="KravenVBColorSelection" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+    <widget backgroundColor="Kravenbg2" source="Title" render="Label" font="Regular2;42" foregroundColor="KravenFont2" position="429,390" size="810,54" valign="center" transparent="1" zPosition="1" />
+    <widget backgroundColor="Kravenbg2" source="Title" render="Label" font="Regular;42" foregroundColor="KravenFont1" position="1266,390" size="225,54" halign="right" transparent="1" valign="center">
+      <convert type="KravenVBColorInfo">Kraven</convert>
+    </widget>
+    <widget name="config" position="429,468" size="1062,135" itemHeight="45" font="Regular;32" foregroundColor="KravenFont1" transparent="1" enableWrapAround="1" zPosition="2" backgroundColor="Kravenbg2" />
+    <widget source="preview" render="Canvas" position="0,0" size="1920,1080" zPosition="-2" backgroundColor="Kravenbg2" />
+    <widget font="Regular;30" halign="left" valign="center" source="key_red" position="429,622" size="330,39" render="Label" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" source="key_green" position="804,622" size="330,39" render="Label" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" transparent="1" zPosition="1" />
+    <ePixmap pixmap="KravenFHD/buttons/key_red1.png" position="421,663" size="300,7" alphatest="blend" />
+    <ePixmap pixmap="KravenFHD/buttons/key_green1.png" position="796,663" size="300,7" alphatest="blend" />
+    <eLabel backgroundColor="Kravenbg2" position="399,375" size="1122,330" transparent="0" zPosition="-1" />
+    <!--<text="KravenVBColorSelection" position="105,0" />-->
   </screen>
   <!-- ********** BitrateViewer ********** -->
   <!-- BitrateViewer -->
@@ -1707,5 +1737,37 @@
   <!-- PermanentClockScreen -->
   <screen backgroundColor="KravenIBbg" name="PermanentClockScreen" size="180,45" position="0,0" flags="wfNoBorder" zPosition="10" title=" ">
     <constant-widget name="permanentclock-infobar-big"/>
+  </screen>
+  <!-- movieBrowserConfig -->
+  <screen name="movieBrowserConfig" position="0,0" size="1920,1080" flags="wfNoBorder" title="Movie Browser Setup" backgroundColor="Kravenbg">
+    <widget backgroundColor="Kravenbg" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,127" size="1062,810" transparent="1" enableWrapAround="1" scrollbarMode="showAlways" scrollbarWidth="6" zPosition="1" />
+    <eLabel position="1313,337" size="466,3" backgroundColor="KravenBorder" />
+    <eLabel position="1313,599" size="466,3" backgroundColor="KravenBorder" />
+    <eLabel position="1313,340" size="3,259" backgroundColor="KravenBorder" />
+    <eLabel position="1776,340" size="3,259" backgroundColor="KravenBorder" />
+    <widget name="plugin" position="1316,340" size="460,259" zPosition="1" backgroundColor="Kravenbg" />
+    <constant-widget name="Title-big"/>
+    <constant-widget name="Background"/>
+    <constant-widget name="Colorbuttons"/>
+    <widget font="Regular;30" halign="left" valign="center" name="cancel" position="105,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="save" position="480,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <constant-widget name="OKExit"/>
+    <!--<text="movieBrowserConfig" position="105,0" />-->
+  </screen>
+  <!-- FolderSelection -->
+  <screen name="FolderSelection" position="0,0" size="1920,1080" flags="wfNoBorder" title="Movie Browser Setup" backgroundColor="Kravenbg">
+    <widget backgroundColor="Kravenbg" name="folderlist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,127" size="1062,810" transparent="1" enableWrapAround="1" scrollbarMode="showAlways" scrollbarWidth="6" zPosition="1" />
+    <eLabel position="1313,337" size="466,3" backgroundColor="KravenBorder" />
+    <eLabel position="1313,599" size="466,3" backgroundColor="KravenBorder" />
+    <eLabel position="1313,340" size="3,259" backgroundColor="KravenBorder" />
+    <eLabel position="1776,340" size="3,259" backgroundColor="KravenBorder" />
+    <widget name="plugin" position="1316,340" size="460,259" zPosition="1" backgroundColor="Kravenbg" />
+    <constant-widget name="Title-big"/>
+    <constant-widget name="Background"/>
+    <constant-widget name="Colorbuttons"/>
+    <widget font="Regular;30" halign="left" valign="center" name="cancel" position="105,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="save" position="480,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <constant-widget name="OKExit"/>
+    <!--<text="FolderSelection" position="105,0" />-->
   </screen>
 <!-- plugins -->
