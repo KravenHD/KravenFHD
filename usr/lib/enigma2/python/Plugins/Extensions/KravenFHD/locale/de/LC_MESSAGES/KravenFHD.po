@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenFHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2017-03-18 22:39+0100\n"
+"PO-Revision-Date: 2017-04-02 10:40+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -875,6 +875,10 @@ msgstr "Konfigurationstool für KravenFHD"
 #: KravenFHD.py
 msgid "no Picon"
 msgstr "kein Picon"
+
+#: KravenFHD.py
+msgid "no Picon2"
+msgstr "kein Picon2"
 
 #: KravenFHD.py
 msgid "Name small"

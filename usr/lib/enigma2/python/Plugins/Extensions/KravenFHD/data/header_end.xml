@@ -930,6 +930,44 @@
       </widget>
 	</constant-widget>
 	
+	<constant-widget name="CSNP2EPG32">
+      <widget foregroundColor="KravenFont1" font="Regular;32" position="1233,244" size="624,533" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,777" size="624,164" transparent="1" noWrap="1">
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="CSNP2EPG36">
+      <widget foregroundColor="KravenFont1" font="Regular;36" position="1233,252" size="624,506" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,758" size="624,184" transparent="1" noWrap="1">
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="CSNP2EPG32Prime">
+      <widget foregroundColor="KravenFont1" font="Regular;32" position="1233,244" size="624,533" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,777" size="624,123" transparent="1" noWrap="1">
+      </widget>
+      <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;32" source="ServiceEvent" render="Label" position="1233,900" size="624,41" transparent="1" noWrap="1">
+        <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="CSNP2EPG36Prime">
+      <widget foregroundColor="KravenFont1" font="Regular;36" position="1233,252" size="624,506" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,758" size="624,138" transparent="1" noWrap="1">
+      </widget>
+      <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;36" source="ServiceEvent" render="Label" position="1233,896" size="624,46" transparent="1" noWrap="1">
+        <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
+      </widget>
+	</constant-widget>
+	
 	<constant-widget name="CSXEPG32">
       <widget alphatest="blend" position="210,228" render="Picon" size="330,198" source="ServiceEvent" transparent="1" zPosition="4">
         <convert type="KravenFHDRefString">ServicelistRef</convert>
@@ -1930,5 +1968,12 @@
       <widget backgroundColor="Kravenbg2" font="Regular;36" position="717,230" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1140,184" source="Event" valign="top" zPosition="-8" foregroundColor="KravenFont1" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
+	</constant-widget>
+	
+	<constant-widget name="STEVTI">
+      <widget font="Regular;30" halign="left" valign="center" name="red_text" position="105,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+      <widget font="Regular;30" halign="left" valign="center" name="green_text" position="480,958" size="330,78" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+      <widget font="Regular;30" halign="left" valign="center" name="yellow_text" position="855,958" size="330,78" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+      <widget font="Regular;30" halign="left" valign="center" name="blue_text" position="1230,958" size="330,78" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="2" />
 	</constant-widget>
   </constant-widgets>
