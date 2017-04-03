@@ -1328,3 +1328,13 @@
 	<constant-widget name="SourceRedGreenYellowBlue"/>
     <!--<text="MSNWeatherPluginSearch" position="105,0" />-->
   </screen>
+  <!-- SleepTimerEdit -->
+  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="SleepTimerEdit" position="0,0" size="1920,1080" title="Sleep Timer">
+    <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+    <constant-widget name="Title-big"/>
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+	<constant-widget name="SourceRedGreen"/>
+    <constant-widget name="Exit"/>
+    <!--<text="SleepTimerEdit" position="105,0" />-->
+  </screen>

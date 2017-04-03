@@ -4638,10 +4638,6 @@ class KravenFHD(ConfigListScreen, Screen):
 		if self.E2DistroVersion == "VTi":
 			self.appendSkinFile(self.daten + config.plugins.KravenFHD.SplitScreen.value + ".xml")
 
-		### SleepTimerEdit - Buttons
-		if self.E2DistroVersion == "openatv":
-			self.skinSearchAndReplace.append(['<constant-widget name="STEVTI"/>', '<constant-widget name="SourceRedGreen"/>'])
-
 		### TimerEditScreen
 		self.appendSkinFile(self.daten + config.plugins.KravenFHD.TimerEditScreen.value + ".xml")
 

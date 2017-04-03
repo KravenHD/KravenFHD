@@ -1969,11 +1969,4 @@
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
 	</constant-widget>
-	
-	<constant-widget name="STEVTI">
-      <widget font="Regular;30" halign="left" valign="center" name="red_text" position="105,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="green_text" position="480,958" size="330,78" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="yellow_text" position="855,958" size="330,78" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="blue_text" position="1230,958" size="330,78" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="2" />
-	</constant-widget>
   </constant-widgets>
