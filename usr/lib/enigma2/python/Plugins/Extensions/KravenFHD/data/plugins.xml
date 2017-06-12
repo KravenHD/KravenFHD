@@ -615,8 +615,8 @@
     <!--<text="BrowserLauncher" position="105,0" />-->
   </screen>
   <!-- ********** WebRadioFS ********** -->
-  <!-- WebradioFSScreen_13 -->
-  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="WebradioFSScreen_13" position="0,0" size="1920,1080" title="">
+  <!-- WebradioFSScreen_15 -->
+  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="WebradioFSScreen_15" position="0,0" size="1920,1080" title="">
     <constant-widget name="Webradio1"/>
     <constant-widget name="Colorbuttons"/>
     <constant-widget name="BackgroundWR"/>
