@@ -107,12 +107,12 @@ class KravenFHDWeather_realtek(Poll, Converter, object):
 		global WEATHER_LOAD
 		if WEATHER_LOAD == True:
 			try:
-				r = ping.doOne("8.8.8.8",0.5)
-				if r != None and r <= 0.5:
+				r = ping.doOne("8.8.8.8",1.5)
+				if r != None and r <= 1.5:
 					print "KravenWeather: Weather download from RealTek"
 					self.data = {}
 					index = 0
-					res = requests.get(URL, timeout=0.1)
+					res = requests.get(URL, timeout=1.5)
 					root = fromstring(res.text.replace('xmlns="http://www.accuweather.com"',''))
 					for child in root.findall('currentconditions'):
 						self.data['Day_%s' % str(index)] = {}
@@ -139,7 +139,7 @@ class KravenFHDWeather_realtek(Poll, Converter, object):
 					WEATHER_LOAD = False
 			except:
 				pass
-			timeout = int(config.plugins.KravenFHD.refreshInterval.value) * 1000.0 * 60.0
+			timeout = max(15,int(config.plugins.KravenFHD.refreshInterval.value)) * 1000.0 * 60.0
 			self.timer.start(int(timeout), True)
 		else:
 			self.data = WEATHER_DATA

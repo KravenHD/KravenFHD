@@ -86,6 +86,7 @@
     <color name="transpBlack" value="#80000000" />
     <color name="transpWhite" value="#77ffffff" />
     <color name="transpyellow" value="#33bab329" />
+	<color name="violet" value="#006774db" />
     <color name="un101214" value="#00101214" />
     <color name="un18080911" value="#18080911" />
     <color name="un18101214" value="#18101214" />

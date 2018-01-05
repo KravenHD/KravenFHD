@@ -1,0 +1,44 @@
+  <!-- /* ChannelSelection - MiniTV Picon -->
+  <screen backgroundColor="Kravenbg2" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection">
+    <widget alphatest="blend" position="63,118" render="Picon" size="110,66" source="ServiceEvent" transparent="1" zPosition="4">
+      <convert type="KravenFHDRefString">ServicelistRef</convert>
+    </widget>
+    <widget source="ServiceEvent" render="Label" position="210,126" size="555,51" font="Regular;39" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" noWrap="1" transparent="1" halign="left">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget font="Regular;39" foregroundColor="KravenFont2" position="63,204" halign="left" render="KravenRunningText" options="movetype=running,startpoint=0,startdelay=5000,steptime=80,wrap=1,always=0,repeat=5,oneshot=1" size="702,51" source="ServiceEvent" backgroundColor="Kravenbg2" transparent="1" >
+      <convert type="KravenFHDEventName">Name</convert>
+    </widget>
+    <widget source="ServiceEvent" render="Label" position="63,269" size="90,36" font="Regular;28" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" transparent="1" halign="left">
+      <convert type="KravenFHDEventTime">StartTime</convert>
+      <convert type="ClockToText">
+      </convert>
+    </widget>
+    <widget position="165,284" size="450,7" render="Progress" source="ServiceEvent" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress300.png">
+      <convert type="KravenFHDEventTime">Progress</convert>
+    </widget>
+    <eLabel position="165,287" size="450,1" backgroundColor="KravenLine" />
+    <widget source="ServiceEvent" render="Label" position="627,269" size="90,36" font="Regular;28" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" transparent="1" halign="right">
+      <convert type="KravenFHDEventTime">EndTime</convert>
+      <convert type="ClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget source="session.VideoPicture" render="Pig" position="857,118" size="384,216" zPosition="3" backgroundColor="transparent" />
+    <eLabel backgroundColor="#00000000" position="857,118" size="384,216" transparent="0" zPosition="2" />
+    <eLabel backgroundColor="KravenBorder2" position="857,118" size="384,3" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="857,331" size="384,3" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="857,118" size="3,216" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="1238,118" size="3,216" transparent="0" zPosition="4" />
+    <eLabel text="aktuell läuft:" position="1285,125" size="572,51" font="Regular2;39" foregroundColor="KravenFont2" backgroundColor="Kravenbg2" transparent="1" halign="left" />
+    <widget source="session.CurrentService" render="Label" position="1285,183" size="572,51" font="Regular;39" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" noWrap="1" transparent="1" halign="left">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="1285,240" size="572,92" font="Regular;36" foregroundColor="KravenFont2" backgroundColor="Kravenbg2" transparent="1" halign="left" valign="top">
+      <convert type="KravenFHDEventName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" scrollbarMode="showOnDemand" scrollbarWidth="5" picServiceEventProgressbar="KravenFHD/progress/progress52.png" colorEventProgressbar="KravenProgress" colorEventProgressbarSelected="KravenProgress" foregroundColorMarkedSelected="green" foregroundColor="KravenFont1" colorEventProgressbarBorder="KravenBorder" colorEventProgressbarBorderSelected="KravenSelFont" colorServiceDescription="KravenFont2" colorServiceDescriptionSelected="KravenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="KravenNotAvailable" name="list" position="817,350" serviceInfoFont="Regular;34" serviceItemHeight="50" serviceNameFont="Regular;37" serviceNumberFont="Regular;37" size="1040,600" name="giopet" transparent="1" />
+    <!-- nontransbg */-->
+    <constant-widget name="CSMTP32"/>
+    <constant-widget name="ChannelSelection"/>
+    <constant-widget name="gradient-cs"/>
+    <!--<text="ChannelSelection - MiniTV Picon" position="63,0" />-->
+  </screen>

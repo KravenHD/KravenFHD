@@ -672,24 +672,6 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
     <constant-widget name="OKExit"/>
     <!--<text="Console" position="105,0" />-->
   </screen>
-  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="LanguageSelection" position="0,0" size="1920,1080" title="Language selection">
-    <widget position="105,120" render="Listbox" size="1062,810" source="languages" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" zPosition="3">
-      <convert type="TemplatedMultiContent">
-				{"template": [
-				MultiContentEntryText(pos = (195, 26), size = (825, 90), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
-				MultiContentEntryPixmap(pos = (30, 15), size = (90, 60), png = 2), # index 2 is the pixmap
-				],
-				"fonts": [gFont("Regular", 36)],
-				"itemHeight": 90
-				}
-			</convert>
-    </widget>
-    <constant-widget name="Title-big"/>
-	<!-- Logo -->
-    <constant-widget name="Colorbuttons"/>
-    <constant-widget name="OKExit"/>
-    <!--<text="LanguageSelection" position="105,0" />-->
-  </screen>
   <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="LEDBrightnessSetup" position="0,0" size="1920,1080" title="LED Brightness Setup">
     <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,675" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" zPosition="2" />
     <widget backgroundColor="Kravenbg3" name="current_entry" font="Regular2;27" foregroundColor="KravenFont2" halign="center" position="105,877" size="1062,60" valign="center" />

@@ -615,12 +615,12 @@
     <!--<text="BrowserLauncher" position="105,0" />-->
   </screen>
   <!-- ********** WebRadioFS ********** -->
-  <!-- WebradioFSScreen_15 -->
-  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="WebradioFSScreen_15" position="0,0" size="1920,1080" title="">
+  <!-- WebradioFSScreen_16 -->
+  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="WebradioFSScreen_16" position="0,0" size="1920,1080" title="">
     <constant-widget name="Webradio1"/>
     <constant-widget name="Colorbuttons"/>
     <constant-widget name="BackgroundWR"/>
-    <!--<text="WebradioFSScreen_13" position="105,0" />-->
+    <!--<text="WebradioFSScreen_16" position="105,0" />-->
   </screen>
   <!-- genre_anzeige_13 -->
   <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="genre_anzeige_13" position="0,0" size="1920,1080" title="">
@@ -643,8 +643,8 @@
     <constant-widget name="BackgroundWR"/>
     <!--<text="groups_13" position="105,0" />-->
   </screen>
-    <!-- wbrFS_r_site13 -->
-  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="wbrFS_r_site13" position="1350,0" size="570,960">
+    <!-- wbrFS_r_site15 -->
+  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="wbrFS_r_site15" position="1350,0" size="570,960">
     <widget alphatest="blend" backgroundColor="Kravenbg" name="picture" position="0,120" size="420,417" />
     <widget backgroundColor="Kravenbg" font="Regular;27" foregroundColor="KravenFont1" halign="center" name="zeile1b" position="0,570" size="420,33" transparent="1" noWrap="1" />
     <widget backgroundColor="Kravenbg" font="Regular;27" foregroundColor="KravenFont1" halign="center" name="zeile2b" position="0,603" size="420,33" transparent="1" noWrap="1" />
@@ -663,7 +663,7 @@
     </widget>
     <constant-widget name="BackgroundWR"/>
     <constant-widget name="gradient-wrr"/>
-    <!--<text="wbrFS_r_site13" position="105,0" />-->
+    <!--<text="wbrFS_r_site15" position="105,0" />-->
   </screen>
   <!-- WebradioFSSetup_13 -->
   <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="WebradioFSSetup_13" position="0,0" size="1920,1080" title="webradioFS">
@@ -1598,11 +1598,10 @@
   <!-- tmdbConfigScreen -->
   <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="tmdbConfigScreen" position="0,0" size="1920,1080" title="TMDb - The Movie Database">
     <constant-widget name="Title-big"/>
-	<widget backgroundColor="Kravenbg3" name="info" font="Regular2;36" foregroundColor="KravenFont2" position="105,120" size="1062,45" />
-	<widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,172" size="1062,765" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
 	<!-- Logo -->
     <constant-widget name="Colorbuttons"/>
-    <constant-widget name="NameRedGreenYellowBlue"/>
+    <constant-widget name="SourceRedGreen"/>
     <constant-widget name="OKExit"/>
     <!--<text="tmdbConfigScreen" position="105,0" />-->
   </screen>
@@ -1626,7 +1625,7 @@
 	<ePixmap position="1132,172" size="150,125" pixmap="KravenFHD/TMDb/star.png" zPosition="0" transparent="1" alphatest="blend" />
 	<widget name="rating" font="Regular;33" foregroundColor="#00000000" position="1130,220" size="150,42" zPosition="2" transparent="1" halign="center" />
 	<widget backgroundColor="Kravenbg" name="votes_brackets" font="Regular;33" foregroundColor="KravenFont1" position="1095,300" size="225,42" zPosition="2" transparent="1" halign="center" />
-	<widget backgroundColor="Kravenbg" name="fsk" font="Regular;33" foregroundColor="KravenFont1" position="1095,345" size="225,42" transparent="1" zPosition="2" halign="center" />
+	<widget name="fsklogo" position="1378,198" size="100,100" zPosition="2" alphatest="blend"/>
 	<widget backgroundColor="Kravenbg" name="year_txt" font="Regular;33" foregroundColor="KravenFont1" position="1050,390" size="600,42" zPosition="2" transparent="1" />
 	<widget backgroundColor="Kravenbg" name="year" font="Regular;33" foregroundColor="KravenFont1" position="1245,390" size="600,42" zPosition="2" transparent="1" />
 	<widget backgroundColor="Kravenbg" name="country_txt" font="Regular;33" foregroundColor="KravenFont1" position="1050,435" size="600,42" zPosition="2" transparent="1" />
@@ -1652,6 +1651,34 @@
     <constant-widget name="OKExit"/>
     <!--<text="tmdbScreenMovie" position="105,0" />-->
   </screen>
+  <!-- tmdbScreenPeople -->
+  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="tmdbScreenPeople" position="0,0" size="1920,1080" title="TMDb - The Movie Database">
+    <constant-widget name="Title-big"/>
+	<widget backgroundColor="Kravenbg" name="searchinfo" font="Regular2;36" foregroundColor="KravenFont2" position="105,120" size="1062,45" />
+	<widget backgroundColor="Kravenbg" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,172" size="1062,450" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<widget backgroundColor="Kravenbg" name="cover" position="1320,172" size="450,630" alphatest="blend" />
+	<widget backgroundColor="Kravenbg" name="data" font="Regular2;32" foregroundColor="KravenFont2" position="105,650" size="1062,287" />
+	<constant-widget name="Background"/>
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="NameRedGreen"/>
+    <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="2" />
+    <constant-widget name="MenuOKExit"/>
+    <!--<text="tmdbScreenPeople" position="105,0" />-->
+  </screen>
+  <!-- tmdbScreenSeason -->
+  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="tmdbScreenSeason" position="0,0" size="1920,1080" title="TMDb - The Movie Database">
+    <constant-widget name="Title-big"/>
+	<widget backgroundColor="Kravenbg" name="searchinfo" font="Regular2;36" foregroundColor="KravenFont2" position="105,120" size="1062,45" />
+	<widget backgroundColor="Kravenbg" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,172" size="1062,450" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" />
+	<widget backgroundColor="Kravenbg" name="cover" position="1320,172" size="450,630" alphatest="blend" />
+	<widget backgroundColor="Kravenbg" name="data" font="Regular2;32" foregroundColor="KravenFont2" position="105,650" size="1062,287" />
+	<constant-widget name="Background"/>
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="NameRedGreen"/>
+    <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="2" />
+    <constant-widget name="MenuOKExit"/>
+    <!--<text="tmdbScreenSeason" position="105,0" />-->
+  </screen>
   <!-- NachrichtenZentrale -->
   <screen backgroundColor="Kravenbg3" name="NachrichtenZentrale" title="NachrichtenZentrale" flags="wfNoBorder" zPosition="0" position="0,0" size="1920,1080">
 	<eLabel text="NachrichtenZentrale" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
@@ -1675,7 +1702,7 @@
   <screen name="ForecaPreview" position="0,0" size="1920,1080" title="Foreca Weather Forecast" backgroundColor="transparent" flags="wfNoBorder">
     <constant-widget name="Title-big"/>
     <widget backgroundColor="Kravenbg" source="Titel" render="Label" font="Regular2;36" foregroundColor="KravenFont2" noWrap="1" position="105,105" size="1752,46" halign="left" valign="center" transparent="1" zPosition="2" />
-    <widget name="MainList" position="105,155" size="1752,725" backgroundColor="Kravenbg" foregroundColor="KravenFont1" foregroundColorSelected="KravenSelFont" backgroundColorSelected="KravenSelection" itemHeight="145" font0="Regular;32" font1="Regular;30" font2="Regular;32" font3="Regular;32" setTime="0,51,120,48" setPict="137,39,70,70" setPictScale="0" setTemp="232,21,135,48" setTempUnits="232,82,135,48" setWindPict="376,60,35,35" setWindPictScale="1" setWind="412,21,142,48" setWindUnits="412,81,180,48" text1Pos="600,6,750,48" text2Pos="600,52,750,48" text3Pos="600,99,750,48" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget name="MainList" position="105,210" size="1752,702" backgroundColor="Kravenbg" foregroundColor="KravenFont1" foregroundColorSelected="KravenSelFont" backgroundColorSelected="KravenSelection" itemHeight="180" font0="Regular;32" font1="Regular;30" font2="Regular;32" font3="Regular;32" setTime="0,66,120,48" setPict="120,37,105,105" setPictScale="0" setTemp="232,21,135,48" setTempUnits="232,97,135,48" setWindPict="376,67,35,35" setWindPictScale="1" setWind="412,36,142,48" setWindUnits="412,81,180,48" text1Pos="600,6,750,48" text2Pos="600,45,750,48" text3Pos="600,81,750,48" text4Pos="600,120,750,48" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
     <widget backgroundColor="Kravenbg" source="Titel2" render="Label" font="Regular2;32" foregroundColor="KravenFont2" position="105,890" size="1752,41" halign="left" transparent="1" zPosition="2" />
     <constant-widget name="Background"/>
     <constant-widget name="Colorbuttons"/>
@@ -1769,5 +1796,39 @@
     <widget font="Regular;30" halign="left" valign="center" name="save" position="480,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <constant-widget name="OKExit"/>
     <!--<text="FolderSelection" position="105,0" />-->
+  </screen>
+  <!-- MovieInfoTMDb -->
+  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="MovieInfoTMDb" position="0,0" size="1920,1080" title="Movie Information TMDb">
+    <constant-widget name="Title-big"/>
+	<widget backgroundColor="Kravenbg" name="movie_name" position="105,120" size="1062,92" font="Regular;36" foregroundColor="KravenFont2" valign="top" transparent="1" />
+	<widget backgroundColor="Kravenbg" name="previewlist" position="105,220" size="1062,697" font="Regular;32" foregroundColor="KravenFont1" itemHeight="41" scrollbarMode="showOnDemand" transparent="1" />
+	<widget backgroundColor="Kravenbg" name="contenttxt" position="105,220" size="1062,697" font="Regular;32" foregroundColor="KravenFont1" transparent="1" />
+	<widget backgroundColor="Kravenbg" name="previewcover" position="1408,120" size="270,378" alphatest="blend" zPosition="2" />
+	<widget backgroundColor="Kravenbg" name="runtime" font="Regular;32" foregroundColor="KravenFont2" position="1230,544" size="300,41" />
+	<widget backgroundColor="Kravenbg" name="runtimetxt" font="Regular;32" foregroundColor="KravenFont1" position="1557,544" size="300,41" halign="right" />
+	<widget backgroundColor="Kravenbg" name="genre" font="Regular;32" foregroundColor="KravenFont2" position="1230,585" size="300,41" />
+	<widget backgroundColor="Kravenbg" name="genretxt" font="Regular;32" foregroundColor="KravenFont1" position="1557,585" size="300,82" halign="right" valign="top" />
+	<widget backgroundColor="Kravenbg" name="country" font="Regular;32" foregroundColor="KravenFont2" position="1230,667" size="300,41" />
+	<widget backgroundColor="Kravenbg" name="countrytxt" font="Regular;32" foregroundColor="KravenFont1" position="1557,667" size="300,82" halign="right" valign="top" />
+	<widget backgroundColor="Kravenbg" name="release" font="Regular;32" foregroundColor="KravenFont2" position="1230,749" size="300,41" />
+	<widget backgroundColor="Kravenbg" name="releasetxt" font="Regular;32" foregroundColor="KravenFont1" position="1557,749" size="300,41" halign="right" valign="top" />
+	<widget backgroundColor="Kravenbg" name="rating" font="Regular;32" foregroundColor="KravenFont2" position="1230,790" size="300,41" />
+	<widget backgroundColor="Kravenbg" name="ratingtxt" font="Regular;32" foregroundColor="KravenFont1" position="1557,790" size="300,41" halign="right" valign="top" />
+	<widget name="starsbg" position="1438,870" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnhancedMovieCenter/img/starsbar_empty_10.png" zPosition="3" alphatest="blend" />
+	<widget name="stars" position="1438,870" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnhancedMovieCenter/img/starsbar_filled_10.png" zPosition="4" transparent="1" />
+	<constant-widget name="Background"/>
+    <constant-widget name="Colorbuttons"/>
+    <eLabel text="Save" position="480,997" size="330,39" zPosition="1" font="Regular;30" halign="left" valign="center" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
+    <constant-widget name="MenuOKExit"/>
+    <!--<text="MovieInfoTMDb" position="105,0" />-->
+  </screen>
+  <screen backgroundColor="Kravenbg" name="SpinnerSelectionBox" position="0,0" size="1920,1080" title=" ">
+	<widget backgroundColor="KravenIBbg3" name="text" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" />
+	<widget backgroundColor="Kravenbg3" name="list" position="105,120" size="1062,585" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="bild" position="105,735" zPosition="1" size="300,200" transparent="1" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="SpinnerSelectionBox" position="105,0" />-->
   </screen>
 <!-- plugins -->

@@ -112,19 +112,19 @@ class KravenFHDWeather_accu(Poll, Converter, object):
 		global WEATHER_LOAD
 		if WEATHER_LOAD == True:
 			try:
-				r = ping.doOne("8.8.8.8",0.5)
-				if r != None and r <= 0.5:
+				r = ping.doOne("8.8.8.8",1.5)
+				if r != None and r <= 1.5:
 					print "KravenWeather: Weather download from AccuWeather"
-					res = requests.get(URL, timeout=0.1)
+					res = requests.get(URL, timeout=1.5)
 					self.data = res.json()
 					WEATHER_DATA1 = self.data
-					res2 = requests.get(URL2, timeout=0.1)
+					res2 = requests.get(URL2, timeout=1.5)
 					self.data2 = res2.json()
 					WEATHER_DATA2 = self.data2
 					WEATHER_LOAD = False
 			except:
 				pass
-			timeout = int(config.plugins.KravenFHD.refreshInterval.value) * 1000.0 * 60.0
+			timeout = max(15,int(config.plugins.KravenFHD.refreshInterval.value)) * 1000.0 * 60.0
 			self.timer.start(int(timeout), True)
 		else:
 			self.data = WEATHER_DATA1

@@ -259,8 +259,7 @@ for i in range(1,21):
 		profList.append((n,_(name)))
 config.plugins.KravenFHD.defaultProfile = ConfigSelection(default="default", choices = profList)
 				
-config.plugins.KravenFHD.refreshInterval = ConfigSelection(default="15", choices = [
-				("0", _("0")),
+config.plugins.KravenFHD.refreshInterval = ConfigSelection(default="60", choices = [
 				("15", _("15")),
 				("30", _("30")),
 				("60", _("60")),
@@ -532,7 +531,8 @@ config.plugins.KravenFHD.ChannelSelectionStyle = ConfigSelection(default="channe
 				("channelselection-style-nobile", _("Nobile")),
 				("channelselection-style-nobile2", _("Nobile 2")),
 				("channelselection-style-nobile-minitv", _("Nobile MiniTV")),
-				("channelselection-style-nobile-minitv3", _("Nobile Preview"))
+				("channelselection-style-nobile-minitv3", _("Nobile Preview")),
+				("channelselection-style-minitv-picon", _("MiniTV Picon"))
 				])
 
 config.plugins.KravenFHD.ChannelSelectionStyle2 = ConfigSelection(default="channelselection-style-minitv", choices = [
@@ -552,7 +552,8 @@ config.plugins.KravenFHD.ChannelSelectionStyle2 = ConfigSelection(default="chann
 				("channelselection-style-nobile2", _("Nobile 2")),
 				("channelselection-style-nobile-minitv", _("Nobile MiniTV")),
 				("channelselection-style-nobile-minitv3", _("Nobile Preview")),
-				("channelselection-style-nobile-minitv33", _("Nobile Extended Preview"))
+				("channelselection-style-nobile-minitv33", _("Nobile Extended Preview")),
+				("channelselection-style-minitv-picon", _("MiniTV Picon"))
 				])
 
 config.plugins.KravenFHD.ChannelSelectionMode = ConfigSelection(default="zap", choices = [
@@ -742,6 +743,11 @@ config.plugins.KravenFHD.RunningTextSpeed = ConfigSelection(default="steptime=10
 				("steptime=100", _("10 px/sec")),
 				("steptime=66", _("15 px/sec")),
 				("steptime=50", _("20 px/sec"))
+				])
+
+config.plugins.KravenFHD.RunningTextRenderer = ConfigSelection(default="Kraven", choices = [
+				("vti", _("VTi")),
+				("kraven", _("Kraven"))
 				])
 
 config.plugins.KravenFHD.ScrollBar = ConfigSelection(default="scrollbarWidth=0", choices = [
@@ -1190,7 +1196,7 @@ class KravenFHD(ConfigListScreen, Screen):
   </widget>
   <widget backgroundColor="#00000000" name="config" font="Regular;22" foregroundColor="#00ffffff" itemHeight="30" position="70,85" size="708,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
   <eLabel backgroundColor="#00000000" text="KravenFHD" font="Regular;36" foregroundColor="#00f0a30a" position="830,80" size="402,46" halign="center" valign="center" transparent="1" />
-  <eLabel backgroundColor="#00000000" text="Version: 3.3.1" font="Regular;30" foregroundColor="#00ffffff" position="845,126" size="372,40" halign="center" valign="center" transparent="1" />
+  <eLabel backgroundColor="#00000000" text="Version: 3.4.15" font="Regular;30" foregroundColor="#00ffffff" position="845,126" size="372,40" halign="center" valign="center" transparent="1" />
   <eLabel backgroundColor="#00f0a30a" position="798,169" size="466,3" />
   <eLabel backgroundColor="#00f0a30a" position="798,431" size="466,3" />
   <eLabel backgroundColor="#00f0a30a" position="798,172" size="3,259" />
@@ -1218,7 +1224,7 @@ class KravenFHD(ConfigListScreen, Screen):
   </widget>
   <widget backgroundColor="#00000000" name="config" font="Regular;32" foregroundColor="#00ffffff" itemHeight="45" position="105,127" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
   <eLabel backgroundColor="#00000000" text="KravenFHD" font="Regular;54" foregroundColor="#00f0a30a" position="1245,120" size="603,69" halign="center" valign="center" transparent="1" />
-  <eLabel backgroundColor="#00000000" text="Version: 3.3.1" font="Regular;45" foregroundColor="#00ffffff" position="1267,208" size="558,60" halign="center" valign="center" transparent="1" />
+  <eLabel backgroundColor="#00000000" text="Version: 3.4.15" font="Regular;45" foregroundColor="#00ffffff" position="1267,208" size="558,60" halign="center" valign="center" transparent="1" />
   <eLabel backgroundColor="#00f0a30a" position="1313,337" size="466,3" />
   <eLabel backgroundColor="#00f0a30a" position="1313,599" size="466,3" />
   <eLabel backgroundColor="#00f0a30a" position="1313,340" size="3,259" />
@@ -1334,6 +1340,10 @@ class KravenFHD(ConfigListScreen, Screen):
 		else:
 			emptyLines+=1
 		if self.E2DistroVersion == "VTi":
+			list.append(getConfigListEntry(_("Running Text Renderer"), config.plugins.KravenFHD.RunningTextRenderer, _("Choose the version for running text renderer.")))
+		else:
+			emptyLines+=1
+		if self.E2DistroVersion == "VTi":
 			list.append(getConfigListEntry(_("Scrollbars"), config.plugins.KravenFHD.ScrollBar, _("Choose the width of scrollbars in lists or deactivate scrollbars completely.")))
 		elif self.E2DistroVersion == "openatv":
 			list.append(getConfigListEntry(_("Scrollbars"), config.plugins.KravenFHD.ScrollBar2, _("Choose whether scrollbars should be shown.")))
@@ -1348,7 +1358,7 @@ class KravenFHD(ConfigListScreen, Screen):
 				list.append(getConfigListEntry(_("Menu-Transparency"), config.plugins.KravenFHD.MenuColorTrans, _("Choose the degree of background transparency for system menu screens.")))
 			else:
 				emptyLines+=1
-			for i in range(emptyLines+3):
+			for i in range(emptyLines+2):
 				list.append(getConfigListEntry(_(" "), ))
 		else:
 			list.append(getConfigListEntry(_("Menus"), config.plugins.KravenFHD.LogoNoInternet, _("Choose from different options to display the system menus. Press red button for the FAQs with details on installing menu icons.")))
@@ -1356,7 +1366,7 @@ class KravenFHD(ConfigListScreen, Screen):
 				list.append(getConfigListEntry(_("Menu-Transparency"), config.plugins.KravenFHD.MenuColorTrans, _("Choose the degree of background transparency for system menu screens.")))
 			else:
 				emptyLines+=1
-			for i in range(emptyLines+4):
+			for i in range(emptyLines+3):
 				list.append(getConfigListEntry(_(" "), ))
 		
 		# page 2
@@ -1602,11 +1612,11 @@ class KravenFHD(ConfigListScreen, Screen):
 				else:
 					list.append(getConfigListEntry(_("Channellist-Style"), config.plugins.KravenFHD.ChannelSelectionStyle, _("Choose from different styles for the channel selection screen.")))
 					self.actChannelselectionstyle=config.plugins.KravenFHD.ChannelSelectionStyle.value
-				if self.actChannelselectionstyle in ("channelselection-style-minitv","channelselection-style-minitv2","channelselection-style-minitv22","channelselection-style-minitv33","channelselection-style-minitv4","channelselection-style-nobile-minitv","channelselection-style-nobile-minitv33"):
+				if self.actChannelselectionstyle in ("channelselection-style-minitv","channelselection-style-minitv2","channelselection-style-minitv22","channelselection-style-minitv33","channelselection-style-minitv4","channelselection-style-nobile-minitv","channelselection-style-nobile-minitv33","channelselection-style-minitv-picon"):
 					list.append(getConfigListEntry(_("Channellist-Mode"), config.plugins.KravenFHD.ChannelSelectionMode, _("Choose between direct zapping (1xOK) and zapping after preview (2xOK).")))
 				else:
 					emptyLines+=1
-				if not self.actChannelselectionstyle in ("channelselection-style-minitv","channelselection-style-minitv2","channelselection-style-minitv3","channelselection-style-minitv4","channelselection-style-minitv22","channelselection-style-nobile-minitv","channelselection-style-nobile-minitv3"):
+				if not self.actChannelselectionstyle in ("channelselection-style-minitv","channelselection-style-minitv2","channelselection-style-minitv3","channelselection-style-minitv4","channelselection-style-minitv22","channelselection-style-nobile-minitv","channelselection-style-nobile-minitv3","channelselection-style-minitv-picon"):
 					list.append(getConfigListEntry(_("Channellist-Transparenz"), config.plugins.KravenFHD.ChannelSelectionTrans, _("Choose the degree of background transparency for the channellists.")))
 				else:
 					emptyLines+=1
@@ -1654,11 +1664,11 @@ class KravenFHD(ConfigListScreen, Screen):
 			else:
 				list.append(getConfigListEntry(_("Channellist-Style"), config.plugins.KravenFHD.ChannelSelectionStyle, _("Choose from different styles for the channel selection screen.")))
 				self.actChannelselectionstyle=config.plugins.KravenFHD.ChannelSelectionStyle.value
-			if self.actChannelselectionstyle in ("channelselection-style-minitv","channelselection-style-minitv2","channelselection-style-minitv22","channelselection-style-minitv33","channelselection-style-minitv4","channelselection-style-nobile-minitv","channelselection-style-nobile-minitv33"):
+			if self.actChannelselectionstyle in ("channelselection-style-minitv","channelselection-style-minitv2","channelselection-style-minitv22","channelselection-style-minitv33","channelselection-style-minitv4","channelselection-style-nobile-minitv","channelselection-style-nobile-minitv33","channelselection-style-minitv-picon"):
 				list.append(getConfigListEntry(_("Channellist-Mode"), config.plugins.KravenFHD.ChannelSelectionMode, _("Choose between direct zapping (1xOK) and zapping after preview (2xOK).")))
 			else:
 				emptyLines+=1
-			if not self.actChannelselectionstyle in ("channelselection-style-minitv","channelselection-style-minitv2","channelselection-style-minitv3","channelselection-style-minitv4","channelselection-style-minitv22","channelselection-style-nobile-minitv","channelselection-style-nobile-minitv3"):
+			if not self.actChannelselectionstyle in ("channelselection-style-minitv","channelselection-style-minitv2","channelselection-style-minitv3","channelselection-style-minitv4","channelselection-style-minitv22","channelselection-style-nobile-minitv","channelselection-style-nobile-minitv3","channelselection-style-minitv-picon"):
 				list.append(getConfigListEntry(_("Channellist-Transparenz"), config.plugins.KravenFHD.ChannelSelectionTrans, _("Choose the degree of background transparency for the channellists.")))
 			else:
 				emptyLines+=1
@@ -2095,6 +2105,11 @@ class KravenFHD(ConfigListScreen, Screen):
 				self.showText(60,_("runningtext"))
 			elif option.value == "typewriter":
 				self.showText(60,_("typewriter"))
+		elif option == config.plugins.KravenFHD.RunningTextRenderer:
+			if option.value == "vti":
+				self.showText(44,_("VRunningText"))
+			elif option.value == "kraven":
+				self.showText(44,_("KravenFHDRunningText"))
 		elif option == config.plugins.KravenFHD.IBtop:
 			if option.value == "infobar-x2-z1_top":
 				self.showText(62,_("4 Tuner"))
@@ -2148,9 +2163,7 @@ class KravenFHD(ConfigListScreen, Screen):
 		elif option == config.plugins.KravenFHD.weather_language:
 			self.showText(75,option.value)
 		elif option == config.plugins.KravenFHD.refreshInterval:
-			if option.value == "0":
-				self.showText(62,_("Off"))
-			elif option.value == "15":
+			if option.value == "15":
 				self.showText(62,"00:15")
 			elif option.value == "30":
 				self.showText(62,"00:30")
@@ -3364,6 +3377,13 @@ class KravenFHD(ConfigListScreen, Screen):
 				self.skinSearchAndReplace.append(['<constant-widget name="CSZZZEPG32"/>', '<constant-widget name="CSZZZEPG36"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "small":
 				self.skinSearchAndReplace.append(['<constant-widget name="CSZZZEPG32"/>', '<constant-widget name="CSZZZEPG32Prime"/>'])
+		elif self.actChannelselectionstyle == "channelselection-style-minitv-picon":
+			if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
+				self.skinSearchAndReplace.append(['<constant-widget name="CSMTP32"/>', '<constant-widget name="CSMTP32Prime"/>'])
+			elif config.plugins.KravenFHD.Primetimeavailable.value == "none" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
+				self.skinSearchAndReplace.append(['<constant-widget name="CSMTP32"/>', '<constant-widget name="CSMTP36"/>'])
+			elif config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "small":
+				self.skinSearchAndReplace.append(['<constant-widget name="CSMTP32"/>', '<constant-widget name="CSMTP36Prime"/>'])
 
 		### ChannelSelection horizontal Primetime
 		if self.E2DistroVersion == "VTi" and config.plugins.KravenFHD.alternativeChannellist.value == "on" and config.plugins.KravenFHD.ChannelSelectionHorStyle.value == "cshor-minitv" and config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on":
@@ -3521,6 +3541,11 @@ class KravenFHD(ConfigListScreen, Screen):
 		self.skinSearchAndReplace.append(['name="KravenLine" value="#00ffffff', 'name="KravenLine" value="#00' + config.plugins.KravenFHD.Line.value])
 
 		### Runningtext
+		if self.E2DistroVersion == "VTi":
+			if config.plugins.KravenFHD.RunningTextRenderer.value == "vti":
+				self.skinSearchAndReplace.append(["KravenRunningText", "VRunningText"])
+			else:
+				self.skinSearchAndReplace.append(["KravenRunningText", "KravenFHDRunningText"])
 		if config.plugins.KravenFHD.RunningText.value == "none":
 			self.skinSearchAndReplace.append(["movetype=running", "movetype=none"])
 		if not config.plugins.KravenFHD.RunningText.value == "none":
@@ -3775,7 +3800,7 @@ class KravenFHD(ConfigListScreen, Screen):
 					else:
 						config.usage.servicelist_preview_mode.value = True
 						config.usage.servicelist_preview_mode.save()
-				elif self.actChannelselectionstyle in ("channelselection-style-minitv","channelselection-style-minitv4","channelselection-style-nobile-minitv"):
+				elif self.actChannelselectionstyle in ("channelselection-style-minitv","channelselection-style-minitv4","channelselection-style-nobile-minitv","channelselection-style-minitv-picon"):
 					config.usage.use_pig.value = True
 					config.usage.use_pig.save()
 					config.usage.use_extended_pig.value = False
@@ -4135,10 +4160,7 @@ class KravenFHD(ConfigListScreen, Screen):
 		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
 			self.actWeatherstyle=config.plugins.KravenFHD.WeatherStyle2.value
 		self.appendSkinFile(self.daten + self.actWeatherstyle + ".xml")
-		if self.actWeatherstyle == "none" and self.actClockstyle != "clock-android" and self.actClockstyle != "clock-weather" and config.plugins.KravenFHD.SIB.value != "sib6" and config.plugins.KravenFHD.SIB.value != "sib7" and config.plugins.KravenFHD.PlayerClock.value != "player-android" and config.plugins.KravenFHD.PlayerClock.value != "player-weather":
-			config.plugins.KravenFHD.refreshInterval.value = "0"
-			config.plugins.KravenFHD.refreshInterval.save()
-		elif config.plugins.KravenFHD.refreshInterval.value == "0":
+		if config.plugins.KravenFHD.refreshInterval.value == "0":
 			config.plugins.KravenFHD.refreshInterval.value = config.plugins.KravenFHD.refreshInterval.default
 			config.plugins.KravenFHD.refreshInterval.save()
 
@@ -4639,6 +4661,8 @@ class KravenFHD(ConfigListScreen, Screen):
 			self.appendSkinFile(self.daten + config.plugins.KravenFHD.SplitScreen.value + ".xml")
 
 		### TimerEditScreen
+		if self.E2DistroVersion == "openatv":
+			self.skinSearchAndReplace.append(['name="timerlist" font="Regular;33"', 'name="timerlist" itemHeight="80" rowSplit="39" iconMargin="8" satPosLeft="240" setFont="Regular;30" setEventNameFont="Regular;32" setServiceNameFont="Regular;32"'])
 		self.appendSkinFile(self.daten + config.plugins.KravenFHD.TimerEditScreen.value + ".xml")
 
 		### TimerListStyle
@@ -4751,6 +4775,7 @@ class KravenFHD(ConfigListScreen, Screen):
 
 		### MediaPortal
 		console = eConsoleAppContainer()
+		console1 = eConsoleAppContainer()
 		if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/plugin.py"):
 			if config.plugins.KravenFHD.MediaPortal.value == "mediaportal":
 				if config.plugins.KravenFHD.IBColor.value == "all-screens" and config.plugins.KravenFHD.IconStyle.value == "icons-light" and config.plugins.KravenFHD.IBStyle.value == "grad":
@@ -4769,6 +4794,8 @@ class KravenFHD(ConfigListScreen, Screen):
 					console.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_IB_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
 				elif config.plugins.KravenFHD.IBColor.value == "only-infobar" and config.plugins.KravenFHD.IconStyle.value == "icons-dark" and config.plugins.KravenFHD.IBStyle.value == "box":
 					console.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_box_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
+			if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/haupt_Screen.xml"):
+				console1.execute("rm -r /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/")
 
 		### vti - atv
 		if self.E2DistroVersion == "VTi":
@@ -4905,8 +4932,8 @@ class KravenFHD(ConfigListScreen, Screen):
 
 	def getInternetAvailable(self):
 		import ping
-		r = ping.doOne("8.8.8.8",0.5)
-		if r != None and r <= 0.5:
+		r = ping.doOne("8.8.8.8",1.5)
+		if r != None and r <= 1.5:
 			return True
 		else:
 			return False

@@ -14,7 +14,7 @@
     <widget backgroundColor="Kravenbg2" name="list" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="30,225" size="1320,630" zPosition="5" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
     <widget backgroundColor="Kravenbg2" name="config" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="30,180" size="1305,720" zPosition="5" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
     <widget backgroundColor="Kravenbg2" name="menu_list" position="30,180" size="1305,750" zPosition="5" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
-    <widget backgroundColor="Kravenbg2" name="log" position="30,180" size="1860,720" zPosition="5" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="log" position="30,180" size="1305,750" zPosition="5" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
     <widget backgroundColor="Kravenbg2" name="popup_bg" position="255,240" size="900,585" pixmap="KravenFHD/graphics/popup_bg.png" transparent="0" zPosition="6" />
     <widget backgroundColor="Kravenbg2" name="popup_list" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="285,270" size="840,540" zPosition="7" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
     <widget backgroundColor="Kravenbg2" name="popup_list2" font="Regular;33" foregroundColor="KravenFont1" itemHeight="45" position="285,270" size="840,540" zPosition="8" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
@@ -26,7 +26,7 @@
 	<widget name="cover" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/no_cover.png" position="1407,480" size="483,450" zPosition="2" transparent="1" alphatest="blend" />
     <widget backgroundColor="Kravenbg2" name="config_information_text" font="Regular;21" foregroundColor="KravenFont1" position="1422,487" size="453,435" transparent="1" halign="left" zPosition="5" />
     <widget backgroundColor="Kravenbg2" name="info" font="Regular;36" position="30,180" size="1305,750" scrollbarWidth="5" transparent="1" zPosition="1" />
-    <widget backgroundColor="Kravenbg2" name="path" font="Regular;28" position="75,75" size="1230,82" transparent="1" valign="center" halign="left" />
+    <widget backgroundColor="Kravenbg2" name="path" font="Regular;28" position="75,90" size="1230,82" transparent="1" valign="center" halign="left" />
     <widget name="bt_red" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/red_round.png" position="38,984" zPosition="1" size="32,32" alphatest="blend" />
     <widget name="text_red" position="90,981" size="300,39" zPosition="1" font="Regular;28" halign="left" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
     <widget name="bt_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/green_round.png" position="410,984" zPosition="1" size="32,32" alphatest="blend" />

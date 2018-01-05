@@ -23,7 +23,7 @@
     <eLabel backgroundColor="KravenBorder2" position="105,500" size="512,4" transparent="0" zPosition="4" />
     <eLabel backgroundColor="KravenBorder2" position="105,216" size="4,288" transparent="0" zPosition="4" />
     <eLabel backgroundColor="KravenBorder2" position="613,216" size="4,288" transparent="0" zPosition="4" />
-    <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont1" font="Regular;33" position="694,170" size="1163,336" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" transparent="1">
+    <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont1" font="Regular;33" position="694,170" size="1163,336" render="KravenRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" transparent="1">
       <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
     </widget>
 	<eLabel position="106,652" size="290,300" backgroundColor="Kravenbg2" />
