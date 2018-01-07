@@ -48,12 +48,12 @@
   </screen>
   <!-- Devices -->
   <screen name="Devices" position="0,0" size="1920,1080" title="SystemInfo" flags="wfNoBorder" backgroundColor="Kravenbg3">
-    <widget source="TunerHeader" render="Label" position="105,181" size="687,54" font="Regular2;36" backgroundColor="Kravenbg3" transparent="1" zPosition="1" foregroundColor="KravenFont2" />
-    <widget source="nims" render="Label" position="105,244" size="687,162" font="Regular;30" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" zPosition="1" enableWrapAround="0" />
-    <widget source="HDDHeader" render="Label" position="105,412" size="687,54" font="Regular2;36" transparent="1" zPosition="1" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" />
-    <widget source="hdd" render="Label" position="105,472" size="687,168" font="Regular;30" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" zPosition="1" enableWrapAround="0" />
-    <widget source="MountsHeader" render="Label" position="105,646" size="687,54" font="Regular2;36" transparent="1" zPosition="1" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" />
-    <widget source="mounts" render="Label" position="105,706" size="687,214" font="Regular;30" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" zPosition="1" enableWrapAround="0" />
+    <widget source="TunerHeader" render="Label" position="105,172" size="1062,46" font="Regular2;36" backgroundColor="Kravenbg3" transparent="1" zPosition="1" foregroundColor="KravenFont2" />
+    <widget source="nims" render="Label" position="105,225" size="1062,190" font="Regular;30" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" zPosition="1" enableWrapAround="0" />
+    <widget source="HDDHeader" render="Label" position="105,422" size="1062,46" font="Regular2;36" transparent="1" zPosition="1" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" />
+    <widget source="hdd" render="Label" position="105,475" size="1062,190" font="Regular;30" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" zPosition="1" enableWrapAround="0" />
+    <widget source="MountsHeader" render="Label" position="105,672" size="1062,46" font="Regular2;36" transparent="1" zPosition="1" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" />
+    <widget source="mounts" render="Label" position="105,725" size="1062,190" font="Regular;30" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" zPosition="1" enableWrapAround="0" />
     <constant-widget name="Title-big"/>
 	<!-- Logo -->
 	<constant-widget name="Exit"/>

@@ -1196,7 +1196,7 @@ class KravenFHD(ConfigListScreen, Screen):
   </widget>
   <widget backgroundColor="#00000000" name="config" font="Regular;22" foregroundColor="#00ffffff" itemHeight="30" position="70,85" size="708,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
   <eLabel backgroundColor="#00000000" text="KravenFHD" font="Regular;36" foregroundColor="#00f0a30a" position="830,80" size="402,46" halign="center" valign="center" transparent="1" />
-  <eLabel backgroundColor="#00000000" text="Version: 3.4.15" font="Regular;30" foregroundColor="#00ffffff" position="845,126" size="372,40" halign="center" valign="center" transparent="1" />
+  <eLabel backgroundColor="#00000000" text="Version: 3.4.16" font="Regular;30" foregroundColor="#00ffffff" position="845,126" size="372,40" halign="center" valign="center" transparent="1" />
   <eLabel backgroundColor="#00f0a30a" position="798,169" size="466,3" />
   <eLabel backgroundColor="#00f0a30a" position="798,431" size="466,3" />
   <eLabel backgroundColor="#00f0a30a" position="798,172" size="3,259" />
@@ -1224,7 +1224,7 @@ class KravenFHD(ConfigListScreen, Screen):
   </widget>
   <widget backgroundColor="#00000000" name="config" font="Regular;32" foregroundColor="#00ffffff" itemHeight="45" position="105,127" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
   <eLabel backgroundColor="#00000000" text="KravenFHD" font="Regular;54" foregroundColor="#00f0a30a" position="1245,120" size="603,69" halign="center" valign="center" transparent="1" />
-  <eLabel backgroundColor="#00000000" text="Version: 3.4.15" font="Regular;45" foregroundColor="#00ffffff" position="1267,208" size="558,60" halign="center" valign="center" transparent="1" />
+  <eLabel backgroundColor="#00000000" text="Version: 3.4.16" font="Regular;45" foregroundColor="#00ffffff" position="1267,208" size="558,60" halign="center" valign="center" transparent="1" />
   <eLabel backgroundColor="#00f0a30a" position="1313,337" size="466,3" />
   <eLabel backgroundColor="#00f0a30a" position="1313,599" size="466,3" />
   <eLabel backgroundColor="#00f0a30a" position="1313,340" size="3,259" />
@@ -3844,6 +3844,8 @@ class KravenFHD(ConfigListScreen, Screen):
 		
 		### ChannelSelection - openatv
 		elif self.E2DistroVersion == "openatv":
+			config.usage.servicelist_mode.value = "standard"
+			config.usage.servicelist_mode.save()
 			self.skinSearchAndReplace.append(['name="giopet"', 'fieldMargins="15" nonplayableMargins="15" itemsDistances="8" progressBarWidth="70" progressPercentWidth="80" progressbarHeight="12"'])
 			if self.actChannelselectionstyle in ("channelselection-style-nopicon","channelselection-style-nopicon2","channelselection-style-xpicon","channelselection-style-zpicon","channelselection-style-zzpicon","channelselection-style-zzzpicon","channelselection-style-minitv3","channelselection-style-nobile-minitv3") or config.plugins.KravenFHD.ChannelSelectionMode.value == "zap":
 				config.usage.servicelistpreview_mode.value = False
@@ -4777,6 +4779,8 @@ class KravenFHD(ConfigListScreen, Screen):
 		console = eConsoleAppContainer()
 		console1 = eConsoleAppContainer()
 		if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/plugin.py"):
+			if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/haupt_Screen.xml"):
+				console1.execute("rm -r /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/")
 			if config.plugins.KravenFHD.MediaPortal.value == "mediaportal":
 				if config.plugins.KravenFHD.IBColor.value == "all-screens" and config.plugins.KravenFHD.IconStyle.value == "icons-light" and config.plugins.KravenFHD.IBStyle.value == "grad":
 					console.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_IB_icons-light.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_IB_icons-light.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
@@ -4794,8 +4798,6 @@ class KravenFHD(ConfigListScreen, Screen):
 					console.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_IB_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
 				elif config.plugins.KravenFHD.IBColor.value == "only-infobar" and config.plugins.KravenFHD.IconStyle.value == "icons-dark" and config.plugins.KravenFHD.IBStyle.value == "box":
 					console.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_box_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
-			if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/haupt_Screen.xml"):
-				console1.execute("rm -r /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/")
 
 		### vti - atv
 		if self.E2DistroVersion == "VTi":

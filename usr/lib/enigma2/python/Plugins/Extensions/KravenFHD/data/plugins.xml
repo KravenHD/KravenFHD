@@ -1822,6 +1822,7 @@
     <constant-widget name="MenuOKExit"/>
     <!--<text="MovieInfoTMDb" position="105,0" />-->
   </screen>
+  <!-- SpinnerSelectionBox -->
   <screen backgroundColor="Kravenbg" name="SpinnerSelectionBox" position="0,0" size="1920,1080" title=" ">
 	<widget backgroundColor="KravenIBbg3" name="text" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" />
 	<widget backgroundColor="Kravenbg3" name="list" position="105,120" size="1062,585" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
