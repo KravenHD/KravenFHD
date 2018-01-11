@@ -1,5 +1,5 @@
   <!-- VerticalEPGView -->
-  <screen flags="wfNoBorder" name="VerticalEPGView" position="0,0" size="1920,1080" title="Programm Guide" backgroundColor="Kravenbg2">
+  <screen flags="wfNoBorder" name="VerticalEPGView" position="0,0" size="1920,1080" title="Programm Guide" backgroundColor="transparent">
 	<eLabel text="Spalten-EPG" position="94,18" size="525,69" backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="center" />
     <widget backgroundColor="KravenIBbg2" source="Title" render="Label" font="Regular;36" foregroundColor="KravenMFont2" position="660,28" size="600,45" halign="center" transparent="1" zPosition="3" />
     <widget backgroundColor="Kravenbg2" font="Regular2;36" foregroundColor="KravenFont2" position="556,99" render="Label" size="1300,45" source="Event" transparent="1">

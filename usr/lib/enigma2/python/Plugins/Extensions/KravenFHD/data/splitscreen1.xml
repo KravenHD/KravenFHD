@@ -1,5 +1,5 @@
 	<!-- SplitScreen -->
-  <screen name="SplitScreen" position="0,0" zPosition="-1" size="1920,1080" flags="wfNoBorder" backgroundColor="Kravenbg2" >
+  <screen name="SplitScreen" position="0,0" zPosition="-1" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent" >
     <widget name="zap_focus" position="63,18" size="1062,45" font="Regular2;36" backgroundColor="KravenIBbg2" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
     <widget source="MasterService" render="Picon" position="63,172" zPosition="1" size="195,117" transparent="1" alphatest="blend">
       <convert type="ServiceName">Reference</convert>

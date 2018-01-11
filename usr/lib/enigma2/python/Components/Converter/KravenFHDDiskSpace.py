@@ -78,20 +78,12 @@ class KravenFHDDiskSpace(Poll, Converter, object):
             elif self.type == self.both:
                 try:
                     stat = statvfs(service.getPath().replace('Latest Recordings',''))
-                    hdd = stat.f_bfree * stat.f_bsize
-                    hddsize = stat.f_blocks * stat.f_bsize
-                    if hdd > 1099511627776:
-                        free = float(hdd/1099511627776.0)
-                        locks = float(hddsize/1099511627776.0)
-                        return ('%.2f TB' % locks) + (', %.2f TB (' % free) + str((100 * stat.f_bavail) // stat.f_blocks) + '%) ' + _('free')
-                    elif hdd > 1073741824:
-                        free = float(hdd/1073741824.0)
-                        locks = float(hddsize/1073741824.0)
-                        return ('%.2f GB' % locks) + (', %.2f GB (' % free) + str((100 * stat.f_bavail) // stat.f_blocks) + '%) ' + _('free')
-                    elif hdd > 1048576:
-                        free = float(hdd/1048576.0)
-                        locks = float(hddsize/1048576.0)
-                        return ('%i MB' % locks) + (', %i MB (' % free) + str((100 * stat.f_bavail) // stat.f_blocks) + '%) ' + _('free')
+                    total = stat.f_blocks * stat.f_bsize
+                    free = (stat.f_bavail or stat.f_bfree) * stat.f_bsize
+                    if total == 0:
+                        total = 1
+                    percentage = free * 100 / total
+                    return ('%s / %s (%d%%) ' + _('free')) % (self.bytes2human(free, 1), self.bytes2human(total, 1), percentage)
                 except OSError:
                     return 'N/A'
 
@@ -110,3 +102,19 @@ class KravenFHDDiskSpace(Poll, Converter, object):
             Converter.changed(self, what)
         elif what[0] is self.CHANGED_POLL:
             self.downstream_elements.changed(what)
+
+    def bytes2human(self, n, digits = 2):
+        symbols = ('KB', 'MB', 'GB', 'TB', 'PB')
+        prefix = {}
+        for i, s in enumerate(symbols):
+            prefix[s] = 1 << (i + 1) * 10
+
+        for s in reversed(symbols):
+            if n >= prefix[s]:
+                if digits > 0:
+                    value = round(float(n) / prefix[s], digits)
+                else:
+                    value = n / prefix[s]
+                return '%s %s' % (value, s)
+
+        return '%s B' % n

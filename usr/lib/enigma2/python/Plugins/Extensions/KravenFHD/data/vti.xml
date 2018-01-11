@@ -1,5 +1,5 @@
   <!-- Animation Setup -->
-  <screen name="AnimationSetupScreen" position="0,0" size="1920,1080" title="Animation Setup" flags="wfNoBorder" backgroundColor="Kravenbg3">
+  <screen name="AnimationSetupScreen" position="0,0" size="1920,1080" title="Animation Setup" flags="wfNoBorder" backgroundColor="transparent">
 	<eLabel text="Animation Setup" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
 	<widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,765" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
     <constant-widget name="Colorbuttons"/>
@@ -22,7 +22,7 @@
     <parameter name="HelpMenuListExtendedFont1" value="Regular;32" />
     <parameter name="HelpMenuListExtendedItemHeight" value="50" />
   </parameters>
-  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="HelpMenu" position="0,0" size="1920,1080" title="Menu">
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="HelpMenu" position="0,0" size="1920,1080" title="Menu">
 	<eLabel text="help..." position="105,18" size="1500,69" backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
     <widget alphatest="blend" name="rc" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png" position="283,220" size="154,500" zPosition="10" />
     <widget backgroundColor="Kravenbg" font="Regular2;36" foregroundColor="KravenFont2" halign="center" name="long_key" position="135,810" size="450,45" transparent="1" />
@@ -36,7 +36,7 @@
     <!--<text="HelpMenu" position="105,0" />-->
   </screen>
   <!-- NetworkBrowser -->
-  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="NetworkBrowser" position="0,0" size="1920,1080" title="Network Neighbourhood">
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="NetworkBrowser" position="0,0" size="1920,1080" title="Network Neighbourhood">
     <widget position="105,120" render="Listbox" size="1062,720" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" source="list" transparent="1" zPosition="3">
       <convert type="TemplatedMultiContent">
 				{"template": [
@@ -63,7 +63,7 @@
     <!--<text="NetworkBrowser" position="105,0" />-->
   </screen>
   <!-- CronManager -->
-  <screen flags="wfNoBorder" name="CronManager" position="0,0" size="1920,1080" title="CronManager" backgroundColor="Kravenbg3">
+  <screen flags="wfNoBorder" name="CronManager" position="0,0" size="1920,1080" title="CronManager" backgroundColor="transparent">
     <widget backgroundColor="Kravenbg3" name="showjobs" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
     <constant-widget name="title-small"/>
     <constant-widget name="Colorbuttons"/>
@@ -73,7 +73,7 @@
     <!--<text="CronManager" position="105,0" />-->
   </screen>
   <!-- SleepTimerEdit -->
-  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="SleepTimerEdit" position="0,0" size="1920,1080" title="Sleep Timer">
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="SleepTimerEdit" position="0,0" size="1920,1080" title="Sleep Timer">
     <widget backgroundColor="Kravenbg3" font="Regular2;33" foregroundColor="KravenFont2" name="pretext" position="150,210" size="375,37" transparent="1" />
     <widget backgroundColor="Kravenbg3" font="Regular2;33" foregroundColor="KravenFont2" name="input" position="525,210" size="75,37" transparent="1" />
     <widget backgroundColor="Kravenbg3" font="Regular2;33" foregroundColor="KravenFont2" name="aftertext" position="600,210" size="180,37" transparent="1" />
@@ -88,7 +88,7 @@
     <constant-widget name="Exit"/>
     <!--<text="SleepTimerEdit" position="105,0" />-->
   </screen>
-  <screen backgroundColor="Kravenbg3" flags="wfNoBorder" name="LanguageSelection" position="0,0" size="1920,1080" title="Language selection">
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="LanguageSelection" position="0,0" size="1920,1080" title="Language selection">
     <widget position="105,120" render="Listbox" size="1062,810" source="languages" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" zPosition="3">
       <convert type="TemplatedMultiContent">
 				{"template": [
@@ -105,4 +105,16 @@
     <constant-widget name="Colorbuttons"/>
     <constant-widget name="OKExit"/>
     <!--<text="LanguageSelection" position="105,0" />-->
+  </screen>
+  <!-- AutoTimerOverview -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoTimerOverview" position="0,0" size="1920,1080" title="AutoTimer Overview">
+    <constant-widget name="Title-big"/>
+	<widget backgroundColor="Kravenbg3" name="entries" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <widget font="Regular;30" halign="left" valign="center" source="key_green" render="Label" position="480,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" source="key_yellow" render="Label" position="855,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" source="key_blue" render="Label" position="1230,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <constant-widget name="MenuOKExit"/>
+    <!--<text="AutoTimerOverview" position="105,0" />-->
   </screen>

@@ -1,7 +1,7 @@
 
   <!-- ********** CoolTVGuide ********** -->
   <!-- CoolSingleGuide -->
-  <screen backgroundColor="Kravenbg2" flags="wfNoBorder" name="CoolSingleGuide" position="0,0" size="1920,1080" title="Cool Single Guide">
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolSingleGuide" position="0,0" size="1920,1080" title="Cool Single Guide">
     <eLabel text="Cool Single Guide" position="63,16" size="525,60" backgroundColor="KravenIBCoolbg" font="Regular2;45" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="top" />
     <widget backgroundColor="Kravenbg2" font="Regular2;42" foregroundColor="KravenFont2" halign="center" position="63,414" render="Label" size="576,54" source="Service" transparent="1" zPosition="3">
       <convert type="ServiceName">Name</convert>
@@ -37,7 +37,7 @@
     <!--<text="CoolSingleGuide - MiniTV" position="63,0" />-->
   </screen>
   <!-- CoolInfoGuide -->
-  <screen backgroundColor="Kravenbg2" flags="wfNoBorder" name="CoolInfoGuide" position="0,0" size="1920,1080" title="Cool Info Guide">
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolInfoGuide" position="0,0" size="1920,1080" title="Cool Info Guide">
     <eLabel text="Cool Info Guide" position="63,16" size="525,60" backgroundColor="KravenIBCoolbg" font="Regular2;45" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="top" />
     <widget backgroundColor="Kravenbg2" font="Regular2;45" foregroundColor="KravenFont2" position="675,105" render="Label" size="600,60" source="Service" transparent="1" zPosition="3">
       <convert type="ServiceName">Name</convert>
@@ -71,7 +71,7 @@
     <!--<text="CoolInfoGuide - MiniTV" position="63,0" />-->
   </screen>
   <!-- CoolTVGuide -->
-  <screen backgroundColor="Kravenbg2" name="CoolTVGuide" position="0,0" size="1920,1080" flags="wfNoBorder" title="Cool TV Guide">
+  <screen backgroundColor="transparent" name="CoolTVGuide" position="0,0" size="1920,1080" flags="wfNoBorder" title="Cool TV Guide">
     <eLabel text="Cool TV Guide" position="63,16" size="525,60" backgroundColor="KravenIBCoolbg" font="Regular2;45" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="top" />
     <widget backgroundColor="KravenIBCoolbg" source="Title" render="Label" font="Regular;33" foregroundColor="KravenMFont2" position="550,25" size="820,42" halign="center" transparent="1" zPosition="3" />
     <widget backgroundColor="Kravenbg2" name="timeline_text" position="7,105" size="1845,45" transparent="1" />
@@ -103,7 +103,7 @@
     <!--<text="CoolTVGuide - MiniTV" position="63,0" />-->
   </screen>
   <!-- CoolNiceGuide -->
-  <screen backgroundColor="Kravenbg2" flags="wfNoBorder" name="CoolNiceGuide" position="0,0" size="1920,1080" title="Cool Nice Guide">
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolNiceGuide" position="0,0" size="1920,1080" title="Cool Nice Guide">
     <eLabel text="Cool Nice Guide" position="63,16" size="525,60" backgroundColor="KravenIBCoolbg" font="Regular2;45" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="top" />
     <widget backgroundColor="KravenIBCoolbg" source="Title" render="Label" font="Regular;33" foregroundColor="KravenMFont2" position="675,25" size="825,42" transparent="1" zPosition="3" />
     <widget backgroundColor="Kravenbg2" font="Regular2;36" foregroundColor="KravenFont2" position="675,106" render="Label" size="600,45" source="Service" halign="left" valign="center" transparent="1" zPosition="3">
@@ -144,7 +144,7 @@
     <!--<text="CoolNiceGuide - MiniTV" position="63,0" />-->
   </screen>
   <!-- CoolSearch -->
-  <screen backgroundColor="Kravenbg2" flags="wfNoBorder" name="CoolSearch" position="0,0" size="1920,1080" title="Cool Search">
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolSearch" position="0,0" size="1920,1080" title="Cool Search">
     <eLabel text="Cool Search" position="63,16" size="525,60" backgroundColor="KravenIBCoolbg" font="Regular2;45" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="top" />
     <widget backgroundColor="Kravenbg2" font="Regular2;36" foregroundColor="KravenFont2" position="675,103" render="Label" size="600,45" source="Service" halign="left" valign="center" transparent="1" zPosition="3">
       <convert type="ServiceName">Name</convert>
@@ -175,7 +175,7 @@
     <!--<text="CoolSearch - MiniTV" position="63,0" />-->
   </screen>
   <!-- CoolEasyGuide -->
-  <screen backgroundColor="Kravenbg2" flags="wfNoBorder" name="CoolEasyGuide" position="0,0" size="1920,1080" title="Cool Easy Guide">
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolEasyGuide" position="0,0" size="1920,1080" title="Cool Easy Guide">
     <eLabel text="Cool Easy Guide" position="63,16" size="525,60" backgroundColor="KravenIBCoolbg" font="Regular2;45" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="top" />
     <widget backgroundColor="KravenIBCoolbg" source="Title" render="Label" font="Regular;33" foregroundColor="KravenMFont2" position="675,25" size="825,42" transparent="1" zPosition="3" />
     <widget backgroundColor="Kravenbg2" font="Regular2;36" foregroundColor="KravenFont2" position="675,103" render="Label" size="600,45" source="Service" halign="left" valign="center" transparent="1" zPosition="3">
@@ -208,7 +208,7 @@
     <!--<text="CoolEasyGuide - MiniTV" position="63,0" />-->
   </screen>
   <!-- CoolMultiGuide -->
-  <screen backgroundColor="Kravenbg2" flags="wfNoBorder" name="CoolMultiGuide" position="0,0" size="1920,1080" title="Cool Multi Guide">
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolMultiGuide" position="0,0" size="1920,1080" title="Cool Multi Guide">
     <eLabel text="Cool Multi Guide" position="63,16" size="525,60" backgroundColor="KravenIBCoolbg" font="Regular2;45" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="top" />
     <widget backgroundColor="KravenIBCoolbg" source="Title" render="Label" font="Regular;33" foregroundColor="KravenMFont2" position="675,25" size="825,42" transparent="1" zPosition="3" />
     <widget backgroundColor="Kravenbg2" font="Regular2;36" foregroundColor="KravenFont2" position="675,103" render="Label" size="600,45" source="Service" halign="left" valign="center" transparent="1" zPosition="3">
@@ -249,7 +249,7 @@
     <!--<text="CoolMultiGuide - MiniTV" position="63,0" />-->
   </screen>
   <!-- CoolTinyGuide -->
-  <screen backgroundColor="Kravenbg2" name="CoolTinyGuide" position="0,0" size="1920,1080" flags="wfNoBorder" title="Cool Tiny Guide">
+  <screen backgroundColor="transparent" name="CoolTinyGuide" position="0,0" size="1920,1080" flags="wfNoBorder" title="Cool Tiny Guide">
     <eLabel text="Cool Tiny Guide" position="63,16" size="525,60" backgroundColor="KravenIBCoolbg" font="Regular2;45" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="top" />
     <widget backgroundColor="KravenIBCoolbg" source="Title" render="Label" font="Regular;33" foregroundColor="KravenMFont2" position="550,25" size="820,42" halign="center" transparent="1" zPosition="3" />
     <widget backgroundColor="Kravenbg2" name="timeline_text" position="7,105" size="1845,45" transparent="1" />
@@ -281,7 +281,7 @@
     <!--<text="CoolTinyGuide - MiniTV" position="63,0" />-->
   </screen>
   <!-- CoolChannelGuide -->
-  <screen backgroundColor="Kravenbg2" flags="wfNoBorder" name="CoolChannelGuide" position="0,0" size="1920,1080" title="Cool Channel Guide">
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolChannelGuide" position="0,0" size="1920,1080" title="Cool Channel Guide">
     <eLabel text="Cool Channel Guide" position="63,16" size="525,60" backgroundColor="KravenIBCoolbg" font="Regular2;45" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="top" />
     <widget backgroundColor="KravenIBCoolbg" source="Title" render="Label" font="Regular;33" foregroundColor="KravenMFont2" position="732,25" size="825,42" transparent="1" zPosition="3" />
     <widget source="session.VideoPicture" render="KravenFHDPig3" position="63,97" size="552,310" zPosition="3" backgroundColor="transparent" />

@@ -1,5 +1,5 @@
   <!-- /* EMC VeryBigCover -->
-  <screen name="EMCSelection" position="0,0" size="1920,1080" title="Enhanced Movie Center" flags="wfNoBorder" backgroundColor="Kravenbg">
+  <screen name="EMCSelection" position="0,0" size="1920,1080" title="Enhanced Movie Center" flags="wfNoBorder" backgroundColor="transparent">
     <eLabel backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" position="63,18" size="1500,69" text="Enhanced Movie Center" transparent="1" />
     <widget name="Cover" position="96,105" size="513,769" zPosition="4" backgroundColor="Kravenbg" alphatest="on" transparent="0" />
     <widget source="Service" render="Label" position="96,888" size="120,36" font="Regular;30" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" halign="left">

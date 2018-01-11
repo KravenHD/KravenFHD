@@ -1,5 +1,5 @@
   <!-- /* ChannelSelection - Nobile Extended Preview -->
-  <screen backgroundColor="Kravenbg4" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection">
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection">
     <widget backgroundColor="Kravenbg4" scrollbarMode="showOnDemand" scrollbarWidth="5" picServiceEventProgressbar="KravenFHD/progress/progress52.png" colorEventProgressbar="KravenProgress" colorEventProgressbarSelected="KravenProgress" foregroundColorMarkedSelected="green" foregroundColor="KravenFont1" colorEventProgressbarBorder="KravenBorder" colorEventProgressbarBorderSelected="KravenSelFont" colorServiceDescription="KravenFont2" colorServiceDescriptionSelected="KravenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="KravenNotAvailable" name="list" position="25,449" serviceInfoFont="Regular;30" serviceItemHeight="43" serviceNameFont="Regular;30" serviceNumberFont="Regular;30" size="658,516" name="giopet" transparent="1" />
     <widget source="ServiceEvent" render="KravenFHDPig4" position="90,104" size="576,324" backgroundColor="transparent" zPosition="3" />
     <eLabel backgroundColor="#00000000" position="90,104" size="576,324" transparent="0" zPosition="2" />
