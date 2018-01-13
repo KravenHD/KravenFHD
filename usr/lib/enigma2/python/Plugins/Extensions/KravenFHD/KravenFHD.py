@@ -1349,7 +1349,7 @@ class KravenFHD(ConfigListScreen, Screen):
 				list.append(getConfigListEntry(_("Menu-Transparency"), config.plugins.KravenFHD.MenuColorTrans, _("Choose the degree of background transparency for system menu screens.")))
 			else:
 				emptyLines+=1
-			for i in range(emptyLines+2):
+			for i in range(emptyLines+3):
 				list.append(getConfigListEntry(_(" "), ))
 		else:
 			list.append(getConfigListEntry(_("Menus"), config.plugins.KravenFHD.LogoNoInternet, _("Choose from different options to display the system menus. Press red button for the FAQs with details on installing menu icons.")))
