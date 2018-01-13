@@ -745,11 +745,6 @@ config.plugins.KravenFHD.RunningTextSpeed = ConfigSelection(default="steptime=10
 				("steptime=50", _("20 px/sec"))
 				])
 
-config.plugins.KravenFHD.RunningTextRenderer = ConfigSelection(default="Kraven", choices = [
-				("vti", _("VTi")),
-				("kraven", _("Kraven"))
-				])
-
 config.plugins.KravenFHD.ScrollBar = ConfigSelection(default="scrollbarWidth=0", choices = [
 				("scrollbarWidth=0", _("off")),
 				("scrollbarWidth=5", _("thin")),
@@ -1196,7 +1191,7 @@ class KravenFHD(ConfigListScreen, Screen):
   </widget>
   <widget backgroundColor="#00000000" name="config" font="Regular;22" foregroundColor="#00ffffff" itemHeight="30" position="70,85" size="708,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
   <eLabel backgroundColor="#00000000" text="KravenFHD" font="Regular;36" foregroundColor="#00f0a30a" position="830,80" size="402,46" halign="center" valign="center" transparent="1" />
-  <eLabel backgroundColor="#00000000" text="Version: 3.4.21" font="Regular;30" foregroundColor="#00ffffff" position="845,126" size="372,40" halign="center" valign="center" transparent="1" />
+  <eLabel backgroundColor="#00000000" text="Version: 3.4.22" font="Regular;30" foregroundColor="#00ffffff" position="845,126" size="372,40" halign="center" valign="center" transparent="1" />
   <eLabel backgroundColor="#00f0a30a" position="798,169" size="466,3" />
   <eLabel backgroundColor="#00f0a30a" position="798,431" size="466,3" />
   <eLabel backgroundColor="#00f0a30a" position="798,172" size="3,259" />
@@ -1224,7 +1219,7 @@ class KravenFHD(ConfigListScreen, Screen):
   </widget>
   <widget backgroundColor="#00000000" name="config" font="Regular;32" foregroundColor="#00ffffff" itemHeight="45" position="105,127" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
   <eLabel backgroundColor="#00000000" text="KravenFHD" font="Regular;54" foregroundColor="#00f0a30a" position="1245,120" size="603,69" halign="center" valign="center" transparent="1" />
-  <eLabel backgroundColor="#00000000" text="Version: 3.4.21" font="Regular;45" foregroundColor="#00ffffff" position="1267,208" size="558,60" halign="center" valign="center" transparent="1" />
+  <eLabel backgroundColor="#00000000" text="Version: 3.4.22" font="Regular;45" foregroundColor="#00ffffff" position="1267,208" size="558,60" halign="center" valign="center" transparent="1" />
   <eLabel backgroundColor="#00f0a30a" position="1313,337" size="466,3" />
   <eLabel backgroundColor="#00f0a30a" position="1313,599" size="466,3" />
   <eLabel backgroundColor="#00f0a30a" position="1313,340" size="3,259" />
@@ -1340,10 +1335,6 @@ class KravenFHD(ConfigListScreen, Screen):
 		else:
 			emptyLines+=1
 		if self.E2DistroVersion == "VTi":
-			list.append(getConfigListEntry(_("Running Text Renderer"), config.plugins.KravenFHD.RunningTextRenderer, _("Choose the version for running text renderer.")))
-		else:
-			emptyLines+=1
-		if self.E2DistroVersion == "VTi":
 			list.append(getConfigListEntry(_("Scrollbars"), config.plugins.KravenFHD.ScrollBar, _("Choose the width of scrollbars in lists or deactivate scrollbars completely.")))
 		elif self.E2DistroVersion == "openatv":
 			list.append(getConfigListEntry(_("Scrollbars"), config.plugins.KravenFHD.ScrollBar2, _("Choose whether scrollbars should be shown.")))
@@ -1366,7 +1357,7 @@ class KravenFHD(ConfigListScreen, Screen):
 				list.append(getConfigListEntry(_("Menu-Transparency"), config.plugins.KravenFHD.MenuColorTrans, _("Choose the degree of background transparency for system menu screens.")))
 			else:
 				emptyLines+=1
-			for i in range(emptyLines+3):
+			for i in range(emptyLines+4):
 				list.append(getConfigListEntry(_(" "), ))
 		
 		# page 2
@@ -2106,11 +2097,6 @@ class KravenFHD(ConfigListScreen, Screen):
 				self.showText(60,_("runningtext"))
 			elif option.value == "typewriter":
 				self.showText(60,_("typewriter"))
-		elif option == config.plugins.KravenFHD.RunningTextRenderer:
-			if option.value == "vti":
-				self.showText(44,_("VRunningText"))
-			elif option.value == "kraven":
-				self.showText(44,_("KravenFHDRunningText"))
 		elif option == config.plugins.KravenFHD.IBtop:
 			if option.value == "infobar-x2-z1_top":
 				self.showText(62,_("4 Tuner"))
@@ -3542,11 +3528,6 @@ class KravenFHD(ConfigListScreen, Screen):
 		self.skinSearchAndReplace.append(['name="KravenLine" value="#00ffffff', 'name="KravenLine" value="#00' + config.plugins.KravenFHD.Line.value])
 
 		### Runningtext
-		if self.E2DistroVersion == "VTi":
-			if config.plugins.KravenFHD.RunningTextRenderer.value == "vti":
-				self.skinSearchAndReplace.append(["KravenRunningText", "VRunningText"])
-			else:
-				self.skinSearchAndReplace.append(["KravenRunningText", "KravenFHDRunningText"])
 		if config.plugins.KravenFHD.RunningText.value == "none":
 			self.skinSearchAndReplace.append(["movetype=running", "movetype=none"])
 		if not config.plugins.KravenFHD.RunningText.value == "none":

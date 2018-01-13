@@ -14,7 +14,7 @@
     <widget font="Regular2;36" backgroundColor="Kravenbg2" halign="left" noWrap="1" foregroundColor="KravenFont2" position="1230,440" size="627,45" render="Label" source="Service" transparent="1" valign="center" zPosition="1">
       <convert type="ServiceName">Name</convert>
     </widget>
-    <widget backgroundColor="Kravenbg2" font="Regular;33" foregroundColor="EPGSelection" position="1230,493" size="627,420" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" source="Service" valign="top" transparent="1" zPosition="-8">
+    <widget backgroundColor="Kravenbg2" font="Regular;33" foregroundColor="EPGSelection" position="1230,493" size="627,420" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" source="Event" valign="top" transparent="1" zPosition="-8">
       <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
     </widget>
     <constant-widget name="Colorbuttons"/>
