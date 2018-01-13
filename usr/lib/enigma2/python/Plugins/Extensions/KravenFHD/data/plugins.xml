@@ -1815,12 +1815,7 @@
 	<widget backgroundColor="KravenIBbg3" name="text" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" />
 	<widget backgroundColor="Kravenbg3" name="list" position="105,120" size="531,810" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
     <eLabel backgroundColor="Kravenbg3" text="Vorschau:" position="762,120" size="300,48" zPosition="1" font="Regular;38" foregroundColor="KravenFont2" transparent="1" />
-	<widget backgroundColor="Kravenbg3" name="bild" position="762,195" size="300,216" zPosition="2" transparent="1" />
-	<eLabel backgroundColor="transparent" position="762,195" size="300,216" transparent="1" zPosition="1" />
-	<eLabel backgroundColor="KravenBorder" position="758,191" size="308,4" transparent="0" zPosition="3" />
-	<eLabel backgroundColor="KravenBorder" position="758,411" size="308,4" transparent="0" zPosition="3" />
-	<eLabel backgroundColor="KravenBorder" position="758,191" size="4,224" transparent="0" zPosition="3" />
-	<eLabel backgroundColor="KravenBorder" position="1062,191" size="4,224" transparent="0" zPosition="3" />
+	<widget backgroundColor="Kravenbg3" name="bild" position="762,195" size="300,216" zPosition="1" transparent="1" />
 	<!-- Logo -->
     <constant-widget name="Colorbuttons"/>
     <constant-widget name="OKExit"/>
