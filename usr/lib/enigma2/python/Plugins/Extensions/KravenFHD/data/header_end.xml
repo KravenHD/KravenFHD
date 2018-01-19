@@ -1703,7 +1703,7 @@
 	</constant-widget>
 	
 	<constant-widget name="msnc33">
-      <widget backgroundColor="Kravenbg" font="Regular;33" foregroundColor="KravenFont1" position="1233,225" render="Label" size="624,672" source="Service" transparent="1" valign="top">
+      <widget backgroundColor="Kravenbg" font="Regular;33" foregroundColor="KravenFont1" position="1233,225" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,672" source="Service" transparent="1" valign="top">
         <convert type="EventName">FullDescription</convert>
       </widget>
 	</constant-widget>

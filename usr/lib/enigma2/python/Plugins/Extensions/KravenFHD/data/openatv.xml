@@ -1388,3 +1388,63 @@
     <constant-widget name="MenuOKExit"/>
     <!--<text="AutoTimerOverview" position="105,0" />-->
   </screen>
+  <!-- ********** DreamExplorerII ********** -->
+  <!-- DreamExplorerII -->
+  <screen name="DreamExplorerII" position="0,0" size="1920,1080" flags="wfNoBorder" title="Dream-Explorer" backgroundColor="transparent">
+    <constant-widget name="Title-big"/>
+    <widget backgroundColor="Kravenbg3" name="filelist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
+    <eLabel text="Delete" position="105,997" size="330,39" zPosition="1" font="Regular;30" halign="left" valign="center" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
+    <eLabel text="Rename" position="480,997" size="330,39" zPosition="1" font="Regular;30" halign="left" valign="center" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
+    <eLabel text="Move/Copy" position="855,997" size="330,39" zPosition="1" font="Regular;30" halign="left" valign="center" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
+    <eLabel text="Bookmarks" position="1230,997" size="330,39" zPosition="1" font="Regular;30" halign="left" valign="center" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="MenuOKExit"/>
+    <!--<text="DreamExplorerII" position="105,0" />-->
+  </screen>
+  <!-- vEditor -->
+  <screen name="vEditor" position="0,0" size="1920,1080" flags="wfNoBorder" title="File-Explorer" backgroundColor="transparent">
+    <constant-widget name="Title-big"/>
+    <widget backgroundColor="Kravenbg3" name="filedata" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="vEditor" position="105,0" />-->
+  </screen>
+  <!-- vInputBox -->
+  <screen name="vInputBox" position="0,0" size="1920,1080" flags="wfNoBorder" title="Input..." backgroundColor="transparent">
+    <constant-widget name="Title-big"/>
+    <widget backgroundColor="Kravenbg3" name="input" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,135" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="text" font="Regular2;32" foregroundColor="KravenFont2" position="105,500" size="1062,369" transparent="1" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="vInputBox" position="105,0" />-->
+  </screen>
+  <!-- CPmaniger -->
+  <screen name="CPmaniger" position="0,0" size="1920,1080" flags="wfNoBorder" title="Select Copy/Move location..." backgroundColor="transparent">
+    <constant-widget name="Title-big"/>
+    <widget backgroundColor="Kravenbg3" name="File" font="Regular;32" foregroundColor="KravenFont1" position="105,120" size="1062,205" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="CPto" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,360" size="1062,495" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
+    <eLabel text="Move" position="105,997" size="330,39" zPosition="1" font="Regular;30" halign="left" valign="center" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
+    <eLabel text="Copy" position="855,997" size="330,39" zPosition="1" font="Regular;30" halign="left" valign="center" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="CPmaniger" position="105,0" />-->
+  </screen>
+  <!-- MusicExplorer -->
+  <screen name="MusicExplorer" position="0,0" size="1920,1080" flags="wfNoBorder" title="Music-Explorer" backgroundColor="transparent">
+    <constant-widget name="Title-big"/>
+    <widget backgroundColor="Kravenbg" source="session.CurrentService" render="Label" font="Regular;36" foregroundColor="KravenFont1" position="75,120" size="180,45" transparent="1" valign="center" zPosition="1">
+      <convert type="ServicePosition">Remaining</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg" source="session.CurrentService" render="Label" font="Regular;39" foregroundColor="KravenFont1" position="75,450" size="1800,90" transparent="1" valign="center" halign="center" zPosition="1">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <constant-widget name="Background"/>
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="MusicExplorer" position="105,0" />-->
+  </screen>
+

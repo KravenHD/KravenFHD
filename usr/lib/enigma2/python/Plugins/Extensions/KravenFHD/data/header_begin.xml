@@ -283,11 +283,6 @@
     <parameter name="PluginListDescription" value="180,40,867,32" />
     <parameter name="PluginListIcon" value="30,18,100,40" />
     <parameter name="PluginListCategoryIcon" value="10,8,150,60" />
-    <!-- SelectionList -->
-    <parameter name="SelectionListFont" value="Regular;32" />
-    <parameter name="SelectionListItemHeight" value="45" />
-    <parameter name="SelectionListDescription" value="55,0,997,40" />
-    <parameter name="SelectionListIcon" value="10,5,40,40" />
     <!-- MultiQuickButtonList -->
     <parameter name="MultiQuickButtonList" value="45,4,800,38" />
     <parameter name="MultiQuickButtonListPic1" value="10,8,790,25" />
@@ -354,10 +349,10 @@
 	<parameter name="ServicelistHorCustomPiconSize" value="216,122" />
     <!-- FileList -->
     <parameter name="FileListName" value="50,0,1000,45" />
-    <parameter name="FileListIcon" value="15,10,40,40" />
-    <parameter name="FileListMultiName" value="50,0,1000,45" />
-    <parameter name="FileListMultiIcon" value="15,10,40,40" />
-    <parameter name="FileListMultiLock" value="15,10,40,40" />
+    <parameter name="FileListIcon" value="5,8,30,30" />
+    <parameter name="FileListMultiName" value="95,0,950,45" />
+    <parameter name="FileListMultiIcon" value="50,8,30,30" />
+    <parameter name="FileListMultiLock" value="5,8,30,30" />
     <parameter name="FileListFont" value="Regular;32" />
     <parameter name="FileListItemHeight" value="45" />
 	<!-- FilebrowserVTi -->
@@ -383,6 +378,17 @@
 	<parameter name="ServiceInfo" value="0,0,450,50" />
     <parameter name="ServiceInfoLeft" value="0,0,450,45" />
     <parameter name="ServiceInfoRight" value="450,0,1000,45" />
+    <!-- SelectionList VTi -->
+    <parameter name="SelectionListFont" value="Regular;32" />
+    <parameter name="SelectionListItemHeight" value="45" />
+    <parameter name="SelectionListDescription" value="55,2,1000,41" />
+    <parameter name="SelectionListIcon" value="5,3,40,40" />
+	<!-- SelectionList openATV -->
+    <parameter name="SelectionListDescr" value="55,2,1000,41" />
+    <parameter name="SelectionListLock" value="5,8,30,30" />
+	<!-- Dreamexplorer -->
+    <parameter name="DreamexplorerName" value="55,2,1000,41" />
+    <parameter name="DreamexplorerIcon" value="5,8,30,30" />
   </parameters>
   <fonts>
     <font filename="lcd.ttf" name="LCD" scale="100" />
@@ -407,6 +413,8 @@
 	<alias name="MaxCubeTemp" font="Regular2" size="45" height="70"/>
 	<alias name="iDreamListFont0" font="Regular" size="22"/>
 	<alias name="iDreamListFont1" font="Regular" size="22"/>
+	<alias name="SelectionList" font="Regular" size="32" height="45"/>
+	<alias name="Dreamexplorer" font="Regular" size="32" height="45"/>
   </fonts>
   <subtitles>
     <sub font="Regular;45" name="Subtitle_TTX" shadowColor="shadow" shadowOffset="3,3" />
