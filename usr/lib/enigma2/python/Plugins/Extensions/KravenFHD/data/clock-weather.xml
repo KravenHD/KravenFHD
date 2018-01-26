@@ -1,11 +1,14 @@
-    <!--/* Clock -->
+  <!--/* Clock -->
   <widget alphatest="blend" render="KravenFHDWetterPicon" position="1599,897" size="144,144" source="Title" path="WetterIcons" transparent="1" zPosition="1">
     <convert type="KravenFHDWeather">Day_0,MeteoIcon </convert>
   </widget>
-  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" position="1759,924" size="135,42" font="Regular;39" halign="center" valign="center" transparent="1">
-    <convert type="ClockToText">Default</convert>
-  </widget>
-  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular2;36" foregroundColor="KravenIBFont2" render="Label" position="1759,996" size="135,37" source="Title" zPosition="2" halign="center" valign="center" transparent="1">
+  <widget source="Title" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont2" position="1759,907" size="135,40" font="Regular2;36" noWrap="1" halign="center" valign="center" zPosition="2" transparent="1">
     <convert type="KravenFHDWeather">Day_0,DayTemp</convert>
   </widget>
-    <!--Clock */-->
+  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" position="1759,957" size="135,45" font="Regular;39" halign="center" valign="center" zPosition="2" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" position="1759,1007" size="135,25" font="Regular;20" halign="center" valign="center" zPosition="2" transparent="1">
+	<convert type="ClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <!--Clock */-->

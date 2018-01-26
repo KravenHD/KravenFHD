@@ -1447,4 +1447,35 @@
     <constant-widget name="OKExit"/>
     <!--<text="MusicExplorer" position="105,0" />-->
   </screen>
-
+  <!-- PictureExplorerII -->
+  <screen name="PictureExplorerII" position="0,0" size="1920,1080" flags="wfNoBorder" title="Picture-Explorer" backgroundColor="#00121214">
+    <widget name="Picture" position="0,0" size="1920,1080" zPosition="1" alphatest="on" />
+	<widget name="State" font="Regular;30" halign="center" position="0,975" size="1920,130" backgroundColor="#01080911" foregroundColor="#fcc000" transparent="0" zPosition="9"/>
+  </screen>
+  <!-- JobView -->
+  <screen name="JobView" position="0,0" size="1920,1080" title="JobView" backgroundColor="transparent" flags="wfNoBorder">
+    <constant-widget name="Title-big"/>
+    <widget backgroundColor="Kravenbg3" source="job_name" render="Label" foregroundColor="KravenFont2" font="Regular2;32" position="105,120" size="1062,41" transparent="1" />
+    <widget backgroundColor="Kravenbg3" source="job_task" render="Label" foregroundColor="KravenFont1" font="Regular;32" position="105,195" size="840,41" transparent="1" />
+    <widget backgroundColor="Kravenbg3" source="job_progress" render="Label" foregroundColor="KravenFont1" font="Regular;32" position="990,195" size="177,41" halign="right" zPosition="2" transparent="1">
+      <convert type="ProgressToText" />
+    </widget>
+    <widget backgroundColor="Kravenbg3" source="job_progress" render="Progress" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress708.png" borderColor="KravenBorder" borderWidth="3" position="105,279" size="1062,23" transparent="1" zPosition="2" />
+    <widget backgroundColor="Kravenbg3" source="job_status" render="Label" foregroundColor="KravenFont1" font="Regular;32" position="105,345" size="1062,41" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="config" position="105,420" size="1062,180" itemHeight="45" font="Regular;32" scrollbarMode="showOnDemand" transparent="1" />
+    <widget backgroundColor="KravenIBbg2" source="cancelable" render="FixedLabel" text="Cancel" foregroundColor="KravenButton" font="Regular;30" position="105,997" size="330,39" halign="left" valign="center" zPosition="1" transparent="1">
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget backgroundColor="KravenIBbg2" name="cancelable" render="FixedLabel" text="Cancel" foregroundColor="KravenButton" font="Regular;30" position="105,997" size="330,39" halign="left" valign="center" zPosition="1" transparent="1">
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget backgroundColor="KravenIBbg2" source="finished" render="FixedLabel" text="OK" foregroundColor="KravenButton" font="Regular;30" position="480,997" size="330,39" halign="left" valign="center" zPosition="1" transparent="1">
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget backgroundColor="KravenIBbg2" source="backgroundable" render="FixedLabel" text="Continue in background" foregroundColor="KravenButton" font="Regular;30" position="1230,997" size="330,39" halign="left" valign="center" zPosition="1" transparent="1">
+      <convert type="ConditionalShowHide" />
+    </widget>
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <!--<text="JobView" position="105,0" />-->
+  </screen>

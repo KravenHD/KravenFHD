@@ -2036,4 +2036,40 @@
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
 	</constant-widget>
+	
+	<constant-widget name="mainmenu-small">
+      <widget position="105,120" render="Listbox" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" source="menu" transparent="1">
+        <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (24, 5), size = (750, 44), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 35)],
+				"itemHeight": 54
+				}
+	    </convert>
+      </widget>
+      <!-- KravenFHDMenuEntryID-Converter -->
+	</constant-widget>
+	
+	<constant-widget name="mainmenu-middle">
+      <widget position="105,117" render="Listbox" size="1062,816" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" source="menu" transparent="1">
+        <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (24, 9), size = (750, 50), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 39)],
+				"itemHeight": 68
+				}
+	    </convert>
+      </widget>
+      <!-- KravenFHDMenuEntryID-Converter -->
+	</constant-widget>
+	
+	<constant-widget name="mainmenu-big">
+      <widget position="105,120" render="Listbox" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" source="menu" transparent="1">
+        <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (24, 15), size = (750, 75), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 45)],
+				"itemHeight": 90
+				}
+	    </convert>
+      </widget>
+      <!-- KravenFHDMenuEntryID-Converter -->
+	</constant-widget>
   </constant-widgets>

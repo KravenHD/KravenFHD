@@ -27,8 +27,8 @@ class KravenFHDMenuIconPath(Poll,Converter,object):
 		self.type = str(type)
 		self.path = "/usr/share/enigma2/Kraven-menu-icons/"
 		self.userpath = "/usr/share/enigma2/Kraven-user-icons/"
-		if fileExists("/usr/share/enigma2/Kraven-menu-icons/kravenvb_logo.png"):
-			self.logo="/usr/share/enigma2/Kraven-menu-icons/kravenvb_logo.png"
+		if fileExists("/usr/share/enigma2/Kraven-menu-icons/kravenfhd_logo.png"):
+			self.logo="/usr/share/enigma2/Kraven-menu-icons/kravenfhd_logo.png"
 		else:
 			self.logo = "/usr/share/enigma2/KravenFHD/logo.png"
 		

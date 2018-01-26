@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenFHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2017-10-17 21:07+0200\n"
+"PO-Revision-Date: 2018-01-25 22:47+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -1047,14 +1047,6 @@ msgstr "Wählen Sie die Startverzögerung für Laufschriften."
 #: KravenFHD.py
 msgid "Choose the speed for running text."
 msgstr "Wählen Sie die Geschwindigkeit für Laufschriften."
-
-#: KravenFHD.py
-msgid "Running Text Renderer"
-msgstr "Laufschriften-Renderer"
-
-#: KravenFHD.py
-msgid "Choose the version for running text renderer."
-msgstr "Wählen Sie die Version des Laufschriften-Renderers."
 
 #: KravenFHD.py
 msgid "Choose the width of scrollbars in lists or deactivate scrollbars completely."
@@ -2331,3 +2323,11 @@ msgstr "Farbe speichern"
 #: KravenFHD.py
 msgid "You have no internet connection. This function is disabled."
 msgstr "Sie haben keine Internetverbindung. Diese Funktion ist deaktiviert."
+
+#: KravenFHD.py
+msgid "Mainmenu Fontsize"
+msgstr "Hauptmenü Schriftgrösse"
+
+#: KravenFHD.py
+msgid "Choose the font size of mainmenus."
+msgstr "Wählen Sie die Schriftgrösse für die Hauptmenüs"
