@@ -513,11 +513,6 @@ config.plugins.KravenFHD.ChannelSelectionHorStyle = ConfigSelection(default="csh
 				("cshor-minitv", _("MiniTV"))
 				])
 
-config.plugins.KravenFHD.ChannellistPicon = ConfigSelection(default="none", choices = [
-				("on", _("on")),
-				("none", _("off"))
-				])
-
 config.plugins.KravenFHD.ChannelSelectionStyle = ConfigSelection(default="channelselection-style-minitv", choices = [
 				("channelselection-style-nopicon", _("no Picon")),
 				("channelselection-style-nopicon2", _("no Picon2")),
@@ -1633,7 +1628,6 @@ class KravenFHD(ConfigListScreen, Screen):
 					list.append(getConfigListEntry(_("EPG Fontsize"), config.plugins.KravenFHD.ChannelSelectionEPGSize2, _("Choose the font size of EPG list and primetime.")))
 				else:
 					list.append(getConfigListEntry(_("EPG Fontsize"), config.plugins.KravenFHD.ChannelSelectionEPGSize3, _("Choose the font size of event description, EPG list and primetime.")))
-				list.append(getConfigListEntry(_("show Picons in channellist"), config.plugins.KravenFHD.ChannellistPicon, _("Choose whether picons are shown in channellist or not.")))
 				list.append(getConfigListEntry(_("'Not available'-Font"), config.plugins.KravenFHD.ChannelSelectionServiceNAList, _("Choose the font color of channels that are unavailable at the moment. Press OK to define your own RGB color.")))
 				list.append(getConfigListEntry(_("Primetime"), config.plugins.KravenFHD.Primetimeavailable, _("Choose whether primetime program information is displayed or not.")))
 				if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on":
@@ -1641,11 +1635,10 @@ class KravenFHD(ConfigListScreen, Screen):
 					list.append(getConfigListEntry(_("Primetime-Font"), config.plugins.KravenFHD.PrimetimeFontList, _("Choose the font color of the primetime information. Press OK to define your own RGB color.")))
 				else:
 					emptyLines+=2
-				for i in range(emptyLines+1):
+				for i in range(emptyLines+2):
 					list.append(getConfigListEntry(_(" "), ))
 			else:
 				list.append(getConfigListEntry(_("Channellist-Style"), config.plugins.KravenFHD.ChannelSelectionHorStyle, _("Choose from different styles for the channel selection screen.")))
-				list.append(getConfigListEntry(_("show Picons in channellist"), config.plugins.KravenFHD.ChannellistPicon, _("Choose whether picons are shown in channellist or not.")))
 				list.append(getConfigListEntry(_("'Not available'-Font"), config.plugins.KravenFHD.ChannelSelectionServiceNAList, _("Choose the font color of channels that are unavailable at the moment. Press OK to define your own RGB color.")))
 				if config.plugins.KravenFHD.ChannelSelectionHorStyle.value == "cshor-minitv":
 					list.append(getConfigListEntry(_("Primetime"), config.plugins.KravenFHD.Primetimeavailable, _("Choose whether primetime program information is displayed or not.")))
@@ -1656,7 +1649,7 @@ class KravenFHD(ConfigListScreen, Screen):
 						emptyLines+=2
 				else:
 					emptyLines+=3
-				for i in range(emptyLines+6):
+				for i in range(emptyLines+7):
 					list.append(getConfigListEntry(_(" "), ))
 		elif self.E2DistroVersion == "openatv":
 			if SystemInfo.get("NumVideoDecoders",1) > 1:
@@ -3859,12 +3852,6 @@ class KravenFHD(ConfigListScreen, Screen):
 				self.appendSkinFile(self.daten + config.plugins.KravenFHD.ChannelSelectionHorStyle.value + ".xml")
 				config.usage.servicelist_alternative_mode.value = True
 				config.usage.servicelist_alternative_mode.save()
-			if config.plugins.KravenFHD.ChannellistPicon.value == "on":
-				config.usage.servicelist_show_picon.value = "1"
-				config.usage.servicelist_show_picon.save()
-			else:
-				config.usage.servicelist_show_picon.value = False
-				config.usage.servicelist_show_picon.save()
 		
 		### ChannelSelection - openatv
 		elif self.E2DistroVersion == "openatv":

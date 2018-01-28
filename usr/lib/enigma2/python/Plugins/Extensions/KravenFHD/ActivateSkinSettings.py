@@ -473,11 +473,6 @@ config.plugins.KravenFHD.ChannelSelectionHorStyle = ConfigSelection(default="csh
 				("cshor-minitv", _("MiniTV"))
 				])
 
-config.plugins.KravenFHD.ChannellistPicon = ConfigSelection(default="none", choices = [
-				("on", _("on")),
-				("none", _("off"))
-				])
-
 config.plugins.KravenFHD.ChannelSelectionStyle = ConfigSelection(default="channelselection-style-minitv", choices = [
 				("channelselection-style-nopicon", _("no Picon")),
 				("channelselection-style-nopicon2", _("no Picon2")),
@@ -2239,12 +2234,6 @@ class ActivateSkinSettings:
 				if not self.silent:
 					config.usage.servicelist_alternative_mode.value = True
 					config.usage.servicelist_alternative_mode.save()
-			if not self.silent and config.plugins.KravenFHD.ChannellistPicon.value == "on":
-				config.usage.servicelist_show_picon.value = "1"
-				config.usage.servicelist_show_picon.save()
-			elif not self.silent:
-				config.usage.servicelist_show_picon.value = False
-				config.usage.servicelist_show_picon.save()
 		
 		### ChannelSelection - openatv
 		elif self.E2DistroVersion == "openatv":
