@@ -60,6 +60,15 @@ class KravenFHDTempFanInfo(Poll, Converter, object):
 				f = open('/proc/stb/sensors/temp/value', 'rb')
 				systemp = str(f.readline().strip())
 				f.close()
+			elif path.exists('/proc/stb/fp/temp_sensor_avs'):
+				f = open('/proc/stb/fp/temp_sensor_avs', 'rb')
+				systemp = str(f.readline().strip())
+				f.close()
+			elif path.exists('/sys/devices/virtual/thermal/thermal_zone0/temp'):
+				f = open('/sys/devices/virtual/thermal/thermal_zone0/temp', 'rb')
+				systemp = str(f.readline().strip())
+				systemp = systemp[:-3]
+				f.close()
 		except:
 			pass
 		if systemp <> "N/A":

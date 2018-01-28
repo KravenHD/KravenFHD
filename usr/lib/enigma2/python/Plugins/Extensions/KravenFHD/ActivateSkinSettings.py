@@ -3035,6 +3035,11 @@ class ActivateSkinSettings:
 			if config.plugins.KravenFHD.EMCEPGSize.value == "big":
 				self.skinSearchAndReplace.append(['<constant-widget name="emcvbc233"/>', '<constant-widget name="emcvbc236"/>'])
 
+		### EMC (MovieList) Font-Colors
+		self.skinSearchAndReplace.append(['UnwatchedColor="unwatched"', 'UnwatchedColor="#00' + config.plugins.KravenFHD.UnwatchedColor.value + '"'])
+		self.skinSearchAndReplace.append(['WatchingColor="watching"', 'WatchingColor="#00' + config.plugins.KravenFHD.WatchingColor.value + '"'])
+		self.skinSearchAndReplace.append(['FinishedColor="finished"', 'FinishedColor="#00' + config.plugins.KravenFHD.FinishedColor.value + '"'])
+
 		### EMC
 		self.appendSkinFile(self.daten + config.plugins.KravenFHD.EMCStyle.value + ".xml")
 
@@ -3146,14 +3151,6 @@ class ActivateSkinSettings:
 		### VerticalEPG
 		if self.E2DistroVersion == "VTi":
 			self.appendSkinFile(self.daten + config.plugins.KravenFHD.VerticalEPG.value + ".xml")
-
-		### MovieSelection (MovieList) Font-Colors
-		if not fileExists("/usr/lib/enigma2/python/Plugins/Extensions/SerienFilm/plugin.py"):
-			self.skinSearchAndReplace.append(['UnwatchedColor="unwatched"', 'UnwatchedColor="#00' + config.plugins.KravenFHD.UnwatchedColor.value + '"'])
-			self.skinSearchAndReplace.append(['WatchingColor="watching"', 'WatchingColor="#00' + config.plugins.KravenFHD.WatchingColor.value + '"'])
-			self.skinSearchAndReplace.append(['FinishedColor="finished"', 'FinishedColor="#00' + config.plugins.KravenFHD.FinishedColor.value + '"'])
-		else:
-			self.skinSearchAndReplace.append(['UnwatchedColor="unwatched" WatchingColor="watching" FinishedColor="finished"', ''])
 
 		### MovieSelection (Event-Description) Font-Size
 		if config.plugins.KravenFHD.MovieSelection.value == "movieselection-no-cover":
