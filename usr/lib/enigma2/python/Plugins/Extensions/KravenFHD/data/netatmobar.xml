@@ -1,0 +1,76 @@
+  <!--/* NetatmoBar V1-->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="NetatmoBar_V1" position="0,0" size="798,84" title="NetatmoBar">
+    <widget backgroundColor="KravenIBbg" font="Regular;25" foregroundColor="KravenIBFont1" halign="center" position="7,1" render="Label" size="120,37" source="session.CurrentService" transparent="1" zPosition="10">
+      <convert type="Netatmo">station.name</convert>
+    </widget>
+    <widget backgroundColor="KravenIBbg" font="Regular;25" foregroundColor="KravenIBFont1" halign="center" position="147,6" render="Label" size="150,37" source="session.CurrentService" transparent="1" zPosition="10">
+      <convert type="Netatmo">indoor.module_name</convert>
+    </widget>
+    <eLabel text="Temp:" position="300,6" size="75,37" zPosition="5" halign="left" font="Regular;25" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2" />
+    <widget backgroundColor="KravenIBbg" font="Regular;25" foregroundColor="KravenIBFont1" position="385,6" render="Label" size="90,45" source="session.CurrentService" transparent="1" zPosition="10">
+      <convert type="Netatmo">indoor.temperature</convert>
+    </widget>
+    <eLabel text="Luftf:" position="475,6" size="82,37" zPosition="5" halign="left" font="Regular;25" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2" />
+    <widget backgroundColor="KravenIBbg" font="Regular;25" foregroundColor="KravenIBFont1" position="550,6" render="Label" size="60,45" source="session.CurrentService" transparent="1" zPosition="10">
+      <convert type="Netatmo">indoor.humidity</convert>
+    </widget>
+    <widget backgroundColor="KravenIBbg" font="Regular;25" foregroundColor="KravenIBFont1" halign="center" position="147,45" render="Label" size="150,37" source="session.CurrentService" transparent="1" zPosition="10">
+      <convert type="Netatmo">outdoor.module_name</convert>
+    </widget>
+    <eLabel text="Temp:" position="300,45" size="75,37" zPosition="5" halign="left" font="Regular;25" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2" />
+    <widget backgroundColor="KravenIBbg" font="Regular;25" foregroundColor="KravenIBFont1" position="385,45" render="Label" size="90,37" source="session.CurrentService" transparent="1" zPosition="10">
+      <convert type="Netatmo">outdoor.temperature</convert>
+    </widget>
+    <eLabel text="Luftf:" position="475,45" size="75,37" zPosition="5" halign="left" font="Regular;25" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2" />
+    <widget backgroundColor="KravenIBbg" font="Regular;25" foregroundColor="KravenIBFont1" position="550,45" render="Label" size="60,37" source="session.CurrentService" transparent="1" zPosition="10">
+      <convert type="Netatmo">outdoor.humidity</convert>
+    </widget>
+    <widget alphatest="blend" pixmaps="co2_1.png,co2_2.png,co2_3.png,co2_4.png,co2_5.png,co2_6.png,co2_7.png,co2_8.png,co2_9.png,co2_10.png" pixtype="co2" plugin_pixmaps="images" position="87,37" render="NetatmoPixmap" size="45,45" source="session.CurrentService" zPosition="10">
+    </widget>
+    <widget alphatest="blend" pixmaps="wifi_unknown.png,wifi_low.png,wifi_medium.png,wifi_high.png,wifi_full.png" pixtype="wifi_status" plugin_pixmaps="images" position="15,37" render="NetatmoPixmap" size="63,45" source="session.CurrentService" zPosition="10">
+    </widget>
+    <widget alphatest="blend" pixmaps="signal_unknown.png,signal_verylow.png,signal_low.png,signal_medium.png,signal_high.png,signal_full.png" pixtype="rf_status" plugin_pixmaps="images" position="642,31" render="NetatmoPixmap" size="75,45" source="session.CurrentService" zPosition="10">
+    </widget>
+    <widget alphatest="blend" pixmaps="battery_unknown.png,battery_verylow.png,battery_low.png,battery_medium.png,battery_high.png,battery_full.png" pixtype="battery_vp" plugin_pixmaps="images" position="723,31" render="NetatmoPixmap" size="75,45" source="session.CurrentService" zPosition="10">
+    </widget>
+    <constant-widget name="gradient-netatmo"/>
+  </screen>
+  <!--/* NetatmoBar V1-->
+  <!--/* NetatmoBar V5-->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="NetatmoBar_V5" position="0,0" size="798,84" title="NetatmoBar">
+    <widget backgroundColor="KravenIBbg" font="Regular;25" foregroundColor="KravenIBFont1" halign="center" position="7,1" render="Label" size="120,37" source="session.CurrentService" transparent="1" zPosition="10">
+      <convert type="Netatmo">station.name</convert>
+    </widget>
+    <widget backgroundColor="KravenIBbg" font="Regular;25" foregroundColor="KravenIBFont1" halign="center" position="147,6" render="Label" size="150,37" source="session.CurrentService" transparent="1" zPosition="10">
+      <convert type="Netatmo">station.module_name</convert>
+    </widget>
+    <eLabel text="Temp:" position="300,6" size="75,37" zPosition="5" halign="left" font="Regular;25" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2" />
+    <widget backgroundColor="KravenIBbg" font="Regular;25" foregroundColor="KravenIBFont1" position="385,6" render="Label" size="90,45" source="session.CurrentService" transparent="1" zPosition="10">
+      <convert type="Netatmo">station.temperature</convert>
+    </widget>
+    <eLabel text="Luftf:" position="475,6" size="82,37" zPosition="5" halign="left" font="Regular;25" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2" />
+    <widget backgroundColor="KravenIBbg" font="Regular;25" foregroundColor="KravenIBFont1" position="550,6" render="Label" size="60,45" source="session.CurrentService" transparent="1" zPosition="10">
+      <convert type="Netatmo">station.humidity</convert>
+    </widget>
+    <widget backgroundColor="KravenIBbg" font="Regular;25" foregroundColor="KravenIBFont1" halign="center" position="147,45" render="Label" size="150,37" source="session.CurrentService" transparent="1" zPosition="10">
+      <convert type="Netatmo">module.module_name</convert>
+    </widget>
+    <eLabel text="Temp:" position="300,45" size="75,37" zPosition="5" halign="left" font="Regular;25" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2" />
+    <widget backgroundColor="KravenIBbg" font="Regular;25" foregroundColor="KravenIBFont1" position="385,45" render="Label" size="90,37" source="session.CurrentService" transparent="1" zPosition="10">
+      <convert type="Netatmo">module.temperature</convert>
+    </widget>
+    <eLabel text="Luftf:" position="475,45" size="75,37" zPosition="5" halign="left" font="Regular;25" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2" />
+    <widget backgroundColor="KravenIBbg" font="Regular;25" foregroundColor="KravenIBFont1" position="550,45" render="Label" size="60,37" source="session.CurrentService" transparent="1" zPosition="10">
+      <convert type="Netatmo">module.humidity</convert>
+    </widget>
+    <widget alphatest="blend" pixmaps="co2_1.png,co2_2.png,co2_3.png,co2_4.png,co2_5.png,co2_6.png,co2_7.png,co2_8.png,co2_9.png,co2_10.png" pixtype="co2" plugin_pixmaps="images" position="87,37" render="NetatmoPixmap" size="45,45" source="session.CurrentService" zPosition="10">
+    </widget>
+    <widget alphatest="blend" pixmaps="wifi_unknown.png,wifi_low.png,wifi_medium.png,wifi_high.png,wifi_full.png" pixtype="wifi_status" plugin_pixmaps="images" position="15,37" render="NetatmoPixmap" size="63,45" source="session.CurrentService" zPosition="10">
+    </widget>
+    <widget alphatest="blend" pixmaps="signal_unknown.png,signal_verylow.png,signal_low.png,signal_medium.png,signal_high.png,signal_full.png" pixtype="rf_status" plugin_pixmaps="images" position="642,31" render="NetatmoPixmap" size="75,45" source="session.CurrentService" zPosition="10">
+    </widget>
+    <widget alphatest="blend" pixmaps="battery_unknown.png,battery_verylow.png,battery_low.png,battery_medium.png,battery_high.png,battery_full.png" pixtype="battery_vp" plugin_pixmaps="images" position="723,31" render="NetatmoPixmap" size="75,45" source="session.CurrentService" zPosition="10">
+    </widget>
+    <constant-widget name="gradient-netatmo"/>
+  </screen>
+  <!--/* NetatmoBar V5-->

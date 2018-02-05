@@ -24,7 +24,7 @@
   </parameters>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="HelpMenu" position="0,0" size="1920,1080" title="Menu">
 	<eLabel text="help..." position="105,18" size="1500,69" backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
-    <widget alphatest="blend" name="rc" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png" position="283,220" size="154,500" zPosition="10" />
+    <widget alphatest="blend" name="rc" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png,skin_default/rc_vu_4.png,skin_default/rc_vu_5.png" position="283,220" size="154,500" zPosition="10" />
     <widget backgroundColor="Kravenbg" font="Regular2;36" foregroundColor="KravenFont2" halign="center" name="long_key" position="135,810" size="450,45" transparent="1" />
     <widget backgroundColor="Kravenbg" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="750,180" size="1080,675" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
     <widget alphatest="blend" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-150,-150" size="55,105" zPosition="11" />
@@ -117,4 +117,30 @@
     <widget font="Regular;30" halign="left" valign="center" source="key_blue" render="Label" position="1230,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <constant-widget name="MenuOKExit"/>
     <!--<text="AutoTimerOverview" position="105,0" />-->
+  </screen>
+  <!-- BootlogosVTI -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="BootlogosVTI" position="0,0" size="1920,1080" title=" ">
+    <eLabel backgroundColor="KravenIBbg3" text="BootlogoVTI-Stony272" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" />
+    <widget backgroundColor="Kravenbg3" name="config" position="105,120" size="1062,45" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+    <eLabel backgroundColor="Kravenbg3" text="Vorschau:" position="105,195" size="1062,48" zPosition="1" font="Regular;38" foregroundColor="KravenFont2" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="bootlogohelperimage" position="386,270" size="500,282" zPosition="1" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <eLabel backgroundColor="KravenIBbg3" font="Regular;30" halign="left" valign="center" text="Cancel" position="105,997" size="330,39" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <eLabel backgroundColor="KravenIBbg3" font="Regular;30" halign="left" valign="center" text="Save" position="480,997" size="330,39" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <constant-widget name="OKExit"/>
+    <!--<text="BootlogosVTI" position="105,0" />-->
+  </screen>
+  <!-- RadiologosVTI -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="RadiologosVTI" position="0,0" size="1920,1080" title=" ">
+    <eLabel backgroundColor="KravenIBbg3" text="RadiologoVTI-Stony272" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" />
+    <widget backgroundColor="Kravenbg3" name="config" position="105,120" size="1062,45" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+    <eLabel backgroundColor="Kravenbg3" text="Vorschau:" position="105,195" size="1062,48" zPosition="1" font="Regular;38" foregroundColor="KravenFont2" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="bootlogohelperimage" position="386,270" size="500,282" zPosition="1" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <eLabel backgroundColor="KravenIBbg3" font="Regular;30" halign="left" valign="center" text="Cancel" position="105,997" size="330,39" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <eLabel backgroundColor="KravenIBbg3" font="Regular;30" halign="left" valign="center" text="Save" position="480,997" size="330,39" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <constant-widget name="OKExit"/>
+    <!--<text="RadiologosVTI" position="105,0" />-->
   </screen>

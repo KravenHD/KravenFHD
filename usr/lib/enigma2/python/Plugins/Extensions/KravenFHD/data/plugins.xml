@@ -1811,7 +1811,7 @@
     <!--<text="MovieInfoTMDb" position="105,0" />-->
   </screen>
   <!-- SpinnerSelectionBox -->
-  <screen backgroundColor="transparent" name="SpinnerSelectionBox" position="0,0" size="1920,1080" title=" ">
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="SpinnerSelectionBox" position="0,0" size="1920,1080" title=" ">
 	<widget backgroundColor="KravenIBbg3" name="text" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" />
 	<widget backgroundColor="Kravenbg3" name="list" position="105,120" size="531,810" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
     <eLabel backgroundColor="Kravenbg3" text="Vorschau:" position="762,120" size="300,48" zPosition="1" font="Regular;38" foregroundColor="KravenFont2" transparent="1" />
@@ -1820,5 +1820,14 @@
     <constant-widget name="Colorbuttons"/>
     <constant-widget name="OKExit"/>
     <!--<text="SpinnerSelectionBox" position="105,0" />-->
+  </screen>
+  <!-- vEditor -->
+  <screen name="vEditor" position="0,0" size="1920,1080" flags="wfNoBorder" title="File-Explorer" backgroundColor="transparent">
+    <constant-widget name="Title-big2"/>
+    <widget backgroundColor="Kravenbg" name="filedata" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1752,810" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
+    <constant-widget name="Background"/>
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="vEditor" position="105,0" />-->
   </screen>
 <!-- plugins -->

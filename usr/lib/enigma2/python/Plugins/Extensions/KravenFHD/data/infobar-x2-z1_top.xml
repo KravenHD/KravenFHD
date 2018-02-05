@@ -102,15 +102,15 @@
     <convert type="ConditionalShowHide">tunerblink</convert>
   </widget>  -->
   <ePixmap pixmap="KravenFHD/infobar-icons/aufloesung.png" position="1542,34" size="168,33" zPosition="1" alphatest="blend" />
-  <widget source="session.CurrentService" render="Label" zPosition="3" position="1544,31" size="164,33" font="Regular;28" halign="center" backgroundColor="KravenIBbg" foregroundColor="KravenIcon" transparent="1">
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="1544,31" size="164,34" font="Regular;28" halign="center" backgroundColor="KravenIBbg" foregroundColor="KravenIcon" transparent="1">
     <convert type="KravenFHDExtraInfo">Resolution</convert>    
   </widget>
   <ePixmap pixmap="KravenFHD/infobar-icons/aufloesung2.png" position="1722,34" size="174,33" zPosition="1" alphatest="blend" />
-  <widget backgroundColor="KravenIBbg" font="Regular;28" foregroundColor="KravenIcon" halign="left" position="1725,31" size="82,33" render="Label" source="session.CurrentService" transparent="1">
+  <widget backgroundColor="KravenIBbg" font="Regular;28" foregroundColor="KravenIcon" halign="left" position="1725,31" size="82,34" render="Label" source="session.CurrentService" transparent="1">
     <convert  type="KravenFHDServiceName2">OrbitalPos</convert>
   </widget>
-  <widget render="Label" font="Regular;28" position="1789,31" size="100,33" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIcon"  source="session.FrontendStatus">
+  <widget render="Label" font="Regular;28" position="1789,31" size="100,34" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIcon"  source="session.FrontendStatus">
     <convert  type="KravenFHDFrontendInfo">SNR</convert>
   </widget>
-  <!--<eLabel text="  S:"  font="Regular;28" position="1797,31" size="45,33" halign="left" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIcon" />-->
+  <!--<eLabel text="  S:"  font="Regular;28" position="1797,31" size="45,34" halign="left" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIcon" />-->
   <constant-widget name="gradient-ib-top"/>

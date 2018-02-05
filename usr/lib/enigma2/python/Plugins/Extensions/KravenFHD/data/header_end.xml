@@ -1466,6 +1466,46 @@
 	  <eLabel position="0,225" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
 	</constant-widget>
 	
+	<constant-widget name="gradient-ibepg">
+      <ePixmap pixmap="KravenFHD/graphics/ibar.png" position="0,112" size="1920,465" zPosition="-9" />
+      <ePixmap pixmap="KravenFHD/graphics/ibar.png" position="0,0" size="1920,465" zPosition="-8" />
+	</constant-widget>
+	
+	<constant-widget name="box-ibepg">
+	  <eLabel position="0,150" size="1920,427" backgroundColor="KravenIBbg" zPosition="-9" />
+	  <eLabel position="0,150" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	</constant-widget>
+	
+	<constant-widget name="box2-ibepg">
+      <ePixmap pixmap="KravenFHD/graphics/ibar7.png" position="0,150" size="1920,427" zPosition="-9" />
+	  <eLabel position="0,150" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	</constant-widget>
+	
+	<constant-widget name="texture-ibepg">
+      <ePixmap pixmap="KravenFHD/graphics/ibtexture.png" position="0,150" size="1920,427" zPosition="-9" />
+	  <eLabel position="0,150" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	</constant-widget>
+	
+	<constant-widget name="gradient-ibev">
+      <ePixmap pixmap="KravenFHD/graphics/ibaro.png" position="0,0" size="1920,300" zPosition="-9" />
+      <ePixmap pixmap="KravenFHD/graphics/ibaro.png" position="0,75" size="1920,300" zPosition="-8" />
+	</constant-widget>
+	
+	<constant-widget name="box-ibev">
+	  <eLabel position="0,0" size="1920,225" backgroundColor="KravenIBbg" zPosition="-9" />
+	  <eLabel position="0,225" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	</constant-widget>
+	
+	<constant-widget name="box2-ibev">
+      <ePixmap pixmap="KravenFHD/graphics/ibaro4.png" position="0,0" size="1920,225" zPosition="-9" />
+	  <eLabel position="0,225" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	</constant-widget>
+	
+	<constant-widget name="texture-ibev">
+      <ePixmap pixmap="KravenFHD/graphics/ibtexture.png" position="0,0" size="1920,225" zPosition="-9" />
+	  <eLabel position="0,225" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	</constant-widget>
+	
 	<constant-widget name="gradient-player">
       <ePixmap pixmap="KravenFHD/graphics/ibar.png" position="0,735" size="1920,600" zPosition="-9" />
 	</constant-widget>
@@ -1619,6 +1659,25 @@
 	<constant-widget name="texture-ib-top">
       <ePixmap pixmap="KravenFHD/graphics/ibtexture.png" position="0,0" size="1920,105" zPosition="-9" alphatest="blend" />
 	  <eLabel position="0,103" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	</constant-widget>
+	
+	<constant-widget name="gradient-netatmo">
+      <ePixmap pixmap="KravenFHD/graphics/ibaro.png" position="0,0" size="798,247" zPosition="-9" />
+	</constant-widget>
+	
+	<constant-widget name="box-netatmo">
+      <eLabel position="0,0" size="798,105" backgroundColor="KravenIBbg" zPosition="-9" />
+	  <eLabel position="0,103" size="798,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	</constant-widget>
+	
+	<constant-widget name="box2-netatmo">
+      <ePixmap pixmap="KravenFHD/graphics/ibaro2.png" position="0,0" size="798,105" zPosition="-9" alphatest="blend" />
+	  <eLabel position="0,103" size="798,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	</constant-widget>
+	
+	<constant-widget name="texture-netatmo">
+      <ePixmap pixmap="KravenFHD/graphics/ibtexture.png" position="0,0" size="798,105" zPosition="-9" alphatest="blend" />
+	  <eLabel position="0,103" size="798,3" backgroundColor="KravenIBLine" zPosition="-8" />
 	</constant-widget>
 	
 	<constant-widget name="gradient-ib-zz1-zz4">

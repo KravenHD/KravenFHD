@@ -968,7 +968,7 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
   <!-- ImageWizard -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ImageWizard" position="0,0" size="1920,1080" title="Welcome...">
 	<eLabel text="ImageWizard" position="105,18" size="1500,69" backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
-    <widget alphatest="blend" name="rc" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png" position="262,172" size="231,750" zPosition="10" />
+    <widget alphatest="blend" name="rc" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png,skin_default/rc_vu_4.png,skin_default/rc_vu_5.png" position="262,172" size="231,750" zPosition="10" />
     <widget alphatest="blend" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-150,-150" size="55,105" zPosition="11" />
     <widget alphatest="blend" name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-150,-150" size="55,105" zPosition="11" />
     <widget alphatest="blend" name="arrowup" pixmap="skin_default/arrowup.png" position="-150,-150" size="55,105" zPosition="11" />
@@ -993,7 +993,7 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
   <!-- LanguageWizard -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="LanguageWizard" position="0,0" size="1920,1080" title="Welcome...">
 	<eLabel text="LanguageWizard" position="105,18" size="1500,69" backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
-    <widget alphatest="blend" name="rc" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png" position="262,172" size="231,750" zPosition="10" />
+    <widget alphatest="blend" name="rc" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png,skin_default/rc_vu_4.png,skin_default/rc_vu_5.png" position="262,172" size="231,750" zPosition="10" />
     <widget alphatest="blend" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-150,-150" size="55,105" zPosition="11" />
     <widget alphatest="blend" name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-150,-150" size="55,105" zPosition="11" />
     <widget alphatest="blend" name="arrowup" pixmap="skin_default/arrowup.png" position="-150,-150" size="55,105" zPosition="11" />
@@ -1018,7 +1018,7 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
   <!-- NetworkWizard -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="NetworkWizard" position="0,0" size="1920,1080" title="Welcome...">
 	<eLabel text="NetworkWizard" position="105,18" size="1500,69" backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
-    <widget alphatest="blend" name="rc" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png" position="262,172" size="231,750" zPosition="10" />
+    <widget alphatest="blend" name="rc" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png,skin_default/rc_vu_4.png,skin_default/rc_vu_5.png" position="262,172" size="231,750" zPosition="10" />
     <widget alphatest="blend" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-150,-150" size="55,105" zPosition="11" />
     <widget alphatest="blend" name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-150,-150" size="55,105" zPosition="11" />
     <widget alphatest="blend" name="arrowup" pixmap="skin_default/arrowup.png" position="-150,-150" size="55,105" zPosition="11" />
@@ -1043,7 +1043,7 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
   <!-- StartWizard -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="StartWizard" position="0,0" size="1920,1080" title="Welcome...">
 	<eLabel text="StartWizard" position="105,18" size="1500,69" backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
-    <widget alphatest="blend" name="rc" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png" position="262,172" size="231,750" zPosition="10" />
+    <widget alphatest="blend" name="rc" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png,skin_default/rc_vu_4.png,skin_default/rc_vu_5.png" position="262,172" size="231,750" zPosition="10" />
     <widget alphatest="blend" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-150,-150" size="55,105" zPosition="11" />
     <widget alphatest="blend" name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-150,-150" size="55,105" zPosition="11" />
     <widget alphatest="blend" name="arrowup" pixmap="skin_default/arrowup.png" position="-150,-150" size="55,105" zPosition="11" />
@@ -1068,7 +1068,7 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
   <!-- VideoWizard -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="VideoWizard" position="0,0" size="1920,1080" title="Welcome...">
 	<eLabel text="VideoWizard" position="105,18" size="1500,69" backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
-    <widget alphatest="blend" name="rc" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png" position="262,172" size="231,750" zPosition="10" />
+    <widget alphatest="blend" name="rc" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png,skin_default/rc_vu_4.png,skin_default/rc_vu_5.png" position="262,172" size="231,750" zPosition="10" />
     <widget alphatest="blend" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-150,-150" size="55,105" zPosition="11" />
     <widget alphatest="blend" name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-150,-150" size="55,105" zPosition="11" />
     <widget alphatest="blend" name="arrowup" pixmap="skin_default/arrowup.png" position="-150,-150" size="55,105" zPosition="11" />
