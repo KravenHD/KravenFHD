@@ -3,20 +3,20 @@
     <eLabel backgroundColor="KravenIBbg" position="0,0" size="1920,48" zPosition="-2" />
     <widget name="Type" pixmaps="KravenFHD/InfoBarTunerState/record.png,KravenFHD/InfoBarTunerState/stream.png,KravenFHD/InfoBarTunerState/finished.png,KravenFHD/InfoBarTunerState/info.png" position="0,0" size="48,48" zPosition="1" backgroundColor="KravenIBbg" transparent="1" alphatest="on"/>
     <widget name="Progress" pixmap="KravenFHD/InfoBarTunerState/progress.png" position="0,0" size="120,15" zPosition="1" borderWidth="2" borderColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1"/>
-    <widget name="Field0" font="Regular;36" noWrap="1" halign="left" valign="top" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
-    <widget name="Field1" font="Regular;36" noWrap="1" halign="left" valign="top" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
-    <widget name="Field2" font="Regular;36" noWrap="1" halign="left" valign="top" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
-    <widget name="Field3" font="Regular;36" noWrap="1" halign="left" valign="top" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
-    <widget name="Field4" font="Regular;36" noWrap="1" halign="left" valign="top" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
-    <widget name="Field5" font="Regular;36" noWrap="1" halign="left" valign="top" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
-    <widget name="Field6" font="Regular;36" noWrap="1" halign="left" valign="top" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
-    <widget name="Field7" font="Regular;36" noWrap="1" halign="left" valign="top" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
-    <widget name="Field8" font="Regular;36" noWrap="1" halign="left" valign="top" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
-    <widget name="Field9" font="Regular;36" noWrap="1" halign="left" valign="top" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+    <widget name="Field0" font="Regular;36" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+    <widget name="Field1" font="Regular;36" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+    <widget name="Field2" font="Regular;36" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+    <widget name="Field3" font="Regular;36" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+    <widget name="Field4" font="Regular;36" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+    <widget name="Field5" font="Regular;36" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+    <widget name="Field6" font="Regular;36" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+    <widget name="Field7" font="Regular;36" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+    <widget name="Field8" font="Regular;36" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+    <widget name="Field9" font="Regular;36" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
   </screen>
   <!-- AutoResolution -->
   <screen name="ResolutionLabel" backgroundColor="transparent" position="0,240" size="780,42" flags="wfNoBorder">
     <eLabel backgroundColor="KravenIBbg" position="0,0" size="780,42" transparent="0" zPosition="-2" />
-    <widget name="content" position="30,3" size="375,33" font="Regular;24" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" halign="left" valign="top" transparent="1" zPosition="-1" />
-    <widget name="restxt" position="405,3" size="375,33" font="Regular;24" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" halign="left" valign="top" transparent="1" zPosition="-1" />
+    <widget name="content" position="30,3" size="375,33" font="Regular;24" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" halign="left" valign="center" transparent="1" zPosition="-1" />
+    <widget name="restxt" position="405,3" size="375,33" font="Regular;24" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" halign="left" valign="center" transparent="1" zPosition="-1" />
   </screen>

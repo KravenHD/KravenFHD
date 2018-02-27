@@ -61,6 +61,7 @@ class KravenFHDServiceInfoEX(Poll, Converter, object):
 	IS_SATELLITE_S2 = 35
 	volume = 36
 	volumedata = 37
+	resolution = 38
 	
 	def __init__(self, type):
 		Converter.__init__(self, type)
@@ -89,6 +90,8 @@ class KravenFHDServiceInfoEX(Poll, Converter, object):
 			self.type = self.xres
 		elif type == "yres":
 			self.type = self.yres
+		elif type == "Resolution":
+			self.type = self.resolution
 		elif  type == "atype":
 			self.type = self.atype
 		elif  type == "vtype":
@@ -171,7 +174,7 @@ class KravenFHDServiceInfoEX(Poll, Converter, object):
 		
 	@cached
 	def getText(self):
-		self.stream = { 'apid':"N/A", 'vpid':"N/A", 'sid':"N/A", 'onid':"N/A", 'tsid':"N/A", 'prcpid':"N/A", 'caids':"FTA", 'pmtpid':"N/A", 'txtpid':"N/A", 'xres':"", 'yres':"", 'atype':"", 'vtype':"", 'avtype':"", 'fps':"", 'tbps':"",}
+		self.stream = { 'apid':"N/A", 'vpid':"N/A", 'sid':"N/A", 'onid':"N/A", 'tsid':"N/A", 'prcpid':"N/A", 'caids':"FTA", 'pmtpid':"N/A", 'txtpid':"N/A", 'xres':"", 'yres':"", 'resolution':"", 'atype':"", 'vtype':"", 'avtype':"", 'fps':"", 'tbps':"",}
 		streaminfo = ""
 		array_caids = []
 		service = self.source.service
@@ -203,6 +206,8 @@ class KravenFHDServiceInfoEX(Poll, Converter, object):
 			self.stream['yres'] = self.getServiceInfoString(info, iServiceInformation.sVideoHeight) + ("i", "p", "")[info.getInfo(iServiceInformation.sProgressive)]
 		if self.getServiceInfoString(info, iServiceInformation.sVideoWidth) != "N/A":
 			self.stream['xres'] = self.getServiceInfoString(info, iServiceInformation.sVideoWidth)
+		if self.getServiceInfoString(info, iServiceInformation.sVideoWidth) != "N/A" and self.getServiceInfoString(info, iServiceInformation.sVideoHeight) != "N/A":
+			self.stream['resolution'] = self.getServiceInfoString(info, iServiceInformation.sVideoWidth) + "x" + self.getServiceInfoString(info, iServiceInformation.sVideoHeight)
 		audio = service.audioTracks()
 		if audio:
 			if audio.getCurrentTrack() > -1:
@@ -238,6 +243,8 @@ class KravenFHDServiceInfoEX(Poll, Converter, object):
 			streaminfo = self.stream['xres']
 		elif self.type == self.yres:
 			streaminfo = self.stream['yres']
+		elif self.type == self.resolution:
+			streaminfo = self.stream['resolution']
 		elif self.type == self.atype:
 			streaminfo = self.stream['atype']
 		elif self.type == self.vtype:

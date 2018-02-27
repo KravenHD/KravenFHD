@@ -167,7 +167,7 @@
   </screen>
   <!-- ShowSoftcamPackages -->
   <screen name="ShowSoftcamPackages" position="0,0" size="1920,1080" title="New Packages" flags="wfNoBorder" backgroundColor="transparent">
-    <widget source="list" render="Listbox" position="105,120" size="1062,810" scrollbarMode="showOnDemand" transparent="1" foregroundColorSelected="white">
+    <widget source="list" render="Listbox" position="105,120" size="1062,810" scrollbarMode="showOnDemand" transparent="1" foregroundColorSelected="KravenSelFont">
       <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (27, 7), size = (72, 72), png = 4), # index 4 is the status pixmap
@@ -189,8 +189,8 @@
   </screen>
   <!-- DevicePanelConf -->
   <screen name="DevicePanelConf" position="0,0" size="1920,1080" title="DevicePanelConf" backgroundColor="transparent" flags="wfNoBorder">
-    <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,180" size="1062,540" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
-    <widget name="Linconn" position="105,757" size="1062,40" font="Regular2;32" halign="center" valign="center" foregroundColor="KravenFont2" />
+    <widget backgroundColor="Kravenbg3" name="config" position="105,180" size="1062,540" foregroundColor="KravenFont1" font="Regular;32" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="Linconn" position="105,757" size="1062,40" foregroundColor="KravenFont2" font="Regular2;32" halign="center" valign="center" transparent="1" />
     <constant-widget name="Title-big"/>
   	<!-- Logo -->
 	<constant-widget name="Colorbuttons"/>
@@ -200,7 +200,7 @@
   </screen>
   <!-- HddMount -->
   <screen name="HddMount" position="0,0" size="1920,1080" title="HddMount" flags="wfNoBorder" backgroundColor="transparent">
-    <widget source="list" render="Listbox" position="105,180" size="1050,556" scrollbarMode="showOnDemand" font="Regular;24" transparent="1">
+    <widget backgroundColor="Kravenbg3" source="list" render="Listbox" position="105,180" size="1050,556" scrollbarMode="showOnDemand" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
 				 MultiContentEntryText(pos = (135, 0), size = (900, 45), font=0, text = 0),
@@ -220,28 +220,28 @@
 	<constant-widget name="Exit"/>
     <!--<text="HddMount" position="105,0" />-->
   </screen>
+  <!-- ButtonSetup -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ButtonSetup" position="0,0" size="1920,1080" title="">
+    <widget backgroundColor="Kravenbg3" name="list" position="105,120" size="1062,675" foregroundColor="KravenFont1" font="Regular;32" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="description" position="105,825" size="1062,82" foregroundColor="KravenFont2" font="Regular2;32" valign="center" halign="center" zPosition="2" transparent="1" />
+    <constant-widget name="Title-big"/>
+  	<!-- Logo -->
+	<constant-widget name="Colorbuttons"/>
+	<constant-widget name="OKExit"/>
+    <!--<text="ButtonSetup" position="105,0" />-->
+  </screen>
   <!-- ButtonSetupSelect -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ButtonSetupSelect" position="0,0" size="1920,1080" title="Tasteneinstellungen">
-    <widget name="list" position="60,148" size="577,793" scrollbarMode="showOnDemand" font="Regular;32" itemHeight="42" transparent="1" foregroundColor="white" enableWrapAround="1" backgroundColor="Kravenbg" zPosition="-8" />
-    <widget name="choosen" position="640,148" size="577,795" scrollbarMode="showOnDemand" font="Regular2;32" itemHeight="42" foregroundColor="KravenFont1" backgroundColor="Kravenbg" zPosition="-8" />
-    <widget name="description" position="1320,234" size="537,567" font="Regular2;33" foregroundColor="KravenFont2" valign="center" halign="center" backgroundColor="Kravenbg" zPosition="-8" />
-    <constant-widget name="Title-big2"/>
+    <eLabel text="Hotkey Setup" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg" source="Title" render="Label" foregroundColor="KravenFont2" font="Regular2;38" position="105,120" size="1062,48" halign="left" valign="center" noWrap="1" transparent="1" />
+    <widget backgroundColor="Kravenbg" name="list" foregroundColor="KravenFont1" font="Regular;32" itemHeight="45" position="105,195" size="630,720" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="2" transparent="1" />
+    <widget backgroundColor="Kravenbg" name="choosen" foregroundColor="KravenFont1" font="Regular2;32" itemHeight="45" position="690,195" size="615,720" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+    <widget backgroundColor="Kravenbg" name="description" foregroundColor="KravenFont2" font="Regular2;32" position="1320,161" size="537,728" valign="center" halign="center" />
   	<constant-widget name="Background"/>
 	<constant-widget name="Colorbuttons"/>
 	<constant-widget name="SourceRedGreenYellowBlue"/>
 	<constant-widget name="OKExit"/>
     <!--<text="ButtonSetupSelect" position="105,0" />-->
-  </screen>
-  <!-- ButtonSetup -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="ButtonSetup" position="0,0" size="1920,1080" title="">
-    <widget backgroundColor="Kravenbg3" name="list" itemHeight="45" font="Regular;32" foregroundColor="KravenFont1" position="105,120" size="1062,630" scrollbarMode="showOnDemand" transparent="1" />
-    <widget backgroundColor="Kravenbg3" name="description" position="105,822" size="1062,100" zPosition="2" font="Regular2;33" foregroundColor="KravenFont2" valign="center" halign="center" transparent="1" />
-    <constant-widget name="Title-big"/>
-  	<!-- Logo -->
-	<constant-widget name="Colorbuttons"/>
-	<constant-widget name="SourceRedGreenYellowBlue"/>
-	<constant-widget name="OKExit"/>
-    <!--<text="ButtonSetup" position="105,0" />-->
   </screen>
   <!-- Extensionslist -->
   <screen name="ExtensionsList" position="0,0" size="1920,1080" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
@@ -504,7 +504,7 @@
   </screen>
     <!-- QuickEPG -->
   <screen name="QuickEPG" flags="wfNoBorder" position="0,503" size="1920,577" title="InfoBar" backgroundColor="transparent">
-    <widget source="Event" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" position="1141,292" size="747,180" font="Regular;31" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" transparent="1" valign="top" zPosition="-8">
+    <widget source="Event" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" position="1141,285" size="747,195" font="Regular;31" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" transparent="1" valign="top" zPosition="-8">
       <convert type="KravenFHDEventName">ExtendedDescription</convert>
     </widget>
     <widget source="Service" render="Label" position="142,177" size="892,60" font="Regular;48" valign="center" noWrap="1" backgroundColor="KravenIBbg" transparent="1">
@@ -517,7 +517,7 @@
     <widget source="global.CurrentTime" render="Label" position="1710,177" size="165,63" backgroundColor="KravenIBbg" transparent="1" zPosition="1" font="Regular;48" valign="center" halign="center">
       <convert type="ClockToText">Default</convert>
     </widget>
-    <widget name="list" position="25,292" size="1072,180" font="Regular;36" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" />
+    <widget name="list" position="25,292" size="1072,180" font="Regular;36" foregroundColor="KravenIBFont2" backgroundColor="KravenIBbg" transparent="1" />
     <widget source="Service" render="Picon" position="18,177" size="105,63" transparent="0" zPosition="2" alphatest="blend">
       <convert type="ServiceName">Reference</convert>
     </widget>
@@ -533,7 +533,6 @@
     <ePixmap pixmap="KravenFHD/infobar-icons/key_ok.png" position="1717,509" size="65,33" alphatest="blend" />
     <ePixmap pixmap="KravenFHD/infobar-icons/key_exit.png" position="1792,509" size="65,33" alphatest="blend" />
     <constant-widget name="gradient-ibepg"/>
-    <!--<text="QuickEPG" position="105,0" />-->
   </screen>
   <!-- NetworkMountsMenu -->
   <screen name="NetworkMountsMenu" position="0,0" size="1920,1080" title="Mounts Setup" flags="wfNoBorder" backgroundColor="transparent">
@@ -1182,9 +1181,9 @@
   <!-- ScriptRunner -->
   <screen name="ScriptRunner" position="0,0" size="1920,1080" title="Script Runner" flags="wfNoBorder" backgroundColor="transparent">
     <widget backgroundColor="Kravenbg3" name="lab1" position="105,120" size="1062,42" font="Regular2;33" alphatest="blend" transparent="1" foregroundColor="KravenFont2" />
-    <widget backgroundColor="Kravenbg3" name="list" position="105,210" size="1062,555" scrollbarMode="showOnDemand" alphatest="blend" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="list" font="Regular;32" foregroundColor="KravenFont1" position="105,210" size="1062,555" scrollbarMode="showOnDemand" alphatest="blend" transparent="1" />
 	  <applet type="onLayoutFinish">
-			self["list"].instance.setItemHeight(37)
+			self["list"].instance.setItemHeight(45)
 	  </applet>
     <constant-widget name="Title-big"/>
     <constant-widget name="Colorbuttons"/>
@@ -1397,7 +1396,9 @@
     <widget backgroundColor="Kravenbg3" name="filelist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
     <eLabel text="Delete" position="105,997" size="330,39" zPosition="1" font="Regular;30" halign="left" valign="center" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
     <eLabel text="Rename" position="480,997" size="330,39" zPosition="1" font="Regular;30" halign="left" valign="center" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
-    <eLabel text="Move/Copy" position="855,997" size="330,39" zPosition="1" font="Regular;30" halign="left" valign="center" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
+    <widget source="session.CurrentService" render="Label" position="855,997" size="330,39" zPosition="1" font="Regular;30" halign="left" valign="center" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1">
+      <convert type="KravenFHDTextTranslator">movecopy</convert>
+    </widget>
     <eLabel text="Bookmarks" position="1230,997" size="330,39" zPosition="1" font="Regular;30" halign="left" valign="center" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
 	<!-- Logo -->
     <constant-widget name="Colorbuttons"/>
@@ -1486,28 +1487,32 @@
     <!--<text="InfoBarEventView" position="105,0" />-->
   </screen>
   <!-- BootlogosATV -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="Bootlogos" position="0,0" size="1920,1080" title=" ">
-    <eLabel backgroundColor="KravenIBbg3" text="BootlogoATV-Stony272" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" />
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="BootlogosATV" position="0,0" size="1920,1080" title=" ">
+    <eLabel backgroundColor="KravenIBbg3" text="BootlogoATV" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" />
     <widget backgroundColor="Kravenbg3" name="config" position="105,120" size="1062,45" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
-    <eLabel backgroundColor="Kravenbg3" text="Vorschau:" position="105,195" size="1062,48" zPosition="1" font="Regular;38" foregroundColor="KravenFont2" transparent="1" />
+    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="105,195" size="1062,48" zPosition="1" font="Regular;38" foregroundColor="KravenFont2" transparent="1">
+      <convert type="KravenFHDTextTranslator">preview</convert>
+    </widget>
     <widget backgroundColor="Kravenbg3" name="bootlogohelperimage" position="386,270" size="500,282" zPosition="1" />
 	<!-- Logo -->
     <constant-widget name="Colorbuttons"/>
     <eLabel backgroundColor="KravenIBbg3" font="Regular;30" halign="left" valign="center" text="Cancel" position="105,997" size="330,39" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <eLabel backgroundColor="KravenIBbg3" font="Regular;30" halign="left" valign="center" text="Save" position="480,997" size="330,39" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <constant-widget name="OKExit"/>
-    <!--<text="Bootlogos" position="105,0" />-->
+    <!--<text="BootlogosATV" position="105,0" />-->
   </screen>
   <!-- RadiologosATV -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="Radiologos" position="0,0" size="1920,1080" title=" ">
-    <eLabel backgroundColor="KravenIBbg3" text="RadiologoATV-Stony272" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" />
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="RadiologosATV" position="0,0" size="1920,1080" title=" ">
+    <eLabel backgroundColor="KravenIBbg3" text="RadiologoATV" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" />
     <widget backgroundColor="Kravenbg3" name="config" position="105,120" size="1062,45" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
-    <eLabel backgroundColor="Kravenbg3" text="Vorschau:" position="105,195" size="1062,48" zPosition="1" font="Regular;38" foregroundColor="KravenFont2" transparent="1" />
+    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="105,195" size="1062,48" zPosition="1" font="Regular;38" foregroundColor="KravenFont2" transparent="1">
+      <convert type="KravenFHDTextTranslator">preview</convert>
+    </widget>
     <widget backgroundColor="Kravenbg3" name="bootlogohelperimage" position="386,270" size="500,282" zPosition="1" />
 	<!-- Logo -->
     <constant-widget name="Colorbuttons"/>
     <eLabel backgroundColor="KravenIBbg3" font="Regular;30" halign="left" valign="center" text="Cancel" position="105,997" size="330,39" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <eLabel backgroundColor="KravenIBbg3" font="Regular;30" halign="left" valign="center" text="Save" position="480,997" size="330,39" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <constant-widget name="OKExit"/>
-    <!--<text="Radiologos" position="105,0" />-->
+    <!--<text="RadiologosATV" position="105,0" />-->
   </screen>

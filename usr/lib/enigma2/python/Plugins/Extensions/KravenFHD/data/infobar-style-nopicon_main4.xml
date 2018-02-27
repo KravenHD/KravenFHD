@@ -54,10 +54,19 @@
       <convert type="ServiceInfo">IsWidescreen</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_hd_off.png" position="484,1030" size="65,33" zPosition="1" />
-    <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_hd_on.png" position="484,1030" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
-      <convert type="ServiceInfo">VideoWidth</convert>
-      <convert type="ValueRange">721,1980</convert>
+    <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_sd.png" position="484,1030" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="1">
+      <convert type="ServiceInfo">VideoHeight</convert>
+      <convert type="ValueRange">0,719</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_hd_on.png" position="484,1030" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="1">
+      <convert type="ServiceInfo">VideoHeight</convert>
+      <convert type="ValueRange">720,1080</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_uhd.png" position="484,1030" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="1">
+      <convert type="ServiceInfo">VideoHeight</convert>
+      <convert type="ValueRange">1081,5000</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_dolby_off.png" position="559,1030" render="Pixmap" size="65,33" source="session.Event_Now" zPosition="1">
@@ -78,17 +87,17 @@
       <convert type="ConditionalShowHide" />
     </widget>
     <ePixmap pixmap="KravenFHD/infobar-icons/aufloesung.png" position="831,1030" size="168,33" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Label" zPosition="3" position="833,1027" size="164,34" font="Regular;28" halign="center" backgroundColor="KravenIBbg" foregroundColor="KravenIcon" transparent="1">
-      <convert type="KravenFHDExtraInfo">Resolution</convert>
+    <widget source="session.CurrentService" render="Label" size="160,33" font="Regular;27" halign="center" backgroundColor="KravenIBbg" position="835,1030" valign="center" foregroundColor="KravenIcon" transparent="1">
+      <convert type="KravenFHDServiceInfoEX">Resolution</convert>
     </widget>
     <ePixmap pixmap="KravenFHD/infobar-icons/aufloesung2.png" position="1009,1030" size="174,33" zPosition="1" alphatest="blend" />
-    <widget backgroundColor="KravenIBbg" font="Regular;28" foregroundColor="KravenIcon" halign="left" position="1012,1027" size="82,34" render="Label" source="session.CurrentService" transparent="1">
+    <widget backgroundColor="KravenIBbg" font="Regular;27" position="1013,1030" valign="center" foregroundColor="KravenIcon" halign="left" size="80,33" render="Label" source="session.CurrentService" transparent="1">
       <convert  type="KravenFHDServiceName2">OrbitalPos</convert>
     </widget>
-    <widget render="Label" font="Regular;28" position="1077,1027" size="100,34" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIcon"  source="session.FrontendStatus">
+    <widget render="Label" font="Regular;27" size="100,33" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" position="1079,1030" valign="center" foregroundColor="KravenIcon"  source="session.FrontendStatus">
       <convert  type="KravenFHDFrontendInfo">SNR</convert>
     </widget>
-    <!--<eLabel text="  S:"  font="Regular;28" position="1084,1027" size="60,34" halign="left" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIcon" />-->
+    <!--<eLabel text="  S:"  font="Regular;27" size="45,33" halign="left" backgroundColor="KravenIBbg" transparent="1" position="1085,1030" valign="center" foregroundColor="KravenIcon" />-->
     <ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_rec_off.png" position="1315,1030" size="65,33" zPosition="2" />
     <widget source="session.RecordState" render="Pixmap" pixmap="KravenFHD/infobar-icons/ico_rec_on.png" position="1315,1030" zPosition="2" size="65,33" alphatest="blend">
       <convert type="ConditionalShowHide">recordblink</convert>

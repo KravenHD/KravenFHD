@@ -3,35 +3,35 @@
   <parameters>
     <!-- TimerList -->
     <parameter name="TimerListItemHeight" value="80" />
-    <parameter name="TimerListNoStyleName" value="0,39,530,37" />
-    <parameter name="TimerListNoStyleDesc" value="0,2,1750,37" />
-    <parameter name="TimerListStyle1Name" value="0,2,1190,37" />
-    <parameter name="TimerListStyle1Desc" value="1220,2,530,37" />
-    <parameter name="TimerListStyle1Desc1" value="0,39,620,37" />
-    <parameter name="TimerListStyle2Name" value="0,2,1750,37" />
-    <parameter name="TimerListStyle2Desc" value="0,39,670,36" />
-    <parameter name="TimerListStyle4Name" value="0,2,750,37" />
-    <parameter name="TimerListStyle4Desc" value="750,2,450,37" />
-    <parameter name="TimerListStyle4Desc1" value="0,39,750,37" />
-    <parameter name="TimerListStyle4Tags" value="1200,2,550,37" />
-    <parameter name="TimerListStateStyle4" value="1200,2,550,37" />
-    <parameter name="TimerListStyle5Name" value="0,2,800,37" />
-    <parameter name="TimerListStyle5Desc" value="820,2,530,37" />
-    <parameter name="TimerListStyle5Desc1" value="0,39,620,37" />
-    <parameter name="TimerListStyle5Tags" value="1350,2,400,37" />
-    <parameter name="TimerListTime" value="650,39,950,37" />
+    <parameter name="TimerListNoStyleName" value="0,41,530,37" />
+    <parameter name="TimerListNoStyleDesc" value="0,3,1750,37" />
+    <parameter name="TimerListStyle1Name" value="0,3,1190,37" />
+    <parameter name="TimerListStyle1Desc" value="1220,3,530,37" />
+    <parameter name="TimerListStyle1Desc1" value="0,41,620,37" />
+    <parameter name="TimerListStyle2Name" value="0,3,1750,37" />
+    <parameter name="TimerListStyle2Desc" value="0,41,670,37" />
+    <parameter name="TimerListStyle4Name" value="0,3,750,37" />
+    <parameter name="TimerListStyle4Desc" value="750,3,450,37" />
+    <parameter name="TimerListStyle4Desc1" value="0,41,750,37" />
+    <parameter name="TimerListStyle4Tags" value="1200,3,550,37" />
+    <parameter name="TimerListStateStyle4" value="1200,3,550,37" />
+    <parameter name="TimerListStyle5Name" value="0,3,800,37" />
+    <parameter name="TimerListStyle5Desc" value="820,3,530,37" />
+    <parameter name="TimerListStyle5Desc1" value="0,41,620,37" />
+    <parameter name="TimerListStyle5Tags" value="1350,3,400,37" />
+    <parameter name="TimerListTime" value="650,41,950,37" />
     <parameter name="TimerListFont1" value="Regular;33" />
     <parameter name="TimerListFont2" value="Regular;33" />
-    <parameter name="TimerListState" value="1510,39,240,37" />
-    <parameter name="TimerListIcon" value="8,39,37,37" />
+    <parameter name="TimerListState" value="1510,41,240,37" />
+    <parameter name="TimerListIcon" value="8,41,37,37" />
     <parameter name="TimerListIconHOffset" value="60" />
     <parameter name="TimerListNoIconHOffset" value="10" />
     <parameter name="TimerListTrimLength" value="70" />
-    <parameter name="TimerListPngTimer" value="8,2,37,37" />
-    <parameter name="TimerListZapTimer" value="8,2,37,37" />
-    <parameter name="TimerListDisabledTimer" value="8,2,37,37" />
+    <parameter name="TimerListPngTimer" value="8,3,37,37" />
+    <parameter name="TimerListZapTimer" value="8,3,37,37" />
+    <parameter name="TimerListDisabledTimer" value="8,3,37,37" />
     <parameter name="TimerListInstantRecord" value="0, 0, 0, 0" />
-    <parameter name="TimerListRedTimer" value="1710,2,37,37" />
+    <parameter name="TimerListRedTimer" value="1710,3,37,37" />
   </parameters>
   <!-- ********** Screens ********** -->
   <!-- ********** Timer ********** -->
@@ -48,14 +48,14 @@
   <!-- TimerSelection -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="TimerSelection" position="0,0" size="1920,1080" title="Timer selection">
     <eLabel text="Timer Editor" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="center" />
-    <widget backgroundColor="Kravenbg3" name="timerlist" font="Regular;33" foregroundColor="KravenFont1" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="timerlist" font="Regular;33" foregroundColor="KravenFont1" position="105,120" size="1062,800" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
 	<!-- Logo -->
     <constant-widget name="OKExit"/>
     <!--<text="TimerSelection" position="105,0" />-->
   </screen>
   <!-- TimerEditList -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="TimerEditList" position="0,0" size="1920,1080" title="Timer Editor">
-    <widget backgroundColor="Kravenbg3" name="timerlist" font="Regular;33" foregroundColor="KravenFont1" position="63,450" size="1794,480" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="timerlist" font="Regular;33" foregroundColor="KravenFont1" position="63,450" size="1794,480" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
     <constant-widget name="Title-big"/>
     <constant-widget name="Colorbuttons"/>
 	<!-- menubg */-->
@@ -79,12 +79,12 @@
     <widget backgroundColor="Kravenbg2" font="Regular;33" foregroundColor="KravenFont1" position="675,200" render="KravenFHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=5,startdelay=5000,wrap,always=0" size="1185,210" source="Event" transparent="1" halign="left" valign="center" zPosition="1">
       <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
     </widget>
-    <widget source="session.VideoPicture" render="KravenFHDPig3" position="63,97" size="552,310" zPosition="3" backgroundColor="transparent" />
-    <eLabel backgroundColor="#00000000" position="63,97" size="552,310" transparent="0" zPosition="2" />
-    <eLabel backgroundColor="KravenBorder2" position="63,97" size="552,4" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="63,403" size="552,4" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="63,97" size="4,310" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="611,97" size="4,310" transparent="0" zPosition="4" />
+    <widget source="session.VideoPicture" render="KravenFHDPig3" position="63,110" size="552,310" zPosition="3" backgroundColor="transparent" />
+    <eLabel backgroundColor="#00000000" position="63,110" size="552,310" transparent="0" zPosition="2" />
+    <eLabel backgroundColor="KravenBorder2" position="63,110" size="552,4" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="63,416" size="552,4" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="63,110" size="4,310" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="611,110" size="4,310" transparent="0" zPosition="4" />
     <constant-widget name="NameRedGreenYellowBlue"/>
 	<!-- Menu ibar -->
     <constant-widget name="OKExit"/>
@@ -129,5 +129,16 @@
 	<!-- Logo -->
     <constant-widget name="Exit"/>
     <!--<text="TimerSanityConflict" position="105,0" />-->
+  </screen>
+  <!-- RemoteTimerScreen -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="RemoteTimerScreen" position="0,0" size="1920,1080" title="Remote-Timer digest">
+    <widget backgroundColor="Kravenbg" name="text" position="63,120" size="1794,41" font="Regular2;32" foregroundColor="KravenFont2" halign="left" valign="center" transparent="1" zPosition="1" />
+    <widget backgroundColor="Kravenbg" name="timerlist" font="Regular;33" foregroundColor="KravenFont1" position="63,170" size="1794,720" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <constant-widget name="Title-big"/>
+    <constant-widget name="Background"/>
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="NameRedGreenYellowBlue"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="RemoteTimerScreen" position="105,0" />-->
   </screen>
   <!-- Timer standard layout */ -->

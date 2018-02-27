@@ -46,7 +46,7 @@
     <widget name="timeline5" backgroundColor="orange" position="0,160" size="1,765" zPosition="1" />
 	<widget name="timeline_now" position="0,152" zPosition="2" size="22,780" pixmap="KravenFHD/epg/timeline-gme.png" alphatest="blend" />
     <widget font="Regular;30" halign="left" valign="center" name="key_red" position="105,958" size="330,78" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-    <eLabel text="Timer (löschen)" position="480,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" font="Regular;30" transparent="1" halign="left" zPosition="1" />
+	<widget font="Regular;30" halign="left" valign="top" noWrap="1" name="key_green" position="480,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,958" size="330,78" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,958" size="330,78" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="2" />
     <constant-widget name="Background"/>

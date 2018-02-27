@@ -88,6 +88,7 @@
     <constant-widget name="Exit"/>
     <!--<text="SleepTimerEdit" position="105,0" />-->
   </screen>
+  <!-- LanguageSelection -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="LanguageSelection" position="0,0" size="1920,1080" title="Language selection">
     <widget position="105,120" render="Listbox" size="1062,810" source="languages" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" zPosition="3">
       <convert type="TemplatedMultiContent">
@@ -118,11 +119,23 @@
     <constant-widget name="MenuOKExit"/>
     <!--<text="AutoTimerOverview" position="105,0" />-->
   </screen>
+  <!-- RemoteTimerSetup -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="RemoteTimerSetup" position="0,0" size="1920,1080" title="Settings">
+    <constant-widget name="Title-big"/>
+    <widget backgroundColor="Kravenbg3" name="config" position="105,120" size="1062,810" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="NameRedGreen"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="RemoteTimerSetup" position="105,0" />-->
+  </screen>
   <!-- BootlogosVTI -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="BootlogosVTI" position="0,0" size="1920,1080" title=" ">
-    <eLabel backgroundColor="KravenIBbg3" text="BootlogoVTI-Stony272" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" />
+    <eLabel backgroundColor="KravenIBbg3" text="BootlogoVTI" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" />
     <widget backgroundColor="Kravenbg3" name="config" position="105,120" size="1062,45" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
-    <eLabel backgroundColor="Kravenbg3" text="Vorschau:" position="105,195" size="1062,48" zPosition="1" font="Regular;38" foregroundColor="KravenFont2" transparent="1" />
+    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="105,195" size="1062,48" zPosition="1" font="Regular;38" foregroundColor="KravenFont2" transparent="1">
+      <convert type="KravenFHDTextTranslator">preview</convert>
+    </widget>
     <widget backgroundColor="Kravenbg3" name="bootlogohelperimage" position="386,270" size="500,282" zPosition="1" />
 	<!-- Logo -->
     <constant-widget name="Colorbuttons"/>
@@ -133,9 +146,11 @@
   </screen>
   <!-- RadiologosVTI -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="RadiologosVTI" position="0,0" size="1920,1080" title=" ">
-    <eLabel backgroundColor="KravenIBbg3" text="RadiologoVTI-Stony272" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" />
+    <eLabel backgroundColor="KravenIBbg3" text="RadiologoVTI" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" />
     <widget backgroundColor="Kravenbg3" name="config" position="105,120" size="1062,45" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
-    <eLabel backgroundColor="Kravenbg3" text="Vorschau:" position="105,195" size="1062,48" zPosition="1" font="Regular;38" foregroundColor="KravenFont2" transparent="1" />
+    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="105,195" size="1062,48" zPosition="1" font="Regular;38" foregroundColor="KravenFont2" transparent="1">
+      <convert type="KravenFHDTextTranslator">preview</convert>
+    </widget>
     <widget backgroundColor="Kravenbg3" name="bootlogohelperimage" position="386,270" size="500,282" zPosition="1" />
 	<!-- Logo -->
     <constant-widget name="Colorbuttons"/>

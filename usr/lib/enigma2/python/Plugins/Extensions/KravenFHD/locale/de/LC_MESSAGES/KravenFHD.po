@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenFHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2018-01-25 22:47+0100\n"
+"PO-Revision-Date: 2018-02-26 20:30+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -1946,15 +1946,15 @@ msgstr "Wählen Sie, ob einige Schrift- und Hintergrundfarben von ungeskinnten S
 
 #: KravenFHD.py
 msgid "Unwatched Color"
-msgstr "ungesehene Filme"
+msgstr "Farbe ungesehener Filme"
 
 #: KravenFHD.py
 msgid "Watching Color"
-msgstr "teils gesehene Filme"
+msgstr "Farbe teils gesehener Filme"
 
 #: KravenFHD.py
 msgid "Finished Color"
-msgstr "gesehene Filme"
+msgstr "Farbe gesehener Filme"
 
 #: KravenFHD.py
 msgid "Choose the font color of unwatched movies. Press OK to define your own RGB color."
@@ -2330,4 +2330,108 @@ msgstr "Hauptmenü Schriftgrösse"
 
 #: KravenFHD.py
 msgid "Choose the font size of mainmenus."
-msgstr "Wählen Sie die Schriftgrösse für die Hauptmenüs"
+msgstr "Wählen Sie die Schriftgrösse für die Hauptmenüs."
+
+#: KravenFHDTextTranslator.py
+msgid "Move/Copy"
+msgstr "verschieben/kopieren"
+
+#: KravenFHDTextTranslator.py
+msgid "currently running:"
+msgstr "aktuell läuft:"
+
+#: KravenFHDTextTranslator.py
+msgid "it follows:"
+msgstr "es folgt:"
+
+#: KravenFHDTextTranslator.py
+msgid "coming:"
+msgstr "gleich:"
+
+#: KravenFHDTextTranslator.py
+msgid "running since"
+msgstr "Sendung läuft seit"
+
+#: KravenFHDTextTranslator.py
+msgid "preview"
+msgstr "Vorschau"
+
+#: KravenFHDTextTranslator.py
+msgid "runs until"
+msgstr "läuft bis "
+
+#: KravenFHDTextTranslator.py
+msgid "   "
+msgstr "Uhr"
+
+#: KravenFHDTextTranslator.py
+msgid "timeshift active"
+msgstr "timeshift aktiv"
+
+#: KravenFHDTextTranslator.py
+msgid "until live:"
+msgstr "bis live:"
+
+#: KravenFHDTextTranslator.py
+msgid "temperature"
+msgstr "Temperatur"
+
+#: KravenFHDTextTranslator.py
+msgid "CPU load:"
+msgstr "CPU-Last:"
+
+#: KravenFHDTextTranslator.py
+msgid "satellite"
+msgstr "Satellit"
+
+#: KravenFHDTextTranslator.py
+msgid "fanspeed:"
+msgstr "Drehzahl:"
+
+#: KravenFHDTextTranslator.py
+msgid "AVG load:"
+msgstr "Systemlast:"
+
+#: KravenFHDTextTranslator.py
+msgid "signal"
+msgstr "Signal"
+
+#: KravenFHDTextTranslator.py
+msgid "tuner"
+msgstr "Tuner"
+
+#: KravenFHDTextTranslator.py
+msgid "video"
+msgstr "Video"
+
+#: KravenFHDTextTranslator.py
+msgid "r/m:"
+msgstr "U/m:"
+
+#: KravenFHDTextTranslator.py
+msgid "load"
+msgstr "Last"
+
+#: KravenFHDTextTranslator.py
+msgid "temp:"
+msgstr "Temp:"
+
+#: KravenFHDTextTranslator.py
+msgid "wind:"
+msgstr "Wind:"
+
+#: KravenFHDTextTranslator.py
+msgid "clime:"
+msgstr "Klima:"
+
+#: KravenFHDTextTranslator.py
+msgid "city:"
+msgstr "Ort:"
+
+#: KravenFHD.py
+msgid "Icon-Font V-Position"
+msgstr "Symbol-Schrift V-Position"
+
+#: KravenFHD.py
+msgid "Choose the vertical position of Icon-Fonts for infobars and players."
+msgstr "Wählen Sie die vertikale Position der Symbol-Schriften für die Infoleisten und Wiedergabe."

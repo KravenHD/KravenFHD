@@ -443,7 +443,7 @@
       <widget name="timeline5" backgroundColor="orange" position="0,498" size="1,450" zPosition="1" />
 	  <widget name="timeline_now" position="0,490" zPosition="2" size="22,465" pixmap="KravenFHD/epg/timeline-gme.png" alphatest="blend" />
       <widget font="Regular;30" halign="left" valign="center" name="key_red" position="105,958" size="330,78" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <eLabel text="Timer (löschen)" position="480,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" font="Regular;30" transparent="1" halign="left" zPosition="1" />
+	  <widget font="Regular;30" halign="left" valign="top" noWrap="1" name="key_green" position="480,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,958" size="330,78" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,958" size="330,78" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="2" />
 	</constant-widget>
@@ -486,7 +486,7 @@
       <widget name="timeline5" backgroundColor="orange" position="0,498" size="1,450" zPosition="1" />
 	  <widget name="timeline_now" position="0,490" zPosition="2" size="22,465" pixmap="KravenFHD/epg/timeline-gme.png" alphatest="blend" />
       <widget font="Regular;30" halign="left" valign="center" name="key_red" position="105,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <eLabel text="Timer (löschen)" position="480,997" size="330,39" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" font="Regular;30" transparent="1" halign="left" zPosition="1" />
+	  <widget font="Regular;30" halign="left" valign="top" noWrap="1" name="key_green" position="480,997" size="330,39" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="2" />
       <!-- nontransbg */-->
@@ -534,7 +534,7 @@
       <widget name="timeline5" backgroundColor="orange" position="0,498" size="1,450" zPosition="1" />
 	  <widget name="timeline_now" position="0,490" zPosition="2" size="22,465" pixmap="KravenFHD/epg/timeline-gme.png" alphatest="blend" />
       <widget font="Regular;30" halign="left" valign="center" name="key_red" position="105,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <eLabel text="Timer (löschen)" position="480,997" size="330,39" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" font="Regular;30" transparent="1" halign="left" zPosition="1" />
+	  <widget font="Regular;30" halign="left" valign="top" noWrap="1" name="key_green" position="480,997" size="330,39" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="2" />
       <!-- nontransbg */-->
@@ -1912,6 +1912,12 @@
 	<constant-widget name="progress-mpplayer">
       <widget borderWidth="0" position="315,1002" render="Progress" size="1287,7" source="session.CurrentService" transparent="1" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress858.png">
         <convert type="MPServicePosition">Position</convert>
+      </widget>
+	</constant-widget>
+	
+	<constant-widget name="resolution-mpplayer">
+      <widget source="session.CurrentService" render="Label" size="178,33" font="Regular;27" halign="center" backgroundColor="KravenIBbg" position="619,1020" valign="center" foregroundColor="KravenIcon" transparent="1">
+        <convert type="KravenFHDServiceInfoEX">Resolution</convert>
       </widget>
 	</constant-widget>
 	

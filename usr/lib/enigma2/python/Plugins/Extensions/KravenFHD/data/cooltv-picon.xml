@@ -288,7 +288,9 @@
       <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
     </widget>
     <widget CoolBar="0" CoolBarColor="KravenFont1" CoolCurrentCol="KravenSelFont" CoolDurationColor="KravenFont1" CoolDurationPos="999" CoolDurationSize="105" CoolEventColor="KravenFont1" CoolEventFont="Regular;33" CoolEventHPos="4" CoolEventPos="360" CoolEventSize="525" CoolFont="Regular;37" CoolMarkerHPos="1" CoolMarkerPicHPos="3" CoolMarkerPicPos="3" CoolMarkerPos="210" CoolPico="42" CoolPicoHPos="1" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolServiceColor="KravenFont1" CoolServiceFont="Regular;36" CoolServiceHPos="0" CoolServicePos="3" CoolServiceSize="315" CoolTime="1" CoolTimeHPos="4" CoolTimePos="870" CoolTimeSize="195" CoolTunerCol="KravenFont1" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" itemHeight="48" name="list" position="732,95" size="1125,864" transparent="1" zPosition="25" />
-    <eLabel backgroundColor="Kravenbg2" font="Regular;30" foregroundColor="KravenFont2" halign="left" position="63,810" size="576,37" text="gleich :" transparent="1" valign="center" />
+    <widget source="Service" render="Label" backgroundColor="Kravenbg2" font="Regular;30" foregroundColor="KravenFont2" halign="left" position="63,810" size="576,37" transparent="1" valign="center">
+      <convert type="KravenFHDTextTranslator">coming</convert>
+    </widget>
     <widget backgroundColor="Kravenbg2" font="Regular;28" foregroundColor="KravenFont2" position="63,855" render="CoolNextEvent" size="576,105" source="Service" transparent="1">
     </widget>
     <widget backgroundColor="KravenIBCoolbg" name="date" position="1425,24" font="Regular2;33" foregroundColor="KravenMFont2" halign="right" size="270,45" transparent="1" />

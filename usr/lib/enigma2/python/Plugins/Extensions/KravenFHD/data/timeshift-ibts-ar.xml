@@ -4,13 +4,17 @@
     <widget source="session.CurrentService" render="Label" position="927,15" size="150,45" font="Regular;36" halign="right" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top">
       <convert type="ServicePosition">Remaining</convert>
     </widget>
-    <eLabel text="bis live:" position="796,15" size="150,45" font="Regular;36" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" foregroundColor="KravenIBFont1" />
+    <widget source="session.CurrentService" render="Label" position="796,15" size="150,45" font="Regular;36" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" foregroundColor="KravenIBFont1">
+      <convert type="KravenFHDTextTranslator">untillive</convert>
+    </widget>
     <eLabel text="min" position="1087,15" size="75,45" font="Regular;36" foregroundColor="KravenIBFont1" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" />
     <widget source="session.CurrentService" render="Label" position="175,15" size="150,45" font="Regular;36" halign="right" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top">
       <convert type="ServicePosition">Length</convert>
     </widget>
     <eLabel text="min" position="337,15" size="90,45" font="Regular;36" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" foregroundColor="KravenIBFont1" />
-    <eLabel position="432,15" size="345,48" text="timeshift aktiv" font="Regular;42" backgroundColor="KravenIBbg" transparent="1" zPosition="10" valign="center" foregroundColor="red" halign="center" />
+    <widget source="session.CurrentService" render="Label" position="432,15" size="345,48" font="Regular;42" backgroundColor="KravenIBbg" transparent="1" zPosition="10" valign="center" foregroundColor="red" halign="center">
+      <convert type="KravenFHDTextTranslator">timeshiftactive</convert>
+    </widget>
     <widget position="27,64" render="Progress" backgroundColor="KravenIBbg" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress749.png" transparent="1" size="1123,7" source="session.CurrentService" zPosition="17">
       <convert type="ServicePosition">Position</convert>
     </widget>

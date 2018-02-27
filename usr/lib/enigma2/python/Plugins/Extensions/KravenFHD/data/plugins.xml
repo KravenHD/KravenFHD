@@ -1814,7 +1814,9 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="SpinnerSelectionBox" position="0,0" size="1920,1080" title=" ">
 	<widget backgroundColor="KravenIBbg3" name="text" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" />
 	<widget backgroundColor="Kravenbg3" name="list" position="105,120" size="531,810" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
-    <eLabel backgroundColor="Kravenbg3" text="Vorschau:" position="762,120" size="300,48" zPosition="1" font="Regular;38" foregroundColor="KravenFont2" transparent="1" />
+    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="762,120" size="300,48" zPosition="1" font="Regular;38" foregroundColor="KravenFont2" transparent="1">
+      <convert type="KravenFHDTextTranslator">preview</convert>
+    </widget>
 	<widget backgroundColor="Kravenbg3" name="bild" position="762,195" size="300,216" zPosition="1" transparent="1" />
 	<!-- Logo -->
     <constant-widget name="Colorbuttons"/>
@@ -1829,5 +1831,55 @@
     <constant-widget name="Colorbuttons"/>
     <constant-widget name="OKExit"/>
     <!--<text="vEditor" position="105,0" />-->
+  </screen>
+  <!-- ToplevelPPanel -->
+  <screen name="ToplevelPPanel" position="0,0" size="1920,1080" title="Toplevel PPanel" flags="wfNoBorder" backgroundColor="transparent">
+    <constant-widget name="Title-big"/>
+	<widget backgroundColor="Kravenbg3" name="nodelist" position="105,120" size="1062,675" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="helptext" position="105,810" size="1062,123" font="Regular2;32" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1"/>
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="ToplevelPPanel" position="105,0" />-->
+  </screen>
+  <!-- PPanel -->
+  <screen name="PPanel" position="0,0" size="1920,1080" title="PPanel" flags="wfNoBorder" backgroundColor="transparent">
+    <constant-widget name="Title-big"/>
+	<widget backgroundColor="Kravenbg3" name="nodelist" position="105,120" size="1062,675" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="helptext" position="105,810" size="1062,123" font="Regular2;32" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1"/>
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="PPanel" position="105,0" />-->
+  </screen>
+  <!-- File -->
+  <screen name="File" position="0,0" size="1920,1080" title="File" flags="wfNoBorder" backgroundColor="transparent">
+    <constant-widget name="Title-big"/>
+	<widget backgroundColor="Kravenbg3" name="nodelist" position="105,120" size="1062,675" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="helptext" position="105,810" size="1062,123" font="Regular2;32" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1"/>
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="File" position="105,0" />-->
+  </screen>
+  <!-- Tarball -->
+  <screen name="Tarball" position="0,0" size="1920,1080" title="Tarball" flags="wfNoBorder" backgroundColor="transparent">
+    <constant-widget name="Title-big"/>
+    <widget backgroundColor="Kravenbg3" name="progress" position="105,120" size="1062,810" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="Tarball" position="105,0" />-->
+  </screen>
+  <!-- Execute -->
+  <screen name="Execute" position="0,0" size="1920,1080" title="Execute" flags="wfNoBorder" backgroundColor="transparent">
+    <constant-widget name="Title-big"/>
+    <widget backgroundColor="Kravenbg3" name="linelist" position="105,120" size="1062,810" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="Execute" position="105,0" />-->
   </screen>
 <!-- plugins -->

@@ -56,10 +56,19 @@
     <convert type="ServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_hd_off.png" position="1267,1009" size="65,33" zPosition="1" />
-  <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_hd_on.png" position="1267,1009" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
-    <convert type="ServiceInfo">VideoWidth</convert>
-    <convert type="ValueRange">721,1980</convert>
+  <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_sd.png" position="1267,1009" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="1">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">0,719</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_hd_on.png" position="1267,1009" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="1">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">720,1080</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_uhd.png" position="1267,1009" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="1">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">1081,5000</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_crypt_off.png" position="1350,1009" size="65,33" zPosition="1" />

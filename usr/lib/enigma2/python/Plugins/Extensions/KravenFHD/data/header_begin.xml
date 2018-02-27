@@ -387,6 +387,8 @@
     <parameter name="SelectionListDescr" value="55,2,1000,41" />
     <parameter name="SelectionListLock" value="5,8,30,30" />
 	<parameter name="SelectionListLockOff" value="5,8,30,30" />
+	<!-- ConfigList openATV -->
+    <parameter name="ConfigListSeperator" value="600" />
 	<!-- Dreamexplorer -->
     <parameter name="DreamexplorerName" value="55,2,1000,41" />
     <parameter name="DreamexplorerIcon" value="5,8,30,30" />

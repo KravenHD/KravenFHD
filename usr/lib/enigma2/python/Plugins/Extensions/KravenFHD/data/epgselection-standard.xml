@@ -14,7 +14,7 @@
     <constant-widget name="Colorbuttons"/>
     <constant-widget name="Background"/>
     <widget font="Regular;30" halign="left" valign="center" name="key_red" position="105,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-    <eLabel text="Timer (löschen)" position="480,997" size="360,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" font="Regular;30" transparent="1" halign="left" zPosition="1" />
+	<widget font="Regular;30" halign="left" valign="top" noWrap="1" name="key_green" position="480,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="2" />
     <constant-widget name="MenuOKExit"/>
@@ -30,7 +30,7 @@
     <constant-widget name="Colorbuttons"/>
     <constant-widget name="Background"/>
     <widget font="Regular;30" halign="left" valign="center" name="key_red" position="105,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-    <eLabel text="Timer (löschen)" position="480,997" size="360,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" font="Regular;30" transparent="1" halign="left" zPosition="1" />
+	<widget font="Regular;30" halign="left" valign="top" noWrap="1" name="key_green" position="480,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="2" />
     <constant-widget name="MenuOKExit"/>

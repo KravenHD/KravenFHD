@@ -8,7 +8,7 @@
     <widget source="Service" render="Label" position="767,112" size="400,37" font="Regular;28" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" halign="right">
 	  <convert type="KravenFHDDiskSpace">both</convert>
     </widget>
-    <widget name="list" position="105,157" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget name="list" position="105,157" size="1062,810" foregroundColor="KravenFont1" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
     <widget backgroundColor="Kravenbg" font="Regular2;36" foregroundColor="KravenFont2" noWrap="1" position="1233,112" render="Label" size="624,45" source="Service" transparent="1" zPosition="1">
       <convert type="KravenFHDEventName">Name</convert>
     </widget>

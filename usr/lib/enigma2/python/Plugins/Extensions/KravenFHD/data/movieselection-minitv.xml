@@ -8,7 +8,7 @@
     <widget source="Service" render="Label" position="767,112" size="400,37" font="Regular;28" foregroundColor="KravenFont2" backgroundColor="Kravenbg2" transparent="1" halign="right">
 	  <convert type="KravenFHDDiskSpace">both</convert>
     </widget>
-    <widget name="list" position="105,157" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget name="list" position="105,157" size="1062,810" foregroundColor="KravenFont1" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
 	<widget source="session.VideoPicture" render="KravenFHDPig3" position="1233,112" size="576,324" zPosition="3" backgroundColor="transparent" />
     <eLabel backgroundColor="#00000000" position="1233,112" size="576,324" transparent="0" zPosition="2" />
     <eLabel backgroundColor="KravenBorder2" position="1233,112" size="576,4" transparent="0" zPosition="4" />

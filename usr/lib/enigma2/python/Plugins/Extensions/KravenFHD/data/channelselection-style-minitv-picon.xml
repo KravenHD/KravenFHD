@@ -28,7 +28,9 @@
     <eLabel backgroundColor="KravenBorder2" position="857,331" size="384,3" transparent="0" zPosition="4" />
     <eLabel backgroundColor="KravenBorder2" position="857,118" size="3,216" transparent="0" zPosition="4" />
     <eLabel backgroundColor="KravenBorder2" position="1238,118" size="3,216" transparent="0" zPosition="4" />
-    <eLabel text="aktuell läuft:" position="1285,125" size="572,51" font="Regular2;39" foregroundColor="KravenFont2" backgroundColor="Kravenbg2" transparent="1" halign="left" />
+    <widget source="ServiceEvent" render="Label" position="1285,125" size="572,51" font="Regular2;39" foregroundColor="KravenFont2" backgroundColor="Kravenbg2" transparent="1" halign="left">
+      <convert type="KravenFHDTextTranslator">currentlyrunning</convert>
+    </widget>
     <widget source="session.CurrentService" render="Label" position="1285,183" size="572,51" font="Regular;39" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" noWrap="1" transparent="1" halign="left">
       <convert type="ServiceName">Name</convert>
     </widget>
