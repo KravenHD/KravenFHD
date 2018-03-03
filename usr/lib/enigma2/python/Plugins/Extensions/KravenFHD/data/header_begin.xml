@@ -392,6 +392,9 @@
 	<!-- Dreamexplorer -->
     <parameter name="DreamexplorerName" value="55,2,1000,41" />
     <parameter name="DreamexplorerIcon" value="5,8,30,30" />
+	<!-- Programmlisten_Updater openATV -->
+    <parameter name="ProgrammlistenUpdaterListFont" value="Regular;32" />
+    <parameter name="ProgrammlistenUpdaterList" value="15,2,675,357,45" />
   </parameters>
   <fonts>
     <font filename="lcd.ttf" name="LCD" scale="100" />

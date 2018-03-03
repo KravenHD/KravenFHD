@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenFHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2018-02-26 20:30+0100\n"
+"PO-Revision-Date: 2018-03-03 08:56+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -2435,3 +2435,19 @@ msgstr "Symbol-Schrift V-Position"
 #: KravenFHD.py
 msgid "Choose the vertical position of Icon-Fonts for infobars and players."
 msgstr "Wählen Sie die vertikale Position der Symbol-Schriften für die Infoleisten und Wiedergabe."
+
+#: KravenFHDTextTranslator.py
+msgid "Birthday"
+msgstr "Geburtstag"
+
+#: KravenFHDTextTranslator.py
+msgid "Age"
+msgstr "Alter"
+
+#: KravenFHDTextTranslator.py
+msgid "Birthday Reminder Settings"
+msgstr "Birthday Reminder Einstellungen"
+
+#: KravenFHDTextTranslator.py
+msgid "Select a path for the birthday file"
+msgstr "Wähle den Pfad für die Geburtstagsdatei"

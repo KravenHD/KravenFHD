@@ -51,6 +51,11 @@ class KravenFHDTextTranslator(Converter, object):
 	wind = 29
 	clime = 30
 	city = 31
+	name = 32
+	birthday = 33
+	age = 34
+	brsettings = 35
+	brpath = 36
 	
 
 	def __init__(self, type):
@@ -122,6 +127,16 @@ class KravenFHDTextTranslator(Converter, object):
 			self.type = self.clime
 		elif type == "city":
 			self.type = self.city
+		elif type == "name":
+			self.type = self.name
+		elif type == "birthday":
+			self.type = self.birthday
+		elif type == "age":
+			self.type = self.age
+		elif type == "brsettings":
+			self.type = self.brsettings
+		elif type == "brpath":
+			self.type = self.brpath
 
 	@cached
 	def getText(self):
@@ -191,5 +206,15 @@ class KravenFHDTextTranslator(Converter, object):
 			return _('clime:')
 		elif self.type == self.city:
 			return _('city:')
+		elif self.type == self.name:
+			return _('Name')
+		elif self.type == self.birthday:
+			return _('Birthday')
+		elif self.type == self.age:
+			return _('Age')
+		elif self.type == self.brsettings:
+			return _('Birthday Reminder Settings')
+		elif self.type == self.brpath:
+			return _('Select a path for the birthday file')
 
 	text = property(getText)
