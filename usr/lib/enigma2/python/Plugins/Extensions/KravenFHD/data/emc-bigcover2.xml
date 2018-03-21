@@ -16,7 +16,7 @@
     </widget>
     <widget source="Service" render="Label" position="1302,204" size="568,45" font="Regular;31" halign="center" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1">
       <convert type="EMCServiceTime">StartTime</convert>
-      <convert type="EMCClockToText">Date</convert>
+      <convert type="EMCKravenFHDClockToText">Date</convert>
     </widget>
     <widget source="Service" render="Label" position="1474,892" size="225,49" font="Regular2;30" halign="center" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1">
       <convert type="EMCMovieInfo">FileSize</convert>
@@ -24,7 +24,7 @@
     <widget name="Cover" position="1389,324" size="411,541" zPosition="4" backgroundColor="Kravenbg" alphatest="on" transparent="0" />
     <widget source="Service" render="Label" position="1474,945" size="225,49" font="Regular2;30" halign="center" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1">
       <convert type="EMCServiceTime">Duration</convert>
-      <convert type="EMCClockToText">InMinutes</convert>
+      <convert type="EMCKravenFHDClockToText">InMinutes</convert>
     </widget>
     <!-- globalbg */-->
 	<constant-widget name="emcm2bc233"/>

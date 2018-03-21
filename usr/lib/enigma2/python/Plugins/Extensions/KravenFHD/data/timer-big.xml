@@ -60,18 +60,18 @@
     <constant-widget name="Colorbuttons"/>
 	<!-- nontransbg */-->
 	<widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenFont1" position="1707,33" size="150,42" font="Regular;39" halign="right" transparent="1" valign="center">
-	  <convert type="ClockToText">Default</convert>
+	  <convert type="KravenFHDClockToText">Default</convert>
 	</widget>
     <widget backgroundColor="Kravenbg2" font="Regular;36" foregroundColor="KravenFont1" position="675,95" render="Label" size="600,45" source="ServiceEvent" halign="left" valign="center" transparent="1" zPosition="3">
       <convert type="ServiceName">Name</convert>
     </widget>
     <widget backgroundColor="Kravenbg2" font="Regular;36" foregroundColor="KravenFont1" halign="left" valign="top" position="675,146" render="Label" size="120,45" source="Event" transparent="1">
       <convert type="KravenFHDEventTime">StartTime</convert>
-      <convert type="ClockToText">Format:%H:%M</convert>
+      <convert type="KravenFHDClockToText">Format:%H:%M</convert>
     </widget>
     <widget backgroundColor="Kravenbg2" font="Regular;36" foregroundColor="KravenFont1" halign="left" valign="top" position="783,146" render="Label" size="150,45" source="Event" transparent="1">
       <convert type="KravenFHDEventTime">EndTime</convert>
-      <convert type="ClockToText">Format:- %H:%M</convert>
+      <convert type="KravenFHDClockToText">Format:- %H:%M</convert>
     </widget>
     <widget backgroundColor="Kravenbg2" font="Regular2;36" foregroundColor="KravenFont2" halign="left" valign="top" position="948,146" render="Label" size="900,45" source="Event" transparent="1">
       <convert type="KravenFHDEventName">Name</convert>

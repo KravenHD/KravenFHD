@@ -235,22 +235,54 @@
     <eLabel text="Hotkey Setup" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
 	<widget backgroundColor="Kravenbg" source="Title" render="Label" foregroundColor="KravenFont2" font="Regular2;38" position="105,120" size="1062,48" halign="left" valign="center" noWrap="1" transparent="1" />
     <widget backgroundColor="Kravenbg" name="list" foregroundColor="KravenFont1" font="Regular;32" itemHeight="45" position="105,195" size="630,720" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="2" transparent="1" />
-    <widget backgroundColor="Kravenbg" name="choosen" foregroundColor="KravenFont1" font="Regular2;32" itemHeight="45" position="690,195" size="615,720" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
-    <widget backgroundColor="Kravenbg" name="description" foregroundColor="KravenFont2" font="Regular2;32" position="1320,161" size="537,728" valign="center" halign="center" />
+    <widget backgroundColor="Kravenbg" name="choosen" foregroundColor="KravenFont1" font="Regular;32" itemHeight="45" position="741,195" size="630,720" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="2" transparent="1" />
+    <widget backgroundColor="Kravenbg" name="description" foregroundColor="KravenFont2" font="Regular2;32" position="1377,161" size="480,728" valign="center" halign="center" zPosition="2" transparent="1" />
   	<constant-widget name="Background"/>
 	<constant-widget name="Colorbuttons"/>
 	<constant-widget name="SourceRedGreenYellowBlue"/>
 	<constant-widget name="OKExit"/>
     <!--<text="ButtonSetupSelect" position="105,0" />-->
   </screen>
-  <!-- Extensionslist -->
-  <screen name="ExtensionsList" position="0,0" size="1920,1080" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
-    <eLabel text="Please choose an extension..." position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="center" />
-	<widget backgroundColor="Kravenbg3" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" scrollbarWidth="5" transparent="1" />
-  	<!-- Logo -->
-	<constant-widget name="Colorbuttons"/>
-	<constant-widget name="OKExit"/>
-	<!--<text="ExtensionsList" position="105,0" />-->
+ <!-- ExtensionsList -->
+  <screen name="ExtensionsList" position="195,210" size="900,600" title="Input" flags="wfNoBorder" backgroundColor="Kravenbg">
+    <eLabel text="Please choose an extension..." backgroundColor="Kravenbg" font="Regular2;39" foregroundColor="KravenFont2" position="30,12" size="795,48" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="30,67" size="825,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
+	<applet type="onLayoutFinish">
+# this should be factored out into some helper code, but currently demonstrates applets.
+from enigma import eSize, ePoint
+
+orgwidth = self.instance.size().width()
+orgpos = self.instance.position()
+textsize = self["text"].getSize()
+
+# y size still must be fixed in font stuff...
+textsize = (textsize[0] + 105, textsize[1] + 105)
+count = len(self.list)
+if count &gt; 15:
+        count = 15
+offset = 45 * count
+wsizex = textsize[0] + 45
+wsizey = textsize[1] + offset + 30
+
+if (975 &gt; wsizex):
+        wsizex = 975
+wsize = (wsizex, wsizey)
+
+# resize
+self.instance.resize(eSize(*wsize))
+
+# resize label
+self["text"].instance.resize(eSize(*textsize))
+
+# move list
+listsize = (wsizex - 30, 45 * count)
+self["list"].instance.move(ePoint(15, textsize[1]))
+self["list"].instance.resize(eSize(*listsize))
+
+# center window
+newwidth = wsize[0]
+self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
+	</applet>
   </screen>
   <!-- SoftwareManagerSetup -->
   <screen name="SoftwareManagerSetup" position="0,0" size="1920,1080" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
@@ -409,7 +441,7 @@
     </widget>
     <widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont1" halign="left" position="105,178" render="Label" size="97,33" source="Event" transparent="1">
       <convert type="KravenFHDEventTime">StartTime</convert>
-      <convert type="ClockToText">Format:%H:%M </convert>
+      <convert type="KravenFHDClockToText">Format:%H:%M </convert>
     </widget>
     <widget backgroundColor="Kravenbg" borderWidth="0" position="202,196" render="Progress" size="720,7" source="Event" transparent="1" zPosition="20" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress480.png">
       <convert type="KravenFHDEventTime">Progress</convert>
@@ -417,7 +449,7 @@
     <eLabel backgroundColor="KravenLine" position="202,199" size="720,1" />
     <widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont1" halign="right" position="922,178" render="Label" size="97,33" source="Event" transparent="1">
       <convert type="KravenFHDEventTime">EndTime</convert>
-      <convert type="ClockToText">Format:%H:%M</convert>
+      <convert type="KravenFHDClockToText">Format:%H:%M</convert>
     </widget>
 	<widget name="timeline_text" position="105,457" size="1752,37" selectionDisabled="1" transparent="1" zPosition="5" backgroundColor="Kravenbg" foregroundColor="KravenFont1" />
 	<widget name="timeline_now" position="187,498" zPosition="2" size="23,450" pixmap="KravenFHD/epg/timeline-ge.png" alphatest="blend" />
@@ -438,7 +470,7 @@
     </widget>
     <widget backgroundColor="Kravenbg2" font="Regular;30" foregroundColor="KravenFont1" halign="left" position="105,178" render="Label" size="97,33" source="Event" transparent="1">
       <convert type="KravenFHDEventTime">StartTime</convert>
-      <convert type="ClockToText">Format:%H:%M </convert>
+      <convert type="KravenFHDClockToText">Format:%H:%M </convert>
     </widget>
     <widget backgroundColor="Kravenbg2" borderWidth="0" position="202,196" render="Progress" size="720,7" source="Event" transparent="1" zPosition="20" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress480.png">
       <convert type="KravenFHDEventTime">Progress</convert>
@@ -446,7 +478,7 @@
     <eLabel backgroundColor="KravenLine" position="202,199" size="720,1" />
     <widget backgroundColor="Kravenbg2" font="Regular;30" foregroundColor="KravenFont1" halign="right" position="922,178" render="Label" size="97,33" source="Event" transparent="1">
       <convert type="KravenFHDEventTime">EndTime</convert>
-      <convert type="ClockToText">Format:%H:%M</convert>
+      <convert type="KravenFHDClockToText">Format:%H:%M</convert>
     </widget>
     <widget source="session.VideoPicture" render="Pig" position="1305,120" size="552,310" zPosition="3" backgroundColor="transparent" />
     <eLabel backgroundColor="#00000000" position="1305,120" size="552,310" transparent="0" zPosition="2" />
@@ -461,7 +493,7 @@
     <constant-widget name="GEMTR33"/>
     <!-- nontransbg */-->
 	<widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenMFont1" position="1707,33" size="150,42" font="Regular;39" halign="right" transparent="1" valign="center">
-      <convert type="ClockToText">Default</convert>
+      <convert type="KravenFHDClockToText">Default</convert>
     </widget>
 	<!-- Menu ibar -->
     <constant-widget name="Colorbuttons"/>
@@ -473,7 +505,7 @@
   <screen name="GraphicalInfoBarEPG" title="InfoBar" position="0,503" size="1920,577" backgroundColor="transparent" flags="wfNoBorder">
     <widget name="bouquetlist" position="0,0" size="1,1" itemHeight="1" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" />
     <widget source="global.CurrentTime" render="Label" position="1692,177" size="165,63" backgroundColor="KravenIBbg" transparent="1" zPosition="1" font="Regular;48" valign="center" halign="right">
-      <convert type="ClockToText">Default</convert>
+      <convert type="KravenFHDClockToText">Default</convert>
     </widget>
     <widget source="Service" render="Label" position="142,177" size="900,63" font="Regular;48" valign="center" noWrap="1" backgroundColor="KravenIBbg" transparent="1">
       <convert type="ServiceName">Name</convert>
@@ -515,7 +547,7 @@
       <convert type="KravenFHDEventTime">Progress</convert>
     </widget>
     <widget source="global.CurrentTime" render="Label" position="1710,177" size="165,63" backgroundColor="KravenIBbg" transparent="1" zPosition="1" font="Regular;48" valign="center" halign="center">
-      <convert type="ClockToText">Default</convert>
+      <convert type="KravenFHDClockToText">Default</convert>
     </widget>
     <widget name="list" position="25,292" size="1072,180" font="Regular;36" foregroundColor="KravenIBFont2" backgroundColor="KravenIBbg" transparent="1" />
     <widget source="Service" render="Picon" position="18,177" size="105,63" transparent="0" zPosition="2" alphatest="blend">
@@ -1267,9 +1299,10 @@
     <!--<text="MerlinMusicPlayerScreen" position="105,0" />-->
   </screen>
   <!-- MerlinMusicPlayerScreenSaver -->
-  <screen name="MerlinMusicPlayerScreenSaver" position="0,0" size="1920,1080" title="Merlin Music Player ScreenSaver" flags="wfNoBorder" backgroundColor="Kravenbg">
+  <screen name="MerlinMusicPlayerScreenSaver" position="0,0" size="1920,1080" title="Merlin Music Player ScreenSaver" flags="wfNoBorder" backgroundColor="transparent">
     <widget name="coverArt" pixmap="KravenFHD/mmp/no_coverArt.png" position="300,115" size="384,384" transparent="1" alphatest="blend" />
-    <widget name="display" position="300,556" size="1920,36" zPosition="1" transparent="1" font="Regular;30" foregroundColor="KravenFont1" />
+    <widget backgroundColor="#00000000" name="display" position="300,556" size="1920,36" font="Regular;30" foregroundColor="#00ffffff" zPosition="1" transparent="1" />
+    <eLabel backgroundColor="#00000000" position="0,0" size="1920,1080" zPosition="-1" />
   </screen>
   <!-- MerlinMusicPlayerSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MerlinMusicPlayerSetup" position="0,0" size="1920,1080" title="Merlin Music Player">
@@ -1293,7 +1326,7 @@
   <!-- SelectPath -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="SelectPath" position="0,0" size="1920,1080" title="Select path">
     <widget name="target" position="105,120" size="1062,57" zPosition="3" halign="left" foregroundColor="KravenFont2" backgroundColor="Kravenbg3" font="Regular2;39" transparent="1" />
-    <widget backgroundColor="Kravenbg3" name="filelist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,205" size="1062,675" scrollbarMode="showOnDemand" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="filelist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,205" size="1062,720" scrollbarMode="showOnDemand" transparent="1" />
     <constant-widget name="Title-big"/>
 	<!-- Logo -->
     <constant-widget name="Colorbuttons"/>
@@ -1432,7 +1465,7 @@
   <!-- vInputBox -->
   <screen name="vInputBox" position="0,0" size="1920,1080" flags="wfNoBorder" title="Input..." backgroundColor="transparent">
     <constant-widget name="Title-big"/>
-    <widget backgroundColor="Kravenbg3" name="input" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,135" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="input" font="Regular;32" foregroundColor="KravenFont1" position="105,120" size="1062,41" transparent="1" />
     <widget backgroundColor="Kravenbg3" name="text" font="Regular2;32" foregroundColor="KravenFont2" position="105,500" size="1062,369" transparent="1" />
 	<!-- Logo -->
     <constant-widget name="Colorbuttons"/>
@@ -1640,4 +1673,33 @@
 	<constant-widget name="SourceRedGreen"/>
     <constant-widget name="OKExit"/>
     <!--<text="PathSelectionScreen" position="105,0" />-->
+  </screen>
+  <!-- QuickSubtitlesConfigMenu -->
+  <screen backgroundColor="KravenIBbg" flags="wfNoBorder" name="QuickSubtitlesConfigMenu" position="0,0" size="1102,280" title="Subtitle settings" >
+    <widget backgroundColor="Kravenbg" name="config" position="15,10" size="1062,225" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+	<widget backgroundColor="Kravenbg" name="videofps" position="16,237" size="1062,41" font="Regular;32" foregroundColor="KravenFont2" zPosition="1" transparent="1" />
+	<!--<eLabel position="0,277" size="1102,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	<eLabel position="1099,0" size="3,277" backgroundColor="KravenIBLine" zPosition="-8" />-->
+  </screen>
+  <!-- QuitMainloopScreen -->
+  <screen backgroundColor="transparent" name="QuitMainloopScreen" position="0,0" size="1920,1080" flags="wfNoBorder">
+    <ePixmap pixmap="KravenFHD/global-icons/info.png" position="920,449" size="79,79" alphatest="blend" zPosition="1" />
+	<widget backgroundColor="Kravenbg" name="text" position="312,544" size="1296,82" font="Regular;32" foregroundColor="KravenFont1" halign="center" valign="center" zPosition="1" transparent="1" />
+    <eLabel backgroundColor="Kravenbg" position="300,431" size="1320,199" />
+  </screen>
+  <!-- Seekbar -->
+  <screen backgroundColor="transparent" name="Seekbar" position="533,0" size="855,120" flags="wfNoBorder" zPosition="2">
+    <widget name="cursor" position="0,0" size="16,21" pixmap="KravenFHD/epg/timeline-now_s.png" alphatest="blend" zPosition="6" />
+    <widget backgroundColor="Kravenbg" name="time" foregroundColor="KravenFont1" font="Regular;32" position="0,60" size="855,41" halign="center" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg" source="session.CurrentService" render="Label" foregroundColor="KravenFont1" font="Regular;32" position="75,25" size="135,41" halign="right" valign="center" transparent="1">
+      <convert type="ServicePosition">Position</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Progress" position="225,42" size="405,7" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress270.png">
+      <convert type="ServicePosition">Position</convert>
+    </widget>
+    <eLabel position="225,45" size="405,1" backgroundColor="KravenLine" />
+    <widget backgroundColor="Kravenbg" source="session.CurrentService" render="Label" foregroundColor="KravenFont1" font="Regular;32" position="645,25" size="135,41" halign="left" valign="center" transparent="1">
+      <convert type="ServicePosition">Length</convert>
+    </widget>
+	<eLabel backgroundColor="Kravenbg" position="60,0" size="733,120" zPosition="-1" />
   </screen>

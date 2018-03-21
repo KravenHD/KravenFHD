@@ -1,12 +1,12 @@
     <!--/* Clock -->
   <widget backgroundColor="#00999999" font="Regular;39" halign="center" render="Label" position="1605,936" size="79,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="2" foregroundColor="black">
-    <convert type="ClockToText">Format:%H</convert>
+    <convert type="KravenFHDClockToText">Format:%H</convert>
   </widget>
   <widget backgroundColor="#00999999" font="Regular;37" halign="center" render="Label" position="1675,933" size="79,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="2" foregroundColor="black">
-    <convert type="ClockToText">Format:%M</convert>
+    <convert type="KravenFHDClockToText">Format:%M</convert>
   </widget>
   <widget backgroundColor="KravenIBbg" font="Regular2;24" foregroundColor="KravenIBFont2" halign="center" position="1581,1027" size="300,45" render="Label" source="global.CurrentTime" transparent="1" valign="top" zPosition="2">
-    <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    <convert type="KravenFHDClockToText">Format:%A, %d.%m.%Y</convert>
   </widget>
   <widget alphatest="blend" render="KravenFHDAndroidPicon" position="1581,852" size="300,183" source="Title" path="clock" transparent="1" zPosition="1">
     <convert type="KravenFHDWeather">Day_0,MeteoIcon </convert>

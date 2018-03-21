@@ -5,7 +5,7 @@
     </widget>
     <widget source="ServiceEvent" render="Label" position="1233,185" size="90,36" font="Regular;28" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" transparent="1" halign="left">
       <convert type="KravenFHDEventTime">StartTime</convert>
-      <convert type="ClockToText">
+      <convert type="KravenFHDClockToText">
       </convert>
     </widget>
     <widget position="1323,200" size="444,7" render="Progress" source="ServiceEvent" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress300.png">
@@ -14,7 +14,7 @@
     <eLabel position="1323,203" size="444,1" backgroundColor="KravenLine" />
     <widget source="ServiceEvent" render="Label" position="1767,185" size="90,36" font="Regular;28" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" transparent="1" halign="right">
       <convert type="KravenFHDEventTime">EndTime</convert>
-      <convert type="ClockToText">Format:%H:%M</convert>
+      <convert type="KravenFHDClockToText">Format:%H:%M</convert>
     </widget>
     <widget backgroundColor="Kravenbg4" scrollbarMode="showOnDemand" scrollbarWidth="5" picServiceEventProgressbar="KravenFHD/progress/progress52.png" colorEventProgressbar="KravenProgress" colorEventProgressbarSelected="KravenProgress" foregroundColorMarkedSelected="green" foregroundColor="KravenFont1" colorEventProgressbarBorder="KravenBorder" colorEventProgressbarBorderSelected="KravenSelFont" colorServiceDescription="KravenFont2" colorServiceDescriptionSelected="KravenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="KravenNotAvailable" itemHeight="75" name="list" position="63,115" serviceInfoFont="Regular;34" serviceItemHeight="52" serviceNameFont="Regular;37" serviceNumberFont="Regular;37" size="1107,832" name="giopet" transparent="1" />
     <!-- channelbg */-->

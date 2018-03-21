@@ -6,7 +6,7 @@
     </widget>
     <widget source="ServiceEvent" render="Label" position="105,170" size="90,36" font="Regular;28" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" transparent="1" halign="left">
       <convert type="KravenFHDEventTime">StartTime</convert>
-      <convert type="ClockToText">
+      <convert type="KravenFHDClockToText">
       </convert>
     </widget>
     <widget position="198,185" size="330,7" render="Progress" source="ServiceEvent" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress220.png">
@@ -15,7 +15,7 @@
     <eLabel position="198,188" size="330,1" backgroundColor="KravenLine" />
     <widget source="ServiceEvent" render="Label" position="527,170" size="90,36" font="Regular;28" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" transparent="1" halign="right">
       <convert type="KravenFHDEventTime">EndTime</convert>
-      <convert type="ClockToText">Format:%H:%M</convert>
+      <convert type="KravenFHDClockToText">Format:%H:%M</convert>
     </widget>
     <widget source="session.VideoPicture" render="Pig" position="105,216" size="512,288" zPosition="3" backgroundColor="transparent" />
     <eLabel backgroundColor="#00000000" position="105,216" size="512,288" transparent="0" zPosition="2" />

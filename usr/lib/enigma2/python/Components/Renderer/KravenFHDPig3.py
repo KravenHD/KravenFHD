@@ -19,19 +19,18 @@
 from Renderer import Renderer
 from enigma import eVideoWidget, getDesktop, eServiceCenter, iServiceInformation
 from Screens.InfoBar import InfoBar
+from Plugins.Extensions.KravenFHD.tool import KravenTool
 from Components.SystemInfo import SystemInfo
 from Components.config import config
-from Plugins.Extensions.KravenFHD.tool import KravenTool
 
 fbtool = KravenTool()
 init_PiG = None
 
 class KravenFHDPig3(Renderer):
-
 	def __init__(self):
 		Renderer.__init__(self)
-		self.Position=self.Size=None
-		self.decoder=0
+		self.Position = self.Size = None
+		self.decoder = 0
 		self.fb_w = getDesktop(0).size().width()
 		self.fb_h = getDesktop(0).size().height()
 		self.fb_size = None
@@ -51,6 +50,7 @@ class KravenFHDPig3(Renderer):
 		self.this_instance = instance
 
 	def applySkin(self, desktop, parent):
+		# do some voodoo for the lovely ChannelSelection ...
 		if self.skinAttributes is not None:
 			attribs = []
 			for (attrib, value) in self.skinAttributes:
@@ -74,7 +74,7 @@ class KravenFHDPig3(Renderer):
 				
 		ret = Renderer.applySkin(self, desktop, parent)
 		if ret:
-			self.Position = self.instance.position()
+			self.Position = self.instance.position() # fixme, scaling!
 			self.Size = self.instance.size()
 		return ret
 
@@ -86,7 +86,7 @@ class KravenFHDPig3(Renderer):
 			if self.Position:
 				self.instance.move(self.Position)
 			if InfoBar.instance and InfoBar.instance.session.pipshown and not InfoBar.instance.session.is_audiozap:
-				fbtool.setFBSize(['00000001','00000001','00000000','00000000'],decoder=1)
+				fbtool.setFBSize(['00000001', '00000001', '00000000', '00000000'], decoder = 1)
 				if self.fb_size:
 					fbtool.setFBSize(self.fb_size, self.decoder)
 
@@ -101,12 +101,11 @@ class KravenFHDPig3(Renderer):
 				fbtool.setFBSize_delayed(self.prev_fb_info, decoder = 0, delay = 200)
 			elif InfoBar.instance and InfoBar.instance.session.pipshown and not InfoBar.instance.session.is_splitscreen and not InfoBar.instance.session.is_audiozap and not InfoBar.instance.session.is_pig:
 				self.prev_fb_info = InfoBar.instance.session.pip.prev_fb_info
-				fbtool.setFBSize_delayed(self.prev_fb_info, decoder=1, delay=200)
-
+				fbtool.setFBSize_delayed(self.prev_fb_info, decoder = 1, delay = 200)
 
 	def destroy(self):
-		global init_PiG
 		if self.first_PiG and InfoBar.instance.session.pipshown:
+			global init_PiG
 			init_PiG = False
 			if InfoBar.instance and InfoBar.instance.session.is_pig:
 				InfoBar.instance.showPiP()

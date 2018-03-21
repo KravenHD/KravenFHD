@@ -2,7 +2,7 @@
   <screen name="MSNWeatherPlugin" position="0,0" size="1920,1080" title="Weather Plugin" flags="wfNoBorder" backgroundColor="transparent">
     <widget backgroundColor="Kravenbg" font="Regular2;33" foregroundColor="KravenFont2" position="127,37" render="Label" size="330,40" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
     <widget source="global.CurrentTime" render="Label" backgroundColor="Kravenbg" foregroundColor="KravenFont1" position="1642,37" size="150,40" font="Regular;33" halign="right" transparent="1" valign="center">
-      <convert type="ClockToText">Default</convert>
+      <convert type="KravenFHDClockToText">Default</convert>
     </widget>
 	<widget render="Label" source="caption" font="Regular2;33" foregroundColor="KravenFont2" position="855,37" size="615,40" backgroundColor="Kravenbg" zPosition="3" transparent="1" halign="center" valign="center" noWrap="1" />
 	<widget render="Label" source="observationpoint" font="Regular;27" foregroundColor="KravenFont1" position="885,120" size="555,82" backgroundColor="Kravenbg" zPosition="3" transparent="1" halign="center" valign="top" />

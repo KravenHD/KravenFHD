@@ -36,7 +36,7 @@
 	<widget name="timeline_text" position="3,120" size="1912,37" selectionDisabled="1" transparent="1" zPosition="5" backgroundColor="Kravenbg" foregroundColor="KravenFont1" />
 	<widget backgroundColor="Kravenbg" render="Label" source="Event" font="Regular;30" foregroundColor="KravenFont2" halign="right" position="1632,112" size="225,38" transparent="1">
 	  <convert type="EventTime">StartTime</convert>
-	  <convert type="ClockToText">Format:%a %d.%b</convert>
+	  <convert type="KravenFHDClockToText">Format:%a %d.%b</convert>
 	</widget>
     <widget name="timeline0" backgroundColor="orange" position="0,160" size="1,765" zPosition="1" />
     <widget name="timeline1" backgroundColor="orange" position="0,160" size="1,765" zPosition="1" />

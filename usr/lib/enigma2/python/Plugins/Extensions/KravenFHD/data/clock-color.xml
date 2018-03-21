@@ -1,19 +1,19 @@
     <!--/* Clock -->
   <widget backgroundColor="KravenIBbg" font="Regular;64" foregroundColor="KravenIBFont2" halign="center" position="1587,880" render="Label" size="97,120" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-    <convert type="ClockToText">Format:%H</convert>
+    <convert type="KravenFHDClockToText">Format:%H</convert>
   </widget>
   <eLabel backgroundColor="KravenIBbg" font="Regular;64" foregroundColor="KravenIBFont2" halign="center" position="1672,880" size="22,120" text=":" transparent="1" valign="center" zPosition="1" />
   <widget backgroundColor="KravenIBbg" font="Regular;64" foregroundColor="KravenIBFont2" halign="center" position="1687,880" render="Label" size="97,120" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-    <convert type="ClockToText">Format:%M</convert>
+    <convert type="KravenFHDClockToText">Format:%M</convert>
   </widget>
   <eLabel backgroundColor="KravenIBbg" font="Regular;48" foregroundColor="KravenIBFont2" halign="center" position="1771,899" size="22,90" text=":" transparent="1" valign="center" zPosition="1" />
   <widget backgroundColor="KravenIBbg" font="Regular;48" foregroundColor="KravenIBFont2" halign="center" position="1785,899" render="Label" size="75,90" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-    <convert type="ClockToText">Format:%S</convert>
+    <convert type="KravenFHDClockToText">Format:%S</convert>
   </widget>
   <widget backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont2" halign="center" position="1573,999" render="Label" size="304,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-    <convert type="ClockToText">Format:%e. %B</convert>
+    <convert type="KravenFHDClockToText">Format:%e. %B</convert>
   </widget>
   <widget backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont2" halign="center" position="1573,969" render="Label" size="304,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-    <convert type="ClockToText">Format:%A</convert>
+    <convert type="KravenFHDClockToText">Format:%A</convert>
   </widget>
     <!--Clock */-->

@@ -1,9 +1,9 @@
     <!--/* Clock -->
   <widget backgroundColor="#00999999" font="Regular;39" halign="center" render="Label" position="1635,966" size="79,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="2" foregroundColor="black">
-    <convert type="ClockToText">Format:%H</convert>
+    <convert type="KravenFHDClockToText">Format:%H</convert>
   </widget>
   <widget backgroundColor="#00999999" font="Regular;37" halign="center" render="Label" position="1705,963" size="79,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="2" foregroundColor="black">
-    <convert type="ClockToText">Format:%M</convert>
+    <convert type="KravenFHDClockToText">Format:%M</convert>
   </widget>
   <widget alphatest="blend" render="KravenFHDAndroidPicon" position="1611,882" size="300,183" source="Title" path="clock" transparent="1" zPosition="1">
     <convert type="KravenFHDWeather">Day_0,MeteoIcon </convert>

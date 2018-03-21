@@ -5,12 +5,12 @@
     </widget>
     <widget source="ServiceEvent" render="Label" position="63,170" size="90,36" font="Regular;28" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" transparent="1" halign="left">
       <convert type="KravenFHDEventTime">StartTime</convert>
-      <convert type="ClockToText">
+      <convert type="KravenFHDClockToText">
       </convert>
     </widget>
     <widget source="ServiceEvent" render="Label" position="549,170" size="90,36" font="Regular;28" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" transparent="1" halign="right">
       <convert type="KravenFHDEventTime">EndTime</convert>
-      <convert type="ClockToText">Format:%H:%M</convert>
+      <convert type="KravenFHDClockToText">Format:%H:%M</convert>
     </widget>
     <widget position="165,185" size="372,7" render="Progress" source="ServiceEvent" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress248.png">
       <convert type="KravenFHDEventTime">Progress</convert>

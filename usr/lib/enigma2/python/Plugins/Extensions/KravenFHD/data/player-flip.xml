@@ -1,15 +1,15 @@
 	<!-- Clock Flip */-->
 	<ePixmap alphatest="blend" pixmap="KravenFHD/clock/flip/default.png" position="1657,945" size="223,117" zPosition="1" />
 	<widget source="global.CurrentTime" render="KravenFHDFlipClock" position="1669,969" zPosition="4" size="37,70" alphatest="blend" transparent="1">
-	  <convert type="ClockToText">Format:H1 %H</convert>
+	  <convert type="KravenFHDClockToText">Format:H1 %H</convert>
 	</widget>
 	<widget source="global.CurrentTime" render="KravenFHDFlipClock" position="1717,969" zPosition="4" size="37,70" alphatest="blend" transparent="1">
-	  <convert type="ClockToText">Format:H2 %H</convert>
+	  <convert type="KravenFHDClockToText">Format:H2 %H</convert>
 	</widget>
 	<widget source="global.CurrentTime" render="KravenFHDFlipClock" position="1782,969" zPosition="4" size="37,70" alphatest="blend" transparent="1">
-	  <convert type="ClockToText">Format:M1 %M</convert>
+	  <convert type="KravenFHDClockToText">Format:M1 %M</convert>
 	</widget>
 	<widget source="global.CurrentTime" render="KravenFHDFlipClock" position="1830,969" zPosition="4" size="37,70" alphatest="blend" transparent="1">
-	  <convert type="ClockToText">Format:M2 %M</convert>
+	  <convert type="KravenFHDClockToText">Format:M2 %M</convert>
 	</widget>
 	<!-- Clock Flip */-->

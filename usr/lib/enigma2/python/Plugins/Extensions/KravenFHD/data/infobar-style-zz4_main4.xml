@@ -14,19 +14,19 @@
   <eLabel position="669,886" size="1123,1" backgroundColor="KravenLine" />
   <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont1" halign="left" noWrap="1" position="669,824" render="Label" size="90,42" source="session.Event_Now" transparent="1" zPosition="1">
     <convert type="KravenFHDEventTime">StartTime</convert>
-    <convert type="ClockToText">Default</convert>
+    <convert type="KravenFHDClockToText">Default</convert>
   </widget>
   <eLabel backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont1" halign="center" noWrap="1" position="759,824" size="15,42" text="-" transparent="1" zPosition="1" />
   <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont1" halign="right" noWrap="1" position="774,824" render="Label" size="90,42" source="session.Event_Now" transparent="1" zPosition="1">
     <convert type="KravenFHDEventTime">EndTime</convert>
-    <convert type="ClockToText">Default</convert>
+    <convert type="KravenFHDClockToText">Default</convert>
   </widget>
   <widget backgroundColor="KravenIBbg" source="session.Event_Next" render="KravenFHDEmptyEpg" foregroundColor="KravenIBFont2" font="Regular;45" position="904,965" size="726,55" halign="left" transparent="1" zPosition="1">
     <convert type="KravenFHDEventName">Name</convert>
   </widget>
   <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont2" halign="right" position="1632,974" render="Label" size="160,42" source="session.Event_Next" transparent="1" zPosition="1">
     <convert type="KravenFHDEventTime">Duration</convert>
-    <convert type="ClockToText">InMinutes</convert>
+    <convert type="KravenFHDClockToText">InMinutes</convert>
   </widget>
   <ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_rec_off.png" position="1204,916" size="65,33" zPosition="2" />
   <widget source="session.RecordState" render="Pixmap" pixmap="KravenFHD/infobar-icons/ico_rec_on.png" position="1204,916" zPosition="2" size="65,33" alphatest="blend">
@@ -86,12 +86,12 @@
   </widget>
   <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont2" halign="left" noWrap="1" position="669,974" render="Label" size="90,42" source="session.Event_Next" transparent="1" zPosition="1">
     <convert type="KravenFHDEventTime">StartTime</convert>
-    <convert type="ClockToText">Default</convert>
+    <convert type="KravenFHDClockToText">Default</convert>
   </widget>
   <eLabel backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont2" halign="center" noWrap="1" position="759,974" size="15,42" text="-" transparent="1" zPosition="1" />
   <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont2" halign="right" noWrap="1" position="774,974" render="Label" size="90,42" source="session.Event_Next" transparent="1" zPosition="1">
     <convert type="KravenFHDEventTime">EndTime</convert>
-    <convert type="ClockToText">Default</convert>
+    <convert type="KravenFHDClockToText">Default</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" font="Regular;33" halign="left" noWrap="1" position="669,903" size="277,42" transparent="1" zPosition="1">
     <convert type="KravenFHDTextTranslator">runningsince</convert>
@@ -101,10 +101,10 @@
     <convert type="KravenFHDRemainingToText">InMinutes</convert>
   </widget>
   <widget source="global.CurrentTime" render="Label" position="1063,1030" size="525,34" font="Regular;28" foregroundColor="KravenIBFont1" halign="right" backgroundColor="KravenIBbg" transparent="1">
-    <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    <convert type="KravenFHDClockToText">Format:%A, %d.%m.%Y</convert>
   </widget>
   <widget source="global.CurrentTime" render="Label" position="1635,1030" size="150,34" font="Regular;28" foregroundColor="KravenIBFont1" halign="left" backgroundColor="KravenIBbg" transparent="1">
-    <convert type="ClockToText">Default</convert>
+    <convert type="KravenFHDClockToText">Default</convert>
   </widget>
   <ePixmap pixmap="KravenFHD/infobar-icons/a_off.png" position="669,1035" size="30,33" zPosition="1" alphatest="blend" />
   <ePixmap pixmap="KravenFHD/infobar-icons/b_off.png" position="706,1035" size="30,33" zPosition="1" alphatest="blend" />

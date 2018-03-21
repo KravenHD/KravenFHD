@@ -48,14 +48,14 @@ class KravenFHDTextTranslator(Converter, object):
 	sat = 27
 	snr = 28
 	temp = 29
-	wind = 29
-	clime = 30
-	city = 31
-	name = 32
-	birthday = 33
-	age = 34
-	brsettings = 35
-	brpath = 36
+	wind = 30
+	clime = 31
+	city = 32
+	name = 33
+	birthday = 34
+	age = 35
+	brsettings = 36
+	brpath = 37
 	
 
 	def __init__(self, type):
@@ -141,7 +141,7 @@ class KravenFHDTextTranslator(Converter, object):
 	@cached
 	def getText(self):
 		if self.type == self.movecopy:
-			return _('move/copy')
+			return _('Move/Copy')
 		elif self.type == self.currentlyrunning:
 			return _('currently running:')
 		elif self.type == self.itfollows:

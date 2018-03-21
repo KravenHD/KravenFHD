@@ -4,11 +4,11 @@
     <widget name="Cover" position="96,105" size="513,769" zPosition="4" backgroundColor="Kravenbg" alphatest="on" transparent="0" />
     <widget source="Service" render="Label" position="96,888" size="120,36" font="Regular;30" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" halign="left">
       <convert type="EMCServiceTime">Duration</convert>
-      <convert type="EMCClockToText">AsLength</convert>
+      <convert type="EMCKravenFHDClockToText">AsLength</convert>
     </widget>
     <widget source="Service" render="Label" position="225,888" size="384,36" font="Regular;30" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" halign="right">
       <convert type="EMCServiceTime">StartTime</convert>
-      <convert type="EMCClockToText">Format:%A, %d. %b %Y</convert>
+      <convert type="EMCKravenFHDClockToText">Format:%A, %d. %b %Y</convert>
     </widget>
     <widget source="Service" render="Label" position="96,930" size="372,36" font="Regular;30" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" halign="left">
       <convert type="EMCMovieInfo">RecordServiceName</convert>

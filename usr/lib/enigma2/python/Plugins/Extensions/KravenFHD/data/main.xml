@@ -76,12 +76,12 @@
     </widget>
 	<widget source="ServiceEvent" render="Label" position="270,163" size="96,36" font="Regular;27" foregroundColor="KravenFont1" backgroundColor="Kravenbg3" transparent="1" halign="right">
 	  <convert type="KravenFHDEventTime">StartTime</convert>
-	  <convert type="ClockToText">
+	  <convert type="KravenFHDClockToText">
 	  </convert>
 	</widget>
 	<widget source="ServiceEvent" render="Label" position="708,163" size="115,36" font="Regular;27" foregroundColor="KravenFont1" backgroundColor="Kravenbg3" transparent="1">
 	  <convert type="KravenFHDEventTime">EndTime</convert>
-	  <convert type="ClockToText">Format:%H:%M</convert>
+	  <convert type="KravenFHDClockToText">Format:%H:%M</convert>
 	</widget>
 	<widget position="372,178" size="330,7" render="Progress" source="ServiceEvent" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress220.png">
 	  <convert type="KravenFHDEventTime">Progress</convert>
@@ -753,7 +753,7 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
     <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,382" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,382" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="2" />
 	<widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg2" foregroundColor="KravenIBFont2" position="1673,381" size="150,50" font="Regular;39" halign="right" transparent="1" valign="center">
-	  <convert type="ClockToText">Default</convert>
+	  <convert type="KravenFHDClockToText">Default</convert>
 	</widget>
     <constant-widget name="gradient-EPGBar"/>
   </screen>
@@ -902,7 +902,7 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
     <!--<text="PluginBrowser" position="105,0" />-->
   </screen>
   <!-- NumericalTextInputHelpDialog -->
-  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="NumericalTextInputHelpDialog" position="195,787" size="921,202" zPosition="8">
+  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="NumericalTextInputHelpDialog" position="176,787" size="921,202" zPosition="8">
     <eLabel backgroundColor="Kravenbg" position="6,4" size="909,1" transparent="0" zPosition="0" />
     <eLabel backgroundColor="KravenBorder" position="6,195" size="907,4" transparent="0" zPosition="-5" />
     <eLabel backgroundColor="Kravenbg" position="6,196" size="909,1" transparent="0" zPosition="0" />
@@ -1672,7 +1672,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
   <!-- ********** Channel Selection and Infobar ********** -->
   <!-- SimpleChannelSelection -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="SimpleChannelSelection" position="0,0" size="1920,1080" title="Channel Selection">
-    <widget backgroundColor="Kravenbg3" scrollbarMode="showOnDemand" scrollbarWidth="5" picServiceEventProgressbar="KravenFHD/progress/progress52.png" colorEventProgressbar="KravenProgress" colorEventProgressbarSelected="KravenProgress" foregroundColorMarkedSelected="green" foregroundColor="KravenFont1" colorEventProgressbarBorder="KravenBorder" colorEventProgressbarBorderSelected="KravenSelFont" colorServiceDescription="KravenFont2" colorServiceDescriptionSelected="KravenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="KravenNotAvailable" itemHeight="75" name="list" position="105,109" serviceInfoFont="Regular;36" serviceItemHeight="52" serviceNameFont="Regular;36" serviceNumberFont="Regular;36" size="1062,832" name="giopet" transparent="1" />
+    <widget backgroundColor="Kravenbg3" scrollbarMode="showOnDemand" scrollbarWidth="5" picServiceEventProgressbar="KravenFHD/progress/progress52.png" colorEventProgressbar="KravenProgress" colorEventProgressbarSelected="KravenProgress" foregroundColorMarkedSelected="green" foregroundColor="KravenFont1" colorEventProgressbarBorder="KravenBorder" colorEventProgressbarBorderSelected="KravenSelFont" colorServiceDescription="KravenFont2" colorServiceDescriptionSelected="KravenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="KravenNotAvailable" name="list" position="105,117" serviceInfoFont="Regular;35" serviceItemHeight="51" serviceNameFont="Regular;35" serviceNumberFont="Regular;35" size="1062,816" name="giopet" transparent="1" />
     <constant-widget name="Title-big"/>
     <constant-widget name="Colorbuttons"/>
 	<!-- Logo -->
@@ -1728,45 +1728,45 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     </widget>
     <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont1" halign="left" noWrap="1" position="63,240" render="Label" size="90,52" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
       <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText">Default</convert>
+      <convert type="KravenFHDClockToText">Default</convert>
     </widget>
     <eLabel backgroundColor="KravenIBbg" font="Regular;30" foregroundColor="KravenIBFont2" halign="center" noWrap="1" position="153,316" size="15,52" text="-" transparent="1" valign="center" zPosition="1" />
     <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont1" halign="right" noWrap="1" position="168,240" render="Label" size="90,52" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
       <convert type="EventTime">EndTime</convert>
-      <convert type="ClockToText">Default</convert>
+      <convert type="KravenFHDClockToText">Default</convert>
     </widget>
     <widget font="Regular;45" foregroundColor="KravenIBFont2" halign="left" noWrap="1" position="298,310" render="Label" size="1061,60" source="session.Event_Next" valign="top" backgroundColor="KravenIBbg" transparent="1" zPosition="1">
       <convert type="EventName">Name</convert>
     </widget>
     <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont2" valign="center" halign="right" position="1371,316" render="Label" size="160,52" source="session.Event_Next" transparent="1" zPosition="1">
       <convert type="EventTime">Duration</convert>
-      <convert type="ClockToText">InMinutes</convert>
+      <convert type="KravenFHDClockToText">InMinutes</convert>
     </widget>
     <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont2" halign="left" noWrap="1" position="63,316" render="Label" size="90,52" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
       <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText">Default</convert>
+      <convert type="KravenFHDClockToText">Default</convert>
     </widget>
     <eLabel backgroundColor="KravenIBbg" font="Regular;30" foregroundColor="KravenIBFont1" halign="center" noWrap="1" position="153,240" size="15,52" text="-" transparent="1" valign="center" zPosition="1" />
     <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont2" halign="right" noWrap="1" position="168,316" render="Label" size="90,52" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
       <convert type="EventTime">EndTime</convert>
-      <convert type="ClockToText">Default</convert>
+      <convert type="KravenFHDClockToText">Default</convert>
     </widget>
     <widget backgroundColor="KravenIBbg" font="Regular;64" foregroundColor="KravenIBFont1" halign="center" position="1593,210" render="Label" size="97,120" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-      <convert type="ClockToText">Format:%H</convert>
+      <convert type="KravenFHDClockToText">Format:%H</convert>
     </widget>
     <eLabel backgroundColor="KravenIBbg" font="Regular;64" foregroundColor="KravenIBFont1" halign="center" position="1678,210" size="22,120" text=":" transparent="1" valign="center" zPosition="1" />
     <widget backgroundColor="KravenIBbg" font="Regular;64" foregroundColor="KravenIBFont1" halign="center" position="1693,210" render="Label" size="97,120" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-      <convert type="ClockToText">Format:%M</convert>
+      <convert type="KravenFHDClockToText">Format:%M</convert>
     </widget>
     <eLabel backgroundColor="KravenIBbg" font="Regular;48" foregroundColor="KravenIBFont1" halign="center" position="1777,229" size="22,90" text=":" transparent="1" valign="center" zPosition="1" />
     <widget backgroundColor="KravenIBbg" font="Regular;48" foregroundColor="KravenIBFont1" halign="center" position="1791,229" render="Label" size="75,90" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-      <convert type="ClockToText">Format:%S</convert>
+      <convert type="KravenFHDClockToText">Format:%S</convert>
     </widget>
     <widget backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont2" halign="center" position="1579,329" render="Label" size="304,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-      <convert type="ClockToText">Format:%e. %B</convert>
+      <convert type="KravenFHDClockToText">Format:%e. %B</convert>
     </widget>
     <widget backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont2" halign="center" position="1579,299" render="Label" size="304,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-      <convert type="ClockToText">Format:%A</convert>
+      <convert type="KravenFHDClockToText">Format:%A</convert>
     </widget>
     <eLabel backgroundColor="Kravenbg5" position="0,0" size="1920,390" transparent="0" zPosition="-10" />
     <constant-widget name="gradient-rib"/>

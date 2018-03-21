@@ -16,14 +16,14 @@
 	</widget>
 	<widget source="Service" render="Label" position="63,201" size="648,40" font="Regular;31" halign="left" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" transparent="1">
 	  <convert type="EMCServiceTime">StartTime</convert>
-	  <convert type="EMCClockToText">Date</convert>
+	  <convert type="EMCKravenFHDClockToText">Date</convert>
 	</widget>
 	<widget source="Service" render="Label" position="63,930" size="225,49" font="Regular;30" halign="left" backgroundColor="Kravenbg2" foregroundColor="KravenFont2" transparent="1">
 	  <convert type="EMCMovieInfo">FileSize</convert>
 	</widget>
 	<widget source="Service" render="Label" position="444,930" size="225,49" font="Regular;30" halign="right" backgroundColor="Kravenbg2" transparent="1" foregroundColor="KravenFont2">
 	  <convert type="EMCServiceTime">Duration</convert>
-	  <convert type="EMCClockToText">InMinutes</convert>
+	  <convert type="EMCKravenFHDClockToText">InMinutes</convert>
 	</widget>
 	<widget source="session.VideoPicture" render="KravenFHDPig3" position="63,327" size="586,330" zPosition="3" backgroundColor="transparent" />
     <eLabel backgroundColor="#00000000" position="63,327" size="586,330" transparent="0" zPosition="2" />
