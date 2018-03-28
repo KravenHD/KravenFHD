@@ -26,6 +26,6 @@
     <!-- channelbg */-->
     <constant-widget name="CSEPEPG32"/>
     <constant-widget name="gradient-cs"/>
-    <constant-widget name="ChannelSelection"/>
+    <constant-widget name="ChannelSelection-template"/>
     <!--<text="ChannelSelection - Extended Preview" position="63,0" />-->
   </screen>

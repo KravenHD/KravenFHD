@@ -37,7 +37,7 @@
     <eLabel position="697,105" size="1,860" backgroundColor="KravenLine" />
     <eLabel position="1392,105" size="1,860" backgroundColor="KravenLine" />
     <!-- channelbg */-->
-    <constant-widget name="ChannelSelection"/>
+    <constant-widget name="ChannelSelection-template"/>
     <constant-widget name="gradient-cs"/>
     <constant-widget name="CSNMTEPEPG28"/>
     <!--<text="ChannelSelection - Nobile Extended Preview" position="63,0" />-->

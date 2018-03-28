@@ -4,11 +4,11 @@
     <widget name="Cover" position="96,105" size="513,769" zPosition="4" backgroundColor="Kravenbg" alphatest="on" transparent="0" />
     <widget source="Service" render="Label" position="96,888" size="120,36" font="Regular;30" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" halign="left">
       <convert type="EMCServiceTime">Duration</convert>
-      <convert type="EMCKravenFHDClockToText">AsLength</convert>
+      <convert type="EMCClockToText">AsLength</convert>
     </widget>
     <widget source="Service" render="Label" position="225,888" size="384,36" font="Regular;30" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" halign="right">
       <convert type="EMCServiceTime">StartTime</convert>
-      <convert type="EMCKravenFHDClockToText">Format:%A, %d. %b %Y</convert>
+      <convert type="EMCClockToText">Format:%A, %d. %b %Y</convert>
     </widget>
     <widget source="Service" render="Label" position="96,930" size="372,36" font="Regular;30" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" halign="left">
       <convert type="EMCMovieInfo">RecordServiceName</convert>
@@ -26,7 +26,7 @@
     <widget name="wait" position="64,562" size="1797,75" zPosition="1" font="Regular;48" foregroundColor="KravenFont1" backgroundColor="Kravenbg" halign="center" valign="center" />
 	<!-- globalbg */-->
 	<constant-widget name="emcvbc33"/>
-	<constant-widget name="EMCSelection"/>
+	<constant-widget name="EMCSelection-template"/>
     <constant-widget name="gradient-emc"/>
     <!--<text="EMCSelection - very big Cover" position="63,0" />-->
   </screen>

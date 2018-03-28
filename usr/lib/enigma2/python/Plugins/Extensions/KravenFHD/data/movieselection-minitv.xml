@@ -30,7 +30,7 @@
     </widget>
     <!-- nontransbg */-->
     <constant-widget name="msm33"/>
-	<constant-widget name="EMCSelection"/>
+	<constant-widget name="EMCSelection-template"/>
     <constant-widget name="gradient-emc"/>
     <!--<text="MovieSelection - MiniTV" position="105,0" />-->
   </screen>

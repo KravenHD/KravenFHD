@@ -45,7 +45,7 @@ from ColorSelection import KravenFHDColorSelection
 
 try:
 	from boxbranding import getImageDistro
-	if getImageDistro() == "openatv":
+	if getImageDistro() in ("openatv","teamblue"):
 		from lxml import etree
 		from xml.etree.cElementTree import fromstring
 except ImportError:
@@ -548,6 +548,21 @@ config.plugins.KravenFHD.ChannelSelectionStyle2 = ConfigSelection(default="chann
 				("channelselection-style-nobile-minitv", _("Nobile MiniTV")),
 				("channelselection-style-nobile-minitv3", _("Nobile Preview")),
 				("channelselection-style-nobile-minitv33", _("Nobile Extended Preview")),
+				("channelselection-style-minitv-picon", _("MiniTV Picon"))
+				])
+
+config.plugins.KravenFHD.ChannelSelectionStyle3 = ConfigSelection(default="channelselection-style-minitv", choices = [
+				("channelselection-style-nopicon", _("no Picon")),
+				("channelselection-style-nopicon2", _("no Picon2")),
+				("channelselection-style-xpicon", _("X-Picons")),
+				("channelselection-style-zpicon", _("Z-Picons")),
+				("channelselection-style-zzpicon", _("ZZ-Picons")),
+				("channelselection-style-zzzpicon", _("ZZZ-Picons")),
+				("channelselection-style-minitv", _("MiniTV left")),
+				("channelselection-style-minitv4", _("MiniTV right")),
+				("channelselection-style-nobile", _("Nobile")),
+				("channelselection-style-nobile2", _("Nobile 2")),
+				("channelselection-style-nobile-minitv", _("Nobile MiniTV")),
 				("channelselection-style-minitv-picon", _("MiniTV Picon"))
 				])
 
@@ -1178,6 +1193,10 @@ config.plugins.KravenFHD.ATVna = ConfigSelection(default="na", choices = [
 				("na", _("not available for openATV"))
 				])
 
+config.plugins.KravenFHD.TBna = ConfigSelection(default="na", choices = [
+				("na", _("not available for teamBlue"))
+				])
+
 config.plugins.KravenFHD.emptyline = ConfigSelection(default="emptyline", choices = [
 				("emptyline", _("      "))
 				])
@@ -1365,7 +1384,7 @@ class KravenFHD(ConfigListScreen, Screen):
 			emptyLines+=1
 		if self.E2DistroVersion == "VTi":
 			list.append(getConfigListEntry(_("Scrollbars"), config.plugins.KravenFHD.ScrollBar, _("Choose the width of scrollbars in lists or deactivate scrollbars completely.")))
-		elif self.E2DistroVersion == "openatv":
+		elif self.E2DistroVersion in ("openatv","teamblue"):
 			list.append(getConfigListEntry(_("Scrollbars"), config.plugins.KravenFHD.ScrollBar2, _("Choose whether scrollbars should be shown.")))
 		list.append(getConfigListEntry(_("Show Infobar-Background"), config.plugins.KravenFHD.IBColor, _("Choose whether you want to see the infobar background in all screens (bicolored background).")))
 		if self.InternetAvailable or self.UserMenuIconsAvailable:
@@ -1482,7 +1501,7 @@ class KravenFHD(ConfigListScreen, Screen):
 		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x2","infobar-style-z1","infobar-style-zz1","infobar-style-zz4","infobar-style-zzz1"):
 			if self.E2DistroVersion == "VTi":
 				list.append(getConfigListEntry(_("Infobox-Contents"), config.plugins.KravenFHD.Infobox, _("Choose which informations will be shown in the info box.")))
-			elif self.E2DistroVersion == "openatv":
+			elif self.E2DistroVersion in ("openatv","teamblue"):
 				list.append(getConfigListEntry(_("Infobox-Contents"), config.plugins.KravenFHD.Infobox2, _("Choose which informations will be shown in the info box.")))
 		else:
 			emptyLines+=1
@@ -1604,6 +1623,8 @@ class KravenFHD(ConfigListScreen, Screen):
 			list.append(getConfigListEntry(_("SplitScreen"), config.plugins.KravenFHD.SplitScreen, _("Choose from different styles to display SplitScreen.")))
 		elif self.E2DistroVersion == "openatv":
 			list.append(getConfigListEntry(_("SplitScreen"), config.plugins.KravenFHD.ATVna, _("  ")))
+		elif self.E2DistroVersion == "teamblue":
+			list.append(getConfigListEntry(_("SplitScreen"), config.plugins.KravenFHD.TBna, _("  ")))
 		for i in range(emptyLines+1):
 			list.append(getConfigListEntry(_(" "), ))
 		
@@ -1703,6 +1724,26 @@ class KravenFHD(ConfigListScreen, Screen):
 				emptyLines+=2
 			for i in range(emptyLines+5):
 				list.append(getConfigListEntry(_(" "), ))
+		elif self.E2DistroVersion == "teamblue":
+			list.append(getConfigListEntry(_("Channellist-Style"), config.plugins.KravenFHD.ChannelSelectionStyle3, _("Choose from different styles for the channel selection screen.")))
+			self.actChannelselectionstyle=config.plugins.KravenFHD.ChannelSelectionStyle3.value
+			if not self.actChannelselectionstyle in ("channelselection-style-minitv","channelselection-style-minitv4","channelselection-style-nobile-minitv","channelselection-style-minitv-picon"):
+				list.append(getConfigListEntry(_("Channellist-Transparenz"), config.plugins.KravenFHD.ChannelSelectionTrans, _("Choose the degree of background transparency for the channellists.")))
+			else:
+				emptyLines+=1
+			if self.actChannelselectionstyle in ("channelselection-style-nobile","channelselection-style-nobile2","channelselection-style-nobile-minitv"):
+				list.append(getConfigListEntry(_("EPG Fontsize"), config.plugins.KravenFHD.ChannelSelectionEPGSize1, _("Choose the font size of event description, EPG list and primetime.")))
+			else:
+				list.append(getConfigListEntry(_("EPG Fontsize"), config.plugins.KravenFHD.ChannelSelectionEPGSize3, _("Choose the font size of event description, EPG list and primetime.")))
+			list.append(getConfigListEntry(_("'Not available'-Font"), config.plugins.KravenFHD.ChannelSelectionServiceNAList, _("Choose the font color of channels that are unavailable at the moment. Press OK to define your own RGB color.")))
+			list.append(getConfigListEntry(_("Primetime"), config.plugins.KravenFHD.Primetimeavailable, _("Choose whether primetime program information is displayed or not.")))
+			if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on":
+				list.append(getConfigListEntry(_("Primetime-Time"), config.plugins.KravenFHD.Primetime, _("Specify the time for your primetime.")))
+				list.append(getConfigListEntry(_("Primetime-Font"), config.plugins.KravenFHD.PrimetimeFontList, _("Choose the font color of the primetime information. Press OK to define your own RGB color.")))
+			else:
+				emptyLines+=2
+			for i in range(emptyLines+6):
+				list.append(getConfigListEntry(_(" "), ))
 		
 		# page 7 (category 2)
 		emptyLines=0
@@ -1741,6 +1782,12 @@ class KravenFHD(ConfigListScreen, Screen):
 				list.append(getConfigListEntry(_("Selected Event Background"), config.plugins.KravenFHD.GMErunningbgList, _("Choose the background color of selected events for GraphicalEPG. Press OK to define your own RGB color.")))
 			else:
 				emptyLines+=2
+		elif self.E2DistroVersion == "teamblue":
+			list.append(getConfigListEntry(_("GRAPHMULTIEPG ___________________________________________________________"), config.plugins.KravenFHD.CategoryGraphMultiEPG, _("This sections offers all settings for GraphMultiEPG.")))
+			list.append(getConfigListEntry(_("GraphMultiEPG-Style"), config.plugins.KravenFHD.TBna, _("  ")))
+			list.append(getConfigListEntry(_("Event Description Fontsize"), config.plugins.KravenFHD.GMEDescriptionSize, _("Choose the font size of event description.")))
+			list.append(getConfigListEntry(_("Border Color"), config.plugins.KravenFHD.TBna, _("  ")))
+			list.append(getConfigListEntry(_("Selected Event Background"), config.plugins.KravenFHD.TBna, _("  ")))
 		for i in range(emptyLines+1):
 			list.append(getConfigListEntry(_(" "), ))
 		
@@ -1753,6 +1800,9 @@ class KravenFHD(ConfigListScreen, Screen):
 		elif self.E2DistroVersion == "openatv":
 			list.append(getConfigListEntry(_("VerticalEPG-Style"), config.plugins.KravenFHD.ATVna, _("  ")))
 			list.append(getConfigListEntry(_("Border Color"), config.plugins.KravenFHD.ATVna, _("  ")))
+		elif self.E2DistroVersion == "teamblue":
+			list.append(getConfigListEntry(_("VerticalEPG-Style"), config.plugins.KravenFHD.TBna, _("  ")))
+			list.append(getConfigListEntry(_("Border Color"), config.plugins.KravenFHD.TBna, _("  ")))
 		for i in range(emptyLines+1):
 			list.append(getConfigListEntry(_(" "), ))
 		
@@ -1765,6 +1815,9 @@ class KravenFHD(ConfigListScreen, Screen):
 		elif self.E2DistroVersion == "openatv":
 			list.append(getConfigListEntry(_("TimerEdit-Style"), config.plugins.KravenFHD.ATVna, _("  ")))
 			list.append(getConfigListEntry(_("TimerList-Style"), config.plugins.KravenFHD.ATVna, _("  ")))
+		elif self.E2DistroVersion == "teamblue":
+			list.append(getConfigListEntry(_("TimerEdit-Style"), config.plugins.KravenFHD.TBna, _("  ")))
+			list.append(getConfigListEntry(_("TimerList-Style"), config.plugins.KravenFHD.TBna, _("  ")))
 		for i in range(emptyLines):
 			list.append(getConfigListEntry(_(" "), ))
 		
@@ -2527,7 +2580,7 @@ class KravenFHD(ConfigListScreen, Screen):
 			if self.E2DistroVersion == "VTi":
 				self.PicLoad.startDecode(self.picPath)
 				self.picPath = None
-			elif self.E2DistroVersion == "openatv":
+			elif self.E2DistroVersion in ("openatv","teamblue"):
 				self.picPath = None
 				self.PicLoad.startDecode(self.picPath)
 		else:
@@ -2546,18 +2599,18 @@ class KravenFHD(ConfigListScreen, Screen):
 		self.mylist()
 
 	def keyDown(self):
-		if self.E2DistroVersion == "openatv":
+		if self.E2DistroVersion in ("VTi","teamblue"):
+			pass
+		elif self.E2DistroVersion == "openatv":
 			self["config"].instance.moveSelection(self["config"].instance.moveDown)
 			self.mylist()
-		elif self.E2DistroVersion == "VTi":
-			pass
 
 	def keyUp(self):
-		if self.E2DistroVersion == "openatv":
+		if self.E2DistroVersion in ("VTi","teamblue"):
+			pass
+		elif self.E2DistroVersion == "openatv":
 			self["config"].instance.moveSelection(self["config"].instance.moveUp)
 			self.mylist()
-		elif self.E2DistroVersion == "VTi":
-			pass
 
 	def keyUpLong(self):
 		self["config"].instance.moveSelection(self["config"].instance.moveUp)
@@ -3020,9 +3073,11 @@ class KravenFHD(ConfigListScreen, Screen):
 				self.skinSearchAndReplace.append(['render="KravenFHDMenuPig"', 'render="Pig"'])
 			else:
 				self.skinSearchAndReplace.append(['render="KravenFHDMenuPig"', 'render="KravenFHDPig3"'])
-		else:
+		elif self.E2DistroVersion == "openatv":
 			if not self.actChannelselectionstyle in ("channelselection-style-minitv2","channelselection-style-minitv22","channelselection-style-minitv33","channelselection-style-nobile-minitv33","channelselection-style-minitv3","channelselection-style-nobile-minitv3"):
 				self.skinSearchAndReplace.append(['render="KravenFHDMenuPig"', 'render="Pig"'])
+		elif self.E2DistroVersion == "teamblue":
+			self.skinSearchAndReplace.append(['render="KravenFHDMenuPig"', 'render="Pig"'])
 		if self.InternetAvailable:
 			if config.plugins.KravenFHD.Logo.value == "minitv":
 				self.skinSearchAndReplace.append(['<!-- Logo -->', '<constant-widget name="Logo1"/>'])
@@ -3048,8 +3103,10 @@ class KravenFHD(ConfigListScreen, Screen):
 		console1 = eConsoleAppContainer()
 		if self.E2DistroVersion == "VTi":
 			console1.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/logo-vti.tar.gz -C /usr/share/enigma2/KravenFHD/")
-		else:
-			console1.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/logo-openatv.tar.gz -C /usr/share/enigma2/KravenFHD/")
+		elif self.E2DistroVersion == "openatv":
+			system("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/logo-openatv.tar.gz -C /usr/share/enigma2/KravenFHD/")
+		elif self.E2DistroVersion == "teamblue":
+			system("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/logo-teamblue.tar.gz -C /usr/share/enigma2/KravenFHD/")
 
 		### Mainmenu Fontsize
 		if config.plugins.KravenFHD.MainmenuFontsize.value == "mainmenu-small":
@@ -3665,7 +3722,7 @@ class KravenFHD(ConfigListScreen, Screen):
 				self.skinSearchAndReplace.append(['scrollbarWidth="5"', 'scrollbarWidth="15"'])
 			elif config.plugins.KravenFHD.ScrollBar.value == "scrollbarWidth=15":
 				self.skinSearchAndReplace.append(['scrollbarWidth="5"', 'scrollbarWidth="22"'])
-		elif self.E2DistroVersion == "openatv":
+		elif self.E2DistroVersion in ("openatv","teamblue"):
 			if config.plugins.KravenFHD.ScrollBar2.value == "showOnDemand":
 				self.skinSearchAndReplace.append(['scrollbarMode="showNever"', 'scrollbarMode="showOnDemand"'])
 				self.skinSearchAndReplace.append(['scrollbarWidth="5"', ''])
@@ -3860,7 +3917,7 @@ class KravenFHD(ConfigListScreen, Screen):
 		self.skinSearchAndReplace.append(["analog.png", self.analog])
 
 		### HelpMenu
-		if self.E2DistroVersion == "openatv":
+		if self.E2DistroVersion in ("openatv","teamblue"):
 			self.skinSearchAndReplace.append(['skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png,skin_default/rc_vu_4.png,skin_default/rc_vu_5.png', 'skin_default/rc.png,skin_default/rcold.png'])
 
 		### KravenIconVPosition
@@ -3936,8 +3993,16 @@ class KravenFHD(ConfigListScreen, Screen):
 					self.skinSearchAndReplace.append([',34" valign="center" foregroundColor="KravenIcon"', ',37" valign="center" foregroundColor="KravenIcon"'])
 				self.skinSearchAndReplace.append([',1020" valign="center" foregroundColor="KravenIcon"', ',1023" valign="center" foregroundColor="KravenIcon"'])
 
+		### change constant-widgets to panels for teamblue (part #1)
+		if self.E2DistroVersion == "teamblue":
+			self.skinSearchAndReplace.append(['<constant-widgets>', '<!--/* Templates -->'])
+			self.skinSearchAndReplace.append(['</constant-widgets>', '<!-- Templates */-->'])
+			self.skinSearchAndReplace.append(['constant-panels', 'screen'])
+		elif self.E2DistroVersion in ("VTi","openatv"):
+			self.skinSearchAndReplace.append(['constant-panels', 'constant-widget'])
+
 		### Header
-		if self.E2DistroVersion == "openatv":
+		if self.E2DistroVersion in ("openatv","teamblue"):
 			self.skinSearchAndReplace.append(['<parameter name="VirtualKeyboard" value="67" />', '<parameter name="VirtualKeyboard" value="67,67" />'])
 		if config.plugins.KravenFHD.EPGListSize.value == "big":
 			self.skinSearchAndReplace.append(['<parameter name="EPGlistFont1" value="Regular;33" />', '<parameter name="EPGlistFont1" value="Regular;36" />'])
@@ -3946,12 +4011,16 @@ class KravenFHD(ConfigListScreen, Screen):
 			self.skinSearchAndReplace.append(['<parameter name="EPGlistText3" value="280,0,700,40" />', '<parameter name="EPGlistText3" value="280,0,700,45" />'])
 			self.skinSearchAndReplace.append(['<parameter name="EPGlistRecText" value="320,5,720,40" />', '<parameter name="EPGlistRecText" value="320,4,720,45" />'])
 			self.skinSearchAndReplace.append(['<parameter name="EPGlistNonRecText" value="280,5,745,40" />', '<parameter name="EPGlistNonRecText" value="280,4,745,45" />'])
-		if config.usage.movielist_show_picon.value == True:
+		if self.E2DistroVersion == "VTi" and config.usage.movielist_show_picon.value == True:
 			self.skinSearchAndReplace.append(['<parameter name="MovieListMinimalVTITitle" value="40,0,1000,40" />', '<parameter name="MovieListMinimalVTITitle" value="40,0,800,40" />'])
 		self.appendSkinFile(self.daten + "header_begin.xml")
 		if not config.plugins.KravenFHD.SelectionBorderList.value == "none":
 			self.appendSkinFile(self.daten + "header_middle.xml")
 		self.appendSkinFile(self.daten + "header_end.xml")
+
+		### change constant-widgets to panels for teamblue (part #2)
+		if self.E2DistroVersion == "teamblue":
+			self.skinSearchAndReplace.append(['constant-widget', 'panel'])
 
 		### Volume
 		self.appendSkinFile(self.daten + config.plugins.KravenFHD.Volume.value + ".xml")
@@ -4037,6 +4106,12 @@ class KravenFHD(ConfigListScreen, Screen):
 			else:
 				self.skinSearchAndReplace.append(['render="KravenFHDPig3"', 'render="Pig"'])
 				self.appendSkinFile(self.daten + self.actChannelselectionstyle + ".xml")
+		
+		### ChannelSelection - teamblue
+		elif self.E2DistroVersion == "teamblue":
+			self.skinSearchAndReplace.append(['name="giopet"', ''])
+			self.skinSearchAndReplace.append(['render="KravenFHDPig3"', 'render="Pig"'])
+			self.appendSkinFile(self.daten + self.actChannelselectionstyle + ".xml")
 
 		### Infobox
 		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x2","infobar-style-z1","infobar-style-zz1","infobar-style-zz4","infobar-style-zzz1"):
@@ -4053,7 +4128,7 @@ class KravenFHD(ConfigListScreen, Screen):
 					self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
 					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDTempFanInfo">FanInfo'])
 					self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDTempFanInfo">TempInfo'])
-			elif self.E2DistroVersion == "openatv":
+			elif self.E2DistroVersion in ("openatv","teamblue"):
 				if config.plugins.KravenFHD.Infobox2.value == "cpu":
 					self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="  L:"'])
 					self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
@@ -4541,13 +4616,11 @@ class KravenFHD(ConfigListScreen, Screen):
 			self.appendSkinFile(self.daten + config.plugins.KravenFHD.SIB.value + "-small.xml")
 		else:
 			self.appendSkinFile(self.daten + config.plugins.KravenFHD.SIB.value + ".xml")
-		if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/SecondInfoBar/plugin.py"):
+		if self.E2DistroVersion in ("VTi","openatv") and fileExists("/usr/lib/enigma2/python/Plugins/Extensions/SecondInfoBar/plugin.py"):
 			config.plugins.SecondInfoBar.HideNormalIB.value = True
 			config.plugins.SecondInfoBar.HideNormalIB.save()
 
 		### Main XML
-		if self.E2DistroVersion == "openatv":
-			self.skinSearchAndReplace.append(['skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png', 'skin_default/rc.png,skin_default/rcold.png'])
 		self.appendSkinFile(self.daten + "main.xml")
 
 		if config.plugins.KravenFHD.IBStyle.value == "grad":
@@ -4773,7 +4846,7 @@ class KravenFHD(ConfigListScreen, Screen):
 			config.plugins.pts.showinfobar.save()
 
 		### MSNWeatherPlugin XML
-		if self.E2DistroVersion == "openatv" and self.InternetAvailable:
+		if self.E2DistroVersion in ("openatv","teamblue") and self.InternetAvailable:
 			console3 = eConsoleAppContainer()
 			if fileExists("/usr/lib/enigma2/python/Components/Converter/MSNWeather.pyo"):
 				self.appendSkinFile(self.daten + "MSNWeatherPlugin.xml")
@@ -4825,7 +4898,7 @@ class KravenFHD(ConfigListScreen, Screen):
 
 		### NumberZapExt
 		self.appendSkinFile(self.daten + config.plugins.KravenFHD.NumberZapExt.value + ".xml")
-		if not config.plugins.KravenFHD.NumberZapExt.value == "none":
+		if self.E2DistroVersion in ("VTi","openatv") and not config.plugins.KravenFHD.NumberZapExt.value == "none":
 			config.usage.numberzap_show_picon.value = True
 			config.usage.numberzap_show_picon.save()
 			config.usage.numberzap_show_servicename.value = True
@@ -4852,7 +4925,7 @@ class KravenFHD(ConfigListScreen, Screen):
 		### TimerEditScreen
 		if self.E2DistroVersion == "VTi":
 			self.appendSkinFile(self.daten + config.plugins.KravenFHD.TimerEditScreen.value + ".xml")
-		elif self.E2DistroVersion == "openatv":
+		elif self.E2DistroVersion in ("openatv","teamblue"):
 			self.appendSkinFile(self.daten + "timer-openatv.xml")
 
 		### TimerListStyle
@@ -4980,11 +5053,13 @@ class KravenFHD(ConfigListScreen, Screen):
 				if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/skin.xml"):
 					console4.execute("rm -rf /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD")
 
-		### vti - atv
+		### vti - openatv - teamblue
 		if self.E2DistroVersion == "VTi":
 			self.appendSkinFile(self.daten + "vti.xml")
 		elif self.E2DistroVersion == "openatv":
 			self.appendSkinFile(self.daten + "openatv.xml")
+		elif self.E2DistroVersion == "teamblue":
+			self.appendSkinFile(self.daten + "teamblue.xml")
 
 		### skin-user
 		try:
@@ -5121,6 +5196,8 @@ class KravenFHD(ConfigListScreen, Screen):
 			from boxbranding import getImageDistro
 			if getImageDistro() == "openatv":
 				return "openatv"
+			elif getImageDistro() == "teamblue":
+				return "teamblue"
 			elif getImageDistro() == "VTi":
 				return "VTi"
 		except ImportError:
@@ -5283,6 +5360,9 @@ class KravenFHD(ConfigListScreen, Screen):
 			pathname="http://coolskins.de/downloads/kraven/"
 		elif self.E2DistroVersion == "openatv":
 			print "ATV Image found. Use ATV Server"
+			pathname="http://picons.mynonpublic.com/"
+		elif self.E2DistroVersion == "teamblue":
+			print "teamBlue Image found. Use ATV Server"
 			pathname="http://picons.mynonpublic.com/"
 		else:
 			print "No Icons found. Aborted"

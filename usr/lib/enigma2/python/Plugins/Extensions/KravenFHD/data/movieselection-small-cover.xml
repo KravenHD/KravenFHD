@@ -28,7 +28,7 @@
     </widget>
     <!-- globalbg */-->
 	<constant-widget name="mssc33"/>
-	<constant-widget name="EMCSelection"/>
+	<constant-widget name="EMCSelection-template"/>
     <constant-widget name="gradient-emc"/>
     <!--<text="MovieSelection - small Cover" position="105,0" />-->
   </screen>

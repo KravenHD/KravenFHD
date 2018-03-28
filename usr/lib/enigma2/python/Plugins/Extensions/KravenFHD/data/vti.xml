@@ -1,3 +1,53 @@
+  <!--About -->
+  <screen name="About" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel text="About Vu + Series" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="center" />
+	<widget name="FullAbout" position="105,120" size="1062,810" font="Regular;36" halign="left" foregroundColor="KravenFont1" backgroundColor="Kravenbg3" scrollbarWidth="5" transparent="1" />
+	<!-- Logo -->
+    <constant-widget name="Exit"/>
+    <!--<text="About" position="105,0" />-->
+  </screen>
+ <!-- ChoiceBox -->
+  <screen name="ChoiceBox" position="195,210" size="900,600" title="Input" flags="wfNoBorder" backgroundColor="Kravenbg">
+    <widget source="Title" render="Label" backgroundColor="Kravenbg" font="Regular2;39" foregroundColor="KravenFont2" position="30,12" size="795,48" halign="left" valign="center" transparent="1" />
+	<widget name="text" position="30,67" size="795,40" backgroundColor="Kravenbg" font="Regular;33" foregroundColor="KravenFont1" />
+	<widget backgroundColor="Kravenbg" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="0,120" size="825,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
+	<applet type="onLayoutFinish">
+# this should be factored out into some helper code, but currently demonstrates applets.
+from enigma import eSize, ePoint
+
+orgwidth = self.instance.size().width()
+orgpos = self.instance.position()
+textsize = self["text"].getSize()
+
+# y size still must be fixed in font stuff...
+textsize = (textsize[0] + 105, textsize[1] + 105)
+count = len(self.list)
+if count &gt; 15:
+        count = 15
+offset = 45 * count
+wsizex = textsize[0] + 45
+wsizey = textsize[1] + offset + 30
+
+if (975 &gt; wsizex):
+        wsizex = 975
+wsize = (wsizex, wsizey)
+
+# resize
+self.instance.resize(eSize(*wsize))
+
+# resize label
+self["text"].instance.resize(eSize(*textsize))
+
+# move list
+listsize = (wsizex - 30, 45 * count)
+self["list"].instance.move(ePoint(15, textsize[1]))
+self["list"].instance.resize(eSize(*listsize))
+
+# center window
+newwidth = wsize[0]
+self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
+	</applet>
+  </screen>
   <!-- Animation Setup -->
   <screen name="AnimationSetupScreen" position="0,0" size="1920,1080" title="Animation Setup" flags="wfNoBorder" backgroundColor="transparent">
 	<eLabel text="Animation Setup" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />

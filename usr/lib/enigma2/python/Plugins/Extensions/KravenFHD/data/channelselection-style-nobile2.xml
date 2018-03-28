@@ -3,7 +3,7 @@
     <widget backgroundColor="Kravenbg4" scrollbarMode="showOnDemand" scrollbarWidth="5" picServiceEventProgressbar="KravenFHD/progress/progress52.png" colorEventProgressbar="KravenProgress" colorEventProgressbarSelected="KravenProgress" foregroundColorMarkedSelected="green" foregroundColor="KravenFont1" colorEventProgressbarBorder="KravenBorder" colorEventProgressbarBorderSelected="KravenSelFont" colorServiceDescription="KravenFont2" colorServiceDescriptionSelected="KravenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="KravenNotAvailable" name="list" position="25,105" serviceInfoFont="Regular;30" serviceItemHeight="43" serviceNameFont="Regular;30" serviceNumberFont="Regular;30" size="1147,860" name="giopet" transparent="1" />
     <eLabel position="1182,105" size="1,860" backgroundColor="KravenLine" />
     <!-- channelbg */-->
-    <constant-widget name="ChannelSelection"/>
+    <constant-widget name="ChannelSelection-template"/>
     <constant-widget name="gradient-cs"/>
     <constant-widget name="CSN2EPG28"/>
     <!--<text="ChannelSelection - Nobile 2" position="63,0" />-->

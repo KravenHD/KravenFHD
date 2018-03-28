@@ -24,7 +24,7 @@
     <eLabel backgroundColor="KravenBorder2" position="635,216" size="4,324" transparent="0" zPosition="4" />
     <widget backgroundColor="Kravenbg2" scrollbarMode="showOnDemand" scrollbarWidth="5" picServiceEventProgressbar="KravenFHD/progress/progress52.png" colorEventProgressbar="KravenProgress" colorEventProgressbarSelected="KravenProgress" foregroundColorMarkedSelected="green" foregroundColor="KravenFont1" colorEventProgressbarBorder="KravenBorder" colorEventProgressbarBorderSelected="KravenSelFont" colorServiceDescription="KravenFont2" colorServiceDescriptionSelected="KravenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="KravenNotAvailable" itemHeight="75" name="list" position="750,115" serviceInfoFont="Regular;34" serviceItemHeight="52" serviceNameFont="Regular;37" serviceNumberFont="Regular;37" size="1107,832" name="giopet" transparent="1" />
     <!-- nontransbg */-->
-    <constant-widget name="ChannelSelection"/>
+    <constant-widget name="ChannelSelection-template"/>
     <constant-widget name="gradient-cs"/>
     <constant-widget name="CSLEPG32"/>
     <!--<text="ChannelSelection - MiniTV left" position="63,0" />-->

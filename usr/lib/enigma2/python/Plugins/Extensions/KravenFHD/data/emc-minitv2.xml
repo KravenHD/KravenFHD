@@ -16,14 +16,14 @@
 	</widget>
 	<widget source="Service" render="Label" position="1249,201" size="603,40" font="Regular;31" halign="center" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" transparent="1">
 	  <convert type="EMCServiceTime">StartTime</convert>
-	  <convert type="EMCKravenFHDClockToText">Date</convert>
+	  <convert type="EMCClockToText">Date</convert>
 	</widget>
 	<widget source="Service" render="Label" position="1267,930" size="225,49" font="Regular;30" halign="left" backgroundColor="Kravenbg2" foregroundColor="KravenFont2" transparent="1">
 	  <convert type="EMCMovieInfo">FileSize</convert>
 	</widget>
 	<widget source="Service" render="Label" position="1629,930" size="225,49" font="Regular;30" halign="right" backgroundColor="Kravenbg2" transparent="1" foregroundColor="KravenFont2">
 	  <convert type="EMCServiceTime">Duration</convert>
-	  <convert type="EMCKravenFHDClockToText">InMinutes</convert>
+	  <convert type="EMCClockToText">InMinutes</convert>
 	</widget>
 	<widget source="session.VideoPicture" render="KravenFHDPig3" position="1267,327" size="586,330" zPosition="3" backgroundColor="transparent" />
 	<eLabel backgroundColor="#00000000" position="1267,327" size="586,330" transparent="0" zPosition="2" />
@@ -34,7 +34,7 @@
 	<widget name="Cover" position="1463,670" size="200,300" zPosition="4" backgroundColor="Kravenbg2" alphatest="on" transparent="0" />
 	<!-- nontransbg */-->
 	<constant-widget name="emcm2bc233"/>
-	<constant-widget name="EMCSelection"/>
+	<constant-widget name="EMCSelection-template"/>
     <constant-widget name="gradient-emc"/>
 	<!--<text="EMCSelection - MiniTV2" position="63,0" />-->
   </screen>

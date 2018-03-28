@@ -16,19 +16,19 @@
 	</widget>
 	<widget source="Service" render="Label" position="63,213" size="480,45" font="Regular;31" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1">
 	  <convert type="EMCServiceTime">StartTime</convert>
-	  <convert type="EMCKravenFHDClockToText">Date</convert>
+	  <convert type="EMCClockToText">Date</convert>
 	</widget>
 	<widget source="Service" render="Label" position="63,922" size="82,37" font="Regular;30" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1">
 	  <convert type="EMCServiceTime">StartTime</convert>
-	  <convert type="EMCKravenFHDClockToText">Format:%H:%M </convert>
+	  <convert type="EMCClockToText">Format:%H:%M </convert>
 	</widget>
 	<widget source="Service" render="Label" position="150,922" size="120,37" font="Regular;30" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1">
 	  <convert type="EMCServiceTime">EndTime</convert>
-	  <convert type="EMCKravenFHDClockToText">Format:- %H:%M </convert>
+	  <convert type="EMCClockToText">Format:- %H:%M </convert>
 	</widget>
 	<widget source="Service" render="Label" position="405,922" size="150,37" font="Regular;30" halign="right" backgroundColor="Kravenbg" transparent="1" foregroundColor="KravenFont2">
 	  <convert type="EMCServiceTime">Duration</convert>
-	  <convert type="EMCKravenFHDClockToText">InMinutes</convert>
+	  <convert type="EMCClockToText">InMinutes</convert>
 	</widget>
 	<widget source="Service" render="Label" position="561,922" size="142,37" font="Regular;30" halign="right" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1">
 	  <convert type="EMCMovieInfo">FileSize</convert>
@@ -36,7 +36,7 @@
 	<widget name="Cover" position="561,105" size="150,226" zPosition="4" backgroundColor="Kravenbg" alphatest="on" transparent="0" />
 	<!-- globalbg */-->
 	<constant-widget name="emcsc33"/>
-	<constant-widget name="EMCSelection"/>
+	<constant-widget name="EMCSelection-template"/>
     <constant-widget name="gradient-emc"/>
 	<!--<text="EMCSelection - small Cover" position="63,0" />-->
   </screen>

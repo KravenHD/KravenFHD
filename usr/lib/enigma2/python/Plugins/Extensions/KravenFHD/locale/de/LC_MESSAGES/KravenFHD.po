@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: KravenFHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2018-03-03 08:56+0100\n"
+"PO-Revision-Date: 2018-03-24 23:00+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.0.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: KravenFHDWeather.py
@@ -2311,6 +2311,10 @@ msgstr "Wählen Sie, ob Scrollbalken angezeigt werden sollen."
 #: KravenFHD.py
 msgid "not available for openATV"
 msgstr "nicht verfügbar für openATV"
+
+#: KravenFHD.py
+msgid "not available for teamBlue"
+msgstr "nicht verfügbar für teamBlue"
 
 #: ColorSelection.py
 msgid "Color Selection"

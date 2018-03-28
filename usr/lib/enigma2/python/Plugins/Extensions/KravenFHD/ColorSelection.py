@@ -150,18 +150,18 @@ class KravenFHDColorSelection(ConfigListScreen, Screen):
 		self.mylist()
 
 	def keyDown(self):
-		if self.gete2distroversion() == "openatv":
+		if self.gete2distroversion() in ("VTi","teamblue"):
+			pass
+		elif self.gete2distroversion() == "openatv":
 			self["config"].instance.moveSelection(self["config"].instance.moveDown)
 			self.mylist()
-		elif self.gete2distroversion() == "VTi":
-			pass
 
 	def keyUp(self):
-		if self.gete2distroversion() == "openatv":
+		if self.gete2distroversion() in ("VTi","teamblue"):
+			pass
+		elif self.gete2distroversion() == "openatv":
 			self["config"].instance.moveSelection(self["config"].instance.moveUp)
 			self.mylist()
-		elif self.gete2distroversion() == "VTi":
-			pass
 
 	def keyUpLong(self):
 		self["config"].instance.moveSelection(self["config"].instance.moveUp)
@@ -184,6 +184,8 @@ class KravenFHDColorSelection(ConfigListScreen, Screen):
 			from boxbranding import getImageDistro
 			if getImageDistro() == "openatv":
 				return "openatv"
+			elif getImageDistro() == "teamblue":
+				return "teamblue"
 			elif getImageDistro() == "VTi":
 				return "VTi"
 		except ImportError:

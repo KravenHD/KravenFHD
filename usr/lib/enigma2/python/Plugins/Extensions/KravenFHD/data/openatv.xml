@@ -13,6 +13,48 @@
 	<constant-widget name="Exit"/>
 	<!--<text="AboutOE" position="105,0" />-->
   </screen>
+ <!-- ChoiceBox -->
+  <screen name="ChoiceBox" position="195,210" size="900,600" title="Input" flags="wfNoBorder" backgroundColor="Kravenbg">
+    <widget source="Title" render="Label" backgroundColor="Kravenbg" font="Regular2;39" foregroundColor="KravenFont2" position="30,12" size="795,48" halign="left" valign="center" transparent="1" />
+	<widget name="text" position="30,67" size="795,40" backgroundColor="Kravenbg" font="Regular;33" foregroundColor="KravenFont1" />
+	<widget backgroundColor="Kravenbg" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="0,120" size="825,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
+	<applet type="onLayoutFinish">
+# this should be factored out into some helper code, but currently demonstrates applets.
+from enigma import eSize, ePoint
+
+orgwidth = self.instance.size().width()
+orgpos = self.instance.position()
+textsize = self["text"].getSize()
+
+# y size still must be fixed in font stuff...
+textsize = (textsize[0] + 105, textsize[1] + 105)
+count = len(self.list)
+if count &gt; 15:
+        count = 15
+offset = 45 * count
+wsizex = textsize[0] + 45
+wsizey = textsize[1] + offset + 30
+
+if (975 &gt; wsizex):
+        wsizex = 975
+wsize = (wsizex, wsizey)
+
+# resize
+self.instance.resize(eSize(*wsize))
+
+# resize label
+self["text"].instance.resize(eSize(*textsize))
+
+# move list
+listsize = (wsizex - 30, 45 * count)
+self["list"].instance.move(ePoint(15, textsize[1]))
+self["list"].instance.resize(eSize(*listsize))
+
+# center window
+newwidth = wsize[0]
+self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
+	</applet>
+  </screen>
   <!-- TranslationInfo -->
   <screen name="TranslationInfo" position="0,0" size="1920,1080" title="Translation" flags="wfNoBorder" backgroundColor="transparent">
     <widget backgroundColor="Kravenbg3" source="TranslatorName" render="Label" font="Regular;39" foregroundColor="KravenFont1" position="105,120" size="1062,260" transparent="1" />
@@ -1248,112 +1290,6 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
     <constant-widget name="OKExit"/>
     <!--<text="ScriptRunner" position="105,0" />-->
   </screen>
-    <!-- MerlinMusicPlayerFileList -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="MerlinMusicPlayerFileList" position="0,0" size="1920,1080" title="Merlin Music Player">
-    <widget name="headertext" position="105,120" size="1062,54" zPosition="3" halign="left" foregroundColor="KravenFont2" backgroundColor="Kravenbg3" font="Regular2;39" transparent="1" />
-    <widget name="list" position="105,195" size="1062,675" scrollbarMode="showOnDemand" backgroundColor="Kravenbg3" transparent="1" />
-    <constant-widget name="Title-big"/>
-	<!-- Logo -->
-    <constant-widget name="Colorbuttons"/>
-    <constant-widget name="MenuOKExit"/>
-    <!--<text="MerlinMusicPlayerFileList" position="105,0" />-->
-  </screen>
-  <!-- MerlinMusicPlayerLyrics -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="MerlinMusicPlayerLyrics" position="0,0" size="1920,1080" title="Merlin Music Player">
-    <widget name="resulttext" position="105,190" size="1062,57" backgroundColor="Kravenbg3" font="Regular;52" transparent="1" />
-    <widget name="lyric_text" position="105,267" size="1062,675" backgroundColor="Kravenbg3" transparent="1" />
-    <widget name="headertext" position="105,120" size="1062,57" zPosition="3" halign="left" backgroundColor="Kravenbg3" font="Regular;45" transparent="1" />
-    <constant-widget name="Title-big"/>
-	<!-- Logo -->
-    <constant-widget name="Colorbuttons"/>
-    <!--<text="MerlinMusicPlayerLyrics" position="105,0" />-->
-  </screen>
-  <!-- MerlinMusicPlayerScreen -->
-  <screen name="MerlinMusicPlayerScreen" position="0,0" size="1920,1080" title="Merlin Music Player" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="title" position="120,562" size="817,48" font="Regular;39" backgroundColor="Kravenbg" transparent="1" />
-    <widget source="session.CurrentService" render="Label" position="937,562" size="180,48" font="Regular;39" backgroundColor="Kravenbg" halign="right" transparent="1">
-      <convert type="ServicePosition">Length</convert>
-    </widget>
-    <widget name="album" position="121,652" size="997,39" font="Regular;33" backgroundColor="Kravenbg" transparent="1" />
-    <widget name="artist" position="120,712" size="997,39" font="Regular;33" backgroundColor="Kravenbg" transparent="1" />
-    <widget name="genre" position="120,772" size="997,39" font="Regular;33" backgroundColor="Kravenbg" transparent="1" />
-    <widget source="session.CurrentService" render="Progress" pixmap="KravenFHD/progress/progress665.png" position="120,847" size="997,15" backgroundColor="Kravenbg" borderWidth="2" borderColor="KravenFont1" transparent="1" foregroundColor="orange">
-      <convert type="ServicePosition">Position</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="120,877" size="150,33" font="Regular;30" halign="left" backgroundColor="Kravenbg" transparent="1">
-      <convert type="ServicePosition">Position</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="967,877" size="150,33" font="Regular;30" halign="right" backgroundColor="Kravenbg" transparent="1">
-      <convert type="ServicePosition">Remaining</convert>
-    </widget>
-    <eLabel text="next" position="120,920" size="90,39" font="Regular2;30" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1" />
-    <widget name="nextTitle" position="210,920" size="1020,39" font="Regular2;30" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1" />
-    <widget name="shuffle" position="945,180" size="75,37" pixmaps="KravenFHD/backg.png,KravenFHD/mmp/shuffle.png" alphatest="blend" />
-    <widget name="repeat" position="1050,180" size="75,37" pixmaps="KravenFHD/backg.png,KravenFHD/mmp/repeat.png" alphatest="blend" />
-    <widget name="PositionGauge" position="0,0" size="0,0" />
-    <widget name="coverArt" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MerlinMusicPlayer/images/no_coverArt.png" position="1183,210" size="705,705" transparent="1" alphatest="blend" />
-    <constant-widget name="Title-big2"/>
-    <constant-widget name="Background"/>
-    <constant-widget name="Colorbuttons"/>
-    <constant-widget name="MenuOKExit"/>
-    <!--<text="MerlinMusicPlayerScreen" position="105,0" />-->
-  </screen>
-  <!-- MerlinMusicPlayerScreenSaver -->
-  <screen name="MerlinMusicPlayerScreenSaver" position="0,0" size="1920,1080" title="Merlin Music Player ScreenSaver" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="coverArt" pixmap="KravenFHD/mmp/no_coverArt.png" position="300,115" size="384,384" transparent="1" alphatest="blend" />
-    <widget backgroundColor="#00000000" name="display" position="300,556" size="1920,36" font="Regular;30" foregroundColor="#00ffffff" zPosition="1" transparent="1" />
-    <eLabel backgroundColor="#00000000" position="0,0" size="1920,1080" zPosition="-1" />
-  </screen>
-  <!-- MerlinMusicPlayerSetup -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="MerlinMusicPlayerSetup" position="0,0" size="1920,1080" title="Merlin Music Player">
-    <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" scrollbarMode="showOnDemand" transparent="1" />
-    <constant-widget name="Title-big"/>
-	<!-- Logo -->
-    <constant-widget name="Colorbuttons"/>
-	<constant-widget name="SourceRedGreen"/>
-	<constant-widget name="OKExit"/>
-    <!--<text="MerlinMusicPlayerSetup" position="105,0" />-->
-  </screen>
-  <!-- MerlinMusicPlayerSongList -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="MerlinMusicPlayerSongList" position="0,0" size="1920,1080" title="Songlist">
-    <widget name="headertext" position="105,120" size="1062,57" zPosition="3" halign="left" foregroundColor="KravenFont2" backgroundColor="Kravenbg3" font="Regular2;39" transparent="1" />
-    <widget backgroundColor="Kravenbg3" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,205" size="1062,675" scrollbarMode="showOnDemand" transparent="1" />
-    <constant-widget name="Title-big"/>
-	<!-- Logo -->
-    <constant-widget name="Colorbuttons"/>
-    <!--<text="MerlinMusicPlayerSongList" position="105,0" />-->
-  </screen>
-  <!-- SelectPath -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="SelectPath" position="0,0" size="1920,1080" title="Select path">
-    <widget name="target" position="105,120" size="1062,57" zPosition="3" halign="left" foregroundColor="KravenFont2" backgroundColor="Kravenbg3" font="Regular2;39" transparent="1" />
-    <widget backgroundColor="Kravenbg3" name="filelist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,205" size="1062,720" scrollbarMode="showOnDemand" transparent="1" />
-    <constant-widget name="Title-big"/>
-	<!-- Logo -->
-    <constant-widget name="Colorbuttons"/>
-	<constant-widget name="SourceRedGreen"/>
-	<constant-widget name="OKExit"/>
-    <!--<text="SelectPath" position="105,0" />-->
-  </screen>
-  <!-- iDreamAddToDatabase -->
-  <screen name="iDreamAddToDatabase" position="0,0" size="1920,1080" title="Add music files to iDream database" flags="wfNoBorder" backgroundColor="transparent">
-    <widget backgroundColor="Kravenbg3" name="output" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" scrollbarMode="showOnDemand" transparent="1" />
-    <constant-widget name="Title-big"/>
-	<!-- Logo -->
-    <constant-widget name="Colorbuttons"/>
-	<constant-widget name="SourceRedGreen"/>
-	<constant-widget name="OKExit"/>
-    <!--<text="iDreamAddToDatabase" position="105,0" />-->
-  </screen>
-  <!-- iDreamMerlin -->
-  <screen name="iDreamMerlin" position="0,0" size="1920,1080" title="iDream" flags="wfNoBorder" backgroundColor="transparent">
-    <widget backgroundColor="Kravenbg3" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" scrollbarMode="showOnDemand" transparent="1" />
-    <constant-widget name="Title-big"/>
-	<!-- Logo -->
-    <constant-widget name="Colorbuttons"/>
-	<constant-widget name="SourceRedGreenYellowBlue"/>
-	<constant-widget name="MenuOKExit"/>
-    <!--<text="iDreamMerlin" position="105,0" />-->
-  </screen>
   <!-- MSNWeatherPluginEntriesListConfigScreen -->
   <screen name="MSNWeatherPluginEntriesListConfigScreen" position="0,0" size="1920,1080" title="WeatherPlugin: List of Entries" flags="wfNoBorder" backgroundColor="transparent">
     <widget backgroundColor="Kravenbg3" name="entrylist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,219" size="1062,675" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
@@ -1445,63 +1381,6 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
 	<constant-widget name="SourceRedGreenYellowBlue"/>
     <constant-widget name="MenuOKExit"/>
     <!--<text="AutoTimerOverview" position="105,0" />-->
-  </screen>
-  <!-- ********** DreamExplorerII ********** -->
-  <!-- DreamExplorerII -->
-  <screen name="DreamExplorerII" position="0,0" size="1920,1080" flags="wfNoBorder" title="Dream-Explorer" backgroundColor="transparent">
-    <constant-widget name="Title-big"/>
-    <widget backgroundColor="Kravenbg3" name="filelist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
-    <eLabel text="Delete" position="105,997" size="330,39" zPosition="1" font="Regular;30" halign="left" valign="center" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
-    <eLabel text="Rename" position="480,997" size="330,39" zPosition="1" font="Regular;30" halign="left" valign="center" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
-    <widget source="session.CurrentService" render="Label" position="855,997" size="330,39" zPosition="1" font="Regular;30" halign="left" valign="center" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1">
-      <convert type="KravenFHDTextTranslator">movecopy</convert>
-    </widget>
-    <eLabel text="Bookmarks" position="1230,997" size="330,39" zPosition="1" font="Regular;30" halign="left" valign="center" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
-	<!-- Logo -->
-    <constant-widget name="Colorbuttons"/>
-    <constant-widget name="MenuOKExit"/>
-    <!--<text="DreamExplorerII" position="105,0" />-->
-  </screen>
-  <!-- vInputBox -->
-  <screen name="vInputBox" position="0,0" size="1920,1080" flags="wfNoBorder" title="Input..." backgroundColor="transparent">
-    <constant-widget name="Title-big"/>
-    <widget backgroundColor="Kravenbg3" name="input" font="Regular;32" foregroundColor="KravenFont1" position="105,120" size="1062,41" transparent="1" />
-    <widget backgroundColor="Kravenbg3" name="text" font="Regular2;32" foregroundColor="KravenFont2" position="105,500" size="1062,369" transparent="1" />
-	<!-- Logo -->
-    <constant-widget name="Colorbuttons"/>
-    <constant-widget name="OKExit"/>
-    <!--<text="vInputBox" position="105,0" />-->
-  </screen>
-  <!-- CPmaniger -->
-  <screen name="CPmaniger" position="0,0" size="1920,1080" flags="wfNoBorder" title="Select Copy/Move location..." backgroundColor="transparent">
-    <constant-widget name="Title-big"/>
-    <widget backgroundColor="Kravenbg3" name="File" font="Regular;32" foregroundColor="KravenFont1" position="105,120" size="1062,205" transparent="1" />
-    <widget backgroundColor="Kravenbg3" name="CPto" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,360" size="1062,495" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
-    <eLabel text="Move" position="105,997" size="330,39" zPosition="1" font="Regular;30" halign="left" valign="center" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
-    <eLabel text="Copy" position="855,997" size="330,39" zPosition="1" font="Regular;30" halign="left" valign="center" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" />
-	<!-- Logo -->
-    <constant-widget name="Colorbuttons"/>
-    <constant-widget name="OKExit"/>
-    <!--<text="CPmaniger" position="105,0" />-->
-  </screen>
-  <!-- MusicExplorer -->
-  <screen name="MusicExplorer" position="0,0" size="1920,1080" flags="wfNoBorder" title="Music-Explorer" backgroundColor="transparent">
-    <constant-widget name="Title-big2"/>
-    <widget backgroundColor="Kravenbg" source="session.CurrentService" render="Label" font="Regular;36" foregroundColor="KravenFont1" position="75,120" size="180,45" transparent="1" valign="center" zPosition="1">
-      <convert type="ServicePosition">Remaining</convert>
-    </widget>
-    <widget backgroundColor="Kravenbg" source="session.CurrentService" render="Label" font="Regular;39" foregroundColor="KravenFont1" position="75,450" size="1800,90" transparent="1" valign="center" halign="center" zPosition="1">
-      <convert type="ServiceName">Name</convert>
-    </widget>
-    <constant-widget name="Background"/>
-    <constant-widget name="Colorbuttons"/>
-    <constant-widget name="OKExit"/>
-    <!--<text="MusicExplorer" position="105,0" />-->
-  </screen>
-  <!-- PictureExplorerII -->
-  <screen name="PictureExplorerII" position="0,0" size="1920,1080" flags="wfNoBorder" title="Picture-Explorer" backgroundColor="#00121214">
-    <widget name="Picture" position="0,0" size="1920,1080" zPosition="1" alphatest="on" />
-	<widget name="State" font="Regular;30" halign="center" position="0,975" size="1920,130" backgroundColor="#01080911" foregroundColor="#fcc000" transparent="0" zPosition="9"/>
   </screen>
   <!-- JobView -->
   <screen name="JobView" position="0,0" size="1920,1080" title="JobView" backgroundColor="transparent" flags="wfNoBorder">
@@ -1606,73 +1485,6 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
 	<constant-widget name="SourceRedGreenYellow"/>
     <constant-widget name="OKExit"/>
     <!--<text="PU_Restore" position="105,0" />-->
-  </screen>
-  <!-- BirthdayReminder -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="BirthdayReminder" position="0,0" size="1920,1080" title=" " >
-    <eLabel backgroundColor="KravenIBbg3" text="Birthday Reminder" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" />
-    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="114,120" size="450,41" font="Regular;32" foregroundColor="KravenFont2" halign="left" valign="center" transparent="1">
-      <convert type="KravenFHDTextTranslator">name</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="594,120" size="390,41" font="Regular;32" foregroundColor="KravenFont2" halign="left" valign="center" transparent="1">
-      <convert type="KravenFHDTextTranslator">birthday</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="1014,120" size="144,41" font="Regular;32" foregroundColor="KravenFont2" halign="right" valign="center" transparent="1">
-      <convert type="KravenFHDTextTranslator">age</convert>
-    </widget>
-	<widget backgroundColor="Kravenbg3" source="list" render="Listbox" position="105,165" size="1062,765" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
-	  <convert type="TemplatedMultiContent">
-				{"template": [
-					MultiContentEntryText(pos = (9, 2),   size = (450, 41), font=0, flags = RT_HALIGN_LEFT, text = 0),
-					MultiContentEntryText(pos = (489, 2), size = (390, 41), font=0, flags = RT_HALIGN_LEFT, text = 1),
-					MultiContentEntryText(pos = (909, 2), size = (144, 41), font=0, flags = RT_HALIGN_RIGHT, text = 2),
-					],
-					"fonts": [gFont("Regular", 32)],
-					"itemHeight": 45
-				}
-	  </convert>
-    </widget>
-	<!-- Logo -->
-    <constant-widget name="Colorbuttons"/>
-	<constant-widget name="SourceRedGreenYellowBlue"/>
-    <constant-widget name="OKExit"/>
-    <!--<text="BirthdayReminder" position="105,0" />-->
-  </screen>
-  <!-- EditBirthdayScreen -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="EditBirthdayScreen" position="0,0" size="1920,1080" title=" " >
-    <constant-widget name="Title-big"/>
-	<widget backgroundColor="Kravenbg3" name="config" position="105,120" size="1062,720" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
-	<widget backgroundColor="Kravenbg3" name="error" position="105,870" size="1062,41" font="Regular2;32" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
-	<!-- Logo -->
-    <constant-widget name="Colorbuttons"/>
-	<constant-widget name="SourceRedGreen"/>
-    <constant-widget name="OKExit"/>
-    <!--<text="EditBirthdayScreen" position="105,0" />-->
-  </screen>
-  <!-- BirthdayReminderSettings -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="BirthdayReminderSettings" position="0,0" size="1920,1080" title=" " >
-    <widget source="session.CurrentService" render="Label" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center">
-      <convert type="KravenFHDTextTranslator">brsettings</convert>
-    </widget>
-    <widget backgroundColor="Kravenbg3" name="config" position="105,120" size="1062,810" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
-	<!-- Logo -->
-    <constant-widget name="Colorbuttons"/>
-	<constant-widget name="SourceRedGreen"/>
-    <widget font="Regular;30" halign="left" valign="center" source="key_blue" position="1230,997" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-    <constant-widget name="OKExit"/>
-    <!--<text="BirthdayReminderSettings" position="105,0" />-->
-  </screen>
-  <!-- PathSelectionScreen -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="PathSelectionScreen" position="0,0" size="1920,1080" title=" " >
-    <widget source="session.CurrentService" render="Label" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center">
-      <convert type="KravenFHDTextTranslator">brpath</convert>
-    </widget>
-    <widget backgroundColor="Kravenbg3" name="target" position="105,120" size="1062,41" font="Regular2;32" foregroundColor="KravenFont2" valign="center" transparent="1" />
-    <widget backgroundColor="Kravenbg3" name="filelist" position="105,165" size="1062,765" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
-	<!-- Logo -->
-    <constant-widget name="Colorbuttons"/>
-	<constant-widget name="SourceRedGreen"/>
-    <constant-widget name="OKExit"/>
-    <!--<text="PathSelectionScreen" position="105,0" />-->
   </screen>
   <!-- QuickSubtitlesConfigMenu -->
   <screen backgroundColor="KravenIBbg" flags="wfNoBorder" name="QuickSubtitlesConfigMenu" position="0,0" size="1102,280" title="Subtitle settings" >

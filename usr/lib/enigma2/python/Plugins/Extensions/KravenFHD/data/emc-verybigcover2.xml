@@ -17,7 +17,7 @@
 	<widget name="Cover" position="1305,261" size="561,691" zPosition="4" backgroundColor="Kravenbg" alphatest="on" transparent="0" />
 	<!-- globalbg */-->
 	<constant-widget name="emcvbc233"/>
-	<constant-widget name="EMCSelection"/>
+	<constant-widget name="EMCSelection-template"/>
     <constant-widget name="gradient-emc"/>
 	<!--<text="EMCSelection - very big Cover2" position="63,0" />-->
   </screen>
