@@ -112,6 +112,27 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
     <constant-widget name="OKExit"/>
     <!--<text="NetworkBrowser" position="105,0" />-->
   </screen>
+  <!-- InputDeviceSelection -->
+  <screen name="InputDeviceSelection" position="0,0" size="1920,1080" title="Select input device" flags="wfNoBorder" backgroundColor="transparent">
+    <widget source="list" render="Listbox" position="102,120" size="1062,735" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" zPosition="10" transparent="1">
+      <convert type="TemplatedMultiContent">
+							{"template": [
+									MultiContentEntryPixmapAlphaTest(pos = (3, 12), size = (81, 81), png = 2), # index 3 is the interface pixmap
+									MultiContentEntryText(pos = (98, 9), size = (675, 81), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text = 1), # index 1 is the interfacename
+								],
+							"fonts": [gFont("Regular", 30),gFont("Regular", 30)],
+							"itemHeight": 105
+							}
+			</convert>
+    </widget>
+    <widget source="introduction" render="Label" position="105,892" size="1062,42" zPosition="10" font="Regular2;33" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
+    <constant-widget name="Title-big"/>
+    <constant-widget name="Colorbuttons"/>
+	<!-- Logo -->
+    <constant-widget name="SourceRedGreen"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="InputDeviceSelection" position="105,0" />-->
+  </screen>
   <!-- CronManager -->
   <screen flags="wfNoBorder" name="CronManager" position="0,0" size="1920,1080" title="CronManager" backgroundColor="transparent">
     <widget backgroundColor="Kravenbg3" name="showjobs" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
