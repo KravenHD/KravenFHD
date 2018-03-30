@@ -514,7 +514,7 @@
   <!-- HddSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="HddSetup" position="0,0" size="1920,1080" title="Hard Drive Setup">
     <eLabel backgroundColor="KravenIBbg3" text="Device List" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" />
-	<widget source="menu" render="Listbox" position="105,120" size="1062,804" itemHeight="54" backgroundColor="Kravenbg3" transparent="1">
+	<widget source="menu" render="Listbox" position="105,120" size="1062,804" itemHeight="67" backgroundColor="Kravenbg3" transparent="1">
 	  <convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryPixmapAlphaTest(pos = (12, 10), size = (48, 48), png = 0),
@@ -536,7 +536,7 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="HddPartitions" position="0,0" size="1920,1080" title="Hard Drive Partitions">
     <eLabel backgroundColor="KravenIBbg3" text="Device List" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" size="1500,69" transparent="1" halign="left" valign="center" />
 	<widget name="label_disk" position="105,120" font="Regular2;36" size="1062,46" halign="center" valign="center" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" transparent="1" />
-	<widget source="menu" render="Listbox" position="105,180" size="1062,737" itemHeight="54" backgroundColor="Kravenbg3" transparent="1">
+	<widget source="menu" render="Listbox" position="105,180" size="1062,737" itemHeight="67" backgroundColor="Kravenbg3" transparent="1">
 	  <convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryPixmapAlphaTest(pos = (12, 10), size = (48, 48), png = 0),
