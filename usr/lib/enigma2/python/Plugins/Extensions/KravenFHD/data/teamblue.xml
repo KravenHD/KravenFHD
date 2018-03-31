@@ -438,28 +438,6 @@
     <constant-widget name="Colorbuttons"/>
     <!--<text="JobView" position="105,0" />-->
   </screen>
-  <!-- QuitMainloopScreen -->
-  <screen backgroundColor="transparent" name="QuitMainloopScreen" position="0,0" size="1920,1080" flags="wfNoBorder">
-    <ePixmap pixmap="KravenFHD/global-icons/info.png" position="920,449" size="79,79" alphatest="blend" zPosition="1" />
-	<widget backgroundColor="Kravenbg" name="text" position="312,544" size="1296,82" font="Regular;32" foregroundColor="KravenFont1" halign="center" valign="center" zPosition="1" transparent="1" />
-    <eLabel backgroundColor="Kravenbg" position="300,431" size="1320,199" />
-  </screen>
-  <!-- Seekbar -->
-  <screen backgroundColor="transparent" name="Seekbar" position="533,0" size="855,120" flags="wfNoBorder" zPosition="2">
-    <widget name="cursor" position="0,0" size="16,21" pixmap="KravenFHD/epg/timeline-now_s.png" alphatest="blend" zPosition="6" />
-    <widget backgroundColor="Kravenbg" name="time" foregroundColor="KravenFont1" font="Regular;32" position="0,60" size="855,41" halign="center" valign="center" transparent="1" />
-    <widget backgroundColor="Kravenbg" source="session.CurrentService" render="Label" foregroundColor="KravenFont1" font="Regular;32" position="75,25" size="135,41" halign="right" valign="center" transparent="1">
-      <convert type="ServicePosition">Position</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Progress" position="225,42" size="405,7" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress270.png">
-      <convert type="ServicePosition">Position</convert>
-    </widget>
-    <eLabel position="225,45" size="405,1" backgroundColor="KravenLine" />
-    <widget backgroundColor="Kravenbg" source="session.CurrentService" render="Label" foregroundColor="KravenFont1" font="Regular;32" position="645,25" size="135,41" halign="left" valign="center" transparent="1">
-      <convert type="ServicePosition">Length</convert>
-    </widget>
-	<eLabel backgroundColor="Kravenbg" position="60,0" size="733,120" zPosition="-1" />
-  </screen>
   <!-- StreamingClientsInfo -->
   <screen name="StreamingClientsInfo" position="0,0" size="1920,1080" flags="wfNoBorder" title="StreamingClientsInfo" backgroundColor="transparent" >
     <constant-widget name="Title-big"/>
@@ -564,8 +542,29 @@
 	<constant-widget name="Exit"/>
     <!--<text="HddMount" position="105,0" />-->
   </screen>
+  <!-- HddInfo -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="HddInfo" position="0,0" size="1920,1080" title="HDD Info">
+    <constant-widget name="Title-big"/>
+	<widget backgroundColor="Kravenbg3" name="model" font="Regular;32" foregroundColor="KravenFont1" position="105,120" size="1062,41" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="serial" font="Regular;32" foregroundColor="KravenFont1" position="105,165" size="1062,41" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="firmware" font="Regular;32" foregroundColor="KravenFont1" position="105,210" size="1062,41" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="cylinders" font="Regular;32" foregroundColor="KravenFont1" position="105,255" size="1062,41" halign="left" valign="center"  transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="heads" font="Regular;32" foregroundColor="KravenFont1" position="105,300" size="1062,41" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="sectors" font="Regular;32" foregroundColor="KravenFont1" position="105,345" size="1062,41" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="readDisk" font="Regular;32" foregroundColor="KravenFont1" position="105,390" size="1062,41" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="readCache" font="Regular;32" foregroundColor="KravenFont1" position="105,435" size="1062,41" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="temp" font="Regular;32" foregroundColor="KravenFont1" position="105,480" size="1062,41" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,525" size="1062,45" scrollbarMode="showOnDemand" transparent="1" />
+  	<!-- Logo -->
+	<constant-widget name="Colorbuttons"/>
+    <widget font="Regular;30" halign="left" valign="center" name="key_red" position="105,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<constant-widget name="Exit"/>
+    <!--<text="HddInfo" position="105,0" />-->
+  </screen>
   <!-- InputDeviceSelection -->
   <screen name="InputDeviceSelection" position="0,0" size="1920,1080" title="Select input device" flags="wfNoBorder" backgroundColor="transparent">
+    <constant-widget name="Title-big"/>
     <widget source="list" render="Listbox" position="102,120" size="1062,737" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" zPosition="10" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
@@ -578,7 +577,6 @@
 	  </convert>
     </widget>
     <widget source="introduction" render="Label" position="105,888" size="1062,41" zPosition="10" font="Regular2;32" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
-    <constant-widget name="Title-big"/>
     <constant-widget name="Colorbuttons"/>
 	<!-- Logo -->
     <constant-widget name="SourceRedGreen"/>

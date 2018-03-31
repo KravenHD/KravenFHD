@@ -17,7 +17,7 @@
     </widget>
     <widget backgroundColor="Kravenbg" font="Regular2;28" foregroundColor="KravenFont2" halign="left" position="1233,926" render="Label" size="105,36" source="Service" transparent="1" zPosition="1">
       <convert type="ServiceTime">Duration</convert>
-      <convert type="KravenFHDClockToText">AsLength</convert>
+      <convert type="ClockToText">AsLength</convert>
     </widget>
     <widget backgroundColor="Kravenbg" font="Regular2;28" foregroundColor="KravenFont2" halign="right" position="1683,926" render="Label" size="174,36" source="Service" transparent="1" zPosition="1">
       <convert type="MovieInfo">FileSize</convert>

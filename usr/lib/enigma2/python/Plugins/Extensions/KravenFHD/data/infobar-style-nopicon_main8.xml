@@ -36,7 +36,7 @@
     </widget>
 	<ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_sub_off.png" position="63,1030" size="65,33" zPosition="1" />
     <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_sub_on.png" position="63,1030" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
-      <convert type="VServiceInfo">SubtitlesAvailable</convert>
+      <convert type="KravenFHDServiceInfoEX">SubtitlesAvailable</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_txt_off.png" position="138,1030" size="65,33" zPosition="1" />

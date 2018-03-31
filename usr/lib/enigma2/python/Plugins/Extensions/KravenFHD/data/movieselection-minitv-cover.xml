@@ -21,7 +21,7 @@
     </widget>
     <widget backgroundColor="Kravenbg2" font="Regular2;28" foregroundColor="KravenFont2" halign="left" position="1233,926" render="Label" size="105,36" source="Service" transparent="1" zPosition="1">
       <convert type="ServiceTime">Duration</convert>
-      <convert type="KravenFHDClockToText">AsLength</convert>
+      <convert type="ClockToText">AsLength</convert>
     </widget>
     <widget backgroundColor="Kravenbg2" font="Regular;28" foregroundColor="KravenFont1" noWrap="1" halign="center" position="1350,926" render="Label" size="320,36" source="Service" transparent="1" zPosition="1">
       <convert type="MovieInfo">RecordServiceName</convert>

@@ -1514,25 +1514,3 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
 	<!--<eLabel position="0,277" size="1102,3" backgroundColor="KravenIBLine" zPosition="-8" />
 	<eLabel position="1099,0" size="3,277" backgroundColor="KravenIBLine" zPosition="-8" />-->
   </screen>
-  <!-- QuitMainloopScreen -->
-  <screen backgroundColor="transparent" name="QuitMainloopScreen" position="0,0" size="1920,1080" flags="wfNoBorder">
-    <ePixmap pixmap="KravenFHD/global-icons/info.png" position="920,449" size="79,79" alphatest="blend" zPosition="1" />
-	<widget backgroundColor="Kravenbg" name="text" position="312,544" size="1296,82" font="Regular;32" foregroundColor="KravenFont1" halign="center" valign="center" zPosition="1" transparent="1" />
-    <eLabel backgroundColor="Kravenbg" position="300,431" size="1320,199" />
-  </screen>
-  <!-- Seekbar -->
-  <screen backgroundColor="transparent" name="Seekbar" position="533,0" size="855,120" flags="wfNoBorder" zPosition="2">
-    <widget name="cursor" position="0,0" size="16,21" pixmap="KravenFHD/epg/timeline-now_s.png" alphatest="blend" zPosition="6" />
-    <widget backgroundColor="Kravenbg" name="time" foregroundColor="KravenFont1" font="Regular;32" position="0,60" size="855,41" halign="center" valign="center" transparent="1" />
-    <widget backgroundColor="Kravenbg" source="session.CurrentService" render="Label" foregroundColor="KravenFont1" font="Regular;32" position="75,25" size="135,41" halign="right" valign="center" transparent="1">
-      <convert type="ServicePosition">Position</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Progress" position="225,42" size="405,7" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress270.png">
-      <convert type="ServicePosition">Position</convert>
-    </widget>
-    <eLabel position="225,45" size="405,1" backgroundColor="KravenLine" />
-    <widget backgroundColor="Kravenbg" source="session.CurrentService" render="Label" foregroundColor="KravenFont1" font="Regular;32" position="645,25" size="135,41" halign="left" valign="center" transparent="1">
-      <convert type="ServicePosition">Length</convert>
-    </widget>
-	<eLabel backgroundColor="Kravenbg" position="60,0" size="733,120" zPosition="-1" />
-  </screen>
