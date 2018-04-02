@@ -1890,11 +1890,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
       <convert type="FrontendInfo">BER</convert>
     </widget>
     <eLabel backgroundColor="Kravenbg3" font="Regular2;31" foregroundColor="KravenFont2" halign="right" name="lock" position="180,277" size="120,37" text="Lock:" transparent="1" />
-    <widget alphatest="blend" pixmap="skin_default/icons/lock_on.png" position="315,274" render="Pixmap" size="57,46" source="Frontend" zPosition="1">
+    <widget alphatest="blend" pixmap="KravenFHD/icons/lock_on.png" position="315,280" render="Pixmap" size="30,30" source="Frontend" zPosition="1">
       <convert type="FrontendInfo">LOCK</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget alphatest="blend" pixmap="skin_default/icons/lock_off.png" position="315,274" render="Pixmap" size="12,46" source="Frontend" zPosition="1">
+    <widget alphatest="blend" pixmap="KravenFHD/icons/lock_off.png" position="315,280" render="Pixmap" size="30,30" source="Frontend" zPosition="1">
       <convert type="FrontendInfo">LOCK</convert>
       <convert type="ConditionalShowHide">Invert</convert>
     </widget>

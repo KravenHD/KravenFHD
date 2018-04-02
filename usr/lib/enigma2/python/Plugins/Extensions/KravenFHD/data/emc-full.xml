@@ -37,7 +37,7 @@
 	  <convert type="EMCMovieInfo">FileSize</convert>
 	</widget>
 	<!-- globalbg */-->
-	<constant-widget name="MovieSelection"/>
+	<constant-widget name="MovieSelection-template"/>
     <constant-widget name="gradient-emc"/>
 	<!--<text="EMCSelection - full" position="105,0" />-->
   </screen>

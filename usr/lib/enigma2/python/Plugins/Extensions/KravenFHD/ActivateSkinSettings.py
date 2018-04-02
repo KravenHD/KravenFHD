@@ -1153,6 +1153,10 @@ config.plugins.KravenFHD.ATVna = ConfigSelection(default="na", choices = [
 				("na", _("not available for openATV"))
 				])
 
+config.plugins.KravenFHD.TBna = ConfigSelection(default="na", choices = [
+				("na", _("not available for teamBlue"))
+				])
+
 config.plugins.KravenFHD.emptyline = ConfigSelection(default="emptyline", choices = [
 				("emptyline", _("      "))
 				])
@@ -3168,9 +3172,6 @@ class ActivateSkinSettings:
 
 		### Plugins
 		self.appendSkinFile(self.daten + "plugins.xml")
-		if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/plugin.py"):
-			config.plugins.pts.showinfobar.value = False
-			config.plugins.pts.showinfobar.save()
 
 		### MSNWeatherPlugin XML
 		if self.E2DistroVersion in ("openatv","teamblue") and self.InternetAvailable:

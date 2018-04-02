@@ -366,11 +366,11 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
  	<widget name="labstop" position="480,210" size="258,45" font="Regular;33" valign="center" halign="center" backgroundColor="red" zPosition="1" />
  	<widget name="labrun" position="480,210" size="258,45" font="Regular;33" valign="center" halign="center" backgroundColor="green" zPosition="2" />
  	<widget name="ci0" position="165,750" size="450,45" font="Regular;33" valign="center" halign="left" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
- 	<widget name="ci0active" position="105,750" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="48,48" alphatest="on" />
- 	<widget name="ci0inactive" position="105,750" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="48,48" alphatest="on" />
+ 	<widget name="ci0active" position="105,758" zPosition="1" pixmap="KravenFHD/icons/lock_on.png" size="30,30" alphatest="on" />
+ 	<widget name="ci0inactive" position="105,758" zPosition="2" pixmap="KravenFHD/icons/lock_off.png" size="30,30" alphatest="on" />
  	<widget name="ci1" position="660,750" size="450,45" font="Regular;33" valign="center" halign="left" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
- 	<widget name="ci1active" position="600,750" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="48,48" alphatest="on" />
- 	<widget name="ci1inactive" position="600,750" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="48,48" alphatest="on" />
+ 	<widget name="ci1active" position="600,758" zPosition="1" pixmap="KravenFHD/icons/lock_on.png" size="30,30" alphatest="on" />
+ 	<widget name="ci1inactive" position="600,758" zPosition="2" pixmap="KravenFHD/icons/lock_off.png" size="30,30" alphatest="on" />
     <constant-widget name="Title-big"/>
  	<!-- Logo -->
 	<constant-widget name="Colorbuttons"/>
@@ -479,8 +479,8 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
   </screen>
   <!-- Swap -->
   <screen name="Swap" title="Swap" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
-    <widget backgroundColor="Kravenbg3" name="autostart_off" position="153,619" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="48,48" alphatest="on" />
-    <widget backgroundColor="Kravenbg3" name="autostart_on" position="153,619" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="48,48" alphatest="on" />
+    <widget backgroundColor="Kravenbg3" name="autostart_off" position="153,627" zPosition="1" pixmap="KravenFHD/icons/lock_off.png" size="30,30" alphatest="on" />
+    <widget backgroundColor="Kravenbg3" name="autostart_on" position="153,627" zPosition="2" pixmap="KravenFHD/icons/lock_on.png" size="30,30" alphatest="on" />
     <widget backgroundColor="Kravenbg3" name="lab1" position="219,621" size="540,45" font="Regular;30" valign="center" transparent="1" foregroundColor="KravenFont1" />
     <widget backgroundColor="Kravenbg3" name="lab3" position="105,285" size="225,45" font="Regular;30" valign="center" transparent="1" foregroundColor="KravenFont1" />
     <widget backgroundColor="Kravenbg3" name="lab2" position="105,195" size="225,45" font="Regular;30" valign="center" transparent="1" foregroundColor="KravenFont1" />
@@ -681,8 +681,8 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
     <widget name="labpass" position="480,480" size="525,45" font="Regular;33" valign="center" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
     <widget name="alias" position="105,570" size="225,45" font="Regular;33" valign="center" halign="left" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
     <widget name="labalias" position="480,570" size="525,45" font="Regular;33" valign="center" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
-    <widget name="sinactive" position="105,660" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="48,48" alphatest="on" />
-    <widget name="sactive" position="105,660" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="48,48" alphatest="on" />
+    <widget name="sinactive" position="105,668" zPosition="1" pixmap="KravenFHD/icons/lock_off.png" size="30,30" alphatest="on" />
+    <widget name="sactive" position="105,668" zPosition="2" pixmap="KravenFHD/icons/lock_on.png" size="30,30" alphatest="on" />
     <widget name="system" position="165,660" size="150,45" font="Regular;33" valign="center" halign="left" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
     <widget name="labsys" position="480,660" size="525,45" font="Regular;33" valign="center" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
     <constant-widget name="Title-big"/>
@@ -731,14 +731,14 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
     <widget name="sharedir" position="105,660" size="225,45" font="Regular;33" valign="center" halign="left" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
     <widget name="labsharedir" position="480,660" size="525,45" font="Regular;33" valign="center" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
     <widget name="inotify" position="165,750" size="450,45" font="Regular;33" valign="center" halign="left" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
-    <widget name="inotifyactive" position="105,750" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="48,48" alphatest="on" />
-    <widget name="inotifyinactive" position="105,750" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="48,48" alphatest="on" />
+    <widget name="inotifyactive" position="105,758" zPosition="1" pixmap="KravenFHD/icons/lock_on.png" size="30,30" alphatest="on" />
+    <widget name="inotifyinactive" position="105,758" zPosition="2" pixmap="KravenFHD/icons/lock_off.png" size="30,30" alphatest="on" />
     <widget name="tivo" position="660,750" size="450,45" font="Regular;33" valign="center" halign="left" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
-    <widget name="tivoactive" position="600,750" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="48,48" alphatest="on" />
-    <widget name="tivoinactive" position="600,750" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="48,48" alphatest="on" />
+    <widget name="tivoactive" position="600,758" zPosition="1" pixmap="KravenFHD/icons/lock_on.png" size="30,30" alphatest="on" />
+    <widget name="tivoinactive" position="600,758" zPosition="2" pixmap="KravenFHD/icons/lock_off.png" size="30,30" alphatest="on" />
     <widget name="dlna" position="165,795" size="450,45" font="Regular;33" valign="center" halign="left" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
-    <widget name="dlnaactive" position="105,795" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="48,48" alphatest="on" />
-    <widget name="dlnainactive" position="105,795" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="48,48" alphatest="on" />
+    <widget name="dlnaactive" position="105,803" zPosition="1" pixmap="KravenFHD/icons/lock_on.png" size="30,30" alphatest="on" />
+    <widget name="dlnainactive" position="105,803" zPosition="2" pixmap="KravenFHD/icons/lock_off.png" size="30,30" alphatest="on" />
     <constant-widget name="Title-big"/>
 	<!-- Logo -->
     <constant-widget name="Colorbuttons"/>
@@ -872,17 +872,17 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
     <widget name="sharedir" position="105,660" size="225,45" font="Regular;33" valign="center" halign="left" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
     <widget name="labsharedir" position="480,660" size="525,45" font="Regular;33" valign="center" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
     <widget name="web" position="165,750" size="450,45" font="Regular;33" valign="center" halign="left" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
-    <widget name="webactive" position="105,750" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="48,48" alphatest="on" />
-    <widget name="webinactive" position="105,750" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="48,48" alphatest="on" />
+    <widget name="webactive" position="105,758" zPosition="1" pixmap="KravenFHD/icons/lock_on.png" size="30,30" alphatest="on" />
+    <widget name="webinactive" position="105,758" zPosition="2" pixmap="KravenFHD/icons/lock_off.png" size="30,30" alphatest="on" />
     <widget name="telnet" position="660,750" size="450,45" font="Regular;33" valign="center" halign="left" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
-    <widget name="telnetactive" position="600,750" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="48,48" alphatest="on" />
-    <widget name="telnetinactive" position="600,750" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="48,48" alphatest="on" />
+    <widget name="telnetactive" position="600,758" zPosition="1" pixmap="KravenFHD/icons/lock_on.png" size="30,30" alphatest="on" />
+    <widget name="telnetinactive" position="600,758" zPosition="2" pixmap="KravenFHD/icons/lock_off.png" size="30,30" alphatest="on" />
     <widget name="xbox" position="165,795" size="450,45" font="Regular;33" valign="center" halign="left" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
-    <widget name="xboxactive" position="105,795" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="48,48" alphatest="on" />
-    <widget name="xboxinactive" position="105,795" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="48,48" alphatest="on" />
+    <widget name="xboxactive" position="105,803" zPosition="1" pixmap="KravenFHD/icons/lock_on.png" size="30,30" alphatest="on" />
+    <widget name="xboxinactive" position="105,803" zPosition="2" pixmap="KravenFHD/icons/lock_off.png" size="30,30" alphatest="on" />
     <widget name="dlna" position="660,795" size="450,45" font="Regular;33" valign="center" halign="left" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
-    <widget name="dlnaactive" position="600,795" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="48,48" alphatest="on" />
-    <widget name="dlnainactive" position="600,795" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="48,48" alphatest="on" />
+    <widget name="dlnaactive" position="600,803" zPosition="1" pixmap="KravenFHD/icons/lock_on.png" size="30,30" alphatest="on" />
+    <widget name="dlnainactive" position="600,803" zPosition="2" pixmap="KravenFHD/icons/lock_off.png" size="30,30" alphatest="on" />
     <constant-widget name="Title-big"/>
 	<!-- Logo -->
     <constant-widget name="Colorbuttons"/>

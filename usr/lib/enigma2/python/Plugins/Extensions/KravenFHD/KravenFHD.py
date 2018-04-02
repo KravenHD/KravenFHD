@@ -4841,9 +4841,6 @@ class KravenFHD(ConfigListScreen, Screen):
 
 		### Plugins
 		self.appendSkinFile(self.daten + "plugins.xml")
-		if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/plugin.py"):
-			config.plugins.pts.showinfobar.value = False
-			config.plugins.pts.showinfobar.save()
 
 		### MSNWeatherPlugin XML
 		if self.E2DistroVersion in ("openatv","teamblue") and self.InternetAvailable:
