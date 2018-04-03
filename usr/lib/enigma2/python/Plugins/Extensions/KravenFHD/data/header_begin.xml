@@ -86,6 +86,7 @@
     <color name="transpBlack" value="#80000000" />
     <color name="transpWhite" value="#77ffffff" />
     <color name="transpyellow" value="#33bab329" />
+    <color name="layer-a-foreground" value="#00dddddd" />
 	<color name="violet" value="#006774db" />
     <color name="un101214" value="#00101214" />
     <color name="un18080911" value="#18080911" />
@@ -148,6 +149,7 @@
     <color name="unff000000" value="#ff000000" />
     <color name="unff6600" value="#00ff6600" />
     <color name="unfff000" value="#00fff000" />
+    <color name="unffff00" value="#00ffff00" />
   </colors>
   <parameters>
     <!-- Choicelist -->
