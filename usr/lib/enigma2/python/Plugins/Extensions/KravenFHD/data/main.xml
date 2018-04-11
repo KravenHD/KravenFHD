@@ -815,29 +815,6 @@
     <constant-widget name="MenuOKExit"/>
     <!--<text="EventViewSimple" position="63,0" />-->
   </screen>
-  <!-- EPGSelectionMulti -->
-  <screen name="EPGSelectionMulti" position="0,0" size="1920,1080" title="EPG Selection" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="now_button_sel" pixmap="KravenFHD/now.png" position="105,177" size="225,7" zPosition="2" />
-    <widget name="next_button_sel" pixmap="KravenFHD/next.png" position="330,177" size="225,7" zPosition="2" />
-    <widget name="more_button_sel" pixmap="KravenFHD/next.png" position="555,177" size="225,7" zPosition="2" />
-    <widget backgroundColor="Kravenbg" font="Regular;33" halign="center" name="now_text" position="105,120" size="225,45" text="NOW" transparent="1" zPosition="10" />
-    <widget backgroundColor="Kravenbg" font="Regular;33" halign="center" name="next_text" position="330,120" size="225,45" text="NEXT" transparent="1" zPosition="10" />
-    <widget backgroundColor="Kravenbg" font="Regular;33" halign="center" name="more_text" position="555,120" size="225,45" text="MORE" transparent="1" zPosition="10" />
-    <widget backgroundColor="Kravenbg" font="Regular;33" halign="right" name="date" position="1440,120" size="375,45" transparent="1" valign="center" />
-    <widget backgroundColor="Kravenbg" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="75,202" size="1770,540" enableWrapAround="1" transparent="1" />
-    <widget backgroundColor="Kravenbg" font="Regular;33" foregroundColor="KravenFont1" halign="left" position="75,762" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1770,168" source="Event" transparent="1">
-      <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
-    </widget>
-    <constant-widget name="Title-big2"/>
-    <constant-widget name="Colorbuttons"/>
-    <constant-widget name="Background"/>
-    <widget font="Regular;30" halign="left" valign="center" name="key_red" position="105,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-	<widget font="Regular;30" halign="left" valign="top" noWrap="1" name="key_green" position="480,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-    <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-    <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="2" />
-    <constant-widget name="MenuOKExit"/>
-    <!--<text="EPGSelectionMulti" position="105,0" />-->
-  </screen>
   <!-- PluginBrowser -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="PluginBrowser" position="0,0" size="1920,1080" title="Plugin browser">
     <constant-widget name="Title-big"/>
@@ -2338,17 +2315,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 	<!-- Logo -->
     <constant-widget name="OKExit"/>
     <!--<text="AnimationSetupConfig" position="105,0" />-->
-  </screen>
-  <!-- HotkeySetup -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="HotkeySetup" position="0,0" size="1920,1080" title="Tasteneinstellungen">
-    <constant-widget name="Title-big"/>
-	<widget name="list" position="105,120" size="735,798" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" font="Regular;32" itemHeight="42" transparent="1" foregroundColor="KravenFont1" backgroundColor="Kravenbg3" zPosition="-8" />
-	<widget name="choosen" position="642,120" size="735,798" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" font="Regular;32" itemHeight="42" transparent="1" foregroundColor="KravenFont1" backgroundColor="Kravenbg3" zPosition="-8" />
-    <constant-widget name="Colorbuttons"/>
-    <constant-widget name="SourceRedGreenYellow"/>
-	<!-- Logo -->
-    <constant-widget name="OKExit"/>
-    <!--<text="HotkeySetup" position="105,0" />-->
   </screen>
   <!-- MPHelp -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MPHelp" position="0,0" size="1920,1080" title="MPHelp">

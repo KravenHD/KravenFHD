@@ -1,0 +1,45 @@
+  <!-- GraphMultiEPG -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="GraphMultiEPG" position="0,0" size="1920,1080" title="Electronic Program Guide">
+    <eLabel text="Multi-EPG" position="105,18" size="1062,69" backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="center" />
+    <widget backgroundColor="black" name="list" position="105,498" size="1752,450" EventBorderWidth="2" font="Regular;30" itemHeight="90" EntryFont="Regular;30" ServiceFont="Regular;30" scrollbarMode="never" transparent="0" />
+    <widget backgroundColor="KravenIBbg2" source="Title" render="Label" font="Regular;36" foregroundColor="KravenMFont2" position="660,24" size="600,45" halign="center" transparent="1" zPosition="3" />
+    <widget backgroundColor="Kravenbg" font="Regular2;42" foregroundColor="KravenFont2" position="105,120" render="Label" size="1710,58" source="Event" transparent="1">
+      <convert type="KravenFHDEventName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont1" halign="left" position="105,178" render="Label" size="97,33" source="Event" transparent="1">
+      <convert type="KravenFHDEventTime">StartTime</convert>
+      <convert type="KravenFHDClockToText">Format:%H:%M </convert>
+    </widget>
+    <widget backgroundColor="Kravenbg" borderWidth="0" position="202,196" render="Progress" size="1332,7" source="Event" transparent="1" zPosition="20" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress888.png">
+      <convert type="KravenFHDEventTime">Progress</convert>
+    </widget>
+    <eLabel backgroundColor="KravenLine" position="202,199" size="1332,1" />
+    <widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont1" halign="right" position="1534,178" render="Label" size="97,33" source="Event" transparent="1">
+      <convert type="KravenFHDEventTime">EndTime</convert>
+      <convert type="KravenFHDClockToText">Format:%H:%M</convert>
+    </widget>
+	<widget backgroundColor="Kravenbg" render="Label" source="Event" font="Regular2;30" foregroundColor="KravenFont2" position="1632,178" size="225,38" halign="right" transparent="1">
+	  <convert type="EventTime">StartTime</convert>
+	  <convert type="KravenFHDClockToText">Format:%a %d.%b</convert>
+	</widget>
+	<widget name="timeline_text" position="105,457" size="1752,37" font="Regular;30" selectionDisabled="1" transparent="1" zPosition="5" backgroundColor="Kravenbg" foregroundColor="KravenFont1" />
+    <widget name="timeline0" backgroundColor="orange" position="0,498" size="1,450" zPosition="1" />
+    <widget name="timeline1" backgroundColor="orange" position="0,498" size="1,450" zPosition="1" />
+    <widget name="timeline2" backgroundColor="orange" position="0,498" size="1,450" zPosition="1" />
+    <widget name="timeline3" backgroundColor="orange" position="0,498" size="1,450" zPosition="1" />
+    <widget name="timeline4" backgroundColor="orange" position="0,498" size="1,450" zPosition="1" />
+    <widget name="timeline5" backgroundColor="orange" position="0,498" size="1,450" zPosition="1" />
+	<widget name="timeline_now" position="0,490" zPosition="2" size="22,465" pixmap="KravenFHD/epg/timeline-gme.png" alphatest="blend" />
+	<widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg2" foregroundColor="KravenMFont1" position="1707,33" size="150,42" font="Regular;39" halign="right" transparent="1" valign="center">
+      <convert type="KravenFHDClockToText">Default</convert>
+    </widget>
+    <constant-widget name="GE33"/>
+    <widget font="Regular;30" halign="left" valign="center" name="key_red" position="105,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<widget font="Regular;30" halign="left" valign="center" name="key_green" position="480,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="Background"/>
+    <constant-widget name="MenuOKExit"/>
+    <!--<text="GraphMultiEPG" position="105,0" />-->
+  </screen>

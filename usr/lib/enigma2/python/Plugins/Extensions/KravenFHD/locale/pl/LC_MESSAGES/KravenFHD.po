@@ -1,0 +1,1994 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: KravenFHD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-06 23:16+0200\n"
+"PO-Revision-Date: 2018-04-10 23:40+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pl\n"
+"X-Generator: Poedit 2.0.6\n"
+
+msgid ""
+"\n"
+"\n"
+"No data for GM code,\n"
+"fallback to IP"
+msgstr ""
+"\n"
+"\n"
+"Brak danych dla kodu GM,\n"
+"Korzystanie z IP"
+
+msgid ""
+"\n"
+"\n"
+"No data for search string,\n"
+"fallback to IP"
+msgstr ""
+"\n"
+"\n"
+"Brak danych dla wyszukiwanego kodu,\n"
+"Korzystanie z IP"
+
+msgid "   "
+msgstr "zegar"
+
+msgid "          Alternate Color"
+msgstr "          Alternatywny kolor"
+
+msgid "          Info Panels"
+msgstr "          Panel informacyjny"
+
+msgid "          Primary Color"
+msgstr "          Podstawowy kolor"
+
+msgid "          Secondary Color"
+msgstr "          Drugi kolor"
+
+msgid "          Texture"
+msgstr "          Tekstura"
+
+msgid "          blue"
+msgstr "          Niebieski"
+
+msgid "          green"
+msgstr "          Zielony"
+
+msgid "          red"
+msgstr "          Czerwony"
+
+msgid " could not be saved!"
+msgstr "nie można zapisać"
+
+msgid " from "
+msgstr " z "
+
+msgid " saved successfully."
+msgstr " Zapisano pomyślnie."
+
+msgid "% humidity"
+msgstr "% Wilgotność"
+
+msgid "'Not available'-Font"
+msgstr "\"Niedostępny\" - czcionka"
+
+msgid ", feels "
+msgstr ", odczuwalna"
+
+msgid "0 (hardcoded)"
+msgstr "0 (zakodowane)"
+
+msgid "ANTIALIASING BRIGHTNESS ________________________________________________________________"
+msgstr "JASNOŚĆ WYGŁADZENIA ________________________________________________________________"
+
+msgid "AVG load:"
+msgstr "Obciążenie systemu:"
+
+msgid "Activate or deactivate ECM informations in the infobar."
+msgstr "aktywuj lub dezaktywuj informacje ECM na pasku informacyjnym"
+
+msgid "Activate or deactivate an additional window with satellite informations."
+msgstr "aktywuj lub dezaktywuj dodatkowe okno z informacjami satelitarnymi"
+
+msgid "Activate or deactivate displaying the weather in the infobar."
+msgstr "aktywuj lub dezaktywuj wyświetlanie pogody na pasku informacyjnym"
+
+msgid "Activate or deactivate small screen names for debugging purposes."
+msgstr "Aktywuj lub dezaktywuj małe nazwy ekranów do celów debugowania."
+
+msgid "Active Profile / Save"
+msgstr "Aktywny profil / Zapisz"
+
+msgid "Age"
+msgstr "Wiek"
+
+msgid "Analog-Clock-Color"
+msgstr "Zegar analogowy-kolor"
+
+msgid "Android-Temp-Color"
+msgstr "Android-Temp-Kolor"
+
+msgid "Background"
+msgstr "Tło"
+
+msgid "Background-Transparency"
+msgstr "Tło-Przezroczystość"
+
+msgid "Birthday"
+msgstr "Urodziny"
+
+msgid "Birthday Reminder Settings"
+msgstr "Ustawienia przypomnienia o urodzinach"
+
+msgid ""
+"Blowing\n"
+" snow"
+msgstr "Śnieżyca"
+
+msgid "Blustery"
+msgstr "Wietrznie"
+
+msgid "Border Color"
+msgstr "Kolor ramki"
+
+msgid "CAM/Card unsupported"
+msgstr "CAM/Card nieobsługiwane"
+
+msgid "CHANNELLIST _______________________________________________________________"
+msgstr "LISTA KANAłóW ________________________________________________________________"
+
+msgid "CLOCK _____________________________________________________________________"
+msgstr "ZEGAR _______________________________________________________________________"
+
+msgid "CPU + Load"
+msgstr "CPU + obciążenie systemu"
+
+msgid "CPU load:"
+msgstr "Obciążenie procesora:"
+
+msgid "Cancel"
+msgstr "Anuluj"
+
+msgid "Channellist"
+msgstr "Lista kanałów"
+
+msgid "Channellist-Mode"
+msgstr "Tryb listy kanałów"
+
+msgid "Channellist-Style"
+msgstr "Styl listy kanałów"
+
+msgid "Channellist-Transparenz"
+msgstr "Lista kanałów przezroczystość"
+
+msgid "Channelname/-number"
+msgstr "Nazwa kanału/-numer"
+
+msgid "Channelname/-number-Font"
+msgstr "Nazwa kanału/-numer-czcionka"
+
+msgid "Choose between direct zapping (1xOK) and zapping after preview (2xOK)."
+msgstr "Wybierz przełączanie bezpośrednie (1xOK) lub podgląd (2xOK)."
+
+msgid "Choose between graphical weather symbols and Meteo symbols."
+msgstr "Wybierz między graficznymi symbolami pogody i symbolami Meteo."
+
+msgid "Choose between light and dark Meteo symbols."
+msgstr "Wybierz jasny lub ciemny symbol Meteo"
+
+msgid ""
+"Choose between light and dark icons in system screens. The icons in the infobars are not affected."
+msgstr ""
+"Wybierz jasne lub ciemne ikony na ekranach systemowych. Ikony w infobarach nie ulegają zmianie."
+
+msgid "Choose between light and dark infobar icons."
+msgstr "Wybierz jasne lub ciemne ikony w  pasku informacyjnym"
+
+msgid ""
+"Choose from different additional windows with system informations or deactivate them completely."
+msgstr "Wybierz jedno z kilku dodatkowych okien informacji systemowych lub wyÅÄcz je caÅkowicie."
+
+msgid "Choose from different colors for the analog type clock in the infobar."
+msgstr "Wybierz jeden z różnych kolorów zegara analogowego na pasku informacyjnym."
+
+msgid "Choose from different effects to display eventname."
+msgstr "Wybierz spośród różnych efektów wyświetlania nazwy programu."
+
+msgid ""
+"Choose from different icon sets for the menu screens. Many thanks to rennmaus and kleiner.teufel "
+"for their icon set."
+msgstr "Wybierz spośród różnych zestawów ikon dla ekranów menu."
+
+msgid "Choose from different infobar background styles."
+msgstr "Wybierz styl tła dla paska informacyjnego."
+
+msgid ""
+"Choose from different infobar styles. Please note that not every style provides every feature. "
+"Therefore some features might be unavailable for the chosen style."
+msgstr ""
+"Wybierz różne style paska informacyjnego. Należy pamiętać, że nie każdy styl zapewnia każdą "
+"funkcję. Dlatego niektóre funkcje mogą być niedostępne dla wybranego stylu."
+
+msgid "Choose from different options to display recording state."
+msgstr "Wybierz jedną z różnych opcji, aby wyświetlić stan nagrania."
+
+msgid "Choose from different options to display the ECM informations."
+msgstr "Wybierz jedną z różnych opcji, aby wyświetlić informacje systemowe."
+
+msgid "Choose from different options to display the PVR state."
+msgstr "Wybierz jedną z różnych opcji, aby wyświetlić stan PVR."
+
+msgid ""
+"Choose from different options to display the system menus. Press red button for the FAQs with "
+"details on installing menu icons."
+msgstr ""
+"Wybierz jedną z różnych opcji, aby wyświetlić menu systemowe. Naciśnij czerwony przycisk w celu "
+"uzyskania odpowiedzi na najczęściej zadawane pytania ze szczegółami na temat instalowania ikon "
+"menu."
+
+msgid "Choose from different options to display tuner."
+msgstr "Wybierz jedną z opcji wyświetlania tunera."
+
+msgid "Choose from different options to show the channel name and number in the infobar."
+msgstr "Wybierz jedną z różnych opcji, aby wyświetlić nazwę kanału i numer w pasku informacyjnym."
+
+msgid "Choose from different options to show the clock in the infobar."
+msgstr "Wybierz jedną z różnych opcji, aby wyświetlić zegar w pasku informacyjnym."
+
+msgid "Choose from different options to show the clock in the players."
+msgstr "Wybierz spośród różnych opcji, aby pokazać zegar w odtwarzaczu."
+
+msgid "Choose from different options to show the weather in the infobar."
+msgstr "Wybierz jedną z różnych opcji, aby pokazać pogodę w pasku informacyjnym."
+
+msgid "Choose from different options to specify your location."
+msgstr "Wybierz spośród różnych opcji, aby określić swoją lokalizację."
+
+msgid "Choose from different options where to display the ECM informations."
+msgstr "Wybierz spośród różnych opcji wyświetlania informacji systemowych."
+
+msgid "Choose from different servers for the weather data."
+msgstr "Wybierz serwer danych pogodowych."
+
+msgid "Choose from different styles for CoolTVGuide."
+msgstr "Wybierz styl dla CoolTVGuide."
+
+msgid "Choose from different styles for EnhancedMovieCenter."
+msgstr "Wybierz styl dla Zaawansowanego Centrum Filmowego."
+
+msgid "Choose from different styles for GraphMultiEPG."
+msgstr "Wybierz styl dla GraficznegoMultiEPG."
+
+msgid "Choose from different styles for GraphicalEPG."
+msgstr "Wybierz styl graficznego EPG."
+
+msgid "Choose from different styles for MovieSelection."
+msgstr "wybierz styl dla Wyboru filmu"
+
+msgid "Choose from different styles for NumberZap."
+msgstr "Wybierz styl dla \"NumberZap\"."
+
+msgid "Choose from different styles for SecondInfobar."
+msgstr "wybierz styl dla Drugiego paska informacyjnego"
+
+msgid "Choose from different styles for VerticalEPG."
+msgstr "wybierz styl dla Pionowego EPG"
+
+msgid "Choose from different styles for the channel selection screen."
+msgstr "Wybierz styl dla Ekranu wyboru kanału."
+
+msgid "Choose from different styles for the volume display."
+msgstr "wybierz styl dla Paska głośności"
+
+msgid "Choose from different styles to display EPGSelection."
+msgstr "wybierz styl dla Wyboru EPG"
+
+msgid "Choose from different styles to display SplitScreen."
+msgstr "wybierz styl dla SplitScreen"
+
+msgid "Choose from different styles to display TimerEditScreen."
+msgstr "Wybierz styl dla Ekranu edycji timera."
+
+msgid "Choose from different styles to display TimerList."
+msgstr "Wybierz jedną z opcji wyświetlania listy timerów."
+
+msgid "Choose gradient or color for the info panels (Sysinfos, Timeshiftbar etc.)."
+msgstr "Wybierz gradient lub kolor dla paneli informacyjnych (Sysinfo, Timeshift Bar itp.)."
+
+msgid ""
+"Choose the alternate color for the background. It should match the texture at the best. Press OK "
+"to define your own RGB color."
+msgstr ""
+"Wybierz alternatywny kolor tła. Powinien jak najlepiej pasować do tekstury. Naciśnij OK, aby "
+"zdefiniować własny kolor RGB."
+
+msgid ""
+"Choose the alternate color for the infobars. It should match the texture at the best. Press OK to "
+"define your own RGB color."
+msgstr ""
+"Wybierz alternatywny kolor dla paska info. Powinien pasować jak najlepiej pasować do tekstury . "
+"Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid ""
+"Choose the background color of selected events for GraphMultiEPG. Press OK to define your own RGB "
+"color."
+msgstr ""
+"Wybierz kolor tła wybranego programu dla \"Graficzne MultiEPG\". Naciśnij OK, aby ustawić własny "
+"kolor RGB."
+
+msgid ""
+"Choose the background color of selected events for GraphicalEPG. Press OK to define your own RGB "
+"color."
+msgstr ""
+"Wybierz kolor tła wybranego programu dla \"Graficzne EPG\". Naciśnij OK, aby ustawić własny kolor "
+"RGB."
+
+msgid ""
+"Choose the background color of selection bars for EnhancedMovieCenter. Press OK to define your "
+"own RGB color."
+msgstr ""
+"Wybierz kolor tła pasków wyboru dla EnhancedMovieCenter. Naciśnij OK, aby zdefiniować własny "
+"kolor RGB."
+
+msgid "Choose the background color of selection bars. Press OK to define your own RGB color."
+msgstr "Wybierz kolor tła pasków wyboru. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid ""
+"Choose the background for all screens. You can choose from a list of predefined colors or "
+"textures, create your own color using RGB sliders or define a color gradient."
+msgstr ""
+"Wybierz tło dla wszystkich ekranów. Możesz wybierać z listy predefiniowanych kolorów lub tekstur, "
+"tworzyć własne kolory za pomocą suwaków RGB lub definiować gradient."
+
+msgid ""
+"Choose the background for the infobars. You can choose from a list of predefined colors or "
+"textures or create your own color using RGB sliders."
+msgstr ""
+"Wybierz tło dla infobara. Możesz wybrać z listy predefiniowanych kolorów lub tekstur lub stworzyć "
+"własny kolor za pomocą suwaków RGB."
+
+msgid ""
+"Choose the background for the infobars. You can choose from a list of predefined colors or "
+"textures, create your own color using RGB sliders or define a color gradient."
+msgstr ""
+"Wybierz tło dla infobara. Możesz wybierać z listy predefiniowanych kolorów lub tekstur, tworzyć "
+"własne kolory za pomocą suwaków RGB lub definiować gradient."
+
+msgid "Choose the border color for GraphMultiEPG. Press OK to define your own RGB color."
+msgstr ""
+"Wybierz kolor obramowania dla Graficznego MultiEPG. NaciÅnij OK, aby zdefiniowaÄ wÅasny kolor RGB."
+
+msgid "Choose the border color for GraphicalEPG. Press OK to define your own RGB color."
+msgstr ""
+"Wybierz kolor obramowania dla Graficznego EPG. NaciÅnij OK, aby zdefiniowaÄ wÅasny kolor RGB."
+
+msgid "Choose the border color for NumberZap. Press OK to define your own RGB color."
+msgstr "Wybierz kolor obramowania dla  NumberZap. NaciÅnij OK, aby zdefiniowaÄ wÅasny kolor RGB."
+
+msgid "Choose the border color for VerticalEPG. Press OK to define your own RGB color."
+msgstr "Wybierz kolor obramowania dla Pionowego EPG. NaciÅnij OK, aby zdefiniowaÄ wÅasny kolor RGB."
+
+msgid "Choose the border color of MiniTV's. Press OK to define your own RGB color."
+msgstr "Wybierz kolor obramowania dla  Mini TV. NaciÅnij OK, aby zdefiniowaÄ wÅasny kolor RGB."
+
+msgid "Choose the border color of progress bars. Press OK to define your own RGB color."
+msgstr "Wybierz kolor obramowania pasków postępu. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid ""
+"Choose the border color of selection bars or deactivate borders completely. Press OK to define "
+"your own RGB color."
+msgstr ""
+"Wybierz kolor ramki pasków wyboru lub całkowicie wyłącz ramki. Naciśnij OK, aby ustawić własny "
+"kolor RGB."
+
+msgid ""
+"Choose the color of all lines. This affects dividers as well as the line in the center of some "
+"progress bars. Press OK to define your own RGB color."
+msgstr ""
+"Wybierz kolor dla wszystkich linii. Wpływa to na linie podziału, a także linię pośrodku "
+"niektórych pasków postępu. Naciśnij OK, aby ustawić własny kolor RGB."
+
+msgid "Choose the color of progress bars. Press OK to define your own RGB color."
+msgstr "Wybierz kolor pasków postępu. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid ""
+"Choose the color of the font in selection bars for EnhancedMovieCenter. Press OK to define your "
+"own RGB color."
+msgstr ""
+"Wybierz kolor czcionki na pasku wyboru dla EnhancedMovieCenter. Naciśnij OK, aby ustawić własny "
+"kolor RGB."
+
+msgid "Choose the color of the font in selection bars. Press OK to define your own RGB color."
+msgstr "Wybierz kolor czcionki na pasku wyboru. Naciśnij OK, aby ustawić własny kolor RGB."
+
+msgid "Choose the color of the infobar box lines. Press OK to define your own RGB color."
+msgstr ""
+"Wybierz kolor linii granicznych w polu informacyjnym. Naciśnij OK, aby ustawić własny kolor RGB."
+
+msgid ""
+"Choose the color of the primary font. The primary font is used for list items, textboxes and "
+"other important information. Press OK to define your own RGB color."
+msgstr ""
+"Wybierz kolor podstawowej czcionki. Podstawowa czcionka jest używana dla elementów listy, pól "
+"tekstowych i innych ważnych informacji. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid "Choose the color of the primary infobar font. Press OK to define your own RGB color."
+msgstr "Wybierz kolor głównej czcionki infobara. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid ""
+"Choose the color of the secondary font. The secondary font is used for headers, labels and other "
+"additional information. Press OK to define your own RGB color."
+msgstr ""
+"Wybierz kolor czcionki wtórnej. Dodatkowa czcionka jest używana do nagłówków, etykiet i innych "
+"dodatkowych informacji. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid "Choose the color of the secondary infobar font. Press OK to define your own RGB color."
+msgstr "Wybierz kolor wtórnej czcionki infobar. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid "Choose the colors of PermanentClock."
+msgstr "Wybierz kolory Stałego Zegara."
+
+msgid ""
+"Choose the degree of background transparency for all screens except system menus and channellists."
+msgstr ""
+"Wybierz stopień przezroczystości tła dla wszystkich ekranów z wyjątkiem menu systemowych i list "
+"kanałów."
+
+msgid "Choose the degree of background transparency for system menu screens."
+msgstr "Wybierz stopień przezroczystości tła dla ekranów menu systemu."
+
+msgid "Choose the degree of background transparency for the channellists."
+msgstr "Wybierz stopień przezroczystości tła dla list kanałów."
+
+msgid "Choose the degree of background transparency for the infobars."
+msgstr "Wybierz stopień przezroczystości tła dla pasków info"
+
+msgid "Choose the font color of PermanentClock. Press OK to define your own RGB color."
+msgstr "Wybierz kolor czcionki Stałego zegara. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid "Choose the font color of android-clock temperature. Press OK to define your own RGB color."
+msgstr ""
+"Wybierz kolor czcionki temperatury zegara android. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid "Choose the font color of channel name and number. Press OK to define your own RGB color."
+msgstr ""
+"Wybierz kolor czcionki nazwy i numeru kanału. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid ""
+"Choose the font color of channels that are unavailable at the moment. Press OK to define your own "
+"RGB color."
+msgstr ""
+"Wybierz kolor czcionki kanałów, które są aktualnie niedostępne. Naciśnij OK, aby zdefiniować "
+"własny kolor RGB."
+
+msgid "Choose the font color of marked list items. Press OK to define your own RGB color."
+msgstr ""
+"Wybierz kolor czcionki dla zaznaczonych elementów listy. Naciśnij OK, aby zdefiniować własny "
+"kolor RGB."
+
+msgid "Choose the font color of the ECM information. Press OK to define your own RGB color."
+msgstr "Wybierz kolor czcionki informacji ECM. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid "Choose the font color of the color button labels. Press OK to define your own RGB color."
+msgstr ""
+"Wybierz kolor czcionki kolorowych etykiet przycisków. Naciśnij OK, aby zdefiniować własny kolor "
+"RGB."
+
+msgid "Choose the font color of the primetime information. Press OK to define your own RGB color."
+msgstr ""
+"Wybierz kolor czcionki informacji o czasie oglądania. Naciśnij OK, aby ustawić własny kolor RGB."
+
+msgid "Choose the font color of unwatched movies. Press OK to define your own RGB color."
+msgstr ""
+"Wybierz kolor czcionki nie obejrzanych filmów. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid "Choose the font color of watched movies. Press OK to define your own RGB color."
+msgstr "Wybierz kolor czcionki obejrzanych filmów. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid "Choose the font color of watching movies. Press OK to define your own RGB color."
+msgstr ""
+"Wybierz kolor czcionki nie obejrzanych filmów. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid "Choose the font size of EPG list and primetime."
+msgstr "Wybierz rozmiar czcionki listy EPG i czasu."
+
+msgid "Choose the font size of EPG-List."
+msgstr "Wybierz rozmiar czcionki listy EPG."
+
+msgid "Choose the font size of SecondInfobar."
+msgstr "Wybierz rozmiar czcionki drugiego paska info."
+
+msgid "Choose the font size of channelnumber and channelname."
+msgstr "Wybierz rozmiar czcionki numeru i nazwy kanału."
+
+msgid "Choose the font size of event description, EPG list and primetime."
+msgstr "Wybierz rozmiar czcionki opisu zdarzenia, listy EPG i czasu."
+
+msgid "Choose the font size of event description."
+msgstr "Wybierz rozmiar czcionki opisu zdarzenia."
+
+msgid "Choose the font size of eventname."
+msgstr "Wybierz rozmiar czcionki nazwy zdarzenia."
+
+msgid "Choose the font size of mainmenus."
+msgstr "Wybierz rozmiar czcionki głównych menu."
+
+msgid "Choose the font size of serviceinformation."
+msgstr "Wybierz rozmiar czcionki informacji o programie."
+
+msgid "Choose the frequency of loading weather data from the internet."
+msgstr "Wybierz częstotliwość pobierania danych pogodowych z Internetu."
+
+msgid "Choose the primary color for the background gradient. Press OK to define your own RGB color."
+msgstr "Wybierz podstawowy kolor gradientu tła. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid "Choose the primary color for the infobar gradient. Press OK to define your own RGB color."
+msgstr "Wybierz podstawowy kolor gradientu infobara. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid ""
+"Choose the secondary color for the background gradient. Press OK to define your own RGB color."
+msgstr "Wybierz dodatkowy kolor gradientu tła. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid "Choose the secondary color for the infobar gradient. Press OK to define your own RGB color."
+msgstr "Wybierz dodatkowy kolor gradientu infobara. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid "Choose the size of the icon for 'weather icon' clock."
+msgstr "Wybierz rozmiar ikon zegara \"Ikona pogody\"."
+
+msgid "Choose the speed for running text."
+msgstr "Wybierz prędkość uruchamiania tekstu."
+
+msgid "Choose the start delay for running text."
+msgstr "Wybierz opóźnienie uruchamiania tekstu."
+
+msgid "Choose the texture for the background."
+msgstr "Wybierz teksturę tła."
+
+msgid "Choose the texture for the infobars."
+msgstr "Wybierz teksturę dla paska info."
+
+msgid "Choose the vertical position of Icon-Fonts for infobars and players."
+msgstr "Wybierz pionową pozycję czcionek-symboli dla pasków info i odtwarzania."
+
+msgid "Choose the width of scrollbars in lists or deactivate scrollbars completely."
+msgstr "Wybierz szerokość pasków przewijania na listach lub całkowicie wyłącz paski przewijania."
+
+msgid "Choose whether 'free to air' is displayed or not for unencrypted channels."
+msgstr "Wybierz, czy dla niekodowanych kanałów wyświetlany jest komunikat \"kanał bezpłatny\"."
+
+msgid "Choose whether cover is displayed or not in the players."
+msgstr "Wybierz, czy w odtwarzaczach ma być wyświetlana okładka."
+
+msgid "Choose whether picons are shown in channellist or not."
+msgstr "Wybierz, czy będą wyświetlane picony na liście kanałów."
+
+msgid "Choose whether primetime program information is displayed or not."
+msgstr "Wybierz, czy będą wyświetlane  informacje o programie głównym."
+
+msgid "Choose whether scrollbars should be shown."
+msgstr "Wybierz, czy pokazywać paski przewijania."
+
+msgid ""
+"Choose whether some foreground and background colors of unskinned screens are changed or not."
+msgstr "Wybierz, czy chcesz zmienić niektóre kolory czcionek i tła nie skanowanych ekranów."
+
+msgid "Choose whether use alternative horizontal channellist or not."
+msgstr "Wybierz, czy chcesz używać alternatywnej poziomej listy kanałów."
+
+msgid ""
+"Choose whether you want the Kraven skin to be applied to 'MediaPortal' or not. To remove it "
+"again, you must deactivate it here and activate another skin in 'MediaPortal'."
+msgstr ""
+"Wybierz, czy chcesz zastosować skórkę Kraven do \"MediaPortal\", czy nie. Aby usunąć, musisz go "
+"tutaj dezaktywować i aktywować kolejną skórkę w \"MediaPortal\"."
+
+msgid ""
+"Choose whether you want the Kraven skin to be applied to 'Serienrecorder' or not. Activation of "
+"this option prohibits the skin selection in the SR-plugin."
+msgstr ""
+"Wybierz, czy chcesz, aby skórka Kraven została zastosowana do \"Serienrecorder\", czy nie. "
+"Aktywacja tej opcji uniemożliwia wybór skórki we wtyczce SR."
+
+msgid "Choose whether you want to customize the selection-colors for EnhancedMovieCenter."
+msgstr "Wybierz, czy chcesz dostosować kolory selekcji dla EnhancedMovieCenter."
+
+msgid "Choose whether you want to see the infobar background in all screens (bicolored background)."
+msgstr "Wybierz, czy chcesz widzieć tło informacji na wszystkich ekranach (dwukolorowe tło)."
+
+msgid "Choose which informations will be shown in the info box."
+msgstr "Wybierz informacje, które będą wyświetlane w polu informacyjnym."
+
+msgid "Clear"
+msgstr "Jasny"
+
+msgid "Clock"
+msgstr "Zegar"
+
+msgid "Clock-Style"
+msgstr "Styl zegara"
+
+msgid "Cloudy"
+msgstr "Pochmurno"
+
+msgid "Cold"
+msgstr "Zimno"
+
+msgid "Color Selection"
+msgstr "Wybór koloru"
+
+msgid "Colorbutton-Font"
+msgstr "Kolor-Czcionka"
+
+msgid "Configuration tool for KravenFHD"
+msgstr "Panel konfiguracji KravenFHD"
+
+msgid "Custom EMC-Selection-Colors"
+msgstr "Niestandardowy kolor EMC"
+
+msgid "Default Profile / Reset"
+msgstr "Profil domyślny / Resetuj"
+
+msgid "Do you really want to exit without saving?"
+msgstr "Czy na pewno chcesz wyjść bez zapisywania?"
+
+msgid "Do you really want to reboot now?"
+msgstr "Czy na pewno chcesz teraz ponownie uruchomić ?"
+
+msgid "Do you really want to reset all values to the selected default profile?"
+msgstr "Czy na pewno chcesz zresetować wszystkie wartości do wybranego domyślnego profilu?"
+
+msgid "Drizzle"
+msgstr "Mżawka"
+
+msgid "Dual TV"
+msgstr "Podwójny-TV"
+
+msgid "Dual TV 2"
+msgstr "Podwójny-TV 2"
+
+msgid "Dust"
+msgstr "Kurz"
+
+msgid "E"
+msgstr "O"
+
+msgid "E-NE"
+msgstr "O-NO"
+
+msgid "E-SE"
+msgstr "O-SO"
+
+msgid "ECM Infos"
+msgstr "Informacje ECM"
+
+msgid "ECM infos"
+msgstr "Informacje ECM"
+
+msgid "ECM-Contents"
+msgstr "zawartość ECM"
+
+msgid "ECM-Font"
+msgstr "Czcionka ECM"
+
+msgid "EMC-Listselection"
+msgstr "Wybór listy EMC"
+
+msgid "EMC-Selection-Font"
+msgstr "Wybór czcionki EMC"
+
+msgid "EMC-Style"
+msgstr "Styl EMC"
+
+msgid "EPG Fontsize"
+msgstr "Rozmiar czcionki EPG"
+
+msgid ""
+"EPG list - 32 Pixel \n"
+"primetime - 32 Pixel"
+msgstr ""
+"Lista EPG - 32 Pixele \n"
+"Czas - 32 Pixele"
+
+msgid ""
+"EPG list - 36 Pixel \n"
+"primetime - 36 Pixel"
+msgstr ""
+"Lista EPG - 36 Pixeli \n"
+"Czas - 36 Pixeli"
+
+msgid "EPG-List Fontsize"
+msgstr "Rozmiar czcionki listy EPG"
+
+msgid "EPGSelection-Style"
+msgstr "Wybór stylu EPG"
+
+msgid "Enter the GM code for your location:"
+msgstr "Wpisz kod GM swojej lokalizacji:"
+
+msgid "Enter the search string for your location:"
+msgstr "Wpisz wyszukany kod dla swojej lokalizacji:"
+
+msgid "Error creating Skin!"
+msgstr "Błąd podczas tworzenia Skórki!"
+
+msgid "Event Description Fontsize"
+msgstr "rozmiar czcionki dla opisu zdarzenia"
+
+msgid "Eventname Fontsize"
+msgstr "TytuÅ programu Rozmiar czcionki"
+
+msgid "Eventname effect"
+msgstr "TytuÅ programu Efekt"
+
+msgid "Extended Preview"
+msgstr "Rozszerzony podgląd"
+
+msgid "Fair"
+msgstr "Tagi"
+
+msgid "Finished Color"
+msgstr "Kolor obejrzanych filmów"
+
+msgid "Foggy"
+msgstr "Mglisto"
+
+msgid "Free"
+msgstr "Darmowy"
+
+msgid ""
+"Freezing\n"
+" drizzle"
+msgstr ""
+"Marznąca\n"
+" mżawka"
+
+msgid ""
+"Freezing\n"
+" rain"
+msgstr "Marznący deszcz"
+
+msgid "Fri"
+msgstr "Pią."
+
+msgid "GLOBAL COLORS _____________________________________________________________"
+msgstr "GLOBALNE KOLORY ____________________________________________________________"
+
+msgid "GRAPHICALEPG _____________________________________________________________"
+msgstr "GRAFICZNE EPG ___________________________________________________________"
+
+msgid ""
+"GUI needs a restart to apply a new skin.\n"
+"Do you want to Restart the GUI now?"
+msgstr ""
+"GUI wymaga ponownego uruchomienia, aby zastosować nową skórkę.\n"
+"Czy chcesz ponownie uruchomić GUI?"
+
+msgid "GraphMultiEPG-Style"
+msgstr "Styl Graficznego MultiEPG"
+
+msgid "GraphicalEPG-Style"
+msgstr "Styl Graficznego EPG"
+
+msgid "Hail"
+msgstr "Grad"
+
+msgid "Haze"
+msgstr "Mgła"
+
+msgid "Heavy snow"
+msgstr "Śnieżyca"
+
+msgid "Hot"
+msgstr "Gorąco"
+
+msgid "Hurricane"
+msgstr "Huragan"
+
+msgid "INFOBAR-CONTENTS _____________________________________________________________"
+msgstr "ZAWARTOŚĆ PASKA INFO_____________________________________________________________"
+
+msgid "INFOBAR-LOOK _________________________________________________________________"
+msgstr "WYGLĄD PASKA INFO ____________________________________________________________"
+
+msgid "Icon-Font V-Position"
+msgstr "Pozycja V czcionki ikony"
+
+msgid "Icons"
+msgstr "Ikony"
+
+msgid "Icons (except Infobar)"
+msgstr "Ikony (z wyjątkiem paska informacyjnego)"
+
+msgid "Infobar"
+msgstr "Pasek informacyjny"
+
+msgid ""
+"Infobar & \n"
+"SecondInfobar"
+msgstr "pasek info & \"drugi pasek info\""
+
+msgid "Infobar & SecondInfobar"
+msgstr "pasek info & \"drugi pasek info\""
+
+msgid "Infobar-Background"
+msgstr "Pasek info - Tło"
+
+msgid "Infobar-Background-Style"
+msgstr "Pasek info - Styl tła"
+
+msgid "Infobar-Box-Line"
+msgstr "Pasek info-Box-Linie"
+
+msgid "Infobar-Icons"
+msgstr "Pasek info-Ikony"
+
+msgid "Infobar-Style"
+msgstr "Pasek informacyjny-Styl"
+
+msgid "Infobar-Transparency"
+msgstr "Pasek informacyjny-Przezroczystość"
+
+msgid "Infobox-Contents"
+msgstr "Zawartość Infobox"
+
+msgid ""
+"Isolated\n"
+" thundershowers"
+msgstr "Przelotne opady deszczu"
+
+msgid ""
+"Isolated\n"
+" thunderstorms"
+msgstr "Przelotne burze"
+
+msgid "Kraven dark"
+msgstr "Kraven siemny"
+
+msgid "Kraven very dark"
+msgstr "Kraven bardzo ciemny"
+
+msgid ""
+"Light\n"
+" snow showers"
+msgstr ""
+"Słabe\n"
+" opady śniegu"
+
+msgid "Lines"
+msgstr "Linie"
+
+msgid "Listselection"
+msgstr "Pasek wyboru"
+
+msgid "Listselection-Border"
+msgstr "Pasek wyboru-Ramka"
+
+msgid "Listselection-Font"
+msgstr "Pasek wyboru-Czcionka"
+
+msgid "Mainmenu Fontsize"
+msgstr "Rozmiar czcionki menu głównego"
+
+msgid "Marking-Font"
+msgstr "Znacznik-Czcionka"
+
+msgid "MediaPortal not installed"
+msgstr "MediaPortal nie zainstalowany"
+
+msgid "Menu-Icons"
+msgstr "Ikony menu"
+
+msgid "Menu-Transparency"
+msgstr "Menu-Przezroczystość"
+
+msgid "Menus"
+msgstr "Menu"
+
+msgid "Meteo-Color"
+msgstr "Meteo-Kolor"
+
+msgid "MiniTV + Icons"
+msgstr "MiniTV + Ikony"
+
+msgid "MiniTV left"
+msgstr "MiniTV z lewej"
+
+msgid "MiniTV right"
+msgstr "MiniTV z prawej"
+
+msgid "MiniTV-Border"
+msgstr "MiniTV-Ramka"
+
+msgid ""
+"Mixed rain\n"
+" and hail"
+msgstr "Deszcz i grad"
+
+msgid ""
+"Mixed rain\n"
+" and sleet"
+msgstr "Deszcz i deszcz ze śniegiem"
+
+msgid ""
+"Mixed rain\n"
+" and snow"
+msgstr "Deszcz i śnieg"
+
+msgid ""
+"Mixed snow\n"
+" and sleet"
+msgstr ""
+"Śnieg\n"
+"  i deszcz ze śniegiem"
+
+msgid "Mon"
+msgstr "Pon."
+
+msgid ""
+"Mostly\n"
+" cloudy"
+msgstr ""
+"Przeważnie\n"
+" pochmurno"
+
+msgid "Move/Copy"
+msgstr "przesuÅ / kopiuj"
+
+msgid "MovieSelection-Style"
+msgstr "Styl okna wyboru filmu"
+
+msgid "N-NE"
+msgstr "N-NO"
+
+msgid "NE"
+msgstr "NO"
+
+msgid "Name & Number"
+msgstr "Nazwa & Numer"
+
+msgid "Name & Number big"
+msgstr "Nazwa & Numer duże"
+
+msgid "Name & Number small"
+msgstr "Nazwa & Numer małe"
+
+msgid "Name big"
+msgstr "Nazwa duża"
+
+msgid "Name small"
+msgstr "Nazwa mała"
+
+msgid "No Accu ID found"
+msgstr "Nie znaleziono identyfikatora Accu ID"
+
+msgid "No data for IP"
+msgstr "Brak danych dla IP"
+
+msgid "Nobile Extended Preview"
+msgstr "Rozszerzony podgląd nobile"
+
+msgid "Nobile Preview"
+msgstr "Podgląd nobile"
+
+msgid "Nobile Preview (2x OK)"
+msgstr "Podgląd nobile (2x OK)"
+
+msgid ""
+"Not\n"
+" available"
+msgstr ""
+"Nie\n"
+"  dostępny"
+
+msgid "NumberZap-Style"
+msgstr "Styl NumberZap"
+
+msgid "PROFILES __________________________________________________________________"
+msgstr "PROFILE ___________________________________________________________________"
+
+msgid "PVRState"
+msgstr "Stan PVR"
+
+msgid ""
+"Partly\n"
+" cloudy"
+msgstr ""
+"Częściowe\n"
+" zachmurzenie"
+
+msgid "PermanentClock-Color"
+msgstr "Stały kolor zegara"
+
+msgid "PermanentClock-Font"
+msgstr "Stała czcionka zegara"
+
+msgid "Preview"
+msgstr "Podgląd"
+
+msgid "Preview (2x OK)"
+msgstr "Podgląd (2xOK)"
+
+msgid "Preview (2xOK)"
+msgstr "Podgląd (2xOK)"
+
+msgid "Primary-Font"
+msgstr "Podstawowa czcionka"
+
+msgid "Primary-Infobar-Font"
+msgstr "Podstawowa czcionka paska informacyjnego"
+
+msgid "Primetime"
+msgstr "Czas trwania"
+
+msgid "Primetime-Font"
+msgstr "Czas trwania - czcionka"
+
+msgid "Primetime-Time"
+msgstr "Czas trwania-czas"
+
+msgid "Profile "
+msgstr "Profil "
+
+msgid "Progress-/Volumebar"
+msgstr "Pasek postępu / głośność"
+
+msgid "Progress-Border"
+msgstr "Pasek postępu / ramka"
+
+msgid "Rain"
+msgstr "Deszcz"
+
+msgid "Record-State"
+msgstr "Stan nagrywania"
+
+msgid ""
+"Reduce distortions (faint/blurry) or color frames around fonts at top and bottom of screens by "
+"adjusting the antialiasing brightness."
+msgstr ""
+"Zmniejsz szum (rozmazane) lub kolorowe ramki wokół czcionek na górze i dole ekranu, dostosowując "
+"jasność antyaliasingu."
+
+msgid ""
+"Reduce distortions (faint/blurry) or color frames around fonts in the infobar and widgets by "
+"adjusting the antialiasing brightness."
+msgstr ""
+"Zmniejsz szum (rozmazane) lub kolorowe ramki wokół czcionek w pasku informacyjnym i widgetach, "
+"dostosowując jasność antyaliasingu."
+
+msgid ""
+"Reduce distortions (faint/blurry) or color frames around the ECM information in the infobar by "
+"adjusting the antialiasing brightness."
+msgstr ""
+"Zmniejsz szum (rozmazane) lub kolorowe ramki wokół informacji ECM w infobarze, dostosowując "
+"jasność antyaliasingu."
+
+msgid "Refresh interval (in minutes)"
+msgstr "Częstotliwość odświeżania (w minutach)"
+
+msgid "Reset profile"
+msgstr "Zresetuj profil"
+
+msgid "Restart GUI"
+msgstr "Restart GUI"
+
+msgid "Running Text (Delay)"
+msgstr "Uruchamianie tekstu (opóźnienie)"
+
+msgid "Running Text (Speed)"
+msgstr "Uruchamianie tekstu (Szybkość)"
+
+msgid "S-SE"
+msgstr "S-SO"
+
+msgid "SE"
+msgstr "SO"
+
+msgid "SU"
+msgstr "SO"
+
+msgid "Sat"
+msgstr "Sat"
+
+msgid "Save Color"
+msgstr "Zapisz kolor"
+
+msgid "Save profile"
+msgstr "Zapisz profil"
+
+msgid "Save skin"
+msgstr "Zapisz skin"
+
+msgid ""
+"Scattered\n"
+" showers"
+msgstr ""
+"Przelotne\n"
+" opady"
+
+msgid ""
+"Scattered\n"
+" snow showers"
+msgstr ""
+"Przelotne\n"
+" opady śniegu"
+
+msgid ""
+"Scattered\n"
+" thunderstorms"
+msgstr ""
+"Przelotne\n"
+" burze"
+
+msgid "Screennames"
+msgstr "Nazwa ekranu"
+
+msgid "Scrollbars"
+msgstr "Pasek przewijania"
+
+msgid "Search String"
+msgstr "Szukana fraza"
+
+msgid "Search by"
+msgstr "Wyszukaj według"
+
+msgid "SecondInfobar Fontsize"
+msgstr "Rozmiar czcionki drugiego paska info"
+
+msgid "SecondInfobar-Style"
+msgstr "Styl drugiego paska info"
+
+msgid "Secondary-Font"
+msgstr "Drugi pasek info-czcionka"
+
+msgid "Secondary-Infobar-Font"
+msgstr "Drugi pasek info-pasek info-czcionka"
+
+msgid "Select a path for the birthday file"
+msgstr "wybierz ÅcieÅ¼kÄ do pliku urodzinowego."
+
+msgid ""
+"Select the default profile you want to use when resetting the active profile (OK button). You can "
+"add your own default profiles under /etc/enigma2/kravenfhd_default_n (n<=20)."
+msgstr ""
+"Wybierz domyślny profil, którego chcesz użyć podczas resetowania aktywnego profilu (przycisk OK)."
+"Możesz dodać własne domyślne profile w katalogu / etc / enigma2 / kravenfhd_default_n (n <= 20)."
+
+msgid ""
+"Select the profile you want to work with. Profiles are saved automatically on switching them or "
+"by pressing the OK button. New profiles will be generated based on the actual one. Profiles are "
+"interchangeable between boxes."
+msgstr ""
+"Wybierz profil, z którym chcesz pracować. Profile są zapisywane automatycznie po ich przełączeniu "
+"lub naciśnięciu przycisku OK. Nowe profile zostaną wygenerowane na podstawie rzeczywistego. "
+"Profile można wymieniać między boxami."
+
+msgid "Selected Event Background"
+msgstr "Kolor wybranego programu"
+
+msgid "Serviceinfo Fontsize"
+msgstr "Rozmiar czcionki informacji o programie"
+
+msgid "Servicenumber/-name Fontsize"
+msgstr "Rozmiar czcionki dla numeru kanału/-nazwy"
+
+msgid "Set the intensity of this basic color with the slider."
+msgstr "Ustaw intensywność tego podstawowego koloru za pomocą suwaka."
+
+msgid ""
+"Severe\n"
+" thunderstorms"
+msgstr ""
+"Silne\n"
+" burze"
+
+msgid "Show 'free to air'"
+msgstr "Pokaż \"Kanał bezpłatny\""
+
+msgid "Show ECM Infos"
+msgstr "Pokaż informacje ECM"
+
+msgid "Show Infobar-Background"
+msgstr "Pokaż tło paska informacji"
+
+msgid "Showers"
+msgstr "Deszcz"
+
+msgid "Sleet"
+msgstr "Śnieg z deszczem"
+
+msgid "Smoky"
+msgstr "Dymny"
+
+msgid "Snow"
+msgstr "Śnieg"
+
+msgid ""
+"Snow\n"
+" flurries"
+msgstr "Słaby śnieg"
+
+msgid "Snow showers"
+msgstr "Opady śniegu"
+
+msgid ""
+"Specify any search string for your location (zip/city/district/state single or combined). Press "
+"OK to use the virtual keyboard. Step up or down in the menu to start the search."
+msgstr ""
+"Określ tryb wyszukiwania swojej lokalizacji (zip kod / miasto / dzielnica ). Naciśnij OK, aby "
+"użyć wirtualnej klawiatury. Wejdź w górę lub w dół menu, aby rozpocząć wyszukiwanie."
+
+msgid ""
+"Specify the GM code for your location. You can find it at https://weather.codes. Press OK to use "
+"the virtual keyboard. Step up or down in the menu to start the search."
+msgstr ""
+"Określ kod GM swojej lokalizacji. Możesz go znaleźć na https://weather.codes. Naciśnij OK, aby "
+"użyć wirtualnej klawiatury. Wejdź w górę lub w dół menu, aby rozpocząć wyszukiwanie."
+
+msgid "Specify the language for the weather output."
+msgstr "Wybierz język dla danych pogodowych."
+
+msgid "Specify the time for your primetime."
+msgstr "Określ czas na swój czas główny."
+
+msgid "Sun"
+msgstr "Nie."
+
+msgid "Sunny"
+msgstr "Słonecznie"
+
+msgid "System-Infos"
+msgstr "System-Info"
+
+msgid "System: unknown"
+msgstr "System: nieznany"
+
+msgid "TH"
+msgstr "Czw."
+
+msgid "TU"
+msgstr "Wto."
+
+msgid "Temperature + Fan"
+msgstr "Temperatura + wentylator"
+
+msgid "Text with MiniTV"
+msgstr "Tekst z MiniTV"
+
+msgid ""
+"The KravenFHD skin will be generated by this plugin according to your preferences. Make your "
+"settings and watch the changes in the preview window above. When finished, save your skin by "
+"pressing the green button and restart the GUI."
+msgstr ""
+"Skórka KravenFHD zostanie wygenerowana przez tę wtyczkę zgodnie z Twoimi preferencjami. Wprowadź "
+"ustawienia i obserwuj zmiany w oknie podglądu powyżej. Po zakończeniu zapisz skórę, naciskając "
+"zielony przycisk i uruchom ponownie GUI."
+
+msgid "This option is not available because 'MediaPortal' is not installed."
+msgstr "Ta opcja nie jest dostępna, ponieważ \"MediaPortal\" nie jest zainstalowany."
+
+msgid ""
+"This sections offers all antialiasing settings. Distortions or color frames around fonts can be "
+"reduced by this settings."
+msgstr ""
+"Ta sekcja zawiera wszystkie ustawienia wygładzania krawędzi. Dzięki tym ustawieniom można "
+"zmniejszyć zniekształcenia lub obramowania wokół czcionek."
+
+msgid "This sections offers all basic settings."
+msgstr "Ta sekcja zawiera wszystkie podstawowe ustawienia."
+
+msgid "This sections offers all channellist settings."
+msgstr "W tej sekcji znajdziesz wszystkie ustawienia listy kanałów."
+
+msgid "This sections offers all debug settings."
+msgstr "Ta sekcja zawiera wszystkie ustawienia debugowania."
+
+msgid ""
+"This sections offers all profile settings. Different settings can be saved, modified, shared and "
+"cloned. Read the FAQs."
+msgstr ""
+"Ta sekcja oferuje wszystkie ustawienia profilu. Różne ustawienia można zapisywać, modyfikować, "
+"udostępniać i klonować. Przeczytaj często zadawane pytania."
+
+msgid "This sections offers all settings for EMC ('EnhancedMovieCenter')."
+msgstr "Ta sekcja zawiera wszystkie ustawienia EMC (\"EnhancedMovieCenter\")."
+
+msgid "This sections offers all settings for EPGSelection."
+msgstr "Ta sekcja zawiera wszystkie ustawienia dla EPGSelection."
+
+msgid "This sections offers all settings for GraphMultiEPG."
+msgstr "Ta sekcja zawiera wszystkie ustawienia dla Graficznego MultiEPG."
+
+msgid "This sections offers all settings for GraphicalEPG."
+msgstr "Ta sekcja zawiera wszystkie ustawienia dla Graficznego EPG."
+
+msgid "This sections offers all settings for MovieSelection."
+msgstr "Ta sekcja zawiera wszystkie ustawienia MovieSelection."
+
+msgid "This sections offers all settings for NumberZap."
+msgstr "Ta sekcja zawiera wszystkie ustawienia dla NumberZap."
+
+msgid "This sections offers all settings for PermanentClock."
+msgstr "Ta sekcja oferuje wszystkie ustawienia dla Stałego Zegara."
+
+msgid "This sections offers all settings for SecondInfobar."
+msgstr "Ta sekcja oferuje wszystkie ustawienia dla drugiego paska info."
+
+msgid "This sections offers all settings for TimerEditScreen."
+msgstr "Ta sekcja zawiera wszystkie ustawienia ekranu edycji timera."
+
+msgid "This sections offers all settings for VerticalEPG."
+msgstr "Ta sekcja zawiera wszystkie ustawienia dla Pionowego EPG."
+
+msgid "This sections offers all settings for infobar-contents."
+msgstr "Ta sekcja zawiera wszystkie ustawienia dla zawartości paska info."
+
+msgid "This sections offers all settings for showing the decryption infos."
+msgstr "Ta sekcja oferuje wszystkie ustawienia wyświetlania informacji odszyfrowujących."
+
+msgid "This sections offers all settings for skinned plugins."
+msgstr "Ta sekcja zawiera wszystkie ustawienia wtyczek ze skórki."
+
+msgid "This sections offers all settings for the different clocks."
+msgstr "Ta sekcja oferuje wszystkie ustawienia dla różnych zegarów."
+
+msgid "This sections offers all settings for the infobar-look."
+msgstr "Ta sekcja zawiera wszystkie ustawienia wyglądu paska info."
+
+msgid "This sections offers all settings for the movie players."
+msgstr "Ta sekcja zawiera wszystkie ustawienia odtwarzacza filmów."
+
+msgid "This sections offers all weather settings."
+msgstr "Ta sekcja oferuje wszystkie ustawienia pogody."
+
+msgid "This sections offers offers all basic color settings."
+msgstr "Ta sekcja oferuje wszystkie podstawowe ustawienia kolorów."
+
+msgid "Thu"
+msgstr "Czw"
+
+msgid "Thundershowers"
+msgstr "Burze"
+
+msgid "Thunderstorms"
+msgstr "Burze"
+
+msgid "TimerEdit-Style"
+msgstr "Edytor timera-Styl"
+
+msgid "TimerList-Style"
+msgstr "Lista timera-Styl"
+
+msgid ""
+"Tropical\n"
+" storm"
+msgstr ""
+"Burza\n"
+" Tropikalna"
+
+msgid "Tue"
+msgstr "Wto"
+
+msgid "Tuner number"
+msgstr "Tunery"
+
+msgid "Tuner/Satellite + SNR"
+msgstr "Tuner/Satellita + SNR"
+
+msgid "Tuner/Satellite + dB"
+msgstr "Tuner/Satellita + dB"
+
+msgid "Unknown"
+msgstr "Nieznany"
+
+msgid "Unskinned Colors"
+msgstr "Nieobsługiwane kolory"
+
+msgid "Unwatched Color"
+msgstr "Kolor nieobejrzanych filmów"
+
+msgid "Used"
+msgstr "Używane"
+
+msgid "VERTICALEPG ______________________________________________________________"
+msgstr "PIONOWE-EPG ______________________________________________________________"
+
+msgid "VIEWS _____________________________________________________________________"
+msgstr "WIDOK _________________________________________________________________"
+
+msgid "VerticalEPG"
+msgstr "Pionowe-EPG"
+
+msgid "VerticalEPG-Style"
+msgstr "Pionowe-EPG-styl"
+
+msgid "Volume"
+msgstr "Głośność"
+
+msgid "WE"
+msgstr "Åro."
+
+msgid "WEATHER ___________________________________________________________________"
+msgstr "POGODA ____________________________________________________________________"
+
+msgid "Watching Color"
+msgstr "Kolor częściowo obejrzanych filmów"
+
+msgid "Weather"
+msgstr "Pogoda"
+
+msgid "Weather-ID"
+msgstr "Pogoda-ID"
+
+msgid "Weather-Icon-Size"
+msgstr "Pogoda-Ikona-Wielkość"
+
+msgid "Weather-Style"
+msgstr "Pogoda-Styl"
+
+msgid "Weather2"
+msgstr "Pogoda 2"
+
+msgid "Wed"
+msgstr "Śro"
+
+msgid "Windy"
+msgstr "Wietrznie"
+
+msgid "You have no internet connection. This function is disabled."
+msgstr "Brak połączenia z Internetem. Ta funkcja jest wyłączona."
+
+msgid "Zap (1xOK)"
+msgstr "Przełączanie (1xOK)"
+
+msgid "about"
+msgstr "o.."
+
+msgid "amber"
+msgstr "bursztyn"
+
+msgid "amber dark"
+msgstr "bursztyn ciemny"
+
+msgid "amber very dark"
+msgstr "bursztyn bardzo ciemny"
+
+msgid "analog"
+msgstr "analogowy"
+
+msgid "android"
+msgstr "android"
+
+msgid "antialiasing"
+msgstr "wygładzanie krawędzi"
+
+msgid "balanced"
+msgstr "zrównoważony"
+
+msgid "big"
+msgstr "duże"
+
+msgid "big + Sat"
+msgstr "duże + Sat"
+
+msgid "big Cover"
+msgstr "duża okładka"
+
+msgid "big Cover2"
+msgstr "duża okładka 2"
+
+msgid "big font with EPG Info"
+msgstr "duża czcionka z informacją EPG"
+
+msgid "black"
+msgstr "czarny"
+
+msgid "blue"
+msgstr "niebieski"
+
+msgid "blue dark"
+msgstr "niebieski ciemny"
+
+msgid "blue very dark"
+msgstr "niebieski bardzo ciemny"
+
+msgid "bottom"
+msgstr "u dołu"
+
+msgid "box"
+msgstr "box"
+
+msgid "brown"
+msgstr "brązowy"
+
+msgid "brown dark"
+msgstr "ciemno brązowy"
+
+msgid "brown very dark"
+msgstr "brązowy bardzo ciemny"
+
+msgid "center"
+msgstr "centralnie"
+
+msgid "center big"
+msgstr "centralnie durze"
+
+msgid "center small"
+msgstr "centralnie małe"
+
+msgid "channellist"
+msgstr "lista kanałów"
+
+msgid "city:"
+msgstr "miast."
+
+msgid "clime:"
+msgstr "powie:"
+
+msgid "clock"
+msgstr "zegar"
+
+msgid "cobalt"
+msgstr "kobalt"
+
+msgid "cobalt dark"
+msgstr "kobalt ciemny"
+
+msgid "cobalt very dark"
+msgstr "bardzo ciemny kobalt"
+
+msgid "colored"
+msgstr "kolorowy"
+
+msgid "colorfull"
+msgstr "bunt"
+
+msgid "colorfull2"
+msgstr "bunt 2"
+
+msgid "coming:"
+msgstr "zaraz:"
+
+msgid "compact"
+msgstr "kompaktowy"
+
+msgid "complete"
+msgstr "kompletny"
+
+msgid "currently running:"
+msgstr "aktualnie uruchomiony:"
+
+msgid "cyan"
+msgstr "cyjan"
+
+msgid "cyan dark"
+msgstr "cyjan ciemny"
+
+msgid "cyan very dark"
+msgstr "bardzo ciemny cyjan"
+
+msgid "dark"
+msgstr "ciemny"
+
+msgid "debug"
+msgstr "debug"
+
+msgid "description"
+msgstr "Opis programu"
+
+msgid ""
+"description - 28 Pixel \n"
+"EPG list - 26 Pixel \n"
+"primetime - 26 Pixel"
+msgstr ""
+"Opis programu - 28 Pixeli \n"
+"EPG-Lista - 26 Pixeli \n"
+"Czas trwania - 26 Pixeli"
+
+msgid ""
+"description - 32 Pixel \n"
+"EPG list - 29 Pixel \n"
+"primetime - 29 Pixel"
+msgstr ""
+"Opis programu - 32 Pixeli \n"
+"EPG-Lista - 29* Pixeli \n"
+"Czas trwania - 29 Pixeli"
+
+msgid ""
+"description - 32 Pixel \n"
+"EPG list - 32 Pixel \n"
+"primetime - 32 Pixel"
+msgstr ""
+"Opis programu - 32 Pixeli \n"
+"EPG-Lista - 32 Pixeli \n"
+"Czas trwania - 32 Pixeli"
+
+msgid ""
+"description - 36 Pixel \n"
+"EPG list - 36 Pixel \n"
+"primetime - 36 Pixel"
+msgstr ""
+"Opis programu - 36 Pixeli \n"
+"EPG-Lista - 36 Pixeli \n"
+"Czas trwania - 36 Pixeli"
+
+msgid "emerald"
+msgstr "szmaragd"
+
+msgid "extensive"
+msgstr "szczegółowo"
+
+msgid "fanspeed:"
+msgstr "prędkość:"
+
+msgid "flip"
+msgstr "flip"
+
+msgid "free"
+msgstr "wolny"
+
+msgid "free to air"
+msgstr "kanał bezpłatny"
+
+msgid "full"
+msgstr "pełny"
+
+msgid "global colors"
+msgstr "globalne kolory"
+
+msgid "global colors big"
+msgstr "globalne kolory-duże"
+
+msgid "global colors small"
+msgstr "globalne kolory-małe"
+
+msgid "global selection background"
+msgstr "globalny pasek wyboru-tło"
+
+msgid "gradient"
+msgstr "upłynęło"
+
+msgid "graphical"
+msgstr "graficzne"
+
+msgid "graphical with MiniTV"
+msgstr "graficzne z MiniTV"
+
+msgid "green"
+msgstr "zielony"
+
+msgid "green dark"
+msgstr "biemno zielony"
+
+msgid "green very dark"
+msgstr "bardzo ciomno zielony"
+
+msgid "grey"
+msgstr "szary"
+
+msgid "grey dark"
+msgstr "szary ciemny"
+
+msgid "grey very dark"
+msgstr "bardzo ciemny szary"
+
+msgid "hardcoded"
+msgstr "zaprogramowany"
+
+msgid "in all Screens"
+msgstr "we wszystkich ekranach"
+
+msgid "infobar colors big"
+msgstr "pasek info-Kolory duże"
+
+msgid "infobar colors small"
+msgstr "pasek info-Kolory małe"
+
+msgid "infobar-contents"
+msgstr "zawartość paska info"
+
+msgid "infobar-look"
+msgstr "wygląd paska info"
+
+msgid "it follows:"
+msgstr "następny:"
+
+msgid "left"
+msgstr "lewo"
+
+msgid "left small"
+msgstr "lewo-mały"
+
+msgid "left/right"
+msgstr "obok siebie"
+
+msgid "light"
+msgstr "jasny"
+
+msgid "load"
+msgstr "obc"
+
+msgid "medium font with EPG Info"
+msgstr "Årednia czcionka z informacjÄ EPG"
+
+msgid "middle"
+msgstr "Åredni"
+
+msgid "no Cover"
+msgstr "bez okładki"
+
+msgid "no Cover2"
+msgstr "bez okładki 2"
+
+msgid "no MiniTV"
+msgstr "bez MiniTV"
+
+msgid "no Picon"
+msgstr "bez Picon"
+
+msgid "no Picon2"
+msgstr "bez Picon 2"
+
+msgid "no information available"
+msgstr "brak dostępnych informacji"
+
+msgid "no record tuner"
+msgstr "brak wskaźnika nagrywania dla tunerów"
+
+msgid "not available"
+msgstr "niedostępne"
+
+msgid "not available for openATV"
+msgstr "niedostępne dla openATV"
+
+msgid "off"
+msgstr "wyłącz"
+
+msgid "olive"
+msgstr "oliwkowy"
+
+msgid "olive dark"
+msgstr "oliwkowy ciamny"
+
+msgid "olive very dark"
+msgstr "oliwkowy bardzo ciemny"
+
+msgid "on"
+msgstr "włącz"
+
+msgid "only Infobar, SecondInfobar & Players"
+msgstr "tylko Infobar, SecondInfobar i Odtwarzacz"
+
+msgid "orange"
+msgstr "pomarańczowy"
+
+msgid "orange dark"
+msgstr "pomarańczowy ciemny"
+
+msgid "orange very dark"
+msgstr "pomarańczowy bardzo ciemny"
+
+msgid "pink"
+msgstr "różowy"
+
+msgid "pink dark"
+msgstr "różowy ciemny"
+
+msgid "pink very dark"
+msgstr "różowy bardzo ciemny"
+
+msgid "player"
+msgstr "odtwarzacz"
+
+msgid "preview"
+msgstr "podgląd"
+
+msgid "profiles"
+msgstr "Profil"
+
+msgid "r/m:"
+msgstr "U/m:"
+
+msgid "record & tuner blink"
+msgstr "nagrywanie & tuner miga"
+
+msgid "record & tuner shine"
+msgstr "nagrywanie & tuner Åwieci"
+
+msgid "record blink"
+msgstr "nagrywanie miga"
+
+msgid "record blink, no record tuner"
+msgstr "nagrywanie miga, brak tunera nagrywania"
+
+msgid "record blink, tuner shine"
+msgstr "nagrywanie miga, tuner świeci"
+
+msgid "record shine"
+msgstr "nagrywanie świeci"
+
+msgid "record shine, no record tuner"
+msgstr "nagrywanie świeci, brak tunera nagrywania"
+
+msgid "record shine, tuner blink"
+msgstr "nagrywanie świeci, tuner miga"
+
+msgid "red"
+msgstr "czerwony"
+
+msgid "red dark"
+msgstr "czerwony ciemny"
+
+msgid "red very dark"
+msgstr "bardzo ciemny czerwony"
+
+msgid "right"
+msgstr "prawo"
+
+msgid "running since"
+msgstr "program trwa od"
+
+msgid "runningtext"
+msgstr "uruchomiony tekst"
+
+msgid "runs until"
+msgstr "trwa do"
+
+msgid "satellite"
+msgstr "satellita"
+
+msgid "self"
+msgstr "własny kolor RGB"
+
+msgid "short with CAID"
+msgstr "krótki z CAID"
+
+msgid "short with source"
+msgstr "krótki ze źródłem"
+
+msgid "show Picons in channellist"
+msgstr "pokaż picony na liście kanałów"
+
+msgid "signal"
+msgstr "sygnał"
+
+msgid "single"
+msgstr "prosty"
+
+msgid "small"
+msgstr "mały"
+
+msgid "small Cover"
+msgstr "mała okładka"
+
+msgid "small Cover2"
+msgstr "mała okładka 2"
+
+msgid "standard"
+msgstr "standard"
+
+msgid "standard big"
+msgstr "standard duży"
+
+msgid "standard layout"
+msgstr "widok standardowy"
+
+msgid "steel"
+msgstr "stalowy"
+
+msgid "steel dark"
+msgstr "stalowy ciemny"
+
+msgid "steel very dark"
+msgstr "stalowy bardzo ciemny"
+
+msgid "system"
+msgstr "system"
+
+msgid "temp:"
+msgstr "temp:"
+
+msgid "temperature"
+msgstr "temperatura"
+
+msgid "texture"
+msgstr "tekstura"
+
+msgid "thin"
+msgstr "wąski"
+
+msgid "timeshift active"
+msgstr "aktywny timeshift "
+
+msgid "top"
+msgstr "góra"
+
+msgid "top/bottom"
+msgstr "góra/dół"
+
+msgid "transparent big"
+msgstr "przezroczysty duży"
+
+msgid "transparent small"
+msgstr "przezroczysty mały"
+
+msgid "tuner"
+msgstr "tuner"
+
+msgid "tuner blink"
+msgstr "tuner miga"
+
+msgid "tuner shine"
+msgstr "tuner świeci"
+
+msgid "typewriter"
+msgstr "maszyna do pisania"
+
+msgid "unknown"
+msgstr "nieznany"
+
+msgid "until live:"
+msgstr "na żywo:"
+
+msgid "use alternative (horizontal) channellist"
+msgstr "użyj alternatywnej (poziomej) listy kanałów"
+
+msgid "used"
+msgstr "w użyciu"
+
+msgid "user texture"
+msgstr "tekstura użytkownika"
+
+msgid "very big Cover"
+msgstr "bardzo duża okładka"
+
+msgid "very big Cover2"
+msgstr "bardzo duża okładka 2"
+
+msgid "video"
+msgstr "video"
+
+msgid "views"
+msgstr "widok"
+
+msgid "violet"
+msgstr "fioletowy"
+
+msgid "violet dark"
+msgstr "fioletowy ciemny"
+
+msgid "violet very dark"
+msgstr "bardzo ciemny fioletowy"
+
+msgid "waiting for information ..."
+msgstr "czekam na informacje ..."
+
+msgid "weather"
+msgstr "pogoda"
+
+msgid "weather icon"
+msgstr "Pogoda-Ikona"
+
+msgid "white"
+msgstr "biały"
+
+msgid "wide"
+msgstr "szeroki"
+
+msgid "wind:"
+msgstr "wiatr:"
+
+msgid "with Border"
+msgstr "z ramkÄ"
+
+msgid "with description"
+msgstr "z opisem"
+
+msgid "without description"
+msgstr "bez opisu"
+
+msgid "yellow"
+msgstr "Å¼Ã³Åty"

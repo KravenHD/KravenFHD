@@ -1514,3 +1514,26 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
 	<!--<eLabel position="0,277" size="1102,3" backgroundColor="KravenIBLine" zPosition="-8" />
 	<eLabel position="1099,0" size="3,277" backgroundColor="KravenIBLine" zPosition="-8" />-->
   </screen>
+  <!-- EPGSelectionMulti -->
+  <screen name="EPGSelectionMulti" position="0,0" size="1920,1080" title="EPG Selection" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="now_button_sel" pixmap="KravenFHD/now.png" position="105,177" size="225,7" zPosition="2" />
+    <widget name="next_button_sel" pixmap="KravenFHD/next.png" position="330,177" size="225,7" zPosition="2" />
+    <widget name="more_button_sel" pixmap="KravenFHD/next.png" position="555,177" size="225,7" zPosition="2" />
+    <widget backgroundColor="Kravenbg" font="Regular;33" halign="center" name="now_text" position="105,120" size="225,45" text="NOW" transparent="1" zPosition="10" />
+    <widget backgroundColor="Kravenbg" font="Regular;33" halign="center" name="next_text" position="330,120" size="225,45" text="NEXT" transparent="1" zPosition="10" />
+    <widget backgroundColor="Kravenbg" font="Regular;33" halign="center" name="more_text" position="555,120" size="225,45" text="MORE" transparent="1" zPosition="10" />
+    <widget backgroundColor="Kravenbg" font="Regular;33" halign="right" name="date" position="1440,120" size="375,45" transparent="1" valign="center" />
+    <widget backgroundColor="Kravenbg" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="75,202" size="1770,540" enableWrapAround="1" transparent="1" />
+    <widget backgroundColor="Kravenbg" font="Regular;33" foregroundColor="KravenFont1" halign="left" position="75,762" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1770,168" source="Event" transparent="1">
+      <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+    </widget>
+    <constant-widget name="Title-big2"/>
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="Background"/>
+    <widget font="Regular;30" halign="left" valign="center" name="key_red" position="105,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<widget font="Regular;30" halign="left" valign="top" noWrap="1" name="key_green" position="480,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="2" />
+    <constant-widget name="MenuOKExit"/>
+    <!--<text="EPGSelectionMulti" position="105,0" />-->
+  </screen>

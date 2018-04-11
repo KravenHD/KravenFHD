@@ -523,6 +523,7 @@
     <eLabel backgroundColor="Kravenbg3" font="Regular2;34" position="105,120" size="1062,42" text="Movielist menu" transparent="1" foregroundColor="KravenFont2" />
     <widget backgroundColor="Kravenbg3" name="menu" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,184" size="1062,720" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" zPosition="3" />
     <constant-widget name="Title-big"/>
+    <constant-widget name="Colorbuttons"/>
 	<!-- Logo -->
     <constant-widget name="OKExit"/>
     <!--<text="MovieContextMenu" position="105,0" />-->
@@ -1854,13 +1855,13 @@
   </screen>
   <!-- QuadPipScreen -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="QuadPipScreen" position="0,0" size="1920,1080" >
-    <widget name="ch1" position="240,240" zPosition="1" size="480,60" font="Regular;32" foregroundColor="KravenFont1" backgroundColor="Kravenbg" halign="center" valign="center" alphatest="on" />
-    <widget name="ch2" position="1200,240" zPosition="1" size="480,60" font="Regular;32" foregroundColor="KravenFont1" backgroundColor="Kravenbg" halign="center" valign="center" alphatest="on" />
-    <widget name="ch3" position="240,780" zPosition="1" size="480,60" font="Regular;32" foregroundColor="KravenFont1" backgroundColor="Kravenbg" halign="center" valign="center" alphatest="on" />
-    <widget name="ch4" position="1200,780" zPosition="1" size="480,60" font="Regular;32" foregroundColor="KravenFont1" backgroundColor="Kravenbg" halign="center" valign="center" alphatest="on" />
-    <widget name="text1" position="80,1000" zPosition="2" size="800,80" font="Regular;32" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" halign="center" valign="center" alphatest="on" />
-    <widget name="text2" position="1040,1000" zPosition="2" size="800,80" font="Regular;32" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" halign="center" valign="center" alphatest="on" />
-    <widget name="focus" position="0,0" zPosition="-1" size="960,540" backgroundColor="Kravenbg" borderWidth="5" borderColor="KravenSelection" alphatest="on" />
+    <widget name="ch1" position="240,240" zPosition="1" size="480,60" font="Regular;32" foregroundColor="KravenFont1" backgroundColor="Kravenbg" halign="center" valign="center" />
+    <widget name="ch2" position="1200,240" zPosition="1" size="480,60" font="Regular;32" foregroundColor="KravenFont1" backgroundColor="Kravenbg" halign="center" valign="center" />
+    <widget name="ch3" position="240,780" zPosition="1" size="480,60" font="Regular;32" foregroundColor="KravenFont1" backgroundColor="Kravenbg" halign="center" valign="center" />
+    <widget name="ch4" position="1200,780" zPosition="1" size="480,60" font="Regular;32" foregroundColor="KravenFont1" backgroundColor="Kravenbg" halign="center" valign="center" />
+    <widget name="text1" position="80,1000" zPosition="2" size="800,80" font="Regular;32" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" halign="center" valign="center" />
+    <widget name="text2" position="1040,1000" zPosition="2" size="800,80" font="Regular;32" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" halign="center" valign="center" />
+    <widget name="focus" position="0,0" zPosition="-1" size="960,540" backgroundColor="Kravenbg" borderWidth="5" borderColor="KravenSelection" />
     <!--<text="QuadPipScreen" position="105,0" />-->
   </screen>
   <!-- CreateQuadPipChannelEntry -->
