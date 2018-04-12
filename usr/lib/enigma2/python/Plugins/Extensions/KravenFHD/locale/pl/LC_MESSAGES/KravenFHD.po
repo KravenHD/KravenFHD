@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: KravenFHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2018-04-10 23:40+0200\n"
+"PO-Revision-Date: 2018-04-12 22:20+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -190,7 +190,7 @@ msgstr "Wybierz jasne lub ciemne ikony w  pasku informacyjnym"
 
 msgid ""
 "Choose from different additional windows with system informations or deactivate them completely."
-msgstr "Wybierz jedno z kilku dodatkowych okien informacji systemowych lub wyÅÄcz je caÅkowicie."
+msgstr "Wybierz jedno z kilku dodatkowych okien informacji systemowych lub wyłącz je całkowicie."
 
 msgid "Choose from different colors for the analog type clock in the infobar."
 msgstr "Wybierz jeden z różnych kolorów zegara analogowego na pasku informacyjnym."
@@ -360,20 +360,20 @@ msgstr ""
 
 msgid "Choose the border color for GraphMultiEPG. Press OK to define your own RGB color."
 msgstr ""
-"Wybierz kolor obramowania dla Graficznego MultiEPG. NaciÅnij OK, aby zdefiniowaÄ wÅasny kolor RGB."
+"Wybierz kolor obramowania dla Graficznego MultiEPG. Naciśnij OK, aby zdefiniować własny kolor RGB."
 
 msgid "Choose the border color for GraphicalEPG. Press OK to define your own RGB color."
 msgstr ""
-"Wybierz kolor obramowania dla Graficznego EPG. NaciÅnij OK, aby zdefiniowaÄ wÅasny kolor RGB."
+"Wybierz kolor obramowania dla Graficznego EPG. Naciśnij OK, aby zdefiniować własny kolor RGB."
 
 msgid "Choose the border color for NumberZap. Press OK to define your own RGB color."
-msgstr "Wybierz kolor obramowania dla  NumberZap. NaciÅnij OK, aby zdefiniowaÄ wÅasny kolor RGB."
+msgstr "Wybierz kolor obramowania dla  NumberZap. Naciśnij OK, aby zdefiniować własny kolor RGB."
 
 msgid "Choose the border color for VerticalEPG. Press OK to define your own RGB color."
-msgstr "Wybierz kolor obramowania dla Pionowego EPG. NaciÅnij OK, aby zdefiniowaÄ wÅasny kolor RGB."
+msgstr "Wybierz kolor obramowania dla Pionowego EPG. Naciśnij OK, aby zdefiniować własny kolor RGB."
 
 msgid "Choose the border color of MiniTV's. Press OK to define your own RGB color."
-msgstr "Wybierz kolor obramowania dla  Mini TV. NaciÅnij OK, aby zdefiniowaÄ wÅasny kolor RGB."
+msgstr "Wybierz kolor obramowania dla  Mini TV. Naciśnij OK, aby zdefiniować własny kolor RGB."
 
 msgid "Choose the border color of progress bars. Press OK to define your own RGB color."
 msgstr "Wybierz kolor obramowania pasków postępu. Naciśnij OK, aby zdefiniować własny kolor RGB."
@@ -719,10 +719,10 @@ msgid "Event Description Fontsize"
 msgstr "rozmiar czcionki dla opisu zdarzenia"
 
 msgid "Eventname Fontsize"
-msgstr "TytuÅ programu Rozmiar czcionki"
+msgstr "Tytuł programu Rozmiar czcionki"
 
 msgid "Eventname effect"
-msgstr "TytuÅ programu Efekt"
+msgstr "Tytuł programu Efekt"
 
 msgid "Extended Preview"
 msgstr "Rozszerzony podgląd"
@@ -936,7 +936,7 @@ msgstr ""
 " pochmurno"
 
 msgid "Move/Copy"
-msgstr "przesuÅ / kopiuj"
+msgstr "przesuń / kopiuj"
 
 msgid "MovieSelection-Style"
 msgstr "Styl okna wyboru filmu"
@@ -1148,7 +1148,7 @@ msgid "Secondary-Infobar-Font"
 msgstr "Drugi pasek info-pasek info-czcionka"
 
 msgid "Select a path for the birthday file"
-msgstr "wybierz ÅcieÅ¼kÄ do pliku urodzinowego."
+msgstr "wybierz ścieżkę do pliku urodzinowego."
 
 msgid ""
 "Select the default profile you want to use when resetting the active profile (OK button). You can "
@@ -1409,7 +1409,7 @@ msgid "Volume"
 msgstr "Głośność"
 
 msgid "WE"
-msgstr "Åro."
+msgstr "Śro."
 
 msgid "WEATHER ___________________________________________________________________"
 msgstr "POGODA ____________________________________________________________________"
@@ -1712,10 +1712,10 @@ msgid "load"
 msgstr "obc"
 
 msgid "medium font with EPG Info"
-msgstr "Årednia czcionka z informacjÄ EPG"
+msgstr "średnia czcionka z informacją EPG"
 
 msgid "middle"
-msgstr "Åredni"
+msgstr "średni"
 
 msgid "no Cover"
 msgstr "bez okładki"
@@ -1796,7 +1796,7 @@ msgid "record & tuner blink"
 msgstr "nagrywanie & tuner miga"
 
 msgid "record & tuner shine"
-msgstr "nagrywanie & tuner Åwieci"
+msgstr "nagrywanie & tuner świeci"
 
 msgid "record blink"
 msgstr "nagrywanie miga"
@@ -1982,7 +1982,7 @@ msgid "wind:"
 msgstr "wiatr:"
 
 msgid "with Border"
-msgstr "z ramkÄ"
+msgstr "z ramką"
 
 msgid "with description"
 msgstr "z opisem"
@@ -1991,4 +1991,4 @@ msgid "without description"
 msgstr "bez opisu"
 
 msgid "yellow"
-msgstr "Å¼Ã³Åty"
+msgstr "żółty"

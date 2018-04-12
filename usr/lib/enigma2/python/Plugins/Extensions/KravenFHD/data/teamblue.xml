@@ -26,6 +26,7 @@
     <widget source="hddA" render="Label" position="105,750" size="1062,164" font="Regular;32" foregroundColor="KravenFont1" backgroundColor="Kravenbg3" transparent="1" />
 	<!-- Logo -->
 	<constant-widget name="Colorbuttons"/>
+    <constant-widget name="SourceRedGreenYellowBlue"/>
     <constant-widget name="Exit"/>
     <!--<text="About" position="105,0" />-->
   </screen>
@@ -667,4 +668,66 @@
 	<constant-widget name="SourceRedGreenYellow"/>
 	<constant-widget name="OKExit"/>
     <!--<text="HotkeySetupSelect" position="105,0" />-->
+  </screen>
+  <!-- MemoryInfo -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="MemoryInfo" position="0,0" size="1920,1080" title="MemoryInfo">
+	<widget backgroundColor="Kravenbg3" name="lmemtext" font="Regular2;30" foregroundColor="KravenFont2" position="105,120" size="260,646" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="lmemvalue" font="Regular;30" foregroundColor="KravenFont1" position="365,120" size="260,646" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="rmemtext" font="Regular2;30" foregroundColor="KravenFont2" position="647,120" size="260,646" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="rmemvalue" font="Regular;30" foregroundColor="KravenFont1" position="907,120" size="260,646" transparent="1" />
+	<eLabel backgroundColor="Kravenbg3" text="pused:" font="Regular2;30" foregroundColor="KravenFont2" position="105,766" size="94,38" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="pused" font="Regular;30" foregroundColor="KravenFont1" position="210,766" size="92,38" halign="right" transparent="1" />
+	<widget name="slide" pixmap="KravenFHD/progress/progress380.png" foregroundColor="KravenProgress" borderColor="KravenBorder" borderWidth="3" position="350,779" size="570,12" zPosition="7" transparent="1">
+	  <convert type="slide">Progress</convert>
+	</widget>
+	<eLabel backgroundColor="Kravenbg3" text="pfree:" font="Regular2;30" foregroundColor="KravenFont2" position="970,766" size="93,38" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="pfree" font="Regular;30" foregroundColor="KravenFont1" position="1077,766" size="93,38" halign="right" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="info" position="105,810" size="1062,114" font="Regular2;30" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
+	<widget name="params" rowsincolumn="17" />
+    <constant-widget name="Title-big"/>
+  	<!-- Logo -->
+	<constant-widget name="Colorbuttons"/>
+    <widget font="Regular;30" halign="left" valign="center" source="key_red" position="105,997" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" source="key_green" position="480,997" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" source="key_blue" position="1230,997" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<constant-widget name="OKExit"/>
+    <!--<text="MemoryInfo" position="105,0" />-->
+  </screen>
+  <!-- Troubleshoot -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="Troubleshoot" position="0,0" size="1920,1080" title="Troubleshoot">
+	<widget backgroundColor="Kravenbg3" name="AboutScrollLabel" font="Regular;32" foregroundColor="KravenFont1" position="105,120" size="1062,810" transparent="1" />
+    <constant-widget name="Title-big"/>
+  	<!-- Logo -->
+	<constant-widget name="Colorbuttons"/>
+	<constant-widget name="SourceRedGreen"/>
+	<constant-widget name="OKExit"/>
+    <!--<text="Troubleshoot" position="105,0" />-->
+  </screen>
+  <!-- TranslationInfo -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="TranslationInfo" position="0,0" size="1920,1080" title="Translation">
+	<widget backgroundColor="Kravenbg3" name="AboutScrollLabel" split="1" dividechar=":" font="Regular;32" foregroundColor="KravenFont1" position="105,120" size="1062,810" noWrap="1" transparent="1" />
+    <constant-widget name="Title-big"/>
+  	<!-- Logo -->
+	<constant-widget name="Colorbuttons"/>
+	<constant-widget name="OKExit"/>
+    <!--<text="TranslationInfo" position="105,0" />-->
+  </screen>
+  <!-- CommitInfo -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="CommitInfo" position="0,0" size="1920,1080" title="Latest Commits">
+	<widget backgroundColor="Kravenbg3" name="AboutScrollLabel" font="Regular;32" foregroundColor="KravenFont1" position="105,120" size="1062,810" transparent="1" />
+    <constant-widget name="Title-big"/>
+  	<!-- Logo -->
+	<constant-widget name="Colorbuttons"/>
+    <widget font="Regular;30" halign="left" valign="center" source="key_red" position="105,997" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<constant-widget name="OKExit"/>
+    <!--<text="CommitInfo" position="105,0" />-->
+  </screen>
+  <!-- ContactInfo -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ContactInfo" position="0,0" size="1920,1080" title="Contact info">
+	<widget backgroundColor="Kravenbg3" source="manufacturerinfo" render="Label" font="Regular;32" foregroundColor="KravenFont1" position="105,120" size="1062,810" transparent="1" />
+    <constant-widget name="Title-big"/>
+  	<!-- Logo -->
+	<constant-widget name="Colorbuttons"/>
+	<constant-widget name="OKExit"/>
+    <!--<text="ContactInfo" position="105,0" />-->
   </screen>
