@@ -1,6 +1,6 @@
   <!-- /* ChannelSelection - no Picon -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection">
-    <widget font="Regular;45" foregroundColor="KravenFont2" position="63,105" halign="left" render="KravenFHDEmptyEpg2" size="624,60" source="ServiceEvent" backgroundColor="Kravenbg4" transparent="1" >
+    <widget font="Regular;45" foregroundColor="KravenFont2" position="63,105" halign="left" render="RunningTextEmptyEpg2" size="624,60" source="ServiceEvent" backgroundColor="Kravenbg4" transparent="1" >
       <convert type="KravenFHDEventName">Name</convert>
     </widget>
     <widget source="ServiceEvent" render="Label" position="63,185" size="90,36" font="Regular;28" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" transparent="1" halign="left">
