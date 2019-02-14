@@ -20,6 +20,8 @@ from enigma import iServiceInformation, iPlayableService
 from Components.config import config
 from Components.Element import cached
 
+from KravenFHDExtraInfo import stream_codec
+
 WIDESCREEN = [3, 4, 7, 8, 0xB, 0xC, 0xF, 0x10]
 
 class KravenFHDServiceInfoEX(Poll, Converter, object):
@@ -212,8 +214,8 @@ class KravenFHDServiceInfoEX(Poll, Converter, object):
 		if audio:
 			if audio.getCurrentTrack() > -1:
 				self.stream['atype'] = str(audio.getTrackInfo(audio.getCurrentTrack()).getDescription()).replace(",","")
-		self.stream['vtype'] = ("MPEG2", "MPEG4", "MPEG1", "MPEG4-II", "VC1", "VC1-SM", "")[info.getInfo(iServiceInformation.sVideoType)]
-		self.stream['avtype'] = ("MPEG2/", "MPEG4/", "MPEG1/", "MPEG4-II/", "VC1/", "VC1-SM/", "")[info.getInfo(iServiceInformation.sVideoType)] + self.stream['atype']
+		self.stream['vtype'] = stream_codec.get[info.getInfo(iServiceInformation.sVideoType)]
+		self.stream['avtype'] = stream_codec.get[info.getInfo(iServiceInformation.sVideoType)] + self.stream['atype']
 		if self.getServiceInfoString(info, iServiceInformation.sFrameRate, lambda x: "%d" % ((x+500)/1000)) != "N/A":
 			self.stream['fps'] = self.getServiceInfoString(info, iServiceInformation.sFrameRate, lambda x: "%d" % ((x+500)/1000))
 		if self.getServiceInfoString(info, iServiceInformation.sTransferBPS, lambda x: "%d kB/s" % (x/1024)) != "N/A":
