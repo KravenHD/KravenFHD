@@ -7,6 +7,32 @@ from Components.config import config
 from Tools.Transponder import ConvertToHumanReadable
 from Poll import Poll
 
+stream_codec = {
+	-1: "N/A",
+	0: "MPEG2",
+	1: "AVC",
+	2: "H263",
+	3: "VC1",
+	4: "MPEG4-VC",
+	5: "VC1-SM",
+	6: "MPEG1",
+	7: "HEVC",
+	8: "VP8",
+	9: "VP9",
+	10: "XVID",
+	11: "N/A 11",
+	12: "N/A 12",
+	13: "DIVX 3.11",
+	14: "DIVX 4",
+	15: "DIVX 5",
+	16: "AVS",
+	17: "N/A 17",
+	18: "VP6",
+	19: "N/A 19",
+	20: "N/A 20",
+	21: "SPARK",
+}
+
 def addspace(text):
 	if text:
 		text += " "
@@ -58,7 +84,7 @@ class KravenFHDExtraInfo(Poll, Converter, object):
 		return str(fps)
 
 	def createVideoCodec(self,info):
-		return ("MPEG2", "MPEG4", "MPEG1", "MPEG4-II", "VC1", "VC1-SM", "H265_HEVC", "")[info.getInfo(iServiceInformation.sVideoType)]
+		return stream_codec.get(info.getInfo(iServiceInformation.sVideoType), "N/A")
 
 	def createAudioCodec(self,info):
 		service = self.source.service
