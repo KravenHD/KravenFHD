@@ -220,7 +220,7 @@
       <widget font="Regular;30" halign="left" valign="center" name="key_red" position="105,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_green" position="480,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="2" />
+      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
 	</constant-panels>
 	
 	<constant-panels name="SourceRedGreen">
@@ -356,7 +356,7 @@
       <widget font="Regular;30" halign="left" valign="center" name="key_red" position="105,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_green" position="480,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="2" />
+      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
 	</constant-panels>
 	
 	<constant-panels name="EMCSelection-template">
@@ -370,7 +370,7 @@
       <widget font="Regular;30" halign="left" valign="center" name="key_red" position="63,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_green" position="438,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="813,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1188,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="2" />
+      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1188,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <ePixmap pixmap="KravenFHD/infobar-global-icons/key_menu.png" position="1642,1005" size="65,33" alphatest="blend" />
       <ePixmap pixmap="KravenFHD/infobar-global-icons/key_ok.png" position="1717,1005" size="65,33" alphatest="blend" />
       <ePixmap pixmap="KravenFHD/infobar-global-icons/key_exit.png" position="1792,1005" size="65,33" alphatest="blend" />
@@ -387,7 +387,7 @@
       <widget font="Regular;30" halign="left" valign="center" name="key_red" position="105,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_green" position="480,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="2" />
+      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <ePixmap pixmap="KravenFHD/infobar-global-icons/key_menu.png" position="1642,1005" size="65,33" alphatest="blend" />
       <ePixmap pixmap="KravenFHD/infobar-global-icons/key_ok.png" position="1717,1005" size="65,33" alphatest="blend" />
       <ePixmap pixmap="KravenFHD/infobar-global-icons/key_exit.png" position="1792,1005" size="65,33" alphatest="blend" />
@@ -404,7 +404,7 @@
       <widget font="Regular;30" halign="left" valign="center" name="key_red" position="63,997" size="330,39" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_green" position="438,997" size="330,39" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="813,997" size="330,39" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1188,997" size="330,39" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="2" />
+      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1188,997" size="330,39" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <!-- nontransbg */-->
       <ePixmap pixmap="KravenFHD/infobar-global-icons/key_menu.png" position="1642,1005" size="65,33" alphatest="blend" />
       <ePixmap pixmap="KravenFHD/infobar-global-icons/key_ok.png" position="1717,1005" size="65,33" alphatest="blend" />
@@ -443,9 +443,9 @@
       <widget name="timeline5" backgroundColor="orange" position="0,498" size="1,450" zPosition="1" />
 	  <widget name="timeline_now" position="0,490" zPosition="2" size="22,465" pixmap="KravenFHD/epg/timeline-gme.png" alphatest="blend" />
       <widget font="Regular;30" halign="left" valign="center" name="key_red" position="105,958" size="330,78" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-	  <widget font="Regular;30" halign="left" valign="top" noWrap="1" name="key_green" position="480,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	  <widget font="Regular;30" halign="left" valign="center" name="key_green" position="480,958" size="330,78" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,958" size="330,78" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,958" size="330,78" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="2" />
+      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,958" size="330,78" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
 	</constant-panels>
 	
 	<constant-panels name="GraphMultiEPG-MiniTV">
@@ -486,9 +486,9 @@
       <widget name="timeline5" backgroundColor="orange" position="0,498" size="1,450" zPosition="1" />
 	  <widget name="timeline_now" position="0,490" zPosition="2" size="22,465" pixmap="KravenFHD/epg/timeline-gme.png" alphatest="blend" />
       <widget font="Regular;30" halign="left" valign="center" name="key_red" position="105,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-	  <widget font="Regular;30" halign="left" valign="top" noWrap="1" name="key_green" position="480,997" size="330,39" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	  <widget font="Regular;30" halign="left" valign="center" name="key_green" position="480,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="2" />
+      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <!-- nontransbg */-->
 	  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBCoolbg" foregroundColor="KravenMFont1" position="1707,33" size="150,42" font="Regular;39" halign="right" transparent="1" valign="center">
         <convert type="KravenFHDClockToText">Default</convert>
@@ -534,9 +534,9 @@
       <widget name="timeline5" backgroundColor="orange" position="0,498" size="1,450" zPosition="1" />
 	  <widget name="timeline_now" position="0,490" zPosition="2" size="22,465" pixmap="KravenFHD/epg/timeline-gme.png" alphatest="blend" />
       <widget font="Regular;30" halign="left" valign="center" name="key_red" position="105,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-	  <widget font="Regular;30" halign="left" valign="top" noWrap="1" name="key_green" position="480,997" size="330,39" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	  <widget font="Regular;30" halign="left" valign="center" name="key_green" position="480,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="2" />
+      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <!-- nontransbg */-->
 	  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBCoolbg" foregroundColor="KravenMFont1" position="1707,33" size="150,42" font="Regular;39" halign="right" transparent="1" valign="center">
         <convert type="KravenFHDClockToText">Default</convert>
@@ -554,9 +554,9 @@
 	  <ePixmap alphatest="blend" pixmap="KravenFHD/buttons/key_yellow1.png" position="806,1038" size="300,7" />
 	  <ePixmap alphatest="blend" pixmap="KravenFHD/buttons/key_blue1.png" position="1181,1038" size="300,7" />
       <widget font="Regular;30" halign="left" valign="center" name="key_red" position="63,997" size="330,39" backgroundColor="KravenIBbg4" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_green" position="438,997" size="330,39" backgroundColor="KravenIBbg4" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+      <widget font="Regular;30" halign="left" valign="top" name="key_green" position="438,997" size="330,39" backgroundColor="KravenIBbg4" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="813,997" size="330,39" backgroundColor="KravenIBbg4" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1188,997" size="330,39" backgroundColor="KravenIBbg4" foregroundColor="KravenButton" transparent="1" zPosition="2" />
+      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1188,997" size="330,39" backgroundColor="KravenIBbg4" foregroundColor="KravenButton" transparent="1" zPosition="1" />
       <ePixmap pixmap="KravenFHD/infobar-global-icons/key_menu.png" position="1642,1005" size="65,33" alphatest="blend" />
       <ePixmap pixmap="KravenFHD/infobar-global-icons/key_ok.png" position="1717,1005" size="65,33" alphatest="blend" />
       <ePixmap pixmap="KravenFHD/infobar-global-icons/key_exit.png" position="1792,1005" size="65,33" alphatest="blend" />
@@ -566,24 +566,24 @@
 	  <widget foregroundColor="KravenFont1" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;32" position="63,545" size="624,246" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,791" size="624,164" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,791" size="624,164" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSLEPG36">
 	  <widget foregroundColor="KravenFont1" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;36" position="63,543" size="624,276" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,819" size="624,138" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,819" size="624,138" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSLEPG32Prime">
 	  <widget foregroundColor="KravenFont1" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;32" position="63,545" size="624,246" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,791" size="624,123" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,791" size="624,123" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg2" foregroundColor="KravenPrime" font="Regular;32" source="ServiceEvent" render="Label" position="63,914" size="624,41" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -593,8 +593,8 @@
 	  <widget foregroundColor="KravenFont1" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;36" position="63,543" size="624,276" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,819" size="624,92" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,819" size="624,92" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg2" foregroundColor="KravenPrime" font="Regular;36" source="ServiceEvent" render="Label" position="63,911" size="624,46" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -604,24 +604,24 @@
 	  <widget foregroundColor="KravenFont1" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;32" position="1233,545" size="624,246" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,791" size="624,164" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,791" size="624,164" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSREPG36">
 	  <widget foregroundColor="KravenFont1" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;36" position="1233,543" size="624,276" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,819" size="624,138" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,819" size="624,138" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSREPG32Prime">
 	  <widget foregroundColor="KravenFont1" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;32" position="1233,545" size="624,246" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,791" size="624,123" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,791" size="624,123" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg2" foregroundColor="KravenPrime" font="Regular;32" source="ServiceEvent" render="Label" position="1233,914" size="624,41" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -631,8 +631,8 @@
 	  <widget foregroundColor="KravenFont1" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;36" position="1233,543" size="624,276" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,819" size="624,92" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,819" size="624,92" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg2" foregroundColor="KravenPrime" font="Regular;36" source="ServiceEvent" render="Label" position="1233,911" size="624,46" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -642,24 +642,24 @@
 	  <widget foregroundColor="KravenFont1" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;32" position="63,545" size="624,246" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1" >
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,791" size="624,164" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,791" size="624,164" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSEPEPG36">
 	  <widget foregroundColor="KravenFont1" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;36" position="63,543" size="624,276" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1" >
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,819" size="624,138" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,819" size="624,138" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSEPEPG32Prime">
 	  <widget foregroundColor="KravenFont1" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;32" position="63,545" size="624,246" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1" >
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,791" size="624,123" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,791" size="624,123" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;32" source="ServiceEvent" render="Label" position="63,914" size="624,41" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -669,8 +669,8 @@
 	  <widget foregroundColor="KravenFont1" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;36" position="63,543" size="624,276" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1" >
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,819" size="624,92" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,819" size="624,92" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;36" source="ServiceEvent" render="Label" position="63,911" size="624,46" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -681,24 +681,24 @@
 	  <widget foregroundColor="KravenFont1" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;32" position="750,767" size="1107,205" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,849" size="624,123" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,849" size="624,123" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSMT2EPG36">
 	  <widget foregroundColor="KravenFont1" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;36" position="750,742" size="1107,230" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,834" size="624,138" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,834" size="624,138" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSMT2EPG32Prime">
 	  <widget foregroundColor="KravenFont1" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;32" position="750,767" size="1107,205" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,849" size="624,82" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,849" size="624,82" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg2" foregroundColor="KravenPrime" font="Regular;32" source="ServiceEvent" render="Label" position="63,931" size="624,41" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -708,34 +708,34 @@
 	  <widget foregroundColor="KravenFont1" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;36" position="750,742" size="1107,230" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,834" size="624,92" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,834" size="624,92" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg2" foregroundColor="KravenPrime" font="Regular;36" source="ServiceEvent" render="Label" position="63,926" size="624,46" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
 	</constant-panels>
 	
 	<constant-panels name="CSMT22EPG32">
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,834" size="624,123" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,834" size="624,123" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSMT22EPG36">
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,833" size="624,138" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,833" size="624,138" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSMT22EPG32Prime">
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,834" size="624,82" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,834" size="624,82" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg2" foregroundColor="KravenPrime" font="Regular;32" source="ServiceEvent" render="Label" position="63,916" size="624,41" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
 	</constant-panels>
 	
 	<constant-panels name="CSMT22EPG36Prime">
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,833" size="624,92" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,833" size="624,92" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg2" foregroundColor="KravenPrime" font="Regular;36" source="ServiceEvent" render="Label" position="63,925" size="624,46" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -748,7 +748,8 @@
       <widget source="ServiceEvent" render="Label" zPosition="1" font="Regular;28" position="711,678" size="669,280" backgroundColor="Kravenbg4" transparent="1" foregroundColor="KravenFont1">
         <convert type="KravenFHDServiceNameEventNobile">ExtendedDescription</convert>
       </widget>
-      <widget source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,858" position="1405,106" font="Regular;26" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" noWrap="1" transparent="1" />
+      <!--ChannellistSingleEpgList source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,858" position="1405,106" font="Regular;26" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" noWrap="1" transparent="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSNEPG32">
@@ -758,7 +759,8 @@
       <widget source="ServiceEvent" render="Label" zPosition="1" font="Regular;32" position="711,675" size="669,287" backgroundColor="Kravenbg4" transparent="1" foregroundColor="KravenFont1">
         <convert type="KravenFHDServiceNameEventNobile">ExtendedDescription</convert>
       </widget>
-      <widget source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,851" position="1405,108" font="Regular;29" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" noWrap="1" transparent="1" />
+      <!--ChannellistSingleEpgList source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,851" position="1405,108" font="Regular;29" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" noWrap="1" transparent="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSNEPG28Prime">
@@ -768,7 +770,8 @@
       <widget source="ServiceEvent" render="Label" zPosition="1" font="Regular;28" position="711,678" size="669,280" backgroundColor="Kravenbg4" transparent="1" foregroundColor="KravenFont1">
         <convert type="KravenFHDServiceNameEventNobile">ExtendedDescription</convert>
       </widget>
-      <widget source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,825" position="1405,106" font="Regular;26" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" noWrap="1" transparent="1" />
+      <!--ChannellistSingleEpgList source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,825" position="1405,106" font="Regular;26" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" noWrap="1" transparent="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;26" source="ServiceEvent" render="Label" position="1405,931" size="508,33" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -781,14 +784,16 @@
       <widget source="ServiceEvent" render="Label" zPosition="1" font="Regular;32" position="711,675" size="669,287" backgroundColor="Kravenbg4" transparent="1" foregroundColor="KravenFont1">
         <convert type="KravenFHDServiceNameEventNobile">ExtendedDescription</convert>
       </widget>
-      <widget source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,814" position="1405,108" font="Regular;29" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" noWrap="1" transparent="1" />
+      <!--ChannellistSingleEpgList source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,814" position="1405,108" font="Regular;29" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" noWrap="1" transparent="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;29" source="ServiceEvent" render="Label" position="1405,922" size="508,37" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
 	</constant-panels>
 	
 	<constant-panels name="CSN2EPG28">
-      <widget source="ServiceEvent" render="KravenFHDSingleEpgList" size="711,495" position="1192,100" font="Regular;26" foregroundColor="KravenFont2" backgroundColor="Kravenbg4" noWrap="1" transparent="1"  />
+      <!--ChannellistSingleEpgList source="ServiceEvent" render="KravenFHDSingleEpgList" size="711,495" position="1192,100" font="Regular;26" foregroundColor="KravenFont2" backgroundColor="Kravenbg4" noWrap="1" transparent="1">
+      </ChannellistSingleEpgList-->
       <eLabel position="1192,603" size="711,1" backgroundColor="KravenLine" />
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont1" font="Regular;28" position="1192,611" size="711,350" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
@@ -796,7 +801,8 @@
 	</constant-panels>
 	
 	<constant-panels name="CSN2EPG32">
-      <widget source="ServiceEvent" render="KravenFHDSingleEpgList" size="711,481" position="1192,100" font="Regular;29" foregroundColor="KravenFont2" backgroundColor="Kravenbg4" noWrap="1" transparent="1"  />
+      <!--ChannellistSingleEpgList source="ServiceEvent" render="KravenFHDSingleEpgList" size="711,481" position="1192,100" font="Regular;29" foregroundColor="KravenFont2" backgroundColor="Kravenbg4" noWrap="1" transparent="1">
+      </ChannellistSingleEpgList-->
       <eLabel position="1192,592" size="711,1" backgroundColor="KravenLine" />
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont1" font="Regular;32" position="1192,600" size="711,369" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
@@ -804,7 +810,8 @@
 	</constant-panels>
 	
 	<constant-panels name="CSN2EPG28Prime">
-      <widget source="ServiceEvent" render="KravenFHDSingleEpgList" size="711,463" position="1192,100" font="Regular;26" foregroundColor="KravenFont2" backgroundColor="Kravenbg4" noWrap="1" transparent="1"  />
+      <!--ChannellistSingleEpgList source="ServiceEvent" render="KravenFHDSingleEpgList" size="711,462" position="1192,100" font="Regular;26" foregroundColor="KravenFont2" backgroundColor="Kravenbg4" noWrap="1" transparent="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;26" source="ServiceEvent" render="Label" position="1192,563" size="711,33" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -815,7 +822,8 @@
 	</constant-panels>
 	
 	<constant-panels name="CSN2EPG32Prime">
-      <widget source="ServiceEvent" render="KravenFHDSingleEpgList" size="711,444" position="1192,100" font="Regular;29" foregroundColor="KravenFont2" backgroundColor="Kravenbg4" noWrap="1" transparent="1"  />
+      <!--ChannellistSingleEpgList source="ServiceEvent" render="KravenFHDSingleEpgList" size="711,444" position="1192,100" font="Regular;29" foregroundColor="KravenFont2" backgroundColor="Kravenbg4" noWrap="1" transparent="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;29" source="ServiceEvent" render="Label" position="1192,544" size="711,37" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -832,7 +840,8 @@
       <widget source="ServiceEvent" render="Label" zPosition="1" font="Regular;28" position="711,678" size="669,280" backgroundColor="Kravenbg2" transparent="1" foregroundColor="KravenFont1">
         <convert type="KravenFHDServiceNameEventNobile">ExtendedDescription</convert>
       </widget>
-      <widget source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,858" position="1405,106" font="Regular;26" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" noWrap="1" transparent="1" />
+      <!--ChannellistSingleEpgList source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,858" position="1405,106" font="Regular;26" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" noWrap="1" transparent="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSNMTEPG32">
@@ -842,7 +851,8 @@
       <widget source="ServiceEvent" render="Label" zPosition="1" font="Regular;32" position="711,675" size="669,287" backgroundColor="Kravenbg2" transparent="1" foregroundColor="KravenFont1">
         <convert type="KravenFHDServiceNameEventNobile">ExtendedDescription</convert>
       </widget>
-      <widget source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,851" position="1405,108" font="Regular;29" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" noWrap="1" transparent="1" />
+      <!--ChannellistSingleEpgList source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,851" position="1405,108" font="Regular;29" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" noWrap="1" transparent="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSNMTEPG28Prime">
@@ -852,7 +862,8 @@
       <widget source="ServiceEvent" render="Label" zPosition="1" font="Regular;28" position="711,678" size="669,280" backgroundColor="Kravenbg2" transparent="1" foregroundColor="KravenFont1">
         <convert type="KravenFHDServiceNameEventNobile">ExtendedDescription</convert>
       </widget>
-      <widget source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,825" position="1405,106" font="Regular;26" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" noWrap="1" transparent="1" />
+      <!--ChannellistSingleEpgList source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,825" position="1405,106" font="Regular;26" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" noWrap="1" transparent="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg2" foregroundColor="KravenPrime" font="Regular;26" source="ServiceEvent" render="Label" position="1405,931" size="508,33" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -865,7 +876,8 @@
       <widget source="ServiceEvent" render="Label" zPosition="1" font="Regular;32" position="711,675" size="669,287" backgroundColor="Kravenbg2" transparent="1" foregroundColor="KravenFont1">
         <convert type="KravenFHDServiceNameEventNobile">ExtendedDescription</convert>
       </widget>
-      <widget source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,814" position="1405,108" font="Regular;29" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" noWrap="1" transparent="1" />
+      <!--ChannellistSingleEpgList source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,814" position="1405,108" font="Regular;29" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" noWrap="1" transparent="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg2" foregroundColor="KravenPrime" font="Regular;29" source="ServiceEvent" render="Label" position="1405,922" size="508,37" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -878,7 +890,8 @@
       <widget source="ServiceEvent" render="Label" zPosition="1" font="Regular;28" position="711,678" size="669,280" backgroundColor="Kravenbg4" transparent="1" foregroundColor="KravenFont1">
         <convert type="KravenFHDServiceNameEventNobile">ExtendedDescription</convert>
       </widget>
-      <widget source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,858" position="1405,106" font="Regular;26" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" noWrap="1" transparent="1" />
+      <!--ChannellistSingleEpgList source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,858" position="1405,106" font="Regular;26" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" noWrap="1" transparent="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSNMTEPEPG32">
@@ -888,7 +901,8 @@
       <widget source="ServiceEvent" render="Label" zPosition="1" font="Regular;32" position="711,675" size="669,287" backgroundColor="Kravenbg4" transparent="1" foregroundColor="KravenFont1">
         <convert type="KravenFHDServiceNameEventNobile">ExtendedDescription</convert>
       </widget>
-      <widget source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,851" position="1405,108" font="Regular;29" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" noWrap="1" transparent="1" />
+      <!--ChannellistSingleEpgList source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,851" position="1405,108" font="Regular;29" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" noWrap="1" transparent="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSNMTEPEPG28Prime">
@@ -898,7 +912,8 @@
       <widget source="ServiceEvent" render="Label" zPosition="1" font="Regular;28" position="711,678" size="669,280" backgroundColor="Kravenbg4" transparent="1" foregroundColor="KravenFont1">
         <convert type="KravenFHDServiceNameEventNobile">ExtendedDescription</convert>
       </widget>
-      <widget source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,825" position="1405,106" font="Regular;26" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" noWrap="1" transparent="1" />
+      <!--ChannellistSingleEpgList source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,825" position="1405,106" font="Regular;26" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" noWrap="1" transparent="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;26" source="ServiceEvent" render="Label" position="1405,931" size="508,33" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -911,7 +926,8 @@
       <widget source="ServiceEvent" render="Label" zPosition="1" font="Regular;32" position="711,675" size="669,287" backgroundColor="Kravenbg4" transparent="1" foregroundColor="KravenFont1">
         <convert type="KravenFHDServiceNameEventNobile">ExtendedDescription</convert>
       </widget>
-      <widget source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,814" position="1405,108" font="Regular;29" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" noWrap="1" transparent="1" />
+      <!--ChannellistSingleEpgList source="ServiceEvent" render="KravenFHDSingleEpgListNobile" size="508,814" position="1405,108" font="Regular;29" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" noWrap="1" transparent="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;29" source="ServiceEvent" render="Label" position="1405,922" size="508,37" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -921,24 +937,24 @@
       <widget foregroundColor="KravenFont1" font="Regular;32" position="63,244" size="624,533" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,777" size="624,164" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,777" size="624,164" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSNPEPG36">
       <widget foregroundColor="KravenFont1" font="Regular;36" position="63,252" size="624,506" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,758" size="624,184" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,758" size="624,184" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSNPEPG32Prime">
       <widget foregroundColor="KravenFont1" font="Regular;32" position="63,244" size="624,533" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,777" size="624,123" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,777" size="624,123" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;32" source="ServiceEvent" render="Label" position="63,900" size="624,41" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -948,8 +964,8 @@
       <widget foregroundColor="KravenFont1" font="Regular;36" position="63,252" size="624,506" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,758" size="624,138" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,758" size="624,138" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;36" source="ServiceEvent" render="Label" position="63,896" size="624,46" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -959,24 +975,24 @@
       <widget foregroundColor="KravenFont1" font="Regular;32" position="1233,244" size="624,533" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,777" size="624,164" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,777" size="624,164" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSNP2EPG36">
       <widget foregroundColor="KravenFont1" font="Regular;36" position="1233,252" size="624,506" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,758" size="624,184" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,758" size="624,184" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSNP2EPG32Prime">
       <widget foregroundColor="KravenFont1" font="Regular;32" position="1233,244" size="624,533" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,777" size="624,123" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,777" size="624,123" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;32" source="ServiceEvent" render="Label" position="1233,900" size="624,41" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -986,8 +1002,8 @@
       <widget foregroundColor="KravenFont1" font="Regular;36" position="1233,252" size="624,506" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,758" size="624,138" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="1233,758" size="624,138" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;36" source="ServiceEvent" render="Label" position="1233,896" size="624,46" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -1000,8 +1016,8 @@
       <widget foregroundColor="KravenFont1" font="Regular;32" position="63,449" size="624,328" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,777" size="624,164" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,777" size="624,164" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSXEPG36">
@@ -1011,8 +1027,8 @@
       <widget foregroundColor="KravenFont1" font="Regular;36" position="63,436" size="624,322" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,758" size="624,184" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,758" size="624,184" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSXEPG32Prime">
@@ -1022,8 +1038,8 @@
       <widget foregroundColor="KravenFont1" font="Regular;32" position="63,449" size="624,328" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,777" size="624,123" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,777" size="624,123" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;32" source="ServiceEvent" render="Label" position="63,900" size="624,41" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -1036,8 +1052,8 @@
       <widget foregroundColor="KravenFont1" font="Regular;36" position="63,436" size="624,322" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,758" size="624,138" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,758" size="624,138" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;36" source="ServiceEvent" render="Label" position="63,896" size="624,46" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -1050,8 +1066,8 @@
       <widget foregroundColor="KravenFont1" font="Regular;32" position="63,370" size="624,410" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,780" size="624,164" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,780" size="624,164" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSZEPG36">
@@ -1061,8 +1077,8 @@
       <widget foregroundColor="KravenFont1" font="Regular;36" position="63,390" size="624,368" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,758" size="624,184" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,758" size="624,184" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSZEPG32Prime">
@@ -1072,8 +1088,8 @@
       <widget foregroundColor="KravenFont1" font="Regular;32" position="63,370" size="624,410" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,780" size="624,123" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,780" size="624,123" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;32" source="ServiceEvent" render="Label" position="63,903" size="624,41" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -1086,8 +1102,8 @@
       <widget foregroundColor="KravenFont1" font="Regular;36" position="63,390" size="624,368" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,758" size="624,138" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,758" size="624,138" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;36" source="ServiceEvent" render="Label" position="63,896" size="624,46" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -1100,8 +1116,8 @@
       <widget foregroundColor="KravenFont1" font="Regular;32" position="63,449" size="624,328" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,777" size="624,164" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,777" size="624,164" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSZZEPG36">
@@ -1111,8 +1127,8 @@
       <widget foregroundColor="KravenFont1" font="Regular;36" position="63,482" size="624,276" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,758" size="624,184" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,758" size="624,184" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSZZEPG32Prime">
@@ -1122,8 +1138,8 @@
       <widget foregroundColor="KravenFont1" font="Regular;32" position="63,449" size="624,328" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,777" size="624,123" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,777" size="624,123" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;32" source="ServiceEvent" render="Label" position="63,900" size="624,41" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -1136,8 +1152,8 @@
       <widget foregroundColor="KravenFont1" font="Regular;36" position="63,482" size="624,276" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,758" size="624,138" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,758" size="624,138" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;36" source="ServiceEvent" render="Label" position="63,896" size="624,46" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -1147,24 +1163,24 @@
       <widget foregroundColor="KravenFont1" font="Regular;32" position="63,613" size="624,205" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,818" size="624,123" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,818" size="624,123" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSZZZEPG36">
       <widget foregroundColor="KravenFont1" font="Regular;36" position="63,620" size="624,184" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,804" size="624,138" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,804" size="624,138" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSZZZEPG32Prime">
       <widget foregroundColor="KravenFont1" font="Regular;32" position="63,613" size="624,205" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,818" size="624,82" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,818" size="624,82" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;32" source="ServiceEvent" render="Label" position="63,900" size="624,41" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -1174,8 +1190,8 @@
       <widget foregroundColor="KravenFont1" font="Regular;36" position="63,620" size="624,184" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" source="ServiceEvent" valign="top" backgroundColor="Kravenbg4" transparent="1">
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,804" size="624,92" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg4" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,804" size="624,92" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg4" foregroundColor="KravenPrime" font="Regular;36" source="ServiceEvent" render="Label" position="63,896" size="624,46" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -1186,20 +1202,8 @@
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
       <eLabel position="63,750" size="702,1" backgroundColor="KravenLine" />
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,771" size="702,164" transparent="1" noWrap="1">
-      </widget>
-	</constant-panels>
-	
-	<constant-panels name="CSMTP32Prime">
-	  <widget foregroundColor="KravenFont1" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;32" position="63,320" size="702,410" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
-        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
-      </widget>
-      <eLabel position="63,750" size="702,1" backgroundColor="KravenLine" />
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,771" size="702,123" transparent="1" noWrap="1">
-      </widget>
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenPrime" font="Regular;32" source="ServiceEvent" render="Label" position="63,894" size="702,41" transparent="1" noWrap="1">
-        <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,771" size="702,164" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
 	</constant-panels>
 	
 	<constant-panels name="CSMTP36">
@@ -1207,7 +1211,19 @@
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
       <eLabel position="63,748" size="702,1" backgroundColor="KravenLine" />
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,761" size="702,184" transparent="1" noWrap="1">
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,761" size="702,184" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
+	</constant-panels>
+	
+	<constant-panels name="CSMTP32Prime">
+	  <widget foregroundColor="KravenFont1" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;32" position="63,320" size="702,410" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
+        <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
+      </widget>
+      <eLabel position="63,750" size="702,1" backgroundColor="KravenLine" />
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,771" size="702,123" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
+      <widget backgroundColor="Kravenbg2" foregroundColor="KravenPrime" font="Regular;32" source="ServiceEvent" render="Label" position="63,894" size="702,41" transparent="1" noWrap="1">
+        <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
 	</constant-panels>
 	
@@ -1216,8 +1232,8 @@
         <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
       </widget>
       <eLabel position="63,748" size="702,1" backgroundColor="KravenLine" />
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,761" size="702,138" transparent="1" noWrap="1">
-      </widget>
+      <!--ChannellistSingleEpgList backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenFHDSingleEpgList" position="63,761" size="702,138" transparent="1" noWrap="1">
+      </ChannellistSingleEpgList-->
       <widget backgroundColor="Kravenbg2" foregroundColor="KravenPrime" font="Regular;36" source="ServiceEvent" render="Label" position="63,899" size="702,46" transparent="1" noWrap="1">
         <convert type="KravenFHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
@@ -1771,6 +1787,18 @@
       <widget backgroundColor="Kravenbg" font="Regular;36" foregroundColor="KravenFont1" position="1233,220" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,690" source="Service" transparent="1" valign="top">
         <convert type="EventName">FullDescription</convert>
       </widget>
+	</constant-panels>
+	
+	<constant-panels name="msnc233">
+	  <widget backgroundColor="Kravenbg" font="Regular;33" foregroundColor="KravenFont1" position="63,315" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="648,588" source="Service" transparent="1" valign="top">
+	    <convert type="EventName">FullDescription</convert>
+	  </widget>
+	</constant-panels>
+	
+	<constant-panels name="msnc236">
+	  <widget backgroundColor="Kravenbg" font="Regular;36" foregroundColor="KravenFont1" position="63,310" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="648,598" source="Service" transparent="1" valign="top">
+	    <convert type="EventName">FullDescription</convert>
+	  </widget>
 	</constant-panels>
 	
 	<constant-panels name="mssc33">

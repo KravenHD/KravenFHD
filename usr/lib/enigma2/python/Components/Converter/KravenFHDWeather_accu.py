@@ -37,8 +37,8 @@ def _(txt):
 		t = gettext.gettext(txt)
 	return t
 
-URL = 'http://api.accuweather.com/forecasts/v1/daily/5day/' + str(config.plugins.KravenFHD.weather_accu_id.value) + '?apikey=srRLeAmTroxPinDG8Aus3Ikl6tLGJd94&metric=true&details=true&language=' + str(config.plugins.KravenFHD.weather_language.value)
-URL2 = 'http://api.accuweather.com/currentconditions/v1/' + str(config.plugins.KravenFHD.weather_accu_id.value) + '?apikey=srRLeAmTroxPinDG8Aus3Ikl6tLGJd94&metric=true&details=true&language=' + str(config.plugins.KravenFHD.weather_language.value)
+URL = 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/' + str(config.plugins.KravenFHD.weather_accu_id.value) + '?apikey=' + str(config.plugins.KravenFHD.weather_accu_apikey.value) + '&language=' + str(config.plugins.KravenFHD.weather_language.value + '&details=true&metric=true')
+URL2 = 'http://dataservice.accuweather.com/currentconditions/v1/' + str(config.plugins.KravenFHD.weather_accu_id.value) + '?apikey=' + str(config.plugins.KravenFHD.weather_accu_apikey.value) + '&language=' + str(config.plugins.KravenFHD.weather_language.value + '&details=true')
 
 WEATHER_DATA1 = None
 WEATHER_DATA2 = None

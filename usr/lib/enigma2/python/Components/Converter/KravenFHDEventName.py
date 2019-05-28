@@ -2,7 +2,6 @@
 # Copy to /usr/lib/enigma2/python/Components/Converter/
 from Components.Converter.Converter import Converter
 from Components.Element import cached
-from Tools.BoundFunction import boundFunction
 
 class KravenFHDEventName(Converter, object):
 	NAME = 0					# return Name of Event, i.e. Title
@@ -13,9 +12,6 @@ class KravenFHDEventName(Converter, object):
 								#	 only Extended Description is returned without leading blank line.
 	BOTH_DESCRIPTIONS_FILTERED = 5 # like 4, but result does not contain Short Description if it is equal to the name of the event.
 	NAME_AND_SHORT_DESC_FILTERED = 6 # returns Name and Short Description, if Short Description is not equal the Name. If it is equal, only returns Title.
-	Dolby51 = 7
-	Dolby20 = 8
-	Dolby_off = 9
 	
 	def __init__(self, type):
 		Converter.__init__(self, type)
@@ -31,40 +27,8 @@ class KravenFHDEventName(Converter, object):
 			self.type = self.BOTH_DESCRIPTIONS_FILTERED
 		elif type == "NameAndShortDescFiltered":
 			self.type = self.NAME_AND_SHORT_DESC_FILTERED
-		elif type == "Dolby51":
-			self.type = self.Dolby51
-		elif type == "Dolby20":
-			self.type = self.Dolby20
-		elif type == "Dolby_off":
-			self.type = self.Dolby_off
 		else:
 			self.type = self.NAME
-
-	@cached
-	def getBoolean(self):
-		event = self.source.event
-		if not event:
-			return False
-
-		elif self.type == self.Dolby51:
-			data = str(event.getComponentData())
-			if "Dolby Digital 2.0" in data:
-				return False
-			if "Dolby Digital 5.1" in data or "11" in data:
-				return True
-			return False
-		elif self.type == self.Dolby20:
-			data = str(event.getComponentData())
-			if "Dolby Digital 2.0" in data:
-				return True
-			return False
-		elif self.type == self.Dolby_off:
-			data = str(event.getComponentData())
-			if not "Dolby Digital" in data and not "11" in data:
-				return True
-			return False
-
-	boolean = property(getBoolean)
 
 	@cached
 	def getText(self):

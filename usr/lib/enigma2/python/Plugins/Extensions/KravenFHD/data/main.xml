@@ -711,20 +711,9 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="EventView" position="0,0" size="1920,1080" title="Eventview">
     <widget backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" position="63,18" render="Label" size="1500,69" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
     <widget backgroundColor="Kravenbg" font="Regular2;39" name="epg_description" scrollbarWidth="5" position="63,232" size="1794,664" transparent="1" />
-    <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_dolby_off.png" position="63,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
-      <convert type="KravenFHDDolby">Dolby_off</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_dolby_on.png" position="63,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
-      <convert type="KravenFHDDolby">Dolby</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_dolby_20.png" position="63,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
-      <convert type="KravenFHDDolby">Dolby20</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_dolby_51.png" position="63,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
-      <convert type="KravenFHDDolby">Dolby51</convert>
+    <ePixmap pixmap="KravenFHD/global-icons/ico_dolby_off.png" alphatest="blend" position="63,907" size="65,33" zPosition="1" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="KravenFHD/global-icons/ico_dolby_on.png" alphatest="blend" position="63,907" size="65,33" zPosition="2">
+      <convert type="ServiceInfo">IsMultichannel</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_format_on.png" position="138,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
@@ -765,20 +754,9 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="EventViewSimple" position="0,0" size="1920,1080" title="Eventview">
     <widget backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" position="63,18" render="Label" size="1500,69" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
     <widget backgroundColor="Kravenbg" font="Regular2;39" name="epg_description" scrollbarWidth="5" position="63,232" size="1794,664" transparent="1" />
-    <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_dolby_off.png" position="63,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
-      <convert type="KravenFHDDolby">Dolby_off</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_dolby_on.png" position="63,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
-      <convert type="KravenFHDDolby">Dolby</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_dolby_20.png" position="63,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
-      <convert type="KravenFHDDolby">Dolby20</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_dolby_51.png" position="63,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
-      <convert type="KravenFHDDolby">Dolby51</convert>
+    <ePixmap pixmap="KravenFHD/global-icons/ico_dolby_off.png" alphatest="blend" position="63,907" size="65,33" zPosition="1" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="KravenFHD/global-icons/ico_dolby_on.png" alphatest="blend" position="63,907" size="65,33" zPosition="2">
+      <convert type="ServiceInfo">IsMultichannel</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget alphatest="blend" pixmap="KravenFHD/global-icons/ico_format_on.png" position="138,907" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">

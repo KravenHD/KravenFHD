@@ -1,6 +1,6 @@
   <!-- GraphMultiEPG -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="GraphMultiEPG" position="0,0" size="1920,1080" title="Electronic Program Guide">
-	<widget name="list" position="105,498" size="1752,450" valign="top" FontSize1="30" FontSize2="33" itemHeight="90" piconWidth="151" ServiceNameForegroundColor="KravenFont1" ServiceNameBackgroundColor="Kravenbg2" EntryBorderColor="KravenGMEBorder" EntryBackgroundColor="Kravenbg2" EntryBackgroundColorSelected="KravenSelection" EntryNowForegroundColorSelected="KravenSelFont" EntryNowBackgroundColor="KravenGMErunningbg" EntryNowBackgroundColorSelected="KravenSelection" EntryRecColor="red" EntryPreColor="yellow" />
+	<widget name="list" position="105,498" size="1752,448" valign="top" FontSize1="30" FontSize2="29" itemHeight="112" piconWidth="151" ServiceNameForegroundColor="KravenFont1" ServiceNameBackgroundColor="Kravenbg2" EntryBorderColor="KravenGMEBorder" EntryBackgroundColor="Kravenbg2" EntryBackgroundColorSelected="KravenSelection" EntryNowForegroundColorSelected="KravenSelFont" EntryNowBackgroundColor="KravenGMErunningbg" EntryNowBackgroundColorSelected="KravenSelection" EntryRecColor="red" EntryPreColor="yellow" />
     <constant-widget name="GEMTR33"/>
     <constant-widget name="GraphMultiEPG-MiniTV"/>
     <constant-widget name="Colorbuttons"/>
@@ -9,7 +9,7 @@
   </screen>
   <!-- GraphMultiEPG1 -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="GraphMultiEPG1" position="0,0" size="1920,1080" title="Electronic Program Guide">
-	<widget name="list" position="105,498" size="1752,450" valign="top" FontSize1="30" FontSize2="30" itemHeight="75" piconWidth="127" ServiceNameForegroundColor="KravenFont1" ServiceNameBackgroundColor="Kravenbg2" EntryBorderColor="KravenGMEBorder" EntryBackgroundColor="Kravenbg2" EntryBackgroundColorSelected="KravenSelection" EntryNowForegroundColorSelected="KravenSelFont" EntryNowBackgroundColor="KravenGMErunningbg" EntryNowBackgroundColorSelected="KravenSelection" EntryRecColor="red" EntryPreColor="yellow" />
+	<widget name="list" position="105,498" size="1752,450" valign="top" FontSize1="30" FontSize2="25" itemHeight="90" piconWidth="127" ServiceNameForegroundColor="KravenFont1" ServiceNameBackgroundColor="Kravenbg2" EntryBorderColor="KravenGMEBorder" EntryBackgroundColor="Kravenbg2" EntryBackgroundColorSelected="KravenSelection" EntryNowForegroundColorSelected="KravenSelFont" EntryNowBackgroundColor="KravenGMErunningbg" EntryNowBackgroundColorSelected="KravenSelection" EntryRecColor="red" EntryPreColor="yellow" />
     <constant-widget name="GEMTR33"/>
     <constant-widget name="GraphMultiEPG-MiniTV"/>
     <constant-widget name="Colorbuttons"/>
@@ -43,9 +43,9 @@
     <widget name="timeline5" backgroundColor="orange" position="0,160" size="1,765" zPosition="1" />
 	<widget name="timeline_now" position="0,152" zPosition="2" size="22,780" pixmap="KravenFHD/epg/timeline-gme.png" alphatest="blend" />
     <widget font="Regular;30" halign="left" valign="center" name="key_red" position="105,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-	<widget font="Regular;30" halign="left" valign="top" noWrap="1" name="key_green" position="480,997" size="330,39" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<widget font="Regular;30" halign="left" valign="center" name="key_green" position="480,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-    <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="2" />
+    <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,958" size="330,78" backgroundColor="KravenIBCoolbg" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <!-- nontransbg */-->
 	<widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBCoolbg" foregroundColor="KravenMFont1" position="1707,33" size="150,42" font="Regular;39" halign="right" transparent="1" valign="center">
       <convert type="KravenFHDClockToText">Default</convert>

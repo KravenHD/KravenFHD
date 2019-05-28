@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenFHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2018-03-24 23:00+0100\n"
+"PO-Revision-Date: 2019-05-27 23:40+0200\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -1593,6 +1593,28 @@ msgid "No Accu ID found"
 msgstr "Keine Accu-ID gefunden"
 
 #: KravenFHD.py
+msgid "Accuweather API Key"
+msgstr "Accuweather API-Schlüssel"
+
+#: KravenFHD.py
+msgid ""
+"Press OK to enter your API Key.\n"
+"You will receive the key at\n"
+"https://developer.accuweather.com/."
+msgstr ""
+"Drücken Sie OK, um Ihren API-Schlüssel einzugeben.\n"
+"Sie erhalten den Schlüssel unter\n"
+"https://developer.accuweather.com/."
+
+#: KravenFHD.py
+msgid "API authorization failed"
+msgstr "API-Autorisierung fehlgeschlagen"
+
+#: KravenFHD.py
+msgid "API requests exceeded"
+msgstr "API-Anforderungen überschritten"
+
+#: KravenFHD.py
 msgid "Choose the font color of android-clock temperature. Press OK to define your own RGB color."
 msgstr "Wählen Sie die Schriftfarbe für die Temperatur-Anzeige der Android-Uhr. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
@@ -1668,12 +1690,32 @@ msgstr ""
 
 #: KravenFHD.py
 msgid ""
+"description - 28 Pixel \n"
+"EPG list - 28 Pixel \n"
+"primetime - 26 Pixel"
+msgstr ""
+"Beschreibung - 28 Pixel \n"
+"EPG-Liste - 28 Pixel \n"
+"Primetime - 26 Pixel"
+
+#: KravenFHD.py
+msgid ""
 "description - 32 Pixel \n"
 "EPG list - 29 Pixel \n"
 "primetime - 29 Pixel"
 msgstr ""
 "Beschreibung - 32 Pixel \n"
 "EPG-Liste - 29 Pixel \n"
+"Primetime - 29 Pixel"
+
+#: KravenFHD.py
+msgid ""
+"description - 32 Pixel \n"
+"EPG list - 28 Pixel \n"
+"primetime - 29 Pixel"
+msgstr ""
+"Beschreibung - 32 Pixel \n"
+"EPG-Liste - 28 Pixel \n"
 "Primetime - 29 Pixel"
 
 #: KravenFHD.py
@@ -1686,10 +1728,26 @@ msgstr ""
 
 #: KravenFHD.py
 msgid ""
+"EPG list - 30 Pixel \n"
+"primetime - 32 Pixel"
+msgstr ""
+"EPG-Liste - 30 Pixel \n"
+"Primetime - 32 Pixel"
+
+#: KravenFHD.py
+msgid ""
 "EPG list - 36 Pixel \n"
 "primetime - 36 Pixel"
 msgstr ""
 "EPG-Liste - 36 Pixel \n"
+"Primetime - 36 Pixel"
+
+#: KravenFHD.py
+msgid ""
+"EPG list - 34 Pixel \n"
+"primetime - 36 Pixel"
+msgstr ""
+"EPG-Liste - 34 Pixel \n"
 "Primetime - 36 Pixel"
 
 #: KravenFHD.py
@@ -1704,12 +1762,32 @@ msgstr ""
 
 #: KravenFHD.py
 msgid ""
+"description - 32 Pixel \n"
+"EPG list - 30 Pixel \n"
+"primetime - 32 Pixel"
+msgstr ""
+"Beschreibung - 32 Pixel \n"
+"EPG-Liste - 30 Pixel \n"
+"Primetime - 32 Pixel"
+
+#: KravenFHD.py
+msgid ""
 "description - 36 Pixel \n"
 "EPG list - 36 Pixel \n"
 "primetime - 36 Pixel"
 msgstr ""
 "Beschreibung - 36 Pixel \n"
 "EPG-Liste - 36 Pixel \n"
+"Primetime - 36 Pixel"
+
+#: KravenFHD.py
+msgid ""
+"description - 36 Pixel \n"
+"EPG list - 34 Pixel \n"
+"primetime - 36 Pixel"
+msgstr ""
+"Beschreibung - 36 Pixel \n"
+"EPG-Liste - 34 Pixel \n"
 "Primetime - 36 Pixel"
 
 #: KravenFHD.py
@@ -2455,3 +2533,11 @@ msgstr "Birthday Reminder Einstellungen"
 #: KravenFHDTextTranslator.py
 msgid "Select a path for the birthday file"
 msgstr "Wähle den Pfad für die Geburtstagsdatei"
+
+#: KravenFHD.py
+msgid "VTi-EPGList"
+msgstr "VTi-EPGListe"
+
+#: KravenFHD.py
+msgid "Choose whether use VTi-EPGList in channellist or not."
+msgstr "Wählen Sie, ob Sie die VTi-EPGListe in der Kanalliste verwenden möchten oder nicht."

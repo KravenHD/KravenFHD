@@ -27,5 +27,9 @@
     <constant-widget name="ChannelSelection-template"/>
     <constant-widget name="gradient-cs"/>
     <constant-widget name="CSLEPG32"/>
+    <!--ChannellistEPGList-SNP backgroundColor="Kravenbg2" name="epglist" position="60,791" size="627,164" foregroundColor="KravenFont2" itemHeight="41" scrollbarMode="never" transparent="1" ChannellistEPGList-SNP-->
+    <!--ChannellistEPGList-BNP backgroundColor="Kravenbg2" name="epglist" position="60,819" size="627,138" foregroundColor="KravenFont2" itemHeight="46" scrollbarMode="never" transparent="1" ChannellistEPGList-BNP-->
+    <!--ChannellistEPGList-SP backgroundColor="Kravenbg2" name="epglist" position="60,791" size="627,123" foregroundColor="KravenFont2" itemHeight="41" scrollbarMode="never" transparent="1" ChannellistEPGList-SP-->
+    <!--ChannellistEPGList-BP backgroundColor="Kravenbg2" name="epglist" position="60,819" size="627,92" foregroundColor="KravenFont2" itemHeight="46" scrollbarMode="never" transparent="1" ChannellistEPGList-BP-->
     <!--<text="ChannelSelection - Preview" position="63,0" />-->
   </screen>

@@ -69,16 +69,20 @@
       <convert type="ValueRange">1081,5000</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_dolby_off.png" position="559,1030" render="Pixmap" size="65,33" source="session.Event_Now" zPosition="1">
-      <convert type="KravenFHDEventName">Dolby_off</convert>
+    <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_dolby_off.png" position="559,1030" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="1">
+      <convert type="KravenFHDDolby">Dolby_off</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_dolby_51.png" position="559,1030" render="Pixmap" size="65,33" source="session.Event_Now" zPosition="2">
-      <convert type="KravenFHDEventName">Dolby51</convert>
+    <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_dolby_on.png" position="559,1030" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="1">
+      <convert type="KravenFHDDolby">Dolby</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_dolby_20.png" position="559,1030" render="Pixmap" size="65,33" source="session.Event_Now" zPosition="3">
-      <convert type="KravenFHDEventName">Dolby20</convert>
+    <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_dolby_51.png" position="559,1030" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="1">
+      <convert type="KravenFHDDolby">Dolby51</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_dolby_20.png" position="559,1030" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="1">
+      <convert type="KravenFHDDolby">Dolby20</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_crypt_off.png" position="634,1030" size="65,33" zPosition="1" />

@@ -400,6 +400,19 @@
 	<!-- PlayList openATV -->
     <parameter name="PlayListName" value="50,2,1000,38" />
     <parameter name="PlayListIcon" value="5,6,30,30" />
+	<!-- EPGListChannelList VTi -->
+	<parameter name="EPGServicelistText0OffSet" value="0,0" />
+	<parameter name="EPGServicelistText1OffSet" value="0,0" />
+	<parameter name="EPGServicelistText2OffSet" value="0,0" />
+	<parameter name="EPGServicelistRecImageOffset" value="0,0" />
+	<parameter name="EPGServicelistRecTextOffset" value="0,0" />
+	<parameter name="EPGServicelistNonRecTextOffset" value="0,0" />
+	<parameter name="EPGServicelistText0" value="3,1,48,44" />
+	<parameter name="EPGServicelistText1" value="51,1,99,44" />
+	<parameter name="EPGServicelistText2" value="165,1,93,44" />
+	<parameter name="EPGServicelistRecImage" value="255,13,20,20" />
+	<parameter name="EPGServicelistRecText" value="281,1,900,44" />
+	<parameter name="EPGServicelistNonRecText" value="255,1,900,44" />
   </parameters>
   <fonts>
     <font filename="lcd.ttf" name="LCD" scale="100" />
@@ -427,6 +440,8 @@
 	<alias name="SelectionList" font="Regular" size="32" height="45"/>
 	<alias name="Dreamexplorer" font="Regular" size="32" height="45"/>
 	<alias name="PlayList" font="Regular" size="30" height="42"/>
+	<alias name="EPGListChannelList0" font="Regular" size="34" />
+	<alias name="EPGListChannelList1" font="Regular" size="34" />
   </fonts>
   <subtitles>
     <sub font="Regular;45" name="Subtitle_TTX" shadowColor="shadow" shadowOffset="3,3" />

@@ -6,5 +6,7 @@
     <constant-widget name="ChannelSelection-template"/>
     <constant-widget name="gradient-cs"/>
     <constant-widget name="CSN2EPG28"/>
+    <!--ChannellistEPGList-NP backgroundColor="Kravenbg4" name="epglist" position="1189,100" size="714,481" foregroundColor="KravenFont2" itemHeight="37" scrollbarMode="never" transparent="1" ChannellistEPGList-NP-->
+    <!--ChannellistEPGList-P backgroundColor="Kravenbg4" name="epglist" position="1189,100" size="714,444" foregroundColor="KravenFont2" itemHeight="37" scrollbarMode="never" transparent="1" ChannellistEPGList-P-->
     <!--<text="ChannelSelection - Nobile 2" position="63,0" />-->
   </screen>

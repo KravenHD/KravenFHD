@@ -3,15 +3,15 @@
 	<widget render="Label" source="caption" position="232,120" size="900,45" font="Regular;34" backgroundColor="Kravenbg" foregroundColor="KravenFont1" halign="left" transparent="1" />
 	<widget render="Label" source="observationpoint" position="1383,120" size="450,45" font="Regular;34" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" halign="center" />
 	<widget render="Label" source="observationtime" position="1494,189" size="225,45" font="Regular;34" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" halign="center" />
-	<eLabel font="Regular;30" halign="left" position="232,201" size="900,45" text="Today" backgroundColor="Kravenbg" foregroundColor="KravenFont1" render="Label" transparent="1" />
+	<eLabel font="Regular;30" halign="left" position="232,201" size="900,45" text="Today" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
 	<widget name="currenticon" position="1449,309" zPosition="1" size="330,330" alphatest="blend" />
 	<widget render="Label" source="condition" position="1471,643" size="292,82" font="Regular;24" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" zPosition="2" halign="center" />
-	<eLabel render="Label" text="Aktuell:" position="232,285" size="150,45" font="Regular;33" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+	<eLabel text="Aktuell:" position="232,285" size="150,45" font="Regular;33" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
 	<widget render="Label" source="currentTemp" position="450,285" size="150,45" font="Regular;33" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
 	<widget render="Label" source="feelsliketemp" position="552,285" size="300,45" font="Regular;33" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
-	<eLabel render="Label" text="Max./Min.:" position="232,345" size="150,45" font="Regular;33" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+	<eLabel text="Max./Min.:" position="232,345" size="150,45" font="Regular;33" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
 	<widget render="Label" source="weekday1_temp" position="457,330" size="450,90" font="Regular;33" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" zPosition="10" />
-	<eLabel render="Label" text="Wind:" position="232,435" size="150,45" font="Regular;33" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+	<eLabel text="Wind:" position="232,435" size="150,45" font="Regular;33" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
 	<widget render="Label" source="wind_condition" position="457,435" size="450,45" font="Regular;33" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" />
 	<widget render="Label" source="humidity" position="232,496" size="450,45" font="Regular;33" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
 	<widget render="Label" source="weekday2" position="232,600" zPosition="1" size="157,60" halign="center" valign="center" font="Regular;27" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
@@ -32,5 +32,37 @@
 	<ePixmap pixmap="KravenFHD/infobar-global-icons/key_menu.png" position="1717,1005" size="64,33" alphatest="blend" />
     <ePixmap pixmap="KravenFHD/infobar-global-icons/key_exit.png" position="1792,1005" size="64,33" alphatest="blend" />
     <!--<text="MSNWeatherPlugin" position="105,0" />-->
+  </screen>
+  <!-- MSNWeatherPluginEntriesListConfigScreen -->
+  <screen name="MSNWeatherPluginEntriesListConfigScreen" position="0,0" size="1920,1080" title="WeatherPlugin: List of Entries" flags="wfNoBorder" backgroundColor="transparent">
+    <widget backgroundColor="Kravenbg3" name="entrylist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,219" size="1062,675" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+    <widget source="city" render="Label" position="105,157" size="330,42" font="Regular2;30" halign="left" valign="center" transparent="1" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" />
+    <widget source="text" render="Label" position="445,157" size="720,42" font="Regular2;33" halign="left" valign="center" transparent="1" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" />
+    <widget name="HelpWindow" position="105,634" size="798,300" backgroundColor="Kravenbg3" transparent="1" flags="wfNoBorder" />
+    <constant-widget name="Title-big"/>
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+	<constant-widget name="SourceRedGreenYellowBlue"/>
+    <!--<text="MSNWeatherPluginEntriesListConfigScreen" position="105,0" />-->
+  </screen>
+  <!-- MSNWeatherPluginEntryConfigScreen -->
+  <screen name="MSNWeatherPluginEntryConfigScreen" position="0,0" size="1920,1080" title="WeatherPlugin: Edit Entry" flags="wfNoBorder" backgroundColor="transparent">
+    <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+    <widget name="HelpWindow" position="105,634" size="798,300" backgroundColor="Kravenbg3" transparent="1" flags="wfNoBorder" />
+    <constant-widget name="Title-big"/>
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+	<constant-widget name="SourceRedGreenYellowBlue"/>
+    <!--<text="MSNWeatherPluginEntryConfigScreen" position="105,0" />-->
+  </screen>
+  <!-- MSNWeatherPluginSearch -->
+  <screen name="MSNWeatherPluginSearch" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+    <widget backgroundColor="Kravenbg3" name="entrylist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+    <widget name="HelpWindow" position="105,634" size="798,300" backgroundColor="Kravenbg3" transparent="1" flags="wfNoBorder" />
+    <constant-widget name="Title-big"/>
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+	<constant-widget name="SourceRedGreenYellowBlue"/>
+    <!--<text="MSNWeatherPluginSearch" position="105,0" />-->
   </screen>
   

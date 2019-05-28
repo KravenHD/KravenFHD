@@ -189,7 +189,7 @@ BackgroundSelfGradientTextureList = deepcopy(BackgroundSelfGradientList)
 BackgroundSelfGradientTextureList.append(("texture", _("texture")))
 
 LanguageList = [
-	("de", _("Deutsch")),
+	("de", _("German")),
 	("en", _("English")),
 	("ru", _("Russian")),
 	("it", _("Italian")),
@@ -435,7 +435,7 @@ config.plugins.KravenFHD.InfoStyle = ConfigSelection(default="gradient", choices
 				])
 
 config.plugins.KravenFHD.InfobarTexture = ConfigSelection(default="texture1", choices = TextureList)
-				
+
 config.plugins.KravenFHD.BackgroundTexture = ConfigSelection(default="texture1", choices = TextureList)
 
 config.plugins.KravenFHD.SelectionBorderList = ConfigSelection(default="ffffff", choices = BorderSelfList)
@@ -566,6 +566,11 @@ config.plugins.KravenFHD.ChannelSelectionStyle3 = ConfigSelection(default="chann
 				("channelselection-style-minitv-picon", _("MiniTV Picon"))
 				])
 
+config.plugins.KravenFHD.ChannellistEPGList = ConfigSelection(default="channellistepglist-off", choices = [
+				("channellistepglist-on", _("on")),
+				("channellistepglist-off", _("off"))
+				])
+
 config.plugins.KravenFHD.ChannelSelectionMode = ConfigSelection(default="zap", choices = [
 				("zap", _("Zap (1xOK)")),
 				("preview", _("Preview (2xOK)"))
@@ -693,6 +698,7 @@ config.plugins.KravenFHD.VEPGBorder = ConfigText(default="ffffff")
 
 config.plugins.KravenFHD.MovieSelection = ConfigSelection(default="movieselection-no-cover", choices = [
 				("movieselection-no-cover", _("no Cover")),
+				("movieselection-no-cover2", _("no Cover2")),
 				("movieselection-small-cover", _("small Cover")),
 				("movieselection-big-cover", _("big Cover")),
 				("movieselection-minitv", _("MiniTV")),
@@ -1039,24 +1045,20 @@ config.plugins.KravenFHD.TimerListStyle = ConfigSelection(default="timerlist-sta
 				("timerlist-5", _("Style 5"))
 				])
 
-config.plugins.KravenFHD.weather_gmcode = ConfigText(default="GM")
 config.plugins.KravenFHD.weather_cityname = ConfigText(default = "")
 config.plugins.KravenFHD.weather_language = ConfigSelection(default="de", choices = LanguageList)
 config.plugins.KravenFHD.weather_server = ConfigSelection(default="_owm", choices = [
 				("_owm", _("OpenWeatherMap")),
-				("_accu", _("Accuweather")),
-				("_realtek", _("RealTek"))
+				("_accu", _("Accuweather"))
 				])
 
 config.plugins.KravenFHD.weather_search_over = ConfigSelection(default="ip", choices = [
 				("ip", _("Auto (IP)")),
-				("name", _("Search String")),
-				("gmcode", _("GM Code"))
+				("name", _("Search String"))
 				])
 
 config.plugins.KravenFHD.weather_owm_latlon = ConfigText(default = "")
-config.plugins.KravenFHD.weather_accu_latlon = ConfigText(default = "")
-config.plugins.KravenFHD.weather_realtek_latlon = ConfigText(default = "")
+config.plugins.KravenFHD.weather_accu_apikey = ConfigText(default = "")
 config.plugins.KravenFHD.weather_accu_id = ConfigText(default = "")
 config.plugins.KravenFHD.weather_foundcity = ConfigText(default = "")
 
@@ -1543,14 +1545,16 @@ class KravenFHD(ConfigListScreen, Screen):
 				else:
 					list.append(getConfigListEntry(_("Weather"), config.plugins.KravenFHD.WeatherStyle2, _("Activate or deactivate displaying the weather in the infobar.")))
 					self.actWeatherstyle=config.plugins.KravenFHD.WeatherStyle2.value
-			list.append(getConfigListEntry(_("Search by"), config.plugins.KravenFHD.weather_search_over, _("Choose from different options to specify your location.")))
-			if config.plugins.KravenFHD.weather_search_over.value == 'name':
-				list.append(getConfigListEntry(_("Search String"), config.plugins.KravenFHD.weather_cityname, _("Specify any search string for your location (zip/city/district/state single or combined). Press OK to use the virtual keyboard. Step up or down in the menu to start the search.")))
-			elif config.plugins.KravenFHD.weather_search_over.value == 'gmcode':
-				list.append(getConfigListEntry(_("GM Code"), config.plugins.KravenFHD.weather_gmcode, _("Specify the GM code for your location. You can find it at https://weather.codes. Press OK to use the virtual keyboard. Step up or down in the menu to start the search.")))
-			else:
-				emptyLines+=1
 			list.append(getConfigListEntry(_("Server"), config.plugins.KravenFHD.weather_server, _("Choose from different servers for the weather data.")))
+			if config.plugins.KravenFHD.weather_server.value == "_accu":
+				list.append(getConfigListEntry(_("Accuweather API Key"), config.plugins.KravenFHD.weather_accu_apikey, _("Press OK to enter your API Key.\nYou will receive the key at\nhttps://developer.accuweather.com/.")))
+				list.append(getConfigListEntry(_("Search by"), config.plugins.KravenFHD.weather_search_over, _("Choose from different options to specify your location.")))
+				if config.plugins.KravenFHD.weather_search_over.value == 'name':
+					list.append(getConfigListEntry(_("Search String"), config.plugins.KravenFHD.weather_cityname, _("Specify any search string for your location (zip/city/district/state single or combined). Press OK to use the virtual keyboard. Step up or down in the menu to start the search.")))
+				else:
+					emptyLines+=1
+			else:
+				emptyLines+=3
 			list.append(getConfigListEntry(_("Language"), config.plugins.KravenFHD.weather_language, _("Specify the language for the weather output.")))
 			list.append(getConfigListEntry(_("Refresh interval (in minutes)"), config.plugins.KravenFHD.refreshInterval, _("Choose the frequency of loading weather data from the internet.")))
 			list.append(getConfigListEntry(_("Weather-Style"), config.plugins.KravenFHD.WeatherView, _("Choose between graphical weather symbols and Meteo symbols.")))
@@ -1561,7 +1565,7 @@ class KravenFHD(ConfigListScreen, Screen):
 		else:
 			list.append(getConfigListEntry(_("Weather"), config.plugins.KravenFHD.WeatherStyleNoInternet, _("You have no internet connection. This function is disabled.")))
 			self.actWeatherstyle="none"
-			emptyLines+=7
+			emptyLines+=8
 		for i in range(emptyLines+1):
 			list.append(getConfigListEntry(_(" "), ))
 		
@@ -1585,7 +1589,7 @@ class KravenFHD(ConfigListScreen, Screen):
 		else:
 			emptyLines+=3
 			self.actClockstyle="none"
-		for i in range(emptyLines+5):
+		for i in range(emptyLines+4):
 			list.append(getConfigListEntry(_(" "), ))
 		
 		# page 6
@@ -1651,6 +1655,7 @@ class KravenFHD(ConfigListScreen, Screen):
 				else:
 					list.append(getConfigListEntry(_("Channellist-Style"), config.plugins.KravenFHD.ChannelSelectionStyle, _("Choose from different styles for the channel selection screen.")))
 					self.actChannelselectionstyle=config.plugins.KravenFHD.ChannelSelectionStyle.value
+				list.append(getConfigListEntry(_("VTi-EPGList"), config.plugins.KravenFHD.ChannellistEPGList, _("Choose whether use VTi-EPGList in channellist or not.")))
 				if self.actChannelselectionstyle in ("channelselection-style-minitv","channelselection-style-minitv2","channelselection-style-minitv22","channelselection-style-minitv33","channelselection-style-minitv4","channelselection-style-nobile-minitv","channelselection-style-nobile-minitv33","channelselection-style-minitv-picon"):
 					list.append(getConfigListEntry(_("Channellist-Mode"), config.plugins.KravenFHD.ChannelSelectionMode, _("Choose between direct zapping (1xOK) and zapping after preview (2xOK).")))
 				else:
@@ -1678,7 +1683,7 @@ class KravenFHD(ConfigListScreen, Screen):
 					list.append(getConfigListEntry(_("Primetime-Font"), config.plugins.KravenFHD.PrimetimeFontList, _("Choose the font color of the primetime information. Press OK to define your own RGB color.")))
 				else:
 					emptyLines+=2
-				for i in range(emptyLines+2):
+				for i in range(emptyLines+1):
 					list.append(getConfigListEntry(_(" "), ))
 			else:
 				list.append(getConfigListEntry(_("Channellist-Style"), config.plugins.KravenFHD.ChannelSelectionHorStyle, _("Choose from different styles for the channel selection screen.")))
@@ -2097,7 +2102,7 @@ class KravenFHD(ConfigListScreen, Screen):
 			if (72 <= position <= 80): # weather
 				self["key_yellow"].setText("<< " + _("SecondInfobar"))
 				self["key_blue"].setText(_("clock") + " >>")
-		if (82 <= position <= 84): # clock
+		if (83 <= position <= 85): # clock
 			self["key_yellow"].setText("<< " + _("weather"))
 			self["key_blue"].setText(_("ECM infos") + " >>")
 		if (90 <= position <= 94): # ecm infos
@@ -2258,7 +2263,7 @@ class KravenFHD(ConfigListScreen, Screen):
 				self.showText(21,"CAM - CAID - System - Reader - Hops - Time")
 		elif option == config.plugins.KravenFHD.FTA and option.value == "FTAVisible":
 			self.showText(21,_("free to air"))
-		elif option in (config.plugins.KravenFHD.weather_gmcode,config.plugins.KravenFHD.weather_cityname,config.plugins.KravenFHD.weather_server,config.plugins.KravenFHD.weather_search_over):
+		elif option in (config.plugins.KravenFHD.weather_server,config.plugins.KravenFHD.weather_search_over):
 			self.get_weather_data()
 			self.showText(25,self.actCity)
 		elif option == config.plugins.KravenFHD.weather_language:
@@ -2306,20 +2311,56 @@ class KravenFHD(ConfigListScreen, Screen):
 			size=config.plugins.KravenFHD.ChannelSelectionInfoSize1.value
 			self.showText(int(size[-2:]),size[-2:]+" Pixel")
 		elif option == config.plugins.KravenFHD.ChannelSelectionEPGSize1:
-			if config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "small":
-				self.showText(36,_("description - 28 Pixel \nEPG list - 26 Pixel \nprimetime - 26 Pixel"))
-			elif config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "big":
-				self.showText(36,_("description - 32 Pixel \nEPG list - 29 Pixel \nprimetime - 29 Pixel"))
+			if self.E2DistroVersion == "VTi":
+				if config.plugins.KravenFHD.ChannellistEPGList.value == "channellistepglist-on":
+					if config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "small":
+						self.showText(36,_("description - 28 Pixel \nEPG list - 28 Pixel \nprimetime - 26 Pixel"))
+					elif config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "big":
+						self.showText(36,_("description - 32 Pixel \nEPG list - 28 Pixel \nprimetime - 29 Pixel"))
+				else:
+					if config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "small":
+						self.showText(36,_("description - 28 Pixel \nEPG list - 26 Pixel \nprimetime - 26 Pixel"))
+					elif config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "big":
+						self.showText(36,_("description - 32 Pixel \nEPG list - 29 Pixel \nprimetime - 29 Pixel"))
+			elif self.E2DistroVersion in ("openatv","teamblue"):
+				if config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "small":
+					self.showText(36,_("description - 28 Pixel \nEPG list - 26 Pixel \nprimetime - 26 Pixel"))
+				elif config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "big":
+					self.showText(36,_("description - 32 Pixel \nEPG list - 29 Pixel \nprimetime - 29 Pixel"))
 		elif option == config.plugins.KravenFHD.ChannelSelectionEPGSize2:
-			if config.plugins.KravenFHD.ChannelSelectionEPGSize2.value == "small":
-				self.showText(36,_("EPG list - 32 Pixel \nprimetime - 32 Pixel"))
-			elif config.plugins.KravenFHD.ChannelSelectionEPGSize2.value == "big":
-				self.showText(36,_("EPG list - 36 Pixel \nprimetime - 36 Pixel"))
+			if self.E2DistroVersion == "VTi":
+				if config.plugins.KravenFHD.ChannellistEPGList.value == "channellistepglist-on":
+					if config.plugins.KravenFHD.ChannelSelectionEPGSize2.value == "small":
+						self.showText(36,_("EPG list - 30 Pixel \nprimetime - 32 Pixel"))
+					elif config.plugins.KravenFHD.ChannelSelectionEPGSize2.value == "big":
+						self.showText(36,_("EPG list - 34 Pixel \nprimetime - 36 Pixel"))
+				else:
+					if config.plugins.KravenFHD.ChannelSelectionEPGSize2.value == "small":
+						self.showText(36,_("EPG list - 32 Pixel \nprimetime - 32 Pixel"))
+					elif config.plugins.KravenFHD.ChannelSelectionEPGSize2.value == "big":
+						self.showText(36,_("EPG list - 36 Pixel \nprimetime - 36 Pixel"))
+			elif self.E2DistroVersion in ("openatv","teamblue"):
+				if config.plugins.KravenFHD.ChannelSelectionEPGSize2.value == "small":
+					self.showText(36,_("EPG list - 32 Pixel \nprimetime - 32 Pixel"))
+				elif config.plugins.KravenFHD.ChannelSelectionEPGSize2.value == "big":
+					self.showText(36,_("EPG list - 36 Pixel \nprimetime - 36 Pixel"))
 		elif option == config.plugins.KravenFHD.ChannelSelectionEPGSize3:
-			if config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "small":
-				self.showText(36,_("description - 32 Pixel \nEPG list - 32 Pixel \nprimetime - 32 Pixel"))
-			elif config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.showText(36,_("description - 36 Pixel \nEPG list - 36 Pixel \nprimetime - 36 Pixel"))
+			if self.E2DistroVersion == "VTi":
+				if config.plugins.KravenFHD.ChannellistEPGList.value == "channellistepglist-on":
+					if config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "small":
+						self.showText(36,_("description - 30 Pixel \nEPG list - 32 Pixel \nprimetime - 32 Pixel"))
+					elif config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
+						self.showText(36,_("description - 34 Pixel \nEPG list - 36 Pixel \nprimetime - 36 Pixel"))
+				else:
+					if config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "small":
+						self.showText(36,_("description - 32 Pixel \nEPG list - 32 Pixel \nprimetime - 32 Pixel"))
+					elif config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
+						self.showText(36,_("description - 36 Pixel \nEPG list - 36 Pixel \nprimetime - 36 Pixel"))
+			elif self.E2DistroVersion in ("openatv","teamblue"):
+				if config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "small":
+					self.showText(36,_("description - 32 Pixel \nEPG list - 32 Pixel \nprimetime - 32 Pixel"))
+				elif config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
+					self.showText(36,_("description - 36 Pixel \nEPG list - 36 Pixel \nprimetime - 36 Pixel"))
 		elif option == config.plugins.KravenFHD.MovieSelectionEPGSize:
 			if config.plugins.KravenFHD.MovieSelectionEPGSize.value == "small":
 				self.showText(44,_("33 Pixel"))
@@ -2663,13 +2704,13 @@ class KravenFHD(ConfigListScreen, Screen):
 			self["config"].instance.moveSelectionTo(54)
 		if (72 <= position <= 80): # weather
 			self["config"].instance.moveSelectionTo(62)
-		if (82 <= position <= 84): # clock
+		if (83 <= position <= 85): # clock
 			self["config"].instance.moveSelectionTo(72)
 		if (90 <= position <= 94): # ecm infos
 			if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz4":
 				self["config"].instance.moveSelectionTo(72)
 			else:
-				self["config"].instance.moveSelectionTo(82)
+				self["config"].instance.moveSelectionTo(83)
 		if (96 <= position <= 101): # views
 			self["config"].instance.moveSelectionTo(90)
 		if (103 <= position <= 105): # permanentclock
@@ -2723,8 +2764,8 @@ class KravenFHD(ConfigListScreen, Screen):
 				self["config"].instance.moveSelectionTo(90)
 		else:
 			if (72 <= position <= 81): # weather
-				self["config"].instance.moveSelectionTo(82)
-		if (82 <= position <= 84): # clock
+				self["config"].instance.moveSelectionTo(83)
+		if (83 <= position <= 85): # clock
 			self["config"].instance.moveSelectionTo(90)
 		if (90 <= position <= 94): # ecm infos
 			self["config"].instance.moveSelectionTo(96)
@@ -2917,12 +2958,14 @@ class KravenFHD(ConfigListScreen, Screen):
 			else:
 				color = self.actListColorSelection.value
 			self.session.openWithCallback(self.ColorSelectionCallBack, KravenFHDColorSelection, title = title, color = color)
-		elif option in (config.plugins.KravenFHD.weather_cityname,config.plugins.KravenFHD.weather_gmcode):
+		elif option == config.plugins.KravenFHD.weather_cityname:
 			text = self["config"].getCurrent()[1].value
 			if config.plugins.KravenFHD.weather_search_over.value == 'name':
 				title = _("Enter the city name of your location:")
-			elif config.plugins.KravenFHD.weather_search_over.value == 'gmcode':
-				title = _("Enter the GM code for your location:")
+			self.session.openWithCallback(self.VirtualKeyBoardCallBack, VirtualKeyBoard, title = title, text = text)
+		elif option == config.plugins.KravenFHD.weather_accu_apikey:
+			text = self["config"].getCurrent()[1].value
+			title = _("Enter your API Key:")
 			self.session.openWithCallback(self.VirtualKeyBoardCallBack, VirtualKeyBoard, title = title, text = text)
 		elif option == config.plugins.KravenFHD.customProfile:
 			self.saveProfile(msg=True)
@@ -3632,14 +3675,6 @@ class KravenFHD(ConfigListScreen, Screen):
 				self.skinSearchAndReplace.append(['size="105,105" render="KravenFHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="105,105" render="Label" font="Meteo;90" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
 				self.skinSearchAndReplace.append(['size="150,150" render="KravenFHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="150,150" render="Label" font="Meteo;1500" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
 				self.skinSearchAndReplace.append(['MeteoIcon</convert>', 'MeteoFont</convert>'])
-		elif config.plugins.KravenFHD.weather_server.value == "_realtek":
-			self.skinSearchAndReplace.append(['KravenFHDWeather', 'KravenFHDWeather_realtek'])
-			if config.plugins.KravenFHD.WeatherView.value == "meteo":
-				self.skinSearchAndReplace.append(['size="75,75" render="KravenFHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="75,75" render="Label" font="Meteo;60" halign="right" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
-				self.skinSearchAndReplace.append(['size="75,75" path="WetterIcons" render="KravenFHDWetterPicon" alphatest="blend"', 'size="75,75" render="Label" font="Meteo;67" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
-				self.skinSearchAndReplace.append(['size="105,105" render="KravenFHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="105,105" render="Label" font="Meteo;90" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
-				self.skinSearchAndReplace.append(['size="150,150" render="KravenFHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="150,150" render="Label" font="Meteo;150" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
-				self.skinSearchAndReplace.append(['MeteoIcon</convert>', 'MeteoFont</convert>'])
 
 		### Meteo-Font
 		if config.plugins.KravenFHD.MeteoColor.value == "meteo-dark":
@@ -4017,6 +4052,77 @@ class KravenFHD(ConfigListScreen, Screen):
 			self.skinSearchAndReplace.append(['constant-panels', 'screen'])
 		elif self.E2DistroVersion in ("VTi","openatv"):
 			self.skinSearchAndReplace.append(['constant-panels', 'constant-widget'])
+
+		### Channellist-EPGList - VTi
+		if self.E2DistroVersion == "VTi" and config.plugins.KravenFHD.alternativeChannellist.value == "none":
+			if config.plugins.KravenFHD.ChannellistEPGList.value == "channellistepglist-on":
+				if self.actChannelselectionstyle in ("channelselection-style-nobile","channelselection-style-nobile2","channelselection-style-nobile-minitv","channelselection-style-nobile-minitv3","channelselection-style-nobile-minitv33"):
+					self.skinSearchAndReplace.append(['alias name="EPGListChannelList0" font="Regular" size="34"', 'alias name="EPGListChannelList0" font="Regular" size="28"'])
+					self.skinSearchAndReplace.append(['alias name="EPGListChannelList1" font="Regular" size="34"', 'alias name="EPGListChannelList1" font="Regular" size="28"'])
+					self.skinSearchAndReplace.append(['parameter name="EPGServicelistText0" value="3,1,48,44"', 'parameter name="EPGServicelistText0" value="3,1,39,39"'])
+					self.skinSearchAndReplace.append(['parameter name="EPGServicelistText1" value="51,1,99,44"', 'parameter name="EPGServicelistText1" value="42,1,81,39"'])
+					self.skinSearchAndReplace.append(['parameter name="EPGServicelistText2" value="165,1,93,44"', 'parameter name="EPGServicelistText2" value="138,1,75,39"'])
+					self.skinSearchAndReplace.append(['parameter name="EPGServicelistRecImage" value="255,13,20,20"', 'parameter name="EPGServicelistRecImage" value="219,8,20,20"'])
+					self.skinSearchAndReplace.append(['parameter name="EPGServicelistRecText" value="281,1,900,44"', 'parameter name="EPGServicelistRecText" value="245,1,900,39"'])
+					self.skinSearchAndReplace.append(['parameter name="EPGServicelistNonRecText" value="255,1,900,44"', 'parameter name="EPGServicelistNonRecText" value="219,1,900,39"'])
+					if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on":
+						self.skinSearchAndReplace.append(['<!--ChannellistEPGList-P', '<widget'])
+						self.skinSearchAndReplace.append(['ChannellistEPGList-P-->', '/>'])
+					else:
+						self.skinSearchAndReplace.append(['<!--ChannellistEPGList-NP', '<widget'])
+						self.skinSearchAndReplace.append(['ChannellistEPGList-NP-->', '/>'])
+				elif self.actChannelselectionstyle == "channelselection-style-minitv22":
+					if config.plugins.KravenFHD.ChannelSelectionEPGSize2.value == "small":
+						self.skinSearchAndReplace.append(['alias name="EPGListChannelList0" font="Regular" size="34"', 'alias name="EPGListChannelList0" font="Regular" size="30"'])
+						self.skinSearchAndReplace.append(['alias name="EPGListChannelList1" font="Regular" size="34"', 'alias name="EPGListChannelList1" font="Regular" size="30"'])
+						self.skinSearchAndReplace.append(['parameter name="EPGServicelistText0" value="3,1,48,44"', 'parameter name="EPGServicelistText0" value="3,1,42,39"'])
+						self.skinSearchAndReplace.append(['parameter name="EPGServicelistText1" value="51,1,99,44"', 'parameter name="EPGServicelistText1" value="45,1,87,39"'])
+						self.skinSearchAndReplace.append(['parameter name="EPGServicelistText2" value="165,1,93,44"', 'parameter name="EPGServicelistText2" value="147,1,81,39"'])
+						self.skinSearchAndReplace.append(['parameter name="EPGServicelistRecImage" value="255,13,20,20"', 'parameter name="EPGServicelistRecImage" value="231,10,20,20"'])
+						self.skinSearchAndReplace.append(['parameter name="EPGServicelistRecText" value="281,1,900,44"', 'parameter name="EPGServicelistRecText" value="257,1,900,39"'])
+						self.skinSearchAndReplace.append(['parameter name="EPGServicelistNonRecText" value="255,1,900,44"', 'parameter name="EPGServicelistNonRecText" value="231,1,900,39"'])
+						if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on":
+							self.skinSearchAndReplace.append(['<!--ChannellistEPGList-SP', '<widget'])
+							self.skinSearchAndReplace.append(['ChannellistEPGList-SP-->', '/>'])
+						else:
+							self.skinSearchAndReplace.append(['<!--ChannellistEPGList-SNP', '<widget'])
+							self.skinSearchAndReplace.append(['ChannellistEPGList-SNP-->', '/>'])
+					else:
+						if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on":
+							self.skinSearchAndReplace.append(['<!--ChannellistEPGList-BP', '<widget'])
+							self.skinSearchAndReplace.append(['ChannellistEPGList-BP-->', '/>'])
+						else:
+							self.skinSearchAndReplace.append(['<!--ChannellistEPGList-BNP', '<widget'])
+							self.skinSearchAndReplace.append(['ChannellistEPGList-BNP-->', '/>'])
+				else:
+					if config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "small":
+						self.skinSearchAndReplace.append(['alias name="EPGListChannelList0" font="Regular" size="34"', 'alias name="EPGListChannelList0" font="Regular" size="30"'])
+						self.skinSearchAndReplace.append(['alias name="EPGListChannelList1" font="Regular" size="34"', 'alias name="EPGListChannelList1" font="Regular" size="30"'])
+						self.skinSearchAndReplace.append(['parameter name="EPGServicelistText0" value="3,1,48,44"', 'parameter name="EPGServicelistText0" value="3,1,42,39"'])
+						self.skinSearchAndReplace.append(['parameter name="EPGServicelistText1" value="51,1,99,44"', 'parameter name="EPGServicelistText1" value="45,1,87,39"'])
+						self.skinSearchAndReplace.append(['parameter name="EPGServicelistText2" value="165,1,93,44"', 'parameter name="EPGServicelistText2" value="147,1,81,39"'])
+						self.skinSearchAndReplace.append(['parameter name="EPGServicelistRecImage" value="255,13,20,20"', 'parameter name="EPGServicelistRecImage" value="231,10,20,20"'])
+						self.skinSearchAndReplace.append(['parameter name="EPGServicelistRecText" value="281,1,900,44"', 'parameter name="EPGServicelistRecText" value="257,1,900,39"'])
+						self.skinSearchAndReplace.append(['parameter name="EPGServicelistNonRecText" value="255,1,900,44"', 'parameter name="EPGServicelistNonRecText" value="231,1,900,39"'])
+						if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on":
+							self.skinSearchAndReplace.append(['<!--ChannellistEPGList-SP', '<widget'])
+							self.skinSearchAndReplace.append(['ChannellistEPGList-SP-->', '/>'])
+						else:
+							self.skinSearchAndReplace.append(['<!--ChannellistEPGList-SNP', '<widget'])
+							self.skinSearchAndReplace.append(['ChannellistEPGList-SNP-->', '/>'])
+					else:
+						if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on":
+							self.skinSearchAndReplace.append(['<!--ChannellistEPGList-BP', '<widget'])
+							self.skinSearchAndReplace.append(['ChannellistEPGList-BP-->', '/>'])
+						else:
+							self.skinSearchAndReplace.append(['<!--ChannellistEPGList-BNP', '<widget'])
+							self.skinSearchAndReplace.append(['ChannellistEPGList-BNP-->', '/>'])
+			else:
+				self.skinSearchAndReplace.append(['<!--ChannellistSingleEpgList', '<widget'])
+				self.skinSearchAndReplace.append(['ChannellistSingleEpgList-->', 'widget>'])
+		elif self.E2DistroVersion in ("openatv","teamblue"):
+			self.skinSearchAndReplace.append(['<!--ChannellistSingleEpgList', '<widget'])
+			self.skinSearchAndReplace.append(['ChannellistSingleEpgList-->', 'widget>'])
 
 		### Header
 		if self.E2DistroVersion in ("openatv","teamblue"):
@@ -4873,11 +4979,11 @@ class KravenFHD(ConfigListScreen, Screen):
 		self.appendSkinFile(self.daten + "plugins.xml")
 
 		### MSNWeatherPlugin XML
-		if self.E2DistroVersion in ("openatv","teamblue") and self.InternetAvailable:
-			console3 = eConsoleAppContainer()
+		if self.E2DistroVersion in ("openatv","teamblue"):
 			if fileExists("/usr/lib/enigma2/python/Components/Converter/MSNWeather.pyo"):
 				self.appendSkinFile(self.daten + "MSNWeatherPlugin.xml")
-				if not fileExists("/usr/share/enigma2/KravenFHD/msn_weather_icons/1.png"):
+				if self.InternetAvailable and not fileExists("/usr/share/enigma2/KravenFHD/msn_weather_icons/1.png"):
+					console3 = eConsoleAppContainer()
 					console3.execute("wget -q http://picons.mynonpublic.com/msn-icon.tar.gz -O /tmp/msn-icon.tar.gz; tar xf /tmp/msn-icon.tar.gz -C /usr/share/enigma2/KravenFHD/")
 			else:
 				self.appendSkinFile(self.daten + "MSNWeatherPlugin2.xml")
@@ -5047,14 +5153,17 @@ class KravenFHD(ConfigListScreen, Screen):
 
 		### MovieSelection (MovieList) Font-Size - teamblue
 		if self.E2DistroVersion == "teamblue":
-			self.skinSearchAndReplace.append(['name="EPGList-teamblue"', 'fontName="Regular" fontSizesOriginal="32,30,30" fontSizesCompact="32,30" fontSizesMinimal="32,30" itemHeights="135,81,45" pbarShift="10" pbarHeight="24" pbarLargeWidth="72" partIconeShiftMinimal="10" partIconeShiftCompact="10" partIconeShiftOriginal="10" spaceIconeText="6" iconsWidth="30" trashShift="8" dirShift="8" spaceRight="3" columnsOriginal="300,320" columnsCompactDescription="210,240,270" compactColumn="320" treeDescription="270"'])
+			self.skinSearchAndReplace.append(['name="MovieList-teamblue"', 'fontName="Regular" fontSizesOriginal="32,30,30" fontSizesCompact="32,30" fontSizesMinimal="32,30" itemHeights="135,81,45" pbarShift="10" pbarHeight="24" pbarLargeWidth="72" partIconeShiftMinimal="10" partIconeShiftCompact="10" partIconeShiftOriginal="10" spaceIconeText="6" iconsWidth="30" trashShift="8" dirShift="8" spaceRight="3" columnsOriginal="300,320" columnsCompactDescription="210,240,270" compactColumn="320" treeDescription="270"'])
 		elif self.E2DistroVersion in ("VTi","openatv"):
-			self.skinSearchAndReplace.append([' name="EPGList-teamblue" ', ' '])
+			self.skinSearchAndReplace.append([' name="MovieList-teamblue" ', ' '])
 
 		### MovieSelection (Event-Description) Font-Size
 		if config.plugins.KravenFHD.MovieSelection.value == "movieselection-no-cover":
 			if config.plugins.KravenFHD.MovieSelectionEPGSize.value == "big":
 				self.skinSearchAndReplace.append(['<constant-widget name="msnc33"/>', '<constant-widget name="msnc36"/>'])
+		elif config.plugins.KravenFHD.MovieSelection.value == "movieselection-no-cover2":
+			if config.plugins.KravenFHD.MovieSelectionEPGSize.value == "big":
+				self.skinSearchAndReplace.append(['<constant-widget name="msnc233"/>', '<constant-widget name="msnc236"/>'])
 		elif config.plugins.KravenFHD.MovieSelection.value == "movieselection-small-cover":
 			if config.plugins.KravenFHD.MovieSelectionEPGSize.value == "big":
 				self.skinSearchAndReplace.append(['<constant-widget name="mssc33"/>', '<constant-widget name="mssc36"/>'])
@@ -5359,7 +5468,7 @@ class KravenFHD(ConfigListScreen, Screen):
 					name=line[0]
 					value=line[1]
 					type=line[2].strip('\n')
-					if not (name in ("customProfile","DebugNames","weather_search_over","weather_owm_latlon","weather_accu_latlon","weather_realtek_latlon","weather_accu_id","weather_foundcity","weather_gmcode","weather_cityname","weather_language","weather_server") or (loadDefault and name == "defaultProfile")):
+					if not (name in ("customProfile","DebugNames","weather_search_over","weather_owm_latlon","weather_accu_latlon","weather_accu_id","weather_accu_apikey","weather_foundcity","weather_cityname","weather_language","weather_server") or (loadDefault and name == "defaultProfile")):
 						# fix for changed value "gradient"/"grad"
 						if name=="IBStyle" and value=="gradient":
 							value="grad"
@@ -5412,7 +5521,7 @@ class KravenFHD(ConfigListScreen, Screen):
 				print ("KravenPlugin: Save profile "+fname)
 				pFile=open(fname,"w")
 				for name in config.plugins.KravenFHD.dict():
-					if not name in ("customProfile","DebugNames","weather_owm_latlon","weather_accu_latlon","weather_realtek_latlon","weather_accu_id","weather_foundcity","weather_gmcode","weather_cityname","weather_language","weather_server"):
+					if not name in ("customProfile","DebugNames","weather_owm_latlon","weather_accu_latlon","weather_accu_id","weather_accu_apikey","weather_foundcity","weather_cityname","weather_language","weather_server"):
 						value=getattr(config.plugins.KravenFHD,name).value
 						pFile.writelines(name+"|"+str(value)+"|"+str(type(value))+"\n")
 				pFile.close()
@@ -6217,29 +6326,21 @@ class KravenFHD(ConfigListScreen, Screen):
 			self.city = ''
 			self.lat = ''
 			self.lon = ''
-			self.zipcode = ''
 			self.accu_id = ''
-			self.woe_id = ''
-			self.gm_code = ''
 			self.preview_text = ''
 			self.preview_warning = ''
 
-			if config.plugins.KravenFHD.weather_search_over.value == 'ip':
-			  self.get_latlon_by_ip()
-			elif config.plugins.KravenFHD.weather_search_over.value == 'name':
-			  self.get_latlon_by_name()
-			elif config.plugins.KravenFHD.weather_search_over.value == 'gmcode':
-			  self.get_latlon_by_gmcode()
-
-			self.generate_owm_accu_realtek_string()
 			if config.plugins.KravenFHD.weather_server.value == '_accu':
-			  self.get_accu_id_by_latlon()
+				if config.plugins.KravenFHD.weather_search_over.value == 'ip':
+					self.get_accu_id_by_ip()
+				elif config.plugins.KravenFHD.weather_search_over.value == 'name':
+					self.get_accu_id_by_name()
+			elif config.plugins.KravenFHD.weather_server.value == '_owm':
+				self.get_owm_by_ip()
 
 			self.actCity=self.preview_text+self.preview_warning
-			config.plugins.KravenFHD.weather_foundcity.value=self.city
-			config.plugins.KravenFHD.weather_foundcity.save()
 
-	def get_latlon_by_ip(self):
+	def get_owm_by_ip(self):
 
 		if self.InternetAvailable==False: 
 			return
@@ -6253,74 +6354,78 @@ class KravenFHD(ConfigListScreen, Screen):
 				self.lat = data['lat']
 				self.lon = data['lon']
 				self.preview_text = str(self.city) + '\nLat: ' + str(self.lat) + '\nLong: ' + str(self.lon)
+				config.plugins.KravenFHD.weather_owm_latlon.value = 'lat=%s&lon=%s&units=metric&lang=%s' % (str(self.lat),str(self.lon),str(config.plugins.KravenFHD.weather_language.value))
+				config.plugins.KravenFHD.weather_owm_latlon.save()
+				config.plugins.KravenFHD.weather_foundcity.value = self.city
+				config.plugins.KravenFHD.weather_foundcity.save()
 			else:
 				self.preview_text = _('No data for IP')
-
 		except:
 			self.preview_text = _('No data for IP')
 
-	def get_latlon_by_name(self):
+	def get_accu_id_by_ip(self):
 
 		if self.InternetAvailable==False: 
 			return
 		
 		try:
-			name = config.plugins.KravenFHD.weather_cityname.getValue()
-			res = requests.get('http://maps.googleapis.com/maps/api/geocode/json?address=%s&sensor=true' % str(name), timeout=1)
+			res = requests.get('http://ip-api.com/json/?lang=de&fields=status,city', timeout=1)
 			data = res.json()
 
-			for entry in data['results'][0]['address_components']:
-				if entry['types'][0]=='locality':
-					self.city = entry['long_name']
-					break
-					
-			self.lat = data['results'][0]['geometry']['location']['lat']
-			self.lon = data['results'][0]['geometry']['location']['lng']
-
-			self.preview_text = str(self.city) + '\nLat: ' + str(self.lat) + '\nLong: ' + str(self.lon)
+			if data['status'] == 'success':
+				city = data['city']
+				apikey = config.plugins.KravenFHD.weather_accu_apikey.value
+				language = config.plugins.KravenFHD.weather_language.value
+				res1 = requests.get('http://dataservice.accuweather.com/locations/v1/cities/search?q=%s&apikey=%s&language=%s' % (str(city),str(apikey),str(language)), timeout=1)
+				data1 = res1.json()
+			
+				if 'Code' in data1:
+					if data1['Code'] == 'ServiceUnavailable':
+						self.preview_warning = _('API requests exceeded')
+					elif data1['Code'] == 'Unauthorized':
+						self.preview_warning = _('API authorization failed')
+				else:
+					self.accu_id = data1[0]['Key']
+					self.city = data1[0]['LocalizedName']
+					self.lat = data1[0]['GeoPosition']['Latitude']
+					self.lon = data1[0]['GeoPosition']['Longitude']
+					self.preview_text = str(self.city) + '\nLat: ' + str(self.lat) + '\nLong: ' + str(self.lon)
+					config.plugins.KravenFHD.weather_accu_id.value = str(self.accu_id)
+					config.plugins.KravenFHD.weather_accu_id.save()
+					config.plugins.KravenFHD.weather_foundcity.value = str(self.city)
+					config.plugins.KravenFHD.weather_foundcity.save()
+			else:
+				self.preview_text = _('No data for IP')
 		except:
-			self.get_latlon_by_ip()
-			self.preview_warning = _('\n\nNo data for search string,\nfallback to IP')
+			self.preview_warning = _('No Accu ID found')
 
-	def get_latlon_by_gmcode(self):
+	def get_accu_id_by_name(self):
 
 		if self.InternetAvailable==False: 
 			return
 		
 		try:
-			gmcode = config.plugins.KravenFHD.weather_gmcode.value
-			res = requests.get('http://wxdata.weather.com/wxdata/weather/local/%s?cc=*' % str(gmcode), timeout=1)
-			data = fromstring(res.text)
-
-			self.city = data[1][0].text.split(',')[0]
-			self.lat = data[1][2].text
-			self.lon = data[1][3].text
-
-			self.preview_text = str(self.city) + '\nLat: ' + str(self.lat) + '\nLong: ' + str(self.lon)
+			city = config.plugins.KravenFHD.weather_cityname.getValue()
+			apikey = config.plugins.KravenFHD.weather_accu_apikey.value
+			language = config.plugins.KravenFHD.weather_language.value
+			
+			res = requests.get('http://dataservice.accuweather.com/locations/v1/cities/search?q=%s&apikey=%s&language=%s' % (str(city),str(apikey),str(language)), timeout=1)
+			data = res.json()
+			
+			if 'Code' in data:
+				if data['Code'] == 'ServiceUnavailable':
+					self.preview_warning = _('API requests exceeded')
+				elif data['Code'] == 'Unauthorized':
+					self.preview_warning = _('API authorization failed')
+			else:
+				self.accu_id = data[0]['Key']
+				self.city = data[0]['LocalizedName']
+				self.lat = data[0]['GeoPosition']['Latitude']
+				self.lon = data[0]['GeoPosition']['Longitude']
+				self.preview_text = str(self.city) + '\nLat: ' + str(self.lat) + '\nLong: ' + str(self.lon)
+				config.plugins.KravenFHD.weather_accu_id.value = str(self.accu_id)
+				config.plugins.KravenFHD.weather_accu_id.save()
+				config.plugins.KravenFHD.weather_foundcity.value = str(self.city)
+				config.plugins.KravenFHD.weather_foundcity.save()
 		except:
-			self.get_latlon_by_ip()
-			self.preview_warning = _('\n\nNo data for GM code,\nfallback to IP')
-
-	def get_accu_id_by_latlon(self):
-
-		if self.InternetAvailable==False: 
-			return
-		
-		try:
-			res = requests.get('http://realtek.accu-weather.com/widget/realtek/weather-data.asp?%s' % config.plugins.KravenFHD.weather_realtek_latlon.value, timeout=1)
-			cityId = re.search('cityId>(.+?)</cityId', str(res.text)).groups(1)
-			self.accu_id = str(cityId[0])
-			config.plugins.KravenFHD.weather_accu_id.value = str(self.accu_id)
-			config.plugins.KravenFHD.weather_accu_id.save()
-		except:
-			self.preview_warning = '\n\n'+_('No Accu ID found')
-		if self.accu_id is None or self.accu_id=='':
-			self.preview_warning = '\n\n'+_('No Accu ID found')
-
-	def generate_owm_accu_realtek_string(self):
-		config.plugins.KravenFHD.weather_owm_latlon.value = 'lat=%s&lon=%s&units=metric&lang=%s' % (str(self.lat),str(self.lon),str(config.plugins.KravenFHD.weather_language.value))
-		config.plugins.KravenFHD.weather_accu_latlon.value = 'lat=%s&lon=%s&metric=1&language=%s' % (str(self.lat), str(self.lon), str(config.plugins.KravenFHD.weather_language.value))
-		config.plugins.KravenFHD.weather_realtek_latlon.value = 'lat=%s&lon=%s&metric=1&language=%s' % (str(self.lat), str(self.lon), str(config.plugins.KravenFHD.weather_language.value))
-		config.plugins.KravenFHD.weather_owm_latlon.save()
-		config.plugins.KravenFHD.weather_accu_latlon.save()
-		config.plugins.KravenFHD.weather_realtek_latlon.save()
+			self.preview_warning = _('No Accu ID found')
