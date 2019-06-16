@@ -991,8 +991,8 @@
     <constant-widget name="Exit"/>
     <!--<text="YoutubeTVWindow" position="105,0" />-->
   </screen>
-  <!-- EPGImport Filter Config -->
-  <screen name="Config" position="0,0" size="1920,1080" title="EPG Import Configuration" backgroundColor="transparent" flags="wfNoBorder" >
+  <!-- EPGImportConfig -->
+  <screen name="EPGImportConfig" position="0,0" size="1920,1080" title="EPG Import Configuration" backgroundColor="transparent" flags="wfNoBorder" >
     <constant-widget name="Title-big"/>
 	<widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,675" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />	
 	<widget name="statusbar" position="105,885" halign="center" size="1062,45" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" transparent="1" font="Regular;33" />
@@ -1001,7 +1001,7 @@
     <constant-widget name="NameRedGreenYellowBlue"/>
 	<!-- Logo -->
     <constant-widget name="OKExit"/>
-    <!--<text="Config" position="105,0" />-->
+    <!--<text="EPGImportConfig" position="105,0" />-->
   </screen>
   <!-- EPGImportSources -->
   <screen name="EPGImportSources" position="0,0" size="1920,1080" title="EPG Import Sources" backgroundColor="transparent" flags="wfNoBorder" >
