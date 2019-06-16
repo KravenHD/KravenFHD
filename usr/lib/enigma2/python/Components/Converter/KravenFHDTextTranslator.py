@@ -56,6 +56,7 @@ class KravenFHDTextTranslator(Converter, object):
 	age = 35
 	brsettings = 36
 	brpath = 37
+	verticalepg = 38
 	
 
 	def __init__(self, type):
@@ -137,6 +138,8 @@ class KravenFHDTextTranslator(Converter, object):
 			self.type = self.brsettings
 		elif type == "brpath":
 			self.type = self.brpath
+		elif type == "verticalepg":
+			self.type = self.verticalepg
 
 	@cached
 	def getText(self):
@@ -216,5 +219,7 @@ class KravenFHDTextTranslator(Converter, object):
 			return _('Birthday Reminder Settings')
 		elif self.type == self.brpath:
 			return _('Select a path for the birthday file')
+		elif self.type == self.verticalepg:
+			return _('VerticalEPG')
 
 	text = property(getText)

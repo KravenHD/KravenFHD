@@ -606,14 +606,6 @@
     <constant-widget name="Colorbuttons"/>
     <!--<text="Ipkg" position="105,0" />-->
   </screen>
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="Console" position="0,0" size="1920,1080" title="Command execution...">
-    <widget backgroundColor="Kravenbg3" font="Console;27" name="text" scrollbarWidth="5" position="105,180" size="1062,750" transparent="1" foregroundColor="KravenFont1" />
-    <constant-widget name="Title-big"/>
-	<!-- Logo -->
-    <constant-widget name="Colorbuttons"/>
-    <constant-widget name="OKExit"/>
-    <!--<text="Console" position="105,0" />-->
-  </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="LEDBrightnessSetup" position="0,0" size="1920,1080" title="LED Brightness Setup">
     <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,675" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" zPosition="2" />
     <widget backgroundColor="Kravenbg3" name="current_entry" font="Regular2;27" foregroundColor="KravenFont2" halign="center" position="105,877" size="1062,60" valign="center" />
@@ -650,6 +642,7 @@
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="RemoteControlCode" position="0,0" size="1920,1080" title="Position Setup">
     <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" zPosition="2" />
+	<widget name="HelpWindow" position="1350,520" size="392,393" zPosition="98" transparent="1" alphatest="blend" />
     <constant-widget name="Title-big"/>
 	<!-- Logo -->
     <constant-widget name="OKExit"/>
@@ -668,19 +661,6 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="UnhandledKey" position="73,60" size="105,105" title="UnhandledKey" zPosition="100">
     <widget alphatest="blend" name="UnhandledKeyPixmap" pixmap="KravenFHD/global-icons/error.png" position="4,4" size="96,96" zPosition="2" />
     <eLabel backgroundColor="Kravenbg" position="0,0" size="105,105" zPosition="1" />
-  </screen>
-  <screen name="VirtualKeyBoard" position="center,center" backgroundColor="Kravenbg" flags="wfNoBorder" size="1072,525" zPosition="99">
-    <ePixmap pixmap="KravenFHD/skin_default/vkey_text.png" position="15,60" zPosition="-4" size="813,78" alphatest="on" />
-    <widget name="header" position="15,15" size="750,37" font="Regular;30" transparent="1" noWrap="1" foregroundColor="KravenFont1" />
-    <widget name="text" position="18,60" size="802,78" font="Regular;60" transparent="1" noWrap="1" halign="left" foregroundColor="KravenFont1" />
-    <widget name="list" position="15,157" size="1042,337" selectionDisabled="1" foregroundColor="white" backgroundColor="#00101B2F" transparent="1" />
-    <widget source="country" render="Pixmap" position="964,75" size="90,60" alphatest="on" zPosition="1">
-      <convert type="ValueToPixmap">LanguageCode</convert>
-    </widget>
-    <eLabel backgroundColor="KravenBorder" position="0,0" size="1072,3" zPosition="2" />
-    <eLabel backgroundColor="KravenBorder" position="0,522" size="1072,3" zPosition="2" />
-    <eLabel backgroundColor="KravenBorder" position="0,0" size="3,525" zPosition="2" />
-    <eLabel backgroundColor="KravenBorder" position="1069,0" size="3,525" zPosition="2" />
   </screen>
     <!-- EPGSelectionEPGBar_HD -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="EPGSelectionEPGBar_HD" position="0,615" size="1920,465" title="EPG Selection">
@@ -807,27 +787,28 @@
     <!--<text="PluginBrowser" position="105,0" />-->
   </screen>
   <!-- NumericalTextInputHelpDialog -->
-  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="NumericalTextInputHelpDialog" position="176,787" size="921,202" zPosition="8">
-    <eLabel backgroundColor="Kravenbg" position="6,4" size="909,1" transparent="0" zPosition="0" />
-    <eLabel backgroundColor="KravenBorder" position="6,195" size="907,4" transparent="0" zPosition="-5" />
-    <eLabel backgroundColor="Kravenbg" position="6,196" size="909,1" transparent="0" zPosition="0" />
-    <eLabel backgroundColor="KravenBorder" position="6,3" size="907,4" transparent="0" zPosition="-5" />
-    <eLabel backgroundColor="KravenBorder" position="913,3" size="4,196" transparent="0" zPosition="-5" />
-    <eLabel backgroundColor="Kravenbg" position="915,4" size="1,193" transparent="0" zPosition="0" />
-    <eLabel backgroundColor="KravenBorder" position="3,3" size="4,196" transparent="0" zPosition="-5" />
-    <eLabel backgroundColor="Kravenbg" position="4,4" size="1,193" transparent="0" zPosition="0" />
-    <widget font="Console;31" halign="center" name="key1" position="9,9" size="300,45" valign="center" />
-    <widget font="Console;31" halign="center" name="key2" position="310,9" size="300,45" valign="center" />
-    <widget font="Console;31" halign="center" name="key3" position="612,9" size="300,45" valign="center" />
-    <widget font="Console;31" halign="center" name="key4" position="9,55" size="300,45" valign="center" />
-    <widget font="Console;31" halign="center" name="key5" position="310,55" size="300,45" valign="center" />
-    <widget font="Console;31" halign="center" name="key6" position="612,55" size="300,45" valign="center" />
-    <widget font="Console;31" halign="center" name="key7" position="9,102" size="300,45" valign="center" />
-    <widget font="Console;31" halign="center" name="key8" position="310,102" size="300,45" valign="center" />
-    <widget font="Console;31" halign="center" name="key9" position="612,102" size="300,45" valign="center" />
-    <widget font="Console;33" halign="center" name="help1" position="9,148" size="300,45" valign="center" />
-    <widget font="Console;25" halign="center" name="key0" position="310,148" size="300,45" valign="center" />
-    <widget font="Console;33" halign="center" name="help2" position="612,148" size="300,45" valign="center" />
+  <screen backgroundColor="Kravenbg2" flags="wfNoBorder" name="NumericalTextInputHelpDialog" position="0,0" size="392,393" zPosition="98">
+    <eLabel backgroundColor="KravenBorder" position="0,0" size="390,3" transparent="0" zPosition="9" />
+    <eLabel backgroundColor="KravenBorder" position="0,0" size="3,393" transparent="0" zPosition="9" />
+    <eLabel backgroundColor="KravenBorder" position="389,0" size="3,393" transparent="0" zPosition="9" />
+    <eLabel backgroundColor="KravenBorder" position="0,390" size="390,3" transparent="0" zPosition="9" />
+    <eLabel backgroundColor="KravenBorder" position="0,99" size="390,1" transparent="0" zPosition="9" />
+    <eLabel backgroundColor="KravenBorder" position="0,196" size="390,1" transparent="0" zPosition="9" />
+    <eLabel backgroundColor="KravenBorder" position="0,293" size="390,1" transparent="0" zPosition="9" />
+    <eLabel backgroundColor="KravenBorder" position="131,0" size="1,391" transparent="0" zPosition="9" />
+    <eLabel backgroundColor="KravenBorder" position="260,0" size="1,391" transparent="0" zPosition="9" />
+    <widget backgroundColor="Kravenbg2" name="key1" font="Console;25" foregroundColor="KravenFont1" position="15,6" size="104,90" halign="center" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="key2" font="Console;25" foregroundColor="KravenFont1" position="144,6" size="104,90" halign="center" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="key3" font="Console;25" foregroundColor="KravenFont1" position="273,6" size="104,90" halign="center" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="key4" font="Console;25" foregroundColor="KravenFont1" position="15,103" size="104,90" halign="center" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="key5" font="Console;25" foregroundColor="KravenFont1" position="144,103" size="104,90" halign="center" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="key6" font="Console;25" foregroundColor="KravenFont1" position="273,103" size="104,90" halign="center" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="key7" font="Console;25" foregroundColor="KravenFont1" position="15,200" size="104,90" halign="center" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="key8" font="Console;25" foregroundColor="KravenFont1" position="144,200" size="104,90" halign="center" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="key9" font="Console;25" foregroundColor="KravenFont1" position="273,200" size="104,90" halign="center" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="help1" font="Console;28" foregroundColor="KravenFont1" position="15,297" size="104,90" halign="center" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="key0" font="Console;25" foregroundColor="KravenFont1" position="144,297" size="104,90" halign="center" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="help2" font="Console;28" foregroundColor="KravenFont1" position="273,297" size="104,90" halign="center" valign="center" transparent="1" />
   </screen>
   <!-- ********** Wizard and Help ********** -->
   <!-- DefaultSatLists -->
@@ -1033,6 +1014,7 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="VideoEnhancementSetup" position="0,0" size="1920,1080" title="VideoEnhancementSetup">
     <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" position="105,120" size="1062,675" transparent="1" />
     <widget backgroundColor="Kravenbg3" font="Regular2;33" halign="center" name="introduction" position="105,840" size="1062,37" transparent="1" foregroundColor="KravenFont2" />
+	<widget name="HelpWindow" position="1350,520" size="392,393" zPosition="98" transparent="1" alphatest="blend" />
     <constant-widget name="Title-big"/>
     <constant-widget name="Colorbuttons"/>
 	<!-- Logo -->
@@ -1058,6 +1040,7 @@
     <widget source="Gateway" render="Label" position="375,738" size="330,36" font="Regular;30" halign="left" foregroundColor="KravenFont1" backgroundColor="Kravenbg3" transparent="1" />
     <widget source="DNS1" render="Label" position="375,783" size="330,36" font="Regular;30" halign="left" foregroundColor="KravenFont1" backgroundColor="Kravenbg3" transparent="1" />
     <widget source="DNS2" render="Label" position="375,828" size="330,36" font="Regular;30" halign="left" foregroundColor="KravenFont1" backgroundColor="Kravenbg3" transparent="1" />
+	<widget name="HelpWindow" position="1350,520" size="392,393" zPosition="98" transparent="1" alphatest="blend" />
     <constant-widget name="Colorbuttons"/>
     <widget font="Regular;30" halign="left" valign="center" source="key_red" position="105,997" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <widget font="Regular;30" halign="left" valign="center" source="key_blue" position="1230,997" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
@@ -1209,7 +1192,7 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="UserDialog" position="0,0" size="1920,1080" title="UserDialog">
     <constant-widget name="Title-big"/>
     <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,450" scrollbarMode="showOnDemand" transparent="1" />
-    <widget alphatest="blend" name="HelpWindow" position="180,600" size="1,1" transparent="1" zPosition="1" />
+	<widget name="HelpWindow" position="1350,520" size="392,393" zPosition="98" transparent="1" alphatest="blend" />
     <widget backgroundColor="Kravenbg3" font="Regular2;33" foregroundColor="KravenFont2" halign="center" position="105,837" render="Label" size="1062,42" source="introduction" transparent="1" />
 	<!-- Logo -->
     <constant-widget name="Colorbuttons"/>
@@ -1244,7 +1227,7 @@
     <constant-widget name="Title-big"/>
 	<widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,675" zPosition="1" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
 	<widget source="introduction" render="Label" position="105,847" size="1062,42" zPosition="10" font="Regular2;33" foregroundColor="KravenFont2" halign="center" valign="center" backgroundColor="Kravenbg3" transparent="1"/>
-	<widget name="HelpWindow" pixmap="skin_default/vkey_icon.png" position="390,525" zPosition="1" size="1,1" transparent="1" alphatest="on" />
+	<widget name="HelpWindow" position="1350,520" size="392,393" zPosition="98" transparent="1" alphatest="blend" />
     <constant-widget name="Colorbuttons"/>
     <widget font="Regular;30" halign="left" valign="center" source="key_red" position="105,997" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
 	<!-- Logo -->
@@ -1928,6 +1911,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
   <!-- Setup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Setup" position="0,0" size="1920,1080" title="Setup">
     <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" scrollbarMode="showOnDemand" scrollbarWidth="5" enableWrapAround="1" transparent="1" />
+	<widget name="HelpWindow" position="1350,520" size="392,393" zPosition="98" transparent="1" alphatest="blend" />
     <constant-widget name="Title-big"/>
     <constant-widget name="Colorbuttons"/>
 	<!-- Logo -->
@@ -2089,7 +2073,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CrashlogAutoSubmitConfiguration" position="0,0" size="1920,1080" title="CrashlogAutoSubmit settings">
     <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,720" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
     <widget backgroundColor="Kravenbg3" font="Regular2;33" foregroundColor="KravenFont2" halign="center" position="105,870" render="Label" size="1062,42" source="status" transparent="1" />
-    <widget name="HelpWindow" position="180,705" size="1,1" zPosition="10" />
+	<widget name="HelpWindow" position="1350,520" size="392,393" zPosition="98" transparent="1" alphatest="blend" />
     <constant-widget name="Title-big"/>
     <constant-widget name="Colorbuttons"/>
 	<!-- Logo -->
@@ -2230,7 +2214,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <constant-widget name="Colorbuttons"/>
     <constant-widget name="SourceRedGreen"/>
     <widget font="Regular;30" halign="left" valign="center" source="key_blue" position="1230,997" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-	<widget name="HelpWindow" pixmap="skin_default/vkey_icon.png" position="105,600" zPosition="1" size="1,1" transparent="1" alphatest="on" />
+	<widget name="HelpWindow" position="1350,520" size="392,393" zPosition="98" transparent="1" alphatest="blend" />
 	<!-- Logo -->
     <constant-widget name="OKExit"/>
     <!--<text="EditModemManual" position="105,0" />-->

@@ -692,6 +692,11 @@ config.plugins.KravenFHD.VerticalEPG = ConfigSelection(default="verticalepg-mini
 				("verticalepg-full", _("full"))
 				])
 
+config.plugins.KravenFHD.VerticalEPG2 = ConfigSelection(default="verticalepg-full", choices = [
+				("verticalepg-minitv3", _("MiniTV")),
+				("verticalepg-full", _("full"))
+				])
+
 config.plugins.KravenFHD.VEPGBorderList = ConfigSelection(default="ffffff", choices = ColorSelfList)
 config.plugins.KravenFHD.VEPGBorderSelf = ConfigText(default="ffffff")
 config.plugins.KravenFHD.VEPGBorder = ConfigText(default="ffffff")
@@ -893,12 +898,6 @@ config.plugins.KravenFHD.IBtop = ConfigSelection(default="infobar-x2-z1_top2", c
 
 config.plugins.KravenFHD.Infobox = ConfigSelection(default="sat", choices = [
 				("sat", _("Tuner/Satellite + SNR")),
-				("cpu", _("CPU + Load")),
-				("temp", _("Temperature + Fan"))
-				])
-				
-config.plugins.KravenFHD.Infobox2 = ConfigSelection(default="sat", choices = [
-				("sat", _("Tuner/Satellite + SNR")),
 				("db", _("Tuner/Satellite + dB")),
 				("cpu", _("CPU + Load")),
 				("temp", _("Temperature + Fan"))
@@ -1048,8 +1047,7 @@ config.plugins.KravenFHD.TimerListStyle = ConfigSelection(default="timerlist-sta
 config.plugins.KravenFHD.weather_cityname = ConfigText(default = "")
 config.plugins.KravenFHD.weather_language = ConfigSelection(default="de", choices = LanguageList)
 config.plugins.KravenFHD.weather_server = ConfigSelection(default="_owm", choices = [
-				("_owm", _("OpenWeatherMap")),
-				("_accu", _("Accuweather"))
+				("_owm", _("OpenWeatherMap"))
 				])
 
 config.plugins.KravenFHD.weather_search_over = ConfigSelection(default="ip", choices = [
@@ -1501,10 +1499,7 @@ class KravenFHD(ConfigListScreen, Screen):
 		else:
 			emptyLines+=1
 		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x2","infobar-style-z1","infobar-style-zz1","infobar-style-zz4","infobar-style-zzz1"):
-			if self.E2DistroVersion == "VTi":
-				list.append(getConfigListEntry(_("Infobox-Contents"), config.plugins.KravenFHD.Infobox, _("Choose which informations will be shown in the info box.")))
-			elif self.E2DistroVersion in ("openatv","teamblue"):
-				list.append(getConfigListEntry(_("Infobox-Contents"), config.plugins.KravenFHD.Infobox2, _("Choose which informations will be shown in the info box.")))
+			list.append(getConfigListEntry(_("Infobox-Contents"), config.plugins.KravenFHD.Infobox, _("Choose which informations will be shown in the info box.")))
 		else:
 			emptyLines+=1
 		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2","infobar-style-zz1","infobar-style-zz4"):
@@ -1803,8 +1798,8 @@ class KravenFHD(ConfigListScreen, Screen):
 			list.append(getConfigListEntry(_("VerticalEPG-Style"), config.plugins.KravenFHD.VerticalEPG, _("Choose from different styles for VerticalEPG.")))
 			list.append(getConfigListEntry(_("Border Color"), config.plugins.KravenFHD.VEPGBorderList, _("Choose the border color for VerticalEPG. Press OK to define your own RGB color.")))
 		elif self.E2DistroVersion == "openatv":
-			list.append(getConfigListEntry(_("VerticalEPG-Style"), config.plugins.KravenFHD.ATVna, _("  ")))
-			list.append(getConfigListEntry(_("Border Color"), config.plugins.KravenFHD.ATVna, _("  ")))
+			list.append(getConfigListEntry(_("VerticalEPG-Style"), config.plugins.KravenFHD.VerticalEPG2, _("Choose from different styles for VerticalEPG.")))
+			list.append(getConfigListEntry(_("Border Color"), config.plugins.KravenFHD.VEPGBorderList, _("Choose the border color for VerticalEPG. Press OK to define your own RGB color.")))
 		elif self.E2DistroVersion == "teamblue":
 			list.append(getConfigListEntry(_("VerticalEPG-Style"), config.plugins.KravenFHD.TBna, _("  ")))
 			list.append(getConfigListEntry(_("Border Color"), config.plugins.KravenFHD.TBna, _("  ")))
@@ -2374,7 +2369,7 @@ class KravenFHD(ConfigListScreen, Screen):
 		elif option == config.plugins.KravenFHD.EPGListSize:
 			if self.E2DistroVersion in ("VTi","openatv"):
 				if config.plugins.KravenFHD.EPGListSize.value == "small":
-					self.showText(44,_("33 Pixel"))
+					self.showText(44,_("32 Pixel"))
 				elif config.plugins.KravenFHD.EPGListSize.value == "big":
 					self.showText(48,_("36 Pixel"))
 			elif self.E2DistroVersion == "teamblue":
@@ -3160,9 +3155,16 @@ class KravenFHD(ConfigListScreen, Screen):
 		if self.E2DistroVersion == "VTi":
 			console1.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/logo-vti.tar.gz -C /usr/share/enigma2/KravenFHD/")
 		elif self.E2DistroVersion == "openatv":
-			system("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/logo-openatv.tar.gz -C /usr/share/enigma2/KravenFHD/")
+			console1.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/logo-openatv.tar.gz -C /usr/share/enigma2/KravenFHD/")
 		elif self.E2DistroVersion == "teamblue":
-			system("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/logo-teamblue.tar.gz -C /usr/share/enigma2/KravenFHD/")
+			console1.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/logo-teamblue.tar.gz -C /usr/share/enigma2/KravenFHD/")
+
+		### Buttons
+		console2 = eConsoleAppContainer()
+		if self.E2DistroVersion == "openatv":
+			console2.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/buttons-openatv.tar.gz -C /usr/share/enigma2/KravenFHD/buttons/")
+		elif self.E2DistroVersion in ("VTi","teamblue"):
+			console2.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/buttons-vti-teamblue.tar.gz -C /usr/share/enigma2/KravenFHD/buttons/")
 
 		### Mainmenu Fontsize
 		if config.plugins.KravenFHD.MainmenuFontsize.value == "mainmenu-small":
@@ -3652,11 +3654,11 @@ class KravenFHD(ConfigListScreen, Screen):
 				self.skinSearchAndReplace.append(["/infobar-icons/", "/icons-light/"])
 				self.skinSearchAndReplace.append(["/infobar-global-icons/", "/icons-light/"])
 
-		console2 = eConsoleAppContainer()
+		console3 = eConsoleAppContainer()
 		if config.plugins.KravenFHD.IconStyle2.value == "icons-light2":
-			console2.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/icons-white.tar.gz -C /usr/share/enigma2/KravenFHD/")
+			console3.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/icons-white.tar.gz -C /usr/share/enigma2/KravenFHD/")
 		else:
-			console2.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/icons-black.tar.gz -C /usr/share/enigma2/KravenFHD/")
+			console3.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/icons-black.tar.gz -C /usr/share/enigma2/KravenFHD/")
 
 		### Weather-Server
 		if config.plugins.KravenFHD.weather_server.value == "_owm":
@@ -4125,15 +4127,15 @@ class KravenFHD(ConfigListScreen, Screen):
 			self.skinSearchAndReplace.append(['ChannellistSingleEpgList-->', 'widget>'])
 
 		### Header
-		if self.E2DistroVersion in ("openatv","teamblue"):
+		if self.E2DistroVersion == "teamblue":
 			self.skinSearchAndReplace.append(['<parameter name="VirtualKeyboard" value="67" />', '<parameter name="VirtualKeyboard" value="67,67" />'])
 		if self.E2DistroVersion in ("VTi","openatv") and config.plugins.KravenFHD.EPGListSize.value == "big":
-			self.skinSearchAndReplace.append(['<parameter name="EPGlistFont1" value="Regular;33" />', '<parameter name="EPGlistFont1" value="Regular;36" />'])
-			self.skinSearchAndReplace.append(['<parameter name="EPGlistText1" value="0,5,40,40" />', '<parameter name="EPGlistText1" value="0,4,50,45" />'])
-			self.skinSearchAndReplace.append(['<parameter name="EPGlistText2" value="0,5,250,40" />', '<parameter name="EPGlistText2" value="15,4,250,45" />'])
-			self.skinSearchAndReplace.append(['<parameter name="EPGlistText3" value="280,0,700,40" />', '<parameter name="EPGlistText3" value="280,0,700,45" />'])
-			self.skinSearchAndReplace.append(['<parameter name="EPGlistRecText" value="320,5,720,40" />', '<parameter name="EPGlistRecText" value="320,4,720,45" />'])
-			self.skinSearchAndReplace.append(['<parameter name="EPGlistNonRecText" value="280,5,745,40" />', '<parameter name="EPGlistNonRecText" value="280,4,745,45" />'])
+			self.skinSearchAndReplace.append(['<parameter name="EPGlistFont1" value="Regular;32" />', '<parameter name="EPGlistFont1" value="Regular;36" />'])
+			self.skinSearchAndReplace.append(['<parameter name="EPGlistText1" value="2,2,66,41" />', '<parameter name="EPGlistText1" value="2,4,80,45" />'])
+			self.skinSearchAndReplace.append(['<parameter name="EPGlistText2" value="0,2,234,41" />', '<parameter name="EPGlistText2" value="0,4,280,45" />'])
+			self.skinSearchAndReplace.append(['<parameter name="EPGlistText3" value="300,2,758,41" />', '<parameter name="EPGlistText3" value="360,4,698,45" />'])
+			self.skinSearchAndReplace.append(['<parameter name="EPGlistRecText" value="340,2,718,41" />', '<parameter name="EPGlistRecText" value="400,4,658,45" />'])
+			self.skinSearchAndReplace.append(['<parameter name="EPGlistNonRecText" value="300,2,758,41" />', '<parameter name="EPGlistNonRecText" value="360,4,698,45" />'])
 		if self.E2DistroVersion == "VTi" and config.usage.movielist_show_picon.value == True:
 			self.skinSearchAndReplace.append(['<parameter name="MovieListMinimalVTITitle" value="40,0,1000,40" />', '<parameter name="MovieListMinimalVTITitle" value="40,0,800,40" />'])
 		self.appendSkinFile(self.daten + "header_begin.xml")
@@ -4251,34 +4253,20 @@ class KravenFHD(ConfigListScreen, Screen):
 
 		### Infobox
 		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x2","infobar-style-z1","infobar-style-zz1","infobar-style-zz4","infobar-style-zzz1"):
-			if self.E2DistroVersion == "VTi":
-				if config.plugins.KravenFHD.Infobox.value == "cpu":
-					self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="  L:"'])
-					self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
-					self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDLayoutInfo">LoadAvg'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDCpuUsage">$0'])
-				elif config.plugins.KravenFHD.Infobox.value == "temp":
-					self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="U:"'])
-					self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
-					self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDTempFanInfo">FanInfo'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDTempFanInfo">TempInfo'])
-			elif self.E2DistroVersion in ("openatv","teamblue"):
-				if config.plugins.KravenFHD.Infobox2.value == "cpu":
-					self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="  L:"'])
-					self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
-					self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDLayoutInfo">LoadAvg'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDCpuUsage">$0'])
-				elif config.plugins.KravenFHD.Infobox2.value == "temp":
-					self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="U:"'])
-					self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
-					self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDTempFanInfo">FanInfo'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDTempFanInfo">TempInfo'])
-				elif config.plugins.KravenFHD.Infobox2.value == "db":
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert  type="KravenFHDFrontendInfo">SNRdB'])
+			if config.plugins.KravenFHD.Infobox.value == "cpu":
+				self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="  L:"'])
+				self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
+				self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
+				self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDLayoutInfo">LoadAvg'])
+				self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDCpuUsage">$0'])
+			elif config.plugins.KravenFHD.Infobox.value == "temp":
+				self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="U:"'])
+				self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
+				self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
+				self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDTempFanInfo">FanInfo'])
+				self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDTempFanInfo">TempInfo'])
+			elif config.plugins.KravenFHD.Infobox.value == "db":
+				self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert  type="KravenFHDFrontendInfo">SNRdB'])
 
 		### Record State
 		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-zz1","infobar-style-zz4","infobar-style-zzz1"):
@@ -4983,8 +4971,8 @@ class KravenFHD(ConfigListScreen, Screen):
 			if fileExists("/usr/lib/enigma2/python/Components/Converter/MSNWeather.pyo"):
 				self.appendSkinFile(self.daten + "MSNWeatherPlugin.xml")
 				if self.InternetAvailable and not fileExists("/usr/share/enigma2/KravenFHD/msn_weather_icons/1.png"):
-					console3 = eConsoleAppContainer()
-					console3.execute("wget -q http://picons.mynonpublic.com/msn-icon.tar.gz -O /tmp/msn-icon.tar.gz; tar xf /tmp/msn-icon.tar.gz -C /usr/share/enigma2/KravenFHD/")
+					console4 = eConsoleAppContainer()
+					console4.execute("wget -q http://picons.mynonpublic.com/msn-icon.tar.gz -O /tmp/msn-icon.tar.gz; tar xf /tmp/msn-icon.tar.gz -C /usr/share/enigma2/KravenFHD/")
 			else:
 				self.appendSkinFile(self.daten + "MSNWeatherPlugin2.xml")
 
@@ -5085,9 +5073,9 @@ class KravenFHD(ConfigListScreen, Screen):
 		### EPGSelection
 		if self.E2DistroVersion in ("VTi","openatv"):
 			if config.plugins.KravenFHD.EPGListSize.value == "big":
-				self.skinSearchAndReplace.append(['font="Regular;33" foregroundColor="EPGSelection" itemHeight="45"', 'font="Regular;36" foregroundColor="KravenFont1" itemHeight="54"'])
+				self.skinSearchAndReplace.append(['font="Regular;32" foregroundColor="EPGSelection" itemHeight="45"', 'font="Regular;36" foregroundColor="KravenFont1" itemHeight="54"'])
 			else:
-				self.skinSearchAndReplace.append(['font="Regular;33" foregroundColor="EPGSelection" itemHeight="45"', 'font="Regular;33" foregroundColor="KravenFont1" itemHeight="45"'])
+				self.skinSearchAndReplace.append(['font="Regular;32" foregroundColor="EPGSelection" itemHeight="45"', 'font="Regular;32" foregroundColor="KravenFont1" itemHeight="45"'])
 		elif self.E2DistroVersion == "teamblue":
 			if config.plugins.KravenFHD.EPGListSize.value == "big":
 				self.skinSearchAndReplace.append(['teamBlueEPGListSkinParameter="EPGSelection_EPGSearch"', 'setEventItemFont="Regular;37" setEventTimeFont="Regular;30" setTimeWidth="155" setIconDistance="12" setIconShift="0" setColWidths="86,207" setColGap="15" itemHeight="52" position="105,120" size="1062,780"']) # EPGSelection, EPGSearch
@@ -5150,6 +5138,13 @@ class KravenFHD(ConfigListScreen, Screen):
 		### VerticalEPG
 		if self.E2DistroVersion == "VTi":
 			self.appendSkinFile(self.daten + config.plugins.KravenFHD.VerticalEPG.value + ".xml")
+		elif self.E2DistroVersion == "openatv":
+			if config.plugins.KravenFHD.VerticalEPG2.value == "verticalepg-full":
+				config.epgselection.vertical_pig.value = False
+				config.epgselection.vertical_pig.save()
+			elif config.plugins.KravenFHD.VerticalEPG2.value == "verticalepg-minitv3":
+				config.epgselection.graph_pig.value = "true"
+				config.epgselection.graph_pig.save()
 
 		### MovieSelection (MovieList) Font-Size - teamblue
 		if self.E2DistroVersion == "teamblue":
@@ -5186,52 +5181,52 @@ class KravenFHD(ConfigListScreen, Screen):
 
 		### MediaPortal
 		if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/skin.xml"):
-			console4 = eConsoleAppContainer()
-			console4.execute("rm -rf /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/skin.xml")
+			console5 = eConsoleAppContainer()
+			console5.execute("rm -rf /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/skin.xml")
 
 		if self.E2DistroVersion in ("VTi","openatv"):
 			if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/plugin.py") and config.plugins.KravenFHD.MediaPortal.value == "mediaportal":
-				console5 = eConsoleAppContainer()
+				console6 = eConsoleAppContainer()
 				if config.plugins.KravenFHD.IBColor.value == "all-screens" and config.plugins.KravenFHD.IconStyle.value == "icons-light" and config.plugins.KravenFHD.IBStyle.value == "grad":
-					console5.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_IB_icons-light.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_IB_icons-light.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
+					console6.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_IB_icons-light.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_IB_icons-light.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
 				elif config.plugins.KravenFHD.IBColor.value == "all-screens" and config.plugins.KravenFHD.IconStyle.value == "icons-light" and config.plugins.KravenFHD.IBStyle.value == "box":
-					console5.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_box_icons-light.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_box_icons-light.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
+					console6.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_box_icons-light.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_box_icons-light.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
 				elif config.plugins.KravenFHD.IBColor.value == "all-screens" and config.plugins.KravenFHD.IconStyle.value == "icons-dark" and config.plugins.KravenFHD.IBStyle.value == "grad":
-					console5.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_IB_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_IB_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
+					console6.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_IB_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_IB_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
 				elif config.plugins.KravenFHD.IBColor.value == "all-screens" and config.plugins.KravenFHD.IconStyle.value == "icons-dark" and config.plugins.KravenFHD.IBStyle.value == "box":
-					console5.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_box_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_box_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
+					console6.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_box_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_box_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
 				elif config.plugins.KravenFHD.IBColor.value == "only-infobar" and config.plugins.KravenFHD.IconStyle.value == "icons-light" and config.plugins.KravenFHD.IBStyle.value == "grad":
-					console5.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_IB_icons-light.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
+					console6.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_IB_icons-light.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
 				elif config.plugins.KravenFHD.IBColor.value == "only-infobar" and config.plugins.KravenFHD.IconStyle.value == "icons-light" and config.plugins.KravenFHD.IBStyle.value == "box":
-					console5.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_box_icons-light.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
+					console6.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_box_icons-light.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
 				elif config.plugins.KravenFHD.IBColor.value == "only-infobar" and config.plugins.KravenFHD.IconStyle.value == "icons-dark" and config.plugins.KravenFHD.IBStyle.value == "grad":
-					console5.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_IB_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
+					console6.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_IB_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
 				elif config.plugins.KravenFHD.IBColor.value == "only-infobar" and config.plugins.KravenFHD.IconStyle.value == "icons-dark" and config.plugins.KravenFHD.IBStyle.value == "box":
-					console5.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_box_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
+					console6.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_box_icons-dark.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
 
 		elif self.E2DistroVersion == "teamblue":
 			if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/plugin.py") and config.plugins.KravenFHD.MediaPortal.value == "mediaportal":
-				console5 = eConsoleAppContainer()
+				console6 = eConsoleAppContainer()
 				if config.plugins.KravenFHD.IBColor.value == "all-screens" and config.plugins.KravenFHD.IconStyle.value == "icons-light" and config.plugins.KravenFHD.IBStyle.value == "grad":
-					console5.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_IB_icons-light_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_IB_icons-light_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
+					console6.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_IB_icons-light_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_IB_icons-light_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
 				elif config.plugins.KravenFHD.IBColor.value == "all-screens" and config.plugins.KravenFHD.IconStyle.value == "icons-light" and config.plugins.KravenFHD.IBStyle.value == "box":
-					console5.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_box_icons-light_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_box_icons-light_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
+					console6.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_box_icons-light_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_box_icons-light_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
 				elif config.plugins.KravenFHD.IBColor.value == "all-screens" and config.plugins.KravenFHD.IconStyle.value == "icons-dark" and config.plugins.KravenFHD.IBStyle.value == "grad":
-					console5.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_IB_icons-dark_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_IB_icons-dark_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
+					console6.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_IB_icons-dark_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_IB_icons-dark_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
 				elif config.plugins.KravenFHD.IBColor.value == "all-screens" and config.plugins.KravenFHD.IconStyle.value == "icons-dark" and config.plugins.KravenFHD.IBStyle.value == "box":
-					console5.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_box_icons-dark_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_box_icons-dark_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
+					console6.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_box_icons-dark_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_box_icons-dark_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
 				elif config.plugins.KravenFHD.IBColor.value == "only-infobar" and config.plugins.KravenFHD.IconStyle.value == "icons-light" and config.plugins.KravenFHD.IBStyle.value == "grad":
-					console5.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_IB_icons-light_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
+					console6.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_IB_icons-light_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
 				elif config.plugins.KravenFHD.IBColor.value == "only-infobar" and config.plugins.KravenFHD.IconStyle.value == "icons-light" and config.plugins.KravenFHD.IBStyle.value == "box":
-					console5.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_box_icons-light_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
+					console6.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_box_icons-light_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
 				elif config.plugins.KravenFHD.IBColor.value == "only-infobar" and config.plugins.KravenFHD.IconStyle.value == "icons-dark" and config.plugins.KravenFHD.IBStyle.value == "grad":
-					console5.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_icons-dark_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_IB_icons-dark_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
+					console6.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_icons-dark_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_IB_icons-dark_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
 				elif config.plugins.KravenFHD.IBColor.value == "only-infobar" and config.plugins.KravenFHD.IconStyle.value == "icons-dark" and config.plugins.KravenFHD.IBStyle.value == "box":
-					console5.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_icons-dark_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_box_icons-dark_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
+					console6.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/MediaPortal_icons-dark_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/; tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/Player_box_icons-dark_teamblue.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/simpleplayer/")
 
 		if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD/MP_skin.xml") and not config.plugins.KravenFHD.MediaPortal.value == "mediaportal":
-			console5 = eConsoleAppContainer()
-			console5.execute("rm -rf /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD")
+			console7 = eConsoleAppContainer()
+			console7.execute("rm -rf /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenFHD")
 
 		### vti - openatv - teamblue
 		if self.E2DistroVersion == "VTi":

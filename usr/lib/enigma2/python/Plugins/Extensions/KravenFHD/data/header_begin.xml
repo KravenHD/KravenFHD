@@ -241,33 +241,43 @@
     <!-- MediaplayerPlaylist -->
     <parameter name="MediaPlayerPlayList" value="35,1,700,35" />
     <parameter name="MediaPlayerPlayListFont" value="Regular;30" />
-    <!-- VirtualKeyboard -->
+    <!-- VirtualKeyboard opeanATV -->
+	<parameter name="VirtualKeyBoard" value="67,67"/>
+	<parameter name="VirtualKeyBoardAlignment" value="0,0"/>
+	<parameter name="VirtualKeyBoardPadding" value="6,6"/>
+    <!-- VirtualKeyboard VTi -->
     <parameter name="VirtualKeyboardFont" value="Regular;42" />
 	<parameter name="VirtualKeyboard" value="67" />
     <!-- EPGlist -->
-    <parameter name="EPGlistFont1" value="Regular;33" />
-    <parameter name="EPGlistFont2" value="Regular;30" />
-    <parameter name="EPGlistText1" value="0,5,40,40" />
-    <parameter name="EPGlistText2" value="0,5,250,40" />
-    <parameter name="EPGlistText3" value="280,0,700,40" />
-    <parameter name="EPGlistRecImage" value="280,8,40,40" />
-    <parameter name="EPGlistRecText" value="320,5,720,40" />
-    <parameter name="EPGlistNonRecText" value="280,5,745,40" />
+    <parameter name="EPGlistFont1" value="Regular;32" />
+    <parameter name="EPGlistFont2" value="Regular;32" />
+    <parameter name="EPGlistText1" value="2,2,66,41" />
+    <parameter name="EPGlistText2" value="0,2,234,41" />
+    <parameter name="EPGlistRecImage" value="300,3,40,40" />
+    <parameter name="EPGlistRecText" value="340,2,718,41" />
+    <parameter name="EPGlistNonRecText" value="300,2,758,41" />
+	<!-- EPGlistSimilar -->
     <parameter name="EPGlistSimilarText1" value="0,5,500,38" />
     <parameter name="EPGlistSimilarText2" value="200,5,500,38" />
     <parameter name="EPGlistSimilarRecIcon" value="0,8,40,40" />
     <parameter name="EPGlistSimilarRecText" value="30,5,300,38" />
     <parameter name="EPGlistSimilarNonRecText" value="0,5,300,38" />
-    <parameter name="EPGlistMultiRecText" value="30,5,300,38" />
-    <parameter name="EPGlistMultiNonRecText" value="0,5,300,38" />
-    <parameter name="EPGlistMultiBeginText1" value="220,5,330,38" />
-    <parameter name="EPGlistMultiBeginText2" value="480,5,700,38" />
-    <parameter name="EPGlistMultiProgress" value="300,15,50,10" />
-    <parameter name="EPGlistMultiProgressText" value="370,5,1000,38" />
-    <parameter name="EPGlistEPGBarIcon" value="5,5,40,40" />
-    <parameter name="EPGlistEPGBarText1" value="30,0,950,40" />
-    <parameter name="EPGlistEPGBarText2" value="5,0,950,40" />
+	<!-- EPGSelectionEPGBar_HD -->
+    <parameter name="EPGlistEPGBarIcon" value="2,3,40,40" />
+    <parameter name="EPGlistEPGBarText1" value="50,0,1010,41" />
+    <parameter name="EPGlistEPGBarText2" value="2,2,1058,41" />
+	<!-- EPGlistMulti -->
+    <parameter name="EPGlistMultiRecText" value="30,5,300,41" />
     <parameter name="EPGlistMultiRecIcon" value="0,8,40,40" />
+    <parameter name="EPGlistMultiNonRecText" value="0,5,300,41" />
+    <parameter name="EPGlistMultiBeginText1" value="220,5,330,41" />
+    <parameter name="EPGlistMultiBeginText2" value="480,5,700,41" />
+    <parameter name="EPGlistMultiProgress" value="300,15,50,10" />
+    <parameter name="EPGlistMultiProgressText" value="370,5,1000,41" />
+	<!-- EPGSearch -->
+    <parameter name="EPGlistText3" value="300,2,758,41" />
+	<parameter name="EPGSearchItemHeightBig" value="90" />
+	<parameter name="EPGSearchItemHeightDefault" value="45" />
     <!-- EPGShare -->
 	<parameter name="EPGShareListItemHeight" value="45" />
 	<parameter name="EPGShareListWidth" value="1035" />
@@ -426,6 +436,7 @@
 	<alias name="FileList" font="Regular" size="32" height="45" />
 	<alias name="FileListMulti" font="Regular" size="32" height="45" />
 	<alias name="VirtualKeyboard" font="Regular" size="42" height="67"/>
+	<alias name="VirtualKeyBoard" font="Regular" size="42" height="67" />
 	<alias name="ServiceInfo" font="Regular" size="32" height="45"/>
 	<alias name="PluginBrowser0" font="Regular" size="32" height="75"/>
 	<alias name="PluginBrowser1" font="Regular" size="22"/>
@@ -440,8 +451,10 @@
 	<alias name="SelectionList" font="Regular" size="32" height="45"/>
 	<alias name="Dreamexplorer" font="Regular" size="32" height="45"/>
 	<alias name="PlayList" font="Regular" size="30" height="42"/>
-	<alias name="EPGListChannelList0" font="Regular" size="34" />
-	<alias name="EPGListChannelList1" font="Regular" size="34" />
+	<alias name="EPGList0" font="Regular" size="32" />
+	<alias name="EPGList1" font="Regular" size="32" />
+	<alias name="EPGListChannelList0" font="Regular" size="32" />
+	<alias name="EPGListChannelList1" font="Regular" size="32" />
   </fonts>
   <subtitles>
     <sub font="Regular;45" name="Subtitle_TTX" shadowColor="shadow" shadowOffset="3,3" />

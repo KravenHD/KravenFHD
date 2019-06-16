@@ -38,7 +38,7 @@
     <widget backgroundColor="Kravenbg3" name="entrylist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,219" size="1062,675" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
     <widget source="city" render="Label" position="105,157" size="330,42" font="Regular2;30" halign="left" valign="center" transparent="1" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" />
     <widget source="text" render="Label" position="445,157" size="720,42" font="Regular2;33" halign="left" valign="center" transparent="1" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" />
-    <widget name="HelpWindow" position="105,634" size="798,300" backgroundColor="Kravenbg3" transparent="1" flags="wfNoBorder" />
+	<widget name="HelpWindow" position="1350,520" size="392,393" zPosition="98" transparent="1" alphatest="blend" />
     <constant-widget name="Title-big"/>
 	<!-- Logo -->
     <constant-widget name="Colorbuttons"/>
@@ -48,7 +48,7 @@
   <!-- MSNWeatherPluginEntryConfigScreen -->
   <screen name="MSNWeatherPluginEntryConfigScreen" position="0,0" size="1920,1080" title="WeatherPlugin: Edit Entry" flags="wfNoBorder" backgroundColor="transparent">
     <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
-    <widget name="HelpWindow" position="105,634" size="798,300" backgroundColor="Kravenbg3" transparent="1" flags="wfNoBorder" />
+	<widget name="HelpWindow" position="1350,520" size="392,393" zPosition="98" transparent="1" alphatest="blend" />
     <constant-widget name="Title-big"/>
 	<!-- Logo -->
     <constant-widget name="Colorbuttons"/>
@@ -58,7 +58,7 @@
   <!-- MSNWeatherPluginSearch -->
   <screen name="MSNWeatherPluginSearch" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
     <widget backgroundColor="Kravenbg3" name="entrylist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
-    <widget name="HelpWindow" position="105,634" size="798,300" backgroundColor="Kravenbg3" transparent="1" flags="wfNoBorder" />
+	<widget name="HelpWindow" position="1350,520" size="392,393" zPosition="98" transparent="1" alphatest="blend" />
     <constant-widget name="Title-big"/>
 	<!-- Logo -->
     <constant-widget name="Colorbuttons"/>

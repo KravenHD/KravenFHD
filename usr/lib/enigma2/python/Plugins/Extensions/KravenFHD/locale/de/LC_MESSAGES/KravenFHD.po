@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: KravenFHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2019-05-27 23:40+0200\n"
+"PO-Revision-Date: 2019-06-10 18:10+0200\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.2.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: KravenFHDWeather.py
@@ -2260,27 +2260,27 @@ msgstr "grafisch mit MiniTV"
 
 #: KravenFHD.py
 msgid "This sections offers all settings for VerticalEPG."
-msgstr "In diesem Abschnitt finden Sie alle Einstellungen zu Spalten-EPG."
+msgstr "In diesem Abschnitt finden Sie alle Einstellungen zum vertikalen EPG."
 
 #: KravenFHD.py
 msgid "Choose from different styles for VerticalEPG."
-msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für \"Spalten-EPG\"."
+msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für das vertikale EPG."
 
 #: KravenFHD.py
 msgid "VerticalEPG-Style"
-msgstr "Spalten-EPG-Stil"
+msgstr "Vertikal-EPG-Stil"
 
 #: KravenFHD.py
 msgid "Choose the border color for VerticalEPG. Press OK to define your own RGB color."
-msgstr "Wählen Sie die Rahmenfarbe für \"Spalten-EPG\". Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
+msgstr "Wählen Sie die Rahmenfarbe für das vertikale EPG. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "VERTICALEPG ______________________________________________________________"
-msgstr "SPALTEN-EPG ______________________________________________________________"
+msgstr "VERTIKAL-EPG _____________________________________________________________"
 
 #: KravenFHD.py
 msgid "VerticalEPG"
-msgstr "Spalten-EPG"
+msgstr "Vertikales EPG"
 
 #: KravenFHD.py
 msgid "description"

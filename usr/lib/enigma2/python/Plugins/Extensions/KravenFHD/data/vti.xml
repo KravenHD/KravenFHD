@@ -163,6 +163,7 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="RemoteTimerSetup" position="0,0" size="1920,1080" title="Settings">
     <constant-widget name="Title-big"/>
     <widget backgroundColor="Kravenbg3" name="config" position="105,120" size="1062,810" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+	<widget name="HelpWindow" position="1350,520" size="392,393" zPosition="98" transparent="1" alphatest="blend" />
 	<!-- Logo -->
     <constant-widget name="Colorbuttons"/>
     <constant-widget name="NameRedGreen"/>
@@ -221,4 +222,28 @@
     <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1230,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="2" />
     <constant-widget name="MenuOKExit"/>
     <!--<text="EPGSelectionMulti" position="105,0" />-->
+  </screen>
+  <!-- VirtualKeyBoard -->
+  <screen name="VirtualKeyBoard" position="center,center" backgroundColor="Kravenbg" flags="wfNoBorder" size="834,540" zPosition="99">
+    <widget backgroundColor="Kravenbg" name="header" position="15,15" size="804,41" font="Regular;32" foregroundColor="KravenFont2" transparent="1" noWrap="1" />
+    <eLabel backgroundColor="KravenBorder" position="15,68" size="804,3" zPosition="-1" />
+    <eLabel backgroundColor="KravenBorder" position="15,125" size="804,3" zPosition="-1" />
+    <eLabel backgroundColor="KravenBorder" position="15,68" size="3,60" zPosition="-1" />
+    <eLabel backgroundColor="KravenBorder" position="816,68" size="3,60" zPosition="-1" />
+    <widget backgroundColor="Kravenbg" name="text" position="18,71" size="798,51" font="Regular;42" foregroundColor="KravenFont1" valign="center" noWrap="1" transparent="1" />
+    <widget backgroundColor="#00101B2F" name="list" position="15,140" size="804,335" selectionDisabled="1" foregroundColor="white" transparent="1" />
+    <widget backgroundColor="Kravenbg" source="country" render="Label" position="15,487" size="804,41" font="Regular;32" foregroundColor="KravenFont1" transparent="1" noWrap="1" />
+    <eLabel backgroundColor="KravenBorder" position="0,0" size="834,3" zPosition="2" />
+    <eLabel backgroundColor="KravenBorder" position="0,537" size="834,3" zPosition="2" />
+    <eLabel backgroundColor="KravenBorder" position="0,0" size="3,540" zPosition="2" />
+    <eLabel backgroundColor="KravenBorder" position="831,0" size="3,540" zPosition="2" />
+  </screen>
+  <!-- Console -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="Console" position="0,0" size="1920,1080" title="Command execution...">
+    <widget backgroundColor="Kravenbg3" font="Console;27" name="text" scrollbarWidth="5" position="105,180" size="1062,750" transparent="1" foregroundColor="KravenFont1" />
+    <constant-widget name="Title-big"/>
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="Console" position="105,0" />-->
   </screen>

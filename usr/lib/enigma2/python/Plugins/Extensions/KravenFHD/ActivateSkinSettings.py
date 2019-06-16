@@ -652,6 +652,11 @@ config.plugins.KravenFHD.VerticalEPG = ConfigSelection(default="verticalepg-mini
 				("verticalepg-full", _("full"))
 				])
 
+config.plugins.KravenFHD.VerticalEPG2 = ConfigSelection(default="verticalepg-full", choices = [
+				("verticalepg-minitv3", _("MiniTV")),
+				("verticalepg-full", _("full"))
+				])
+
 config.plugins.KravenFHD.VEPGBorderList = ConfigSelection(default="ffffff", choices = ColorSelfList)
 config.plugins.KravenFHD.VEPGBorderSelf = ConfigText(default="ffffff")
 config.plugins.KravenFHD.VEPGBorder = ConfigText(default="ffffff")
@@ -850,14 +855,8 @@ config.plugins.KravenFHD.IBtop = ConfigSelection(default="infobar-x2-z1_top2", c
 				("infobar-x2-z1_top", _("4 Tuner")),
 				("infobar-x2-z1_top3", _("8 Tuner"))
 				])
-
-config.plugins.KravenFHD.Infobox = ConfigSelection(default="sat", choices = [
-				("sat", _("Tuner/Satellite + SNR")),
-				("cpu", _("CPU + Load")),
-				("temp", _("Temperature + Fan"))
-				])
 				
-config.plugins.KravenFHD.Infobox2 = ConfigSelection(default="sat", choices = [
+config.plugins.KravenFHD.Infobox = ConfigSelection(default="sat", choices = [
 				("sat", _("Tuner/Satellite + SNR")),
 				("db", _("Tuner/Satellite + dB")),
 				("cpu", _("CPU + Load")),
@@ -1008,8 +1007,7 @@ config.plugins.KravenFHD.TimerListStyle = ConfigSelection(default="timerlist-sta
 config.plugins.KravenFHD.weather_cityname = ConfigText(default = "")
 config.plugins.KravenFHD.weather_language = ConfigSelection(default="de", choices = LanguageList)
 config.plugins.KravenFHD.weather_server = ConfigSelection(default="_owm", choices = [
-				("_owm", _("OpenWeatherMap")),
-				("_accu", _("Accuweather"))
+				("_owm", _("OpenWeatherMap"))
 				])
 
 config.plugins.KravenFHD.weather_search_over = ConfigSelection(default="ip", choices = [
@@ -1435,6 +1433,12 @@ class ActivateSkinSettings:
 			system("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/logo-openatv.tar.gz -C /usr/share/enigma2/KravenFHD/")
 		elif self.E2DistroVersion == "teamblue":
 			system("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/logo-teamblue.tar.gz -C /usr/share/enigma2/KravenFHD/")
+
+		### Buttons
+		if self.E2DistroVersion == "openatv":
+			system("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/buttons-openatv.tar.gz -C /usr/share/enigma2/KravenFHD/buttons/")
+		elif self.E2DistroVersion in ("VTi","teamblue"):
+			system("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/buttons-vti-teamblue.tar.gz -C /usr/share/enigma2/KravenFHD/buttons/")
 
 		### Mainmenu Fontsize
 		if config.plugins.KravenFHD.MainmenuFontsize.value == "mainmenu-small":
@@ -2396,15 +2400,15 @@ class ActivateSkinSettings:
 			self.skinSearchAndReplace.append(['ChannellistSingleEpgList-->', 'widget>'])
 
 		### Header
-		if self.E2DistroVersion in ("openatv","teamblue"):
+		if self.E2DistroVersion == "teamblue":
 			self.skinSearchAndReplace.append(['<parameter name="VirtualKeyboard" value="67" />', '<parameter name="VirtualKeyboard" value="67,67" />'])
 		if self.E2DistroVersion in ("VTi","openatv") and config.plugins.KravenFHD.EPGListSize.value == "big":
-			self.skinSearchAndReplace.append(['<parameter name="EPGlistFont1" value="Regular;33" />', '<parameter name="EPGlistFont1" value="Regular;36" />'])
-			self.skinSearchAndReplace.append(['<parameter name="EPGlistText1" value="0,5,40,40" />', '<parameter name="EPGlistText1" value="0,4,50,45" />'])
-			self.skinSearchAndReplace.append(['<parameter name="EPGlistText2" value="0,5,250,40" />', '<parameter name="EPGlistText2" value="15,4,250,45" />'])
-			self.skinSearchAndReplace.append(['<parameter name="EPGlistText3" value="280,0,700,40" />', '<parameter name="EPGlistText3" value="280,0,700,45" />'])
-			self.skinSearchAndReplace.append(['<parameter name="EPGlistRecText" value="320,5,720,40" />', '<parameter name="EPGlistRecText" value="320,4,720,45" />'])
-			self.skinSearchAndReplace.append(['<parameter name="EPGlistNonRecText" value="280,5,745,40" />', '<parameter name="EPGlistNonRecText" value="280,4,745,45" />'])
+			self.skinSearchAndReplace.append(['<parameter name="EPGlistFont1" value="Regular;32" />', '<parameter name="EPGlistFont1" value="Regular;36" />'])
+			self.skinSearchAndReplace.append(['<parameter name="EPGlistText1" value="2,2,66,41" />', '<parameter name="EPGlistText1" value="2,4,80,45" />'])
+			self.skinSearchAndReplace.append(['<parameter name="EPGlistText2" value="0,2,234,41" />', '<parameter name="EPGlistText2" value="0,4,280,45" />'])
+			self.skinSearchAndReplace.append(['<parameter name="EPGlistText3" value="300,2,758,41" />', '<parameter name="EPGlistText3" value="360,4,698,45" />'])
+			self.skinSearchAndReplace.append(['<parameter name="EPGlistRecText" value="340,2,718,41" />', '<parameter name="EPGlistRecText" value="400,4,658,45" />'])
+			self.skinSearchAndReplace.append(['<parameter name="EPGlistNonRecText" value="300,2,758,41" />', '<parameter name="EPGlistNonRecText" value="360,4,698,45" />'])
 		if self.E2DistroVersion == "VTi":
 			if (not self.silent and config.usage.movielist_show_picon.value == True) or (self.silent and 'config.usage.movielist_show_picon=true' in self.E2settings):
 				self.skinSearchAndReplace.append(['<parameter name="MovieListMinimalVTITitle" value="40,0,1000,40" />', '<parameter name="MovieListMinimalVTITitle" value="40,0,800,40" />'])
@@ -2527,34 +2531,20 @@ class ActivateSkinSettings:
 
 		### Infobox
 		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x2","infobar-style-z1","infobar-style-zz1","infobar-style-zz4","infobar-style-zzz1"):
-			if self.E2DistroVersion == "VTi":
-				if config.plugins.KravenFHD.Infobox.value == "cpu":
-					self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="  L:"'])
-					self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
-					self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDLayoutInfo">LoadAvg'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDCpuUsage">$0'])
-				elif config.plugins.KravenFHD.Infobox.value == "temp":
-					self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="U:"'])
-					self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
-					self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDTempFanInfo">FanInfo'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDTempFanInfo">TempInfo'])
-			elif self.E2DistroVersion in ("openatv","teamblue"):
-				if config.plugins.KravenFHD.Infobox2.value == "cpu":
-					self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="  L:"'])
-					self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
-					self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDLayoutInfo">LoadAvg'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDCpuUsage">$0'])
-				elif config.plugins.KravenFHD.Infobox2.value == "temp":
-					self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="U:"'])
-					self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
-					self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDTempFanInfo">FanInfo'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDTempFanInfo">TempInfo'])
-				elif config.plugins.KravenFHD.Infobox2.value == "db":
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert  type="KravenFHDFrontendInfo">SNRdB'])
+			if config.plugins.KravenFHD.Infobox.value == "cpu":
+				self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="  L:"'])
+				self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
+				self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
+				self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDLayoutInfo">LoadAvg'])
+				self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDCpuUsage">$0'])
+			elif config.plugins.KravenFHD.Infobox.value == "temp":
+				self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="U:"'])
+				self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
+				self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
+				self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDTempFanInfo">FanInfo'])
+				self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDTempFanInfo">TempInfo'])
+			elif config.plugins.KravenFHD.Infobox.value == "db":
+				self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert  type="KravenFHDFrontendInfo">SNRdB'])
 
 		### Record State
 		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-zz1","infobar-style-zz4","infobar-style-zzz1"):
@@ -3360,9 +3350,9 @@ class ActivateSkinSettings:
 		### EPGSelection
 		if self.E2DistroVersion in ("VTi","openatv"):
 			if config.plugins.KravenFHD.EPGListSize.value == "big":
-				self.skinSearchAndReplace.append(['font="Regular;33" foregroundColor="EPGSelection" itemHeight="45"', 'font="Regular;36" foregroundColor="KravenFont1" itemHeight="54"'])
+				self.skinSearchAndReplace.append(['font="Regular;32" foregroundColor="EPGSelection" itemHeight="45"', 'font="Regular;36" foregroundColor="KravenFont1" itemHeight="54"'])
 			else:
-				self.skinSearchAndReplace.append(['font="Regular;33" foregroundColor="EPGSelection" itemHeight="45"', 'font="Regular;33" foregroundColor="KravenFont1" itemHeight="45"'])
+				self.skinSearchAndReplace.append(['font="Regular;32" foregroundColor="EPGSelection" itemHeight="45"', 'font="Regular;33" foregroundColor="KravenFont1" itemHeight="45"'])
 		elif self.E2DistroVersion == "teamblue":
 			if config.plugins.KravenFHD.EPGListSize.value == "big":
 				self.skinSearchAndReplace.append(['teamBlueEPGListSkinParameter="EPGSelection_EPGSearch"', 'setEventItemFont="Regular;37" setEventTimeFont="Regular;30" setTimeWidth="155" setIconDistance="12" setIconShift="0" setColWidths="86,207" setColGap="15" itemHeight="52" position="105,120" size="1062,780"']) # EPGSelection, EPGSearch
@@ -3425,6 +3415,13 @@ class ActivateSkinSettings:
 		### VerticalEPG
 		if self.E2DistroVersion == "VTi":
 			self.appendSkinFile(self.daten + config.plugins.KravenFHD.VerticalEPG.value + ".xml")
+		elif self.E2DistroVersion == "openatv":
+			if config.plugins.KravenFHD.VerticalEPG2.value == "verticalepg-full":
+				config.epgselection.vertical_pig.value = False
+				config.epgselection.vertical_pig.save()
+			elif config.plugins.KravenFHD.VerticalEPG2.value == "verticalepg-minitv3":
+				config.epgselection.graph_pig.value = "true"
+				config.epgselection.graph_pig.save()
 
 		### MovieSelection (MovieList) Font-Size - teamblue
 		if self.E2DistroVersion == "teamblue":
