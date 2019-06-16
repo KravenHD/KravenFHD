@@ -1007,7 +1007,8 @@ config.plugins.KravenFHD.TimerListStyle = ConfigSelection(default="timerlist-sta
 config.plugins.KravenFHD.weather_cityname = ConfigText(default = "")
 config.plugins.KravenFHD.weather_language = ConfigSelection(default="de", choices = LanguageList)
 config.plugins.KravenFHD.weather_server = ConfigSelection(default="_owm", choices = [
-				("_owm", _("OpenWeatherMap"))
+				("_owm", _("OpenWeatherMap")),
+				("_accu", _("Accuweather"))
 				])
 
 config.plugins.KravenFHD.weather_search_over = ConfigSelection(default="ip", choices = [
