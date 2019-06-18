@@ -28,7 +28,23 @@ def main(session, **kwargs):
 
 def Plugins(**kwargs):
 	screenwidth = getDesktop(0).size().width()
-	if screenwidth and screenwidth == 1920:
-		return [PluginDescriptor(name="KravenFHD", description=_("Configuration tool for KravenFHD"), where = PluginDescriptor.WHERE_PLUGINMENU, icon='pluginfhd.png', fnc=main)]
-	else:
-		return [PluginDescriptor(name="KravenFHD", description=_("Configuration tool for KravenFHD"), where = PluginDescriptor.WHERE_PLUGINMENU, icon='plugin.png', fnc=main)]
+	try:
+		from boxbranding import getImageDistro
+		if getImageDistro() == "openatv":
+			list = []
+			list.append(PluginDescriptor(name="Setup KravenFHD", description=_("Configuration tool for KravenFHD"), where = PluginDescriptor.WHERE_MENU, fnc = main_menu))
+			if screenwidth and screenwidth == 1920:
+				list.append(PluginDescriptor(name="KravenFHD", description=_("Configuration tool for KravenFHD"), where = PluginDescriptor.WHERE_PLUGINMENU, icon='pluginfhd.png', fnc=main))
+			else:
+				list.append(PluginDescriptor(name="KravenFHD", description=_("Configuration tool for KravenFHD"), where = PluginDescriptor.WHERE_PLUGINMENU, icon='plugin.png', fnc=main))
+			return list
+		else:
+			if screenwidth and screenwidth == 1920:
+				return [PluginDescriptor(name="KravenFHD", description=_("Configuration tool for KravenFHD"), where = PluginDescriptor.WHERE_PLUGINMENU, icon='pluginfhd.png', fnc=main)]
+			else:
+				return [PluginDescriptor(name="KravenFHD", description=_("Configuration tool for KravenFHD"), where = PluginDescriptor.WHERE_PLUGINMENU, icon='plugin.png', fnc=main)]
+	except ImportError:
+		if screenwidth and screenwidth == 1920:
+			return [PluginDescriptor(name="KravenFHD", description=_("Configuration tool for KravenFHD"), where = PluginDescriptor.WHERE_PLUGINMENU, icon='pluginfhd.png', fnc=main)]
+		else:
+			return [PluginDescriptor(name="KravenFHD", description=_("Configuration tool for KravenFHD"), where = PluginDescriptor.WHERE_PLUGINMENU, icon='plugin.png', fnc=main)]
