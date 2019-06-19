@@ -26,6 +26,12 @@ def main(session, **kwargs):
 		import traceback
 		traceback.print_exc()
 
+def main_menu(menuid):
+	if menuid == "system":
+		return [("KravenFHD", main, _("Configuration tool for KravenFHD"), 27)]
+	else:
+		return []
+
 def Plugins(**kwargs):
 	screenwidth = getDesktop(0).size().width()
 	try:
