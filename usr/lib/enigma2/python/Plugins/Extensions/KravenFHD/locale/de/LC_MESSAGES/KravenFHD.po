@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenFHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2019-06-10 18:10+0200\n"
+"PO-Revision-Date: 2019-06-21 20:09+0200\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -1813,6 +1813,10 @@ msgstr "ohne Sendungsbeschreibung"
 #: KravenFHD.py
 msgid "Choose from different styles to display SplitScreen."
 msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für 'SplitScreen'."
+
+#: KravenFHD.py
+msgid "Choose from different styles to display FileCommander."
+msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für 'FileCommander'."
 
 #: KravenFHD.py
 msgid "Choose from different styles to display EPGSelection."

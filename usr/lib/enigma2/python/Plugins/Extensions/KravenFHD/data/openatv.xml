@@ -1657,47 +1657,6 @@ self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
     <constant-widget name="OKExit"/>
     <!--<text="MultiBootSelector" position="105,0" />-->
   </screen>
-  <!-- FileCommanderScreen -->
-  <screen backgroundColor="transparent" name="FileCommanderScreen" position="0,0" size="1920,1080" flags="wfNoBorder">
-	<widget source="Title" render="Label" position="63,18" size="1500,69" backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="center" />
-	<widget backgroundColor="Kravenbg" name="list_left_head1" foregroundColor="KravenFont2" position="63,120" size="870,82" font="Regular;32" transparent="1" />
-	<widget backgroundColor="Kravenbg" source="list_left_head2" render="Listbox" foregroundColor="KravenFont2" position="60,214" size="873,41" selectionDisabled="1" transparent="1" >
-	  <convert type="TemplatedMultiContent">
-					{"template": [
-						MultiContentEntryText(pos = (3, 2), size = (240, 41), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
-						MultiContentEntryText(pos = (255, 0), size = (186, 41), font = 0, flags = RT_HALIGN_LEFT, text = 11), # index 11 is the scaled size
-						MultiContentEntryText(pos = (453, 0), size = (420, 41), font = 0, flags = RT_HALIGN_RIGHT, text = 13), # index 13 is the modification time
-						],
-						"fonts": [gFont("Regular", 32)],
-						"itemHeight": 45,
-						"selectionEnabled": False
-					}
-	  </convert>
-	</widget>
-	<widget backgroundColor="Kravenbg" name="list_right_head1" foregroundColor="KravenFont2" position="987,120" size="870,82" font="Regular;32" transparent="1" />
-	<widget backgroundColor="Kravenbg" source="list_right_head2" render="Listbox" foregroundColor="KravenFont2" position="984,214" size="873,41" selectionDisabled="1" transparent="1" >
-	  <convert type="TemplatedMultiContent">
-					{"template": [
-						MultiContentEntryText(pos = (3, 2), size = (240, 41), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
-						MultiContentEntryText(pos = (255, 0), size = (186, 41), font = 0, flags = RT_HALIGN_LEFT, text = 11), # index 11 is the scaled size
-						MultiContentEntryText(pos = (453, 0), size = (420, 41), font = 0, flags = RT_HALIGN_RIGHT, text = 13), # index 13 is the modification time
-						],
-						"fonts": [gFont("Regular", 32)],
-						"itemHeight": 45,
-						"selectionEnabled": False
-					}
-	  </convert>
-	</widget>
-	<widget backgroundColor="Kravenbg" name="list_left" foregroundColor="KravenFont1" position="63,276" size="870,585" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
-	<widget backgroundColor="Kravenbg" name="list_right" foregroundColor="KravenFont1" position="987,276" size="870,585" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
-	<widget backgroundColor="Kravenbg" name="sort_left" position="63,882" size="870,41" font="Regular;32" foregroundColor="KravenFont2" halign="center" transparent="1" />
-	<widget backgroundColor="Kravenbg" name="sort_right" position="987,882" size="870,41" font="Regular;32" foregroundColor="KravenFont2" halign="center" transparent="1" />
-	<constant-widget name="Background"/>
-	<constant-widget name="Colorbuttons"/>
-    <constant-widget name="NameRedGreenYellowBlue"/>
-	<constant-widget name="MenuOKExit"/>
-    <!--<text="FileCommanderScreen" position="105,0" />-->
-  </screen>
   <!-- FileCommanderContextMenu -->
   <screen name="FileCommanderContextMenu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent" >
 	<widget backgroundColor="Kravenbg3" name="menu" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />

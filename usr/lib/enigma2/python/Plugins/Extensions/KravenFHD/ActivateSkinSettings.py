@@ -989,6 +989,11 @@ config.plugins.KravenFHD.SplitScreen = ConfigSelection(default="splitscreen1", c
 				("splitscreen2", _("with description"))
 				])
 
+config.plugins.KravenFHD.FileCommander = ConfigSelection(default="filecommander-hor", choices = [
+				("filecommander-hor", _("horizontal")),
+				("filecommander-ver", _("vertical"))
+				])
+
 config.plugins.KravenFHD.TimerEditScreen = ConfigSelection(default="timer-standard", choices = [
 				("timer-standard", _("standard layout")),
 				("timer-medium", _("medium font with EPG Info")),
@@ -3320,6 +3325,10 @@ class ActivateSkinSettings:
 		### SplitScreen
 		if self.E2DistroVersion == "VTi":
 			self.appendSkinFile(self.daten + config.plugins.KravenFHD.SplitScreen.value + ".xml")
+
+		### FileCommander
+		if self.E2DistroVersion == "openatv":
+			self.appendSkinFile(self.daten + config.plugins.KravenFHD.FileCommander.value + ".xml")
 
 		### TimerEditScreen
 		if self.E2DistroVersion == "VTi":

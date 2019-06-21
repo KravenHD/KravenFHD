@@ -1029,6 +1029,11 @@ config.plugins.KravenFHD.SplitScreen = ConfigSelection(default="splitscreen1", c
 				("splitscreen2", _("with description"))
 				])
 
+config.plugins.KravenFHD.FileCommander = ConfigSelection(default="filecommander-hor", choices = [
+				("filecommander-hor", _("horizontal")),
+				("filecommander-ver", _("vertical"))
+				])
+
 config.plugins.KravenFHD.TimerEditScreen = ConfigSelection(default="timer-standard", choices = [
 				("timer-standard", _("standard layout")),
 				("timer-medium", _("medium font with EPG Info")),
@@ -1622,9 +1627,9 @@ class KravenFHD(ConfigListScreen, Screen):
 		if self.E2DistroVersion == "VTi":
 			list.append(getConfigListEntry(_("SplitScreen"), config.plugins.KravenFHD.SplitScreen, _("Choose from different styles to display SplitScreen.")))
 		elif self.E2DistroVersion == "openatv":
-			list.append(getConfigListEntry(_("SplitScreen"), config.plugins.KravenFHD.ATVna, _("  ")))
+			list.append(getConfigListEntry(_("FileCommander"), config.plugins.KravenFHD.FileCommander, _("Choose from different styles to display FileCommander.")))
 		elif self.E2DistroVersion == "teamblue":
-			list.append(getConfigListEntry(_("SplitScreen"), config.plugins.KravenFHD.TBna, _("  ")))
+			emptyLines+=1
 		for i in range(emptyLines+1):
 			list.append(getConfigListEntry(_(" "), ))
 		
@@ -5043,6 +5048,10 @@ class KravenFHD(ConfigListScreen, Screen):
 		### SplitScreen
 		if self.E2DistroVersion == "VTi":
 			self.appendSkinFile(self.daten + config.plugins.KravenFHD.SplitScreen.value + ".xml")
+
+		### FileCommander
+		if self.E2DistroVersion == "openatv":
+			self.appendSkinFile(self.daten + config.plugins.KravenFHD.FileCommander.value + ".xml")
 
 		### TimerEditScreen
 		if self.E2DistroVersion == "VTi":
