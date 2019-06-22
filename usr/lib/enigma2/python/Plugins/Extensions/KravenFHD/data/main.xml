@@ -787,7 +787,7 @@
     <!--<text="PluginBrowser" position="105,0" />-->
   </screen>
   <!-- NumericalTextInputHelpDialog -->
-  <screen backgroundColor="Kravenbg2" flags="wfNoBorder" name="NumericalTextInputHelpDialog" position="0,0" size="392,393" zPosition="98">
+  <screen backgroundColor="Kravenbg2" flags="wfNoBorder" name="NumericalTextInputHelpDialog" position="1350,520" size="392,393" zPosition="98">
     <eLabel backgroundColor="KravenBorder" position="0,0" size="390,3" transparent="0" zPosition="9" />
     <eLabel backgroundColor="KravenBorder" position="0,0" size="3,393" transparent="0" zPosition="9" />
     <eLabel backgroundColor="KravenBorder" position="389,0" size="3,393" transparent="0" zPosition="9" />
