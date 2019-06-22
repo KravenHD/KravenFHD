@@ -18,8 +18,8 @@
     <widget alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_rec_on.png" position="540,1020" render="Pixmap" size="65,33" source="session.RecordState" zPosition="5">
       <convert type="ConditionalShowHide" />
     </widget>
-    <ePixmap pixmap="KravenFHD/global-icons/ico_dolby_off.png" alphatest="blend" position="315,1020" size="65,33" zPosition="1" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="KravenFHD/global-icons/ico_dolby_on.png" alphatest="blend" position="315,1020" size="65,33" zPosition="2">
+    <ePixmap pixmap="KravenFHD/infobar-icons/ico_dolby_off.png" alphatest="blend" position="315,1020" size="65,33" zPosition="1" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="KravenFHD/infobar-icons/ico_dolby_on.png" alphatest="blend" position="315,1020" size="65,33" zPosition="2">
       <convert type="ServiceInfo">IsMultichannel</convert>
       <convert type="ConditionalShowHide" />
     </widget>
