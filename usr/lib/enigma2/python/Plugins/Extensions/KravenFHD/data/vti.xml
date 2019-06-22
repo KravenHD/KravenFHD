@@ -6,17 +6,6 @@
     <constant-widget name="Exit"/>
     <!--<text="About" position="105,0" />-->
   </screen>
- <!-- ChoiceBox -->
-  <screen name="ChoiceBox" position="465,164" size="990,752" title="Input" flags="wfNoBorder" backgroundColor="Kravenbg">
-    <widget backgroundColor="Kravenbg" source="Title" render="Label" font="Regular2;38" foregroundColor="KravenFont2" position="30,12" size="840,48" halign="left" valign="center" noWrap="1" transparent="1" />
-	<widget backgroundColor="Kravenbg" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="30,67" size="840,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
-	<widget backgroundColor="Kravenbg" name="text" position="30,616" size="840,123" font="Regular2;32" foregroundColor="KravenFont2" transparent="1" />
-  </screen>
- <!-- ExtensionsList -->
-  <screen name="ExtensionsList" position="510,230" size="900,620" title="Input" flags="wfNoBorder" backgroundColor="Kravenbg">
-    <eLabel backgroundColor="Kravenbg" text="Please choose an extension..." font="Regular2;38" foregroundColor="KravenFont2" position="30,12" size="840,48" halign="left" valign="center" noWrap="1" transparent="1" />
-	<widget backgroundColor="Kravenbg" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="30,67" size="840,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
-  </screen>
   <!-- Animation Setup -->
   <screen name="AnimationSetupScreen" position="0,0" size="1920,1080" title="Animation Setup" flags="wfNoBorder" backgroundColor="transparent">
 	<eLabel text="Animation Setup" position="105,18" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
