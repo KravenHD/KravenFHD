@@ -2405,6 +2405,10 @@ class ActivateSkinSettings:
 			self.skinSearchAndReplace.append(['<!--ChannellistSingleEpgList', '<widget'])
 			self.skinSearchAndReplace.append(['ChannellistSingleEpgList-->', 'widget>'])
 
+		### NumericalTextInputHelpDialog (HelpWindow)
+		if self.E2DistroVersion in ("VTi","teamblue"):
+			self.skinSearchAndReplace.append(['<widget name="HelpWindow" position="1350,520" size="392,393" zPosition="98" transparent="1" alphatest="blend" />', ' '])
+
 		### Header
 		if self.E2DistroVersion == "teamblue":
 			self.skinSearchAndReplace.append(['<parameter name="VirtualKeyboard" value="67" />', '<parameter name="VirtualKeyboard" value="67,67" />'])
