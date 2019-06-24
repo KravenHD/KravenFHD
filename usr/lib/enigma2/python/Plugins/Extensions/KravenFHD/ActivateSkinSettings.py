@@ -855,8 +855,14 @@ config.plugins.KravenFHD.IBtop = ConfigSelection(default="infobar-x2-z1_top2", c
 				("infobar-x2-z1_top", _("4 Tuner")),
 				("infobar-x2-z1_top3", _("8 Tuner"))
 				])
-				
+
 config.plugins.KravenFHD.Infobox = ConfigSelection(default="sat", choices = [
+				("sat", _("Tuner/Satellite + SNR")),
+				("cpu", _("CPU + Load")),
+				("temp", _("Temperature + Fan"))
+				])
+				
+config.plugins.KravenFHD.Infobox2 = ConfigSelection(default="sat", choices = [
 				("sat", _("Tuner/Satellite + SNR")),
 				("db", _("Tuner/Satellite + dB")),
 				("cpu", _("CPU + Load")),
@@ -2541,20 +2547,34 @@ class ActivateSkinSettings:
 
 		### Infobox
 		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x2","infobar-style-z1","infobar-style-zz1","infobar-style-zz4","infobar-style-zzz1"):
-			if config.plugins.KravenFHD.Infobox.value == "cpu":
-				self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="  L:"'])
-				self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
-				self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
-				self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDLayoutInfo">LoadAvg'])
-				self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDCpuUsage">$0'])
-			elif config.plugins.KravenFHD.Infobox.value == "temp":
-				self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="U:"'])
-				self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
-				self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
-				self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDTempFanInfo">FanInfo'])
-				self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDTempFanInfo">TempInfo'])
-			elif config.plugins.KravenFHD.Infobox.value == "db":
-				self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert  type="KravenFHDFrontendInfo">SNRdB'])
+			if self.E2DistroVersion == "VTi":
+				if config.plugins.KravenFHD.Infobox.value == "cpu":
+					self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="  L:"'])
+					self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
+					self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
+					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDLayoutInfo">LoadAvg'])
+					self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDCpuUsage">$0'])
+				elif config.plugins.KravenFHD.Infobox.value == "temp":
+					self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="U:"'])
+					self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
+					self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
+					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDTempFanInfo">FanInfo'])
+					self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDTempFanInfo">TempInfo'])
+			elif self.E2DistroVersion in ("openatv","teamblue"):
+				if config.plugins.KravenFHD.Infobox2.value == "cpu":
+					self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="  L:"'])
+					self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
+					self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
+					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDLayoutInfo">LoadAvg'])
+					self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDCpuUsage">$0'])
+				elif config.plugins.KravenFHD.Infobox2.value == "temp":
+					self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="U:"'])
+					self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
+					self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
+					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDTempFanInfo">FanInfo'])
+					self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDTempFanInfo">TempInfo'])
+				elif config.plugins.KravenFHD.Infobox2.value == "db":
+					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert  type="KravenFHDFrontendInfo">SNRdB'])
 
 		### Record State
 		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-zz1","infobar-style-zz4","infobar-style-zzz1"):
