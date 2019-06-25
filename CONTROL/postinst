@@ -1,13 +1,30 @@
 #!/bin/sh
-if [ -d /tmp/graphics ]; then
-    mv -f /tmp/graphics/*.* /usr/share/enigma2/KravenFHD/graphics
+if [ -f /tmp/kravenfhdskin ]; then
+    mv -f /tmp/kravenfhdskin /usr/share/enigma2/KravenFHD/skin.xml
 fi
-if [ -f /tmp/skin-user.xml ]; then
-    mv -f /tmp/skin-user.xml /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data
+if [ -d /tmp/graphicsfhd ]; then
+    mv -f /tmp/graphicsfhd/* /usr/share/enigma2/KravenFHD/graphics/
 fi
-if [ -f /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/plugin.py ]; then
-    wget -O /dev/null 'http://127.0.0.1/web/message?type=1&text=KravenFHD%20wurde%20erfolgreich%20installiert.%0A%0AZur%20Nutzung%20rufen%20Sie%20das%20Plugin%20auf,%20speichern%20Ihre%20Einstellungen%0Aund%20starten%20die%20Oberfl%C3%A4che%20neu.&timeout=13'
+if [ -f /tmp/fhd-skin-user.xml ]; then
+    mv -f /tmp/fhd-skin-user.xml /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/skin-user.xml
 fi
-echo "                                                          "
-echo "             ...Skin successful installed.                "
-echo "                                                          "
+if [ -f /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/plugin.py* ]; then
+    wget -q -O /dev/null 'http://127.0.0.1/web/message?type=1&text=KravenFHD%20wurde%20erfolgreich%20installiert.%0A%0AZur%20Nutzung%20rufen%20Sie%20das%20Plugin%20auf,%20speichern%20Ihre%20Einstellungen%0Aund%20starten%20die%20Oberfl%C3%A4che%20neu.&timeout=13' || true
+fi
+echo " .##....##.########.....###....##.....##.########.##....## "
+echo " .##...##..##.....##...##.##...##.....##.##.......###...## "
+echo " .##..##...##.....##..##...##..##.....##.##.......####..## "
+echo " .#####....########..##.....##.##.....##.######...##.##.## "
+echo " .##..##...##...##...#########..##...##..##.......##..#### "
+echo " .##...##..##....##..##.....##...##.##...##.......##...### "
+echo " .##....##.##.....##.##.....##....###....########.##....## "
+echo " .........................................................."
+echo "               .########..##.....##..######....            "
+echo "               .##........##.....##..##....##..            "
+echo "               .##........##.....##..##.....##.            "
+echo "               .######....#########..##.....##.            "
+echo "               .##........##.....##..##.....##.            "
+echo "               .##........##.....##..##....##..            "
+echo "               .##........##.....##..######....            "
+echo "                                                           "
+echo "              ...Skin successful installed.                "

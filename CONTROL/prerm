@@ -1,4 +1,17 @@
 #!/bin/sh
 echo "                                                           "
-echo "        The Skin KravenFHD is now being removed...           "
+echo "        The Skin KravenFHD is now being removed...         "
 echo "                                                           "
+if [ -e /usr/share/enigma2/KravenFHD/skin.xml ]; then
+    cp /usr/share/enigma2/KravenFHD/skin.xml /tmp/kravenfhdskin
+fi
+if [ -d /usr/share/enigma2/KravenFHD/graphics ]; then
+    mkdir /tmp/graphicsfhd
+    cp /usr/share/enigma2/KravenFHD/graphics/* /tmp/graphicsfhd/
+fi
+if [ -f /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/skin-user.xml ]; then
+    cp /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/skin-user.xml /tmp/fhd-skin-user.xml
+fi
+if [ -f /usr/share/enigma2/KravenFHD/skin.xml ]; then
+    rm -rf /usr/share/enigma2/KravenFHD/skin.xml
+fi
