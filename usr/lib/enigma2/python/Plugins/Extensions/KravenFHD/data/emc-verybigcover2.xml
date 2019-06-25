@@ -1,24 +1,33 @@
   <!-- /* EMC VeryBigCover -->
   <screen name="EMCSelection" position="0,0" size="1920,1080" title="Enhanced Movie Center" flags="wfNoBorder" backgroundColor="transparent">
-	<eLabel text="Enhanced Movie Center" position="63,18" size="1500,69" backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
-	<widget name="list" position="63,153" size="1132,528" itemHeight="48" CoolIconPos="6" CoolIconHPos="9" CoolIconSize="30,30" CoolFont="Regular;34" CoolSelectFont="Regular;34" CoolDateFont="Regular;32" CoolProgressPos="677" CoolBarPos="677" CoolBarHPos="12" CoolBarSize="75,15" CoolBarSizeSa="165,24" CoolPiconPos="52" CoolPiconHPos="6" CoolPiconWidth="60" CoolPiconHeight="36" CoolMoviePiconPos="130" CoolMoviePiconSize="524" CoolMoviePos="52" CoolMovieSize="602" CoolFolderSize="825" CoolDatePos="842" CoolDateWidth="280" CoolTitleColor="1" CoolDateColor="1" CoolHighlightColor="0" DefaultColor="KravenFont1" UnwatchedColor="unwatched" WatchingColor="watching" FinishedColor="finished" RecordingColor="red" BackColorSel="KravenEMCSelection" FrontColorSel="KravenEMCSelFont" backgroundColorSelected="KravenEMCSelection" foregroundColorSelected="KravenEMCSelFont" backgroundColor="Kravenbg" foregroundColor="KravenFont1" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
-	<widget source="Service" render="Label" position="72,105" size="678,40" font="Regular;33" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" halign="left">
+    <eLabel backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" position="63,18" size="1500,69" text="Enhanced Movie Center" transparent="1" />
+    <widget source="Service" render="Label" position="72,105" size="711,40" font="Regular;33" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" halign="left">
 	  <convert type="KravenFHDDiskSpace">path</convert>
-	</widget>
-	<widget source="Service" render="Label" position="757,105" size="438,40" font="Regular;33" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" halign="right">
+    </widget>
+    <widget source="Service" render="Label" position="791,105" size="438,40" font="Regular;33" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" halign="right">
 	  <convert type="KravenFHDDiskSpace">both</convert>
-	</widget>
-	<widget source="Service" render="Label" position="1302,103" size="568,87" font="Regular;36" halign="center" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1">
-	  <convert type="EMCEventName">Name</convert>
-	</widget>
-	<widget source="Service" render="Label" position="1302,198" size="568,40" font="Regular;33" halign="center" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1">
-	  <convert type="EMCMovieInfo">RecordServiceName</convert>
-	</widget>
-	<widget name="Cover" position="1305,261" size="561,691" zPosition="4" backgroundColor="Kravenbg" alphatest="on" transparent="0" />
+    </widget>
+    <widget name="list" position="63,153" size="1165,588" itemHeight="42" CoolIconPos="6" CoolIconHPos="6" CoolIconSize="30,30" CoolFont="Regular;30" CoolSelectFont="Regular;30" CoolDateFont="Regular;30" CoolProgressPos="710" CoolBarPos="710" CoolBarHPos="12" CoolBarSize="75,15" CoolBarSizeSa="165,24" CoolPiconPos="52" CoolPiconHPos="3" CoolPiconWidth="60" CoolPiconHeight="36" CoolMoviePiconPos="130" CoolMoviePiconSize="557" CoolMoviePos="52" CoolMovieSize="635" CoolFolderSize="825" CoolDatePos="875" CoolDateWidth="280" CoolTitleColor="0" CoolDateColor="0" CoolHighlightColor="0" DefaultColor="KravenFont1" UnwatchedColor="unwatched" WatchingColor="watching" FinishedColor="finished" RecordingColor="red" BackColorSel="KravenEMCSelection" FrontColorSel="KravenEMCSelFont" backgroundColorSelected="KravenEMCSelection" foregroundColorSelected="KravenEMCSelFont" backgroundColor="Kravenbg" foregroundColor="KravenFont1" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget name="Cover" position="1311,105" size="513,769" zPosition="4" backgroundColor="Kravenbg" alphatest="on" transparent="0" />
+    <widget source="Service" render="Label" position="1311,888" size="120,36" font="Regular;30" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" halign="left">
+      <convert type="EMCServiceTime">Duration</convert>
+      <convert type="EMCClockToText">AsLength</convert>
+    </widget>
+    <widget source="Service" render="Label" position="1440,888" size="384,36" font="Regular;30" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" halign="right">
+      <convert type="EMCServiceTime">StartTime</convert>
+      <convert type="EMCClockToText">Format:%A, %d. %b %Y</convert>
+    </widget>
+    <widget source="Service" render="Label" position="1311,930" size="372,36" font="Regular;30" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" halign="left">
+      <convert type="EMCMovieInfo">RecordServiceName</convert>
+    </widget>
+    <widget source="Service" render="Label" position="1680,930" size="142,36" font="Regular;30" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" halign="right">
+      <convert type="EMCMovieInfo">FileSize</convert>
+    </widget>
+    <widget name="wait" position="64,562" size="1797,75" zPosition="1" font="Regular;48" foregroundColor="KravenFont1" backgroundColor="Kravenbg" halign="center" valign="center" />
 	<!-- globalbg */-->
 	<constant-widget name="emcvbc233"/>
 	<constant-widget name="EMCSelection-template"/>
     <constant-widget name="gradient-emc"/>
-	<!--<text="EMCSelection - very big Cover2" position="63,0" />-->
+    <!--<text="EMCSelection - very big Cover2" position="63,0" />-->
   </screen>
   <!-- EMC VeryBigCover */-->
