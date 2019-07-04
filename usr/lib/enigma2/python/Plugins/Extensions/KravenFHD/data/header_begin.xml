@@ -34,7 +34,7 @@
     <color name="KravenIBFont1" value="#00ffffff" />
     <color name="KravenIBFont2" value="#00F0A30A" />
     <color name="KravenName" value="#00ffffff" />
-    <color name="KravenNamebg" value="#A01B1775" />
+    <color name="KravenNamebg" value="#7F7F7F7F" />
     <color name="KravenECMbg" value="#F1325698" />
     <color name="KravenButton" value="#00ffffff" />
     <color name="KravenAndroid" value="#00ffffff" />

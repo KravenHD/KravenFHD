@@ -3,3 +3,6 @@
   <screen name="TimeshiftState" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
     <ePixmap pixmap="KravenFHD/backg.png" position="0,0" size="1920,1080" zPosition="-9"/>
     <!-- Infobar ibar -->
+	<!-- Infobar clockstyle -->
+	<!-- Infobar channelname -->
+	<!-- Infobar ecminfo -->

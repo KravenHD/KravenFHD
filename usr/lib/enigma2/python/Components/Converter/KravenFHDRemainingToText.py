@@ -1,5 +1,21 @@
 from Components.Converter.Converter import Converter
 from Components.Element import cached
+from os import environ
+from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
+from Components.Language import language
+import gettext
+
+lang = language.getLanguage()
+environ["LANGUAGE"] = lang[:2]
+gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
+gettext.textdomain("enigma2")
+gettext.bindtextdomain("KravenFHD", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/KravenFHD/locale/"))
+
+def _(txt):
+	t = gettext.dgettext("KravenFHD", txt)
+	if t == txt:
+		t = gettext.gettext(txt)
+	return t
 
 class KravenFHDRemainingToText(Converter, object):
 	DEFAULT = 0
@@ -7,6 +23,7 @@ class KravenFHDRemainingToText(Converter, object):
 	NO_SECONDS = 2
 	IN_SECONDS = 3
 	ONLY_MINUTES = 4
+	REMAINING_MINUTES = 5
 
 	def __init__(self, type):
 		Converter.__init__(self, type)
@@ -15,9 +32,11 @@ class KravenFHDRemainingToText(Converter, object):
 		elif type == "NoSeconds":
 			self.type = self.NO_SECONDS
 		elif type == "InSeconds":
-			self.type = self.IN_SECONDS	
+			self.type = self.IN_SECONDS
 		elif type == "OnlyMinutes":
-			self.type = self.ONLY_MINUTES	
+			self.type = self.ONLY_MINUTES
+		elif type == "RemainingMinutes":
+			self.type = self.REMAINING_MINUTES
 		else:
 			self.type = self.DEFAULT
 
@@ -49,6 +68,11 @@ class KravenFHDRemainingToText(Converter, object):
 				return "+%d" % (remaining / 60 + 1)
 			else:
 				return "%d" % (duration / 60)
+		elif self.type == self.REMAINING_MINUTES:
+			if remaining is not None:
+				return _('remaining: ') + "%d min" % (remaining / 60 + 1)
+			else:
+				return "%d min" % (duration / 60)
 		elif self.type == self.DEFAULT:
 			if remaining is not None:
 				return "%d min" % (remaining / 60 + 1)

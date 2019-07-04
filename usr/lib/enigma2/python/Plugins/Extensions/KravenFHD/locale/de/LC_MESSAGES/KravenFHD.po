@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenFHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2019-06-21 20:09+0200\n"
+"PO-Revision-Date: 2019-07-03 19:45+0200\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -1417,6 +1417,10 @@ msgid "INFOBAR-CONTENTS ________________________________________________________
 msgstr "INFOLEISTEN-INHALTE _____________________________________________________________"
 
 #: KravenFHD.py
+msgid "VARIOUS SETTINGS ________________________________________________________________"
+msgstr "SONSTIGE EINSTELLUNGEN ________________________________________________________________"
+
+#: KravenFHD.py
 msgid "Infobar"
 msgstr "Infoleiste"
 
@@ -1875,8 +1879,8 @@ msgid "antialiasing"
 msgstr "Kantenglättung"
 
 #: KravenFHD.py
-msgid "debug"
-msgstr "Debug"
+msgid "various"
+msgstr "Sonstiges"
 
 #: KravenFHD.py
 msgid "Show ECM Infos"
@@ -1967,8 +1971,8 @@ msgid "This sections offers all antialiasing settings. Distortions or color fram
 msgstr "In diesem Abschnitt finden Sie alle Einstellungen zur Kantenglättung. Hier können Sie Störungen oder farbige Rahmen um Schriften verringern."
 
 #: KravenFHD.py
-msgid "This sections offers all debug settings."
-msgstr "In diesem Abschnitt finden Sie alle Debug-Einstellungen."
+msgid "This sections offers various settings."
+msgstr "In diesem Abschnitt finden Sie sonstige Einstellungen."
 
 #: KravenFHD.py
 msgid "record blink"
@@ -2515,12 +2519,12 @@ msgid "city:"
 msgstr "Ort:"
 
 #: KravenFHD.py
-msgid "Icon-Font V-Position"
-msgstr "Symbol-Schrift V-Position"
+msgid "Icon-Font vertical position"
+msgstr "Symbol-Schrift vertikal Position"
 
 #: KravenFHD.py
-msgid "Choose the vertical position of Icon-Fonts for infobars and players."
-msgstr "Wählen Sie die vertikale Position der Symbol-Schriften für die Infoleisten und Wiedergabe."
+msgid "Correct the vertical font position within some icons for the infobars and players."
+msgstr "Korrigieren Sie die vertikale Schrift-Position innerhalb einiger Symbole für die Infoleisten und Wiedergabe."
 
 #: KravenFHDTextTranslator.py
 msgid "Birthday"
@@ -2545,3 +2549,11 @@ msgstr "VTi-EPGListe"
 #: KravenFHD.py
 msgid "Choose whether use VTi-EPGList in channellist or not."
 msgstr "Wählen Sie, ob Sie die VTi-EPGListe in der Kanalliste verwenden möchten oder nicht."
+
+#: KravenFHD.py
+msgid "not available with selected Infobar-Style"
+msgstr "nicht verfügbar mit dem ausgewählten Infoleisten-Stil"
+
+#: KravenFHD.py
+msgid "remaining: "
+msgstr "noch "

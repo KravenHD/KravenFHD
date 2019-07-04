@@ -1,5 +1,0 @@
-<!--/* Channelname -->
-  <widget font="Regular;60" backgroundColor="KravenNamebg" halign="left" noWrap="1" foregroundColor="KravenName" position="30,765" size="1860,90" render="Label" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
-    <convert type="KravenFHDServiceName2">%n - %N</convert>
-  </widget>
-<!-- Channelname */-->

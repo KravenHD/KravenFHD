@@ -1556,7 +1556,7 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MultiBootSelector" position="0,0" size="1920,1080" title="Multiboot Image Selector">
     <widget backgroundColor="Kravenbg3" name="config" position="105,120" size="1062,540" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
     <widget backgroundColor="Kravenbg3" source="options" render="Label" position="105,690" size="1062,123" font="Regular;32" foregroundColor="KravenFont1" halign="center" valign="center" transparent="1" />
-    <widget backgroundColor="Kravenbg3" source="description" render="Label" position="105,840" size="708,82" font="Regular2;32" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg3" source="description" render="Label" position="105,840" size="1062,82" font="Regular2;32" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
     <constant-widget name="Title-big"/>
 	<!-- Logo -->
     <constant-widget name="Colorbuttons"/>

@@ -1,5 +1,0 @@
-<!-- /* ECM-Info -->
-<widget source="session.CurrentService" render="Label" position="409,1039" size="604,33" foregroundColor="KravenECM" font="Regular;24" halign="left" valign="top" backgroundColor="KravenIBbg" transparent="1" zPosition="5">
-  <convert type="KravenFHDECMLine">ShortReader,FTAVisible</convert>
-</widget>
-<!-- ECM-Info */ -->

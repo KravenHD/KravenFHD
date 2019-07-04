@@ -1,0 +1,443 @@
+  <!-- IB Standard -->
+  <widget alphatest="blend" position="24,714" size="517,310" render="Picon" source="session.CurrentService" transparent="1" zPosition="4">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont1" halign="left" noWrap="1" position="585,793" render="Label" size="90,40" source="session.Event_Now" transparent="1" zPosition="1">
+    <convert type="KravenFHDEventTime">StartTime</convert>
+    <convert type="KravenFHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont1" halign="center" noWrap="1" position="675,793" size="15,40" text="-" transparent="1" zPosition="1" />
+  <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont1" halign="right" noWrap="1" position="690,793" render="Label" size="90,40" source="session.Event_Now" transparent="1" zPosition="1">
+    <convert type="KravenFHDEventTime">EndTime</convert>
+    <convert type="KravenFHDClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.Event_Now" render="KravenFHDEmptyEpg" foregroundColor="KravenIBFont1" font="Regular;45" position="820,784" size="747,55" halign="left" transparent="1" zPosition="1">
+    <convert type="KravenFHDEventName">Name</convert>
+  </widget>
+  <widget position="585,853" render="Progress" size="982,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress655.png">
+    <convert type="KravenFHDEventTime">Progress</convert>
+  </widget>
+  <eLabel position="585,856" size="982,1" backgroundColor="KravenLine" />
+  <widget source="session.CurrentService" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" font="Regular;33" halign="left" noWrap="1" position="585,873" size="300,40" transparent="1" zPosition="1">
+    <convert type="KravenFHDTextTranslator">runningsince</convert>
+  </widget>
+  <widget backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" font="Regular;33" halign="left" position="862,873" render="Label" size="225,40" source="session.Event_Now" transparent="1" zPosition="1">
+    <convert type="KravenFHDEventTime">RunTime</convert>
+    <convert type="KravenFHDRemainingToText">InMinutes</convert>
+  </widget>
+  <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont1" halign="right" position="1200,873" render="Label" size="367,40" source="session.Event_Now" transparent="1" zPosition="1">
+    <convert type="KravenFHDEventTime">Remaining</convert>
+    <convert type="KravenFHDRemainingToText">RemainingMinutes</convert>
+  </widget>
+  <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont2" halign="left" noWrap="1" position="585,931" render="Label" size="90,40" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="KravenFHDEventTime">StartTime</convert>
+    <convert type="KravenFHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont2" halign="center" noWrap="1" position="675,931" size="15,40" text="-" transparent="1" zPosition="1" />
+  <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont2" halign="right" noWrap="1" position="690,931" render="Label" size="90,40" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="KravenFHDEventTime">EndTime</convert>
+    <convert type="KravenFHDClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.Event_Next" render="KravenFHDEmptyEpg" foregroundColor="KravenIBFont2" font="Regular;45" position="820,922" size="586,55" halign="left" transparent="1" zPosition="1">
+    <convert type="KravenFHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont2" halign="right" position="1407,931" render="Label" size="160,40" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="KravenFHDEventTime">Duration</convert>
+    <convert type="KravenFHDClockToText">InMinutes</convert>
+  </widget>
+  <ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_crypt_off.png" position="24,1035" size="64,33" zPosition="1" />
+  <widget alphatest="blend" source="session.CurrentService" render="Pixmap" pixmap="KravenFHD/infobar-icons/ico_crypt_on.png" position="24,1035" size="64,33" zPosition="2">
+    <convert type="ServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_txt_off.png" position="99,1035" size="64,33" zPosition="1" />
+  <widget alphatest="blend" source="session.CurrentService" render="Pixmap" pixmap="KravenFHD/infobar-icons/ico_txt_on.png" position="99,1035" size="64,33" zPosition="2">
+    <convert type="ServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_hbbtv_off.png" position="174,1035" size="64,33" zPosition="1" />
+  <widget alphatest="blend" source="session.CurrentService" render="Pixmap" pixmap="KravenFHD/infobar-icons/ico_hbbtv_on.png" position="174,1035" size="64,33" zPosition="2">
+    <convert type="KravenFHDServiceInfoEX">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_sub_off.png" position="249,1035" size="64,33" zPosition="1" />
+  <widget alphatest="blend" source="session.CurrentService" render="Pixmap" pixmap="KravenFHD/infobar-icons/ico_sub_on.png" position="249,1035" size="64,33" zPosition="2">
+    <convert type="KravenFHDServiceInfoEX">SubtitlesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" source="session.CurrentService" render="Pixmap" pixmap="KravenFHD/infobar-icons/ico_dolby_off.png" position="324,1035" size="64,33" zPosition="1">
+    <convert type="KravenFHDDolby">Dolby_off</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" source="session.CurrentService" render="Pixmap" pixmap="KravenFHD/infobar-icons/ico_dolby_on.png" position="324,1035" size="64,33" zPosition="1">
+    <convert type="KravenFHDDolby">Dolby</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" source="session.CurrentService" render="Pixmap" pixmap="KravenFHD/infobar-icons/ico_dolby_51.png" position="324,1035" size="64,33" zPosition="1">
+    <convert type="KravenFHDDolby">Dolby51</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" source="session.CurrentService" render="Pixmap" pixmap="KravenFHD/infobar-icons/ico_dolby_20.png" position="324,1035" size="64,33" zPosition="1">
+    <convert type="KravenFHDDolby">Dolby20</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" source="session.CurrentService" render="Pixmap" pixmap="KravenFHD/infobar-icons/ico_sd.png" position="399,1035" size="64,33" zPosition="1">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">0,719</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" source="session.CurrentService" render="Pixmap" pixmap="KravenFHD/infobar-icons/ico_hd_on.png" position="399,1035" size="64,33" zPosition="1">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">720,1080</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" source="session.CurrentService" render="Pixmap" pixmap="KravenFHD/infobar-icons/ico_uhd.png" position="399,1035" size="64,33" zPosition="1">
+    <convert type="ServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">1081,5000</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_format_off.png" position="474,1035" size="64,33" zPosition="1" />
+  <widget alphatest="blend" source="session.CurrentService" render="Pixmap" pixmap="KravenFHD/infobar-icons/ico_format_on.png" position="474,1035" size="64,33" zPosition="2">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/aufloesung.png" position="549,1035" size="168,33" zPosition="1" />
+  <widget source="session.CurrentService" render="Label" size="159,33" font="Regular;27" halign="center" backgroundColor="KravenIBbg" position="553,1035" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" transparent="1">
+    <convert type="KravenFHDServiceInfoEX">Resolution</convert>
+  </widget>
+  <ePixmap pixmap="KravenFHD/infobar-icons/aufloesung2.png" position="727,1035" size="174,33" zPosition="1" alphatest="blend" />
+  <widget backgroundColor="KravenIBbg" font="Regular;27" position="731,1035" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" halign="left" size="80,33" render="Label" source="session.CurrentService" transparent="1">
+    <convert  type="KravenFHDServiceName2">OrbitalPos</convert>
+  </widget>
+  <widget render="Label" font="Regular;27" size="100,33" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" position="797,1035" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon"  source="session.FrontendStatus">
+    <convert  type="KravenFHDFrontendInfo">SNR</convert>
+  </widget>
+  <!--<eLabel text="  S:"  font="Regular;27" size="45,33" halign="left" backgroundColor="KravenIBbg" transparent="1" position="803,1035" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" />-->
+  <ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_rec_off.png" position="912,1035" size="64,33" zPosition="2" />
+  <widget alphatest="blend" source="session.RecordState" render="Pixmap" pixmap="KravenFHD/infobar-icons/ico_rec_on.png" position="912,1035" size="64,33" zPosition="2">
+    <convert type="ConditionalShowHide">recordblink</convert>
+  </widget>
+  
+  <!-- Tuner A -->
+  <ePixmap pixmap="KravenFHD/infobar-icons/tuner_empty2.png" position="987,1035" size="40,33" zPosition="1" alphatest="blend" />
+  <eLabel backgroundColor="KravenIBbg" text="A" font="Regular2;27" foregroundColor="KravenIcon" position="987,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="2" transparent="1" />
+  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="FixedLabel" text="A" font="Regular2;27" foregroundColor="#00CCCC00" position="987,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="3" transparent="1">
+	<convert type="TunerInfo">TunerUseMask</convert>
+	<convert type="ValueBitTest">1</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="A" font="Regular2;27" foregroundColor="#0000B400" position="987,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="4" transparent="1">
+	<convert type="KravenFHDFrontendInfo">NUMBER</convert>
+	<convert type="ValueRange">0,0</convert>
+	<convert type="ConditionalShowHide"/>
+  </widget>
+  <!--  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="A" font="Regular2;27" foregroundColor="#00FF0C00" position="987,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="5" transparent="1">
+    <convert type="KravenFHDFrontendInfo">REC_0</convert>
+    <convert type="ConditionalShowHide">tunerblink</convert>
+  </widget>  -->
+  
+  <!-- Tuner B -->
+  <ePixmap pixmap="KravenFHD/infobar-icons/tuner_empty2.png" position="1038,1035" size="40,33" zPosition="1" alphatest="blend" />
+  <eLabel backgroundColor="KravenIBbg" text="B" font="Regular2;27" foregroundColor="KravenIcon" position="1038,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="2" transparent="1" />
+  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="FixedLabel" text="B" font="Regular2;27" foregroundColor="#00CCCC00" position="1038,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="3" transparent="1">
+	<convert type="TunerInfo">TunerUseMask</convert>
+	<convert type="ValueBitTest">2</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="B" font="Regular2;27" foregroundColor="#0000B400" position="1038,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="4" transparent="1">
+	<convert type="KravenFHDFrontendInfo">NUMBER</convert>
+	<convert type="ValueRange">1,1</convert>
+	<convert type="ConditionalShowHide"/>
+  </widget>
+  <!--  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="B" font="Regular2;27" foregroundColor="#00FF0C00" position="1038,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="5" transparent="1">
+    <convert type="KravenFHDFrontendInfo">REC_1</convert>
+    <convert type="ConditionalShowHide">tunerblink</convert>
+  </widget>  -->
+  
+  <!-- Tuner C -->
+  <ePixmap pixmap="KravenFHD/infobar-icons/tuner_empty2.png" position="1089,1035" size="40,33" zPosition="1" alphatest="blend" />
+  <eLabel backgroundColor="KravenIBbg" text="C" font="Regular2;27" foregroundColor="KravenIcon" position="1089,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="2" transparent="1" />
+  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="FixedLabel" text="C" font="Regular2;27" foregroundColor="#00CCCC00" position="1089,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="3" transparent="1">
+	<convert type="TunerInfo">TunerUseMask</convert>
+	<convert type="ValueBitTest">4</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="C" font="Regular2;27" foregroundColor="#0000B400" position="1089,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="4" transparent="1">
+	<convert type="KravenFHDFrontendInfo">NUMBER</convert>
+	<convert type="ValueRange">2,2</convert>
+	<convert type="ConditionalShowHide"/>
+  </widget>
+  <!--  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="C" font="Regular2;27" foregroundColor="#00FF0C00" position="1089,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="5" transparent="1">
+    <convert type="KravenFHDFrontendInfo">REC_2</convert>
+    <convert type="ConditionalShowHide">tunerblink</convert>
+  </widget>  -->
+  
+  <!-- Tuner D -->
+  <ePixmap pixmap="KravenFHD/infobar-icons/tuner_empty2.png" position="1140,1035" size="40,33" zPosition="1" alphatest="blend" />
+  <eLabel backgroundColor="KravenIBbg" text="D" font="Regular2;27" foregroundColor="KravenIcon" position="1140,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="2" transparent="1" />
+  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="FixedLabel" text="D" font="Regular2;27" foregroundColor="#00CCCC00" position="1140,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="3" transparent="1">
+	<convert type="TunerInfo">TunerUseMask</convert>
+	<convert type="ValueBitTest">8</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="D" font="Regular2;27" foregroundColor="#0000B400" position="1140,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="4" transparent="1">
+	<convert type="KravenFHDFrontendInfo">NUMBER</convert>
+	<convert type="ValueRange">3,3</convert>
+	<convert type="ConditionalShowHide"/>
+  </widget>
+  <!--  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="D" font="Regular2;27" foregroundColor="#00FF0C00" position="1140,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="5" transparent="1">
+    <convert type="KravenFHDFrontendInfo">REC_3</convert>
+    <convert type="ConditionalShowHide">tunerblink</convert>
+  </widget>  -->
+  
+  <!-- Tuner E -->
+  <ePixmap pixmap="KravenFHD/infobar-icons/tuner_empty2.png" position="1191,1035" size="40,33" zPosition="1" alphatest="blend" />
+  <eLabel backgroundColor="KravenIBbg" text="E" font="Regular2;27" foregroundColor="KravenIcon" position="1191,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="2" transparent="1" />
+  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="FixedLabel" text="E" font="Regular2;27" foregroundColor="#00CCCC00" position="1191,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="3" transparent="1">
+	<convert type="TunerInfo">TunerUseMask</convert>
+	<convert type="ValueBitTest">16</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="E" font="Regular2;27" foregroundColor="#0000B400" position="1191,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="4" transparent="1">
+	<convert type="KravenFHDFrontendInfo">NUMBER</convert>
+	<convert type="ValueRange">4,4</convert>
+	<convert type="ConditionalShowHide"/>
+  </widget>
+  <!--  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="E" font="Regular2;27" foregroundColor="#00FF0C00" position="1191,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="5" transparent="1">
+    <convert type="KravenFHDFrontendInfo">REC_4</convert>
+    <convert type="ConditionalShowHide">tunerblink</convert>
+  </widget>  -->
+  
+  <!-- Tuner F -->
+  <ePixmap pixmap="KravenFHD/infobar-icons/tuner_empty2.png" position="1242,1035" size="40,33" zPosition="1" alphatest="blend" />
+  <eLabel backgroundColor="KravenIBbg" text="F" font="Regular2;27" foregroundColor="KravenIcon" position="1242,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="2" transparent="1" />
+  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="FixedLabel" text="F" font="Regular2;27" foregroundColor="#00CCCC00" position="1242,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="3" transparent="1">
+	<convert type="TunerInfo">TunerUseMask</convert>
+	<convert type="ValueBitTest">32</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="F" font="Regular2;27" foregroundColor="#0000B400" position="1242,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="4" transparent="1">
+	<convert type="KravenFHDFrontendInfo">NUMBER</convert>
+	<convert type="ValueRange">5,5</convert>
+	<convert type="ConditionalShowHide"/>
+  </widget>
+  <!--  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="F" font="Regular2;27" foregroundColor="#00FF0C00" position="1242,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="5" transparent="1">
+    <convert type="KravenFHDFrontendInfo">REC_5</convert>
+    <convert type="ConditionalShowHide">tunerblink</convert>
+  </widget>  -->
+  
+  <!-- Tuner G -->
+  <ePixmap pixmap="KravenFHD/infobar-icons/tuner_empty2.png" position="1293,1035" size="40,33" zPosition="1" alphatest="blend" />
+  <eLabel backgroundColor="KravenIBbg" text="G" font="Regular2;27" foregroundColor="KravenIcon" position="1293,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="2" transparent="1" />
+  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="FixedLabel" text="G" font="Regular2;27" foregroundColor="#00CCCC00" position="1293,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="3" transparent="1">
+	<convert type="TunerInfo">TunerUseMask</convert>
+	<convert type="ValueBitTest">64</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="G" font="Regular2;27" foregroundColor="#0000B400" position="1293,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="4" transparent="1">
+	<convert type="KravenFHDFrontendInfo">NUMBER</convert>
+	<convert type="ValueRange">6,6</convert>
+	<convert type="ConditionalShowHide"/>
+  </widget>
+  <!--  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="G" font="Regular2;27" foregroundColor="#00FF0C00" position="1293,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="5" transparent="1">
+    <convert type="KravenFHDFrontendInfo">REC_6</convert>
+    <convert type="ConditionalShowHide">tunerblink</convert>
+  </widget>  -->
+  
+  <!-- Tuner H -->
+  <ePixmap pixmap="KravenFHD/infobar-icons/tuner_empty2.png" position="1344,1035" size="40,33" zPosition="1" alphatest="blend" />
+  <eLabel backgroundColor="KravenIBbg" text="H" font="Regular2;27" foregroundColor="KravenIcon" position="1344,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="2" transparent="1" />
+  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="FixedLabel" text="H" font="Regular2;27" foregroundColor="#00CCCC00" position="1344,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="3" transparent="1">
+	<convert type="TunerInfo">TunerUseMask</convert>
+	<convert type="ValueBitTest">128</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="H" font="Regular2;27" foregroundColor="#0000B400" position="1344,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="4" transparent="1">
+	<convert type="KravenFHDFrontendInfo">NUMBER</convert>
+	<convert type="ValueRange">7,7</convert>
+	<convert type="ConditionalShowHide"/>
+  </widget>
+  <!--  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="H" font="Regular2;27" foregroundColor="#00FF0C00" position="1344,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="5" transparent="1">
+    <convert type="KravenFHDFrontendInfo">REC_7</convert>
+    <convert type="ConditionalShowHide">tunerblink</convert>
+  </widget>  -->
+  
+  <!-- Tuner I -->
+  <ePixmap pixmap="KravenFHD/infobar-icons/tuner_empty2.png" position="1395,1035" size="40,33" zPosition="1" alphatest="blend" />
+  <eLabel backgroundColor="KravenIBbg" text="I" font="Regular2;27" foregroundColor="KravenIcon" position="1395,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="2" transparent="1" />
+  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="FixedLabel" text="I" font="Regular2;27" foregroundColor="#00CCCC00" position="1395,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="3" transparent="1">
+	<convert type="TunerInfo">TunerUseMask</convert>
+	<convert type="ValueBitTest">256</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="I" font="Regular2;27" foregroundColor="#0000B400" position="1395,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="4" transparent="1">
+	<convert type="KravenFHDFrontendInfo">NUMBER</convert>
+	<convert type="ValueRange">8,8</convert>
+	<convert type="ConditionalShowHide"/>
+  </widget>
+  <!--  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="I" font="Regular2;27" foregroundColor="#00FF0C00" position="1395,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="5" transparent="1">
+    <convert type="KravenFHDFrontendInfo">REC_8</convert>
+    <convert type="ConditionalShowHide">tunerblink</convert>
+  </widget>  -->
+  
+  <!-- Tuner J -->
+  <ePixmap pixmap="KravenFHD/infobar-icons/tuner_empty2.png" position="1446,1035" size="40,33" zPosition="1" alphatest="blend" />
+  <eLabel backgroundColor="KravenIBbg" text="J" font="Regular2;27" foregroundColor="KravenIcon" position="1446,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="2" transparent="1" />
+  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="FixedLabel" text="J" font="Regular2;27" foregroundColor="#00CCCC00" position="1446,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="3" transparent="1">
+	<convert type="TunerInfo">TunerUseMask</convert>
+	<convert type="ValueBitTest">512</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="J" font="Regular2;27" foregroundColor="#0000B400" position="1446,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="4" transparent="1">
+	<convert type="KravenFHDFrontendInfo">NUMBER</convert>
+	<convert type="ValueRange">9,9</convert>
+	<convert type="ConditionalShowHide"/>
+  </widget>
+  <!--  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="J" font="Regular2;27" foregroundColor="#00FF0C00" position="1446,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="5" transparent="1">
+    <convert type="KravenFHDFrontendInfo">REC_9</convert>
+    <convert type="ConditionalShowHide">tunerblink</convert>
+  </widget>  -->
+  
+  <!-- Tuner K -->
+  <ePixmap pixmap="KravenFHD/infobar-icons/tuner_empty2.png" position="1497,1035" size="40,33" zPosition="1" alphatest="blend" />
+  <eLabel backgroundColor="KravenIBbg" text="K" font="Regular2;27" foregroundColor="KravenIcon" position="1497,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="2" transparent="1" />
+  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="FixedLabel" text="K" font="Regular2;27" foregroundColor="#00CCCC00" position="1497,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="3" transparent="1">
+	<convert type="TunerInfo">TunerUseMask</convert>
+	<convert type="ValueBitTest">1024</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="K" font="Regular2;27" foregroundColor="#0000B400" position="1497,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="4" transparent="1">
+	<convert type="KravenFHDFrontendInfo">NUMBER</convert>
+	<convert type="ValueRange">10,10</convert>
+	<convert type="ConditionalShowHide"/>
+  </widget>
+  <!--  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="K" font="Regular2;27" foregroundColor="#00FF0C00" position="1497,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="5" transparent="1">
+    <convert type="KravenFHDFrontendInfo">REC_10</convert>
+    <convert type="ConditionalShowHide">tunerblink</convert>
+  </widget>  -->
+  
+  <!-- Tuner L -->
+  <ePixmap pixmap="KravenFHD/infobar-icons/tuner_empty2.png" position="1548,1035" size="40,33" zPosition="1" alphatest="blend" />
+  <eLabel backgroundColor="KravenIBbg" text="L" font="Regular2;27" foregroundColor="KravenIcon" position="1548,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="2" transparent="1" />
+  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="FixedLabel" text="L" font="Regular2;27" foregroundColor="#00CCCC00" position="1548,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="3" transparent="1">
+	<convert type="TunerInfo">TunerUseMask</convert>
+	<convert type="ValueBitTest">2048</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="L" font="Regular2;27" foregroundColor="#0000B400" position="1548,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="4" transparent="1">
+	<convert type="KravenFHDFrontendInfo">NUMBER</convert>
+	<convert type="ValueRange">11,11</convert>
+	<convert type="ConditionalShowHide"/>
+  </widget>
+  <!--  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="L" font="Regular2;27" foregroundColor="#00FF0C00" position="1548,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="5" transparent="1">
+    <convert type="KravenFHDFrontendInfo">REC_11</convert>
+    <convert type="ConditionalShowHide">tunerblink</convert>
+  </widget>  -->
+  
+  <!-- Tuner M -->
+  <ePixmap pixmap="KravenFHD/infobar-icons/tuner_empty2.png" position="1599,1035" size="40,33" zPosition="1" alphatest="blend" />
+  <eLabel backgroundColor="KravenIBbg" text="M" font="Regular2;27" foregroundColor="KravenIcon" position="1599,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="2" transparent="1" />
+  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="FixedLabel" text="M" font="Regular2;27" foregroundColor="#00CCCC00" position="1599,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="3" transparent="1">
+	<convert type="TunerInfo">TunerUseMask</convert>
+	<convert type="ValueBitTest">4096</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="M" font="Regular2;27" foregroundColor="#0000B400" position="1599,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="4" transparent="1">
+	<convert type="KravenFHDFrontendInfo">NUMBER</convert>
+	<convert type="ValueRange">12,12</convert>
+	<convert type="ConditionalShowHide"/>
+  </widget>
+  <!--  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="M" font="Regular2;27" foregroundColor="#00FF0C00" position="1599,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="5" transparent="1">
+    <convert type="KravenFHDFrontendInfo">REC_12</convert>
+    <convert type="ConditionalShowHide">tunerblink</convert>
+  </widget>  -->
+  
+  <!-- Tuner N -->
+  <ePixmap pixmap="KravenFHD/infobar-icons/tuner_empty2.png" position="1650,1035" size="40,33" zPosition="1" alphatest="blend" />
+  <eLabel backgroundColor="KravenIBbg" text="N" font="Regular2;27" foregroundColor="KravenIcon" position="1650,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="2" transparent="1" />
+  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="FixedLabel" text="N" font="Regular2;27" foregroundColor="#00CCCC00" position="1650,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="3" transparent="1">
+	<convert type="TunerInfo">TunerUseMask</convert>
+	<convert type="ValueBitTest">8192</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="N" font="Regular2;27" foregroundColor="#0000B400" position="1650,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="4" transparent="1">
+	<convert type="KravenFHDFrontendInfo">NUMBER</convert>
+	<convert type="ValueRange">13,13</convert>
+	<convert type="ConditionalShowHide"/>
+  </widget>
+  <!--  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="N" font="Regular2;27" foregroundColor="#00FF0C00" position="1650,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="5" transparent="1">
+    <convert type="KravenFHDFrontendInfo">REC_13</convert>
+    <convert type="ConditionalShowHide">tunerblink</convert>
+  </widget>  -->
+  
+  <!-- Tuner O -->
+  <ePixmap pixmap="KravenFHD/infobar-icons/tuner_empty2.png" position="1701,1035" size="40,33" zPosition="1" alphatest="blend" />
+  <eLabel backgroundColor="KravenIBbg" text="O" font="Regular2;27" foregroundColor="KravenIcon" position="1701,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="2" transparent="1" />
+  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="FixedLabel" text="O" font="Regular2;27" foregroundColor="#00CCCC00" position="1701,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="3" transparent="1">
+	<convert type="TunerInfo">TunerUseMask</convert>
+	<convert type="ValueBitTest">16384</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="O" font="Regular2;27" foregroundColor="#0000B400" position="1701,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="4" transparent="1">
+	<convert type="KravenFHDFrontendInfo">NUMBER</convert>
+	<convert type="ValueRange">14,14</convert>
+	<convert type="ConditionalShowHide"/>
+  </widget>
+  <!--  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="O" font="Regular2;27" foregroundColor="#00FF0C00" position="1701,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="5" transparent="1">
+    <convert type="KravenFHDFrontendInfo">REC_14</convert>
+    <convert type="ConditionalShowHide">tunerblink</convert>
+  </widget>  -->
+  
+  <!-- Tuner P -->
+  <ePixmap pixmap="KravenFHD/infobar-icons/tuner_empty2.png" position="1752,1035" size="40,33" zPosition="1" alphatest="blend" />
+  <eLabel backgroundColor="KravenIBbg" text="P" font="Regular2;27" foregroundColor="KravenIcon" position="1752,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="2" transparent="1" />
+  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="FixedLabel" text="P" font="Regular2;27" foregroundColor="#00CCCC00" position="1752,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="3" transparent="1">
+	<convert type="TunerInfo">TunerUseMask</convert>
+	<convert type="ValueBitTest">32768</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="P" font="Regular2;27" foregroundColor="#0000B400" position="1752,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="4" transparent="1">
+	<convert type="KravenFHDFrontendInfo">NUMBER</convert>
+	<convert type="ValueRange">15,15</convert>
+	<convert type="ConditionalShowHide"/>
+  </widget>
+  <!--  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="P" font="Regular2;27" foregroundColor="#00FF0C00" position="1752,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="5" transparent="1">
+    <convert type="KravenFHDFrontendInfo">REC_15</convert>
+    <convert type="ConditionalShowHide">tunerblink</convert>
+  </widget>  -->
+  
+  <!-- Tuner Q -->
+  <ePixmap pixmap="KravenFHD/infobar-icons/tuner_empty2.png" position="1803,1035" size="40,33" zPosition="1" alphatest="blend" />
+  <eLabel backgroundColor="KravenIBbg" text="Q" font="Regular2;27" foregroundColor="KravenIcon" position="1803,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="2" transparent="1" />
+  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="FixedLabel" text="Q" font="Regular2;27" foregroundColor="#00CCCC00" position="1803,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="3" transparent="1">
+	<convert type="TunerInfo">TunerUseMask</convert>
+	<convert type="ValueBitTest">65536</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="Q" font="Regular2;27" foregroundColor="#0000B400" position="1803,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="4" transparent="1">
+	<convert type="KravenFHDFrontendInfo">NUMBER</convert>
+	<convert type="ValueRange">16,16</convert>
+	<convert type="ConditionalShowHide"/>
+  </widget>
+  <!--  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="Q" font="Regular2;27" foregroundColor="#00FF0C00" position="1803,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="5" transparent="1">
+    <convert type="KravenFHDFrontendInfo">REC_16</convert>
+    <convert type="ConditionalShowHide">tunerblink</convert>
+  </widget>  -->
+  
+  <!-- Tuner R -->
+  <ePixmap pixmap="KravenFHD/infobar-icons/tuner_empty2.png" position="1854,1035" size="40,33" zPosition="1" alphatest="blend" />
+  <eLabel backgroundColor="KravenIBbg" text="R" font="Regular2;27" foregroundColor="KravenIcon" position="1854,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="2" transparent="1" />
+  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="FixedLabel" text="R" font="Regular2;27" foregroundColor="#00CCCC00" position="1854,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="3" transparent="1">
+	<convert type="TunerInfo">TunerUseMask</convert>
+	<convert type="ValueBitTest">131072</convert>
+	<convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="R" font="Regular2;27" foregroundColor="#0000B400" position="1854,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="4" transparent="1">
+	<convert type="KravenFHDFrontendInfo">NUMBER</convert>
+	<convert type="ValueRange">17,17</convert>
+	<convert type="ConditionalShowHide"/>
+  </widget>
+  <!--  <widget backgroundColor="KravenIBbg" source="session.FrontendInfo" render="FixedLabel" text="R" font="Regular2;27" foregroundColor="#00FF0C00" position="1854,1035" name="KravenIconVPosition" size="40,33" halign="center" valign="center" zPosition="5" transparent="1">
+    <convert type="KravenFHDFrontendInfo">REC_17</convert>
+    <convert type="ConditionalShowHide">tunerblink</convert>
+  </widget>  -->

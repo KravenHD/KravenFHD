@@ -320,3 +320,45 @@ newwidth = wsize[0]
 self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</applet>
   </screen>
+  <!-- FastScanScreen -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="FastScanScreen" position="0,0" size="1920,1080" title="Fast Scan">
+    <widget backgroundColor="Kravenbg3" name="config" position="105,120" size="1062,675" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="introduction" position="105,840" size="1062,82" font="Regular2;32" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
+    <constant-widget name="Title-big"/>
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="FastScanScreen" position="105,0" />-->
+  </screen>
+  <!-- FastScanStatus -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="FastScanStatus" position="0,0" size="1920,1080" title="Fast Scan">
+    <widget name="scan_progress" borderColor="KravenBorder" borderWidth="3" position="105,120" size="1062,22" transparent="1" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress708.png" />
+    <widget backgroundColor="Kravenbg3" name="scan_state" position="105,165" size="1062,41" font="Regular2;32" foregroundColor="KravenFont2" transparent="1" />
+    <constant-widget name="Title-big"/>
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="FastScanStatus" position="105,0" />-->
+  </screen>
+  <!-- TaskListScreen -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="TaskListScreen" position="0,0" size="1920,1080" title="Task list">
+    <widget source="tasklist" render="Listbox" position="105,120" size="1062,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (6, 2), size = (1050, 41), font=1, flags = RT_HALIGN_LEFT, text = 1), # name
+						MultiContentEntryText(pos = (6, 47), size = (300, 41), font=1, flags = RT_HALIGN_LEFT, text = 2), # state
+						MultiContentEntryProgress(pos = (321, 51), size = (420, 33), percent = -3), # progress
+						MultiContentEntryText(pos = (756, 47), size = (300, 41), font=1, flags = RT_HALIGN_RIGHT, text = 4), # percentage
+					],
+				"fonts": [gFont("Regular", 32),gFont("Regular", 32)],
+				"itemHeight": 90
+				}
+      </convert>
+    </widget>
+    <constant-widget name="Title-big"/>
+	<!-- Logo -->
+    <constant-widget name="Colorbuttons"/>
+	<widget font="Regular;30" halign="left" valign="center" name="key_red" position="105,997" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <constant-widget name="OKExit"/>
+    <!--<text="TaskListScreen" position="105,0" />-->
+  </screen>
