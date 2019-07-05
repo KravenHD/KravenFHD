@@ -4471,15 +4471,15 @@ class KravenFHD(ConfigListScreen, Screen):
 			self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="' + self.actClockstyle + '4"/>'])
 
 		### Infobar Channelname
-		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1"):
+		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1") and not config.plugins.KravenFHD.InfobarChannelName.value == "none":
 			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->','<constant-widget name="' + config.plugins.KravenFHD.InfobarChannelName.value + '-' + config.plugins.KravenFHD.InfobarStyle.value + '"/>'])
-		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-x4","infobar-style-z1","infobar-style-z2"):
+		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-x4","infobar-style-z1","infobar-style-z2") and not config.plugins.KravenFHD.InfobarChannelName.value == "none":
 			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->','<constant-widget name="' + config.plugins.KravenFHD.InfobarChannelName.value + '-infobar-style-x2"/>'])
-		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zz4"):
+		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zz4") and not config.plugins.KravenFHD.InfobarChannelName.value == "none":
 			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->','<constant-widget name="' + config.plugins.KravenFHD.InfobarChannelName.value + '-infobar-style-zz1"/>'])
-		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
+		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3") and not config.plugins.KravenFHD.InfobarChannelName2.value == "none":
 			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->','<constant-widget name="' + config.plugins.KravenFHD.InfobarChannelName2.value + '-infobar-style-zz2"/>'])
-		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zzz1","infobar-style-zzz2"):
+		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zzz1","infobar-style-zzz2") and not config.plugins.KravenFHD.InfobarChannelName2.value == "none":
 			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->','<constant-widget name="' + config.plugins.KravenFHD.InfobarChannelName2.value + '-' + config.plugins.KravenFHD.InfobarStyle.value + '"/>'])
 
 		### Infobar/SIB - ecm-info
