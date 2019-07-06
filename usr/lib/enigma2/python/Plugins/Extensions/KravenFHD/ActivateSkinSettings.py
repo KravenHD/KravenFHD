@@ -2479,8 +2479,9 @@ class ActivateSkinSettings:
 				self.skinSearchAndReplace.append(['teamBlueEPGListSkinParameter="EPGSelectionMulti"', 'setEventItemFont="Regular;32" setEventTimeFont="Regular;26" setTimeWidth="135" setIconDistance="12" setIconShift="0" setColWidths="300,150" setColGap="15" itemHeight="45" position="75,202" size="1770,540"']) # EPGSelectionMulti
 
 		### VTi MovieList-Picon
-		if self.E2DistroVersion == "VTi" and config.usage.movielist_show_picon.value == True:
-			self.skinSearchAndReplace.append(['<parameter name="MovieListMinimalVTITitle" value="40,0,1000,40" />', '<parameter name="MovieListMinimalVTITitle" value="40,0,800,40" />'])
+		if self.E2DistroVersion == "VTi":
+			if (not self.silent and config.usage.movielist_show_picon.value == True) or (self.silent and 'config.usage.movielist_show_picon=true' in self.E2settings):
+				self.skinSearchAndReplace.append(['<parameter name="MovieListMinimalVTITitle" value="40,0,1000,40" />', '<parameter name="MovieListMinimalVTITitle" value="40,0,800,40" />'])
 
 		### change constant-widgets to panels for teamblue (part #1)
 		if self.E2DistroVersion == "teamblue":
