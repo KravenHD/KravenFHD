@@ -1,0 +1,151 @@
+  <!-- Skinparamter VTi -->
+  <parameters>
+    <!-- Choicelist -->
+    <parameter name="ChoicelistItemHeight" value="45" />
+    <parameter name="ChoicelistFont" value="Regular;32" />
+    <parameter name="ChoicelistFontSize" value="30" />
+    <parameter name="ChoicelistName" value="70,1,1720,42" />
+    <parameter name="ChoicelistIcon" value="10,0,60,45" />
+    <parameter name="ChoicelistDash" value="0,36,1720,30" />
+    <!-- EnhancedMovieCenterList -->
+    <parameter name="EnhancedMovieCenterItemHeight" value="48" />
+    <parameter name="EnhancedMovieCenterFontSize" value="34" />
+    <parameter name="EnhancedMovieCenterListFont" value="34" />
+    <parameter name="ECMSelectionItemHeight" value="48" />
+    <parameter name="ECMSelectionFontSize" value="34" />
+    <parameter name="ECMSelectionListFont" value="34" />
+    <!-- MediaplayerPlaylist -->
+    <parameter name="MediaPlayerPlayList" value="35,1,700,35" />
+    <parameter name="MediaPlayerPlayListFont" value="Regular;30" />
+    <!-- VirtualKeyboard opeanATV -->
+	<parameter name="VirtualKeyBoard" value="67,67"/>
+	<parameter name="VirtualKeyBoardAlignment" value="0,0"/>
+	<parameter name="VirtualKeyBoardPadding" value="6,6"/>
+    <!-- GMultiEPGTimeline -->
+    <parameter name="GMultiEPGTimelineFont" value="Regular;28" />
+    <parameter name="GMultiEPGTimelineItemHeight" value="28" />
+    <parameter name="GMultiEPGTimelineItemSize" value="100,30" />
+    <!-- PluginList -->
+    <parameter name="PluginListFont1" value="Regular;30" />
+    <parameter name="PluginListFont2" value="Regular;25" />
+    <parameter name="PluginListItemHeight" value="80" />
+    <parameter name="PluginListName" value="180,2,867,37" />
+    <parameter name="PluginListDescription" value="180,40,867,32" />
+    <parameter name="PluginListIcon" value="30,18,100,40" />
+    <parameter name="PluginListCategoryIcon" value="10,8,150,60" />
+    <!-- MultiQuickButtonList -->
+    <parameter name="MultiQuickButtonList" value="45,4,800,38" />
+    <parameter name="MultiQuickButtonListPic1" value="10,8,790,25" />
+    <parameter name="MultiQuickButtonListPic2" value="5,8,35,25" />
+    <parameter name="MultiQuickButtonListFont" value="Regular;30" />
+    <parameter name="MultiQuickButtonListItemHeight" value="45" />
+    <!-- PiconManagerList -->
+    <parameter name="PiconManagerList" value="10,5,1675,40" />
+    <parameter name="PiconManagerListFont" value="Regular;32" />
+    <parameter name="PiconManagerListItemHeight" value="45" />
+    <!-- Channellist ServicelistService -->
+    <parameter name="ServicelistCustomPiconSize" value="95,40" />
+    <parameter name="ServicelistDoubleSpacedMinHeight" value="104" />
+    <parameter name="ServicelistPiconXOffset" value="8" />
+    <parameter name="ServicelistServiceNumber" value="0,0,80,0" />
+    <parameter name="ServicelistServiceNumberOffset" value="100" />
+    <parameter name="ServicelistServiceNumberOffsetNormal" value="100" />
+    <parameter name="ServicelistProgressbarDefaultOffset" value="40" />
+    <parameter name="ServicelistProgressbarOffset" value="100" />
+    <parameter name="ServicelistServiceTypePixOffset" value="38" />
+    <parameter name="ServicelistOffset" value="0" />
+    <parameter name="Servicelist100Picon" value="0,0,100,60" />
+    <parameter name="ServicelistServiceTypePixmap100" value="0,10,40,40" />
+    <parameter name="ServicelistServiceEventProgressbar100" value="5,0,52,0" />
+    <parameter name="ServicelistServiceNumber100" value="5,0,60,0" />
+    <parameter name="ServicelistRecordServicePixmap100" value="80,0,40,40" />
+    <parameter name="ServicelistServiceName100" value="80,0,1145,40" />
+    <parameter name="ServicelistServiceInfo100" value="80,0,1145,40" />
+    <parameter name="ServicelistServiceEventProgressbar" value="0,0,52,0" />
+    <parameter name="ServicelistRecordServicePixmap" value="-35,8,40,40" />
+    <parameter name="ServicelistServiceName" value="0,0,1145,0" />
+	<parameter name="ServicelistAdvertismentIconPixmap" value="-40,0,45,45" />
+	<parameter name="ServicelistTextOffsetForIcon" value="40" />
+    <!-- ServiceInfo -->
+    <parameter name="ServiceInfoFont" value="Regular;30" />
+    <parameter name="ServiceInfo_I" value="20,0,1100,40" />
+    <parameter name="ServiceInfo_II" value="20,0,1100,40" />
+    <parameter name="ServiceInfo_III" value="630,0,1100,40" />
+    <!-- AudioSelection -->
+    <parameter name="AudioSelectionSliderSeparation" value="300" />
+    <!-- general slider separation in config menues -->
+    <parameter name="ConfigListSliderSeparation" value="300" />
+    <!-- TMDb -->
+    <parameter name="TMDbListFont" value="Regular;32" />
+    <parameter name="TMDbListName" value="15,1,1032,44" />
+	<!-- ChannelSelectionHorizontal -->
+	<parameter name="ServicelistHorServiceTypeIcon" value="0,0,0,0" />
+	<parameter name="ServicelistHorServiceTime" value="0,0,0,0" />
+	<parameter name="ServicelistHorProgressbar" value="0,0,0,0" />
+	<parameter name="ServicelistHorPreViewPic" value="0,0,0,0" />
+	<parameter name="ServicelistHorPicon" value="37,21,216,122" />
+	<parameter name="ServicelistHorNumber" value="0,0,0,0" />
+	<parameter name="ServicelistHorName" value="3,150,286,45" />
+	<parameter name="ServicelistHorServiceInfo" value="4,210,286,81" />
+	<parameter name="ServicelistHorCustomPiconSize" value="216,122" />
+    <!-- FileList -->
+    <parameter name="FileListName" value="50,0,1000,45" />
+    <parameter name="FileListIcon" value="5,8,30,30" />
+    <parameter name="FileListMultiName" value="95,0,950,45" />
+    <parameter name="FileListMultiIcon" value="50,8,30,30" />
+    <parameter name="FileListMultiLock" value="5,8,30,30" />
+    <parameter name="FileListFont" value="Regular;32" />
+    <parameter name="FileListItemHeight" value="45" />
+	<!-- PluginBrowser -->
+	<parameter name="PluginBrowserName" value="180,3,45"/>
+	<parameter name="PluginBrowserDescr" value="180,42,39"/>
+	<parameter name="PluginBrowserIcon" value="2,0,160,70"/>
+	<parameter name="PluginBrowserDownloadName" value="125,3,45"/>
+	<parameter name="PluginBrowserDownloadDescr" value="125,42,39"/>
+	<parameter name="PluginBrowserDownloadIcon" value="2,0,120,75"/>
+	<!-- ServiceInfo -->
+	<parameter name="ServiceInfo" value="0,0,450,50" />
+    <parameter name="ServiceInfoLeft" value="0,0,450,45" />
+    <parameter name="ServiceInfoRight" value="450,0,1000,45" />
+	<!-- SelectionList openATV -->
+    <parameter name="SelectionListDescr" value="55,2,1000,41" />
+    <parameter name="SelectionListLock" value="5,8,30,30" />
+	<parameter name="SelectionListLockOff" value="5,8,30,30" />
+	<!-- ConfigList openATV -->
+    <parameter name="ConfigListSeperator" value="600" />
+	<!-- Dreamexplorer -->
+    <parameter name="DreamexplorerName" value="55,2,1000,41" />
+    <parameter name="DreamexplorerIcon" value="5,8,30,30" />
+	<!-- Programmlisten_Updater openATV -->
+    <parameter name="ProgrammlistenUpdaterListFont" value="Regular;32" />
+    <parameter name="ProgrammlistenUpdaterList" value="15,2,675,357,45" />
+	<!-- PlayList openATV -->
+    <parameter name="PlayListName" value="50,2,1000,38" />
+    <parameter name="PlayListIcon" value="5,6,30,30" />
+	<!-- CoverFind -->
+    <parameter name="CoverFindListFont" value="Regular;32" />
+    <parameter name="CoverFindListIcon" value="6,10,25,25" />
+    <parameter name="CoverFindListName" value="37,2,1019,41" />
+    <parameter name="CoverFindItemHeight" value="45" />
+    <parameter name="CoverFindCover" value="0,0,120,180" />
+    <parameter name="CoverFindName" value="132,2,926,41" />
+  </parameters>
+  <fonts>
+	<alias name="FileList" font="Regular" size="32" height="45" />
+	<alias name="FileListMulti" font="Regular" size="32" height="45" />
+	<alias name="VirtualKeyBoard" font="Regular" size="42" height="67" />
+	<alias name="ServiceInfo" font="Regular" size="32" height="45"/>
+	<alias name="PluginBrowser0" font="Regular" size="32" height="75"/>
+	<alias name="PluginBrowser1" font="Regular" size="22"/>
+	<alias name="HelpMenuList" font="Regular" size="30" height="45"/>
+	<alias name="HelpMenuListExt0" font="Regular" size="32" height="75"/>
+	<alias name="HelpMenuListExt1" font="Regular" size="28"/>
+	<alias name="ChoiceList" font="Regular" size="32" height="45" />
+	<alias name="MaxCubeRoom" font="Regular" size="24" height="70"/>
+	<alias name="MaxCubeTemp" font="Regular2" size="45" height="70"/>
+	<alias name="iDreamListFont0" font="Regular" size="32"/>
+	<alias name="iDreamListFont1" font="Regular" size="32"/>
+	<alias name="SelectionList" font="Regular" size="32" height="45"/>
+	<alias name="Dreamexplorer" font="Regular" size="32" height="45"/>
+	<alias name="PlayList" font="Regular" size="30" height="42"/>
+  </fonts>

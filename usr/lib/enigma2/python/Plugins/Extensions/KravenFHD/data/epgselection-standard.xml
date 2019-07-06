@@ -4,7 +4,7 @@
     <widget backgroundColor="KravenIBbg2" alphatest="blend" position="1230,21" render="Picon" size="100,60" source="Service" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-	<widget backgroundColor="Kravenbg" name="list" font="Regular;32" foregroundColor="EPGSelection" itemHeight="45" position="105,120" size="1062,810" zPosition="3" scrollbarMode="showOnDemand" scrollbarWidth="5" enableWrapAround="1" transparent="1" />
+	<widget backgroundColor="Kravenbg" name="list" foregroundColor="KravenFont1" font="Regular;32" itemHeight="EPGSelection" position="105,120" size="1062,810" zPosition="3" scrollbarMode="showOnDemand" scrollbarWidth="5" enableWrapAround="1" transparent="1" />
     <widget font="Regular2;36" backgroundColor="Kravenbg" halign="left" noWrap="1" foregroundColor="KravenFont2" position="1230,120" size="627,45" render="Label" source="Service" transparent="1" valign="center" zPosition="1">
       <convert type="ServiceName">Name</convert>
     </widget>
@@ -22,7 +22,7 @@
   </screen>
     <!-- EPGSearch -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="EPGSearch" position="0,0" size="1920,1080" title="EPG Selection">
-	<widget backgroundColor="Kravenbg" name="list" foregroundColor="KravenFont1" font="Regular;32" itemHeight="90" position="105,120" size="1062,810" zPosition="3" scrollbarMode="showOnDemand" scrollbarWidth="5" enableWrapAround="1" transparent="1" />
+	<widget backgroundColor="Kravenbg" name="list" foregroundColor="KravenFont1" font="Regular;32" itemHeight="EPGSearch" position="105,120" size="1062,810" zPosition="3" scrollbarMode="showOnDemand" scrollbarWidth="5" enableWrapAround="1" transparent="1" />
     <widget backgroundColor="Kravenbg" font="Regular;33" foregroundColor="EPGSelection" position="1230,120" size="627,798" render="KravenFHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" source="Event" valign="top" transparent="1" zPosition="-8">
       <convert type="KravenFHDEventName">BothDescriptionsFiltered</convert>
     </widget>

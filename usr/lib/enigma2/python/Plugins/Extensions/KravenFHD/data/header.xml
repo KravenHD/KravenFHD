@@ -1,0 +1,210 @@
+<skin>
+  <copyright>
+    <!-- DONT REMOVE THIS DISCLAIMER -->
+    <!-- KravenFHD by Team-Kraven -->
+    <!-- Icons and buttons by stony272 -->
+    <!-- Thanks to TBX, Mike99 -->
+    <!-- You can change this skin for PERSONAL USE ONLY -->
+    <!-- You are not allowed to publish our skin without our permission -->
+  </copyright>
+  <output id="0">
+    <resolution bpp="32" xres="1920" yres="1080" />
+  </output>
+  <colors>
+    <color name="black" value="#00000000" />
+    <color name="blue" value="#000064c7" />
+    <color name="green" value="#00389416" />
+    <color name="grey" value="#00f0e3d6" />
+    <color name="Kravenbg" value="#00000000" />
+    <color name="Kravenbg2" value="#00000000" />
+    <color name="Kravenbg3" value="#00000000" />
+    <color name="Kravenbg4" value="#00000000" />
+    <color name="Kravenbg5" value="#00000000" />
+    <color name="background" value="#00000000" />
+    <color name="KravenIBbg" value="#001B1775" />
+    <color name="KravenIBbg2" value="#00000000" />
+    <color name="KravenIBbg3" value="#00000000" />
+    <color name="KravenIBbg4" value="#00000000" />
+    <color name="KravenSIBbg" value="#00000000" />
+    <color name="KravenIBCoolbg" value="#00000000" />
+    <color name="KravenFont1" value="#00ffffff" />
+    <color name="KravenFont2" value="#00F0A30A" />
+    <color name="KravenPermanentClock" value="#00ffffff" />
+    <color name="foreground" value="#00dddddd" />
+    <color name="KravenIBFont1" value="#00ffffff" />
+    <color name="KravenIBFont2" value="#00F0A30A" />
+    <color name="KravenName" value="#00ffffff" />
+    <color name="KravenNamebg" value="#7F7F7F7F" />
+    <color name="KravenECMbg" value="#F1325698" />
+    <color name="KravenButton" value="#00ffffff" />
+    <color name="KravenAndroid" value="#00ffffff" />
+    <color name="KravenAndroid2" value="#00ffffff" />
+    <color name="KravenIcon" value="#00fff0e0" />
+    <color name="KravenBorder" value="#00ffffff" />
+    <color name="KravenBorder2" value="#003F3F3F" />
+    <color name="KravenNZBorder" value="#00ffffff" />
+    <color name="KravenGMEBorder" value="#00ffffff" />
+    <color name="KravenGMErunningbg" value="#00389416" />
+    <color name="KravenVEPGBorder" value="#00ffffff" />
+    <color name="KravenLine" value="#00ffffff" />
+    <color name="KravenIBLine" value="#00ffffff" />
+    <color name="KravenProgress" value="#00C3461B" />
+    <color name="KravenSelection" value="#000050EF" />
+    <color name="KravenSelFont" value="#00ffffff" />
+    <color name="KravenEMCSelection" value="#000050EF" />
+    <color name="KravenEMCSelFont" value="#00ffffff" />
+    <color name="KravenMarked" value="#00ffffff" />
+    <color name="KravenECM" value="#00ffffff" />
+	<color name="KravenNotAvailable" value="#00FFEA04" />
+    <color name="KravenPrime" value="#0070AD11" />
+    <color name="KravenMeteo" value="#00fff0e0" />
+    <color name="selectedFG" value="#00ffffff" />
+    <color name="orange" value="#00dc5221" />
+    <color name="rds_text_bg" value="#00003258" />
+    <color name="red" value="#00f23d21" />
+    <color name="rssviewtop" value="#45005050" />
+    <color name="shadow" value="#40101010" />
+    <color name="transparent" value="#ffffffff" />
+    <color name="white" value="#00ffffff" />
+    <color name="yellow" value="#00e5b243" />
+    <color name="blue2" value="#00010b52" />
+    <color name="cyan" value="#000090e6" />
+    <color name="cyan1" value="#0000deff" />
+    <color name="cyan2" value="#0000d2ff" />
+    <color name="dark" value="#00294a6b" />
+    <color name="dark2" value="#00262626" />
+    <color name="darkgrey" value="#00999999" />
+    <color name="epg" value="#002f4974" />
+    <color name="epgselected" value="#00021943" />
+    <color name="green2" value="#00095201" />
+    <color name="grey2" value="#00aaaaaa" />
+    <color name="myblue" value="#004895fd" />
+    <color name="mygrey" value="#00353535" />
+    <color name="pink" value="#00ec03c8" />
+    <color name="rds_text_bg" value="#00003258" />
+    <color name="red2" value="#00350000" />
+    <color name="transpBlack" value="#80000000" />
+    <color name="transpWhite" value="#77ffffff" />
+    <color name="transpyellow" value="#33bab329" />
+    <color name="layer-a-foreground" value="#00dddddd" />
+	<color name="violet" value="#006774db" />
+    <color name="un101214" value="#00101214" />
+    <color name="un18080911" value="#18080911" />
+    <color name="un18101214" value="#18101214" />
+    <color name="un18188b" value="#0018188b" />
+    <color name="un181d20" value="#00181d20" />
+    <color name="un1c1c1c" value="#001c1c1c" />
+    <color name="un1c202b" value="#001c202b" />
+    <color name="un1e28b6" value="#001e28b6" />
+    <color name="un1f1f21" value="#001f1f21" />
+    <color name="un1f771f" value="#001f771f" />
+    <color name="un20000000" value="#20000000" />
+    <color name="un20343c4f" value="#20343c4f" />
+    <color name="un240e1014" value="#240e1014" />
+    <color name="un242424" value="#00242424" />
+    <color name="un25062748" value="#25062748" />
+    <color name="un26181d20" value="#26181d20" />
+    <color name="un27b5b9bd" value="#27b5b9bd" />
+    <color name="un27d9dee2" value="#27d9dee2" />
+    <color name="un31000000" value="#31000000" />
+    <color name="un333333" value="#00333333" />
+    <color name="un353e575e" value="#353e575e" />
+    <color name="un3b98c9" value="#003b98c9" />
+    <color name="un404040" value="#00404040" />
+    <color name="un41000000" value="#41000000" />
+    <color name="un444444" value="#00444444" />
+    <color name="un555555" value="#00555555" />
+    <color name="un555556" value="#00555556" />
+    <color name="un5678a4" value="#005678a4" />
+    <color name="un5d5d5d" value="#005d5d5d" />
+    <color name="un605f5e" value="#00605f5e" />
+    <color name="un60606" value="#00060606" />
+    <color name="un666666" value="#00666666" />
+    <color name="un696969" value="#00696969" />
+    <color name="un697178" value="#00697178" />
+    <color name="un697279" value="#00697279" />
+    <color name="un800000" value="#00800000" />
+    <color name="un808888" value="#00808888" />
+    <color name="un80f7" value="#000080f7" />
+    <color name="un858a95" value="#00858a95" />
+    <color name="un9f1313" value="#009f1313" />
+    <color name="una08500" value="#00a08500" />
+    <color name="unaab2ba" value="#00aab2ba" />
+    <color name="unb59e01" value="#00b59e01" />
+    <color name="unbab329" value="#00bab329" />
+    <color name="unbb0048" value="#00bb0048" />
+    <color name="unc0c0c0" value="#00c0c0c0" />
+    <color name="unc5c9cc" value="#00c5c9cc" />
+    <color name="unc6e0f3" value="#00c6e0f3" />
+    <color name="uncccccc" value="#00cccccc" />
+    <color name="und3d3d3" value="#00d3d3d3" />
+    <color name="undcaaaa" value="#00dcaaaa" />
+    <color name="undcdcdc" value="#00dcdcdc" />
+    <color name="undd0908" value="#00dd0908" />
+    <color name="unf0b400" value="#00f0b400" />
+    <color name="unf0f0f0" value="#00f0f0f0" />
+    <color name="unf4df8d" value="#00f4df8d" />
+    <color name="unfcc000" value="#00fcc000" />
+    <color name="unff0000" value="#00ff0000" />
+    <color name="unff000000" value="#ff000000" />
+    <color name="unff6600" value="#00ff6600" />
+    <color name="unfff000" value="#00fff000" />
+    <color name="unffff00" value="#00ffff00" />
+  </colors>
+  <fonts>
+    <font filename="lcd.ttf" name="LCD" scale="100" />
+    <font filename="ae_AlMateen.ttf" name="Replacement" replacement="1" scale="100" />
+    <font filename="tuxtxt.ttf" name="Console" scale="100" />
+    <font filename="KravenFHD/fonts/nmsbd2.ttf" name="Arial" scale="100" />
+    <font filename="KravenFHD/fonts/OpenSans-Regular.ttf" name="Fixed" scale="95" />
+    <font filename="KravenFHD/fonts/OpenSans-Regular.ttf" name="Regular" scale="95" />
+    <font filename="KravenFHD/fonts/OpenSans-Semibold.ttf" name="Regular2" scale="95" />
+    <font filename="KravenFHD/fonts/meteocons.ttf" name="Meteo" scale="100" />
+	<font filename="KravenFHD/fonts/owfont-regular.ttf" name="Meteo2" scale="100" />
+  </fonts>
+  <subtitles>
+    <sub font="Regular;45" name="Subtitle_TTX" shadowColor="shadow" shadowOffset="3,3" />
+    <sub font="Regular;45" foregroundColor="grey" name="Subtitle_Regular" shadowColor="shadow" shadowOffset="3,3" />
+    <sub font="Replacement;45" foregroundColor="grey" name="Subtitle_Bold" shadowColor="shadow" shadowOffset="3,3" />
+    <sub font="Regular;45" foregroundColor="orange" name="Subtitle_Italic" shadowColor="shadow" shadowOffset="3,3" />
+  </subtitles>
+  <windowstyle id="0" type="skinned">
+    <title font="Regular;36" offset="20,5" />
+    <color color="Kravenbg" name="Background" />
+    <color color="KravenFont1" name="LabelForeground" />
+    <color color="Kravenbg" name="ListboxBackground" />
+    <color color="KravenFont1" name="ListboxForeground" />
+    <color color="KravenSelection" name="ListboxSelectedBackground" />
+    <color color="KravenSelFont" name="ListboxSelectedForeground" />
+    <color color="Kravenbg" name="ListboxMarkedBackground" />
+    <color color="KravenMarked" name="ListboxMarkedForeground" />
+    <color color="KravenSelection" name="ListboxMarkedAndSelectedBackground" />
+    <color color="KravenMarked" name="ListboxMarkedAndSelectedForeground" />
+    <color color="white" name="WindowTitleForeground" />
+    <color color="black" name="WindowTitleBackground" />
+    <borderset name="bsWindow">
+      <pixmap filename="KravenFHD/bsWindow/bs_tl.png" pos="bpTopLeft" />
+      <pixmap filename="KravenFHD/bsWindow/bs_t.png" pos="bpTop" />
+      <pixmap filename="KravenFHD/bsWindow/bs_tr.png" pos="bpTopRight" />
+      <pixmap filename="KravenFHD/bsWindow/bs_l.png" pos="bpLeft" />
+      <pixmap filename="KravenFHD/bsWindow/bs_r.png" pos="bpRight" />
+      <pixmap filename="KravenFHD/bsWindow/bs_bl.png" pos="bpBottomLeft" />
+      <pixmap filename="KravenFHD/bsWindow/bs_b.png" pos="bpBottom" />
+      <pixmap filename="KravenFHD/bsWindow/bs_br.png" pos="bpBottomRight" />
+    </borderset>
+	  </windowstyle>
+  <windowstyle id="1" type="skinned">
+    <title font="Regular;36" offset="20,5" />
+    <color color="black" name="Background" />
+    <color color="white" name="LabelForeground" />
+    <color color="black" name="ListboxBackground" />
+    <color color="white" name="ListboxForeground" />
+    <color color="black" name="ListboxSelectedBackground" />
+    <color color="white" name="ListboxSelectedForeground" />
+    <color color="black" name="ListboxMarkedBackground" />
+    <color color="white" name="ListboxMarkedForeground" />
+    <color color="black" name="ListboxMarkedAndSelectedBackground" />
+    <color color="white" name="ListboxMarkedAndSelectedForeground" />
+    <color color="black" name="WindowTitleBackground" />
+    <color color="white" name="WindowTitleForeground" />
+  </windowstyle>

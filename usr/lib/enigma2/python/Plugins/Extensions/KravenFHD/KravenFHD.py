@@ -1215,25 +1215,6 @@ config.plugins.KravenFHD.TBna = ConfigSelection(default="na", choices = [
 				("na", _("not available for teamBlue"))
 				])
 
-config.plugins.KravenFHD.emptyline = ConfigSelection(default="emptyline", choices = [
-				("emptyline", _("      "))
-				])
-
-config.plugins.KravenFHD.hidden = ConfigSelection(default="hidden-on", choices = [
-				("hidden-on", _("      ")),
-				("hidden-off", _("      "))
-				])
-
-config.plugins.KravenFHD.EventNameConverter = ConfigSelection(default="kravenskin", choices = [
-				("kravenskin", _("KravenFHD-Skin")),
-				("vti-original", _("VTi original"))
-				])
-
-config.plugins.KravenFHD.RunningTextRenderer = ConfigSelection(default="kravenskin", choices = [
-				("kravenskin", _("KravenFHD-Skin")),
-				("vti-original", _("VTi original"))
-				])
-
 config.plugins.KravenFHD.KravenIconVPosition = ConfigSelection(default="vposition0", choices = [
 				("vposition-3", _("-3")),
 				("vposition-2", _("-2")),
@@ -1917,11 +1898,6 @@ class KravenFHD(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("VARIOUS SETTINGS ________________________________________________________________"), config.plugins.KravenFHD.CategoryVarious, _("This sections offers various settings.")))
 		list.append(getConfigListEntry(_("Screennames"), config.plugins.KravenFHD.DebugNames, _("Activate or deactivate small screen names for debugging purposes.")))
 		list.append(getConfigListEntry(_("Icon-Font vertical position"), config.plugins.KravenFHD.KravenIconVPosition, _("Correct the vertical font position within some icons for the infobars and players.")))
-		if self.E2DistroVersion == "VTi":
-			list.append(getConfigListEntry(_("      "), config.plugins.KravenFHD.emptyline, _("      ")))
-			if config.plugins.KravenFHD.hidden.value == "hidden-off":
-				list.append(getConfigListEntry(_("EventName-Converter"), config.plugins.KravenFHD.EventNameConverter, _("      ")))
-				list.append(getConfigListEntry(_("RunningText-Renderer"), config.plugins.KravenFHD.RunningTextRenderer, _("      ")))
 
 		### Assign list or self color
 		if config.plugins.KravenFHD.BackgroundListColor.value == "self":
@@ -2993,15 +2969,6 @@ class KravenFHD(ConfigListScreen, Screen):
 			self.saveProfile(msg=True)
 		elif option == config.plugins.KravenFHD.defaultProfile:
 			self.reset()
-		elif option == config.plugins.KravenFHD.emptyline:
-			if config.plugins.KravenFHD.hidden.value == "hidden-on":
-				config.plugins.KravenFHD.hidden.value = "hidden-off"
-				config.plugins.KravenFHD.hidden.save()
-				self.keyRight()
-			else:
-				config.plugins.KravenFHD.hidden.value = "hidden-on"
-				config.plugins.KravenFHD.hidden.save()
-				self.keyRight()
 
 	def faq(self):
 		from Plugins.SystemPlugins.MPHelp import PluginHelp, XMLHelpReader
@@ -3035,16 +3002,6 @@ class KravenFHD(ConfigListScreen, Screen):
 					pass
 
 		self.skinSearchAndReplace = []
-
-		### change Converter/Renderer
-		if self.E2DistroVersion == "VTi" and config.plugins.KravenFHD.hidden.value == "hidden-off":
-			if config.plugins.KravenFHD.EventNameConverter.value == "vti-original":
-				self.skinSearchAndReplace.append(['"KravenFHDEventName">Name', '"EventName">Name'])
-				self.skinSearchAndReplace.append(['"KravenFHDEventName">BothDescriptionsFiltered', '"EventName">FullDescription'])
-				self.skinSearchAndReplace.append(['"KravenFHDEventName">ExtendedDescription', '"EventName">ExtendedDescription'])
-				self.skinSearchAndReplace.append(['"KravenFHDEventName">Description', '"EventName">Description'])
-			if config.plugins.KravenFHD.RunningTextRenderer.value == "vti-original":
-				self.skinSearchAndReplace.append(['"KravenFHDRunningText"', '"VRunningText"'])
 
 		### Background
 		self.skinSearchAndReplace.append(['name="Kravenbg" value="#00000000', 'name="Kravenbg" value="#00' + self.skincolorbackgroundcolor])
@@ -4058,7 +4015,7 @@ class KravenFHD(ConfigListScreen, Screen):
 				self.skinSearchAndReplace.append([',1035" name="KravenIconVPosition"', ',1035"'])
 			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
 				self.skinSearchAndReplace.append([',34" name="KravenIconVPosition"', ',34"'])
-			self.skinSearchAndReplace.append([',1020" name="KravenIconVPosition"', ',1029"']) # Players
+			self.skinSearchAndReplace.append([',1020" name="KravenIconVPosition"', ',1020"']) # Players
 		elif config.plugins.KravenFHD.KravenIconVPosition.value == "vposition+1":
 			if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x4","infobar-style-zz1","infobar-style-zzz1"):
 				self.skinSearchAndReplace.append([',1030" name="KravenIconVPosition"', ',1031"'])
@@ -4180,6 +4137,63 @@ class KravenFHD(ConfigListScreen, Screen):
 			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zz2","infobar-style-zz3","infobar-style-zz4","infobar-style-zzz1","infobar-style-zzz2"):
 				self.skinSearchAndReplace.append(['<convert type="KravenFHDECMLine">ShortReader', '<convert type="KravenFHDECMLine">' + config.plugins.KravenFHD.ECMLine3.value])
 
+		### EPGSelection EPGList
+		if self.E2DistroVersion == "VTi":
+			if config.plugins.KravenFHD.EPGListSize.value == "big":
+				self.skinSearchAndReplace.append(['alias name="EPGList0" font="Regular" size="32"', 'alias name="EPGList0" font="Regular" size="36"']) # EPGList (Fontsize)
+				self.skinSearchAndReplace.append(['alias name="EPGList1" font="Regular" size="32"', 'alias name="EPGList1" font="Regular" size="36"'])
+				
+				self.skinSearchAndReplace.append(['font="Regular;32" itemHeight="EPGSelection"', 'itemHeight="54"']) # EPGSelection (itemHeight)
+				self.skinSearchAndReplace.append(['parameter name="EPGlistText1" value="3,2,48,41"', 'parameter name="EPGlistText1" value="3,3,60,46"'])
+				self.skinSearchAndReplace.append(['parameter name="EPGlistText2" value="57,2,243,41"', 'parameter name="EPGlistText2" value="69,3,270,46"'])
+				self.skinSearchAndReplace.append(['parameter name="EPGlistRecImage" value="321,13,20,20"', 'parameter name="EPGlistRecImage" value="360,17,20,20"'])
+				self.skinSearchAndReplace.append(['parameter name="EPGlistRecText" value="351,2,705,41"', 'parameter name="EPGlistRecText" value="390,3,666,46"'])
+				self.skinSearchAndReplace.append(['parameter name="EPGlistNonRecText" value="321,2,735,41"', 'parameter name="EPGlistNonRecText" value="360,3,696,46"'])
+				
+				self.skinSearchAndReplace.append(['itemHeight="EPGSearch"', 'itemHeight="108"']) # EPGSearch (itemHeight)
+				self.skinSearchAndReplace.append(['parameter name="EPGlistText3" value="321,1,735,41"', 'parameter name="EPGlistText3" value="360,2,696,46"'])
+				self.skinSearchAndReplace.append(['parameter name="EPGSearchItemHeightBig" value="90"', 'parameter name="EPGSearchItemHeightBig" value="108"'])
+				self.skinSearchAndReplace.append(['parameter name="EPGSearchItemHeightDefault" value="45"', 'parameter name="EPGSearchItemHeightDefault" value="54"'])
+				
+				self.skinSearchAndReplace.append(['itemHeight="EPGSelectionMulti"', 'itemHeight="54"']) # EPGSelectionMulti (itemHeight)
+				self.skinSearchAndReplace.append(['parameter name="EPGlistMultiRecIcon" value="3,13,20,20"', 'parameter name="EPGlistMultiRecIcon" value="3,17,20,20"'])
+				self.skinSearchAndReplace.append(['parameter name="EPGlistMultiRecText" value="33,2,190,41"', 'parameter name="EPGlistMultiRecText" value="33,3,222,46"'])
+				self.skinSearchAndReplace.append(['parameter name="EPGlistMultiNonRecText" value="3,2,220,41"', 'parameter name="EPGlistMultiNonRecText" value="3,3,252,46"'])
+				self.skinSearchAndReplace.append(['parameter name="EPGlistMultiBeginText1" value="220,2,260,41"', 'parameter name="EPGlistMultiBeginText1" value="261,3,320,46"'])
+				self.skinSearchAndReplace.append(['parameter name="EPGlistMultiBeginText2" value="482,2,1285,41"', 'parameter name="EPGlistMultiBeginText2" value="542,3,1225,46"'])
+				self.skinSearchAndReplace.append(['parameter name="EPGlistMultiProgress" value="300,15,50,10"', 'parameter name="EPGlistMultiProgress" value="300,19,50,16"'])
+				self.skinSearchAndReplace.append(['parameter name="EPGlistMultiProgressText" value="370,2,1397,41"', 'parameter name="EPGlistMultiProgressText" value="370,3,1397,46"'])
+				
+				self.skinSearchAndReplace.append(['parameter name="EPGlistEPGBarText1" value="40,2,703,41"', 'parameter name="EPGlistEPGBarText1" value="40,0,703,45"']) # EPGSelectionEPGBar_HD
+				self.skinSearchAndReplace.append(['parameter name="EPGlistEPGBarText2" value="3,2,741,41"', 'parameter name="EPGlistEPGBarText2" value="3,0,741,45"'])
+				
+			else:
+				self.skinSearchAndReplace.append(['font="Regular;32" itemHeight="EPGSelection"', 'itemHeight="45"']) # EPGSelection (itemHeight)
+				self.skinSearchAndReplace.append(['itemHeight="EPGSearch"', 'itemHeight="90"']) # EPGSearch (itemHeight)
+				self.skinSearchAndReplace.append(['itemHeight="EPGSelectionMulti"', 'itemHeight="45"']) # EPGSelectionMulti (itemHeight)
+				
+		elif self.E2DistroVersion == "openatv":
+			if config.plugins.KravenFHD.EPGListSize.value == "big":
+				self.skinSearchAndReplace.append(['font="Regular;32" itemHeight="EPGSelection"', 'font="Regular;36" itemHeight="54"']) # EPGSelection (Fontsize and itemHeight)
+				self.skinSearchAndReplace.append(['font="Regular;32" itemHeight="EPGSearch"', 'font="Regular;36" itemHeight="54"']) # EPGSearch (Fontsize and itemHeight)
+				self.skinSearchAndReplace.append(['font="Regular;32" itemHeight="EPGSelectionMulti"', 'font="Regular;36" itemHeight="54"']) # EPGSelectionMulti (Fontsize and itemHeight)
+			else:
+				self.skinSearchAndReplace.append(['itemHeight="EPGSelection"', 'itemHeight="45"']) # EPGSelection (itemHeight)
+				self.skinSearchAndReplace.append(['itemHeight="EPGSearch"', 'itemHeight="45"']) # EPGSearch (itemHeight)
+				self.skinSearchAndReplace.append(['itemHeight="EPGSelectionMulti"', 'itemHeight="45"']) # EPGSelectionMulti (itemHeight)
+				
+		elif self.E2DistroVersion == "teamblue":
+			if config.plugins.KravenFHD.EPGListSize.value == "big":
+				self.skinSearchAndReplace.append(['teamBlueEPGListSkinParameter="EPGSelection_EPGSearch"', 'setEventItemFont="Regular;37" setEventTimeFont="Regular;30" setTimeWidth="155" setIconDistance="12" setIconShift="0" setColWidths="86,207" setColGap="15" itemHeight="52" position="105,120" size="1062,780"']) # EPGSelection, EPGSearch
+				self.skinSearchAndReplace.append(['teamBlueEPGListSkinParameter="EPGSelectionMulti"', 'setEventItemFont="Regular;37" setEventTimeFont="Regular;30" setTimeWidth="155" setIconDistance="12" setIconShift="0" setColWidths="345,173" setColGap="15" itemHeight="52" position="75,202" size="1770,520"']) # EPGSelectionMulti
+			else:
+				self.skinSearchAndReplace.append(['teamBlueEPGListSkinParameter="EPGSelection_EPGSearch"', 'setEventItemFont="Regular;32" setEventTimeFont="Regular;26" setTimeWidth="135" setIconDistance="12" setIconShift="0" setColWidths="75,180" setColGap="15" itemHeight="45" position="105,120" size="1062,810"']) # EPGSelection, EPGSearch
+				self.skinSearchAndReplace.append(['teamBlueEPGListSkinParameter="EPGSelectionMulti"', 'setEventItemFont="Regular;32" setEventTimeFont="Regular;26" setTimeWidth="135" setIconDistance="12" setIconShift="0" setColWidths="300,150" setColGap="15" itemHeight="45" position="75,202" size="1770,540"']) # EPGSelectionMulti
+
+		### VTi MovieList-Picon
+		if self.E2DistroVersion == "VTi" and config.usage.movielist_show_picon.value == True:
+			self.skinSearchAndReplace.append(['<parameter name="MovieListMinimalVTITitle" value="40,0,1000,40" />', '<parameter name="MovieListMinimalVTITitle" value="40,0,800,40" />'])
+
 		### change constant-widgets to panels for teamblue (part #1)
 		if self.E2DistroVersion == "teamblue":
 			self.skinSearchAndReplace.append(['<constant-widgets>', '<!--/* Templates -->'])
@@ -4189,21 +4203,17 @@ class KravenFHD(ConfigListScreen, Screen):
 			self.skinSearchAndReplace.append(['constant-panels', 'constant-widget'])
 
 		### Header
-		if self.E2DistroVersion == "teamblue":
-			self.skinSearchAndReplace.append(['<parameter name="VirtualKeyboard" value="67" />', '<parameter name="VirtualKeyboard" value="67,67" />'])
-		if self.E2DistroVersion in ("VTi","openatv") and config.plugins.KravenFHD.EPGListSize.value == "big":
-			self.skinSearchAndReplace.append(['<parameter name="EPGlistFont1" value="Regular;32" />', '<parameter name="EPGlistFont1" value="Regular;36" />'])
-			self.skinSearchAndReplace.append(['<parameter name="EPGlistText1" value="2,2,66,41" />', '<parameter name="EPGlistText1" value="2,4,80,45" />'])
-			self.skinSearchAndReplace.append(['<parameter name="EPGlistText2" value="0,2,234,41" />', '<parameter name="EPGlistText2" value="0,4,280,45" />'])
-			self.skinSearchAndReplace.append(['<parameter name="EPGlistText3" value="300,2,758,41" />', '<parameter name="EPGlistText3" value="360,4,698,45" />'])
-			self.skinSearchAndReplace.append(['<parameter name="EPGlistRecText" value="340,2,718,41" />', '<parameter name="EPGlistRecText" value="400,4,658,45" />'])
-			self.skinSearchAndReplace.append(['<parameter name="EPGlistNonRecText" value="300,2,758,41" />', '<parameter name="EPGlistNonRecText" value="360,4,698,45" />'])
-		if self.E2DistroVersion == "VTi" and config.usage.movielist_show_picon.value == True:
-			self.skinSearchAndReplace.append(['<parameter name="MovieListMinimalVTITitle" value="40,0,1000,40" />', '<parameter name="MovieListMinimalVTITitle" value="40,0,800,40" />'])
-		self.appendSkinFile(self.daten + "header_begin.xml")
+		self.appendSkinFile(self.daten + "header.xml")
+
+		### Skinparameter
+		self.appendSkinFile(self.daten + 'skinparameter_' + self.E2DistroVersion + '.xml')
+
+		### Listselection-Border
 		if not config.plugins.KravenFHD.SelectionBorderList.value == "none":
-			self.appendSkinFile(self.daten + "header_middle.xml")
-		self.appendSkinFile(self.daten + "header_end.xml")
+			self.appendSkinFile(self.daten + "selectionborder.xml")
+
+		### Templates
+		self.appendSkinFile(self.daten + "templates.xml")
 
 		### change constant-widgets to panels for teamblue (part #2)
 		if self.E2DistroVersion == "teamblue":
@@ -5002,19 +5012,7 @@ class KravenFHD(ConfigListScreen, Screen):
 				config.usage.timerlist_style.value = "5"
 				config.usage.timerlist_style.save()
 
-		### EPGSelection
-		if self.E2DistroVersion in ("VTi","openatv"):
-			if config.plugins.KravenFHD.EPGListSize.value == "big":
-				self.skinSearchAndReplace.append(['font="Regular;32" foregroundColor="EPGSelection" itemHeight="45"', 'font="Regular;36" foregroundColor="KravenFont1" itemHeight="54"'])
-			else:
-				self.skinSearchAndReplace.append(['font="Regular;32" foregroundColor="EPGSelection" itemHeight="45"', 'font="Regular;32" foregroundColor="KravenFont1" itemHeight="45"'])
-		elif self.E2DistroVersion == "teamblue":
-			if config.plugins.KravenFHD.EPGListSize.value == "big":
-				self.skinSearchAndReplace.append(['teamBlueEPGListSkinParameter="EPGSelection_EPGSearch"', 'setEventItemFont="Regular;37" setEventTimeFont="Regular;30" setTimeWidth="155" setIconDistance="12" setIconShift="0" setColWidths="86,207" setColGap="15" itemHeight="52" position="105,120" size="1062,780"']) # EPGSelection, EPGSearch
-				self.skinSearchAndReplace.append(['teamBlueEPGListSkinParameter="EPGSelectionMulti"', 'setEventItemFont="Regular;37" setEventTimeFont="Regular;30" setTimeWidth="155" setIconDistance="12" setIconShift="0" setColWidths="345,173" setColGap="15" itemHeight="52" position="75,202" size="1770,520"']) # EPGSelectionMulti
-			else:
-				self.skinSearchAndReplace.append(['teamBlueEPGListSkinParameter="EPGSelection_EPGSearch"', 'setEventItemFont="Regular;32" setEventTimeFont="Regular;26" setTimeWidth="135" setIconDistance="12" setIconShift="0" setColWidths="75,180" setColGap="15" itemHeight="45" position="105,120" size="1062,810"']) # EPGSelection, EPGSearch
-				self.skinSearchAndReplace.append(['teamBlueEPGListSkinParameter="EPGSelectionMulti"', 'setEventItemFont="Regular;32" setEventTimeFont="Regular;26" setTimeWidth="135" setIconDistance="12" setIconShift="0" setColWidths="300,150" setColGap="15" itemHeight="45" position="75,202" size="1770,540"']) # EPGSelectionMulti
+		### EPGSelection EPGSize
 		if config.plugins.KravenFHD.EPGSelectionEPGSize.value == "big":
 			self.skinSearchAndReplace.append(['font="Regular;33" foregroundColor="EPGSelection" position="1230,493" size="627,420"', 'font="Regular;36" foregroundColor="KravenFont1" position="1230,493" size="627,414"'])
 			self.skinSearchAndReplace.append(['font="Regular;33" foregroundColor="EPGSelection" position="1230,440" size="627,462"', 'font="Regular;36" foregroundColor="KravenFont1" position="1230,440" size="627,460"'])
@@ -5025,6 +5023,8 @@ class KravenFHD(ConfigListScreen, Screen):
 			self.skinSearchAndReplace.append(['font="Regular;33" foregroundColor="EPGSelection" position="1230,440" size="627,462"', 'font="Regular;33" foregroundColor="KravenFont1" position="1230,440" size="627,462"'])
 			self.skinSearchAndReplace.append(['font="Regular;33" foregroundColor="EPGSelection" position="1230,173" size="627,756"', 'font="Regular;33" foregroundColor="KravenFont1" position="1230,173" size="627,756"'])
 			self.skinSearchAndReplace.append(['font="Regular;33" foregroundColor="EPGSelection" position="1230,120" size="627,798"', 'font="Regular;33" foregroundColor="KravenFont1" position="1230,120" size="627,798"'])
+
+		### EPGSelection xml
 		if self.E2DistroVersion in ("VTi","openatv"):
 			self.appendSkinFile(self.daten + config.plugins.KravenFHD.EPGSelection.value + ".xml")
 		elif self.E2DistroVersion == "teamblue":

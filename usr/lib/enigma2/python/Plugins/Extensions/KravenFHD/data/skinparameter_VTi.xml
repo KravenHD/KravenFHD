@@ -1,0 +1,292 @@
+  <!-- Skinparamter VTi -->
+  <parameters>
+    <!-- Choicelist -->
+    <parameter name="ChoicelistItemHeight" value="45" />
+    <parameter name="ChoicelistFont" value="Regular;32" />
+    <parameter name="ChoicelistFontSize" value="30" />
+    <parameter name="ChoicelistName" value="70,1,1720,42" />
+    <parameter name="ChoicelistIcon" value="10,0,60,45" />
+    <parameter name="ChoicelistDash" value="0,36,1720,30" />
+    <!-- MovieList -->
+    <parameter name="MovieListFontSize1" value="32" />
+    <parameter name="MovieListFontSize2" value="30" />
+    <parameter name="MovieListDirIcon" value="10,7,40,40" />
+    <parameter name="MovieListDirectoryIcon" value="55, 0, 1000, 36" />
+    <parameter name="MovieListDirectoryNoIcon" value="10, 0, 1000, 36" />
+    <parameter name="MovieListProgress" value="25, 15, 90, 15" />
+    <parameter name="MovieListProgressPercent" value="20, 18, 60, 10" />
+    <parameter name="MovieListProgressBorder" value="2" />
+    <parameter name="MovieListIconXOffset" value="40" />
+    <parameter name="MovieListProgressBarXtraYOffsetVTIStyle" value="5" />
+    <parameter name="MovieListIcon" value="10,5,40,40" />
+    <parameter name="MovieListMinimalItemHeight" value="45" />
+    <parameter name="MovieListMinimalVTITitle" value="40,0,1000,40" />
+    <parameter name="MovieListMinimalVTIPicon" value="815,2,60,40" />
+    <parameter name="MovieListMinimalVTIBegin" value="825,2,70,38" />
+    <parameter name="MovieListMinimalVTILength" value="895,2,70,38" />
+    <parameter name="MovieListMinimalVTISize" value="965,2,70,38" />
+    <parameter name="MovieListMinimalVTIService" value="0, 0, 0, 0" />
+    <parameter name="MovieListMinimalVTIDescription" value="0, 0, 0, 0" />
+    <parameter name="MovieListMinimalVTITags" value="0, 0, 0, 0" />
+    <parameter name="MovieListMinimalVTIServiceTags" value="0, 0, 0, 0" />
+    <parameter name="MovieListItemHeight" value="45" />
+    <parameter name="MovieListMinimalFont1" value="Regular;32" />
+    <parameter name="MovieListMinimalFont2" value="Regular;30" />
+    <parameter name="MovieListMinimalFontSize1" value="32" />
+    <parameter name="MovieListMinimalFontSize2" value="30" />
+    <parameter name="MovieListMinimalTitleDesc" value="40,10,790,40" />
+    <parameter name="MovieListMinimalBegin" value="805,12,230,38" />
+    <parameter name="MovieListMinimalTitle" value="0, 0, 0, 0" />
+    <parameter name="MovieListMinimalLength" value="0, 0, 0, 0" />
+    <parameter name="MovieListOriginalItemHeight" value="45" />
+    <parameter name="MovieListOriginalFont1" value="Regular;32" />
+    <parameter name="MovieListOriginalFont2" value="Regular;30" />
+    <parameter name="MovieListOriginalFont3" value="Regular;30" />
+    <parameter name="MovieListOriginalFontSize1" value="32" />
+    <parameter name="MovieListOriginalFontSize2" value="30" />
+    <parameter name="MovieListOriginalFontSize3" value="30" />
+    <parameter name="MovieListOriginalTitle" value="40,0,750,40" />
+    <parameter name="MovieListOriginalBegin" value="805,2,230,38" />
+    <parameter name="MovieListOriginalService" value="0, 0, 0, 0" />
+    <parameter name="MovieListOriginalLength" value="0, 0, 0, 0" />
+    <parameter name="MovieListOriginalDescription" value="0, 0, 0, 0" />
+    <parameter name="MovieListOriginalDuration" value="0, 0, 0, 0" />
+    <parameter name="MovieListOriginalTags" value="0, 0, 0, 0" />
+    <parameter name="MovieListOriginalServiceTags" value="0, 0, 0, 0" />
+    <parameter name="MovieListCompactItemHeight" value="90" />
+    <parameter name="MovieListCompactFont1" value="Regular;32" />
+    <parameter name="MovieListCompactFont2" value="Regular;30" />
+    <parameter name="MovieListCompactFontSize1" value="32" />
+    <parameter name="MovieListCompactFontSize2" value="30" />
+    <parameter name="MovieListCompactTitle" value="40,0,900,40" />
+    <parameter name="MovieListCompactLength" value="915,0,120,40" />
+    <parameter name="MovieListCompactBegin" value="65,45,235,38" />
+    <parameter name="MovieListCompactServiceTags" value="315,45,720,38" />
+    <parameter name="MovieListCompactService" value="0, 0, 0, 0" />
+    <parameter name="MovieListCompactTags" value="0, 0, 0, 0" />
+    <parameter name="MovieListCompactDescription" value="0, 0, 0, 0" />
+    <parameter name="MovieListCompactDuration" value="0, 0, 0, 0" />
+    <parameter name="MovieListCompactDescTitle" value="40,0,800,40" />
+    <parameter name="MovieListCompactDescBegin" value="815,2,220,38" />
+    <parameter name="MovieListCompactDescDescription" value="10,45,560,38" />
+    <parameter name="MovieListCompactDescService" value="570,45,335,38" />
+    <parameter name="MovieListCompactDescLength" value="920,45,115,38" />
+    <parameter name="MovieListCompactDescDuration" value="0, 0, 0, 0" />
+    <parameter name="MovieListCompactDescTags" value="0, 0, 0, 0" />
+    <parameter name="MovieListCompactDescServiceTags" value="0, 0, 0, 0" />
+    <parameter name="MovieListDurationSize" value="90,150,130" />
+    <parameter name="MovieListChannelSize" value="110,50,0" />
+    <parameter name="MovieListBeginStringSize" value="160,110,0" />
+    <parameter name="MovieListNameXtraSize" value="0,60" />
+    <parameter name="MovieListFileSize" value="0,100" />
+    <!-- EnhancedMovieCenterList -->
+    <parameter name="EnhancedMovieCenterItemHeight" value="48" />
+    <parameter name="EnhancedMovieCenterFontSize" value="34" />
+    <parameter name="EnhancedMovieCenterListFont" value="34" />
+    <parameter name="ECMSelectionItemHeight" value="48" />
+    <parameter name="ECMSelectionFontSize" value="34" />
+    <parameter name="ECMSelectionListFont" value="34" />
+    <!-- MediaplayerPlaylist -->
+    <parameter name="MediaPlayerPlayList" value="35,1,700,35" />
+    <parameter name="MediaPlayerPlayListFont" value="Regular;30" />
+    <!-- VirtualKeyboard VTi -->
+    <parameter name="VirtualKeyboardFont" value="Regular;42" />
+	<parameter name="VirtualKeyboard" value="67" />
+    <!-- EPGlist -->
+    <parameter name="EPGlistText1" value="3,2,48,41" />
+    <parameter name="EPGlistText2" value="57,2,243,41" />
+    <parameter name="EPGlistRecImage" value="321,13,20,20" />
+    <parameter name="EPGlistRecText" value="351,2,705,41" />
+    <parameter name="EPGlistNonRecText" value="321,2,735,41" />
+	<!-- EPGSearch -->
+    <parameter name="EPGlistText3" value="321,1,735,41" />
+	<parameter name="EPGSearchItemHeightBig" value="90" />
+	<parameter name="EPGSearchItemHeightDefault" value="45" />
+	<!-- EPGlistSimilar -->
+    <parameter name="EPGlistSimilarText1" value="3,2,98,41" />
+    <parameter name="EPGlistSimilarText2" value="107,2,243,41" />
+    <parameter name="EPGlistSimilarRecIcon" value="371,13,20,20" />
+    <parameter name="EPGlistSimilarRecText" value="401,2,655,41" />
+    <parameter name="EPGlistSimilarNonRecText" value="371,2,685,41" />
+	<!-- EPGSelectionEPGBar_HD -->
+    <parameter name="EPGlistEPGBarIcon" value="3,13,20,20" />
+    <parameter name="EPGlistEPGBarText1" value="40,2,703,41" />
+    <parameter name="EPGlistEPGBarText2" value="3,2,741,41" />
+	<!-- EPGlistMulti -->
+    <parameter name="EPGlistMultiRecIcon" value="3,13,20,20" />
+    <parameter name="EPGlistMultiRecText" value="33,2,190,41" />
+    <parameter name="EPGlistMultiNonRecText" value="3,2,220,41" />
+    <parameter name="EPGlistMultiBeginText1" value="220,2,260,41" />
+    <parameter name="EPGlistMultiBeginText2" value="482,2,1285,41" />
+    <parameter name="EPGlistMultiProgress" value="300,15,50,10" />
+    <parameter name="EPGlistMultiProgressText" value="370,2,1397,41" />
+    <!-- EPGShare -->
+	<parameter name="EPGShareListItemHeight" value="45" />
+	<parameter name="EPGShareListWidth" value="1035" />
+	<parameter name="EPGShareListMarginLeft" value="15" />
+	<parameter name="EPGShareListFont" value="Regular;32" />
+    <!-- GMultiEPGTimeline -->
+    <parameter name="GMultiEPGTimelineFont" value="Regular;28" />
+    <parameter name="GMultiEPGTimelineItemHeight" value="28" />
+    <parameter name="GMultiEPGTimelineItemSize" value="100,30" />
+    <!-- PluginList -->
+    <parameter name="PluginListFont1" value="Regular;30" />
+    <parameter name="PluginListFont2" value="Regular;25" />
+    <parameter name="PluginListItemHeight" value="80" />
+    <parameter name="PluginListName" value="180,2,867,37" />
+    <parameter name="PluginListDescription" value="180,40,867,32" />
+    <parameter name="PluginListIcon" value="30,18,100,40" />
+    <parameter name="PluginListCategoryIcon" value="10,8,150,60" />
+    <!-- MultiQuickButtonList -->
+    <parameter name="MultiQuickButtonList" value="45,4,800,38" />
+    <parameter name="MultiQuickButtonListPic1" value="10,8,790,25" />
+    <parameter name="MultiQuickButtonListPic2" value="5,8,35,25" />
+    <parameter name="MultiQuickButtonListFont" value="Regular;30" />
+    <parameter name="MultiQuickButtonListItemHeight" value="45" />
+    <!-- PiconManagerList -->
+    <parameter name="PiconManagerList" value="10,5,1675,40" />
+    <parameter name="PiconManagerListFont" value="Regular;32" />
+    <parameter name="PiconManagerListItemHeight" value="45" />
+    <!-- Channellist ServicelistService -->
+    <parameter name="ServicelistCustomPiconSize" value="95,40" />
+    <parameter name="ServicelistDoubleSpacedMinHeight" value="104" />
+    <parameter name="ServicelistPiconXOffset" value="8" />
+    <parameter name="ServicelistServiceNumber" value="0,0,80,0" />
+    <parameter name="ServicelistServiceNumberOffset" value="100" />
+    <parameter name="ServicelistServiceNumberOffsetNormal" value="100" />
+    <parameter name="ServicelistProgressbarDefaultOffset" value="40" />
+    <parameter name="ServicelistProgressbarOffset" value="100" />
+    <parameter name="ServicelistServiceTypePixOffset" value="38" />
+    <parameter name="ServicelistOffset" value="0" />
+    <parameter name="Servicelist100Picon" value="0,0,100,60" />
+    <parameter name="ServicelistServiceTypePixmap100" value="0,10,40,40" />
+    <parameter name="ServicelistServiceEventProgressbar100" value="5,0,52,0" />
+    <parameter name="ServicelistServiceNumber100" value="5,0,60,0" />
+    <parameter name="ServicelistRecordServicePixmap100" value="80,0,40,40" />
+    <parameter name="ServicelistServiceName100" value="80,0,1145,40" />
+    <parameter name="ServicelistServiceInfo100" value="80,0,1145,40" />
+    <parameter name="ServicelistServiceEventProgressbar" value="0,0,52,0" />
+    <parameter name="ServicelistRecordServicePixmap" value="-35,8,40,40" />
+    <parameter name="ServicelistServiceName" value="0,0,1145,0" />
+	<parameter name="ServicelistAdvertismentIconPixmap" value="-40,0,45,45" />
+	<parameter name="ServicelistTextOffsetForIcon" value="40" />
+    <!-- ServiceInfo -->
+    <parameter name="ServiceInfoFont" value="Regular;30" />
+    <parameter name="ServiceInfo_I" value="20,0,1100,40" />
+    <parameter name="ServiceInfo_II" value="20,0,1100,40" />
+    <parameter name="ServiceInfo_III" value="630,0,1100,40" />
+    <!-- AudioSelection -->
+    <parameter name="AudioSelectionSliderSeparation" value="300" />
+    <!-- general slider separation in config menues -->
+    <parameter name="ConfigListSliderSeparation" value="300" />
+    <!-- TMDb -->
+    <parameter name="TMDbListFont" value="Regular;32" />
+    <parameter name="TMDbListName" value="15,1,1032,44" />
+	<!-- VerticalEPGView -->
+	<parameter name="VertEPGListFont_01" value="Regular;30" />
+	<parameter name="VertEPGListFont_02" value="Regular;32" />
+	<parameter name="VertEPGDate" value="0, 0, 0, 0" />
+	<parameter name="VertEPGBeginEndDuration" value="4, 0, 322, 36" />
+	<parameter name="VertEPGPrimeTimePic" value="0, 0, 0, 0" />
+	<parameter name="VertEPGText" value="4, 37, 322, 82" />
+	<parameter name="VertEPGDivLine" value="4, 122, 322, 1" />
+	<parameter name="VertEPGColumnsCount" value="5" />
+	<!-- ChannelSelectionHorizontal -->
+	<parameter name="ServicelistHorServiceTypeIcon" value="0,0,0,0" />
+	<parameter name="ServicelistHorServiceTime" value="0,0,0,0" />
+	<parameter name="ServicelistHorProgressbar" value="0,0,0,0" />
+	<parameter name="ServicelistHorPreViewPic" value="0,0,0,0" />
+	<parameter name="ServicelistHorPicon" value="37,21,216,122" />
+	<parameter name="ServicelistHorNumber" value="0,0,0,0" />
+	<parameter name="ServicelistHorName" value="3,150,286,45" />
+	<parameter name="ServicelistHorServiceInfo" value="4,210,286,81" />
+	<parameter name="ServicelistHorCustomPiconSize" value="216,122" />
+    <!-- FileList -->
+    <parameter name="FileListName" value="50,0,1000,45" />
+    <parameter name="FileListIcon" value="5,8,30,30" />
+    <parameter name="FileListMultiName" value="95,0,950,45" />
+    <parameter name="FileListMultiIcon" value="50,8,30,30" />
+    <parameter name="FileListMultiLock" value="5,8,30,30" />
+    <parameter name="FileListFont" value="Regular;32" />
+    <parameter name="FileListItemHeight" value="45" />
+	<!-- FilebrowserVTi -->
+	<parameter name="FileListmodName" value="50,0,1000,45" />
+	<parameter name="FileListmodIcon" value="15,10,40,40" />
+	<parameter name="FileListmodFont" value="Regular;32" />
+	<parameter name="FileListmodItemHeight" value="45" />
+	<parameter name="FileListmodMultiName" value="50,0,1000,45" />
+	<parameter name="FileListmodMultiIcon" value="15,10,40,40" />
+	<parameter name="FileListmodMultiLock" value="15,10,40,40" />
+	<parameter name="SelectionListmodDescription" value="50,0,1000,45" />
+	<parameter name="SelectionListmodFont" value="Regular;32" />
+	<parameter name="SelectionListmodItemHeight" value="45" />
+	<parameter name="SelectionListmodIcon" value="15,10,40,40" />
+	<!-- PluginBrowser -->
+	<parameter name="PluginBrowserName" value="180,3,45"/>
+	<parameter name="PluginBrowserDescr" value="180,42,39"/>
+	<parameter name="PluginBrowserIcon" value="2,0,160,70"/>
+	<parameter name="PluginBrowserDownloadName" value="125,3,45"/>
+	<parameter name="PluginBrowserDownloadDescr" value="125,42,39"/>
+	<parameter name="PluginBrowserDownloadIcon" value="2,0,120,75"/>
+	<!-- ServiceInfo -->
+	<parameter name="ServiceInfo" value="0,0,450,50" />
+    <parameter name="ServiceInfoLeft" value="0,0,450,45" />
+    <parameter name="ServiceInfoRight" value="450,0,1000,45" />
+    <!-- SelectionList VTi -->
+    <parameter name="SelectionListFont" value="Regular;32" />
+    <parameter name="SelectionListItemHeight" value="45" />
+    <parameter name="SelectionListDescription" value="55,2,1000,41" />
+    <parameter name="SelectionListIcon" value="5,3,40,40" />
+	<!-- SelectionList openATV -->
+    <parameter name="SelectionListDescr" value="55,2,1000,41" />
+    <parameter name="SelectionListLock" value="5,8,30,30" />
+	<parameter name="SelectionListLockOff" value="5,8,30,30" />
+	<!-- ConfigList openATV -->
+    <parameter name="ConfigListSeperator" value="600" />
+	<!-- Dreamexplorer -->
+    <parameter name="DreamexplorerName" value="55,2,1000,41" />
+    <parameter name="DreamexplorerIcon" value="5,8,30,30" />
+	<!-- EPGListChannelList VTi -->
+	<parameter name="EPGServicelistText0OffSet" value="0,0" />
+	<parameter name="EPGServicelistText1OffSet" value="0,0" />
+	<parameter name="EPGServicelistText2OffSet" value="0,0" />
+	<parameter name="EPGServicelistRecImageOffset" value="0,0" />
+	<parameter name="EPGServicelistRecTextOffset" value="0,0" />
+	<parameter name="EPGServicelistNonRecTextOffset" value="0,0" />
+	<parameter name="EPGServicelistText0" value="3,1,48,44" />
+	<parameter name="EPGServicelistText1" value="51,1,99,44" />
+	<parameter name="EPGServicelistText2" value="165,1,93,44" />
+	<parameter name="EPGServicelistRecImage" value="255,13,20,20" />
+	<parameter name="EPGServicelistRecText" value="281,1,900,44" />
+	<parameter name="EPGServicelistNonRecText" value="255,1,900,44" />
+	<!-- CoverFind -->
+    <parameter name="CoverFindListFont" value="Regular;32" />
+    <parameter name="CoverFindListIcon" value="6,10,25,25" />
+    <parameter name="CoverFindListName" value="37,2,1019,41" />
+    <parameter name="CoverFindItemHeight" value="45" />
+    <parameter name="CoverFindCover" value="0,0,120,180" />
+    <parameter name="CoverFindName" value="132,2,926,41" />
+  </parameters>
+  <fonts>
+	<alias name="FileList" font="Regular" size="32" height="45" />
+	<alias name="FileListMulti" font="Regular" size="32" height="45" />
+	<alias name="VirtualKeyboard" font="Regular" size="42" height="67"/>
+	<alias name="ServiceInfo" font="Regular" size="32" height="45"/>
+	<alias name="PluginBrowser0" font="Regular" size="32" height="75"/>
+	<alias name="PluginBrowser1" font="Regular" size="22"/>
+	<alias name="HelpMenuList" font="Regular" size="30" height="45"/>
+	<alias name="HelpMenuListExt0" font="Regular" size="32" height="75"/>
+	<alias name="HelpMenuListExt1" font="Regular" size="28"/>
+	<alias name="ChoiceList" font="Regular" size="32" height="45" />
+	<alias name="MaxCubeRoom" font="Regular" size="24" height="70"/>
+	<alias name="MaxCubeTemp" font="Regular2" size="45" height="70"/>
+	<alias name="iDreamListFont0" font="Regular" size="32"/>
+	<alias name="iDreamListFont1" font="Regular" size="32"/>
+	<alias name="SelectionList" font="Regular" size="32" height="45"/>
+	<alias name="Dreamexplorer" font="Regular" size="32" height="45"/>
+	<alias name="PlayList" font="Regular" size="30" height="42"/>
+	<alias name="EPGList0" font="Regular" size="32" />
+	<alias name="EPGList1" font="Regular" size="32" />
+	<alias name="EPGListChannelList0" font="Regular" size="32" />
+	<alias name="EPGListChannelList1" font="Regular" size="32" />
+  </fonts>

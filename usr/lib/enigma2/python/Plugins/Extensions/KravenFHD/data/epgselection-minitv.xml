@@ -4,7 +4,7 @@
     <widget backgroundColor="KravenIBCoolbg" alphatest="blend" position="1230,21" render="Picon" size="100,60" source="Service" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-	<widget backgroundColor="Kravenbg2" name="list" font="Regular;32" foregroundColor="EPGSelection" itemHeight="45" position="105,120" size="1062,810" zPosition="3" scrollbarMode="showOnDemand" scrollbarWidth="5" enableWrapAround="1" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="list" foregroundColor="KravenFont1" font="Regular;32" itemHeight="EPGSelection" position="105,120" size="1062,810" zPosition="3" scrollbarMode="showOnDemand" scrollbarWidth="5" enableWrapAround="1" transparent="1" />
     <widget source="session.VideoPicture" render="Pig" position="1230,120" size="552,310" zPosition="3" backgroundColor="transparent" />
     <eLabel backgroundColor="#00000000" position="1230,120" size="552,310" transparent="0" zPosition="2" />
     <eLabel backgroundColor="KravenBorder2" position="1230,120" size="552,4" transparent="0" zPosition="4" />
@@ -33,7 +33,7 @@
     <!-- EPGSearch -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="EPGSearch" position="0,0" size="1920,1080" title="EPG Selection">
     <widget backgroundColor="KravenIBCoolbg" font="Regular2;51" foregroundColor="KravenMFont2" position="105,18" render="Label" size="1500,69" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
-	<widget backgroundColor="Kravenbg2" name="list" foregroundColor="KravenFont1" font="Regular;32" itemHeight="90" position="105,120" size="1062,810" zPosition="3" scrollbarMode="showOnDemand" scrollbarWidth="5" enableWrapAround="1" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="list" foregroundColor="KravenFont1" font="Regular;32" itemHeight="EPGSearch" position="105,120" size="1062,810" zPosition="3" scrollbarMode="showOnDemand" scrollbarWidth="5" enableWrapAround="1" transparent="1" />
     <widget source="session.VideoPicture" render="Pig" position="1230,120" size="552,310" zPosition="3" backgroundColor="transparent" />
     <eLabel backgroundColor="#00000000" position="1230,120" size="552,310" transparent="0" zPosition="2" />
     <eLabel backgroundColor="KravenBorder2" position="1230,120" size="552,4" transparent="0" zPosition="4" />
