@@ -4202,15 +4202,18 @@ class KravenFHD(ConfigListScreen, Screen):
 		elif self.E2DistroVersion in ("VTi","openatv"):
 			self.skinSearchAndReplace.append(['constant-panels', 'constant-widget'])
 
-		### Header
+		### Header begin
 		self.appendSkinFile(self.daten + "header.xml")
-
-		### Skinparameter
-		self.appendSkinFile(self.daten + 'skinparameter_' + self.E2DistroVersion + '.xml')
 
 		### Listselection-Border
 		if not config.plugins.KravenFHD.SelectionBorderList.value == "none":
 			self.appendSkinFile(self.daten + "selectionborder.xml")
+
+		### Header end
+		self.appendSkinFile(self.daten + "header-end.xml")
+
+		### Skinparameter
+		self.appendSkinFile(self.daten + 'skinparameter_' + self.E2DistroVersion + '.xml')
 
 		### Templates
 		self.appendSkinFile(self.daten + "templates.xml")

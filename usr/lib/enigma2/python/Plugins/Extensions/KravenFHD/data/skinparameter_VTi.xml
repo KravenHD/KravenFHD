@@ -34,8 +34,8 @@
     <parameter name="MovieListMinimalFont2" value="Regular;30" />
     <parameter name="MovieListMinimalFontSize1" value="32" />
     <parameter name="MovieListMinimalFontSize2" value="30" />
-    <parameter name="MovieListMinimalTitleDesc" value="40,10,790,40" />
-    <parameter name="MovieListMinimalBegin" value="805,12,230,38" />
+    <parameter name="MovieListMinimalTitleDesc" value="40,0,760,40" />
+    <parameter name="MovieListMinimalBegin" value="810,2,240,38" />
     <parameter name="MovieListMinimalTitle" value="0, 0, 0, 0" />
     <parameter name="MovieListMinimalLength" value="0, 0, 0, 0" />
     <parameter name="MovieListOriginalItemHeight" value="45" />
@@ -67,7 +67,7 @@
     <parameter name="MovieListCompactDescription" value="0, 0, 0, 0" />
     <parameter name="MovieListCompactDuration" value="0, 0, 0, 0" />
     <parameter name="MovieListCompactDescTitle" value="40,0,800,40" />
-    <parameter name="MovieListCompactDescBegin" value="815,2,220,38" />
+    <parameter name="MovieListCompactDescBegin" value="795,2,240,38" />
     <parameter name="MovieListCompactDescDescription" value="10,45,560,38" />
     <parameter name="MovieListCompactDescService" value="570,45,335,38" />
     <parameter name="MovieListCompactDescLength" value="920,45,115,38" />
@@ -93,6 +93,8 @@
     <parameter name="VirtualKeyboardFont" value="Regular;42" />
 	<parameter name="VirtualKeyboard" value="67" />
     <!-- EPGlist -->
+    <parameter name="EPGlistFont1" value="Regular;32" />
+    <parameter name="EPGlistFont2" value="Regular;30" />
     <parameter name="EPGlistText1" value="3,2,48,41" />
     <parameter name="EPGlistText2" value="57,2,243,41" />
     <parameter name="EPGlistRecImage" value="321,13,20,20" />
@@ -289,4 +291,8 @@
 	<alias name="EPGList1" font="Regular" size="32" />
 	<alias name="EPGListChannelList0" font="Regular" size="32" />
 	<alias name="EPGListChannelList1" font="Regular" size="32" />
+	<alias name="MovieListFont1" font="Regular" size="32" height="45" />
+	<alias name="MovieListFont2" font="Regular" size="30" height="45" />
+	<alias name="MovieListMinimalFont1" font="Regular" size="32" height="45" />
+	<alias name="MovieListMinimalFont2" font="Regular" size="30" height="45" />
   </fonts>

@@ -1,0 +1,16 @@
+  </windowstyle>
+  <windowstyle id="1" type="skinned">
+    <title font="Regular;36" offset="20,5" />
+    <color color="black" name="Background" />
+    <color color="white" name="LabelForeground" />
+    <color color="black" name="ListboxBackground" />
+    <color color="white" name="ListboxForeground" />
+    <color color="black" name="ListboxSelectedBackground" />
+    <color color="white" name="ListboxSelectedForeground" />
+    <color color="black" name="ListboxMarkedBackground" />
+    <color color="white" name="ListboxMarkedForeground" />
+    <color color="black" name="ListboxMarkedAndSelectedBackground" />
+    <color color="white" name="ListboxMarkedAndSelectedForeground" />
+    <color color="black" name="WindowTitleBackground" />
+    <color color="white" name="WindowTitleForeground" />
+  </windowstyle>
