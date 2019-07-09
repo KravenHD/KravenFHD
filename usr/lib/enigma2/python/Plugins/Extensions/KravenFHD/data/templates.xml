@@ -2738,7 +2738,7 @@
 	
 	<constant-panels name="infobar-channelname-number-small-infobar-style-zzz2">
 	  <widget font="Regular;60" halign="left" noWrap="1" backgroundColor="KravenNamebg" foregroundColor="KravenName" position="585,711" size="1215,75" render="Label" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
-		<convert type="KravenVBServiceName2">%n - %N</convert>
+		<convert type="KravenFHDServiceName2">%n - %N</convert>
 	  </widget>
 	</constant-panels>
 	
@@ -2786,7 +2786,7 @@
 	
 	<constant-panels name="ecminfo-infobar-style-zzz2">
 	  <widget source="session.CurrentService" render="Label" position="585,987" size="982,33" font="Regular;24" halign="left" foregroundColor="KravenECM" backgroundColor="KravenECMbg" transparent="1" zPosition="5">
-	    <convert type="KravenVBECMLine">ShortReader,FTAVisible</convert>
+	    <convert type="KravenFHDECMLine">ShortReader,FTAVisible</convert>
 	  </widget>
 	</constant-panels>
   </constant-widgets>
