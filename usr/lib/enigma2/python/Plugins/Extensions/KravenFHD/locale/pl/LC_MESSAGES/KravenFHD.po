@@ -654,13 +654,13 @@ msgid "Dust"
 msgstr "Kurz"
 
 msgid "E"
-msgstr "O"
+msgstr "W"
 
 msgid "E-NE"
-msgstr "O-NO"
+msgstr "W-PW"
 
 msgid "E-SE"
-msgstr "O-SO"
+msgstr "W-PoW"
 
 msgid "ECM Infos"
 msgstr "Informacje ECM"
@@ -942,10 +942,10 @@ msgid "MovieSelection-Style"
 msgstr "Styl okna wyboru filmu"
 
 msgid "N-NE"
-msgstr "N-NO"
+msgstr "P-PW"
 
 msgid "NE"
-msgstr "NO"
+msgstr "PW"
 
 msgid "Name & Number"
 msgstr "Nazwa & Numer"
@@ -1082,10 +1082,10 @@ msgid "Running Text (Speed)"
 msgstr "Uruchamianie tekstu (Szybkość)"
 
 msgid "S-SE"
-msgstr "S-SO"
+msgstr "Po-Pow"
 
 msgid "SE"
-msgstr "SO"
+msgstr "PoW"
 
 msgid "SU"
 msgstr "SO"
@@ -1829,7 +1829,7 @@ msgid "right"
 msgstr "prawo"
 
 msgid "running since"
-msgstr "program trwa od"
+msgstr "trwa:"
 
 msgid "runningtext"
 msgstr "uruchomiony tekst"
@@ -1992,3 +1992,6 @@ msgstr "bez opisu"
 
 msgid "yellow"
 msgstr "żółty"
+
+msgid "remaining: "
+msgstr "pozostało: "
