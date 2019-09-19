@@ -7,6 +7,10 @@
     <parameter name="ChoicelistName" value="70,1,1720,42" />
     <parameter name="ChoicelistIcon" value="10,0,60,45" />
     <parameter name="ChoicelistDash" value="0,36,1720,30" />
+    <!-- SimpleList -->
+    <parameter name="SimpleListDash" value="4,36,900,30" />
+    <parameter name="SimpleListName" value="4,2,900,41" />
+    <parameter name="SimpleListIcon" value="10,5,35,35" />
     <!-- MovieList -->
     <parameter name="MovieListFontSize1" value="32" />
     <parameter name="MovieListFontSize2" value="30" />
@@ -14,7 +18,7 @@
     <parameter name="MovieListDirectoryIcon" value="55, 0, 1000, 36" />
     <parameter name="MovieListDirectoryNoIcon" value="10, 0, 1000, 36" />
     <parameter name="MovieListProgress" value="25, 15, 90, 15" />
-    <parameter name="MovieListProgressPercent" value="20, 18, 60, 10" />
+    <parameter name="MovieListProgressPercent" value="25, 2, 90, 41" />
     <parameter name="MovieListProgressBorder" value="2" />
     <parameter name="MovieListIconXOffset" value="40" />
     <parameter name="MovieListProgressBarXtraYOffsetVTIStyle" value="5" />
@@ -151,27 +155,14 @@
     <parameter name="PiconManagerListItemHeight" value="45" />
     <!-- Channellist ServicelistService -->
     <parameter name="ServicelistCustomPiconSize" value="95,40" />
-    <parameter name="ServicelistDoubleSpacedMinHeight" value="104" />
-    <parameter name="ServicelistPiconXOffset" value="8" />
-    <parameter name="ServicelistServiceNumber" value="0,0,80,0" />
-    <parameter name="ServicelistServiceNumberOffset" value="100" />
-    <parameter name="ServicelistServiceNumberOffsetNormal" value="100" />
-    <parameter name="ServicelistProgressbarDefaultOffset" value="40" />
-    <parameter name="ServicelistProgressbarOffset" value="100" />
-    <parameter name="ServicelistServiceTypePixOffset" value="38" />
-    <parameter name="ServicelistOffset" value="0" />
-    <parameter name="Servicelist100Picon" value="0,0,100,60" />
-    <parameter name="ServicelistServiceTypePixmap100" value="0,10,40,40" />
-    <parameter name="ServicelistServiceEventProgressbar100" value="5,0,52,0" />
-    <parameter name="ServicelistServiceNumber100" value="5,0,60,0" />
-    <parameter name="ServicelistRecordServicePixmap100" value="80,0,40,40" />
-    <parameter name="ServicelistServiceName100" value="80,0,1145,40" />
-    <parameter name="ServicelistServiceInfo100" value="80,0,1145,40" />
-    <parameter name="ServicelistServiceEventProgressbar" value="0,0,52,0" />
-    <parameter name="ServicelistRecordServicePixmap" value="-35,8,40,40" />
-    <parameter name="ServicelistServiceName" value="0,0,1145,0" />
-	<parameter name="ServicelistAdvertismentIconPixmap" value="-40,0,45,45" />
-	<parameter name="ServicelistTextOffsetForIcon" value="40" />
+	<parameter name="ServicelistRecordServicePixmap" value="0,15,30,60" />
+	<parameter name="ServicelistOffset" value="100" />
+	<parameter name="ServicelistServiceNumberOffset" value="100" />
+	<parameter name="ServicelistServiceNumberOffsetNormal" value="100" />
+	<parameter name="ServicelistServiceNumber" value="0,0,70,0" />
+	<parameter name="ServicelistDoubleSpacedMinHeight" value="104" />
+	<parameter name="ServicelistServiceNumber100" value="0,0,70,0" />
+	<parameter name="ServicelistCustomPreViewPicSize" value="72,45" />
     <!-- ServiceInfo -->
     <parameter name="ServiceInfoFont" value="Regular;30" />
     <parameter name="ServiceInfo_I" value="20,0,1100,40" />
@@ -268,6 +259,11 @@
     <parameter name="CoverFindItemHeight" value="45" />
     <parameter name="CoverFindCover" value="0,0,120,180" />
     <parameter name="CoverFindName" value="132,2,926,41" />
+	<!-- backsNcovers -->
+    <parameter name="backsNcoversListFont" value="Regular;32" />
+    <parameter name="backsNcoversItemHeight" value="255" />
+    <parameter name="backsNcoversCover" value="0,0,382,255" />
+    <parameter name="backsNcoversName" value="405,45,634,164" />
   </parameters>
   <fonts>
 	<alias name="FileList" font="Regular" size="32" height="45" />
@@ -280,6 +276,7 @@
 	<alias name="HelpMenuListExt0" font="Regular" size="32" height="75"/>
 	<alias name="HelpMenuListExt1" font="Regular" size="28"/>
 	<alias name="ChoiceList" font="Regular" size="32" height="45" />
+	<alias name="SimpleListFont" font="Regular" size="32" height="45" />
 	<alias name="MaxCubeRoom" font="Regular" size="24" height="70"/>
 	<alias name="MaxCubeTemp" font="Regular2" size="45" height="70"/>
 	<alias name="iDreamListFont0" font="Regular" size="32"/>

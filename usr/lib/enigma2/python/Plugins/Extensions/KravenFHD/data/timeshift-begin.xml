@@ -1,8 +1,20 @@
-  <!-- ********** Timeshift ********** -->
-  <!-- TimeshiftState -->
-  <screen name="TimeshiftState" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
+  <!--/* TimeshiftState -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="TimeshiftState" position="0,0" size="1920,1080" title="TimeshiftState">
     <ePixmap pixmap="KravenFHD/backg.png" position="0,0" size="1920,1080" zPosition="-9"/>
+	<!-- Infobar mainstyles -->
+	<!-- Infobar icons -->
+	<!-- Infobar picon -->
+	<!-- Infobar tuners -->
+	<!-- Infobar infobox -->
+	<!-- Infobar topbaricons -->
+	<!-- Infobar topbartuners -->
+	<!-- Infobar topbarinfobox -->
+	<!-- Infobar topbarbackground -->
     <!-- Infobar ibar -->
 	<!-- Infobar clockstyle -->
 	<!-- Infobar channelname -->
 	<!-- Infobar ecminfo -->
+	<!-- Infobar weatherstyle -->
+	<!-- Infobar weatherbackground -->
+	<!-- Infobar systeminfo -->
+	<!-- Infobar systeminfobackground -->

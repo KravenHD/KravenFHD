@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenFHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2019-07-03 19:45+0200\n"
+"PO-Revision-Date: 2019-09-01 10:25+0200\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -1533,6 +1533,10 @@ msgid "Specify any search string for your location (zip/city/district/state sing
 msgstr "Geben Sie einen beliebigen Suchbegriff für Ihren Standort ein (PLZ/Stadt/Ortsteil/Land einzeln oder kombiniert). Drücken Sie OK, um die virtuelle Tastatur zu nutzen. Gehen Sie im Menü hoch oder runter, um die Suche zu starten."
 
 #: KravenFHD.py
+msgid "Specify any search string for your location (zip(unprecise!)/city/district/state single or comma-separated). Press OK to use the virtual keyboard. Step up or down in the menu to start the search."
+msgstr "Geben Sie einen beliebigen Suchbegriff für Ihren Standort ein (PLZ(ungenau!)/Stadt/Ortsteil/Land einzeln oder kombiniert). Drücken Sie OK, um die virtuelle Tastatur zu nutzen. Gehen Sie im Menü hoch oder runter, um die Suche zu starten."
+
+#: KravenFHD.py
 msgid "Specify the GM code for your location. You can find it at https://weather.codes. Press OK to use the virtual keyboard. Step up or down in the menu to start the search."
 msgstr "Geben Sie den GM-Code für Ihren Standort an. Sie finden diesen unter https://weather.codes. Drücken Sie OK, um die virtuelle Tastatur zu nutzen. Gehen Sie im Menü hoch oder runter, um die Suche zu starten."
 
@@ -2215,16 +2219,40 @@ msgid "Choose the border color for GraphMultiEPG. Press OK to define your own RG
 msgstr "Wählen Sie die Rahmenfarbe für \"GraphMultiEPG\". Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
+msgid "Selected Event Fontcolor"
+msgstr "Schriftfarbe der ausgewählten Sendung"
+
+#: KravenFHD.py
 msgid "Selected Event Background"
-msgstr "Farbe der ausgewählten Sendung"
+msgstr "Hintergrundfarbe der ausgewählten Sendung"
+
+#: KravenFHD.py
+msgid "Running Event Fontcolor"
+msgstr "Schriftfarbe der laufenden Sendungen"
+
+#: KravenFHD.py
+msgid "Running Event Background"
+msgstr "Hintergrundfarbe der laufenden Sendungen"
 
 #: KravenFHD.py
 msgid "Event Description Fontsize"
 msgstr "Sendungsbeschreibung Schriftgrösse"
 
 #: KravenFHD.py
-msgid "Choose the background color of selected events for GraphMultiEPG. Press OK to define your own RGB color."
+msgid "Choose the font color of selected event for GraphMultiEPG. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Schriftfarbe der ausgewählten Sendung für \"GraphMultiEPG\". Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
+
+#: KravenFHD.py
+msgid "Choose the background color of selected event for GraphMultiEPG. Press OK to define your own RGB color."
 msgstr "Wählen Sie die Hintergrundfarbe der ausgewählten Sendung für \"GraphMultiEPG\". Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
+
+#: KravenFHD.py
+msgid "Choose the font color of running events for GraphMultiEPG. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Schriftfarbe der laufenden Sendungen für \"GraphMultiEPG\". Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
+
+#: KravenFHD.py
+msgid "Choose the background color of running events for GraphMultiEPG. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Hintergrundfarbe der laufenden Sendungen für \"GraphMultiEPG\". Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
 msgid "GRAPHICALEPG _____________________________________________________________"
@@ -2247,8 +2275,24 @@ msgid "Choose the border color for GraphicalEPG. Press OK to define your own RGB
 msgstr "Wählen Sie die Rahmenfarbe für \"Graphisches EPG\". Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenFHD.py
-msgid "Choose the background color of selected events for GraphicalEPG. Press OK to define your own RGB color."
+msgid "Choose the font color of selected event for GraphicalEPG. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Schriftfarbe der ausgewählten Sendung für \"Graphisches EPG\". Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
+
+#: KravenFHD.py
+msgid "Choose the background color of selected event for GraphicalEPG. Press OK to define your own RGB color."
 msgstr "Wählen Sie die Hintergrundfarbe der ausgewählten Sendung für \"Graphisches EPG\". Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
+
+#: KravenFHD.py
+msgid "Choose the font color of running events for GraphicalEPG. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Schriftfarbe der laufenden Sendungen für \"Graphisches EPG\". Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
+
+#: KravenFHD.py
+msgid "Choose the background color of running events for GraphicalEPG. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Hintergrundfarbe der laufenden Sendungen für \"Graphisches EPG\". Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
+
+#: KravenFHD.py
+msgid "global selection fontcolor"
+msgstr "globaler Auswahlbalken-Schriftfarbe"
 
 #: KravenFHD.py
 msgid "global selection background"
@@ -2267,24 +2311,12 @@ msgid "graphical with MiniTV"
 msgstr "grafisch mit MiniTV"
 
 #: KravenFHD.py
-msgid "This sections offers all settings for VerticalEPG."
-msgstr "In diesem Abschnitt finden Sie alle Einstellungen zum vertikalen EPG."
-
-#: KravenFHD.py
 msgid "Choose from different styles for VerticalEPG."
 msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für das vertikale EPG."
 
 #: KravenFHD.py
 msgid "VerticalEPG-Style"
 msgstr "Vertikal-EPG-Stil"
-
-#: KravenFHD.py
-msgid "Choose the border color for VerticalEPG. Press OK to define your own RGB color."
-msgstr "Wählen Sie die Rahmenfarbe für das vertikale EPG. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
-
-#: KravenFHD.py
-msgid "VERTICALEPG ______________________________________________________________"
-msgstr "VERTIKAL-EPG _____________________________________________________________"
 
 #: KravenFHD.py
 msgid "VerticalEPG"
@@ -2557,3 +2589,51 @@ msgstr "nicht verfügbar mit dem ausgewählten Infoleisten-Stil"
 #: KravenFHD.py
 msgid "remaining: "
 msgstr "noch "
+
+#: KravenFHD.py
+msgid "Busy color"
+msgstr "Beschäftigt-Farbe"
+
+#: KravenFHD.py
+msgid "Choose the color for engaged tuners. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Farbe für beschäftigte Tuner. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
+
+#: KravenFHD.py
+msgid "Active color"
+msgstr "Aktiv-Farbe"
+
+#: KravenFHD.py
+msgid "Choose the color for the current live tuner. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Farbe für den derzeit anzeigenden Tuner. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
+
+#: KravenFHD.py
+msgid "Record color"
+msgstr "Aufnahme-Farbe"
+
+#: KravenFHD.py
+msgid "Choose the color for recording tuners. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Farbe für aufnehmende Tuner. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
+
+#: KravenFHD.py
+msgid "Active record color"
+msgstr "Aktiv-Aufnahme-Farbe"
+
+#: KravenFHD.py
+msgid "Choose the color for the current live tuner when also recording. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Farbe für den derzeit anzeigenden Tuner, wenn er aufnimmt. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
+
+#: KravenFHD.py
+msgid "Show unused Tuners"
+msgstr "Zeige unbenutze Tuner"
+
+#: KravenFHD.py
+msgid "Choose whether unused tuners are displayed or not."
+msgstr "Wählen Sie, ob unbenutze Tuner angezeigt werden oder nicht."
+
+#: KravenFHD.py
+msgid "Show AGC/SNR"
+msgstr "Zeige AGC/SNR"
+
+#: KravenFHD.py
+msgid "Choose whether AGC/SNR are displayed or not."
+msgstr "Wählen Sie, ob AGC/SNR angezeigt werden oder nicht."

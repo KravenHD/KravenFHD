@@ -1,8 +1,9 @@
+# -*- coding: utf-8 -*-
+
+#  Temp Fan Info Converter
 #
-#  CPU/SYS TEMP and FAN RPM Info
-#
-#  Coded by tomele for Kraven Skins
-#  Thankfully inspired by different unknown authors
+#  Coded/Modified/Adapted by Team Kraven
+#  Based on VTi and/or OpenATV image source code
 #
 #  This code is licensed under the Creative Commons 
 #  Attribution-NonCommercial-ShareAlike 3.0 Unported 
@@ -11,6 +12,8 @@
 #  or send a letter to Creative Commons, 559 Nathan 
 #  Abbott Way, Stanford, California 94305, USA.
 #
+#  If you think this license infringes any rights,
+#  please contact Team Kraven at info@coolskins.de
 
 from Components.config import config
 from Components.Converter.Converter import Converter

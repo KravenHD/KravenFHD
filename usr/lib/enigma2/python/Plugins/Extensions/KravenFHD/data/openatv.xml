@@ -448,7 +448,7 @@
     </widget>
 	<widget name="timeline_text" position="105,457" size="1752,37" selectionDisabled="1" transparent="1" zPosition="5" backgroundColor="Kravenbg" foregroundColor="KravenFont1" />
 	<widget name="timeline_now" position="187,498" zPosition="2" size="23,450" pixmap="KravenFHD/epg/timeline-ge.png" alphatest="blend" />
-	<widget name="list" position="105,498" size="1752,450" EntryBorderColor="KravenGMEBorder" EntryBackgroundColor="Kravenbg" EntryBackgroundColorSelected="KravenGMErunningbg" />
+	<widget name="list" position="105,498" size="1752,450" ServiceForegroundColor="KravenFont1" ServiceBackgroundColor="Kravenbg2" ServiceForegroundColorNow="KravenGMENowFg" ServiceBackgroundColorNow="KravenGMENowBg" EntryForegroundColorNow="KravenGMENowFg" EntryBackgroundColorNow="KravenGMENowBg" EntryForegroundColorNowSelected="KravenGMESelFg" EntryBackgroundColorNowSelected="KravenGMESelBg" EntryBorderColor="KravenGMEBorder" EntryRecColor="red" EntryPreColor="yellow" EntryForegroundColor="KravenFont1" EntryBackgroundColor="Kravenbg2" EntryForegroundColorSelected="KravenGMESelFg" EntryBackgroundColorSelected="KravenGMESelBg" />
 	<constant-widget name="Title-big2"/>
     <constant-widget name="GE33"/>
     <constant-widget name="Background"/>
@@ -483,7 +483,7 @@
     <eLabel backgroundColor="KravenBorder2" position="1853,120" size="4,310" transparent="0" zPosition="4" />
 	<widget name="timeline_text" position="105,457" size="1752,37" selectionDisabled="1" transparent="1" zPosition="5" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" />
 	<widget name="timeline_now" position="187,498" zPosition="2" size="23,450" pixmap="KravenFHD/epg/timeline-ge.png" alphatest="blend" />
-	<widget name="list" position="105,498" size="1752,450" EntryBorderColor="KravenGMEBorder" EntryBackgroundColor="Kravenbg2" EntryBackgroundColorSelected="KravenGMErunningbg" />
+	<widget name="list" position="105,498" size="1752,450" ServiceForegroundColor="KravenFont1" ServiceBackgroundColor="Kravenbg2" ServiceForegroundColorNow="KravenGMENowFg" ServiceBackgroundColorNow="KravenGMENowBg" EntryForegroundColorNow="KravenGMENowFg" EntryBackgroundColorNow="KravenGMENowBg" EntryForegroundColorNowSelected="KravenGMESelFg" EntryBackgroundColorNowSelected="KravenGMESelBg" EntryBorderColor="KravenGMEBorder" EntryRecColor="red" EntryPreColor="yellow" EntryForegroundColor="KravenFont1" EntryBackgroundColor="Kravenbg2" EntryForegroundColorSelected="KravenGMESelFg" EntryBackgroundColorSelected="KravenGMESelBg" />
 	<constant-widget name="Title-big"/>
     <constant-widget name="GEMTR33"/>
     <!-- nontransbg */-->
@@ -1459,15 +1459,15 @@
 	<widget backgroundColor="Kravenbg" foregroundColor="KravenFont1" itemHeight="123" name="list3" TimeFontVertical="Regular;32" EventFontVertical="Regular;32" TimeForegroundColor="KravenFont1" TimeBackgroundColor="Kravenbg" PrimeTimeForegroundColor="KravenFont2" PrimeTimeBackgroundColor="Kravenbg" EntryBorderColor="KravenBorder" position="807,195" size="340,738" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" zPosition="1"/>
 	<widget backgroundColor="Kravenbg" foregroundColor="KravenFont1" itemHeight="123" name="list4" TimeFontVertical="Regular;32" EventFontVertical="Regular;32" TimeForegroundColor="KravenFont1" TimeBackgroundColor="Kravenbg" PrimeTimeForegroundColor="KravenFont2" PrimeTimeBackgroundColor="Kravenbg" EntryBorderColor="KravenBorder" position="1162,195" size="340,738" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" zPosition="1"/>
 	<widget backgroundColor="Kravenbg" foregroundColor="KravenFont1" itemHeight="123" name="list5" TimeFontVertical="Regular;32" EventFontVertical="Regular;32" TimeForegroundColor="KravenFont1" TimeBackgroundColor="Kravenbg" PrimeTimeForegroundColor="KravenFont2" PrimeTimeBackgroundColor="Kravenbg" EntryBorderColor="KravenBorder" position="1518,195" size="340,738" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" zPosition="1"/>
-	<eLabel backgroundColor="KravenVEPGBorder" position="94,115" size="1764,1" zPosition="4" />
-	<eLabel backgroundColor="KravenVEPGBorder" position="94,193" size="1764,1" zPosition="4" />
-	<eLabel backgroundColor="KravenVEPGBorder" position="94,933" size="1764,1" zPosition="4" />
-	<eLabel backgroundColor="KravenVEPGBorder" position="94,116" size="1,817" zPosition="4" />
-	<eLabel backgroundColor="KravenVEPGBorder" position="435,116" size="1,817" zPosition="4" />
-	<eLabel backgroundColor="KravenVEPGBorder" position="790,116" size="1,817" zPosition="4" />
-	<eLabel backgroundColor="KravenVEPGBorder" position="1146,116" size="1,817" zPosition="4" />
-	<eLabel backgroundColor="KravenVEPGBorder" position="1501,116" size="1,817" zPosition="4" />
-	<eLabel backgroundColor="KravenVEPGBorder" position="1857,116" size="1,817" zPosition="4" />
+	<eLabel backgroundColor="KravenBorder" position="94,115" size="1764,1" zPosition="4" />
+	<eLabel backgroundColor="KravenBorder" position="94,193" size="1764,1" zPosition="4" />
+	<eLabel backgroundColor="KravenBorder" position="94,933" size="1764,1" zPosition="4" />
+	<eLabel backgroundColor="KravenBorder" position="94,116" size="1,817" zPosition="4" />
+	<eLabel backgroundColor="KravenBorder" position="435,116" size="1,817" zPosition="4" />
+	<eLabel backgroundColor="KravenBorder" position="790,116" size="1,817" zPosition="4" />
+	<eLabel backgroundColor="KravenBorder" position="1146,116" size="1,817" zPosition="4" />
+	<eLabel backgroundColor="KravenBorder" position="1501,116" size="1,817" zPosition="4" />
+	<eLabel backgroundColor="KravenBorder" position="1857,116" size="1,817" zPosition="4" />
     <widget font="Regular;30" halign="left" valign="center" name="key_red" position="105,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <widget font="Regular;30" halign="left" valign="center" name="key_green" position="480,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="855,997" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
@@ -1499,13 +1499,13 @@
 	<widget backgroundColor="Kravenbg2" foregroundColor="KravenFont1" itemHeight="123" name="list1" TimeFontVertical="Regular;32" EventFontVertical="Regular;32" TimeForegroundColor="KravenFont1" TimeBackgroundColor="Kravenbg2" PrimeTimeForegroundColor="KravenFont2" PrimeTimeBackgroundColor="Kravenbg2" EntryBorderColor="KravenBorder" position="96,195" size="340,738" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" zPosition="1"/>
 	<widget backgroundColor="Kravenbg2" foregroundColor="KravenFont1" itemHeight="123" name="list2" TimeFontVertical="Regular;32" EventFontVertical="Regular;32" TimeForegroundColor="KravenFont1" TimeBackgroundColor="Kravenbg2" PrimeTimeForegroundColor="KravenFont2" PrimeTimeBackgroundColor="Kravenbg2" EntryBorderColor="KravenBorder" position="451,195" size="340,738" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" zPosition="1"/>
 	<widget backgroundColor="Kravenbg2" foregroundColor="KravenFont1" itemHeight="123" name="list3" TimeFontVertical="Regular;32" EventFontVertical="Regular;32" TimeForegroundColor="KravenFont1" TimeBackgroundColor="Kravenbg2" PrimeTimeForegroundColor="KravenFont2" PrimeTimeBackgroundColor="Kravenbg2" EntryBorderColor="KravenBorder" position="807,195" size="340,738" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" zPosition="1"/>
-	<eLabel backgroundColor="KravenVEPGBorder" position="94,115" size="1053,1" zPosition="4" />
-	<eLabel backgroundColor="KravenVEPGBorder" position="94,193" size="1053,1" zPosition="4" />
-	<eLabel backgroundColor="KravenVEPGBorder" position="94,933" size="1053,1" zPosition="4" />
-	<eLabel backgroundColor="KravenVEPGBorder" position="94,116" size="1,817" zPosition="4" />
-	<eLabel backgroundColor="KravenVEPGBorder" position="435,116" size="1,817" zPosition="4" />
-	<eLabel backgroundColor="KravenVEPGBorder" position="790,116" size="1,817" zPosition="4" />
-	<eLabel backgroundColor="KravenVEPGBorder" position="1146,116" size="1,817" zPosition="4" />
+	<eLabel backgroundColor="KravenBorder" position="94,115" size="1053,1" zPosition="4" />
+	<eLabel backgroundColor="KravenBorder" position="94,193" size="1053,1" zPosition="4" />
+	<eLabel backgroundColor="KravenBorder" position="94,933" size="1053,1" zPosition="4" />
+	<eLabel backgroundColor="KravenBorder" position="94,116" size="1,817" zPosition="4" />
+	<eLabel backgroundColor="KravenBorder" position="435,116" size="1,817" zPosition="4" />
+	<eLabel backgroundColor="KravenBorder" position="790,116" size="1,817" zPosition="4" />
+	<eLabel backgroundColor="KravenBorder" position="1146,116" size="1,817" zPosition="4" />
     <widget source="session.VideoPicture" render="Pig" position="1312,115" size="432,243" zPosition="3" backgroundColor="transparent" />
     <eLabel backgroundColor="#00000000" position="1312,115" size="432,243" transparent="0" zPosition="2" />
     <eLabel backgroundColor="KravenBorder2" position="1312,115" size="432,4" transparent="0" zPosition="4" />
@@ -1572,6 +1572,17 @@
     <constant-widget name="Colorbuttons"/>
     <constant-widget name="MenuOKExit"/>
     <!--<text="FileCommanderContextMenu" position="105,0" />-->	
+  </screen>
+  <!-- vEditorScreen -->
+  <screen name="vEditorScreen" position="0,0" size="1920,1080" flags="wfNoBorder" title="File Commander - Addon File-Viewer" backgroundColor="transparent">
+    <constant-widget name="Title-big2"/>
+    <widget backgroundColor="Kravenbg" name="list_head" font="Regular2;32" foregroundColor="KravenFont2" position="105,120" size="1752,41" noWrap="1" transparent="1" />
+    <widget backgroundColor="Kravenbg" name="filedata" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="105,165" size="1752,765" scrollbarMode="showOnDemand" scrollbarWidth="5" enableWrapAround="1" transparent="1" />
+    <constant-widget name="Background"/>
+    <constant-widget name="Colorbuttons"/>
+    <constant-widget name="NameRedGreenYellowBlue"/>
+    <constant-widget name="OKExit"/>
+    <!--<text="vEditorScreen" position="105,0" />-->
   </screen>
   <!-- MessageBox -->
   <screen name="MessageBox" flags="wfNoBorder" position="center,center" size="1200,15" zPosition="1" title="Message" backgroundColor="Kravenbg">

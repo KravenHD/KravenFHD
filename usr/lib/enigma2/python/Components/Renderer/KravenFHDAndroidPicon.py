@@ -1,19 +1,19 @@
-# WetterPicon
-# Copyright (c) .:TBX:. 2015
-# 
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
+# -*- coding: utf-8 -*-
+
+#  Android Picon Renderer
 #
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# GNU General Public License for more details.
+#  Coded/Modified/Adapted by Team Kraven
+#  Based on VTi and/or OpenATV image source code
 #
-# You should have received a copy of the GNU General Public License
-# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#  This code is licensed under the Creative Commons 
+#  Attribution-NonCommercial-ShareAlike 3.0 Unported 
+#  License. To view a copy of this license, visit
+#  http://creativecommons.org/licenses/by-nc-sa/3.0/ 
+#  or send a letter to Creative Commons, 559 Nathan 
+#  Abbott Way, Stanford, California 94305, USA.
 #
+#  If you think this license infringes any rights,
+#  please contact Team Kraven at info@coolskins.de
 
 from Renderer import Renderer 
 from enigma import ePixmap

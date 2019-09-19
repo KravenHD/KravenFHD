@@ -1,0 +1,244 @@
+	<constant-panels name="infobar-style-zz2-zz3-gradient">
+      <ePixmap pixmap="KravenFHD/graphics/ibar.png" position="0,705" size="1920,465" zPosition="-9" alphatest="blend" />
+	</constant-panels>
+	
+	<constant-panels name="infobar-style-zz2-zz3-box">
+	  <eLabel position="0,802" size="1920,278" backgroundColor="KravenIBbg" zPosition="-9" />
+	  <eLabel position="0,802" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	</constant-panels>
+	
+	<constant-panels name="infobar-style-zz2-zz3-box2">
+      <ePixmap pixmap="KravenFHD/graphics/ibar.png" position="0,802" size="1920,278" zPosition="-9" alphatest="blend" />
+	  <eLabel position="0,802" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	</constant-panels>
+	
+	<constant-panels name="infobar-style-zz2-zz3-texture">
+      <ePixmap pixmap="KravenFHD/graphics/ibtexture.png" position="0,802" size="1920,278" zPosition="-9" alphatest="blend" />
+	  <eLabel position="0,802" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	</constant-panels>
+	
+	<constant-panels name="infobar-style-zz2">
+	  <widget alphatest="blend" position="30,813" render="Picon" size="600,255" source="session.CurrentService" transparent="1" zPosition="4">
+		<convert type="ServiceName">Reference</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" source="session.Event_Now" render="KravenFHDEmptyEpg" foregroundColor="KravenIBFont1" font="Regular;45" position="657,921" size="708,55" halign="left" transparent="1" zPosition="1">
+		<convert type="KravenFHDEventName">Name</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont1" halign="right" position="1369,930" render="Label" size="160,42" source="session.Event_Now" transparent="1" zPosition="1">
+		<convert type="KravenFHDEventTime">Remaining</convert>
+		<convert type="KravenFHDRemainingToText">InMinutes</convert>
+	  </widget>
+	  <widget position="657,987" render="Progress" size="871,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress581.png">
+		<convert type="KravenFHDEventTime">Progress</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont1" halign="left" noWrap="1" position="657,1000" render="Label" size="105,42" source="session.Event_Now" transparent="1" zPosition="1">
+		<convert type="KravenFHDEventTime">StartTime</convert>
+		<convert type="KravenFHDClockToText">Default</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont1" halign="right" noWrap="1" position="1423,1000" render="Label" size="105,42" source="session.Event_Now" transparent="1" zPosition="1">
+		<convert type="KravenFHDEventTime">EndTime</convert>
+		<convert type="KravenFHDClockToText">Default</convert>
+	  </widget>
+	  <eLabel position="657,990" size="871,1" backgroundColor="KravenLine" />
+	  <ePixmap alphatest="blend" pixmap="KravenFHD/infobar-icons/ico_rec_off.png" position="772,1009" size="65,33" zPosition="2" />
+	  <widget source="session.RecordState" render="Pixmap" pixmap="KravenFHD/infobar-icons/ico_rec_on.png" position="772,1009" zPosition="2" size="65,33" alphatest="blend">
+		<convert type="ConditionalShowHide">blink</convert>
+	  </widget>
+	  <widget alphatest="blend" path="infobar-icons" position="855,1009" render="KravenFHDServiceIcon" options="HasHBBTV" size="65,33" source="session.CurrentService" zPosition="1">
+		<convert type="KravenFHDServiceInfoEX">HasHBBTV</convert>
+	  </widget>
+	  <widget alphatest="blend" path="infobar-icons" position="937,1009" render="KravenFHDServiceIcon" options="SubtitlesAvailable" size="65,33" source="session.CurrentService" zPosition="1">
+		<convert type="KravenFHDServiceInfoEX">SubtitlesAvailable</convert>
+	  </widget>
+	  <widget alphatest="blend" path="infobar-icons" position="1020,1009" render="KravenFHDServiceIcon" options="HasTelext" size="65,33" source="session.CurrentService" zPosition="1">
+		<convert type="KravenFHDServiceInfoEX">HasTelext</convert>
+	  </widget>
+	  <widget alphatest="blend" path="infobar-icons" position="1102,1009" render="KravenFHDDolbyIcon" size="65,33" source="session.CurrentService" zPosition="1">
+		<convert type="KravenFHDDolbyState">IsMehrFisch</convert>
+	  </widget>
+	  <widget alphatest="blend" path="infobar-icons" position="1185,1009" render="KravenFHDServiceIcon" options="IsWidescreen" size="65,33" source="session.CurrentService" zPosition="1">
+		<convert type="KravenFHDServiceInfoEX">IsWidescreen</convert>
+	  </widget>
+	  <widget alphatest="blend" path="infobar-icons" position="1267,1009" render="KravenFHDServiceIcon" options="VideoHeight" size="65,33" source="session.CurrentService" zPosition="1">
+		<convert type="KravenFHDServiceInfoEX">VideoHeight</convert>
+	  </widget>
+	  <widget alphatest="blend" path="infobar-icons" position="1350,1009" render="KravenFHDServiceIcon" options="IsCrypted" size="65,33" source="session.CurrentService" zPosition="1">
+		<convert type="KravenFHDServiceInfoEX">IsCrypted</convert>
+	  </widget>
+	</constant-panels>
+	
+	<constant-panels name="infobar-style-zz3">
+	  <widget alphatest="blend" position="30,813" render="Picon" size="600,255" source="session.CurrentService" transparent="1" zPosition="4">
+		<convert type="ServiceName">Reference</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" source="session.Event_Now" render="KravenFHDEmptyEpg" foregroundColor="KravenIBFont1" font="Regular;45" position="657,921" size="708,55" halign="left" transparent="1" zPosition="1">
+		<convert type="KravenFHDEventName">Name</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont1" halign="right" position="1369,930" render="Label" size="160,42" source="session.Event_Now" transparent="1" zPosition="1">
+		<convert type="KravenFHDEventTime">Remaining</convert>
+		<convert type="KravenFHDRemainingToText">InMinutes</convert>
+	  </widget>
+	  <widget position="657,987" render="Progress" size="871,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenFHD/progress/progress581.png">
+		<convert type="KravenFHDEventTime">Progress</convert>
+	  </widget>
+	  <eLabel position="657,990" size="871,1" backgroundColor="KravenLine" />
+	  <widget backgroundColor="KravenIBbg" font="Regular;33" foregroundColor="KravenIBFont2" halign="left" noWrap="1" position="657,1008" render="Label" size="105,42" source="session.Event_Next" transparent="1" zPosition="1">
+		<convert type="KravenFHDEventTime">StartTime</convert>
+		<convert type="KravenFHDClockToText">Default</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular;33" halign="right" noWrap="1" position="1423,1008" render="Label" size="105,42" foregroundColor="KravenIBFont2" source="session.Event_Next" transparent="1" zPosition="1">
+		<convert type="KravenFHDEventTime">EndTime</convert>
+		<convert type="KravenFHDClockToText">Default</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" source="session.Event_Next" render="KravenFHDEmptyEpg" foregroundColor="KravenIBFont2" font="Regular;45" position="765,999" size="655,55" halign="left" transparent="1" zPosition="1">
+		<convert type="KravenFHDEventName">Name</convert>
+	  </widget>
+	</constant-panels>
+	
+	<constant-panels name="infobar-style-zz2-zz3-ecminfo">
+	  <widget source="session.CurrentService" render="Label" position="658,880" size="982,33" font="Regular;24" halign="left" foregroundColor="KravenECM" backgroundColor="KravenECMbg" transparent="1" zPosition="1">
+	    <convert type="KravenFHDECMLine">ShortReader,FTAVisible</convert>
+	  </widget>
+	</constant-panels>
+	
+	<constant-panels name="infobar-style-zz2-zz3-clock-classic">
+	  <widget backgroundColor="KravenIBbg" font="Regular;64" foregroundColor="KravenIBFont1" halign="center" position="1593,900" render="Label" size="97,120" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="KravenFHDClockToText">Format:%H</convert>
+	  </widget>
+	  <eLabel backgroundColor="KravenIBbg" font="Regular;64" foregroundColor="KravenIBFont1" halign="center" position="1678,900" size="22,120" text=":" transparent="1" valign="center" zPosition="1" />
+	  <widget backgroundColor="KravenIBbg" font="Regular;64" foregroundColor="KravenIBFont1" halign="center" position="1693,900" render="Label" size="97,120" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="KravenFHDClockToText">Format:%M</convert>
+	  </widget>
+	  <eLabel backgroundColor="KravenIBbg" font="Regular;48" foregroundColor="KravenIBFont1" halign="center" position="1777,919" size="22,90" text=":" transparent="1" valign="center" zPosition="1" />
+	  <widget backgroundColor="KravenIBbg" font="Regular;48" foregroundColor="KravenIBFont1" halign="center" position="1791,919" render="Label" size="75,90" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="KravenFHDClockToText">Format:%S</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont2" halign="center" position="1579,1018" render="Label" size="304,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="KravenFHDClockToText">Format:%e. %B</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont2" halign="center" position="1579,988" render="Label" size="304,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="KravenFHDClockToText">Format:%A</convert>
+	  </widget>
+	</constant-panels>
+	
+	<constant-panels name="infobar-style-zz2-zz3-clock-color">
+	  <widget backgroundColor="KravenIBbg" font="Regular;64" foregroundColor="KravenIBFont2" halign="center" position="1593,900" render="Label" size="97,120" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="KravenFHDClockToText">Format:%H</convert>
+	  </widget>
+	  <eLabel backgroundColor="KravenIBbg" font="Regular;64" foregroundColor="KravenIBFont2" halign="center" position="1678,900" size="22,120" text=":" transparent="1" valign="center" zPosition="1" />
+	  <widget backgroundColor="KravenIBbg" font="Regular;64" foregroundColor="KravenIBFont2" halign="center" position="1693,900" render="Label" size="97,120" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="KravenFHDClockToText">Format:%M</convert>
+	  </widget>
+	  <eLabel backgroundColor="KravenIBbg" font="Regular;48" foregroundColor="KravenIBFont2" halign="center" position="1777,919" size="22,90" text=":" transparent="1" valign="center" zPosition="1" />
+	  <widget backgroundColor="KravenIBbg" font="Regular;48" foregroundColor="KravenIBFont2" halign="center" position="1791,919" render="Label" size="75,90" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="KravenFHDClockToText">Format:%S</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont2" halign="center" position="1579,1018" render="Label" size="304,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="KravenFHDClockToText">Format:%e. %B</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont2" halign="center" position="1579,988" render="Label" size="304,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="KravenFHDClockToText">Format:%A</convert>
+	  </widget>
+	</constant-panels>
+	
+	<constant-panels name="infobar-style-zz2-zz3-clock-classic-big">
+	  <widget backgroundColor="KravenIBbg" font="Regular;64" foregroundColor="KravenIBFont1" halign="center" position="1593,924" render="Label" size="97,90" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="KravenFHDClockToText">Format:%H</convert>
+	  </widget>
+	  <eLabel backgroundColor="KravenIBbg" font="Regular;64" foregroundColor="KravenIBFont1" halign="center" position="1677,924" size="22,90" text=":" transparent="1" valign="center" zPosition="1" />
+	  <widget backgroundColor="KravenIBbg" font="Regular;64" foregroundColor="KravenIBFont1" halign="center" position="1693,924" render="Label" size="97,90" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="KravenFHDClockToText">Format:%M</convert>
+	  </widget>
+	  <eLabel backgroundColor="KravenIBbg" font="Regular;48" foregroundColor="KravenIBFont1" halign="center" position="1777,928" size="22,90" text=":" transparent="1" valign="center" zPosition="1" />
+	  <widget backgroundColor="KravenIBbg" font="Regular;48" foregroundColor="KravenIBFont1" halign="center" position="1791,928" render="Label" size="75,90" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="KravenFHDClockToText">Format:%S</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular;42" foregroundColor="KravenIBFont2" halign="center" position="1579,1011" render="Label" size="304,51" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="KravenFHDClockToText">Format:%e. %B</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular;42" foregroundColor="KravenIBFont2" halign="center" position="1579,880" render="Label" size="304,51" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+		<convert type="KravenFHDClockToText">Format:%A</convert>
+	  </widget>
+	</constant-panels>
+	
+	<constant-panels name="infobar-style-zz2-zz3-clock-flip">
+	  <widget source="global.CurrentTime" position="1623,1030" size="224,40" font="Regular2;33" render="Label" halign="center" valign="top" zPosition="12" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont2" transparent="1">
+	    <convert type="KravenFHDClockToText">Format:%d.%m.%Y</convert>
+	  </widget>
+	  <ePixmap alphatest="blend" pixmap="KravenFHD/clock/flip/default.png" position="1623,897" size="224,117" zPosition="1" />
+	  <widget source="global.CurrentTime" render="KravenFHDFlipClock" position="1635,921" zPosition="4" size="37,70" alphatest="blend" transparent="1">
+	    <convert type="KravenFHDClockToText">Format:H1 %H</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="KravenFHDFlipClock" position="1683,921" zPosition="4" size="37,70" alphatest="blend" transparent="1">
+	    <convert type="KravenFHDClockToText">Format:H2 %H</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="KravenFHDFlipClock" position="1747,921" zPosition="4" size="37,70" alphatest="blend" transparent="1">
+	    <convert type="KravenFHDClockToText">Format:M1 %M</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="KravenFHDFlipClock" position="1795,921" zPosition="4" size="37,70" alphatest="blend" transparent="1">
+	    <convert type="KravenFHDClockToText">Format:M2 %M</convert>
+	  </widget>
+	</constant-panels>
+	
+	<constant-panels name="infobar-style-zz2-zz3-clock-weather">
+	  <widget alphatest="blend" render="KravenFHDWetterPicon" position="1599,912" size="144,144" source="Title" path="WetterIcons" transparent="1" zPosition="1">
+		<convert type="KravenFHDWeather">Day_0,MeteoIcon </convert>
+	  </widget>
+	  <widget source="Title" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont2" position="1759,922" size="135,40" font="Regular2;36" noWrap="1" halign="center" valign="center" zPosition="2" transparent="1">
+		<convert type="KravenFHDWeather">Day_0,DayTemp</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" position="1759,972" size="135,45" font="Regular;39" halign="center" valign="center" zPosition="2" transparent="1">
+		<convert type="KravenFHDClockToText">Default</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" position="1759,1022" size="135,32" font="Regular;26" halign="center" valign="center" zPosition="2" transparent="1">
+		<convert type="KravenFHDClockToText">Format:%d.%m.%Y</convert>
+	  </widget>
+	</constant-panels>
+	
+	<constant-panels name="infobar-style-zz2-zz3-clock-analog">
+	  <widget backgroundColor="KravenIBbg" font="Regular2;27" foregroundColor="KravenIBFont2" halign="center" position="1587,1041" render="Label" size="330,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="2">
+		<convert type="KravenFHDClockToText">Format:%A, %d.%m.%Y</convert>
+	  </widget>
+	  <ePixmap alphatest="blend" pixmap="KravenFHD/clock/analog.png" position="1636,867" size="224,187" zPosition="1" />
+	  <widget source="global.CurrentTime" render="KravenFHDWatches" position="1714,922" foregroundColor="KravenIBFont1" zPosition="4" size="73,73" alphatest="blend">
+		<convert type="KravenFHDExtraNumText">hourHand</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="KravenFHDWatches" position="1695,901" foregroundColor="KravenIBFont1" zPosition="5" size="112,112" alphatest="blend">
+		<convert type="KravenFHDExtraNumText">minHand</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="KravenFHDWatches" position="1707,913" foregroundColor="KravenIBFont2" zPosition="6" size="88,88" alphatest="blend">
+		<convert type="KravenFHDExtraNumText">secHand</convert>
+	  </widget>
+	</constant-panels>
+	
+	<constant-panels name="infobar-style-zz2-zz3-clock-android">
+	  <widget backgroundColor="#00999999" font="Regular;39" halign="center" render="Label" position="1605,936" size="79,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="2" foregroundColor="black">
+		<convert type="KravenFHDClockToText">Format:%H</convert>
+	  </widget>
+	  <widget backgroundColor="#00999999" font="Regular;37" halign="center" render="Label" position="1675,933" size="79,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="2" foregroundColor="black">
+		<convert type="KravenFHDClockToText">Format:%M</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular2;24" foregroundColor="KravenIBFont2" halign="center" position="1581,1027" size="300,45" render="Label" source="global.CurrentTime" transparent="1" valign="top" zPosition="2">
+		<convert type="KravenFHDClockToText">Format:%A, %d.%m.%Y</convert>
+	  </widget>
+	  <widget alphatest="blend" render="KravenFHDAndroidPicon" position="1581,852" size="300,183" source="Title" path="clock" transparent="1" zPosition="1">
+		<convert type="KravenFHDWeather">Day_0,MeteoIcon </convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="#00666666" font="Regular2;30" foregroundColor="KravenAndroid" render="Label" position="1695,982" size="150,37" source="Title" zPosition="2" halign="right" valign="center" transparent="1">
+		<convert type="KravenFHDWeather">Day_0,DayTemp</convert>
+	  </widget>
+	</constant-panels>
+	
+	<constant-panels name="infobar-style-zz2-zz3-infobar-channelname-small">
+	  <widget font="Regular;60" halign="left" noWrap="1" backgroundColor="KravenNamebg" foregroundColor="KravenName" position="652,801" size="847,75" render="Label" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+		<convert type="ServiceName">Name</convert>
+	  </widget>
+	</constant-panels>
+	
+	<constant-panels name="infobar-style-zz2-zz3-infobar-channelname-number-small">
+	  <widget font="Regular;60" halign="left" noWrap="1" backgroundColor="KravenNamebg" foregroundColor="KravenName" position="652,801" size="847,75" render="Label" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+		<convert type="KravenFHDServiceName2">%n - %N</convert>
+	  </widget>
+	</constant-panels>
+	
+  </constant-widgets>

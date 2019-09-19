@@ -1,18 +1,19 @@
 # -*- coding: utf-8 -*-
-#######################################################################
+
+#  Activate Skin Settings Code
 #
+#  Coded/Modified/Adapted by Team Kraven
+#  Based on VTi and/or OpenATV image source code
 #
-#  This plugin is licensed under the Creative Commons
-#  Attribution-NonCommercial-ShareAlike 3.0 Unported License.
-#  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/
-#  or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+#  This code is licensed under the Creative Commons 
+#  Attribution-NonCommercial-ShareAlike 3.0 Unported 
+#  License. To view a copy of this license, visit
+#  http://creativecommons.org/licenses/by-nc-sa/3.0/ 
+#  or send a letter to Creative Commons, 559 Nathan 
+#  Abbott Way, Stanford, California 94305, USA.
 #
-#  This plugin is NOT free software. It is open source, you are allowed to
-#  modify it (if you keep the license), but it may not be commercially
-#  distributed other than under the conditions noted above.
-#
-#
-#######################################################################
+#  If you think this license infringes any rights,
+#  please contact Team Kraven at info@coolskins.de
 
 from Components.config import config, configfile, ConfigYesNo, ConfigSubsection, getConfigListEntry, ConfigSelection, ConfigNumber, ConfigText, ConfigInteger, ConfigClock, ConfigSlider, ConfigBoolean
 from Components.SystemInfo import SystemInfo
@@ -428,15 +429,12 @@ config.plugins.KravenFHD.InfobarStyle = ConfigSelection(default="infobar-style-x
 				("infobar-style-x1", _("X1")),
 				("infobar-style-x2", _("X2")),
 				("infobar-style-x3", _("X3")),
-				("infobar-style-x4", _("X4")),
 				("infobar-style-z1", _("Z1")),
 				("infobar-style-z2", _("Z2")),
 				("infobar-style-zz1", _("ZZ1")),
 				("infobar-style-zz2", _("ZZ2")),
 				("infobar-style-zz3", _("ZZ3")),
-				("infobar-style-zz4", _("ZZ4")),
-				("infobar-style-zzz1", _("ZZZ1")),
-				("infobar-style-zzz2", _("ZZZ2"))
+				("infobar-style-zzz1", _("ZZZ1"))
 				])
 
 config.plugins.KravenFHD.InfobarChannelName = ConfigSelection(default="none", choices = [
@@ -634,14 +632,41 @@ config.plugins.KravenFHD.GMEDescriptionSize = ConfigSelection(default="small", c
 				("big", _("big"))
 				])
 
-config.plugins.KravenFHD.GMErunningbgList = ConfigSelection(default="389416", choices = [
+config.plugins.KravenFHD.GMESelFgList = ConfigSelection(default="ffffff", choices = [
+				("global", _("global selection fontcolor")),
+				("ffffff", _("white")),
+				("F0A30A", _("amber")),
+				("self", _("self"))
+				])
+config.plugins.KravenFHD.GMESelFgSelf = ConfigText(default="ffffff")
+config.plugins.KravenFHD.GMESelFg = ConfigText(default="ffffff")
+
+config.plugins.KravenFHD.GMESelBgList = ConfigSelection(default="389416", choices = [
 				("global", _("global selection background")),
 				("389416", _("green")),
 				("0064c7", _("blue")),
 				("self", _("self"))
 				])
-config.plugins.KravenFHD.GMErunningbgSelf = ConfigText(default="389416")
-config.plugins.KravenFHD.GMErunningbg = ConfigText(default="389416")
+config.plugins.KravenFHD.GMESelBgSelf = ConfigText(default="389416")
+config.plugins.KravenFHD.GMESelBg = ConfigText(default="389416")
+
+config.plugins.KravenFHD.GMENowFgList = ConfigSelection(default="F0A30A", choices = [
+				("global", _("global selection fontcolor")),
+				("ffffff", _("white")),
+				("F0A30A", _("amber")),
+				("self", _("self"))
+				])
+config.plugins.KravenFHD.GMENowFgSelf = ConfigText(default="F0A30A")
+config.plugins.KravenFHD.GMENowFg = ConfigText(default="F0A30A")
+
+config.plugins.KravenFHD.GMENowBgList = ConfigSelection(default="0064c7", choices = [
+				("global", _("global selection background")),
+				("389416", _("green")),
+				("0064c7", _("blue")),
+				("self", _("self"))
+				])
+config.plugins.KravenFHD.GMENowBgSelf = ConfigText(default="0064c7")
+config.plugins.KravenFHD.GMENowBg = ConfigText(default="0064c7")
 
 config.plugins.KravenFHD.GMEBorderList = ConfigSelection(default="ffffff", choices = ColorSelfList)
 config.plugins.KravenFHD.GMEBorderSelf = ConfigText(default="ffffff")
@@ -658,10 +683,6 @@ config.plugins.KravenFHD.VerticalEPG2 = ConfigSelection(default="verticalepg-ful
 				("verticalepg-minitv3", _("MiniTV")),
 				("verticalepg-full", _("full"))
 				])
-
-config.plugins.KravenFHD.VEPGBorderList = ConfigSelection(default="ffffff", choices = ColorSelfList)
-config.plugins.KravenFHD.VEPGBorderSelf = ConfigText(default="ffffff")
-config.plugins.KravenFHD.VEPGBorder = ConfigText(default="ffffff")
 
 config.plugins.KravenFHD.MovieSelection = ConfigSelection(default="movieselection-no-cover", choices = [
 				("movieselection-no-cover", _("no Cover")),
@@ -769,11 +790,6 @@ config.plugins.KravenFHD.ClockStyleNoInternet = ConfigSelection(default="clock-c
 				("clock-flip", _("flip"))
 				])
 
-config.plugins.KravenFHD.ClockIconSize = ConfigSelection(default="size-144", choices = [
-				("size-144", _("144")),
-				("size-192", _("192"))
-				])
-
 config.plugins.KravenFHD.WeatherStyle = ConfigSelection(default="none", choices = [
 				("none", _("off")),
 				("weather-big", _("big")),
@@ -800,10 +816,6 @@ config.plugins.KravenFHD.ECMVisible = ConfigSelection(default="none", choices = 
 				("ib", _("Infobar")),
 				("sib", _("SecondInfobar")),
 				("ib+sib", _("Infobar & SecondInfobar"))
-				])
-
-config.plugins.KravenFHD.ECMVisibleNA = ConfigSelection(default="na", choices = [
-				("na", _("not available with selected Infobar-Style"))
 				])
 
 config.plugins.KravenFHD.ECMLine1 = ConfigSelection(default="ShortReader", choices = [
@@ -856,14 +868,47 @@ config.plugins.KravenFHD.SIBFont = ConfigSelection(default="sibfont-big", choice
 				("sibfont-small", _("small"))
 				])
 
-config.plugins.KravenFHD.IBtop = ConfigSelection(default="infobar-x2-z1_top2", choices = [
-				("infobar-x2-z1_top2", _("2 Tuner")),
-				("infobar-x2-z1_top", _("4 Tuner")),
-				("infobar-x2-z1_top3", _("8 Tuner"))
+config.plugins.KravenFHD.TunerBusyList = ConfigSelection(default="CCCC00", choices = [
+				("CCCC00", _("yellow")),
+				("self", _("self"))
+				])
+config.plugins.KravenFHD.TunerBusySelf = ConfigText(default="CCCC00")
+config.plugins.KravenFHD.TunerBusy = ConfigText(default="CCCC00")
+
+config.plugins.KravenFHD.TunerLiveList = ConfigSelection(default="00B400", choices = [
+				("00B400", _("green")),
+				("self", _("self"))
+				])
+config.plugins.KravenFHD.TunerLiveSelf = ConfigText(default="00B400")
+config.plugins.KravenFHD.TunerLive = ConfigText(default="00B400")
+
+config.plugins.KravenFHD.TunerRecordList = ConfigSelection(default="FF0C00", choices = [
+				("FF0C00", _("red")),
+				("self", _("self"))
+				])
+config.plugins.KravenFHD.TunerRecordSelf = ConfigText(default="FF0C00")
+config.plugins.KravenFHD.TunerRecord = ConfigText(default="FF0C00")
+
+config.plugins.KravenFHD.TunerXtremeBusyList = ConfigSelection(default="1BA1E2", choices = [
+				("1BA1E2", _("cyan")),
+				("self", _("self"))
+				])
+config.plugins.KravenFHD.TunerXtremeBusySelf = ConfigText(default="1BA1E2")
+config.plugins.KravenFHD.TunerXtremeBusy = ConfigText(default="1BA1E2")
+
+config.plugins.KravenFHD.ShowUnusedTuner = ConfigSelection(default="on", choices = [
+				("on", _("on")),
+				("none", _("off"))
+				])
+
+config.plugins.KravenFHD.ShowAgcSnr = ConfigSelection(default="none", choices = [
+				("on", _("on")),
+				("none", _("off"))
 				])
 
 config.plugins.KravenFHD.Infobox = ConfigSelection(default="sat", choices = [
 				("sat", _("Tuner/Satellite + SNR")),
+				("tunerinfo", _("Tunerinfo")),
 				("cpu", _("CPU + Load")),
 				("temp", _("Temperature + Fan"))
 				])
@@ -871,41 +916,15 @@ config.plugins.KravenFHD.Infobox = ConfigSelection(default="sat", choices = [
 config.plugins.KravenFHD.Infobox2 = ConfigSelection(default="sat", choices = [
 				("sat", _("Tuner/Satellite + SNR")),
 				("db", _("Tuner/Satellite + dB")),
+				("tunerinfo", _("Tunerinfo")),
 				("cpu", _("CPU + Load")),
 				("temp", _("Temperature + Fan"))
 				])
-
-config.plugins.KravenFHD.tuner = ConfigSelection(default="4-tuner", choices = [
-				("2-tuner", _("2 Tuner")),
-				("4-tuner", _("4 Tuner")),
-				("8-tuner", _("8 Tuner"))
-				])
-
-config.plugins.KravenFHD.tuner2 = ConfigSelection(default="4-tuner", choices = [
-				("2-tuner", _("2 Tuner")),
-				("4-tuner", _("4 Tuner")),
-				("8-tuner", _("8 Tuner")),
-				("10-tuner", _("10 Tuner"))
-				])
-
-config.plugins.KravenFHD.record = ConfigSelection(default="record-shine", choices = [
-				("record-blink", _("record blink")),
-				("record-shine", _("record shine"))
-				])
-
-config.plugins.KravenFHD.record2 = ConfigSelection(default="record-shine+no-record-tuner", choices = [
-				("record-blink+tuner-shine", _("record blink, tuner shine")),
-				("record-shine+tuner-blink", _("record shine, tuner blink")),
-				("record+tuner-blink", _("record & tuner blink")),
-				("record+tuner-shine", _("record & tuner shine")),
-				("record-blink+no-record-tuner", _("record blink, no record tuner")),
-				("record-shine+no-record-tuner", _("record shine, no record tuner"))
-				])
-
-config.plugins.KravenFHD.record3 = ConfigSelection(default="no-record-tuner", choices = [
-				("tuner-blink", _("tuner blink")),
-				("tuner-shine", _("tuner shine")),
-				("no-record-tuner", _("no record tuner"))
+				
+config.plugins.KravenFHD.Infobox3 = ConfigSelection(default="sat", choices = [
+				("tunerinfo", _("Tunerinfo")),
+				("cpu", _("CPU + Load")),
+				("temp", _("Temperature + Fan"))
 				])
 
 config.plugins.KravenFHD.IBColor = ConfigSelection(default="all-screens", choices = [
@@ -1021,6 +1040,7 @@ config.plugins.KravenFHD.TimerListStyle = ConfigSelection(default="timerlist-sta
 				("timerlist-5", _("Style 5"))
 				])
 
+config.plugins.KravenFHD.weather_gmcode = ConfigText(default="GM")
 config.plugins.KravenFHD.weather_cityname = ConfigText(default = "")
 config.plugins.KravenFHD.weather_language = ConfigSelection(default="de", choices = LanguageList)
 config.plugins.KravenFHD.weather_server = ConfigSelection(default="_owm", choices = [
@@ -1033,7 +1053,14 @@ config.plugins.KravenFHD.weather_search_over = ConfigSelection(default="ip", cho
 				("name", _("Search String"))
 				])
 
+config.plugins.KravenFHD.weather_search_over2 = ConfigSelection(default="ip", choices = [
+				("ip", _("Auto (IP)")),
+				("name", _("Search String")),
+				("gmcode", _("GM Code"))
+				])
+
 config.plugins.KravenFHD.weather_owm_latlon = ConfigText(default = "")
+config.plugins.KravenFHD.weather_accu_latlon = ConfigText(default = "")
 config.plugins.KravenFHD.weather_accu_apikey = ConfigText(default = "")
 config.plugins.KravenFHD.weather_accu_id = ConfigText(default = "")
 config.plugins.KravenFHD.weather_foundcity = ConfigText(default = "")
@@ -1113,10 +1140,6 @@ config.plugins.KravenFHD.CategoryGraphicalEPG = ConfigSelection(default="categor
 				("category", _(" "))
 				])
 
-config.plugins.KravenFHD.CategoryVerticalEPG = ConfigSelection(default="category", choices = [
-				("category", _(" "))
-				])
-
 config.plugins.KravenFHD.CategoryTimerEdit = ConfigSelection(default="category", choices = [
 				("category", _(" "))
 				])
@@ -1191,7 +1214,6 @@ config.plugins.KravenFHD.InfobarSelfColorB = ConfigSlider(default=0, increment=1
 config.plugins.KravenFHD.BackgroundSelfColorR = ConfigSlider(default=0, increment=15, limits=(0,255))
 config.plugins.KravenFHD.BackgroundSelfColorG = ConfigSlider(default=0, increment=15, limits=(0,255))
 config.plugins.KravenFHD.BackgroundSelfColorB = ConfigSlider(default=75, increment=15, limits=(0,255))
-config.plugins.KravenFHD.OldColorsCopied = ConfigBoolean(default = False)
 
 #############################################################
 
@@ -1206,6 +1228,8 @@ class ActivateSkinSettings:
 		self.profiles = "/etc/enigma2/"
 		self.BoxName=self.getBoxName()
 		self.E2DistroVersion=self.getE2DistroVersion()
+		self.Templates=self.getTemplates()
+		self.Tuners=self.getTuners()
 		self.InternetAvailable=self.getInternetAvailable()
 
 	def WriteSkin(self, silent=False):
@@ -1258,21 +1282,22 @@ class ActivateSkinSettings:
 
 		#clock
 		self.actClockstyle="none"
-		if not config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz4":
-			if self.InternetAvailable:
-				self.actClockstyle=config.plugins.KravenFHD.ClockStyle.value
-			else:
-				self.actClockstyle=config.plugins.KravenFHD.ClockStyleNoInternet.value
+		if self.InternetAvailable:
+			self.actClockstyle=config.plugins.KravenFHD.ClockStyle.value
+		else:
+			self.actClockstyle=config.plugins.KravenFHD.ClockStyleNoInternet.value
+
 		#weather
 		self.actWeatherstyle="none"
 		if self.InternetAvailable:
-			if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x3","infobar-style-z2","infobar-style-zz1","infobar-style-zz2","infobar-style-zz3","infobar-style-zz4","infobar-style-zzz1"):
+			if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x3","infobar-style-z2","infobar-style-zz1","infobar-style-zz2","infobar-style-zz3","infobar-style-zzz1"):
 				self.actWeatherstyle=config.plugins.KravenFHD.WeatherStyle.value
 			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
 				if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/plugin.py"):
 					self.actWeatherstyle=config.plugins.KravenFHD.WeatherStyle3.value
 				else:
 					self.actWeatherstyle=config.plugins.KravenFHD.WeatherStyle2.value
+
 		#channelselection
 		self.actChannelselectionstyle="none"
 		if self.E2DistroVersion == "VTi":
@@ -1413,24 +1438,24 @@ class ActivateSkinSettings:
 			self.skinSearchAndReplace.append(['render="KravenFHDMenuPig"', 'render="Pig"'])
 		if self.InternetAvailable:
 			if config.plugins.KravenFHD.Logo.value == "minitv":
-				self.skinSearchAndReplace.append(['<!-- Logo -->', '<constant-widget name="Logo1"/>'])
-				self.skinSearchAndReplace.append(['<!-- Metrix-Icons -->', '<constant-widget name="Icons1"/>'])
+				self.skinSearchAndReplace.append(['<!-- Logo -->', self.Templates + 'name="Logo1"/>'])
+				self.skinSearchAndReplace.append(['<!-- Metrix-Icons -->', self.Templates + 'name="Icons1"/>'])
 			elif config.plugins.KravenFHD.Logo.value == "logo":
-				self.skinSearchAndReplace.append(['<!-- Logo -->', '<constant-widget name="Logo2"/>'])
-				self.skinSearchAndReplace.append(['<!-- Metrix-Icons -->', '<constant-widget name="Icons2"/>'])
+				self.skinSearchAndReplace.append(['<!-- Logo -->', self.Templates + 'name="Logo2"/>'])
+				self.skinSearchAndReplace.append(['<!-- Metrix-Icons -->', self.Templates + 'name="Icons2"/>'])
 			elif config.plugins.KravenFHD.Logo.value == "metrix-icons":
-				self.skinSearchAndReplace.append(['<!-- Logo -->', '<constant-widget name="Logo3"/>'])
-				self.skinSearchAndReplace.append(['<!-- Metrix-Icons -->', '<constant-widget name="Icons3"/>'])
+				self.skinSearchAndReplace.append(['<!-- Logo -->', self.Templates + 'name="Logo3"/>'])
+				self.skinSearchAndReplace.append(['<!-- Metrix-Icons -->', self.Templates + 'name="Icons3"/>'])
 			else:
-				self.skinSearchAndReplace.append(['<!-- Logo -->', '<constant-widget name="Logo4"/>'])
-				self.skinSearchAndReplace.append(['<!-- Metrix-Icons -->', '<constant-widget name="Icons4"/>'])
+				self.skinSearchAndReplace.append(['<!-- Logo -->', self.Templates + 'name="Logo4"/>'])
+				self.skinSearchAndReplace.append(['<!-- Metrix-Icons -->', self.Templates + 'name="Icons4"/>'])
 		else:
 			if config.plugins.KravenFHD.LogoNoInternet.value == "minitv":
-				self.skinSearchAndReplace.append(['<!-- Logo -->', '<constant-widget name="Logo1"/>'])
-				self.skinSearchAndReplace.append(['<!-- Metrix-Icons -->', '<constant-widget name="Icons1"/>'])
+				self.skinSearchAndReplace.append(['<!-- Logo -->', self.Templates + 'name="Logo1"/>'])
+				self.skinSearchAndReplace.append(['<!-- Metrix-Icons -->', self.Templates + 'name="Icons1"/>'])
 			else:
-				self.skinSearchAndReplace.append(['<!-- Logo -->', '<constant-widget name="Logo2"/>'])
-				self.skinSearchAndReplace.append(['<!-- Metrix-Icons -->', '<constant-widget name="Icons2"/>'])
+				self.skinSearchAndReplace.append(['<!-- Logo -->', self.Templates + 'name="Logo2"/>'])
+				self.skinSearchAndReplace.append(['<!-- Metrix-Icons -->', self.Templates + 'name="Icons2"/>'])
 
 		### Logo
 		if self.E2DistroVersion == "VTi":
@@ -1448,9 +1473,9 @@ class ActivateSkinSettings:
 
 		### Mainmenu Fontsize
 		if config.plugins.KravenFHD.MainmenuFontsize.value == "mainmenu-small":
-			self.skinSearchAndReplace.append(['<constant-widget name="mainmenu-big"/>', '<constant-widget name="mainmenu-small"/>'])
+			self.skinSearchAndReplace.append([self.Templates + 'name="mainmenu-big"/>', self.Templates + 'name="mainmenu-small"/>'])
 		elif config.plugins.KravenFHD.MainmenuFontsize.value == "mainmenu-middle":
-			self.skinSearchAndReplace.append(['<constant-widget name="mainmenu-big"/>', '<constant-widget name="mainmenu-middle"/>'])
+			self.skinSearchAndReplace.append([self.Templates + 'name="mainmenu-big"/>', self.Templates + 'name="mainmenu-middle"/>'])
 
 		### Infobar. Background-Style
 		if config.plugins.KravenFHD.IBStyle.value == "box":
@@ -1464,88 +1489,62 @@ class ActivateSkinSettings:
 
 			### Infobar
 			if config.plugins.KravenFHD.InfobarBoxColor.value == "gradient":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-ib-top"/>', '<constant-widget name="box2-ib-top"/>'])
-				if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="box2-ib-np-x1"/>'])
-				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-x4"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="box2-ib-x2-x3"/>'])
+				if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
+					self.skinSearchAndReplace.append(['<!-- Infobar topbarbackground -->', self.Templates + 'name="infobar-style-x2-z1-topbar-box2"/>'])
+
+				if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3"):
+					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', self.Templates + 'name="infobar-style-x2-x3-box2"/>'])
 				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-z1","infobar-style-z2"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="box2-ib-z1-z2"/>'])
-				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zz4"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="box2-ib-zz1-zz4"/>'])
+					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', self.Templates + 'name="infobar-style-z1-z2-box2"/>'])
+				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-zz1","infobar-style-zzz1"):
+					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', self.Templates + 'name="' + config.plugins.KravenFHD.InfobarStyle.value + '-box2"/>'])
 				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="box2-ib-zz2-zz3"/>'])
-				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zzz1","infobar-style-zzz2"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="box2-ib-zzz1"/>'])
+					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', self.Templates + 'name="infobar-style-zz2-zz3-box2"/>'])
+
 			elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-ib-top"/>', '<constant-widget name="texture-ib-top"/>'])
-				if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="texture-ib-np-x1"/>'])
-				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-x4"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="texture-ib-x2-x3"/>'])
+				if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
+					self.skinSearchAndReplace.append(['<!-- Infobar topbarbackground -->', self.Templates + 'name="infobar-style-x2-z1-topbar-texture"/>'])
+
+				if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3"):
+					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', self.Templates + 'name="infobar-style-x2-x3-texture"/>'])
 				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-z1","infobar-style-z2"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="texture-ib-z1-z2"/>'])
-				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zz4"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="texture-ib-zz1-zz4"/>'])
+					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', self.Templates + 'name="infobar-style-z1-z2-texture"/>'])
+				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-zz1","infobar-style-zzz1"):
+					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', self.Templates + 'name="' + config.plugins.KravenFHD.InfobarStyle.value + '-texture"/>'])
 				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="texture-ib-zz2-zz3"/>'])
-				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zzz1","infobar-style-zzz2"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="texture-ib-zzz1"/>'])
+					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', self.Templates + 'name="infobar-style-zz2-zz3-texture"/>'])
+
 			else:
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-ib-top"/>', '<constant-widget name="box-ib-top"/>'])
-				if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="box-ib-np-x1"/>'])
-				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-x4"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="box-ib-x2-x3"/>'])
+				if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
+					self.skinSearchAndReplace.append(['<!-- Infobar topbarbackground -->', self.Templates + 'name="infobar-style-x2-z1-topbar-box"/>'])
+
+				if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3"):
+					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', self.Templates + 'name="infobar-style-x2-x3-box"/>'])
 				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-z1","infobar-style-z2"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="box-ib-z1-z2"/>'])
-				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zz4"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="box-ib-zz1-zz4"/>'])
+					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', self.Templates + 'name="infobar-style-z1-z2-box"/>'])
+				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-zz1","infobar-style-zzz1"):
+					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', self.Templates + 'name="' + config.plugins.KravenFHD.InfobarStyle.value + '-box"/>'])
 				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="box-ib-zz2-zz3"/>'])
-				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zzz1","infobar-style-zzz2"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="box-ib-zzz1"/>'])
+					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', self.Templates + 'name="infobar-style-zz2-zz3-box"/>'])
 
 			### NetatmoBar - Background
 			if config.plugins.KravenFHD.InfobarBoxColor.value == "gradient":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-netatmo"/>', '<constant-widget name="box2-netatmo"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="infobar-style-x2-z1-netatmobar-gradient"/>', self.Templates + 'name="infobar-style-x2-z1-netatmobar-box2"/>'])
 			elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-netatmo"/>', '<constant-widget name="texture-netatmo"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="infobar-style-x2-z1-netatmobar-gradient"/>', self.Templates + 'name="infobar-style-x2-z1-netatmobar-texture"/>'])
 			else:
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-netatmo"/>', '<constant-widget name="box-netatmo"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="infobar-style-x2-z1-netatmobar-gradient"/>', self.Templates + 'name="infobar-style-x2-z1-netatmobar-box"/>'])
 
 			### SIB - Background
 			if config.plugins.KravenFHD.InfobarBoxColor.value == "gradient":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-sib"/>', '<constant-widget name="box2-sib"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-sib"/>', self.Templates + 'name="box2-sib"/>'])
 			elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-sib"/>', '<constant-widget name="texture-sib"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-sib"/>', self.Templates + 'name="texture-sib"/>'])
 			else:
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-sib"/>', '<constant-widget name="box-sib"/>'])
-
-			### weather-big - Background
-			if config.plugins.KravenFHD.InfobarBoxColor.value == "gradient":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-weather-big"/>', '<constant-widget name="box2-weather-big"/>'])
-			elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-weather-big"/>', '<constant-widget name="texture-weather-big"/>'])
-			else:
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-weather-big"/>', '<constant-widget name="box-weather-big"/>'])
-
-			### weather-small - Background
-			if config.plugins.KravenFHD.InfobarBoxColor.value == "gradient":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-weather-small"/>', '<constant-widget name="box2-weather-small"/>'])
-			elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-weather-small"/>', '<constant-widget name="texture-weather-small"/>'])
-			else:
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-weather-small"/>', '<constant-widget name="box-weather-small"/>'])
-
-			### weather-small - Position
-			self.skinSearchAndReplace.append(['position="1440,82" size="105,105"', 'position="1500,37" size="105,105"'])
-			self.skinSearchAndReplace.append(['position="1545,82" size="172,105"', 'position="1605,37" size="172,105"'])
-			self.skinSearchAndReplace.append(['position="1717,82" size="112,52"', 'position="1777,37" size="112,52"'])
-			self.skinSearchAndReplace.append(['position="1717,135" size="112,52"', 'position="1777,90" size="112,52"'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-sib"/>', self.Templates + 'name="box-sib"/>'])
 
 			### clock-android - ibar-Position
-			if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-x4","infobar-style-z1","infobar-style-z2") and self.actClockstyle == "clock-android":
+			if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2") and self.actClockstyle == "clock-android":
 				self.skinSearchAndReplace.append(['position="0,864" size="1920,216"', 'position="0,849" size="1920,231"'])
 				self.skinSearchAndReplace.append(['position="0,864" size="1920,3"', 'position="0,849" size="1920,3"'])
 				self.skinSearchAndReplace.append(['position="0,870" size="1920,210"', 'position="0,849" size="1920,231"'])
@@ -1553,69 +1552,68 @@ class ActivateSkinSettings:
 
 			### EMCMediaCenter, MoviePlayer, DVDPlayer - Background
 			if config.plugins.KravenFHD.InfobarBoxColor.value == "gradient":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-player"/>', '<constant-widget name="box2-player"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-player"/>', self.Templates + 'name="box2-player"/>'])
 			elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-player"/>', '<constant-widget name="texture-player"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-player"/>', self.Templates + 'name="texture-player"/>'])
 			else:
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-player"/>', '<constant-widget name="box-player"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-player"/>', self.Templates + 'name="box-player"/>'])
 
 			### EPGSelectionEPGBar - Background
 			if config.plugins.KravenFHD.InfobarBoxColor.value == "gradient":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-EPGBar"/>', '<constant-widget name="box2-EPGBar"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-EPGBar"/>', self.Templates + 'name="box2-EPGBar"/>'])
 			elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-EPGBar"/>', '<constant-widget name="texture-EPGBar"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-EPGBar"/>', self.Templates + 'name="texture-EPGBar"/>'])
 			else:
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-EPGBar"/>', '<constant-widget name="box-EPGBar"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-EPGBar"/>', self.Templates + 'name="box-EPGBar"/>'])
 
 			### ChannelSelectionRadio
 			if config.plugins.KravenFHD.InfobarBoxColor.value == "gradient":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-csr"/>', '<constant-widget name="box2-csr"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-csr"/>', self.Templates + 'name="box2-csr"/>'])
 			elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-csr"/>', '<constant-widget name="texture-csr"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-csr"/>', self.Templates + 'name="texture-csr"/>'])
 			else:
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-csr"/>', '<constant-widget name="box-csr"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-csr"/>', self.Templates + 'name="box-csr"/>'])
 
 			### RadioInfoBar
 			if config.plugins.KravenFHD.InfobarBoxColor.value == "gradient":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-rib"/>', '<constant-widget name="box2-rib"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-rib"/>', self.Templates + 'name="box2-rib"/>'])
 			elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-rib"/>', '<constant-widget name="texture-rib"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-rib"/>', self.Templates + 'name="texture-rib"/>'])
 			else:
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-rib"/>', '<constant-widget name="box-rib"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-rib"/>', self.Templates + 'name="box-rib"/>'])
 
 			### GraphicalInfoBarEPG, QuickEPG
 			if config.plugins.KravenFHD.InfobarBoxColor.value == "gradient":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-ibepg"/>', '<constant-widget name="box2-ibepg"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-ibepg"/>', self.Templates + 'name="box2-ibepg"/>'])
 			elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-ibepg"/>', '<constant-widget name="texture-ibepg"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-ibepg"/>', self.Templates + 'name="texture-ibepg"/>'])
 			else:
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-ibepg"/>', '<constant-widget name="box-ibepg"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-ibepg"/>', self.Templates + 'name="box-ibepg"/>'])
 
 			### InfoBarEventView
 			if config.plugins.KravenFHD.InfobarBoxColor.value == "gradient":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-ibev"/>', '<constant-widget name="box2-ibev"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-ibev"/>', self.Templates + 'name="box2-ibev"/>'])
 			elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-ibev"/>', '<constant-widget name="texture-ibev"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-ibev"/>', self.Templates + 'name="texture-ibev"/>'])
 			else:
-				self.skinSearchAndReplace.append(['<constant-widget name="gradient-ibev"/>', '<constant-widget name="box-ibev"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="gradient-ibev"/>', self.Templates + 'name="box-ibev"/>'])
 			
 			### ServiceScanMinimal
-			self.skinSearchAndReplace.append(['<!-- ServiceScanMinimal IBLine -->', '<constant-widget name="ServiceScanMinimal_IBLine"/>'])
+			self.skinSearchAndReplace.append(['<!-- ServiceScanMinimal IBLine -->', self.Templates + 'name="ServiceScanMinimal_IBLine"/>'])
 
 		else:
 			### Infobar
-			if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1"):
-				self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="gradient-ib-np-x1"/>'])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-x4"):
-				self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="gradient-ib-x2-x3"/>'])
+			if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
+				self.skinSearchAndReplace.append(['<!-- Infobar topbarbackground -->', self.Templates + 'name="infobar-style-x2-z1-topbar-gradient"/>'])
+
+			if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3"):
+				self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', self.Templates + 'name="infobar-style-x2-x3-gradient"/>'])
 			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-z1","infobar-style-z2"):
-				self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="gradient-ib-z1-z2"/>'])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zz4"):
-				self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="gradient-ib-zz1-zz4"/>'])
+				self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', self.Templates + 'name="infobar-style-z1-z2-gradient"/>'])
+			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-zz1","infobar-style-zzz1"):
+				self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', self.Templates + 'name="' + config.plugins.KravenFHD.InfobarStyle.value + '-gradient"/>'])
 			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
-				self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="gradient-ib-zz2-zz3"/>'])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zzz1","infobar-style-zzz2"):
-				self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<constant-widget name="gradient-ib-zzz1"/>'])
+				self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', self.Templates + 'name="infobar-style-zz2-zz3-gradient"/>'])
 
 		### MediaPortal (player) box-style
 		if config.plugins.KravenFHD.MediaPortal.value == "mediaportal":
@@ -1659,16 +1657,12 @@ class ActivateSkinSettings:
 
 		### Infobar (Serviceevent) Font-Size
 		if config.plugins.KravenFHD.IBFontSize.value == "size-33":
-			self.skinSearchAndReplace.append(['font="Regular;45" position="904,813" size="504,55"', 'font="Regular;33" position="904,822" size="504,42"']) # ZZ1, ZZZ1 now
-			self.skinSearchAndReplace.append(['font="Regular;45" position="904,959" size="504,55"', 'font="Regular;33" position="904,968" size="504,42"']) # ZZ1, ZZZ1 next
-			self.skinSearchAndReplace.append(['font="Regular;45" position="820,784" size="747,55"', 'font="Regular;33" position="820,793" size="747,42"']) # ZZZ2 now
-			self.skinSearchAndReplace.append(['font="Regular;45" position="820,922" size="586,55"', 'font="Regular;33" position="820,931" size="586,42"']) # ZZZ2 next
-			self.skinSearchAndReplace.append(['font="Regular;45" position="904,815" size="726,55"', 'font="Regular;33" position="904,824" size="726,42"']) # ZZ4 now
-			self.skinSearchAndReplace.append(['font="Regular;45" position="904,965" size="726,55"', 'font="Regular;33" position="904,974" size="726,42"']) # ZZ4 next
+			self.skinSearchAndReplace.append(['font="Regular;45" position="817,830" size="750,55"', 'font="Regular;33" position="817,839" size="750,42"']) # ZZ1 now
+			self.skinSearchAndReplace.append(['font="Regular;45" position="817,965" size="589,55"', 'font="Regular;33" position="817,974" size="589,42"']) # ZZ1 next
+			self.skinSearchAndReplace.append(['font="Regular;45" position="817,790" size="750,55"', 'font="Regular;33" position="817,799" size="750,42"']) # ZZZ1 now
+			self.skinSearchAndReplace.append(['font="Regular;45" position="817,925" size="589,55"', 'font="Regular;33" position="817,931" size="589,42"']) # ZZZ1 next
 			self.skinSearchAndReplace.append(['font="Regular;45" position="657,921" size="708,55"', 'font="Regular;33" position="657,930" size="708,42"']) # ZZ2, ZZ3 now
 			self.skinSearchAndReplace.append(['font="Regular;45" position="765,999" size="655,55"', 'font="Regular;33" position="765,1008" size="655,42"']) # ZZ3 next
-			self.skinSearchAndReplace.append(['font="Regular;45" position="645,882" size="721,55"', 'font="Regular;33" position="645,891" size="721,42"']) # x4 now
-			self.skinSearchAndReplace.append(['font="Regular;45" position="645,960" size="721,55"', 'font="Regular;33" position="645,969" size="721,42"']) # x4 next
 			self.skinSearchAndReplace.append(['font="Regular;45" position="644,921" size="722,55"', 'font="Regular;33" position="644,930" size="722,42"']) # X2, X3, Z1, Z2 now
 			self.skinSearchAndReplace.append(['font="Regular;45" position="644,999" size="722,55"', 'font="Regular;33" position="644,1008" size="722,42"']) # X2, X3, Z1, Z2 next
 			self.skinSearchAndReplace.append(['font="Regular;45" position="644,837" size="722,55"', 'font="Regular;33" position="644,846" size="722,42"']) # X1 now
@@ -1676,16 +1670,12 @@ class ActivateSkinSettings:
 			self.skinSearchAndReplace.append(['font="Regular;45" position="298,876" size="1061,55"', 'font="Regular;33" position="298,885" size="1061,42"']) # no picon now
 			self.skinSearchAndReplace.append(['font="Regular;45" position="298,954" size="1061,55"', 'font="Regular;33" position="298,963" size="1061,42"']) # no picon next
 		elif config.plugins.KravenFHD.IBFontSize.value == "size-39":
-			self.skinSearchAndReplace.append(['font="Regular;45" position="904,813" size="504,55"', 'font="Regular;39" position="904,816" size="504,49"']) # ZZ1, ZZZ1 now
-			self.skinSearchAndReplace.append(['font="Regular;45" position="904,959" size="504,55"', 'font="Regular;39" position="904,962" size="504,49"']) # ZZ1, ZZZ1 next
-			self.skinSearchAndReplace.append(['font="Regular;45" position="820,784" size="747,55"', 'font="Regular;39" position="820,787" size="747,49"']) # ZZZ2 now
-			self.skinSearchAndReplace.append(['font="Regular;45" position="820,922" size="586,55"', 'font="Regular;39" position="820,925" size="586,49"']) # ZZZ2 next
-			self.skinSearchAndReplace.append(['font="Regular;45" position="904,815" size="726,55"', 'font="Regular;39" position="904,818" size="726,49"']) # ZZ4 now
-			self.skinSearchAndReplace.append(['font="Regular;45" position="904,965" size="726,55"', 'font="Regular;39" position="904,968" size="726,49"']) # ZZ4 next
+			self.skinSearchAndReplace.append(['font="Regular;45" position="817,830" size="750,55"', 'font="Regular;39" position="817,833" size="750,49"']) # ZZ1 now
+			self.skinSearchAndReplace.append(['font="Regular;45" position="817,965" size="589,55"', 'font="Regular;39" position="817,968" size="589,49"']) # ZZ1 next
+			self.skinSearchAndReplace.append(['font="Regular;45" position="817,790" size="750,55"', 'font="Regular;39" position="817,793" size="750,49"']) # ZZZ1 now
+			self.skinSearchAndReplace.append(['font="Regular;45" position="817,925" size="589,55"', 'font="Regular;39" position="817,928" size="589,49"']) # ZZZ1 next
 			self.skinSearchAndReplace.append(['font="Regular;45" position="657,921" size="708,55"', 'font="Regular;39" position="657,924" size="708,49"']) # ZZ2, ZZ3 now
 			self.skinSearchAndReplace.append(['font="Regular;45" position="765,999" size="655,55"', 'font="Regular;39" position="765,1002" size="655,49"']) # ZZ3 next
-			self.skinSearchAndReplace.append(['font="Regular;45" position="645,882" size="721,55"', 'font="Regular;39" position="645,885" size="721,49"']) # x4 now
-			self.skinSearchAndReplace.append(['font="Regular;45" position="645,960" size="721,55"', 'font="Regular;39" position="645,963" size="721,49"']) # x4 next
 			self.skinSearchAndReplace.append(['font="Regular;45" position="644,921" size="722,55"', 'font="Regular;39" position="644,924" size="722,49"']) # X2, X3, Z1, Z2 now
 			self.skinSearchAndReplace.append(['font="Regular;45" position="644,999" size="722,55"', 'font="Regular;39" position="644,1002" size="722,49"']) # X2, X3, Z1, Z2 next
 			self.skinSearchAndReplace.append(['font="Regular;45" position="644,837" size="722,55"', 'font="Regular;39" position="644,840" size="722,49"']) # X1 now
@@ -1770,129 +1760,142 @@ class ActivateSkinSettings:
 		### ChannelSelection (Event-Description) Font-Size and Primetime
 		if self.actChannelselectionstyle in ("channelselection-style-minitv","channelselection-style-minitv3"):
 			if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSLEPG32"/>', '<constant-widget name="CSLEPG36Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSLEPG32"/>', self.Templates + 'name="CSLEPG36Prime"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "none" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSLEPG32"/>', '<constant-widget name="CSLEPG36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSLEPG32"/>', self.Templates + 'name="CSLEPG36"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "small":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSLEPG32"/>', '<constant-widget name="CSLEPG32Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSLEPG32"/>', self.Templates + 'name="CSLEPG32Prime"/>'])
 		elif self.actChannelselectionstyle == "channelselection-style-minitv33":
 			if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSEPEPG32"/>', '<constant-widget name="CSEPEPG36Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSEPEPG32"/>', self.Templates + 'name="CSEPEPG36Prime"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "none" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSEPEPG32"/>', '<constant-widget name="CSEPEPG36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSEPEPG32"/>', self.Templates + 'name="CSEPEPG36"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "small":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSEPEPG32"/>', '<constant-widget name="CSEPEPG32Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSEPEPG32"/>', self.Templates + 'name="CSEPEPG32Prime"/>'])
 		elif self.actChannelselectionstyle == "channelselection-style-minitv4":
 			if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSREPG32"/>', '<constant-widget name="CSREPG36Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSREPG32"/>', self.Templates + 'name="CSREPG36Prime"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "none" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSREPG32"/>', '<constant-widget name="CSREPG36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSREPG32"/>', self.Templates + 'name="CSREPG36"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "small":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSREPG32"/>', '<constant-widget name="CSREPG32Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSREPG32"/>', self.Templates + 'name="CSREPG32Prime"/>'])
 		elif self.actChannelselectionstyle == "channelselection-style-minitv2":
 			if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSMT2EPG32"/>', '<constant-widget name="CSMT2EPG36Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSMT2EPG32"/>', self.Templates + 'name="CSMT2EPG36Prime"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "none" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSMT2EPG32"/>', '<constant-widget name="CSMT2EPG36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSMT2EPG32"/>', self.Templates + 'name="CSMT2EPG36"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "small":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSMT2EPG32"/>', '<constant-widget name="CSMT2EPG32Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSMT2EPG32"/>', self.Templates + 'name="CSMT2EPG32Prime"/>'])
 		elif self.actChannelselectionstyle == "channelselection-style-minitv22":
 			if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize2.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSMT22EPG32"/>', '<constant-widget name="CSMT22EPG36Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSMT22EPG32"/>', self.Templates + 'name="CSMT22EPG36Prime"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "none" and config.plugins.KravenFHD.ChannelSelectionEPGSize2.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSMT22EPG32"/>', '<constant-widget name="CSMT22EPG36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSMT22EPG32"/>', self.Templates + 'name="CSMT22EPG36"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize2.value == "small":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSMT22EPG32"/>', '<constant-widget name="CSMT22EPG32Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSMT22EPG32"/>', self.Templates + 'name="CSMT22EPG32Prime"/>'])
 		elif self.actChannelselectionstyle == "channelselection-style-nobile":
 			if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSNEPG28"/>', '<constant-widget name="CSNEPG32Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSNEPG28"/>', self.Templates + 'name="CSNEPG32Prime"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "none" and config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSNEPG28"/>', '<constant-widget name="CSNEPG32"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSNEPG28"/>', self.Templates + 'name="CSNEPG32"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "small":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSNEPG28"/>', '<constant-widget name="CSNEPG28Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSNEPG28"/>', self.Templates + 'name="CSNEPG28Prime"/>'])
 		elif self.actChannelselectionstyle == "channelselection-style-nobile2":
 			if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSN2EPG28"/>', '<constant-widget name="CSN2EPG32Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSN2EPG28"/>', self.Templates + 'name="CSN2EPG32Prime"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "none" and config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSN2EPG28"/>', '<constant-widget name="CSN2EPG32"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSN2EPG28"/>', self.Templates + 'name="CSN2EPG32"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "small":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSN2EPG28"/>', '<constant-widget name="CSN2EPG28Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSN2EPG28"/>', self.Templates + 'name="CSN2EPG28Prime"/>'])
 		elif self.actChannelselectionstyle in ("channelselection-style-nobile-minitv","channelselection-style-nobile-minitv3"):
 			if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSNMTEPG28"/>', '<constant-widget name="CSNMTEPG32Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSNMTEPG28"/>', self.Templates + 'name="CSNMTEPG32Prime"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "none" and config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSNMTEPG28"/>', '<constant-widget name="CSNMTEPG32"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSNMTEPG28"/>', self.Templates + 'name="CSNMTEPG32"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "small":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSNMTEPG28"/>', '<constant-widget name="CSNMTEPG28Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSNMTEPG28"/>', self.Templates + 'name="CSNMTEPG28Prime"/>'])
 		elif self.actChannelselectionstyle == "channelselection-style-nobile-minitv33":
 			if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSNMTEPEPG28"/>', '<constant-widget name="CSNMTEPEPG32Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSNMTEPEPG28"/>', self.Templates + 'name="CSNMTEPEPG32Prime"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "none" and config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSNMTEPEPG28"/>', '<constant-widget name="CSNMTEPEPG32"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSNMTEPEPG28"/>', self.Templates + 'name="CSNMTEPEPG32"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize1.value == "small":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSNMTEPEPG28"/>', '<constant-widget name="CSNMTEPEPG28Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSNMTEPEPG28"/>', self.Templates + 'name="CSNMTEPEPG28Prime"/>'])
 		elif self.actChannelselectionstyle == "channelselection-style-nopicon":
 			if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSNPEPG32"/>', '<constant-widget name="CSNPEPG36Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSNPEPG32"/>', self.Templates + 'name="CSNPEPG36Prime"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "none" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSNPEPG32"/>', '<constant-widget name="CSNPEPG36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSNPEPG32"/>', self.Templates + 'name="CSNPEPG36"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "small":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSNPEPG32"/>', '<constant-widget name="CSNPEPG32Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSNPEPG32"/>', self.Templates + 'name="CSNPEPG32Prime"/>'])
 		elif self.actChannelselectionstyle == "channelselection-style-nopicon2":
 			if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSNP2EPG32"/>', '<constant-widget name="CSNP2EPG36Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSNP2EPG32"/>', self.Templates + 'name="CSNP2EPG36Prime"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "none" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSNP2EPG32"/>', '<constant-widget name="CSNP2EPG36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSNP2EPG32"/>', self.Templates + 'name="CSNP2EPG36"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "small":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSNP2EPG32"/>', '<constant-widget name="CSNP2EPG32Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSNP2EPG32"/>', self.Templates + 'name="CSNP2EPG32Prime"/>'])
 		elif self.actChannelselectionstyle == "channelselection-style-xpicon":
 			if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSXEPG32"/>', '<constant-widget name="CSXEPG36Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSXEPG32"/>', self.Templates + 'name="CSXEPG36Prime"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "none" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSXEPG32"/>', '<constant-widget name="CSXEPG36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSXEPG32"/>', self.Templates + 'name="CSXEPG36"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "small":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSXEPG32"/>', '<constant-widget name="CSXEPG32Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSXEPG32"/>', self.Templates + 'name="CSXEPG32Prime"/>'])
 		elif self.actChannelselectionstyle == "channelselection-style-zpicon":
 			if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSZEPG32"/>', '<constant-widget name="CSZEPG36Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSZEPG32"/>', self.Templates + 'name="CSZEPG36Prime"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "none" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSZEPG32"/>', '<constant-widget name="CSZEPG36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSZEPG32"/>', self.Templates + 'name="CSZEPG36"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "small":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSZEPG32"/>', '<constant-widget name="CSZEPG32Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSZEPG32"/>', self.Templates + 'name="CSZEPG32Prime"/>'])
 		elif self.actChannelselectionstyle == "channelselection-style-zzpicon":
 			if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSZZEPG32"/>', '<constant-widget name="CSZZEPG36Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSZZEPG32"/>', self.Templates + 'name="CSZZEPG36Prime"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "none" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSZZEPG32"/>', '<constant-widget name="CSZZEPG36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSZZEPG32"/>', self.Templates + 'name="CSZZEPG36"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "small":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSZZEPG32"/>', '<constant-widget name="CSZZEPG32Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSZZEPG32"/>', self.Templates + 'name="CSZZEPG32Prime"/>'])
 		elif self.actChannelselectionstyle == "channelselection-style-zzzpicon":
 			if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSZZZEPG32"/>', '<constant-widget name="CSZZZEPG36Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSZZZEPG32"/>', self.Templates + 'name="CSZZZEPG36Prime"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "none" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSZZZEPG32"/>', '<constant-widget name="CSZZZEPG36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSZZZEPG32"/>', self.Templates + 'name="CSZZZEPG36"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "small":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSZZZEPG32"/>', '<constant-widget name="CSZZZEPG32Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSZZZEPG32"/>', self.Templates + 'name="CSZZZEPG32Prime"/>'])
 		elif self.actChannelselectionstyle == "channelselection-style-minitv-picon":
 			if config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSMTP32"/>', '<constant-widget name="CSMTP32Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSMTP32"/>', self.Templates + 'name="CSMTP32Prime"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "none" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSMTP32"/>', '<constant-widget name="CSMTP36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSMTP32"/>', self.Templates + 'name="CSMTP36"/>'])
 			elif config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenFHD.ChannelSelectionEPGSize3.value == "small":
-				self.skinSearchAndReplace.append(['<constant-widget name="CSMTP32"/>', '<constant-widget name="CSMTP36Prime"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="CSMTP32"/>', self.Templates + 'name="CSMTP36Prime"/>'])
 
 		### ChannelSelection horizontal Primetime
 		if self.E2DistroVersion == "VTi" and config.plugins.KravenFHD.alternativeChannellist.value == "on" and config.plugins.KravenFHD.ChannelSelectionHorStyle.value == "cshor-minitv" and config.plugins.KravenFHD.Primetimeavailable.value == "primetime-on":
-			self.skinSearchAndReplace.append(['<constant-widget name="CSHORMT"/>', '<constant-widget name="CSHORMTPrime"/>'])
+			self.skinSearchAndReplace.append([self.Templates + 'name="CSHORMT"/>', self.Templates + 'name="CSHORMTPrime"/>'])
 
 		### ChannelSelection 'not available' Font
 		self.skinSearchAndReplace.append(['name="KravenNotAvailable" value="#00FFEA04', 'name="KravenNotAvailable" value="#00' + config.plugins.KravenFHD.ChannelSelectionServiceNA.value])
 
-		### GraphEPG selected background color
-		if config.plugins.KravenFHD.GMErunningbg.value == "global":
-			self.skinSearchAndReplace.append(['name="KravenGMErunningbg" value="#00389416', 'name="KravenGMErunningbg" value="#00' + config.plugins.KravenFHD.SelectionBackground.value])
+		### GraphMultiEPG colors
+		if config.plugins.KravenFHD.GMESelFg.value == "global":
+			self.skinSearchAndReplace.append(['name="KravenGMESelFg" value="#00ffffff', 'name="KravenGMESelFg" value="#00' + config.plugins.KravenFHD.SelectionFont.value])
 		else:
-			self.skinSearchAndReplace.append(['name="KravenGMErunningbg" value="#00389416', 'name="KravenGMErunningbg" value="#00' + config.plugins.KravenFHD.GMErunningbg.value])
+			self.skinSearchAndReplace.append(['name="KravenGMESelFg" value="#00ffffff', 'name="KravenGMESelFg" value="#00' + config.plugins.KravenFHD.GMESelFg.value])
+		if config.plugins.KravenFHD.GMESelBg.value == "global":
+			self.skinSearchAndReplace.append(['name="KravenGMESelBg" value="#00389416', 'name="KravenGMESelBg" value="#00' + config.plugins.KravenFHD.SelectionBackground.value])
+		else:
+			self.skinSearchAndReplace.append(['name="KravenGMESelBg" value="#00389416', 'name="KravenGMESelBg" value="#00' + config.plugins.KravenFHD.GMESelBg.value])
+		if config.plugins.KravenFHD.GMENowFg.value == "global":
+			self.skinSearchAndReplace.append(['name="KravenGMENowFg" value="#00F0A30A', 'name="KravenGMENowFg" value="#00' + config.plugins.KravenFHD.SelectionBackground.value])
+		else:
+			self.skinSearchAndReplace.append(['name="KravenGMENowFg" value="#00F0A30A', 'name="KravenGMENowFg" value="#00' + config.plugins.KravenFHD.GMENowFg.value])
+		if config.plugins.KravenFHD.GMENowBg.value == "global":
+			self.skinSearchAndReplace.append(['name="KravenGMENowBg" value="#00389416', 'name="KravenGMENowBg" value="#00' + config.plugins.KravenFHD.SelectionBackground.value])
+		else:
+			self.skinSearchAndReplace.append(['name="KravenGMENowBg" value="#00389416', 'name="KravenGMENowBg" value="#00' + config.plugins.KravenFHD.GMENowBg.value])
+		self.skinSearchAndReplace.append(['name="KravenGMEBorder" value="#00ffffff', 'name="KravenGMEBorder" value="#00' + config.plugins.KravenFHD.GMEBorder.value])
 
 		### Debug-Names
 		if config.plugins.KravenFHD.DebugNames.value == "screennames-on":
@@ -1926,9 +1929,9 @@ class ActivateSkinSettings:
 				self.skinSearchAndReplace.append(["/infobar-global-icons/", "/icons-light/"])
 			if config.plugins.KravenFHD.IconStyle.value == "icons-dark":
 				self.skinSearchAndReplace.append(['name="KravenIcon" value="#00fff0e0"', 'name="KravenIcon" value="#00000000"'])
-				self.skinSearchAndReplace.append(["/infobar-icons/", "/icons-dark/"])
+				self.skinSearchAndReplace.append(["infobar-icons", "icons-dark"])
 			elif config.plugins.KravenFHD.IconStyle.value == "icons-light":
-				self.skinSearchAndReplace.append(["/infobar-icons/", "/icons-light/"])
+				self.skinSearchAndReplace.append(["infobar-icons", "icons-light"])
 		elif config.plugins.KravenFHD.IBColor.value == "all-screens":
 			if config.plugins.KravenFHD.IconStyle2.value == "icons-dark2":
 				self.skinSearchAndReplace.append(["/global-icons/", "/icons-dark/"])
@@ -1936,10 +1939,10 @@ class ActivateSkinSettings:
 				self.skinSearchAndReplace.append(["/global-icons/", "/icons-light/"])
 			if config.plugins.KravenFHD.IconStyle.value == "icons-dark":
 				self.skinSearchAndReplace.append(['name="KravenIcon" value="#00fff0e0"', 'name="KravenIcon" value="#00000000"'])
-				self.skinSearchAndReplace.append(["/infobar-icons/", "/icons-dark/"])
+				self.skinSearchAndReplace.append(["infobar-icons", "icons-dark"])
 				self.skinSearchAndReplace.append(["/infobar-global-icons/", "/icons-dark/"])
 			elif config.plugins.KravenFHD.IconStyle.value == "icons-light":
-				self.skinSearchAndReplace.append(["/infobar-icons/", "/icons-light/"])
+				self.skinSearchAndReplace.append(["infobar-icons", "icons-light"])
 				self.skinSearchAndReplace.append(["/infobar-global-icons/", "/icons-light/"])
 
 		if config.plugins.KravenFHD.IconStyle2.value == "icons-light2":
@@ -1986,7 +1989,7 @@ class ActivateSkinSettings:
 			self.skinSearchAndReplace.append([' pixmap="KravenFHD/progress/progress480.png"',' pixmap="KravenFHD/progress/progress480_2.png"'])
 			self.skinSearchAndReplace.append([' pixmap="KravenFHD/progress/progress581.png"',' pixmap="KravenFHD/progress/progress581_2.png"'])
 			self.skinSearchAndReplace.append([' pixmap="KravenFHD/progress/progress599.png"',' pixmap="KravenFHD/progress/progress599_2.png"'])
-			self.skinSearchAndReplace.append([' pixmap="KravenFHD/progress/progress655.png"',' pixmap="KravenFHD/progress/progress655_2.png"'])
+			self.skinSearchAndReplace.append([' pixmap="KravenFHD/progress/progress657.png"',' pixmap="KravenFHD/progress/progress657_2.png"'])
 			self.skinSearchAndReplace.append([' pixmap="KravenFHD/progress/progress708.png"',' pixmap="KravenFHD/progress/progress708_2.png"'])
 			self.skinSearchAndReplace.append([' pixmap="KravenFHD/progress/progress749.png"',' pixmap="KravenFHD/progress/progress749_2.png"'])
 			self.skinSearchAndReplace.append([' pixmap="KravenFHD/progress/progress858.png"',' pixmap="KravenFHD/progress/progress858_2.png"'])
@@ -2009,7 +2012,7 @@ class ActivateSkinSettings:
 			self.skinSearchAndReplace.append([' pixmap="KravenFHD/progress/progress480.png"'," "])
 			self.skinSearchAndReplace.append([' pixmap="KravenFHD/progress/progress581.png"'," "])
 			self.skinSearchAndReplace.append([' pixmap="KravenFHD/progress/progress599.png"'," "])
-			self.skinSearchAndReplace.append([' pixmap="KravenFHD/progress/progress655.png"'," "])
+			self.skinSearchAndReplace.append([' pixmap="KravenFHD/progress/progress657.png"'," "])
 			self.skinSearchAndReplace.append([' pixmap="KravenFHD/progress/progress708.png"'," "])
 			self.skinSearchAndReplace.append([' pixmap="KravenFHD/progress/progress749.png"'," "])
 			self.skinSearchAndReplace.append([' pixmap="KravenFHD/progress/progress858.png"'," "])
@@ -2027,12 +2030,6 @@ class ActivateSkinSettings:
 		### NumberZap Border
 		if not config.plugins.KravenFHD.NumberZapExt.value == "none":
 			self.skinSearchAndReplace.append(['name="KravenNZBorder" value="#00ffffff', 'name="KravenNZBorder" value="#00' + config.plugins.KravenFHD.NZBorder.value])
-
-		### GraphEPG Border
-		self.skinSearchAndReplace.append(['name="KravenGMEBorder" value="#00ffffff', 'name="KravenGMEBorder" value="#00' + config.plugins.KravenFHD.GMEBorder.value])
-
-		### VerticalEPG Border
-		self.skinSearchAndReplace.append(['name="KravenVEPGBorder" value="#00ffffff', 'name="KravenVEPGBorder" value="#00' + config.plugins.KravenFHD.VEPGBorder.value])
 
 		### Line
 		self.skinSearchAndReplace.append(['name="KravenLine" value="#00ffffff', 'name="KravenLine" value="#00' + config.plugins.KravenFHD.Line.value])
@@ -2085,12 +2082,12 @@ class ActivateSkinSettings:
 			self.skinSearchAndReplace.append(['backgroundColor="KravenMbg"', 'backgroundColor="Kravenbg"'])
 			self.skinSearchAndReplace.append(['foregroundColor="KravenMFont1"', 'foregroundColor="KravenFont1"'])
 			self.skinSearchAndReplace.append(['foregroundColor="KravenMFont2"', 'foregroundColor="KravenFont2"'])
-			self.skinSearchAndReplace.append(['<constant-widget name="gradient-cs"/>', " "])
-			self.skinSearchAndReplace.append(['<constant-widget name="gradient-cooltv"/>', " "])
-			self.skinSearchAndReplace.append(['<constant-widget name="gradient-emc"/>', " "])
-			self.skinSearchAndReplace.append(['<constant-widget name="gradient-wrr"/>', " "])
-			self.skinSearchAndReplace.append(['<constant-widget name="gradient-split1"/>', " "])
-			self.skinSearchAndReplace.append(['<constant-widget name="gradient-split2"/>', " "])
+			self.skinSearchAndReplace.append([self.Templates + 'name="gradient-cs"/>', " "])
+			self.skinSearchAndReplace.append([self.Templates + 'name="gradient-cooltv"/>', " "])
+			self.skinSearchAndReplace.append([self.Templates + 'name="gradient-emc"/>', " "])
+			self.skinSearchAndReplace.append([self.Templates + 'name="gradient-wrr"/>', " "])
+			self.skinSearchAndReplace.append([self.Templates + 'name="gradient-split1"/>', " "])
+			self.skinSearchAndReplace.append([self.Templates + 'name="gradient-split2"/>', " "])
 		else:
 			self.skinSearchAndReplace.append(['backgroundColor="KravenMbg"', 'backgroundColor="KravenIBbg2"'])
 			self.skinSearchAndReplace.append(['foregroundColor="KravenMFont1"', 'foregroundColor="KravenIBFont1"'])
@@ -2105,12 +2102,12 @@ class ActivateSkinSettings:
 	<eLabel position="0,87" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />"""
 					self.skinSearchAndReplace.append(['<!-- Menu ibar -->', menubox])
 
-					self.skinSearchAndReplace.append(['<constant-widget name="gradient-cs"/>', '<constant-widget name="box2-cs"/>'])
-					self.skinSearchAndReplace.append(['<constant-widget name="gradient-cooltv"/>', '<constant-widget name="box2-cooltv"/>'])
-					self.skinSearchAndReplace.append(['<constant-widget name="gradient-emc"/>', '<constant-widget name="box2-emc"/>'])
-					self.skinSearchAndReplace.append(['<constant-widget name="gradient-wrr"/>', '<constant-widget name="box2-wrr"/>'])
-					self.skinSearchAndReplace.append(['<constant-widget name="gradient-split1"/>', '<constant-widget name="box2-split1"/>'])
-					self.skinSearchAndReplace.append(['<constant-widget name="gradient-split2"/>', '<constant-widget name="box2-split2"/>'])
+					self.skinSearchAndReplace.append([self.Templates + 'name="gradient-cs"/>', self.Templates + 'name="box2-cs"/>'])
+					self.skinSearchAndReplace.append([self.Templates + 'name="gradient-cooltv"/>', self.Templates + 'name="box2-cooltv"/>'])
+					self.skinSearchAndReplace.append([self.Templates + 'name="gradient-emc"/>', self.Templates + 'name="box2-emc"/>'])
+					self.skinSearchAndReplace.append([self.Templates + 'name="gradient-wrr"/>', self.Templates + 'name="box2-wrr"/>'])
+					self.skinSearchAndReplace.append([self.Templates + 'name="gradient-split1"/>', self.Templates + 'name="box2-split1"/>'])
+					self.skinSearchAndReplace.append([self.Templates + 'name="gradient-split2"/>', self.Templates + 'name="box2-split2"/>'])
 				elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
 					menubox = """<ePixmap pixmap="KravenFHD/graphics/ibtexture.png" position="0,960" size="1920,120" zPosition="-9" alphatest="blend" />
 	<eLabel position="0,960" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
@@ -2118,12 +2115,12 @@ class ActivateSkinSettings:
 	<eLabel position="0,87" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />"""
 					self.skinSearchAndReplace.append(['<!-- Menu ibar -->', menubox])
 
-					self.skinSearchAndReplace.append(['<constant-widget name="gradient-cs"/>', '<constant-widget name="texture-cs"/>'])
-					self.skinSearchAndReplace.append(['<constant-widget name="gradient-cooltv"/>', '<constant-widget name="texture-cooltv"/>'])
-					self.skinSearchAndReplace.append(['<constant-widget name="gradient-emc"/>', '<constant-widget name="texture-emc"/>'])
-					self.skinSearchAndReplace.append(['<constant-widget name="gradient-wrr"/>', '<constant-widget name="texture-wrr"/>'])
-					self.skinSearchAndReplace.append(['<constant-widget name="gradient-split1"/>', '<constant-widget name="texture-split1"/>'])
-					self.skinSearchAndReplace.append(['<constant-widget name="gradient-split2"/>', '<constant-widget name="texture-split2"/>'])
+					self.skinSearchAndReplace.append([self.Templates + 'name="gradient-cs"/>', self.Templates + 'name="texture-cs"/>'])
+					self.skinSearchAndReplace.append([self.Templates + 'name="gradient-cooltv"/>', self.Templates + 'name="texture-cooltv"/>'])
+					self.skinSearchAndReplace.append([self.Templates + 'name="gradient-emc"/>', self.Templates + 'name="texture-emc"/>'])
+					self.skinSearchAndReplace.append([self.Templates + 'name="gradient-wrr"/>', self.Templates + 'name="texture-wrr"/>'])
+					self.skinSearchAndReplace.append([self.Templates + 'name="gradient-split1"/>', self.Templates + 'name="texture-split1"/>'])
+					self.skinSearchAndReplace.append([self.Templates + 'name="gradient-split2"/>', self.Templates + 'name="texture-split2"/>'])
 				else:
 					menubox = """<eLabel position="0,960" size="1920,120" backgroundColor="KravenIBbg2" zPosition="-9" />
 	  <eLabel position="0,960" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
@@ -2131,12 +2128,12 @@ class ActivateSkinSettings:
 	  <eLabel position="0,87" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />"""
 					self.skinSearchAndReplace.append(['<!-- Menu ibar -->', menubox])
 
-					self.skinSearchAndReplace.append(['<constant-widget name="gradient-cs"/>', '<constant-widget name="box-cs"/>'])
-					self.skinSearchAndReplace.append(['<constant-widget name="gradient-cooltv"/>', '<constant-widget name="box-cooltv"/>'])
-					self.skinSearchAndReplace.append(['<constant-widget name="gradient-emc"/>', '<constant-widget name="box-emc"/>'])
-					self.skinSearchAndReplace.append(['<constant-widget name="gradient-wrr"/>', '<constant-widget name="box-wrr"/>'])
-					self.skinSearchAndReplace.append(['<constant-widget name="gradient-split1"/>', '<constant-widget name="box-split1"/>'])
-					self.skinSearchAndReplace.append(['<constant-widget name="gradient-split2"/>', '<constant-widget name="box-split2"/>'])
+					self.skinSearchAndReplace.append([self.Templates + 'name="gradient-cs"/>', self.Templates + 'name="box-cs"/>'])
+					self.skinSearchAndReplace.append([self.Templates + 'name="gradient-cooltv"/>', self.Templates + 'name="box-cooltv"/>'])
+					self.skinSearchAndReplace.append([self.Templates + 'name="gradient-emc"/>', self.Templates + 'name="box-emc"/>'])
+					self.skinSearchAndReplace.append([self.Templates + 'name="gradient-wrr"/>', self.Templates + 'name="box-wrr"/>'])
+					self.skinSearchAndReplace.append([self.Templates + 'name="gradient-split1"/>', self.Templates + 'name="box-split1"/>'])
+					self.skinSearchAndReplace.append([self.Templates + 'name="gradient-split2"/>', self.Templates + 'name="box-split2"/>'])
 
 				### Title - Position
 				self.skinSearchAndReplace.append(['position="105,18"','position="105,10"'])
@@ -2254,6 +2251,78 @@ class ActivateSkinSettings:
 	  <eLabel position="0,87" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />"""
 			self.skinSearchAndReplace.append(['<!-- MediaPortal ibarcolor ThumbsScreen */-->', mpbox2ThumbsScreen])
 
+		### Tuner
+		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x2","infobar-style-z1","infobar-style-zz1","infobar-style-zzz1"):
+
+			### Tuner Colors
+			self.skinSearchAndReplace.append(['name="KravenTunerBusy" value="#00CCCC00', 'name="KravenTunerBusy" value="#00' + config.plugins.KravenFHD.TunerBusy.value])
+			self.skinSearchAndReplace.append(['name="KravenTunerLive" value="#0000B400', 'name="KravenTunerLive" value="#00' + config.plugins.KravenFHD.TunerLive.value])
+			self.skinSearchAndReplace.append(['name="KravenTunerRecord" value="#00FF0C00', 'name="KravenTunerRecord" value="#00' + config.plugins.KravenFHD.TunerRecord.value])
+			self.skinSearchAndReplace.append(['name="KravenTunerXtremeBusy" value="#001BA1E2', 'name="KravenTunerXtremeBusy" value="#00' + config.plugins.KravenFHD.TunerXtremeBusy.value])
+
+			### Show unused Tuners
+			if config.plugins.KravenFHD.ShowUnusedTuner.value == "none":
+				self.skinSearchAndReplace.append([',ShowUnused', ''])
+
+			### Set align for Tuners
+			if not config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
+				self.skinSearchAndReplace.append([',RightAlign2', ''])
+				self.skinSearchAndReplace.append([',RightAlign4', ''])
+				self.skinSearchAndReplace.append([',RightAlign8', ''])
+
+		### SecondInfobar Font- and Textsize
+		if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz1":
+			if config.plugins.KravenFHD.SIBFont.value == "sibfont-small":
+				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1798,252">', 'font="Regular2; 33" size="1798,252">']) # sib1-small
+				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1800,420">', 'font="Regular2; 33" size="1800,378">']) # sib4+sib6-small
+				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1050,420">', 'font="Regular2; 33" size="1050,378">']) # sib5+sib7-small
+				self.skinSearchAndReplace.append(['font="Regular2; 33" size="705,420">', 'font="Regular2; 33" size="705,378">']) # sib5+sib7-small
+			else:
+				self.skinSearchAndReplace.append(['font="Regular2; 36" size="1798,276">', 'font="Regular2; 36" size="1798,230">']) # sib1
+				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1800,441">', 'font="Regular2; 38" size="1800,392">']) # sib4+sib6
+				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1050,441">', 'font="Regular2; 38" size="1050,392">']) # sib5+sib7
+				self.skinSearchAndReplace.append(['font="Regular2; 38" size="705,441">', 'font="Regular2; 38" size="705,392">']) # sib5+sib7
+
+		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz2":
+			if config.plugins.KravenFHD.SIBFont.value == "sibfont-small":
+				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1798,252">', 'font="Regular2; 33" size="1798,252">']) # sib1-small
+				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1800,420">', 'font="Regular2; 33" size="1800,378">']) # sib4+sib6-small
+				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1050,420">', 'font="Regular2; 33" size="1050,378">']) # sib5+sib7-small
+				self.skinSearchAndReplace.append(['font="Regular2; 33" size="705,420">', 'font="Regular2; 33" size="705,378">']) # sib5+sib7-small
+			else:
+				self.skinSearchAndReplace.append(['font="Regular2; 36" size="1798,276">', 'font="Regular2; 36" size="1798,230">']) # sib1
+				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1800,441">', 'font="Regular2; 38" size="1800,392">']) # sib4+sib6
+				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1050,441">', 'font="Regular2; 38" size="1050,392">']) # sib5+sib7
+				self.skinSearchAndReplace.append(['font="Regular2; 38" size="705,441">', 'font="Regular2; 38" size="705,392">']) # sib5+sib7
+
+		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz3":
+			if config.plugins.KravenFHD.SIBFont.value == "sibfont-small":
+				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1798,252">', 'font="Regular2; 33" size="1798,252">']) # sib1-small
+				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1800,420">', 'font="Regular2; 33" size="1800,378">']) # sib4+sib6-small
+				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1050,420">', 'font="Regular2; 33" size="1050,378">']) # sib5+sib7-small
+				self.skinSearchAndReplace.append(['font="Regular2; 33" size="705,420">', 'font="Regular2; 33" size="705,378">']) # sib5+sib7-small
+			else:
+				self.skinSearchAndReplace.append(['font="Regular2; 36" size="1798,276">', 'font="Regular2; 36" size="1798,230">']) # sib1
+				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1800,441">', 'font="Regular2; 38" size="1800,392">']) # sib4+sib6
+				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1050,441">', 'font="Regular2; 38" size="1050,392">']) # sib5+sib7
+				self.skinSearchAndReplace.append(['font="Regular2; 38" size="705,441">', 'font="Regular2; 38" size="705,392">']) # sib5+sib7
+
+		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zzz1":
+			if config.plugins.KravenFHD.SIBFont.value == "sibfont-small":
+				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1798,252">', 'font="Regular2; 33" size="1798,168">']) # sib1-small
+				self.skinSearchAndReplace.append(['font="Regular2; 33" size="855,588">', 'font="Regular2; 33" size="855,504">']) # sib2-small
+				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1800,588">', 'font="Regular2; 33" size="1800,504">']) # sib3-small
+				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1800,420">', 'font="Regular2; 33" size="1800,304">']) # sib4+sib6-small
+				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1050,420">', 'font="Regular2; 33" size="1050,336">']) # sib5+sib7-small
+				self.skinSearchAndReplace.append(['font="Regular2; 33" size="705,420">', 'font="Regular2; 33" size="705,336">']) # sib5+sib7-small
+			else:
+				self.skinSearchAndReplace.append(['font="Regular2; 36" size="1798,276">', 'font="Regular2; 36" size="1798,184">']) # sib1
+				self.skinSearchAndReplace.append(['font="Regular2; 38" size="855,588">', 'font="Regular2; 38" size="855,490">']) # sib2
+				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1800,588">', 'font="Regular2; 38" size="1800,490">']) # sib3
+				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1800,441">', 'font="Regular2; 38" size="1800,343">']) # sib4+sib6
+				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1050,441">', 'font="Regular2; 38" size="1050,343">']) # sib5+sib7
+				self.skinSearchAndReplace.append(['font="Regular2; 38" size="705,441">', 'font="Regular2; 38" size="705,343">']) # sib5+sib7
+
 		### Clock Analog Style
 		self.analogstylecolor = config.plugins.KravenFHD.AnalogStyle.value
 		self.analog = ("analog_" + self.analogstylecolor + ".png")
@@ -2264,76 +2333,24 @@ class ActivateSkinSettings:
 			self.skinSearchAndReplace.append(['skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png,skin_default/rc_vu_4.png,skin_default/rc_vu_5.png', 'skin_default/rc.png,skin_default/rcold.png'])
 
 		### KravenIconVPosition
-		if config.plugins.KravenFHD.KravenIconVPosition.value == "vposition-3":
-			if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x4","infobar-style-zz1","infobar-style-zzz1"):
-				self.skinSearchAndReplace.append([',1030" name="KravenIconVPosition"', ',1027"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
-				self.skinSearchAndReplace.append([',1038" name="KravenIconVPosition"', ',1035"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz4","infobar-style-zzz2"):
-				self.skinSearchAndReplace.append([',1035" name="KravenIconVPosition"', ',1032"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
-				self.skinSearchAndReplace.append([',34" name="KravenIconVPosition"', ',31"'])
-			self.skinSearchAndReplace.append([',1020" name="KravenIconVPosition"', ',1017"']) # Players
-		elif config.plugins.KravenFHD.KravenIconVPosition.value == "vposition-2":
-			if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x4","infobar-style-zz1","infobar-style-zzz1"):
-				self.skinSearchAndReplace.append([',1030" name="KravenIconVPosition"', ',1028"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
-				self.skinSearchAndReplace.append([',1038" name="KravenIconVPosition"', ',1036"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz4","infobar-style-zzz2"):
-				self.skinSearchAndReplace.append([',1035" name="KravenIconVPosition"', ',1033"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
-				self.skinSearchAndReplace.append([',34" name="KravenIconVPosition"', ',32"'])
-			self.skinSearchAndReplace.append([',1020" name="KravenIconVPosition"', ',1018"']) # Players
-		elif config.plugins.KravenFHD.KravenIconVPosition.value == "vposition-1":
-			if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x4","infobar-style-zz1","infobar-style-zzz1"):
-				self.skinSearchAndReplace.append([',1030" name="KravenIconVPosition"', ',1029"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
-				self.skinSearchAndReplace.append([',1038" name="KravenIconVPosition"', ',1037"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz4","infobar-style-zzz2"):
-				self.skinSearchAndReplace.append([',1035" name="KravenIconVPosition"', ',1034"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
-				self.skinSearchAndReplace.append([',34" name="KravenIconVPosition"', ',33"'])
-			self.skinSearchAndReplace.append([',1020" name="KravenIconVPosition"', ',1019"']) # Players
-		elif config.plugins.KravenFHD.KravenIconVPosition.value == "vposition0":
-			if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x4","infobar-style-zz1","infobar-style-zzz1"):
-				self.skinSearchAndReplace.append([',1030" name="KravenIconVPosition"', ',1030"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
-				self.skinSearchAndReplace.append([',1038" name="KravenIconVPosition"', ',1038"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz4","infobar-style-zzz2"):
-				self.skinSearchAndReplace.append([',1035" name="KravenIconVPosition"', ',1035"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
-				self.skinSearchAndReplace.append([',34" name="KravenIconVPosition"', ',34"'])
-			self.skinSearchAndReplace.append([',1020" name="KravenIconVPosition"', ',1029"']) # Players
-		elif config.plugins.KravenFHD.KravenIconVPosition.value == "vposition+1":
-			if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x4","infobar-style-zz1","infobar-style-zzz1"):
-				self.skinSearchAndReplace.append([',1030" name="KravenIconVPosition"', ',1031"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
-				self.skinSearchAndReplace.append([',1038" name="KravenIconVPosition"', ',1039"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz4","infobar-style-zzz2"):
-				self.skinSearchAndReplace.append([',1035" name="KravenIconVPosition"', ',1036"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
-				self.skinSearchAndReplace.append([',34" name="KravenIconVPosition"', ',35"'])
-			self.skinSearchAndReplace.append([',1020" name="KravenIconVPosition"', ',1021"']) # Players
-		elif config.plugins.KravenFHD.KravenIconVPosition.value == "vposition+2":
-			if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x4","infobar-style-zz1","infobar-style-zzz1"):
-				self.skinSearchAndReplace.append([',1030" name="KravenIconVPosition"', ',1032"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
-				self.skinSearchAndReplace.append([',1038" name="KravenIconVPosition"', ',1040"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz4","infobar-style-zzz2"):
-				self.skinSearchAndReplace.append([',1035" name="KravenIconVPosition"', ',1037"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
-				self.skinSearchAndReplace.append([',34" name="KravenIconVPosition"', ',36"'])
-			self.skinSearchAndReplace.append([',1020" name="KravenIconVPosition"', ',1022"']) # Players
-		elif config.plugins.KravenFHD.KravenIconVPosition.value == "vposition+3":
-			if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x4","infobar-style-zz1","infobar-style-zzz1"):
-				self.skinSearchAndReplace.append([',1030" name="KravenIconVPosition"', ',1033"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
-				self.skinSearchAndReplace.append([',1038" name="KravenIconVPosition"', ',1041"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz4","infobar-style-zzz2"):
-				self.skinSearchAndReplace.append([',1035" name="KravenIconVPosition"', ',1038"'])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
-				self.skinSearchAndReplace.append([',34" name="KravenIconVPosition"', ',37"'])
-			self.skinSearchAndReplace.append([',1020" name="KravenIconVPosition"', ',1023"']) # Players
+		VPos_list = [34, 1020, 1030, 1035, 1038]
+		for i in VPos_list:
+			VPos_old = str(i)
+			if config.plugins.KravenFHD.KravenIconVPosition.value == "vposition-3":
+				VPos_new = str(i -3)
+			elif config.plugins.KravenFHD.KravenIconVPosition.value == "vposition-2":
+				VPos_new = str(i -2)
+			elif config.plugins.KravenFHD.KravenIconVPosition.value == "vposition-1":
+				VPos_new = str(i -1)
+			elif config.plugins.KravenFHD.KravenIconVPosition.value == "vposition0":
+				VPos_new = str(i)
+			elif config.plugins.KravenFHD.KravenIconVPosition.value == "vposition+1":
+				VPos_new = str(i +1)
+			elif config.plugins.KravenFHD.KravenIconVPosition.value == "vposition+2":
+				VPos_new = str(i +2)
+			elif config.plugins.KravenFHD.KravenIconVPosition.value == "vposition+3":
+				VPos_new = str(i +3)
+			self.skinSearchAndReplace.append([',' + VPos_old + '" name="KravenIconVPosition"', ',' + VPos_new + '"'])
 
 		### Channellist-EPGList - VTi
 		if self.E2DistroVersion == "VTi" and config.plugins.KravenFHD.alternativeChannellist.value == "none":
@@ -2411,19 +2428,19 @@ class ActivateSkinSettings:
 			self.skinSearchAndReplace.append(['<widget name="HelpWindow" position="1350,520" size="392,393" zPosition="98" transparent="1" alphatest="blend" />', ' '])
 
 		### delete Font-Shadow if Channelname is inside the box
-		if config.plugins.KravenFHD.IBStyle.value == "box" and config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3","infobar-style-zzz1","infobar-style-zzz2"):
+		if config.plugins.KravenFHD.IBStyle.value == "box" and config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3","infobar-style-zzz1"):
 			self.skinSearchAndReplace.append(['backgroundColor="KravenNamebg"', 'backgroundColor="KravenIBbg"'])
 
 		### Infobar - ecm-info
-		if not config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x4":
-			if config.plugins.KravenFHD.FTA.value == "none":
-				self.skinSearchAndReplace.append(['FTAVisible</convert>', 'FTAInvisible</convert>'])
-			if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
-				self.skinSearchAndReplace.append(['<convert type="KravenFHDECMLine">ShortReader', '<convert type="KravenFHDECMLine">' + config.plugins.KravenFHD.ECMLine1.value])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2"):
-				self.skinSearchAndReplace.append(['<convert type="KravenFHDECMLine">ShortReader', '<convert type="KravenFHDECMLine">' + config.plugins.KravenFHD.ECMLine2.value])
-			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zz2","infobar-style-zz3","infobar-style-zz4","infobar-style-zzz1","infobar-style-zzz2"):
-				self.skinSearchAndReplace.append(['<convert type="KravenFHDECMLine">ShortReader', '<convert type="KravenFHDECMLine">' + config.plugins.KravenFHD.ECMLine3.value])
+		if config.plugins.KravenFHD.FTA.value == "none":
+			self.skinSearchAndReplace.append(['FTAVisible</convert>', 'FTAInvisible</convert>'])
+
+		if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
+			self.skinSearchAndReplace.append(['<convert type="KravenFHDECMLine">ShortReader', '<convert type="KravenFHDECMLine">' + config.plugins.KravenFHD.ECMLine1.value])
+		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2"):
+			self.skinSearchAndReplace.append(['<convert type="KravenFHDECMLine">ShortReader', '<convert type="KravenFHDECMLine">' + config.plugins.KravenFHD.ECMLine2.value])
+		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zz2","infobar-style-zz3","infobar-style-zzz1"):
+			self.skinSearchAndReplace.append(['<convert type="KravenFHDECMLine">ShortReader', '<convert type="KravenFHDECMLine">' + config.plugins.KravenFHD.ECMLine3.value])
 
 		### EPGSelection EPGList
 		if self.E2DistroVersion == "VTi":
@@ -2478,21 +2495,19 @@ class ActivateSkinSettings:
 				self.skinSearchAndReplace.append(['teamBlueEPGListSkinParameter="EPGSelection_EPGSearch"', 'setEventItemFont="Regular;32" setEventTimeFont="Regular;26" setTimeWidth="135" setIconDistance="12" setIconShift="0" setColWidths="75,180" setColGap="15" itemHeight="45" position="105,120" size="1062,810"']) # EPGSelection, EPGSearch
 				self.skinSearchAndReplace.append(['teamBlueEPGListSkinParameter="EPGSelectionMulti"', 'setEventItemFont="Regular;32" setEventTimeFont="Regular;26" setTimeWidth="135" setIconDistance="12" setIconShift="0" setColWidths="300,150" setColGap="15" itemHeight="45" position="75,202" size="1770,540"']) # EPGSelectionMulti
 
+		### Infobar typewriter effect
+		if config.plugins.KravenFHD.TypeWriter.value == "runningtext":
+			self.skinSearchAndReplace.append(['render="KravenFHDEmptyEpg"', 'render="KravenFHDRunningText" options="movetype=running,startpoint=0,' + config.plugins.KravenFHD.RunningText.value + ',' + config.plugins.KravenFHD.RunningTextSpeed.value + ',wrap=0,always=0,repeat=2,oneshot=1"'])
+		elif config.plugins.KravenFHD.TypeWriter.value == "none":
+			self.skinSearchAndReplace.append(['render="KravenFHDEmptyEpg"', 'render="KravenFHDEmptyEpg2"'])
+
 		### VTi MovieList-Picon
 		if self.E2DistroVersion == "VTi":
 			if (not self.silent and config.usage.movielist_show_picon.value == True) or (self.silent and 'config.usage.movielist_show_picon=true' in self.E2settings):
 				self.skinSearchAndReplace.append(['<parameter name="MovieListMinimalVTITitle" value="40,0,1000,40" />', '<parameter name="MovieListMinimalVTITitle" value="40,0,800,40" />'])
 
-		### change constant-widgets to panels for teamblue (part #1)
-		if self.E2DistroVersion == "teamblue":
-			self.skinSearchAndReplace.append(['<constant-widgets>', '<!--/* Templates -->'])
-			self.skinSearchAndReplace.append(['</constant-widgets>', '<!-- Templates */-->'])
-			self.skinSearchAndReplace.append(['constant-panels', 'screen'])
-		elif self.E2DistroVersion in ("VTi","openatv"):
-			self.skinSearchAndReplace.append(['constant-panels', 'constant-widget'])
-
 		### Header begin
-		self.appendSkinFile(self.daten + "header.xml")
+		self.appendSkinFile(self.daten + "header-begin.xml")
 
 		### Listselection-Border
 		if not config.plugins.KravenFHD.SelectionBorderList.value == "none":
@@ -2505,14 +2520,24 @@ class ActivateSkinSettings:
 		self.appendSkinFile(self.daten + 'skinparameter_' + self.E2DistroVersion + '.xml')
 
 		### Templates
-		self.appendSkinFile(self.daten + "templates.xml")
-
-		### change constant-widgets to panels for teamblue (part #2)
 		if self.E2DistroVersion == "teamblue":
-			self.skinSearchAndReplace.append(['constant-widget', 'panel'])
+			self.skinSearchAndReplace.append(['<constant-widgets>', '<!--/* Templates -->']) # customize template.xml for teamBlue - remove constant-widgets begin
+			self.skinSearchAndReplace.append(['</constant-widgets>', '<!-- Templates */-->']) # customize template.xml for teamBlue - remove constant-widgets end
+			self.skinSearchAndReplace.append(['constant-panels', 'screen']) # customize template-screens for teamBlue
+			self.skinSearchAndReplace.append(['<constant-widget ', self.Templates]) # customize panels in xmls for teamBlue
+		elif self.E2DistroVersion in ("VTi","openatv"):
+			self.skinSearchAndReplace.append(['constant-panels', 'constant-widget']) # customize constant-widgets for VTi and openATV
 
-		### Volume
-		self.appendSkinFile(self.daten + config.plugins.KravenFHD.Volume.value + ".xml")
+		### Templates xml
+		self.appendSkinFile(self.daten + 'templates-main.xml')
+		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1"):
+			self.appendSkinFile(self.daten + 'templates-' + config.plugins.KravenFHD.InfobarStyle.value + '.xml')
+		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2"):
+			self.appendSkinFile(self.daten + 'templates-infobar-style-x2-x3-z1-z2.xml')
+		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zzz1"):
+			self.appendSkinFile(self.daten + 'templates-infobar-style-zz1-zzz1.xml')
+		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
+			self.appendSkinFile(self.daten + 'templates-infobar-style-zz2-zz3.xml')
 
 		### ChannelSelection - horizontal RunningText
 		if not self.BoxName == "solo2":
@@ -2529,7 +2554,7 @@ class ActivateSkinSettings:
 
 		### ChannelSelection - VTi
 		if self.E2DistroVersion == "VTi":
-			self.skinSearchAndReplace.append(['name="giopet"', ' '])
+			self.skinSearchAndReplace.append(['name="giopet"', 'progressbarHeight="15" progressbarBorderWidth="2"'])
 			if config.plugins.KravenFHD.alternativeChannellist.value == "none":
 				self.appendSkinFile(self.daten + self.actChannelselectionstyle + ".xml")
 				if not self.silent and self.actChannelselectionstyle in ("channelselection-style-minitv33","channelselection-style-nobile-minitv33","channelselection-style-minitv2","channelselection-style-minitv22"):
@@ -2619,459 +2644,207 @@ class ActivateSkinSettings:
 			self.skinSearchAndReplace.append(['render="KravenFHDPig3"', 'render="Pig"'])
 			self.appendSkinFile(self.daten + self.actChannelselectionstyle + ".xml")
 
-		### Infobox
-		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x2","infobar-style-z1","infobar-style-zz1","infobar-style-zz4","infobar-style-zzz1","infobar-style-zzz2"):
-			if self.E2DistroVersion == "VTi":
-				if config.plugins.KravenFHD.Infobox.value == "cpu":
-					self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="  L:"'])
-					self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
-					self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDLayoutInfo">LoadAvg'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDCpuUsage">$0'])
-				elif config.plugins.KravenFHD.Infobox.value == "temp":
-					self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="U:"'])
-					self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
-					self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDTempFanInfo">FanInfo'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDTempFanInfo">TempInfo'])
-			elif self.E2DistroVersion in ("openatv","teamblue"):
-				if config.plugins.KravenFHD.Infobox2.value == "cpu":
-					self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="  L:"'])
-					self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
-					self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDLayoutInfo">LoadAvg'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDCpuUsage">$0'])
-				elif config.plugins.KravenFHD.Infobox2.value == "temp":
-					self.skinSearchAndReplace.append(['<!--<eLabel text="  S:"', '<eLabel text="U:"'])
-					self.skinSearchAndReplace.append(['foregroundColor="KravenIcon" />-->', 'foregroundColor="KravenIcon" />'])
-					self.skinSearchAndReplace.append(['  source="session.FrontendStatus', ' source="session.CurrentService'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert type="KravenFHDTempFanInfo">FanInfo'])
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDServiceName2">OrbitalPos', 'convert  type="KravenFHDTempFanInfo">TempInfo'])
-				elif config.plugins.KravenFHD.Infobox2.value == "db":
-					self.skinSearchAndReplace.append(['convert  type="KravenFHDFrontendInfo">SNR', 'convert  type="KravenFHDFrontendInfo">SNRdB'])
-
-		### Record State
-		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-zz1","infobar-style-zz4","infobar-style-zzz1","infobar-style-zzz2"):
-			if config.plugins.KravenFHD.record2.value == "record-blink+tuner-shine":
-				self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
-				self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
-				self.skinSearchAndReplace.append(['>recordblink</convert>', '>Blink</convert>'])
-				self.skinSearchAndReplace.append(['>tunerblink</convert>', ' />'])
-				self.skinSearchAndReplace.append(['source="session.FrontendInfo" zPosition="3"', 'source="session.FrontendInfo" zPosition="5"'])
-			elif config.plugins.KravenFHD.record2.value == "record-shine+tuner-blink":
-				self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
-				self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
-				self.skinSearchAndReplace.append(['>recordblink</convert>', ' />'])
-				self.skinSearchAndReplace.append(['>tunerblink</convert>', '>Blink</convert>'])
-			elif config.plugins.KravenFHD.record2.value == "record+tuner-blink":
-				self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
-				self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
-				self.skinSearchAndReplace.append(['>recordblink</convert>', '>Blink</convert>'])
-				self.skinSearchAndReplace.append(['>tunerblink</convert>', '>Blink</convert>'])
-			elif config.plugins.KravenFHD.record2.value == "record+tuner-shine":
-				self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
-				self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
-				self.skinSearchAndReplace.append(['>recordblink</convert>', ' />'])
-				self.skinSearchAndReplace.append(['>tunerblink</convert>', ' />'])
-				self.skinSearchAndReplace.append(['source="session.FrontendInfo" zPosition="3"', 'source="session.FrontendInfo" zPosition="5"'])
-			elif config.plugins.KravenFHD.record2.value == "record-blink+no-record-tuner":
-				self.skinSearchAndReplace.append(['>recordblink</convert>', '>Blink</convert>'])
-			else:
-				self.skinSearchAndReplace.append(['>recordblink</convert>', ' />'])
-		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz2":
-			if config.plugins.KravenFHD.record.value == "record-blink":
-				self.skinSearchAndReplace.append(['>recordblink</convert>', '>Blink</convert>'])
-			else:
-				self.skinSearchAndReplace.append(['>recordblink</convert>', ' />'])
-		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x4":
-			if config.plugins.KravenFHD.record3.value == "tuner-blink":
-				self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
-				self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
-				self.skinSearchAndReplace.append(['>tunerblink</convert>', '>Blink</convert>'])
-			elif config.plugins.KravenFHD.record3.value == "tuner-shine":
-				self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
-				self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
-				self.skinSearchAndReplace.append(['>tunerblink</convert>', ' />'])
-		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
-			if config.plugins.KravenFHD.IBtop.value == "infobar-x2-z1_top2":
-				if config.plugins.KravenFHD.record2.value == "record-blink+tuner-shine":
-					self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
-					self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
-					self.skinSearchAndReplace.append(['>recordblink</convert>', '>Blink</convert>'])
-					self.skinSearchAndReplace.append(['>tunerblink</convert>', ' />'])
-					self.skinSearchAndReplace.append(['source="session.FrontendInfo" zPosition="3"', 'source="session.FrontendInfo" zPosition="5"'])
-				elif config.plugins.KravenFHD.record2.value == "record-shine+tuner-blink":
-					self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
-					self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
-					self.skinSearchAndReplace.append(['>recordblink</convert>', ' />'])
-					self.skinSearchAndReplace.append(['>tunerblink</convert>', '>Blink</convert>'])
-				elif config.plugins.KravenFHD.record2.value == "record+tuner-blink":
-					self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
-					self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
-					self.skinSearchAndReplace.append(['>recordblink</convert>', '>Blink</convert>'])
-					self.skinSearchAndReplace.append(['>tunerblink</convert>', '>Blink</convert>'])
-				elif config.plugins.KravenFHD.record2.value == "record+tuner-shine":
-					self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
-					self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
-					self.skinSearchAndReplace.append(['>recordblink</convert>', ' />'])
-					self.skinSearchAndReplace.append(['>tunerblink</convert>', ' />'])
-					self.skinSearchAndReplace.append(['source="session.FrontendInfo" zPosition="3"', 'source="session.FrontendInfo" zPosition="5"'])
-				elif config.plugins.KravenFHD.record2.value == "record-blink+no-record-tuner":
-					self.skinSearchAndReplace.append(['>recordblink</convert>', '>Blink</convert>'])
-				else:
-					self.skinSearchAndReplace.append(['>recordblink</convert>', ' />'])
-			else:
-				if config.plugins.KravenFHD.record3.value == "tuner-blink":
-					self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
-					self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
-					self.skinSearchAndReplace.append(['>tunerblink</convert>', '>Blink</convert>'])
-				elif config.plugins.KravenFHD.record3.value == "tuner-shine":
-					self.skinSearchAndReplace.append(['<!--  <widget', '<widget'])
-					self.skinSearchAndReplace.append(['</widget>  -->', '</widget>'])
-					self.skinSearchAndReplace.append(['>tunerblink</convert>', ' />'])
-					self.skinSearchAndReplace.append(['source="session.FrontendInfo" zPosition="3"', 'source="session.FrontendInfo" zPosition="5"'])
-
 		### Infobar Clock
-		if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
-			self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="' + self.actClockstyle + '"/>'])
-		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-nopicon":
-			if config.plugins.KravenFHD.ClockStyle.value == "clock-classic":
-				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="clock-classic3"/>'])
-			elif config.plugins.KravenFHD.ClockStyle.value == "clock-color":
-				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="clock-color3"/>'])
-			elif config.plugins.KravenFHD.ClockStyle.value == "clock-flip":
-				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="clock-flip2"/>'])
-			elif config.plugins.KravenFHD.ClockStyle.value == "clock-weather":
-				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="clock-weather2"/>'])
-			else:
-				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="' + self.actClockstyle + '"/>'])
-		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-x4","infobar-style-z1","infobar-style-z2","infobar-style-zz2","infobar-style-zz3"):
-			if config.plugins.KravenFHD.ClockStyle.value == "clock-classic":
-				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="clock-classic2"/>'])
-			elif config.plugins.KravenFHD.ClockStyle.value == "clock-classic-big":
-				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="clock-classic-big2"/>'])
-			elif config.plugins.KravenFHD.ClockStyle.value == "clock-color":
-				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="clock-color2"/>'])
-			elif config.plugins.KravenFHD.ClockStyle.value == "clock-analog":
-				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="clock-analog2"/>'])
-			elif config.plugins.KravenFHD.ClockStyle.value == "clock-flip":
-				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="clock-flip2"/>'])
-			elif config.plugins.KravenFHD.ClockStyle.value == "clock-weather":
-				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="clock-weather2"/>'])
-			else:
-				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="' + self.actClockstyle + '"/>'])
+		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1"):
+			self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->',self.Templates + 'name="' + config.plugins.KravenFHD.InfobarStyle.value + '-' + self.actClockstyle + '"/>'])
+		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2"):
+			self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->',self.Templates + 'name="infobar-style-x2-x3-z1-z2-' + self.actClockstyle + '"/>'])
+		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
+			self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->',self.Templates + 'name="infobar-style-zz2-zz3-' + self.actClockstyle + '"/>'])
 		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zzz1"):
-			if config.plugins.KravenFHD.ClockStyle.value == "clock-classic":
-				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="clock-classic3"/>'])
-			elif config.plugins.KravenFHD.ClockStyle.value == "clock-classic-big":
-				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="clock-classic-big3"/>'])
-			elif config.plugins.KravenFHD.ClockStyle.value == "clock-color":
-				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="clock-color3"/>'])
-			elif config.plugins.KravenFHD.ClockStyle.value == "clock-flip":
-				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="clock-flip3"/>'])
-			elif config.plugins.KravenFHD.ClockStyle.value == "clock-weather":
-				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="clock-weather3"/>'])
-			else:
-				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="' + self.actClockstyle + '"/>'])
-		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zzz2":
-			self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<constant-widget name="' + self.actClockstyle + '4"/>'])
+			self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->',self.Templates + 'name="infobar-style-zz1-zzz1-' + self.actClockstyle + '"/>'])
 
 		### Infobar Channelname
-		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1") and not config.plugins.KravenFHD.InfobarChannelName.value == "none":
-			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->','<constant-widget name="' + config.plugins.KravenFHD.InfobarChannelName.value + '-' + config.plugins.KravenFHD.InfobarStyle.value + '"/>'])
-		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-x4","infobar-style-z1","infobar-style-z2") and not config.plugins.KravenFHD.InfobarChannelName.value == "none":
-			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->','<constant-widget name="' + config.plugins.KravenFHD.InfobarChannelName.value + '-infobar-style-x2"/>'])
-		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zz4") and not config.plugins.KravenFHD.InfobarChannelName.value == "none":
-			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->','<constant-widget name="' + config.plugins.KravenFHD.InfobarChannelName.value + '-infobar-style-zz1"/>'])
+		if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-nopicon" and not config.plugins.KravenFHD.InfobarChannelName.value == "none":
+			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->',self.Templates + 'name="infobar-style-nopicon-' + config.plugins.KravenFHD.InfobarChannelName.value + '"/>'])
+		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1" and not config.plugins.KravenFHD.InfobarChannelName.value == "none":
+			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->',self.Templates + 'name="infobar-style-x1-' + config.plugins.KravenFHD.InfobarChannelName.value + '"/>'])
+		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2") and not config.plugins.KravenFHD.InfobarChannelName.value == "none":
+			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->',self.Templates + 'name="infobar-style-x2-x3-z1-z2-' + config.plugins.KravenFHD.InfobarChannelName.value + '"/>'])
+		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz1" and not config.plugins.KravenFHD.InfobarChannelName.value == "none":
+			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->',self.Templates + 'name="' + config.plugins.KravenFHD.InfobarStyle.value + '-' + config.plugins.KravenFHD.InfobarChannelName.value + '"/>'])
 		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3") and not config.plugins.KravenFHD.InfobarChannelName2.value == "none":
-			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->','<constant-widget name="' + config.plugins.KravenFHD.InfobarChannelName2.value + '-infobar-style-zz2"/>'])
-		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zzz1","infobar-style-zzz2") and not config.plugins.KravenFHD.InfobarChannelName2.value == "none":
-			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->','<constant-widget name="' + config.plugins.KravenFHD.InfobarChannelName2.value + '-' + config.plugins.KravenFHD.InfobarStyle.value + '"/>'])
+			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->',self.Templates + 'name="infobar-style-zz2-zz3-' + config.plugins.KravenFHD.InfobarChannelName2.value + '"/>'])
+		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zzz1" and not config.plugins.KravenFHD.InfobarChannelName2.value == "none":
+			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->',self.Templates + 'name="' + config.plugins.KravenFHD.InfobarStyle.value + '-' + config.plugins.KravenFHD.InfobarChannelName2.value + '"/>'])
 
 		### Infobar/SIB - ecm-info
-		if not config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x4":
-			if config.plugins.KravenFHD.ECMVisible.value in ("ib","ib+sib"):
-				if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
-					if config.plugins.KravenFHD.tuner2.value in ("8-tuner","10-tuner"):
-						self.skinSearchAndReplace.append(['<!-- Infobar ecminfo -->','<constant-widget name="ecminfo-infobar-style-x1-' + config.plugins.KravenFHD.tuner2.value + '"/>'])
-					else:
-						self.skinSearchAndReplace.append(['<!-- Infobar ecminfo -->','<constant-widget name="ecminfo-infobar-style-x1"/>'])
-				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ecminfo -->','<constant-widget name="ecminfo-infobar-style-x2"/>'])
-				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zz4","infobar-style-zzz1"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ecminfo -->','<constant-widget name="ecminfo-infobar-style-zz1"/>'])
-				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
-					self.skinSearchAndReplace.append(['<!-- Infobar ecminfo -->','<constant-widget name="ecminfo-infobar-style-zz2"/>'])
-				else:
-					self.skinSearchAndReplace.append(['<!-- Infobar ecminfo -->','<constant-widget name="ecminfo-' + config.plugins.KravenFHD.InfobarStyle.value + '"/>'])
+		if config.plugins.KravenFHD.ECMVisible.value in ("ib","ib+sib"):
+			if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
+				self.skinSearchAndReplace.append(['<!-- Infobar ecminfo -->',self.Templates + 'name="' + config.plugins.KravenFHD.InfobarStyle.value + '-ecminfo"/>'])
+			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2"):
+				self.skinSearchAndReplace.append(['<!-- Infobar ecminfo -->',self.Templates + 'name="infobar-style-x2-x3-z1-z2-ecminfo"/>'])
+			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
+				self.skinSearchAndReplace.append(['<!-- Infobar ecminfo -->',self.Templates + 'name="infobar-style-zz2-zz3-ecminfo"/>'])
+			else:
+				self.skinSearchAndReplace.append(['<!-- Infobar ecminfo -->',self.Templates + 'name="' + config.plugins.KravenFHD.InfobarStyle.value + '-ecminfo"/>'])
 
-			if config.plugins.KravenFHD.ECMVisible.value in ("sib","ib+sib"):
-				if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
-					if config.plugins.KravenFHD.tuner2.value in ("8-tuner","10-tuner"):
-						self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->','<constant-widget name="ecminfo-infobar-style-x1-' + config.plugins.KravenFHD.tuner2.value + '"/>'])
-					else:
-						self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->','<constant-widget name="ecminfo-infobar-style-x1"/>'])
-				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2"):
-					self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->','<constant-widget name="ecminfo-infobar-style-x2"/>'])
-				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zz4","infobar-style-zzz1"):
-					self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->','<constant-widget name="ecminfo-infobar-style-zz1"/>'])
-				elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
-					self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->','<constant-widget name="ecminfo-infobar-style-zz2"/>'])
-				else:
-					self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->','<constant-widget name="ecminfo-' + config.plugins.KravenFHD.InfobarStyle.value + '"/>'])
+		if config.plugins.KravenFHD.ECMVisible.value in ("sib","ib+sib"):
+			if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
+				self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->',self.Templates + 'name="' + config.plugins.KravenFHD.InfobarStyle.value + '-ecminfo"/>'])
+			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2"):
+				self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->',self.Templates + 'name="infobar-style-x2-x3-z1-z2-ecminfo"/>'])
+			elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
+				self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->',self.Templates + 'name="infobar-style-zz2-zz3-ecminfo"/>'])
+			else:
+				self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->',self.Templates + 'name="' + config.plugins.KravenFHD.InfobarStyle.value + '-ecminfo"/>'])
 
-		### Infobar_begin
-		self.appendSkinFile(self.daten + "infobar-begin.xml")
-
-		### Infobar typewriter effect
-		if config.plugins.KravenFHD.TypeWriter.value == "runningtext":
-			self.skinSearchAndReplace.append(['render="KravenFHDEmptyEpg"', 'render="KravenFHDRunningText" options="movetype=running,startpoint=0,' + config.plugins.KravenFHD.RunningText.value + ',' + config.plugins.KravenFHD.RunningTextSpeed.value + ',wrap=0,always=0,repeat=2,oneshot=1"'])
-		elif config.plugins.KravenFHD.TypeWriter.value == "none":
-			self.skinSearchAndReplace.append(['render="KravenFHDEmptyEpg"', 'render="KravenFHDEmptyEpg2"'])
-
-		### Infobar_main
-		if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-nopicon":
-			if config.plugins.KravenFHD.tuner2.value == "2-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-nopicon_main2.xml")
-			elif config.plugins.KravenFHD.tuner2.value == "4-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-nopicon_main4.xml")
-			elif config.plugins.KravenFHD.tuner2.value == "8-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-nopicon_main8.xml")
-			elif config.plugins.KravenFHD.tuner2.value == "10-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-nopicon_main10.xml")
-		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
-			if config.plugins.KravenFHD.tuner2.value == "2-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-x1_main2.xml")
-			elif config.plugins.KravenFHD.tuner2.value == "4-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-x1_main4.xml")
-			elif config.plugins.KravenFHD.tuner2.value == "8-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-x1_main8.xml")
-			elif config.plugins.KravenFHD.tuner2.value == "10-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-x1_main10.xml")
-		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz1":
-			if config.plugins.KravenFHD.tuner.value == "2-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-zz1_main2.xml")
-			elif config.plugins.KravenFHD.tuner.value == "4-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-zz1_main4.xml")
-			elif config.plugins.KravenFHD.tuner.value == "8-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-zz1_main8.xml")
-		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz4":
-			if config.plugins.KravenFHD.tuner.value == "2-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-zz4_main2.xml")
-			elif config.plugins.KravenFHD.tuner.value == "4-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-zz4_main4.xml")
-			elif config.plugins.KravenFHD.tuner.value == "8-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-zz4_main8.xml")
-		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zzz1":
-			if config.plugins.KravenFHD.tuner.value == "2-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-zzz1_main2.xml")
-			elif config.plugins.KravenFHD.tuner.value == "4-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-zzz1_main4.xml")
-			elif config.plugins.KravenFHD.tuner.value == "8-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-zzz1_main8.xml")
-		else:
-			self.appendSkinFile(self.daten + config.plugins.KravenFHD.InfobarStyle.value + "_main.xml")
-
-		### Infobar_top
-		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
-			if config.plugins.KravenFHD.IBtop.value == "infobar-x2-z1_top":
-				self.appendSkinFile(self.daten + "infobar-x2-z1_top.xml")
-			elif config.plugins.KravenFHD.IBtop.value == "infobar-x2-z1_top2":
-				self.appendSkinFile(self.daten + "infobar-x2-z1_top2.xml")
-			elif config.plugins.KravenFHD.IBtop.value == "infobar-x2-z1_top3":
-				self.appendSkinFile(self.daten + "infobar-x2-z1_top3.xml")
-
-		### clock-weather (icon size)
-		if not config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz4" and self.actClockstyle == "clock-weather":
-			if config.plugins.KravenFHD.ClockIconSize.value == "size-192":
-				self.skinSearchAndReplace.append(['position="1599,897" size="144,144"','position="1575,873" size="192,192"'])
-				self.skinSearchAndReplace.append(['position="1599,912" size="144,144"','position="1575,888" size="192,192"'])
-				self.skinSearchAndReplace.append(['position="1614,897" size="144,144"','position="1590,873" size="192,192"'])
-
-		### system-info
-		if config.plugins.KravenFHD.IBStyle.value == "box":
-			if config.plugins.KravenFHD.SystemInfo.value == "systeminfo-small":
-				if config.plugins.KravenFHD.InfobarBoxColor.value == "gradient":
-					self.skinSearchAndReplace.append(['<constant-widget name="systeminfo-small-bg"/>','<constant-widget name="systeminfo-small-bg-box2"/>'])
-				elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
-					self.skinSearchAndReplace.append(['<constant-widget name="systeminfo-small-bg"/>','<constant-widget name="systeminfo-small-bg-texture"/>'])
-				self.appendSkinFile(self.daten + "systeminfo-small2.xml")
-			elif config.plugins.KravenFHD.SystemInfo.value == "systeminfo-big":
-				if config.plugins.KravenFHD.InfobarBoxColor.value == "gradient":
-					self.skinSearchAndReplace.append(['<constant-widget name="systeminfo-big-bg"/>','<constant-widget name="systeminfo-big-bg-box2"/>'])
-				elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
-					self.skinSearchAndReplace.append(['<constant-widget name="systeminfo-big-bg"/>','<constant-widget name="systeminfo-big-bg-texture"/>'])
-				self.appendSkinFile(self.daten + "systeminfo-big2.xml")
-			elif config.plugins.KravenFHD.SystemInfo.value == "systeminfo-bigsat":
-				if config.plugins.KravenFHD.InfobarBoxColor.value == "gradient":
-					self.skinSearchAndReplace.append(['<constant-widget name="systeminfo-bigsat-bg"/>','<constant-widget name="systeminfo-bigsat-bg-box2"/>'])
-				elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
-					self.skinSearchAndReplace.append(['<constant-widget name="systeminfo-bigsat-bg"/>','<constant-widget name="systeminfo-bigsat-bg-texture"/>'])
-				self.appendSkinFile(self.daten + "systeminfo-bigsat2.xml")
-		else:
-			self.appendSkinFile(self.daten + config.plugins.KravenFHD.SystemInfo.value + ".xml")
-
-		### weather-style
-		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x3","infobar-style-x4","infobar-style-z2","infobar-style-zz1","infobar-style-zz2","infobar-style-zz3","infobar-style-zz4","infobar-style-zzz1","infobar-style-zzz2"):
-			self.actWeatherstyle=config.plugins.KravenFHD.WeatherStyle.value
+		### Infobar weather-style
+		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x3","infobar-style-z2","infobar-style-zz1","infobar-style-zz2","infobar-style-zz3","infobar-style-zzz1"):
+			self.actWeatherstyle = config.plugins.KravenFHD.WeatherStyle.value
 		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
 			if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/plugin.py"):
-				self.actWeatherstyle=config.plugins.KravenFHD.WeatherStyle3.value
+				self.actWeatherstyle = config.plugins.KravenFHD.WeatherStyle3.value
 			else:
-				self.actWeatherstyle=config.plugins.KravenFHD.WeatherStyle2.value
-		if self.actWeatherstyle != "netatmobar":
-			self.appendSkinFile(self.daten + self.actWeatherstyle + ".xml")
+				self.actWeatherstyle = config.plugins.KravenFHD.WeatherStyle2.value
+
+		if self.actWeatherstyle == "weather-small":
+			if config.plugins.KravenFHD.IBStyle.value == "box":
+				if config.plugins.KravenFHD.InfobarBoxColor.value == "gradient":
+					self.skinSearchAndReplace.append(['<!-- Infobar weatherbackground -->', self.Templates + 'name="box2-weather-small"/>'])
+				elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
+					self.skinSearchAndReplace.append(['<!-- Infobar weatherbackground -->', self.Templates + 'name="texture-weather-small"/>'])
+				else:
+					self.skinSearchAndReplace.append(['<!-- Infobar weatherbackground -->', self.Templates + 'name="box-weather-small"/>'])
+				self.skinSearchAndReplace.append(['<!-- Infobar weatherstyle -->', self.Templates + 'name="weather-small2"/>'])
+			else:
+				self.skinSearchAndReplace.append(['<!-- Infobar weatherbackground -->', self.Templates + 'name="gradient-weather-small"/>'])
+				self.skinSearchAndReplace.append(['<!-- Infobar weatherstyle -->', self.Templates + 'name="weather-small"/>'])
+
+		elif self.actWeatherstyle == "weather-left":
+			self.skinSearchAndReplace.append(['<!-- Infobar weatherstyle -->', self.Templates + 'name="weather-left"/>'])
+
+		elif self.actWeatherstyle == "weather-big":
+			if config.plugins.KravenFHD.IBStyle.value == "box":
+				if config.plugins.KravenFHD.InfobarBoxColor.value == "gradient":
+					self.skinSearchAndReplace.append(['<!-- Infobar weatherbackground -->', self.Templates + 'name="box2-weather-big"/>'])
+				elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
+					self.skinSearchAndReplace.append(['<!-- Infobar weatherbackground -->', self.Templates + 'name="texture-weather-big"/>'])
+				else:
+					self.skinSearchAndReplace.append(['<!-- Infobar weatherbackground -->', self.Templates + 'name="box-weather-big"/>'])
+			else:
+				self.skinSearchAndReplace.append(['<!-- Infobar weatherbackground -->', self.Templates + 'name="gradient-weather-big"/>'])
+			self.skinSearchAndReplace.append(['<!-- Infobar weatherstyle -->', self.Templates + 'name="weather-big"/>'])
+
 		if config.plugins.KravenFHD.refreshInterval.value == "0":
 			config.plugins.KravenFHD.refreshInterval.value = config.plugins.KravenFHD.refreshInterval.default
 			config.plugins.KravenFHD.refreshInterval.save()
 
-		### Infobar_end - SIB_begin
-		self.appendSkinFile(self.daten + "infobar-style_middle.xml")
+		### Infobar system-info
+		if not config.plugins.KravenFHD.SystemInfo.value == "none":
+			if config.plugins.KravenFHD.IBStyle.value == "box":
+				if config.plugins.KravenFHD.InfobarBoxColor.value == "gradient":
+					self.skinSearchAndReplace.append(['<!-- Infobar systeminfobackground -->',self.Templates + 'name="box2-' + config.plugins.KravenFHD.SystemInfo.value + '"/>'])
+				elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
+					self.skinSearchAndReplace.append(['<!-- Infobar systeminfobackground -->',self.Templates + 'name="texture-' + config.plugins.KravenFHD.SystemInfo.value + '"/>'])
+				else:
+					self.skinSearchAndReplace.append(['<!-- Infobar systeminfobackground -->', self.Templates + 'name="box-' + config.plugins.KravenFHD.SystemInfo.value + '"/>'])
+				self.skinSearchAndReplace.append(['<!-- Infobar systeminfo -->', self.Templates + 'name="' + config.plugins.KravenFHD.SystemInfo.value + '2"/>'])
+			else:
+				self.skinSearchAndReplace.append(['<!-- Infobar systeminfobackground -->', self.Templates + 'name="gradient-' + config.plugins.KravenFHD.SystemInfo.value + '"/>'])
+				self.skinSearchAndReplace.append(['<!-- Infobar systeminfo -->', self.Templates + 'name="' + config.plugins.KravenFHD.SystemInfo.value + '"/>'])
 
-		### SIB_main + SIB-Fontsize
+		### Infobar
+		# mainstyles
+		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2"):
+			self.skinSearchAndReplace.append(['<!-- Infobar mainstyles -->', self.Templates + 'name="infobar-style-x2-x3-z1-z2"/>'])
+		else:
+			self.skinSearchAndReplace.append(['<!-- Infobar mainstyles -->', self.Templates + 'name="' + config.plugins.KravenFHD.InfobarStyle.value + '"/>'])
+
+		# picon
+		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3"):
+			self.skinSearchAndReplace.append(['<!-- Infobar picon -->', self.Templates + 'name="infobar-style-x2-x3-picon"/>'])
+		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-z1","infobar-style-z2"):
+			self.skinSearchAndReplace.append(['<!-- Infobar picon -->', self.Templates + 'name="infobar-style-z1-z2-picon"/>'])
+		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zzz1"):
+			if config.plugins.KravenFHD.ShowAgcSnr.value == "on":
+				self.skinSearchAndReplace.append(['<!-- Infobar picon -->', self.Templates + 'name="' + config.plugins.KravenFHD.InfobarStyle.value + '-agc-snr"/>'])
+			else:
+				self.skinSearchAndReplace.append(['<!-- Infobar picon -->', self.Templates + 'name="' + config.plugins.KravenFHD.InfobarStyle.value + '-picon"/>'])
+
+		# tuners / some icons / Infobox
 		if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-nopicon":
-			if config.plugins.KravenFHD.tuner2.value == "2-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-nopicon_main2.xml")
-			elif config.plugins.KravenFHD.tuner2.value == "4-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-nopicon_main4.xml")
-			elif config.plugins.KravenFHD.tuner2.value == "8-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-nopicon_main8.xml")
-			elif config.plugins.KravenFHD.tuner2.value == "10-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-nopicon_main10.xml")
+			self.skinSearchAndReplace.append(['<!-- Infobar tuners -->', self.Templates + 'name="' + config.plugins.KravenFHD.InfobarStyle.value + '-' + self.Tuners + '"/>'])
+			self.skinSearchAndReplace.append(['<!-- Infobar icons -->', self.Templates + 'name="infobar-style-nopicon-icons"/>'])
+			self.skinSearchAndReplace.append(['<!-- Infobar infobox -->', self.Templates + 'name="infobar-style-nopicon-infobox-' + config.plugins.KravenFHD.Infobox3.value + '"/>'])
 
 		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
-			if config.plugins.KravenFHD.tuner2.value == "2-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-x1_main2.xml")
-			elif config.plugins.KravenFHD.tuner2.value == "4-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-x1_main4.xml")
-			elif config.plugins.KravenFHD.tuner2.value == "8-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-x1_main8.xml")
-			elif config.plugins.KravenFHD.tuner2.value == "10-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-x1_main10.xml")
-
-		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x2":
-			self.appendSkinFile(self.daten + "infobar-style-x2_main.xml")
-
-		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x3":
-			self.appendSkinFile(self.daten + "infobar-style-x3_main.xml")
-
-		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x4":
-			self.appendSkinFile(self.daten + "infobar-style-x4_main.xml")
-
-		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-z1":
-			self.appendSkinFile(self.daten + "infobar-style-z1_main.xml")
-
-		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-z2":
-			self.appendSkinFile(self.daten + "infobar-style-z2_main.xml")
-
-		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz1":
-			if config.plugins.KravenFHD.SIBFont.value == "sibfont-small":
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1798,252">', 'font="Regular2; 33" size="1798,252">']) # sib1-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1800,420">', 'font="Regular2; 33" size="1800,378">']) # sib4+sib6-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1050,420">', 'font="Regular2; 33" size="1050,378">']) # sib5+sib7-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="705,420">', 'font="Regular2; 33" size="705,378">']) # sib5+sib7-small
+			self.skinSearchAndReplace.append(['<!-- Infobar tuners -->', self.Templates + 'name="infobar-style-x1-' + self.Tuners + '"/>'])
+			if self.E2DistroVersion == "VTi":
+				self.skinSearchAndReplace.append(['<!-- Infobar infobox -->', self.Templates + 'name="infobar-style-x1-infobox-' + config.plugins.KravenFHD.Infobox.value + '"/>'])
 			else:
-				self.skinSearchAndReplace.append(['font="Regular2; 36" size="1798,276">', 'font="Regular2; 36" size="1798,230">']) # sib1
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1800,441">', 'font="Regular2; 38" size="1800,392">']) # sib4+sib6
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1050,441">', 'font="Regular2; 38" size="1050,392">']) # sib5+sib7
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="705,441">', 'font="Regular2; 38" size="705,392">']) # sib5+sib7
-			if config.plugins.KravenFHD.tuner.value == "2-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-zz1_main2.xml")
-			elif config.plugins.KravenFHD.tuner.value == "4-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-zz1_main4.xml")
-			elif config.plugins.KravenFHD.tuner.value == "8-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-zz1_main8.xml")
+				self.skinSearchAndReplace.append(['<!-- Infobar infobox -->', self.Templates + 'name="infobar-style-x1-infobox-' + config.plugins.KravenFHD.Infobox2.value + '"/>'])
 
-		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz2":
-			if config.plugins.KravenFHD.SIBFont.value == "sibfont-small":
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1798,252">', 'font="Regular2; 33" size="1798,252">']) # sib1-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1800,420">', 'font="Regular2; 33" size="1800,378">']) # sib4+sib6-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1050,420">', 'font="Regular2; 33" size="1050,378">']) # sib5+sib7-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="705,420">', 'font="Regular2; 33" size="705,378">']) # sib5+sib7-small
+		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
+			self.skinSearchAndReplace.append(['<!-- Infobar topbaricons -->', self.Templates + 'name="infobar-style-x2-z1-icons"/>'])
+			self.skinSearchAndReplace.append(['<!-- Infobar topbartuners -->', self.Templates + 'name="infobar-style-x2-z1-' + self.Tuners + '"/>'])
+			if self.E2DistroVersion == "VTi":
+				self.skinSearchAndReplace.append(['<!-- Infobar topbarinfobox -->', self.Templates + 'name="infobar-style-x2-z1-infobox-' + config.plugins.KravenFHD.Infobox.value + '"/>'])
 			else:
-				self.skinSearchAndReplace.append(['font="Regular2; 36" size="1798,276">', 'font="Regular2; 36" size="1798,230">']) # sib1
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1800,441">', 'font="Regular2; 38" size="1800,392">']) # sib4+sib6
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1050,441">', 'font="Regular2; 38" size="1050,392">']) # sib5+sib7
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="705,441">', 'font="Regular2; 38" size="705,392">']) # sib5+sib7
-			self.appendSkinFile(self.daten + "infobar-style-zz2_main.xml")
+				self.skinSearchAndReplace.append(['<!-- Infobar topbarinfobox -->', self.Templates + 'name="infobar-style-x2-z1-infobox-' + config.plugins.KravenFHD.Infobox2.value + '"/>'])
 
-		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz3":
-			if config.plugins.KravenFHD.SIBFont.value == "sibfont-small":
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1798,252">', 'font="Regular2; 33" size="1798,252">']) # sib1-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1800,420">', 'font="Regular2; 33" size="1800,378">']) # sib4+sib6-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1050,420">', 'font="Regular2; 33" size="1050,378">']) # sib5+sib7-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="705,420">', 'font="Regular2; 33" size="705,378">']) # sib5+sib7-small
+		elif config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zzz1"):
+			self.skinSearchAndReplace.append(['<!-- Infobar icons -->', self.Templates + 'name="infobar-style-zz1-zzz1-icons"/>'])
+			self.skinSearchAndReplace.append(['<!-- Infobar tuners -->', self.Templates + 'name="infobar-style-zz1-zzz1-' + self.Tuners + '"/>'])
+			self.actInfobox = ''
+			if config.plugins.KravenFHD.ShowAgcSnr.value == "on":
+				self.actInfobox = config.plugins.KravenFHD.Infobox3.value
 			else:
-				self.skinSearchAndReplace.append(['font="Regular2; 36" size="1798,276">', 'font="Regular2; 36" size="1798,230">']) # sib1
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1800,441">', 'font="Regular2; 38" size="1800,392">']) # sib4+sib6
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1050,441">', 'font="Regular2; 38" size="1050,392">']) # sib5+sib7
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="705,441">', 'font="Regular2; 38" size="705,392">']) # sib5+sib7
-			self.appendSkinFile(self.daten + "infobar-style-zz3_main.xml")
+				if self.E2DistroVersion == "VTi":
+					self.actInfobox = config.plugins.KravenFHD.Infobox.value
+				else:
+					self.actInfobox = config.plugins.KravenFHD.Infobox2.value
+			self.skinSearchAndReplace.append(['<!-- Infobar infobox -->', self.Templates + 'name="infobar-style-zz1-zzz1-infobox-' + self.actInfobox + '"/>'])
 
-		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz4":
-			if config.plugins.KravenFHD.SIBFont.value == "sibfont-small":
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1798,252">', 'font="Regular2; 33" size="1798,252">']) # sib1-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1800,420">', 'font="Regular2; 33" size="1800,378">']) # sib4+sib6-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1050,420">', 'font="Regular2; 33" size="1050,378">']) # sib5+sib7-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="705,420">', 'font="Regular2; 33" size="705,378">']) # sib5+sib7-small
-			else:
-				self.skinSearchAndReplace.append(['font="Regular2; 36" size="1798,276">', 'font="Regular2; 36" size="1798,230">']) # sib1
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1800,441">', 'font="Regular2; 38" size="1800,392">']) # sib4+sib6
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1050,441">', 'font="Regular2; 38" size="1050,392">']) # sib5+sib7
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="705,441">', 'font="Regular2; 38" size="705,392">']) # sib5+sib7
-			if config.plugins.KravenFHD.tuner.value == "2-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-zz4_main2.xml")
-			elif config.plugins.KravenFHD.tuner.value == "4-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-zz4_main4.xml")
-			elif config.plugins.KravenFHD.tuner.value == "8-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-zz4_main8.xml")
-
-		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zzz1":
-			if config.plugins.KravenFHD.SIBFont.value == "sibfont-small":
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1798,252">', 'font="Regular2; 33" size="1798,168">']) # sib1-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="855,588">', 'font="Regular2; 33" size="855,504">']) # sib2-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1800,588">', 'font="Regular2; 33" size="1800,504">']) # sib3-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1800,420">', 'font="Regular2; 33" size="1800,304">']) # sib4+sib6-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1050,420">', 'font="Regular2; 33" size="1050,336">']) # sib5+sib7-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="705,420">', 'font="Regular2; 33" size="705,336">']) # sib5+sib7-small
-			else:
-				self.skinSearchAndReplace.append(['font="Regular2; 36" size="1798,276">', 'font="Regular2; 36" size="1798,184">']) # sib1
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="855,588">', 'font="Regular2; 38" size="855,490">']) # sib2
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1800,588">', 'font="Regular2; 38" size="1800,490">']) # sib3
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1800,441">', 'font="Regular2; 38" size="1800,343">']) # sib4+sib6
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1050,441">', 'font="Regular2; 38" size="1050,343">']) # sib5+sib7
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="705,441">', 'font="Regular2; 38" size="705,343">']) # sib5+sib7
-			if config.plugins.KravenFHD.tuner.value == "2-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-zzz1_main2.xml")
-			elif config.plugins.KravenFHD.tuner.value == "4-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-zzz1_main4.xml")
-			elif config.plugins.KravenFHD.tuner.value == "8-tuner":
-				self.appendSkinFile(self.daten + "infobar-style-zzz1_main8.xml")
-
-		elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zzz2":
-			if config.plugins.KravenFHD.SIBFont.value == "sibfont-small":
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1798,252">', 'font="Regular2; 33" size="1798,168">']) # sib1-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="855,588">', 'font="Regular2; 33" size="855,504">']) # sib2-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1800,588">', 'font="Regular2; 33" size="1800,504">']) # sib3-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1800,420">', 'font="Regular2; 33" size="1800,304">']) # sib4+sib6-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="1050,420">', 'font="Regular2; 33" size="1050,336">']) # sib5+sib7-small
-				self.skinSearchAndReplace.append(['font="Regular2; 33" size="705,420">', 'font="Regular2; 33" size="705,336">']) # sib5+sib7-small
-			else:
-				self.skinSearchAndReplace.append(['font="Regular2; 36" size="1798,276">', 'font="Regular2; 36" size="1798,184">']) # sib1
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="855,588">', 'font="Regular2; 38" size="855,490">']) # sib2
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1800,588">', 'font="Regular2; 38" size="1800,490">']) # sib3
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1800,441">', 'font="Regular2; 38" size="1800,343">']) # sib4+sib6
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="1050,441">', 'font="Regular2; 38" size="1050,343">']) # sib5+sib7
-				self.skinSearchAndReplace.append(['font="Regular2; 38" size="705,441">', 'font="Regular2; 38" size="705,343">']) # sib5+sib7
-			self.appendSkinFile(self.daten + "infobar-style-zzz2_main.xml")
-
+		### SecondInfobar
 		if config.plugins.KravenFHD.SIBFont.value == "sibfont-small":
-			self.appendSkinFile(self.daten + config.plugins.KravenFHD.SIB.value + "-small.xml")
+			self.skinSearchAndReplace.append(['<!-- SIB style -->',self.Templates + 'name="' + config.plugins.KravenFHD.SIB.value + '-small"/>'])
 		else:
-			self.appendSkinFile(self.daten + config.plugins.KravenFHD.SIB.value + ".xml")
-		if self.E2DistroVersion in ("VTi","openatv") and fileExists("/usr/lib/enigma2/python/Plugins/Extensions/SecondInfoBar/plugin.py"):
-			config.plugins.SecondInfoBar.HideNormalIB.value = True
-			config.plugins.SecondInfoBar.HideNormalIB.save()
+			self.skinSearchAndReplace.append(['<!-- SIB style -->',self.Templates + 'name="' + config.plugins.KravenFHD.SIB.value + '"/>'])
+		if config.plugins.KravenFHD.SIB.value in ("sib4","sib5","sib6","sib7"):
+			self.skinSearchAndReplace.append(['<!-- SIB extra -->',self.Templates + 'name="' + config.plugins.KravenFHD.SIB.value + '-extra"/>'])
+
+		### Players clockstyle
+		self.skinSearchAndReplace.append(['<!-- Player clockstyle -->',self.Templates + 'name="' + config.plugins.KravenFHD.PlayerClock.value + '"/>'])
+
+		### Volume
+		self.skinSearchAndReplace.append(['<!-- Volume style -->',self.Templates + 'name="' + config.plugins.KravenFHD.Volume.value + '"/>'])
+		if config.plugins.KravenFHD.Volume.value == "volume-left":
+			self.skinSearchAndReplace.append(['screen name="Volume" position="70,57" size="495,120"','screen name="Volume" position="15,195" size="42,540"'])
+		elif config.plugins.KravenFHD.Volume.value == "volume-right":
+			self.skinSearchAndReplace.append(['screen name="Volume" position="70,57" size="495,120"','screen name="Volume" position="1860,195" size="42,540"'])
+		elif config.plugins.KravenFHD.Volume.value == "volume-top":
+			self.skinSearchAndReplace.append(['screen name="Volume" position="70,57" size="495,120"','screen name="Volume" position="center,37" size="600,42"'])
+		elif config.plugins.KravenFHD.Volume.value == "volume-center":
+			self.skinSearchAndReplace.append(['screen name="Volume" position="70,57" size="495,120"','screen name="Volume" position="822,429" size="276,276" size="184,184"'])
+
+		### PVRState
+		if config.plugins.KravenFHD.IBStyle.value == "box":
+			if config.plugins.KravenFHD.InfobarBoxColor.value in ("gradient","texture") and not config.plugins.KravenFHD.PVRState.value == "pvrstate-off":
+				if config.plugins.KravenFHD.PVRState.value == "pvrstate-center-big":
+					self.skinSearchAndReplace.append(['<!-- PVRState background -->', self.Templates + 'name="pvrstate-box-' + config.plugins.KravenFHD.InfobarBoxColor.value + '"/>'])
+				else:
+					self.skinSearchAndReplace.append(['<!-- PVRState background -->', self.Templates + 'name="pvrstate2-box-' + config.plugins.KravenFHD.InfobarBoxColor.value + '"/>'])
+			if not config.plugins.KravenFHD.InfobarBoxColor.value in ("gradient","texture") and not config.plugins.KravenFHD.PVRState.value == "pvrstate-off":
+				if config.plugins.KravenFHD.PVRState.value == "pvrstate-center-big":
+					self.skinSearchAndReplace.append(['<!-- PVRState background -->', self.Templates + 'name="pvrstate-bg"/>'])
+				else:
+					self.skinSearchAndReplace.append(['<!-- PVRState background -->', self.Templates + 'name="pvrstate2-bg"/>'])
+		else:
+			if not config.plugins.KravenFHD.PVRState.value == "pvrstate-off":
+				if config.plugins.KravenFHD.PVRState.value == "pvrstate-center-big":
+					self.skinSearchAndReplace.append(['<!-- PVRState background -->', self.Templates + 'name="pvrstate-bg"/>'])
+				else:
+					self.skinSearchAndReplace.append(['<!-- PVRState background -->', self.Templates + 'name="pvrstate2-bg"/>'])
+
+		if not config.plugins.KravenFHD.PVRState.value == "pvrstate-off":
+			self.skinSearchAndReplace.append(['<!-- PVRState style -->', self.Templates + 'name="' + config.plugins.KravenFHD.PVRState.value + '"/>'])
+			if config.plugins.KravenFHD.PVRState.value == "pvrstate-center-big":
+				self.skinSearchAndReplace.append(['screen name="PVRState" position="0,0" size="0,0"', 'screen name="PVRState" position="center,center" size="330,135"'])
+			elif config.plugins.KravenFHD.PVRState.value == "pvrstate-center-small":
+				self.skinSearchAndReplace.append(['screen name="PVRState" position="0,0" size="0,0"', 'screen name="PVRState" position="center,center" size="165,67"'])
+			elif config.plugins.KravenFHD.PVRState.value == "pvrstate-left-small":
+				self.skinSearchAndReplace.append(['screen name="PVRState" position="0,0" size="0,0"', 'screen name="PVRState" position="45,30" size="165,67"'])
 
 		### Main XML
 		self.appendSkinFile(self.daten + "main.xml")
@@ -3090,65 +2863,6 @@ class ActivateSkinSettings:
 			else:
 				self.appendSkinFile(self.daten + "timeshift-begin-high.xml")
 
-			### Timeshift_Infobar_main
-			if config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-nopicon":
-				if config.plugins.KravenFHD.tuner.value == "2-tuner":
-					self.appendSkinFile(self.daten + "infobar-style-nopicon_main2.xml")
-				elif config.plugins.KravenFHD.tuner2.value == "4-tuner":
-					self.appendSkinFile(self.daten + "infobar-style-nopicon_main4.xml")
-				elif config.plugins.KravenFHD.tuner2.value == "8-tuner":
-					self.appendSkinFile(self.daten + "infobar-style-nopicon_main8.xml")
-				elif config.plugins.KravenFHD.tuner2.value == "10-tuner":
-					self.appendSkinFile(self.daten + "infobar-style-nopicon_main10.xml")
-			elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-x1":
-				if config.plugins.KravenFHD.tuner2.value == "2-tuner":
-					self.appendSkinFile(self.daten + "infobar-style-x1_main2.xml")
-				elif config.plugins.KravenFHD.tuner2.value == "4-tuner":
-					self.appendSkinFile(self.daten + "infobar-style-x1_main4.xml")
-				elif config.plugins.KravenFHD.tuner2.value == "8-tuner":
-					self.appendSkinFile(self.daten + "infobar-style-x1_main8.xml")
-				elif config.plugins.KravenFHD.tuner2.value == "10-tuner":
-					self.appendSkinFile(self.daten + "infobar-style-x1_main10.xml")
-			elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz1":
-				if config.plugins.KravenFHD.tuner.value == "2-tuner":
-					self.appendSkinFile(self.daten + "infobar-style-zz1_main2.xml")
-				elif config.plugins.KravenFHD.tuner.value == "4-tuner":
-					self.appendSkinFile(self.daten + "infobar-style-zz1_main4.xml")
-				elif config.plugins.KravenFHD.tuner.value == "8-tuner":
-					self.appendSkinFile(self.daten + "infobar-style-zz1_main8.xml")
-			elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zz4":
-				if config.plugins.KravenFHD.tuner.value == "2-tuner":
-					self.appendSkinFile(self.daten + "infobar-style-zz4_main2.xml")
-				elif config.plugins.KravenFHD.tuner.value == "4-tuner":
-					self.appendSkinFile(self.daten + "infobar-style-zz4_main4.xml")
-				elif config.plugins.KravenFHD.tuner.value == "8-tuner":
-					self.appendSkinFile(self.daten + "infobar-style-zz4_main8.xml")
-			elif config.plugins.KravenFHD.InfobarStyle.value == "infobar-style-zzz1":
-				if config.plugins.KravenFHD.tuner.value == "2-tuner":
-					self.appendSkinFile(self.daten + "infobar-style-zzz1_main2.xml")
-				elif config.plugins.KravenFHD.tuner.value == "4-tuner":
-					self.appendSkinFile(self.daten + "infobar-style-zzz1_main4.xml")
-				elif config.plugins.KravenFHD.tuner.value == "8-tuner":
-					self.appendSkinFile(self.daten + "infobar-style-zzz1_main8.xml")
-			else:
-				self.appendSkinFile(self.daten + config.plugins.KravenFHD.InfobarStyle.value + "_main.xml")
-
-			### Timeshift_Infobar_top
-			if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
-				if config.plugins.KravenFHD.IBtop.value == "infobar-x2-z1_top":
-					self.appendSkinFile(self.daten + "infobar-x2-z1_top.xml")
-				elif config.plugins.KravenFHD.IBtop.value == "infobar-x2-z1_top2":
-					self.appendSkinFile(self.daten + "infobar-x2-z1_top2.xml")
-				elif config.plugins.KravenFHD.IBtop.value == "infobar-x2-z1_top3":
-					self.appendSkinFile(self.daten + "infobar-x2-z1_top3.xml")
-
-			### Timeshift_system-info
-			self.appendSkinFile(self.daten + config.plugins.KravenFHD.SystemInfo.value + ".xml")
-
-			### Timeshift_weather-style
-			if self.actWeatherstyle != "netatmobar":
-				self.appendSkinFile(self.daten + self.actWeatherstyle + ".xml")
-
 			### Timeshift_end
 			self.appendSkinFile(self.daten + "timeshift-end.xml")
 
@@ -3163,39 +2877,31 @@ class ActivateSkinSettings:
 
 		elif config.plugins.KravenFHD.IBStyle.value == "box":
 			if config.plugins.KravenFHD.InfobarBoxColor.value == "gradient":
-				self.skinSearchAndReplace.append(['<constant-widget name="timeshift-bg"/>', '<constant-widget name="timeshift-bg-box2"/>'])
-				self.skinSearchAndReplace.append(['<constant-widget name="ibts-bg"/>', '<constant-widget name="ibts-bg-box2"/>'])
-				self.skinSearchAndReplace.append(['<constant-widget name="autoresolution-bg"/>', '<constant-widget name="autoresolution-bg-box2"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="timeshift-bg"/>', self.Templates + 'name="timeshift-bg-box2"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="ibts-bg"/>', self.Templates + 'name="ibts-bg-box2"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="autoresolution-bg"/>', self.Templates + 'name="autoresolution-bg-box2"/>'])
 			elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
-				self.skinSearchAndReplace.append(['<constant-widget name="timeshift-bg"/>', '<constant-widget name="timeshift-bg-texture"/>'])
-				self.skinSearchAndReplace.append(['<constant-widget name="ibts-bg"/>', '<constant-widget name="ibts-bg-texture"/>'])
-				self.skinSearchAndReplace.append(['<constant-widget name="autoresolution-bg"/>', '<constant-widget name="autoresolution-bg-texture"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="timeshift-bg"/>', self.Templates + 'name="timeshift-bg-texture"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="ibts-bg"/>', self.Templates + 'name="ibts-bg-texture"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="autoresolution-bg"/>', self.Templates + 'name="autoresolution-bg-texture"/>'])
 			self.appendSkinFile(self.daten + "timeshift-ibts-ar.xml")
-
-		### Players
-		self.appendSkinFile(self.daten + "player-movie.xml")
-		self.appendSkinFile(self.daten + config.plugins.KravenFHD.PlayerClock.value + ".xml")
-		self.appendSkinFile(self.daten + "screen_end.xml")
-		self.appendSkinFile(self.daten + "player-emc.xml")
-		self.appendSkinFile(self.daten + config.plugins.KravenFHD.PlayerClock.value + ".xml")
-		self.appendSkinFile(self.daten + "screen_end.xml")
 
 		### PermanentClock
 		if config.plugins.KravenFHD.PermanentClock.value == "permanentclock-infobar-small":
 			self.skinSearchAndReplace.append(['backgroundColor="KravenIBbg" name="PermanentClockScreen" size="180,45"', 'backgroundColor="KravenIBbg" name="PermanentClockScreen" size="120,30"'])
-			self.skinSearchAndReplace.append(['<constant-widget name="permanentclock-infobar-big"/>', '<constant-widget name="permanentclock-infobar-small"/>'])
+			self.skinSearchAndReplace.append([self.Templates + 'name="permanentclock-infobar-big"/>', self.Templates + 'name="permanentclock-infobar-small"/>'])
 		elif config.plugins.KravenFHD.PermanentClock.value == "permanentclock-global-big":
 			self.skinSearchAndReplace.append(['backgroundColor="KravenIBbg" name="PermanentClockScreen" size="180,45"', 'backgroundColor="Kravenbg" name="PermanentClockScreen" size="180,45"'])
-			self.skinSearchAndReplace.append(['<constant-widget name="permanentclock-infobar-big"/>', '<constant-widget name="permanentclock-global-big"/>'])
+			self.skinSearchAndReplace.append([self.Templates + 'name="permanentclock-infobar-big"/>', self.Templates + 'name="permanentclock-global-big"/>'])
 		elif config.plugins.KravenFHD.PermanentClock.value == "permanentclock-global-small":
 			self.skinSearchAndReplace.append(['backgroundColor="KravenIBbg" name="PermanentClockScreen" size="180,45"', 'backgroundColor="Kravenbg" name="PermanentClockScreen" size="120,30"'])
-			self.skinSearchAndReplace.append(['<constant-widget name="permanentclock-infobar-big"/>', '<constant-widget name="permanentclock-global-small"/>'])
+			self.skinSearchAndReplace.append([self.Templates + 'name="permanentclock-infobar-big"/>', self.Templates + 'name="permanentclock-global-small"/>'])
 		elif config.plugins.KravenFHD.PermanentClock.value == "permanentclock-transparent-big":
 			self.skinSearchAndReplace.append(['backgroundColor="KravenIBbg" name="PermanentClockScreen" size="180,45"', 'backgroundColor="transparent" name="PermanentClockScreen" size="180,45"'])
-			self.skinSearchAndReplace.append(['<constant-widget name="permanentclock-infobar-big"/>', '<constant-widget name="permanentclock-transparent-big"/>'])
+			self.skinSearchAndReplace.append([self.Templates + 'name="permanentclock-infobar-big"/>', self.Templates + 'name="permanentclock-transparent-big"/>'])
 		elif config.plugins.KravenFHD.PermanentClock.value == "permanentclock-transparent-small":
 			self.skinSearchAndReplace.append(['backgroundColor="KravenIBbg" name="PermanentClockScreen" size="180,45"', 'backgroundColor="transparent" name="PermanentClockScreen" size="120,30"'])
-			self.skinSearchAndReplace.append(['<constant-widget name="permanentclock-infobar-big"/>', '<constant-widget name="permanentclock-transparent-small"/>'])
+			self.skinSearchAndReplace.append([self.Templates + 'name="permanentclock-infobar-big"/>', self.Templates + 'name="permanentclock-transparent-small"/>'])
 
 		### Plugins
 		self.appendSkinFile(self.daten + "plugins.xml")
@@ -3219,28 +2925,28 @@ class ActivateSkinSettings:
 		### EMC (Event-Description) Font-Size
 		if config.plugins.KravenFHD.EMCStyle.value in ("emc-bigcover","emc-minitv"):
 			if config.plugins.KravenFHD.EMCEPGSize.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="emcmbc33"/>', '<constant-widget name="emcmbc36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="emcmbc33"/>', self.Templates + 'name="emcmbc36"/>'])
 		elif config.plugins.KravenFHD.EMCStyle.value in ("emc-bigcover2","emc-minitv2"):
 			if config.plugins.KravenFHD.EMCEPGSize.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="emcm2bc233"/>', '<constant-widget name="emcm2bc236"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="emcm2bc233"/>', self.Templates + 'name="emcm2bc236"/>'])
 		elif config.plugins.KravenFHD.EMCStyle.value == "emc-nocover":
 			if config.plugins.KravenFHD.EMCEPGSize.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="emcnc33"/>', '<constant-widget name="emcnc36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="emcnc33"/>', self.Templates + 'name="emcnc36"/>'])
 		elif config.plugins.KravenFHD.EMCStyle.value == "emc-nocover2":
 			if config.plugins.KravenFHD.EMCEPGSize.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="emcnc233"/>', '<constant-widget name="emcnc236"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="emcnc233"/>', self.Templates + 'name="emcnc236"/>'])
 		elif config.plugins.KravenFHD.EMCStyle.value == "emc-smallcover":
 			if config.plugins.KravenFHD.EMCEPGSize.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="emcsc33"/>', '<constant-widget name="emcsc36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="emcsc33"/>', self.Templates + 'name="emcsc36"/>'])
 		elif config.plugins.KravenFHD.EMCStyle.value == "emc-smallcover2":
 			if config.plugins.KravenFHD.EMCEPGSize.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="emcsc233"/>', '<constant-widget name="emcsc236"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="emcsc233"/>', self.Templates + 'name="emcsc236"/>'])
 		elif config.plugins.KravenFHD.EMCStyle.value == "emc-verybigcover":
 			if config.plugins.KravenFHD.EMCEPGSize.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="emcvbc33"/>', '<constant-widget name="emcvbc36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="emcvbc33"/>', self.Templates + 'name="emcvbc36"/>'])
 		elif config.plugins.KravenFHD.EMCStyle.value == "emc-verybigcover2":
 			if config.plugins.KravenFHD.EMCEPGSize.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="emcvbc233"/>', '<constant-widget name="emcvbc236"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="emcvbc233"/>', self.Templates + 'name="emcvbc236"/>'])
 
 		### EMC (MovieList) Font-Colors
 		self.skinSearchAndReplace.append(['UnwatchedColor="unwatched"', 'UnwatchedColor="#00' + config.plugins.KravenFHD.UnwatchedColor.value + '"'])
@@ -3257,20 +2963,6 @@ class ActivateSkinSettings:
 			config.usage.numberzap_show_picon.save()
 			config.usage.numberzap_show_servicename.value = True
 			config.usage.numberzap_show_servicename.save()
-
-		### PVRState
-		if config.plugins.KravenFHD.IBStyle.value == "box":
-			if config.plugins.KravenFHD.InfobarBoxColor.value == "gradient":
-				if config.plugins.KravenFHD.PVRState.value == "pvrstate-center-big":
-					self.skinSearchAndReplace.append(['<constant-widget name="pvrstate-bg"/>', '<constant-widget name="pvrstate-bg-box2"/>'])
-				else:
-					self.skinSearchAndReplace.append(['<constant-widget name="pvrstate2-bg"/>', '<constant-widget name="pvrstate2-bg-box2"/>'])
-			elif config.plugins.KravenFHD.InfobarBoxColor.value == "texture":
-				if config.plugins.KravenFHD.PVRState.value == "pvrstate-center-big":
-					self.skinSearchAndReplace.append(['<constant-widget name="pvrstate-bg"/>', '<constant-widget name="pvrstate-bg-texture"/>'])
-				else:
-					self.skinSearchAndReplace.append(['<constant-widget name="pvrstate2-bg"/>', '<constant-widget name="pvrstate2-bg-texture"/>'])
-		self.appendSkinFile(self.daten + config.plugins.KravenFHD.PVRState.value + ".xml")
 
 		### SplitScreen
 		if self.E2DistroVersion == "VTi":
@@ -3338,17 +3030,16 @@ class ActivateSkinSettings:
 		### CoolTVGuide
 		self.appendSkinFile(self.daten + config.plugins.KravenFHD.CoolTVGuide.value + ".xml")
 
-		### GraphEPG (Event-Description) Font-Size
+		### GraphMultiEPG (Event-Description) Font-Size
 		if config.plugins.KravenFHD.GMEDescriptionSize.value == "big":
-			self.skinSearchAndReplace.append(['<constant-widget name="GE33"/>', '<constant-widget name="GE36"/>'])
-			self.skinSearchAndReplace.append(['<constant-widget name="GEMTR33"/>', '<constant-widget name="GEMTR36"/>'])
-			self.skinSearchAndReplace.append(['<constant-widget name="GEMTL33"/>', '<constant-widget name="GEMTL36"/>'])
+			self.skinSearchAndReplace.append([self.Templates + 'name="GE33"/>', self.Templates + 'name="GE36"/>'])
+			self.skinSearchAndReplace.append([self.Templates + 'name="GEMTR33"/>', self.Templates + 'name="GEMTR36"/>'])
+			self.skinSearchAndReplace.append([self.Templates + 'name="GEMTL33"/>', self.Templates + 'name="GEMTL36"/>'])
 
-		### GraphEPG
+		### GraphMultiEPG
 		if self.E2DistroVersion == "VTi":
 			self.appendSkinFile(self.daten + config.plugins.KravenFHD.GraphMultiEPG.value + ".xml")
 		elif self.E2DistroVersion == "openatv":
-			self.appendSkinFile(self.daten + "graphmultiepg-minitv.xml")
 			if not self.silent and config.plugins.KravenFHD.GraphicalEPG.value == "text":
 				config.epgselection.graph_type_mode.value = False
 				config.epgselection.graph_type_mode.save()
@@ -3392,22 +3083,22 @@ class ActivateSkinSettings:
 		### MovieSelection (Event-Description) Font-Size
 		if config.plugins.KravenFHD.MovieSelection.value == "movieselection-no-cover":
 			if config.plugins.KravenFHD.MovieSelectionEPGSize.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="msnc33"/>', '<constant-widget name="msnc36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="msnc33"/>', self.Templates + 'name="msnc36"/>'])
 		elif config.plugins.KravenFHD.MovieSelection.value == "movieselection-no-cover2":
 			if config.plugins.KravenFHD.MovieSelectionEPGSize.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="msnc233"/>', '<constant-widget name="msnc236"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="msnc233"/>', self.Templates + 'name="msnc236"/>'])
 		elif config.plugins.KravenFHD.MovieSelection.value == "movieselection-small-cover":
 			if config.plugins.KravenFHD.MovieSelectionEPGSize.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="mssc33"/>', '<constant-widget name="mssc36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="mssc33"/>', self.Templates + 'name="mssc36"/>'])
 		elif config.plugins.KravenFHD.MovieSelection.value == "movieselection-big-cover":
 			if config.plugins.KravenFHD.MovieSelectionEPGSize.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="msbc33"/>', '<constant-widget name="msbc36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="msbc33"/>', self.Templates + 'name="msbc36"/>'])
 		elif config.plugins.KravenFHD.MovieSelection.value == "movieselection-minitv":
 			if config.plugins.KravenFHD.MovieSelectionEPGSize.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="msm33"/>', '<constant-widget name="msm36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="msm33"/>', self.Templates + 'name="msm36"/>'])
 		elif config.plugins.KravenFHD.MovieSelection.value == "movieselection-minitv-cover":
 			if config.plugins.KravenFHD.MovieSelectionEPGSize.value == "big":
-				self.skinSearchAndReplace.append(['<constant-widget name="msmc33"/>', '<constant-widget name="msmc36"/>'])
+				self.skinSearchAndReplace.append([self.Templates + 'name="msmc33"/>', self.Templates + 'name="msmc36"/>'])
 
 		### MovieSelection
 		self.appendSkinFile(self.daten + config.plugins.KravenFHD.MovieSelection.value + ".xml")
@@ -3581,6 +3272,81 @@ class ActivateSkinSettings:
 				return "VTi"
 		except ImportError:
 			return "VTi"
+
+	def getTemplates(self): # customize panels in plugin for teamBlue
+		try:
+			from boxbranding import getImageDistro
+			if getImageDistro() == "openatv":
+				return "<constant-widget "
+			elif getImageDistro() == "teamblue":
+				return "<panel "
+			elif getImageDistro() == "VTi":
+				return "<constant-widget "
+		except ImportError:
+			return "<constant-widget "
+
+	def getTuners(self):
+		from Components.Sources.TunerInfo import TunerInfo
+		tinfo = TunerInfo()
+		tuners = tinfo.getTunerAmount()
+		if tuners is 1:
+			return "1-tuner"
+		elif tuners is 2:
+			return "2-tuner"
+		elif (3 <= tuners <= 4):
+			return "4-tuner"
+		elif (5 <= tuners):
+			return "8-tuner"
+		else:
+			return "1-tuner"
+
+	def appendSkinFile(self, appendFileName, skinPartSearchAndReplace=None, xShift=0, yShift=0):
+		"""
+		add skin file to main skin content
+
+		appendFileName:
+		 xml skin-part to add
+
+		skinPartSearchAndReplace:
+		 (optional) a list of search and replace arrays. first element, search, second for replace
+		 
+		xShift, yShift:
+		 (optional) apply positive or negative change to all position tags in skin file
+		"""
+
+		skFile = open(appendFileName, "r")
+		file_lines = skFile.readlines()
+		skFile.close()
+
+		if xShift != 0 or yShift != 0:		
+			tempFileLines = []
+			for skinLine in file_lines:
+				startPos = skinLine.find(' position="')
+				if startPos >=0:
+					begLine = skinLine[:startPos+11]
+					endLine = skinLine[startPos+11:]
+					endPos = endLine.find('" ')
+					position = endLine[:endPos]
+					endLine  = endLine[endPos:]
+					xpos = position.split(",")[0]
+					ypos = position.split(",")[1]
+					if xpos.isdigit() and ypos.isdigit():
+						position = str(int(xpos) + xShift) + "," + str(int(ypos) + yShift)
+					skinLine = begLine + position + endLine
+				tempFileLines.append(skinLine)
+			file_lines = tempFileLines		
+
+		tmpSearchAndReplace = []
+
+		if skinPartSearchAndReplace is not None:
+			tmpSearchAndReplace = self.skinSearchAndReplace + skinPartSearchAndReplace
+		else:
+			tmpSearchAndReplace = self.skinSearchAndReplace
+
+		for skinLine in file_lines:
+			for item in tmpSearchAndReplace:
+				skinLine = skinLine.replace(item[0], item[1])
+			self.skin_lines.append(skinLine)
 
 	def getInternetAvailable(self):
 		import ping
@@ -3919,14 +3685,12 @@ class ActivateSkinSettings:
 			("infobar-style-zz1",297),
 			("infobar-style-zz2",278),
 			("infobar-style-zz3",278),
-			("infobar-style-zz4",297),
-			("infobar-style-zzz1",371),
-			("infobar-style-zzz2",371)
+			("infobar-style-zzz1",371)
 			]
 		for pair in ibarheights:
 			if config.plugins.KravenFHD.InfobarStyle.value == pair[0]:
 				self.makeGradientpng("ibar",width,pair[1],config.plugins.KravenFHD.InfobarGradientColorPrimary.value,config.plugins.KravenFHD.InfobarGradientColorSecondary.value,config.plugins.KravenFHD.InfobarColorTrans.value)
-		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-x4"):
+		if config.plugins.KravenFHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3"):
 			if config.plugins.KravenFHD.ClockStyle.value == "clock-android":
 				self.makeGradientpng("ibar",width,231,config.plugins.KravenFHD.InfobarGradientColorPrimary.value,config.plugins.KravenFHD.InfobarGradientColorSecondary.value,config.plugins.KravenFHD.InfobarColorTrans.value)
 			else:
@@ -4122,16 +3886,22 @@ class ActivateSkinSettings:
 			self.lat = ''
 			self.lon = ''
 			self.accu_id = ''
+			self.gm_code = ''
 			self.preview_text = ''
 			self.preview_warning = ''
 
 			if config.plugins.KravenFHD.weather_server.value == '_accu':
 				if config.plugins.KravenFHD.weather_search_over.value == 'ip':
-					self.get_accu_id_by_ip()
+					self.get_accu_by_ip()
 				elif config.plugins.KravenFHD.weather_search_over.value == 'name':
-					self.get_accu_id_by_name()
+					self.get_accu_by_name()
 			elif config.plugins.KravenFHD.weather_server.value == '_owm':
-				self.get_owm_by_ip()
+				if config.plugins.KravenFHD.weather_search_over2.value == 'ip':
+					self.get_owm_by_ip()
+				elif config.plugins.KravenFHD.weather_search_over2.value == 'name':
+					self.get_owm_by_name()
+				elif config.plugins.KravenFHD.weather_search_over2.value == 'gmcode':
+					self.get_owm_by_gmcode()
 
 			self.actCity=self.preview_text+self.preview_warning
 
@@ -4139,7 +3909,7 @@ class ActivateSkinSettings:
 
 		if self.InternetAvailable==False: 
 			return
-		
+
 		try:
 			res = requests.get('http://ip-api.com/json/?lang=de&fields=status,city,lat,lon', timeout=1)
 			data = res.json()
@@ -4158,11 +3928,65 @@ class ActivateSkinSettings:
 		except:
 			self.preview_text = _('No data for IP')
 
-	def get_accu_id_by_ip(self):
+	def get_owm_by_gmcode(self):
 
 		if self.InternetAvailable==False: 
 			return
-		
+
+		try:
+			gmcode = config.plugins.KravenFHD.weather_gmcode.value
+			res = requests.get('http://wxdata.weather.com/wxdata/weather/local/%s?cc=%s' % str(gmcode), timeout=1)
+			data = fromstring(res.text)
+
+			self.city = data[1][0].text.split(',')[0]
+			self.lat = data[1][2].text
+			self.lon = data[1][3].text
+
+			self.preview_text = str(self.city) + '\nLat: ' + str(self.lat) + '\nLong: ' + str(self.lon)
+			config.plugins.KravenFHD.weather_owm_latlon.value = 'lat=%s&lon=%s&units=metric&lang=%s' % (str(self.lat),str(self.lon),str(config.plugins.KravenFHD.weather_language.value))
+			config.plugins.KravenFHD.weather_owm_latlon.save()
+			config.plugins.KravenFHD.weather_foundcity.value = self.city
+			config.plugins.KravenFHD.weather_foundcity.save()
+		except:
+			self.get_owm_by_ip()
+			self.preview_warning = _('\n\nNo data for GM code,\nfallback to IP')
+
+	def get_owm_by_name(self):
+
+		if self.InternetAvailable==False: 
+			return
+
+		try:
+			searchterm = config.plugins.KravenFHD.weather_cityname.getValue()
+			res = requests.get('http://api.openweathermap.org/data/2.5/forecast/daily?appid=60e502f04cdafb43a8ca88f82c39c033&q=%s' % str(searchterm), timeout=1)
+			data = res.json()
+
+			if data['cod'] == '401':
+				self.preview_warning = _('API authorization failed')
+			elif data['cod'] == '404':
+				self.preview_warning = _('Search term not found')
+			elif data['cod'] == '429':
+				self.preview_warning = _('API requests exceeded')
+			elif data['cod'] == '200':
+				self.city = data['city']['name']
+				self.lat  = data['city']['coord']['lat']
+				self.lon  = data['city']['coord']['lon']
+
+			self.preview_text = str(self.city) + '\nLat: ' + str(self.lat) + '\nLong: ' + str(self.lon)
+			config.plugins.KravenFHD.weather_owm_latlon.value = 'lat=%s&lon=%s&units=metric&lang=%s' % (str(self.lat),str(self.lon),str(config.plugins.KravenFHD.weather_language.value))
+			config.plugins.KravenFHD.weather_owm_latlon.save()
+			config.plugins.KravenFHD.weather_foundcity.value = self.city
+			config.plugins.KravenFHD.weather_foundcity.save()
+
+		except:
+			self.get_owm_by_ip()
+			self.preview_warning = _('\n\nNo data for search term,\nfallback to IP')
+
+	def get_accu_by_ip(self):
+
+		if self.InternetAvailable==False: 
+			return
+
 		try:
 			res = requests.get('http://ip-api.com/json/?lang=de&fields=status,city', timeout=1)
 			data = res.json()
@@ -4173,7 +3997,7 @@ class ActivateSkinSettings:
 				language = config.plugins.KravenFHD.weather_language.value
 				res1 = requests.get('http://dataservice.accuweather.com/locations/v1/cities/search?q=%s&apikey=%s&language=%s' % (str(city),str(apikey),str(language)), timeout=1)
 				data1 = res1.json()
-			
+
 				if 'Code' in data1:
 					if data1['Code'] == 'ServiceUnavailable':
 						self.preview_warning = _('API requests exceeded')
@@ -4185,6 +4009,8 @@ class ActivateSkinSettings:
 					self.lat = data1[0]['GeoPosition']['Latitude']
 					self.lon = data1[0]['GeoPosition']['Longitude']
 					self.preview_text = str(self.city) + '\nLat: ' + str(self.lat) + '\nLong: ' + str(self.lon)
+					config.plugins.KravenFHD.weather_accu_latlon.value = 'lat=%s&lon=%s&metric=1&language=%s' % (str(self.lat), str(self.lon), str(config.plugins.KravenFHD.weather_language.value))
+					config.plugins.KravenFHD.weather_accu_latlon.save()
 					config.plugins.KravenFHD.weather_accu_id.value = str(self.accu_id)
 					config.plugins.KravenFHD.weather_accu_id.save()
 					config.plugins.KravenFHD.weather_foundcity.value = str(self.city)
@@ -4194,16 +4020,16 @@ class ActivateSkinSettings:
 		except:
 			self.preview_warning = _('No Accu ID found')
 
-	def get_accu_id_by_name(self):
+	def get_accu_by_name(self):
 
 		if self.InternetAvailable==False: 
 			return
-		
+
 		try:
 			city = config.plugins.KravenFHD.weather_cityname.getValue()
 			apikey = config.plugins.KravenFHD.weather_accu_apikey.value
 			language = config.plugins.KravenFHD.weather_language.value
-			
+
 			res = requests.get('http://dataservice.accuweather.com/locations/v1/cities/search?q=%s&apikey=%s&language=%s' % (str(city),str(apikey),str(language)), timeout=1)
 			data = res.json()
 			
@@ -4218,6 +4044,8 @@ class ActivateSkinSettings:
 				self.lat = data[0]['GeoPosition']['Latitude']
 				self.lon = data[0]['GeoPosition']['Longitude']
 				self.preview_text = str(self.city) + '\nLat: ' + str(self.lat) + '\nLong: ' + str(self.lon)
+				config.plugins.KravenFHD.weather_accu_latlon.value = 'lat=%s&lon=%s&metric=1&language=%s' % (str(self.lat), str(self.lon), str(config.plugins.KravenFHD.weather_language.value))
+				config.plugins.KravenFHD.weather_accu_latlon.save()
 				config.plugins.KravenFHD.weather_accu_id.value = str(self.accu_id)
 				config.plugins.KravenFHD.weather_accu_id.save()
 				config.plugins.KravenFHD.weather_foundcity.value = str(self.city)

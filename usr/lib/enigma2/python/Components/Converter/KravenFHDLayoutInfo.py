@@ -1,13 +1,19 @@
+# -*- coding: utf-8 -*-
+
+#  Layout Info Converter
 #
-#  ECM LINE Converter
+#  Coded/Modified/Adapted by Team Kraven
+#  Based on VTi and/or OpenATV image source code
 #
-#  Coded by tomele for Kraven Skins
-#
-#  This code is licensed under the Creative Commons
-#  Attribution-NonCommercial-ShareAlike 4.0 International
+#  This code is licensed under the Creative Commons 
+#  Attribution-NonCommercial-ShareAlike 3.0 Unported 
 #  License. To view a copy of this license, visit
-#  http://creativecommons.org/licenses/by-nc-sa/4.0/
+#  http://creativecommons.org/licenses/by-nc-sa/3.0/ 
+#  or send a letter to Creative Commons, 559 Nathan 
+#  Abbott Way, Stanford, California 94305, USA.
 #
+#  If you think this license infringes any rights,
+#  please contact Team Kraven at info@coolskins.de
 
 from Components.Converter.Converter import Converter
 from Components.Element import cached

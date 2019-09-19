@@ -1,12 +1,10 @@
+# -*- coding: utf-8 -*-
+
+#  Events Info Converter
 #
-#  EVENTS INFO Converter
-#
-#  Based on Converter NextEvents
-#  by m0rphU & LN
-#
-#  Modified by tomele for Kraven Skins:
-#  Added support for current event
-#  Added descriptions as output
+#  Coded/Modified/Adapted by Team Kraven
+#  Based on VTi and/or OpenATV image source code
+#  Based on Next Events by m0rphU & LN
 #
 #  This code is licensed under the Creative Commons 
 #  Attribution-NonCommercial-ShareAlike 3.0 Unported 
@@ -15,6 +13,8 @@
 #  or send a letter to Creative Commons, 559 Nathan 
 #  Abbott Way, Stanford, California 94305, USA.
 #
+#  If you think this license infringes any rights,
+#  please contact Team Kraven at info@coolskins.de
 
 from Components.Converter.Converter import Converter
 from Components.Element import cached

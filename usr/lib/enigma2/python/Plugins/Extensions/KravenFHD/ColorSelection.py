@@ -1,19 +1,20 @@
 # -*- coding: utf-8 -*-
 
-#######################################################################
+#  Color Selection Tool
 #
-# KravenFHD by Team-Kraven
+#  Coded/Modified/Adapted by Team Kraven
+#  Based on VTi and/or OpenATV image source code
+#  Thankfully inspired by MyMetrix by iMaxxx
 #
-# Thankfully inspired by:
-# MyMetrix
-# Coded by iMaxxx (c) 2013
+#  This code is licensed under the Creative Commons 
+#  Attribution-NonCommercial-ShareAlike 3.0 Unported 
+#  License. To view a copy of this license, visit
+#  http://creativecommons.org/licenses/by-nc-sa/3.0/ 
+#  or send a letter to Creative Commons, 559 Nathan 
+#  Abbott Way, Stanford, California 94305, USA.
 #
-# This plugin is licensed under the Creative Commons
-# Attribution-NonCommercial-ShareAlike 3.0 Unported License.
-# To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/
-# or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
-#
-#######################################################################
+#  If you think this license infringes any rights,
+#  please contact Team Kraven at info@coolskins.de
 
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox

@@ -1,6 +1,6 @@
   <!-- GraphMultiEPG -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="GraphMultiEPG" position="0,0" size="1920,1080" title="Electronic Program Guide">
-	<widget name="list" position="105,498" size="1752,448" valign="top" FontSize1="30" FontSize2="29" itemHeight="112" piconWidth="151" ServiceNameForegroundColor="KravenFont1" ServiceNameBackgroundColor="Kravenbg2" EntryBorderColor="KravenGMEBorder" EntryBackgroundColor="Kravenbg2" EntryBackgroundColorSelected="KravenSelection" EntryNowForegroundColorSelected="KravenSelFont" EntryNowBackgroundColor="KravenGMErunningbg" EntryNowBackgroundColorSelected="KravenSelection" EntryRecColor="red" EntryPreColor="yellow" />
+	<widget name="list" position="105,498" size="1752,448" valign="top" FontSize1="30" FontSize2="29" itemHeight="112" piconWidth="151" ServiceNameForegroundColor="KravenFont1" ServiceNameBackgroundColor="Kravenbg2" EntryNowForegroundColor="KravenGMENowFg" EntryNowBackgroundColor="KravenGMENowBg" EntryNowForegroundColorSelected="KravenGMESelFg" EntryNowBackgroundColorSelected="KravenGMESelBg" EntryBorderColor="KravenGMEBorder" EntryRecColor="red" EntryPreColor="yellow" EntryForegroundColor="KravenFont1" EntryBackgroundColor="Kravenbg2" EntryForegroundColorSelected="KravenGMESelFg" EntryBackgroundColorSelected="KravenGMESelBg" />
     <constant-widget name="GEMTR33"/>
     <constant-widget name="GraphMultiEPG-MiniTV"/>
     <constant-widget name="Colorbuttons"/>
@@ -9,7 +9,7 @@
   </screen>
   <!-- GraphMultiEPG1 -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="GraphMultiEPG1" position="0,0" size="1920,1080" title="Electronic Program Guide">
-	<widget name="list" position="105,498" size="1752,450" valign="top" FontSize1="30" FontSize2="25" itemHeight="90" piconWidth="127" ServiceNameForegroundColor="KravenFont1" ServiceNameBackgroundColor="Kravenbg2" EntryBorderColor="KravenGMEBorder" EntryBackgroundColor="Kravenbg2" EntryBackgroundColorSelected="KravenSelection" EntryNowForegroundColorSelected="KravenSelFont" EntryNowBackgroundColor="KravenGMErunningbg" EntryNowBackgroundColorSelected="KravenSelection" EntryRecColor="red" EntryPreColor="yellow" />
+	<widget name="list" position="105,498" size="1752,450" valign="top" FontSize1="30" FontSize2="25" itemHeight="90" piconWidth="127" ServiceNameForegroundColor="KravenFont1" ServiceNameBackgroundColor="Kravenbg2" EntryNowForegroundColor="KravenGMENowFg" EntryNowBackgroundColor="KravenGMENowBg" EntryNowForegroundColorSelected="KravenGMESelFg" EntryNowBackgroundColorSelected="KravenGMESelBg" EntryBorderColor="KravenGMEBorder" EntryRecColor="red" EntryPreColor="yellow" EntryForegroundColor="KravenFont1" EntryBackgroundColor="Kravenbg2" EntryForegroundColorSelected="KravenGMESelFg" EntryBackgroundColorSelected="KravenGMESelBg" />
     <constant-widget name="GEMTR33"/>
     <constant-widget name="GraphMultiEPG-MiniTV"/>
     <constant-widget name="Colorbuttons"/>
@@ -18,7 +18,7 @@
   </screen>
   <!-- GraphMultiEPG2 -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="GraphMultiEPG2" position="0,0" size="1920,1080" title="Electronic Program Guide">
-	<widget name="list" position="105,498" size="1752,450" valign="top" FontSize1="30" FontSize2="33" itemHeight="45" piconWidth="75" ServiceNameForegroundColor="KravenFont1" ServiceNameBackgroundColor="Kravenbg2" EntryBorderColor="KravenGMEBorder" EntryBackgroundColor="Kravenbg2" EntryBackgroundColorSelected="KravenSelection" EntryNowForegroundColorSelected="KravenSelFont" EntryNowBackgroundColor="KravenGMErunningbg" EntryNowBackgroundColorSelected="KravenSelection" EntryRecColor="red" EntryPreColor="yellow" />
+	<widget name="list" position="105,498" size="1752,450" valign="top" FontSize1="30" FontSize2="33" itemHeight="45" piconWidth="75" ServiceNameForegroundColor="KravenFont1" ServiceNameBackgroundColor="Kravenbg2" EntryNowForegroundColor="KravenGMENowFg" EntryNowBackgroundColor="KravenGMENowBg" EntryNowForegroundColorSelected="KravenGMESelFg" EntryNowBackgroundColorSelected="KravenGMESelBg" EntryBorderColor="KravenGMEBorder" EntryRecColor="red" EntryPreColor="yellow" EntryForegroundColor="KravenFont1" EntryBackgroundColor="Kravenbg2" EntryForegroundColorSelected="KravenGMESelFg" EntryBackgroundColorSelected="KravenGMESelBg" />
     <constant-widget name="GEMTR33"/>
     <constant-widget name="GraphMultiEPG-MiniTV"/>
     <constant-widget name="Colorbuttons"/>
@@ -29,7 +29,7 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="GraphMultiEPG3" position="0,0" size="1920,1080" title="Electronic Program Guide">
 	<eLabel text="Multi-EPG" position="105,18" size="1062,69" backgroundColor="KravenIBCoolbg" font="Regular2;51" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="center" />
     <widget backgroundColor="KravenIBCoolbg" source="Title" render="Label" font="Regular;36" foregroundColor="KravenMFont2" position="660,24" size="600,45" halign="center" transparent="1" zPosition="3" />
-	<widget name="list" position="105,160" size="1752,765" valign="top" FontSize1="30" FontSize2="33" itemHeight="45" piconWidth="75" ServiceNameForegroundColor="KravenFont1" ServiceNameBackgroundColor="Kravenbg2" EntryBorderColor="KravenGMEBorder" EntryBackgroundColor="Kravenbg2" EntryBackgroundColorSelected="KravenSelection" EntryNowForegroundColorSelected="KravenSelFont" EntryNowBackgroundColor="KravenGMErunningbg" EntryNowBackgroundColorSelected="KravenSelection" EntryRecColor="red" EntryPreColor="yellow" />
+	<widget name="list" position="105,160" size="1752,765" valign="top" FontSize1="30" FontSize2="33" itemHeight="45" piconWidth="75" ServiceNameForegroundColor="KravenFont1" ServiceNameBackgroundColor="Kravenbg2" EntryNowForegroundColor="KravenGMENowFg" EntryNowBackgroundColor="KravenGMENowBg" EntryNowForegroundColorSelected="KravenGMESelFg" EntryNowBackgroundColorSelected="KravenGMESelBg" EntryBorderColor="KravenGMEBorder" EntryRecColor="red" EntryPreColor="yellow" EntryForegroundColor="KravenFont1" EntryBackgroundColor="Kravenbg2" EntryForegroundColorSelected="KravenGMESelFg" EntryBackgroundColorSelected="KravenGMESelBg" />
 	<widget name="timeline_text" position="3,120" size="1912,37" selectionDisabled="1" transparent="1" zPosition="5" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" />
 	<widget backgroundColor="Kravenbg2" render="Label" source="Event" font="Regular;30" foregroundColor="KravenFont2" position="1632,112" size="225,38" halign="right" transparent="1">
 	  <convert type="EventTime">StartTime</convert>

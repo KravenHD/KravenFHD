@@ -33,7 +33,7 @@
     </widget>
     <widget alphatest="blend" pixmaps="battery_unknown.png,battery_verylow.png,battery_low.png,battery_medium.png,battery_high.png,battery_full.png" pixtype="battery_vp" plugin_pixmaps="images" position="723,31" render="NetatmoPixmap" size="75,45" source="session.CurrentService" zPosition="10">
     </widget>
-    <constant-widget name="gradient-netatmo"/>
+    <constant-widget name="infobar-style-x2-z1-netatmobar-gradient"/>
   </screen>
   <!--/* NetatmoBar V1-->
   <!--/* NetatmoBar V5-->
@@ -71,6 +71,6 @@
     </widget>
     <widget alphatest="blend" pixmaps="battery_unknown.png,battery_verylow.png,battery_low.png,battery_medium.png,battery_high.png,battery_full.png" pixtype="battery_vp" plugin_pixmaps="images" position="723,31" render="NetatmoPixmap" size="75,45" source="session.CurrentService" zPosition="10">
     </widget>
-    <constant-widget name="gradient-netatmo"/>
+    <constant-widget name="infobar-style-x2-z1-netatmobar-gradient"/>
   </screen>
   <!--/* NetatmoBar V5-->

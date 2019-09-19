@@ -1,19 +1,21 @@
 # -*- coding: utf-8 -*-
+
+#  Weather OWM Converter
 #
-#  OpenWeatherMap Weather Info
+#  Coded/Modified/Adapted by Team Kraven
+#  Based on VTi and/or OpenATV image source code
 #
-#  Coded by TBX for Kraven Skins (c) 2015
-#
-#  This plugin is licensed under the Creative Commons
-#  Attribution-NonCommercial-ShareAlike 3.0 Unported
+#  This code is licensed under the Creative Commons 
+#  Attribution-NonCommercial-ShareAlike 3.0 Unported 
 #  License. To view a copy of this license, visit
-#  http://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative
-#  Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+#  http://creativecommons.org/licenses/by-nc-sa/3.0/ 
+#  or send a letter to Creative Commons, 559 Nathan 
+#  Abbott Way, Stanford, California 94305, USA.
 #
-#  This plugin is NOT free software. It is open source, you are allowed to
-#  modify it (if you keep the license), but it may not be commercially
-#  distributed other than under the conditions noted above.
+#  If you think this license infringes any rights,
+#  please contact Team Kraven at info@coolskins.de
 #
+#  PLEASE DON'T USE OUR APPID IN OTHER SKINS. GET YOUR OWN.
 
 from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 from Components.Converter.Converter import Converter
@@ -37,8 +39,10 @@ def _(txt):
 		t = gettext.gettext(txt)
 	return t
 
-URL = 'http://api.openweathermap.org/data/2.5/forecast/daily?' + config.plugins.KravenFHD.weather_owm_latlon.value + '&cnt=5&mode=json&appid=60e502f04cdafb43a8ca88f82c39c033'
-WEATHER_DATA = None
+URL1 = 'http://api.openweathermap.org/data/2.5/forecast/daily?' + config.plugins.KravenFHD.weather_owm_latlon.value + '&cnt=5&mode=json&appid=60e502f04cdafb43a8ca88f82c39c033'
+URL2 = 'http://api.openweathermap.org/data/2.5/weather?' + config.plugins.KravenFHD.weather_owm_latlon.value + '&cnt=5&mode=json&appid=60e502f04cdafb43a8ca88f82c39c033'
+WEATHER_DATA1 = None
+WEATHER_DATA2 = None
 WEATHER_LOAD = True
 
 class KravenFHDWeather_owm(Poll, Converter, object):
@@ -53,13 +57,16 @@ class KravenFHDWeather_owm(Poll, Converter, object):
 		self.timer = eTimer()
 		self.timer.callback.append(self.reset)
 		self.timer.callback.append(self.get_Data)
-		self.data = None
+		self.data1 = None
+		self.data2 = None
 		self.get_Data()
 
 	@cached
 	def getText(self):
-		global WEATHER_DATA
-		self.data = WEATHER_DATA
+		global WEATHER_DATA1
+		global WEATHER_DATA2
+		self.data1 = WEATHER_DATA1
+		self.data2 = WEATHER_DATA2
 		day = self.day_value.split('_')[1]
 		if self.what == 'DayTemp':
 			self.info = self.getDayTemp(int(day))
@@ -102,90 +109,104 @@ class KravenFHDWeather_owm(Poll, Converter, object):
 		self.timer.stop()
 
 	def get_Data(self):
-		global WEATHER_DATA
+		global WEATHER_DATA1
+		global WEATHER_DATA2
 		global WEATHER_LOAD
 		if WEATHER_LOAD == True:
 			try:
 				r = ping.doOne("8.8.8.8",1.5)
 				if r != None and r <= 1.5:
 					print "KravenWeather: Weather download from OpenWeatherMap"
-					res = requests.get(URL, timeout=1.5)
-					self.data = res.json()
-					WEATHER_DATA = self.data
+					res1 = requests.get(URL1, timeout=1.5)
+					self.data1 = res1.json()
+					WEATHER_DATA1 = self.data1
+					res2 = requests.get(URL2, timeout=1.5)
+					self.data2 = res2.json()
+					WEATHER_DATA2 = self.data2
 					WEATHER_LOAD = False
 			except:
 				pass
 			timeout = max(15,int(config.plugins.KravenFHD.refreshInterval.value)) * 1000.0 * 60.0
 			self.timer.start(int(timeout), True)
 		else:
-			self.data = WEATHER_DATA
+			self.data1 = WEATHER_DATA1
+			self.data2 = WEATHER_DATA2
 
 	def getMinTemp(self, day):
 		try:
-			temp = self.data['list'][day]['temp']['min']
+			temp = self.data1['list'][day]['temp']['min']
 			return str(round(float(temp))).split('.')[0] + '°'
 		except:
 			return ''
 
 	def getMaxTemp(self, day):
 		try:
-			temp = self.data['list'][day]['temp']['max']
+			temp = self.data1['list'][day]['temp']['max']
 			return str(round(float(temp))).split('.')[0] + '°'
 		except:
 			return ''
 
 	def getMornTemp(self, day):
 		try:
-			temp = self.data['list'][day]['temp']['morn']
+			temp = self.data1['list'][day]['temp']['morn']
 			return str(round(float(temp))) + '°C'
 		except:
 			return 'N/A'
 
 	def getEveTemp(self, day):
 		try:
-			temp = self.data['list'][day]['temp']['eve']
+			temp = self.data1['list'][day]['temp']['eve']
 			return str(round(float(temp))) + '°C'
 		except:
 			return 'N/A'
 
 	def getDayTemp(self, day):
 		try:
-			temp = self.data['list'][day]['temp']['day']
+			if day == 0:
+				temp = self.data2['main']['temp']
+			else:
+				temp = self.data1['list'][day]['main']['temp']
 			return str(round(float(temp))).split('.')[0] + '°C'
 		except:
 			return 'N/A'
 
 	def getNightTemp(self, day):
 		try:
-			temp = self.data['list'][day]['temp']['night']
+			temp = self.data1['list'][day]['temp']['night']
 			return str(round(float(temp))) + '°C'
 		except:
 			return 'N/A'
 
 	def getWeatherDes(self, day):
 		try:
-			weather = self.data['list'][day]['weather'][0]['description']
+			if day == 0:
+				weather = self.data2['weather'][0]['description']
+			else:
+				weather = self.data1['list'][day]['weather'][0]['description']
 			return str(weather)
 		except:
 			return ''
 
 	def getWeatherIcon(self, day):
 		try:
-			weathericon = self.data['list'][day]['weather'][0]['icon'][:3]
+			if day == 0:
+				weathericon = self.data2['weather'][0]['icon'][:3]
+			else:
+				weathericon = self.data1['list'][day]['weather'][0]['icon'][:3]
 			return str(weathericon)
 		except:
 			return 'N/A'
 
 	def getRainMM(self, day):
 		try:
-			rain = self.data['list'][day]['rain']
+			rain = self.data1['list'][day]['rain']
 			return str(float(rain)) + ' mm'
 		except:
 			return 'N/A'
 
 	def getWeatherDate(self, day):
 		try:
-			weather_epoch_date = self.data['list'][day]['dt']
+			weather_epoch_date = self.data1['list'][day]['dt']
 			weather_dayname = time.strftime('%a', time.localtime(weather_epoch_date))
 			return _(str(weather_dayname).upper()[:2])
 		except:
@@ -201,7 +222,7 @@ class KravenFHDWeather_owm(Poll, Converter, object):
 
 	def getSpeed(self):
 		try:
-			windspeed = self.data['list'][0]['speed']
+			windspeed = self.data2['wind']['speed']
 			speed = float(windspeed) * 3600 / 1000
 			return str(int(speed)) + ' km/h'
 		except:
@@ -209,21 +230,21 @@ class KravenFHDWeather_owm(Poll, Converter, object):
 
 	def getHumidity(self):
 		try:
-			humi = self.data['list'][0]['humidity']
+			humi = self.data2['main']['humidity']
 			return str(humi) + _('% humidity')
 		except:
 			return 'N/A'
 
 	def getCity(self):
 		try:
-			name = self.data['city']['name']
+			name = self.data1['city']['name']
 			return str(name)
 		except:
 			return 'N/A'
 
 	def getWind(self):
 		try:
-			direct = self.data['list'][0]['deg']
+			direct = int(self.data2['wind']['deg'])
 			if direct >= 0 and direct <= 20:
 				wdirect = _('N')
 			elif direct >= 21 and direct <= 35:
@@ -266,7 +287,10 @@ class KravenFHDWeather_owm(Poll, Converter, object):
 
 	def getMeteoFont(self, day):
 		try:
-			weatherfont = self.data['list'][day]['weather'][0]['id']
+			if day == 0:
+				temp = self.data2['weather'][0]['id']
+			else:
+				temp = self.data1['list'][day]['weather'][0]['id']
 			if weatherfont == 200:
 				weatherfont = unichr(int('EB28', 16)).encode('utf-8')
 			elif weatherfont == 201:

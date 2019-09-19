@@ -1,0 +1,2943 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: KravenFHD Italian translation\n"
+"POT-Creation-Date: 2019-08-07 19:07+0200\n"
+"PO-Revision-Date: 2019-08-11 17:50+0100\n"
+"Last-Translator: insanity@\n"
+"Language-Team: insanity <vuplus-community>\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ActivateSkinSettings.py:22 ActivateSkinSettings.py:55 ActivateSkinSettings.py:267
+#: ActivateSkinSettings.py:320 KravenFHD.py:61 KravenFHD.py:94 KravenFHD.py:306
+#: KravenFHD.py:359
+msgid "amber"
+msgstr "ambra"
+
+#: ActivateSkinSettings.py:23 ActivateSkinSettings.py:56 ActivateSkinSettings.py:268
+#: KravenFHD.py:62 KravenFHD.py:95 KravenFHD.py:307
+msgid "amber dark"
+msgstr "ambra scuro"
+
+#: ActivateSkinSettings.py:24 ActivateSkinSettings.py:58 ActivateSkinSettings.py:269
+#: ActivateSkinSettings.py:321 ActivateSkinSettings.py:455 ColorSelection.py:82
+#: KravenFHD.py:63 KravenFHD.py:97 KravenFHD.py:308 KravenFHD.py:360 KravenFHD.py:494
+msgid "blue"
+msgstr "blu"
+
+#: ActivateSkinSettings.py:25 ActivateSkinSettings.py:59 ActivateSkinSettings.py:270
+#: KravenFHD.py:64 KravenFHD.py:98 KravenFHD.py:309
+msgid "blue dark"
+msgstr "blu scuro"
+
+#: ActivateSkinSettings.py:26 ActivateSkinSettings.py:61 ActivateSkinSettings.py:271
+#: ActivateSkinSettings.py:322 KravenFHD.py:65 KravenFHD.py:100 KravenFHD.py:310
+#: KravenFHD.py:361
+msgid "brown"
+msgstr "marrone"
+
+#: ActivateSkinSettings.py:27 ActivateSkinSettings.py:62 ActivateSkinSettings.py:272
+#: KravenFHD.py:66 KravenFHD.py:101 KravenFHD.py:311
+msgid "brown dark"
+msgstr "marrone scuro"
+
+#: ActivateSkinSettings.py:28 ActivateSkinSettings.py:64 ActivateSkinSettings.py:275
+#: ActivateSkinSettings.py:323 KravenFHD.py:67 KravenFHD.py:103 KravenFHD.py:314
+#: KravenFHD.py:362
+msgid "cobalt"
+msgstr "cobalto"
+
+#: ActivateSkinSettings.py:29 ActivateSkinSettings.py:65 ActivateSkinSettings.py:276
+#: KravenFHD.py:68 KravenFHD.py:104 KravenFHD.py:315
+msgid "cobalt dark"
+msgstr "cobalto scuro"
+
+#: ActivateSkinSettings.py:30 ActivateSkinSettings.py:67 ActivateSkinSettings.py:277
+#: ActivateSkinSettings.py:324 KravenFHD.py:69 KravenFHD.py:106 KravenFHD.py:316
+#: KravenFHD.py:363
+msgid "cyan"
+msgstr "azzurro"
+
+#: ActivateSkinSettings.py:31 ActivateSkinSettings.py:68 ActivateSkinSettings.py:278
+#: KravenFHD.py:70 KravenFHD.py:107 KravenFHD.py:317
+msgid "cyan dark"
+msgstr "azzurro scuro"
+
+#: ActivateSkinSettings.py:32 ActivateSkinSettings.py:70 ActivateSkinSettings.py:279
+#: KravenFHD.py:71 KravenFHD.py:109 KravenFHD.py:318
+msgid "yellow"
+msgstr "giallo"
+
+#: ActivateSkinSettings.py:33 ActivateSkinSettings.py:71 ActivateSkinSettings.py:280
+#: ActivateSkinSettings.py:325 KravenFHD.py:72 KravenFHD.py:110 KravenFHD.py:319
+#: KravenFHD.py:364
+msgid "grey"
+msgstr "grigio"
+
+#: ActivateSkinSettings.py:34 ActivateSkinSettings.py:72 ActivateSkinSettings.py:281
+#: KravenFHD.py:73 KravenFHD.py:111 KravenFHD.py:320
+msgid "grey dark"
+msgstr "grigio scuro"
+
+#: ActivateSkinSettings.py:35 ActivateSkinSettings.py:74 ActivateSkinSettings.py:282
+#: ActivateSkinSettings.py:326 ActivateSkinSettings.py:454 ColorSelection.py:81
+#: KravenFHD.py:74 KravenFHD.py:113 KravenFHD.py:321 KravenFHD.py:365 KravenFHD.py:493
+msgid "green"
+msgstr "verde"
+
+#: ActivateSkinSettings.py:36 ActivateSkinSettings.py:75 ActivateSkinSettings.py:283
+#: KravenFHD.py:75 KravenFHD.py:114 KravenFHD.py:322
+msgid "green dark"
+msgstr "verde scuro"
+
+#: ActivateSkinSettings.py:37 ActivateSkinSettings.py:77 ActivateSkinSettings.py:284
+#: KravenFHD.py:76 KravenFHD.py:116 KravenFHD.py:323
+msgid "Kraven"
+msgstr "Kraven"
+
+#: ActivateSkinSettings.py:38 ActivateSkinSettings.py:78 ActivateSkinSettings.py:285
+#: KravenFHD.py:77 KravenFHD.py:117 KravenFHD.py:324
+msgid "Kraven dark"
+msgstr "Kraven scuro"
+
+#: ActivateSkinSettings.py:39 ActivateSkinSettings.py:80 ActivateSkinSettings.py:286
+#: KravenFHD.py:78 KravenFHD.py:119 KravenFHD.py:325
+msgid "olive"
+msgstr "oliva"
+
+#: ActivateSkinSettings.py:40 ActivateSkinSettings.py:81 ActivateSkinSettings.py:287
+#: KravenFHD.py:79 KravenFHD.py:120 KravenFHD.py:326
+msgid "olive dark"
+msgstr "oliva scuro"
+
+#: ActivateSkinSettings.py:41 ActivateSkinSettings.py:83 ActivateSkinSettings.py:288
+#: ActivateSkinSettings.py:327 KravenFHD.py:80 KravenFHD.py:122 KravenFHD.py:327
+#: KravenFHD.py:366
+msgid "orange"
+msgstr "arancione"
+
+#: ActivateSkinSettings.py:42 ActivateSkinSettings.py:84 ActivateSkinSettings.py:289
+#: KravenFHD.py:81 KravenFHD.py:123 KravenFHD.py:328
+msgid "orange dark"
+msgstr "arancione scuro"
+
+#: ActivateSkinSettings.py:43 ActivateSkinSettings.py:86 ActivateSkinSettings.py:290
+#: ActivateSkinSettings.py:328 KravenFHD.py:82 KravenFHD.py:125 KravenFHD.py:329
+#: KravenFHD.py:367
+msgid "pink"
+msgstr "rosa"
+
+#: ActivateSkinSettings.py:44 ActivateSkinSettings.py:87 ActivateSkinSettings.py:291
+#: KravenFHD.py:83 KravenFHD.py:126 KravenFHD.py:330
+msgid "pink dark"
+msgstr "rosa scuro"
+
+#: ActivateSkinSettings.py:45 ActivateSkinSettings.py:89 ActivateSkinSettings.py:292
+#: ActivateSkinSettings.py:329 ColorSelection.py:80 KravenFHD.py:84 KravenFHD.py:128
+#: KravenFHD.py:331 KravenFHD.py:368
+msgid "red"
+msgstr "rosso"
+
+#: ActivateSkinSettings.py:46 ActivateSkinSettings.py:90 ActivateSkinSettings.py:293
+#: KravenFHD.py:85 KravenFHD.py:129 KravenFHD.py:332
+msgid "red dark"
+msgstr "rosso scuro"
+
+#: ActivateSkinSettings.py:47 ActivateSkinSettings.py:92 ActivateSkinSettings.py:294
+#: ActivateSkinSettings.py:330 KravenFHD.py:86 KravenFHD.py:131 KravenFHD.py:333
+#: KravenFHD.py:369
+msgid "black"
+msgstr "nero"
+
+#: ActivateSkinSettings.py:48 ActivateSkinSettings.py:93 ActivateSkinSettings.py:295
+#: KravenFHD.py:87 KravenFHD.py:132 KravenFHD.py:334
+msgid "emerald"
+msgstr "verde smeraldo"
+
+#: ActivateSkinSettings.py:49 ActivateSkinSettings.py:94 ActivateSkinSettings.py:296
+#: ActivateSkinSettings.py:331 KravenFHD.py:88 KravenFHD.py:133 KravenFHD.py:335
+#: KravenFHD.py:370
+msgid "steel"
+msgstr "acciaio"
+
+#: ActivateSkinSettings.py:50 ActivateSkinSettings.py:95 ActivateSkinSettings.py:297
+#: KravenFHD.py:89 KravenFHD.py:134 KravenFHD.py:336
+msgid "steel dark"
+msgstr "acciaio scuro"
+
+#: ActivateSkinSettings.py:51 ActivateSkinSettings.py:97 ActivateSkinSettings.py:298
+#: ActivateSkinSettings.py:332 KravenFHD.py:90 KravenFHD.py:136 KravenFHD.py:337
+#: KravenFHD.py:371
+msgid "violet"
+msgstr "viola"
+
+#: ActivateSkinSettings.py:52 ActivateSkinSettings.py:98 ActivateSkinSettings.py:299
+#: KravenFHD.py:91 KravenFHD.py:137 KravenFHD.py:338
+msgid "violet dark"
+msgstr "viola scuro"
+
+#: ActivateSkinSettings.py:53 ActivateSkinSettings.py:100 ActivateSkinSettings.py:300
+#: ActivateSkinSettings.py:333 KravenFHD.py:92 KravenFHD.py:139 KravenFHD.py:339
+#: KravenFHD.py:372
+msgid "white"
+msgstr "bianco"
+
+#: ActivateSkinSettings.py:54 ActivateSkinSettings.py:115 ActivateSkinSettings.py:301
+#: ActivateSkinSettings.py:456 KravenFHD.py:93 KravenFHD.py:154 KravenFHD.py:340
+#: KravenFHD.py:495
+msgid "self"
+msgstr "stesso"
+
+#: ActivateSkinSettings.py:57 KravenFHD.py:96
+msgid "amber very dark"
+msgstr "ambra molto scuro"
+
+#: ActivateSkinSettings.py:60 KravenFHD.py:99
+msgid "blue very dark"
+msgstr "blu molto scuro"
+
+#: ActivateSkinSettings.py:63 KravenFHD.py:102
+msgid "brown very dark"
+msgstr "marrone molto scuro"
+
+#: ActivateSkinSettings.py:66 KravenFHD.py:105
+msgid "cobalt very dark"
+msgstr "cobalto molto scuro"
+
+#: ActivateSkinSettings.py:69 KravenFHD.py:108
+msgid "cyan very dark"
+msgstr "azzurro molto scuro"
+
+#: ActivateSkinSettings.py:73 KravenFHD.py:112
+msgid "grey very dark"
+msgstr "grigio molto scuro"
+
+#: ActivateSkinSettings.py:76 KravenFHD.py:115
+msgid "green very dark"
+msgstr "verde molto scuro"
+
+#: ActivateSkinSettings.py:79 KravenFHD.py:118
+msgid "Kraven very dark"
+msgstr "Kraven molto scuro"
+
+#: ActivateSkinSettings.py:82 KravenFHD.py:121
+msgid "olive very dark"
+msgstr "oliva molto scuro"
+
+#: ActivateSkinSettings.py:85 KravenFHD.py:124
+msgid "orange very dark"
+msgstr "arancione molto scuro"
+
+#: ActivateSkinSettings.py:88 KravenFHD.py:127
+msgid "pink very dark"
+msgstr "rosa molto scuro"
+
+#: ActivateSkinSettings.py:91 KravenFHD.py:130
+msgid "red very dark"
+msgstr "rosso molto scuro"
+
+#: ActivateSkinSettings.py:96 KravenFHD.py:135
+msgid "steel very dark"
+msgstr "acciaio molto scuro"
+
+#: ActivateSkinSettings.py:99 KravenFHD.py:138
+msgid "violet very dark"
+msgstr "viola molto scuro"
+
+#: ActivateSkinSettings.py:105 KravenFHD.py:144
+msgid "user texture"
+msgstr "trama dell’utente"
+
+#: ActivateSkinSettings.py:110 ActivateSkinSettings.py:119 ActivateSkinSettings.py:121
+#: KravenFHD.py:149 KravenFHD.py:158 KravenFHD.py:160
+msgid "texture"
+msgstr "trama"
+
+#: ActivateSkinSettings.py:113 ActivateSkinSettings.py:347 ActivateSkinSettings.py:352
+#: ActivateSkinSettings.py:354 ActivateSkinSettings.py:355 ActivateSkinSettings.py:401
+#: ActivateSkinSettings.py:438 ActivateSkinSettings.py:492 ActivateSkinSettings.py:504
+#: ActivateSkinSettings.py:508 ActivateSkinSettings.py:524 ActivateSkinSettings.py:525
+#: ActivateSkinSettings.py:526 ActivateSkinSettings.py:527 ActivateSkinSettings.py:528
+#: ActivateSkinSettings.py:545 ActivateSkinSettings.py:546 ActivateSkinSettings.py:590
+#: ActivateSkinSettings.py:593 ActivateSkinSettings.py:594 ActivateSkinSettings.py:601
+#: ActivateSkinSettings.py:602 ActivateSkinSettings.py:606 ActivateSkinSettings.py:656
+#: KravenFHD.py:152 KravenFHD.py:386 KravenFHD.py:391 KravenFHD.py:393 KravenFHD.py:394
+#: KravenFHD.py:440 KravenFHD.py:477 KravenFHD.py:531 KravenFHD.py:543 KravenFHD.py:547
+#: KravenFHD.py:563 KravenFHD.py:564 KravenFHD.py:565 KravenFHD.py:566 KravenFHD.py:567
+#: KravenFHD.py:584 KravenFHD.py:585 KravenFHD.py:629 KravenFHD.py:632 KravenFHD.py:633
+#: KravenFHD.py:640 KravenFHD.py:641 KravenFHD.py:645 KravenFHD.py:695
+msgid "off"
+msgstr "off"
+
+#: ActivateSkinSettings.py:117 ActivateSkinSettings.py:310 ActivateSkinSettings.py:311
+#: KravenFHD.py:156 KravenFHD.py:349 KravenFHD.py:350
+msgid "gradient"
+msgstr "gradiente"
+
+#: ActivateSkinSettings.py:122
+msgid "Deutsch"
+msgstr "Tedesco"
+
+#: ActivateSkinSettings.py:123 KravenFHD.py:162
+msgid "English"
+msgstr "Inglese"
+
+#: ActivateSkinSettings.py:124 KravenFHD.py:163
+msgid "Russian"
+msgstr "Russo"
+
+#: ActivateSkinSettings.py:125 KravenFHD.py:164
+msgid "Italian"
+msgstr "Italiano"
+
+#: ActivateSkinSettings.py:126 KravenFHD.py:165
+msgid "Spanish (es)"
+msgstr "Spagnolo (es)"
+
+#: ActivateSkinSettings.py:127 KravenFHD.py:166
+msgid "Spanish (sp)"
+msgstr "Spagnolo (sp)"
+
+#: ActivateSkinSettings.py:128 KravenFHD.py:167
+msgid "Ukrainian (uk)"
+msgstr "Ucraino (uk)"
+
+#: ActivateSkinSettings.py:129 KravenFHD.py:168
+msgid "Ukrainian (ua)"
+msgstr "Ucraino (ua)"
+
+#: ActivateSkinSettings.py:130 KravenFHD.py:169
+msgid "Portuguese"
+msgstr "Portoghese"
+
+#: ActivateSkinSettings.py:131 KravenFHD.py:170
+msgid "Romanian"
+msgstr "Rumeno"
+
+#: ActivateSkinSettings.py:132 KravenFHD.py:171
+msgid "Polish"
+msgstr "Polacco"
+
+#: ActivateSkinSettings.py:133 KravenFHD.py:172
+msgid "Finnish"
+msgstr "Finlandese"
+
+#: ActivateSkinSettings.py:134 KravenFHD.py:173
+msgid "Dutch"
+msgstr "Olandese"
+
+#: ActivateSkinSettings.py:135 KravenFHD.py:174
+msgid "French"
+msgstr "Francese"
+
+#: ActivateSkinSettings.py:136 KravenFHD.py:175
+msgid "Bulgarian"
+msgstr "Bulgaro"
+
+#: ActivateSkinSettings.py:137 KravenFHD.py:176
+msgid "Swedish (sv)"
+msgstr "Svedese (sv)"
+
+#: ActivateSkinSettings.py:138 KravenFHD.py:177
+msgid "Swedish (se)"
+msgstr "Svedese (se)"
+
+#: ActivateSkinSettings.py:139 KravenFHD.py:178
+msgid "Chinese Traditional"
+msgstr "Cinese tradizionale"
+
+#: ActivateSkinSettings.py:140 KravenFHD.py:179
+msgid "Chinese Simplified (zh)"
+msgstr "Cinese semplificato (zh)"
+
+#: ActivateSkinSettings.py:141 KravenFHD.py:180
+msgid "Chinese Simplified (zh_cn)"
+msgstr "Cinese semplificato (zh_cn)"
+
+#: ActivateSkinSettings.py:142 KravenFHD.py:181
+msgid "Turkish"
+msgstr "Turco"
+
+#: ActivateSkinSettings.py:143 KravenFHD.py:182
+msgid "Croatian"
+msgstr "Croato"
+
+#: ActivateSkinSettings.py:144 KravenFHD.py:183
+msgid "Catalan"
+msgstr "Catalano"
+
+#: ActivateSkinSettings.py:159 KravenFHD.py:198
+msgid "1"
+msgstr "1"
+
+#: ActivateSkinSettings.py:160 KravenFHD.py:199
+msgid "2"
+msgstr "2"
+
+#: ActivateSkinSettings.py:161 KravenFHD.py:200
+msgid "3"
+msgstr "3"
+
+#: ActivateSkinSettings.py:162 KravenFHD.py:201
+msgid "4"
+msgstr "4"
+
+#: ActivateSkinSettings.py:163 KravenFHD.py:202
+msgid "5"
+msgstr "5"
+
+#: ActivateSkinSettings.py:164 KravenFHD.py:203
+msgid "0 (hardcoded)"
+msgstr "0 (non modificabile)"
+
+#: ActivateSkinSettings.py:183 KravenFHD.py:222
+msgid "15"
+msgstr "15"
+
+#: ActivateSkinSettings.py:184 ActivateSkinSettings.py:406 ActivateSkinSettings.py:414
+#: ActivateSkinSettings.py:422 ActivateSkinSettings.py:428 KravenFHD.py:223 KravenFHD.py:445
+#: KravenFHD.py:453 KravenFHD.py:461 KravenFHD.py:467
+msgid "30"
+msgstr "30"
+
+#: ActivateSkinSettings.py:185 KravenFHD.py:224
+msgid "60"
+msgstr "60"
+
+#: ActivateSkinSettings.py:186 KravenFHD.py:225
+msgid "120"
+msgstr "120"
+
+#: ActivateSkinSettings.py:187 KravenFHD.py:226
+msgid "240"
+msgstr "240"
+
+#: ActivateSkinSettings.py:188 KravenFHD.py:227
+msgid "480"
+msgstr "480"
+
+#: ActivateSkinSettings.py:189 KravenFHD.py:228
+msgid "original"
+msgstr "originale"
+
+#: ActivateSkinSettings.py:190 KravenFHD.py:229
+msgid "with Border"
+msgstr "con bordo"
+
+#: ActivateSkinSettings.py:191 KravenFHD.py:230
+msgid "left"
+msgstr "sinistro"
+
+#: ActivateSkinSettings.py:192 KravenFHD.py:231
+msgid "right"
+msgstr "destro"
+
+#: ActivateSkinSettings.py:193 KravenFHD.py:232
+msgid "top"
+msgstr "sopra"
+
+#: ActivateSkinSettings.py:194 KravenFHD.py:233
+msgid "center"
+msgstr "centro"
+
+#: ActivateSkinSettings.py:273 KravenFHD.py:312
+msgid "colorfull"
+msgstr "colore pieno"
+
+#: ActivateSkinSettings.py:274 KravenFHD.py:313
+msgid "colorfull2"
+msgstr "colore pieno 2"
+
+#: ActivateSkinSettings.py:310 KravenFHD.py:349
+msgid "box"
+msgstr "box"
+
+#: ActivateSkinSettings.py:311 KravenFHD.py:350 KravenFHD.py:852 KravenFHD.py:890
+msgid "          Primary Color"
+msgstr "          Colore principale"
+
+#: ActivateSkinSettings.py:311 KravenFHD.py:350 KravenFHD.py:853 KravenFHD.py:891
+msgid "          Secondary Color"
+msgstr "          Colore secondario"
+
+#: ActivateSkinSettings.py:334 ActivateSkinSettings.py:357 ActivateSkinSettings.py:371
+#: ActivateSkinSettings.py:389 KravenFHD.py:373 KravenFHD.py:396 KravenFHD.py:410
+#: KravenFHD.py:428
+msgid "no Picon"
+msgstr "nessuna Picon"
+
+#: ActivateSkinSettings.py:335 KravenFHD.py:374
+msgid "X1"
+msgstr "X1"
+
+#: ActivateSkinSettings.py:336 KravenFHD.py:375
+msgid "X2"
+msgstr "X2"
+
+#: ActivateSkinSettings.py:337 KravenFHD.py:376
+msgid "X3"
+msgstr "X3"
+
+#: ActivateSkinSettings.py:338 KravenFHD.py:377
+msgid "X4"
+msgstr "X4"
+
+#: ActivateSkinSettings.py:339 KravenFHD.py:378
+msgid "Z1"
+msgstr "Z1"
+
+#: ActivateSkinSettings.py:340 KravenFHD.py:379
+msgid "Z2"
+msgstr "Z2"
+
+#: ActivateSkinSettings.py:341 KravenFHD.py:380
+msgid "ZZ1"
+msgstr "ZZ1"
+
+#: ActivateSkinSettings.py:342 KravenFHD.py:381
+msgid "ZZ2"
+msgstr "ZZ2"
+
+#: ActivateSkinSettings.py:343 KravenFHD.py:382
+msgid "ZZ3"
+msgstr "ZZ3"
+
+#: ActivateSkinSettings.py:344 KravenFHD.py:383
+msgid "ZZ4"
+msgstr "ZZ4"
+
+#: ActivateSkinSettings.py:345 KravenFHD.py:384
+msgid "ZZZ1"
+msgstr "ZZZ1"
+
+#: ActivateSkinSettings.py:346 KravenFHD.py:385
+msgid "ZZZ2"
+msgstr "ZZZ2"
+
+#: ActivateSkinSettings.py:348 KravenFHD.py:387
+msgid "Name small"
+msgstr "Nome piccolo"
+
+#: ActivateSkinSettings.py:349 KravenFHD.py:388
+msgid "Name & Number small"
+msgstr "nome & numerazione piccoli"
+
+#: ActivateSkinSettings.py:350 KravenFHD.py:389
+msgid "Name big"
+msgstr "Nome grande"
+
+#: ActivateSkinSettings.py:351 KravenFHD.py:390
+msgid "Name & Number big"
+msgstr "Numero & Nome grande"
+
+#: ActivateSkinSettings.py:352 KravenFHD.py:391
+msgid "Name"
+msgstr "Nome"
+
+#: ActivateSkinSettings.py:352 KravenFHD.py:391
+msgid "Name & Number"
+msgstr "Nome & Numerazione"
+
+#: ActivateSkinSettings.py:353 ActivateSkinSettings.py:432 ActivateSkinSettings.py:433
+#: ActivateSkinSettings.py:434 ActivateSkinSettings.py:452 ActivateSkinSettings.py:476
+#: ActivateSkinSettings.py:478 ActivateSkinSettings.py:479 ActivateSkinSettings.py:491
+#: ActivateSkinSettings.py:524 ActivateSkinSettings.py:547 ActivateSkinSettings.py:557
+#: ActivateSkinSettings.py:584 KravenFHD.py:392 KravenFHD.py:471 KravenFHD.py:472
+#: KravenFHD.py:473 KravenFHD.py:491 KravenFHD.py:515 KravenFHD.py:517 KravenFHD.py:518
+#: KravenFHD.py:530 KravenFHD.py:563 KravenFHD.py:586 KravenFHD.py:596 KravenFHD.py:623
+#: KravenFHD.py:1793
+msgid "small"
+msgstr "piccolo"
+
+#: ActivateSkinSettings.py:353 ActivateSkinSettings.py:506 ActivateSkinSettings.py:584
+#: KravenFHD.py:392 KravenFHD.py:545 KravenFHD.py:623
+msgid "middle"
+msgstr "medio"
+
+#: ActivateSkinSettings.py:353 ActivateSkinSettings.py:432 ActivateSkinSettings.py:433
+#: ActivateSkinSettings.py:434 ActivateSkinSettings.py:452 ActivateSkinSettings.py:476
+#: ActivateSkinSettings.py:478 ActivateSkinSettings.py:479 ActivateSkinSettings.py:491
+#: ActivateSkinSettings.py:524 ActivateSkinSettings.py:548 ActivateSkinSettings.py:557
+#: ActivateSkinSettings.py:584 KravenFHD.py:392 KravenFHD.py:471 KravenFHD.py:472
+#: KravenFHD.py:473 KravenFHD.py:491 KravenFHD.py:515 KravenFHD.py:517 KravenFHD.py:518
+#: KravenFHD.py:530 KravenFHD.py:563 KravenFHD.py:587 KravenFHD.py:596 KravenFHD.py:623
+#: KravenFHD.py:1795
+msgid "big"
+msgstr "grande"
+
+#: ActivateSkinSettings.py:354 KravenFHD.py:393 KravenFHD.py:1601
+msgid "typewriter"
+msgstr "macchina da scrivere"
+
+#: ActivateSkinSettings.py:354 KravenFHD.py:393 KravenFHD.py:1599
+msgid "runningtext"
+msgstr "testo scorrevole"
+
+#: ActivateSkinSettings.py:355 ActivateSkinSettings.py:401 ActivateSkinSettings.py:508
+#: ActivateSkinSettings.py:525 ActivateSkinSettings.py:526 ActivateSkinSettings.py:545
+#: ActivateSkinSettings.py:590 ActivateSkinSettings.py:593 ActivateSkinSettings.py:594
+#: ActivateSkinSettings.py:601 ActivateSkinSettings.py:602 ActivateSkinSettings.py:656
+#: KravenFHD.py:394 KravenFHD.py:440 KravenFHD.py:547 KravenFHD.py:564 KravenFHD.py:565
+#: KravenFHD.py:584 KravenFHD.py:629 KravenFHD.py:632 KravenFHD.py:633 KravenFHD.py:640
+#: KravenFHD.py:641 KravenFHD.py:695
+msgid "on"
+msgstr "on"
+
+#: ActivateSkinSettings.py:356 KravenFHD.py:395
+msgid "transparent"
+msgstr "trasparente"
+
+#: ActivateSkinSettings.py:356 ActivateSkinSettings.py:446 ActivateSkinSettings.py:466
+#: ActivateSkinSettings.py:474 ActivateSkinSettings.py:477 ActivateSkinSettings.py:488
+#: ActivateSkinSettings.py:553 ActivateSkinSettings.py:580 ActivateSkinSettings.py:583
+#: KravenFHD.py:395 KravenFHD.py:485 KravenFHD.py:505 KravenFHD.py:513 KravenFHD.py:516
+#: KravenFHD.py:527 KravenFHD.py:592 KravenFHD.py:619 KravenFHD.py:622
+msgid "MiniTV"
+msgstr "MiniTV"
+
+#: ActivateSkinSettings.py:358 ActivateSkinSettings.py:372 ActivateSkinSettings.py:390
+#: KravenFHD.py:397 KravenFHD.py:411 KravenFHD.py:429
+msgid "no Picon2"
+msgstr "nessuna picon 2"
+
+#: ActivateSkinSettings.py:359 ActivateSkinSettings.py:373 ActivateSkinSettings.py:391
+#: ActivateSkinSettings.py:439 KravenFHD.py:398 KravenFHD.py:412 KravenFHD.py:430
+#: KravenFHD.py:478
+msgid "X-Picons"
+msgstr "X-Picon"
+
+#: ActivateSkinSettings.py:360 ActivateSkinSettings.py:374 ActivateSkinSettings.py:392
+#: ActivateSkinSettings.py:440 KravenFHD.py:399 KravenFHD.py:413 KravenFHD.py:431
+#: KravenFHD.py:479
+msgid "Z-Picons"
+msgstr "Z-Picon"
+
+#: ActivateSkinSettings.py:361 ActivateSkinSettings.py:375 ActivateSkinSettings.py:393
+#: ActivateSkinSettings.py:441 KravenFHD.py:400 KravenFHD.py:414 KravenFHD.py:432
+#: KravenFHD.py:480
+msgid "ZZ-Picons"
+msgstr "ZZ-Picon"
+
+#: ActivateSkinSettings.py:362 ActivateSkinSettings.py:376 ActivateSkinSettings.py:394
+#: ActivateSkinSettings.py:442 KravenFHD.py:401 KravenFHD.py:415 KravenFHD.py:433
+#: KravenFHD.py:481
+msgid "ZZZ-Picons"
+msgstr "ZZZ-Picon"
+
+#: ActivateSkinSettings.py:363 ActivateSkinSettings.py:377 ActivateSkinSettings.py:395
+#: ActivateSkinSettings.py:447 ActivateSkinSettings.py:463 KravenFHD.py:402 KravenFHD.py:416
+#: KravenFHD.py:434 KravenFHD.py:486 KravenFHD.py:502
+msgid "MiniTV left"
+msgstr "MiniTV sinistra"
+
+#: ActivateSkinSettings.py:364 ActivateSkinSettings.py:378 ActivateSkinSettings.py:396
+#: ActivateSkinSettings.py:447 ActivateSkinSettings.py:462 KravenFHD.py:403 KravenFHD.py:417
+#: KravenFHD.py:435 KravenFHD.py:486 KravenFHD.py:501
+msgid "MiniTV right"
+msgstr "MiniTV destra"
+
+#: ActivateSkinSettings.py:365 ActivateSkinSettings.py:379 KravenFHD.py:404 KravenFHD.py:418
+msgid "Preview"
+msgstr "Riepilogo"
+
+#: ActivateSkinSettings.py:366 ActivateSkinSettings.py:383 ActivateSkinSettings.py:397
+#: KravenFHD.py:405 KravenFHD.py:422 KravenFHD.py:436
+msgid "Nobile"
+msgstr "Nobile"
+
+#: ActivateSkinSettings.py:367 ActivateSkinSettings.py:384 ActivateSkinSettings.py:398
+#: KravenFHD.py:406 KravenFHD.py:423 KravenFHD.py:437
+msgid "Nobile 2"
+msgstr "Nobile 2"
+
+#: ActivateSkinSettings.py:368 ActivateSkinSettings.py:385 ActivateSkinSettings.py:399
+#: KravenFHD.py:407 KravenFHD.py:424 KravenFHD.py:438
+msgid "Nobile MiniTV"
+msgstr "Nobile MiniTV"
+
+#: ActivateSkinSettings.py:369 ActivateSkinSettings.py:386 KravenFHD.py:408 KravenFHD.py:425
+msgid "Nobile Preview"
+msgstr "Anteprima Nobile"
+
+#: ActivateSkinSettings.py:370 ActivateSkinSettings.py:388 ActivateSkinSettings.py:400
+#: KravenFHD.py:409 KravenFHD.py:427 KravenFHD.py:439
+msgid "MiniTV Picon"
+msgstr "MiniTV Picon"
+
+#: ActivateSkinSettings.py:380 KravenFHD.py:419
+msgid "Extended Preview"
+msgstr "Anteprima avanzata"
+
+#: ActivateSkinSettings.py:381 KravenFHD.py:420
+msgid "Dual TV"
+msgstr "Dual TV"
+
+#: ActivateSkinSettings.py:382 KravenFHD.py:421
+msgid "Dual TV 2"
+msgstr "Dual TV 2"
+
+#: ActivateSkinSettings.py:387 KravenFHD.py:426
+msgid "Nobile Extended Preview"
+msgstr "Anteprima avanzata Nobile"
+
+#: ActivateSkinSettings.py:402 KravenFHD.py:441
+msgid "Zap (1xOK)"
+msgstr "Andare al canale (1x OK)"
+
+#: ActivateSkinSettings.py:402 KravenFHD.py:441
+msgid "Preview (2xOK)"
+msgstr "Anteprima (2x OK)"
+
+#: ActivateSkinSettings.py:404 ActivateSkinSettings.py:412 ActivateSkinSettings.py:420
+#: ActivateSkinSettings.py:426 KravenFHD.py:443 KravenFHD.py:451 KravenFHD.py:459
+#: KravenFHD.py:465
+msgid "24"
+msgstr "24"
+
+#: ActivateSkinSettings.py:405 ActivateSkinSettings.py:413 ActivateSkinSettings.py:421
+#: ActivateSkinSettings.py:427 KravenFHD.py:444 KravenFHD.py:452 KravenFHD.py:460
+#: KravenFHD.py:466
+msgid "27"
+msgstr "27"
+
+#: ActivateSkinSettings.py:407 ActivateSkinSettings.py:415 ActivateSkinSettings.py:423
+#: ActivateSkinSettings.py:429 KravenFHD.py:446 KravenFHD.py:454 KravenFHD.py:462
+#: KravenFHD.py:468
+msgid "33"
+msgstr "33"
+
+#: ActivateSkinSettings.py:408 ActivateSkinSettings.py:416 ActivateSkinSettings.py:424
+#: ActivateSkinSettings.py:430 KravenFHD.py:447 KravenFHD.py:455 KravenFHD.py:463
+#: KravenFHD.py:469
+msgid "36"
+msgstr "36"
+
+#: ActivateSkinSettings.py:409 ActivateSkinSettings.py:417 ActivateSkinSettings.py:425
+#: ActivateSkinSettings.py:431 KravenFHD.py:448 KravenFHD.py:456 KravenFHD.py:464
+#: KravenFHD.py:470
+msgid "39"
+msgstr "39"
+
+#: ActivateSkinSettings.py:410 ActivateSkinSettings.py:418 KravenFHD.py:449 KravenFHD.py:457
+msgid "42"
+msgstr "42"
+
+#: ActivateSkinSettings.py:411 ActivateSkinSettings.py:419 KravenFHD.py:450 KravenFHD.py:458
+msgid "45"
+msgstr "45"
+
+#: ActivateSkinSettings.py:446 KravenFHD.py:485
+msgid "Picon"
+msgstr "Picon"
+
+#: ActivateSkinSettings.py:447 KravenFHD.py:486
+msgid "no MiniTV"
+msgstr "nessuna MiniTV"
+
+#: ActivateSkinSettings.py:448 KravenFHD.py:487
+msgid "Text"
+msgstr "Testo"
+
+#: ActivateSkinSettings.py:449 KravenFHD.py:488
+msgid "Text with MiniTV"
+msgstr "Testo con MiniTV"
+
+#: ActivateSkinSettings.py:450 KravenFHD.py:489
+msgid "graphical"
+msgstr "grafico"
+
+#: ActivateSkinSettings.py:451 KravenFHD.py:490
+msgid "graphical with MiniTV"
+msgstr "grafico con MiniTV"
+
+#: ActivateSkinSettings.py:453 KravenFHD.py:492
+msgid "global selection background"
+msgstr "selezione generale sfondo"
+
+#: ActivateSkinSettings.py:464 KravenFHD.py:503
+msgid "description"
+msgstr "descrizione"
+
+#: ActivateSkinSettings.py:465 ActivateSkinSettings.py:466 ActivateSkinSettings.py:490
+#: KravenFHD.py:504 KravenFHD.py:505 KravenFHD.py:529
+msgid "full"
+msgstr "pieno"
+
+#: ActivateSkinSettings.py:470 ActivateSkinSettings.py:480 KravenFHD.py:509 KravenFHD.py:519
+msgid "no Cover"
+msgstr "nessuna copertina"
+
+#: ActivateSkinSettings.py:471 ActivateSkinSettings.py:481 KravenFHD.py:510 KravenFHD.py:520
+msgid "no Cover2"
+msgstr "nessuna copertina2"
+
+#: ActivateSkinSettings.py:472 ActivateSkinSettings.py:482 KravenFHD.py:511 KravenFHD.py:521
+msgid "small Cover"
+msgstr "copertina piccola"
+
+#: ActivateSkinSettings.py:473 ActivateSkinSettings.py:484 KravenFHD.py:512 KravenFHD.py:523
+msgid "big Cover"
+msgstr "copertina grande"
+
+#: ActivateSkinSettings.py:475 KravenFHD.py:514
+msgid "MiniTV + Cover"
+msgstr "MiniTV + Copertina"
+
+#: ActivateSkinSettings.py:477 ActivateSkinSettings.py:511 ActivateSkinSettings.py:518
+#: ActivateSkinSettings.py:612 ActivateSkinSettings.py:626 KravenFHD.py:516 KravenFHD.py:550
+#: KravenFHD.py:557 KravenFHD.py:651 KravenFHD.py:665
+msgid "standard"
+msgstr "standard"
+
+#: ActivateSkinSettings.py:483 KravenFHD.py:522
+msgid "small Cover2"
+msgstr "copertina piccola 2"
+
+#: ActivateSkinSettings.py:485 KravenFHD.py:524
+msgid "big Cover2"
+msgstr "copertina grande 2"
+
+#: ActivateSkinSettings.py:486 KravenFHD.py:525
+msgid "very big Cover"
+msgstr "copertina molto grande"
+
+#: ActivateSkinSettings.py:487 KravenFHD.py:526
+msgid "very big Cover2"
+msgstr "copertina 2 molto grande"
+
+#: ActivateSkinSettings.py:489 ActivateSkinSettings.py:554 KravenFHD.py:528 KravenFHD.py:593
+msgid "MiniTV2"
+msgstr "MiniTV2"
+
+#: ActivateSkinSettings.py:493 KravenFHD.py:532
+msgid "2 sec"
+msgstr "2 sec"
+
+#: ActivateSkinSettings.py:494 KravenFHD.py:533
+msgid "4 sec"
+msgstr "4 sec"
+
+#: ActivateSkinSettings.py:495 KravenFHD.py:534
+msgid "6 sec"
+msgstr "6 sec"
+
+#: ActivateSkinSettings.py:496 KravenFHD.py:535
+msgid "8 sec"
+msgstr "8 sec"
+
+#: ActivateSkinSettings.py:497 KravenFHD.py:536
+msgid "10 sec"
+msgstr "10 sec"
+
+#: ActivateSkinSettings.py:498 KravenFHD.py:537
+msgid "15 sec"
+msgstr "15 sec"
+
+#: ActivateSkinSettings.py:499 KravenFHD.py:538
+msgid "20 sec"
+msgstr "20 sec"
+
+#: ActivateSkinSettings.py:500 KravenFHD.py:539 KravenFHD.py:1604
+msgid "5 px/sec"
+msgstr "5 px/sec"
+
+#: ActivateSkinSettings.py:501 KravenFHD.py:540 KravenFHD.py:1606
+msgid "10 px/sec"
+msgstr "10 px/sec"
+
+#: ActivateSkinSettings.py:502 KravenFHD.py:541 KravenFHD.py:1608
+msgid "20 px/sec"
+msgstr "20 px/sec"
+
+#: ActivateSkinSettings.py:503 KravenFHD.py:542 KravenFHD.py:1610
+msgid "30 px/sec"
+msgstr "30 px/sec"
+
+#: ActivateSkinSettings.py:505 KravenFHD.py:544
+msgid "thin"
+msgstr "sottile"
+
+#: ActivateSkinSettings.py:507 KravenFHD.py:546
+msgid "wide"
+msgstr "largo"
+
+#: ActivateSkinSettings.py:509 ActivateSkinSettings.py:510 ActivateSkinSettings.py:592
+#: KravenFHD.py:548 KravenFHD.py:549 KravenFHD.py:631
+msgid "light"
+msgstr "chiaro"
+
+#: ActivateSkinSettings.py:509 ActivateSkinSettings.py:510 ActivateSkinSettings.py:592
+#: KravenFHD.py:548 KravenFHD.py:549 KravenFHD.py:631
+msgid "dark"
+msgstr "scuro"
+
+#: ActivateSkinSettings.py:512 ActivateSkinSettings.py:519 KravenFHD.py:551 KravenFHD.py:558
+msgid "standard big"
+msgstr "predefinita grande"
+
+#: ActivateSkinSettings.py:513 ActivateSkinSettings.py:520 KravenFHD.py:552 KravenFHD.py:559
+msgid "analog"
+msgstr "analogico"
+
+#: ActivateSkinSettings.py:514 ActivateSkinSettings.py:627 KravenFHD.py:553 KravenFHD.py:666
+msgid "android"
+msgstr "android"
+
+#: ActivateSkinSettings.py:515 ActivateSkinSettings.py:521 KravenFHD.py:554 KravenFHD.py:560
+msgid "colored"
+msgstr "colorato"
+
+#: ActivateSkinSettings.py:516 ActivateSkinSettings.py:522 ActivateSkinSettings.py:628
+#: KravenFHD.py:555 KravenFHD.py:561 KravenFHD.py:667
+msgid "flip"
+msgstr "capovolgi"
+
+#: ActivateSkinSettings.py:517 ActivateSkinSettings.py:629 KravenFHD.py:556 KravenFHD.py:668
+msgid "weather icon"
+msgstr "icona meteo"
+
+#: ActivateSkinSettings.py:523 KravenFHD.py:562
+msgid "144"
+msgstr "144"
+
+#: ActivateSkinSettings.py:523 KravenFHD.py:562
+msgid "192"
+msgstr "192"
+
+#: ActivateSkinSettings.py:526 KravenFHD.py:565
+msgid "NetatmoBar"
+msgstr "NetatmoBar"
+
+#: ActivateSkinSettings.py:529 KravenFHD.py:568 KravenFHD.py:1295 KravenFHD.py:1915
+msgid "Infobar"
+msgstr "Infobar"
+
+#: ActivateSkinSettings.py:530 KravenFHD.py:569 KravenFHD.py:1507 KravenFHD.py:1513
+#: KravenFHD.py:1516
+msgid "SecondInfobar"
+msgstr "Seconda InfoBar"
+
+#: ActivateSkinSettings.py:531 KravenFHD.py:570
+msgid "Infobar & SecondInfobar"
+msgstr "Infobar  & seconda Infobar"
+
+#: ActivateSkinSettings.py:532 KravenFHD.py:571
+msgid "not available with selected Infobar-Style"
+msgstr "non disponibile con lo stile Infobar selezionato"
+
+#: ActivateSkinSettings.py:533 ActivateSkinSettings.py:534 ActivateSkinSettings.py:540
+#: KravenFHD.py:572 KravenFHD.py:573 KravenFHD.py:579
+msgid "short with CAID"
+msgstr "breve con CAId"
+
+#: ActivateSkinSettings.py:533 ActivateSkinSettings.py:535 ActivateSkinSettings.py:541
+#: KravenFHD.py:572 KravenFHD.py:574 KravenFHD.py:580
+msgid "short with source"
+msgstr "breve con sorgente"
+
+#: ActivateSkinSettings.py:533 ActivateSkinSettings.py:536 ActivateSkinSettings.py:542
+#: KravenFHD.py:572 KravenFHD.py:575 KravenFHD.py:581
+msgid "compact"
+msgstr "compatto"
+
+#: ActivateSkinSettings.py:537 ActivateSkinSettings.py:543 KravenFHD.py:576 KravenFHD.py:582
+msgid "balanced"
+msgstr "bilanciato"
+
+#: ActivateSkinSettings.py:538 ActivateSkinSettings.py:544 KravenFHD.py:577 KravenFHD.py:583
+msgid "extensive"
+msgstr "dettagliato"
+
+#: ActivateSkinSettings.py:539 KravenFHD.py:578
+msgid "complete"
+msgstr "completo"
+
+#: ActivateSkinSettings.py:549 KravenFHD.py:588
+msgid "big + Sat"
+msgstr "grande + Sat"
+
+#: ActivateSkinSettings.py:550 KravenFHD.py:589
+msgid "top/bottom"
+msgstr "sopra / sotto"
+
+#: ActivateSkinSettings.py:551 KravenFHD.py:590
+msgid "left/right"
+msgstr "sinistra / destra"
+
+#: ActivateSkinSettings.py:552 KravenFHD.py:591
+msgid "single"
+msgstr "singolo"
+
+#: ActivateSkinSettings.py:555 KravenFHD.py:594 KravenFHD.py:969 KravenFHD.py:973
+#: KravenFHD.py:976 KravenFHD.py:996
+msgid "Weather"
+msgstr "Meteo"
+
+#: ActivateSkinSettings.py:556 KravenFHD.py:595
+msgid "Weather2"
+msgstr "Meteo2"
+
+#: ActivateSkinSettings.py:558 ActivateSkinSettings.py:564 ActivateSkinSettings.py:565
+#: KravenFHD.py:597 KravenFHD.py:603 KravenFHD.py:604 KravenFHD.py:1615 KravenFHD.py:1620
+#: KravenFHD.py:1627
+msgid "2 Tuner"
+msgstr "2 Tuner"
+
+#: ActivateSkinSettings.py:558 ActivateSkinSettings.py:564 ActivateSkinSettings.py:566
+#: KravenFHD.py:597 KravenFHD.py:603 KravenFHD.py:605 KravenFHD.py:1613 KravenFHD.py:1622
+#: KravenFHD.py:1629
+msgid "4 Tuner"
+msgstr "4 Tuner"
+
+#: ActivateSkinSettings.py:558 ActivateSkinSettings.py:564 ActivateSkinSettings.py:567
+#: KravenFHD.py:597 KravenFHD.py:603 KravenFHD.py:606 KravenFHD.py:1617 KravenFHD.py:1624
+#: KravenFHD.py:1631
+msgid "8 Tuner"
+msgstr "8 Tuner"
+
+#: ActivateSkinSettings.py:559 ActivateSkinSettings.py:560 KravenFHD.py:598 KravenFHD.py:599
+msgid "Tuner/Satellite + SNR"
+msgstr "Tuner/Satellite + SNR"
+
+#: ActivateSkinSettings.py:559 ActivateSkinSettings.py:562 KravenFHD.py:598 KravenFHD.py:601
+msgid "CPU + Load"
+msgstr "CPU + Carico"
+
+#: ActivateSkinSettings.py:559 ActivateSkinSettings.py:563 KravenFHD.py:598 KravenFHD.py:602
+msgid "Temperature + Fan"
+msgstr "Temperatura + ventola"
+
+#: ActivateSkinSettings.py:561 KravenFHD.py:600
+msgid "Tuner/Satellite + dB"
+msgstr "Tuner/Satellite + dB"
+
+#: ActivateSkinSettings.py:568 KravenFHD.py:607 KravenFHD.py:1633
+msgid "10 Tuner"
+msgstr "10 Tuner"
+
+#: ActivateSkinSettings.py:569 KravenFHD.py:608
+msgid "record blink"
+msgstr "registrazione lampeggiante"
+
+#: ActivateSkinSettings.py:569 KravenFHD.py:608
+msgid "record shine"
+msgstr "registrazione brillante"
+
+#: ActivateSkinSettings.py:570 KravenFHD.py:609
+msgid "record blink, tuner shine"
+msgstr "registrazione lampeggiante, tuner brillante"
+
+#: ActivateSkinSettings.py:571 KravenFHD.py:610
+msgid "record shine, tuner blink"
+msgstr "registrazione brillante, tuner lampeggiante"
+
+#: ActivateSkinSettings.py:572 KravenFHD.py:611
+msgid "record & tuner blink"
+msgstr "registrazione & tuner lampeggiante"
+
+#: ActivateSkinSettings.py:573 KravenFHD.py:612
+msgid "record & tuner shine"
+msgstr "illuminazione registrazione & tuner"
+
+#: ActivateSkinSettings.py:574 KravenFHD.py:613
+msgid "record blink, no record tuner"
+msgstr "registrazione lampeggiante, nessun tuner registrazione"
+
+#: ActivateSkinSettings.py:575 KravenFHD.py:614
+msgid "record shine, no record tuner"
+msgstr "registrazione brillante, nessun tuner registrazione"
+
+#: ActivateSkinSettings.py:576 KravenFHD.py:615
+msgid "tuner blink"
+msgstr "tuner lampeggiante"
+
+#: ActivateSkinSettings.py:576 KravenFHD.py:615
+msgid "tuner shine"
+msgstr "tuner brillante"
+
+#: ActivateSkinSettings.py:576 KravenFHD.py:615
+msgid "no record tuner"
+msgstr "nessun tuner in registrazione"
+
+#: ActivateSkinSettings.py:577 KravenFHD.py:616
+msgid "in all Screens"
+msgstr "in tutte le schermate"
+
+#: ActivateSkinSettings.py:577 KravenFHD.py:616
+msgid "only Infobar, SecondInfobar & Players"
+msgstr "solo Infobar, seconda Infobar & lettori"
+
+#: ActivateSkinSettings.py:578 KravenFHD.py:617
+msgid "KravenFHD"
+msgstr "KravenFHD"
+
+#: ActivateSkinSettings.py:579 ActivateSkinSettings.py:583 KravenFHD.py:618 KravenFHD.py:622
+msgid "Logo"
+msgstr "Logo"
+
+#: ActivateSkinSettings.py:581 KravenFHD.py:620
+msgid "Icons"
+msgstr "Icone"
+
+#: ActivateSkinSettings.py:582 KravenFHD.py:621
+msgid "MiniTV + Icons"
+msgstr "MiniTV + Icone"
+
+#: ActivateSkinSettings.py:585 KravenFHD.py:624
+msgid "stony272"
+msgstr "stony272"
+
+#: ActivateSkinSettings.py:586 KravenFHD.py:625
+msgid "stony272-metal"
+msgstr "stony272-metallo"
+
+#: ActivateSkinSettings.py:587 KravenFHD.py:626
+msgid "stony272-gold-round"
+msgstr "stony272 oro rotonda"
+
+#: ActivateSkinSettings.py:588 KravenFHD.py:627
+msgid "stony272-gold-square"
+msgstr "stony272 oro quadrata"
+
+#: ActivateSkinSettings.py:589 KravenFHD.py:628
+msgid "rennmaus-kleiner.teufel"
+msgstr "topo da corsa-piccolo diavolo"
+
+#: ActivateSkinSettings.py:591 KravenFHD.py:630
+msgid "Icon"
+msgstr "Icon"
+
+#: ActivateSkinSettings.py:591 KravenFHD.py:630
+msgid "Meteo"
+msgstr "Meteo"
+
+#: ActivateSkinSettings.py:603 KravenFHD.py:642
+msgid "center big"
+msgstr "centrato grande"
+
+#: ActivateSkinSettings.py:604 KravenFHD.py:643
+msgid "center small"
+msgstr "centrato piccolo"
+
+#: ActivateSkinSettings.py:605 KravenFHD.py:644
+msgid "left small"
+msgstr "sinistro piccolo"
+
+#: ActivateSkinSettings.py:609 KravenFHD.py:648
+msgid "without description"
+msgstr "senza descrizione"
+
+#: ActivateSkinSettings.py:609 KravenFHD.py:648
+msgid "with description"
+msgstr "con descrizione"
+
+#: ActivateSkinSettings.py:610 KravenFHD.py:649
+msgid "horizontal"
+msgstr "orizzontale"
+
+#: ActivateSkinSettings.py:610 KravenFHD.py:649
+msgid "vertical"
+msgstr "verticale"
+
+#: ActivateSkinSettings.py:611 KravenFHD.py:650
+msgid "standard layout"
+msgstr "layout predefinito"
+
+#: ActivateSkinSettings.py:611 KravenFHD.py:650
+msgid "medium font with EPG Info"
+msgstr "carattere medio con info canale"
+
+#: ActivateSkinSettings.py:611 KravenFHD.py:650
+msgid "big font with EPG Info"
+msgstr "carattere grande con info canale"
+
+#: ActivateSkinSettings.py:613 KravenFHD.py:652
+msgid "Style 1"
+msgstr "Stile 1"
+
+#: ActivateSkinSettings.py:614 KravenFHD.py:653
+msgid "Style 2"
+msgstr "Stile 2"
+
+#: ActivateSkinSettings.py:615 KravenFHD.py:654
+msgid "Style 3"
+msgstr "Stile 3"
+
+#: ActivateSkinSettings.py:616 KravenFHD.py:655
+msgid "Style 4"
+msgstr "Stile 4"
+
+#: ActivateSkinSettings.py:617 KravenFHD.py:656
+msgid "Style 5"
+msgstr "Stile 5"
+
+#: ActivateSkinSettings.py:620 KravenFHD.py:659
+msgid "OpenWeatherMap"
+msgstr "OpenWeatherMap"
+
+#: ActivateSkinSettings.py:620 KravenFHD.py:659
+msgid "Accuweather"
+msgstr "Accuweather"
+
+#: ActivateSkinSettings.py:621 KravenFHD.py:660
+msgid "Auto (IP)"
+msgstr "Auto (IP)"
+
+#: ActivateSkinSettings.py:621 KravenFHD.py:660 KravenFHD.py:983
+msgid "Search String"
+msgstr "Ricerca stringa"
+
+#: ActivateSkinSettings.py:666 KravenFHD.py:705
+msgid "infobar colors big"
+msgstr "colori Infobar grandi"
+
+#: ActivateSkinSettings.py:667 KravenFHD.py:706
+msgid "infobar colors small"
+msgstr "colori Infobar piccoli"
+
+#: ActivateSkinSettings.py:668 KravenFHD.py:707
+msgid "global colors big"
+msgstr "colori generali grandi"
+
+#: ActivateSkinSettings.py:669 KravenFHD.py:708
+msgid "global colors small"
+msgstr "colori generali piccoli"
+
+#: ActivateSkinSettings.py:670 KravenFHD.py:709
+msgid "transparent big"
+msgstr "grande trasparente"
+
+#: ActivateSkinSettings.py:671 KravenFHD.py:710
+msgid "transparent small"
+msgstr "piccolo trasparente"
+
+#: ActivateSkinSettings.py:672 KravenFHD.py:711
+msgid "not available for openATV"
+msgstr "non disponibile per openATV"
+
+#: ActivateSkinSettings.py:673 KravenFHD.py:712
+msgid "not available for teamBlue"
+msgstr "non disponibile per teamBlue"
+
+#: ActivateSkinSettings.py:674 KravenFHD.py:713
+msgid "-3"
+msgstr "-3"
+
+#: ActivateSkinSettings.py:675 KravenFHD.py:714
+msgid "-2"
+msgstr "-2"
+
+#: ActivateSkinSettings.py:676 KravenFHD.py:715
+msgid "-1"
+msgstr "-1"
+
+#: ActivateSkinSettings.py:677 KravenFHD.py:716
+msgid "0"
+msgstr "0"
+
+#: ActivateSkinSettings.py:678 KravenFHD.py:717
+msgid "+1"
+msgstr "+1"
+
+#: ActivateSkinSettings.py:679 KravenFHD.py:718
+msgid "+2"
+msgstr "+2"
+
+#: ActivateSkinSettings.py:680 KravenFHD.py:719
+msgid "+3"
+msgstr "+3"
+
+#: ActivateSkinSettings.py:3401 ActivateSkinSettings.py:3403 ActivateSkinSettings.py:3433
+#: KravenFHD.py:5478 KravenFHD.py:5480 KravenFHD.py:5510
+msgid "No data for IP"
+msgstr "nessun dato per IP"
+
+#: ActivateSkinSettings.py:3419 ActivateSkinSettings.py:3448 KravenFHD.py:5496
+#: KravenFHD.py:5525
+msgid "API requests exceeded"
+msgstr "Richieste API superate"
+
+#: ActivateSkinSettings.py:3421 ActivateSkinSettings.py:3450 KravenFHD.py:5498
+#: KravenFHD.py:5527
+msgid "API authorization failed"
+msgstr "autorizzazione API FALLITA"
+
+#: ActivateSkinSettings.py:3435 ActivateSkinSettings.py:3462 KravenFHD.py:5512
+#: KravenFHD.py:5539
+msgid "No Accu ID found"
+msgstr "Nessun ID Accu trovato"
+
+#: ColorSelection.py:62 KravenFHD.py:4398
+msgid "Exit"
+msgstr "Esci"
+
+#: ColorSelection.py:63
+msgid "Save Color"
+msgstr "Salva colore"
+
+#: ColorSelection.py:64
+msgid "Color Selection"
+msgstr "Selezione colore"
+
+#: KravenFHD.py:161
+msgid "German"
+msgstr "Tedesco"
+
+#: KravenFHD.py:770
+msgid "FAQs"
+msgstr "FAQs"
+
+#: KravenFHD.py:771
+msgid "Save skin"
+msgstr "Salva la skin"
+
+#: KravenFHD.py:774 plugin.py:35 plugin.py:47 plugin.py:49 plugin.py:51 plugin.py:54
+#: plugin.py:55 plugin.py:58 plugin.py:60
+msgid "Configuration tool for KravenFHD"
+msgstr "Strumento configurazioni KravenFHD"
+
+#: KravenFHD.py:806
+msgid "About"
+msgstr "Info"
+
+#: KravenFHD.py:806
+msgid ""
+"The KravenFHD skin will be generated by this plugin according to your preferences. Make "
+"your settings and watch the changes in the preview window above. When finished, save your "
+"skin by pressing the green button and restart the GUI."
+msgstr ""
+"La Skin KravenHD verrà generata da questo plugin in base alle proprie preferenze. "
+"Effettuare le impostazioni e osservare i cambiamenti nella finestra anteprima. Al termine, "
+"salvare la Skin premendo il tasto verde e riavviare la GUI."
+
+#: KravenFHD.py:808
+msgid "PROFILES __________________________________________________________________"
+msgstr "PROFILI _______________________________________________________________________"
+
+#: KravenFHD.py:808
+msgid ""
+"This sections offers all profile settings. Different settings can be saved, modified, "
+"shared and cloned. Read the FAQs."
+msgstr ""
+"Questa sezione offre tutte le impostazioni profili. Diverse impostazioni possono essere "
+"salvate, modificate, condivise e clonate. Leggere le FAQ."
+
+#: KravenFHD.py:809
+msgid "Active Profile / Save"
+msgstr "Profilo attivo / SALVA"
+
+#: KravenFHD.py:809
+msgid ""
+"Select the profile you want to work with. Profiles are saved automatically on switching "
+"them or by pressing the OK button. New profiles will be generated based on the actual one. "
+"Profiles are interchangeable between boxes."
+msgstr ""
+"Selezionare il profilo di lavoro. I profili vengono salvati automaticamente commutando o "
+"premendo il tasto OK. I nuovi profili vengono generati sulla base di quello attuale. I "
+"profili sono intercambiabili tra i decoder."
+
+#: KravenFHD.py:810
+msgid "Default Profile / Reset"
+msgstr "Profilo predefinito / RIPRISTINA"
+
+#: KravenFHD.py:810
+msgid ""
+"Select the default profile you want to use when resetting the active profile (OK button). "
+"You can add your own default profiles under /etc/enigma2/kravenfhd_default_n (n<=20)."
+msgstr ""
+"Selezionare il profilo predefinito da utilizzare al ripristino del profilo attivo (Tasto "
+"OK). È possibile aggiungere i propri profili predefiniti in /etc/enigma2/"
+"kravenfhd_default_n (n<=20)."
+
+#: KravenFHD.py:812
+msgid "SYSTEM ____________________________________________________________________"
+msgstr "SiSTEMA ______________________________________________________________________"
+
+#: KravenFHD.py:812
+msgid "This sections offers all basic settings."
+msgstr "Questa sezione offre tutte le impostazioni di base."
+
+#: KravenFHD.py:813
+msgid "Icons (except Infobar)"
+msgstr "Icone (eccetto Infobar)"
+
+#: KravenFHD.py:813
+msgid ""
+"Choose between light and dark icons in system screens. The icons in the infobars are not "
+"affected."
+msgstr ""
+"Scegliere nelle schermate del sistema tra icone chiare/scure. Le icone della infobar non "
+"verranno interessate"
+
+#: KravenFHD.py:814
+msgid "Running Text (Delay)"
+msgstr "Testo scorrevole (ritardo >>)"
+
+#: KravenFHD.py:814
+msgid "Choose the start delay for running text."
+msgstr "Ritardo prima dell'avvio testo >>"
+
+#: KravenFHD.py:816
+msgid "Running Text (Speed)"
+msgstr "Testo scorrevole (velocità >>)"
+
+#: KravenFHD.py:816
+msgid "Choose the speed for running text."
+msgstr "Scegliere la velocità del testo >>"
+
+#: KravenFHD.py:820 KravenFHD.py:822
+msgid "Scrollbars"
+msgstr "Barra scorrevole"
+
+#: KravenFHD.py:820
+msgid "Choose the width of scrollbars in lists or deactivate scrollbars completely."
+msgstr ""
+"Scegliere la larghezza delle barre scorrevoli negli elenchi o disattivarle completamente"
+
+#: KravenFHD.py:822
+msgid "Choose whether scrollbars should be shown."
+msgstr "Scegliere se visualizzare la barra scorrevole"
+
+#: KravenFHD.py:823
+msgid "Show Infobar-Background"
+msgstr "Visualizza infobar nello sfondo"
+
+#: KravenFHD.py:823
+msgid ""
+"Choose whether you want to see the infobar background in all screens (bicolored "
+"background)."
+msgstr ""
+"Scegliere se mostrare lo sfondo della Infobar in tutte le schermate (sfondo bicolore)."
+
+#: KravenFHD.py:825 KravenFHD.py:839
+msgid "Menus"
+msgstr "Menu"
+
+#: KravenFHD.py:825 KravenFHD.py:839
+msgid ""
+"Choose from different options to display the system menus. Press red button for the FAQs "
+"with details on installing menu icons."
+msgstr ""
+"Scegliere tra le diverse opzioni di visualizzazione nel menu di sistema. Premere il tasto "
+"rosso per le FAQ dettagliate installazione icone dei menu"
+
+#: KravenFHD.py:827
+msgid "Menu-Icons"
+msgstr "Menu icone"
+
+#: KravenFHD.py:827
+msgid ""
+"Choose from different icon sets for the menu screens. Many thanks to rennmaus and kleiner."
+"teufel for their icon set."
+msgstr ""
+"Scegliere tra i set di icone per le schermate menu. Grazie a rennmaus e kleiner.teufel per "
+"i set icone messi a disposizione"
+
+#: KravenFHD.py:831 KravenFHD.py:841
+msgid "Menu-Transparency"
+msgstr "Trasparenza menu"
+
+#: KravenFHD.py:831 KravenFHD.py:841
+msgid "Choose the degree of background transparency for system menu screens."
+msgstr "Scegliere il grado di trasparenza sfondo per le schermate nel menu di sistema"
+
+#: KravenFHD.py:834 KravenFHD.py:844
+msgid "Mainmenu Fontsize"
+msgstr "Dimensione carattere menu principale"
+
+#: KravenFHD.py:834 KravenFHD.py:844
+msgid "Choose the font size of mainmenus."
+msgstr "Scegliere la dimensione del carattere dei menu principali."
+
+#: KravenFHD.py:849
+msgid "GLOBAL COLORS _____________________________________________________________"
+msgstr "COLORi GENERALI ____________________________________________________________"
+
+#: KravenFHD.py:849
+msgid "This sections offers offers all basic color settings."
+msgstr "Questa sezione offre tutte le impostazioni dei colori di base"
+
+#: KravenFHD.py:850
+msgid "Background"
+msgstr "Sfondo"
+
+#: KravenFHD.py:850
+msgid ""
+"Choose the background for all screens. You can choose from a list of predefined colors or "
+"textures, create your own color using RGB sliders or define a color gradient."
+msgstr ""
+"Scegliere lo sfondo per tutti gli schermi. È possibile scegliere tra un elenco di colori o "
+"strutture predefinite, creare il proprio colore usando i cursori RGB o definire una "
+"sfumatura di colore."
+
+#: KravenFHD.py:852
+msgid ""
+"Choose the primary color for the background gradient. Press OK to define your own RGB "
+"color."
+msgstr ""
+"Scegliere il colore principale della sfumatura di sfondo. Premere OK per definire il "
+"proprio colore RGB"
+
+#: KravenFHD.py:853
+msgid ""
+"Choose the secondary color for the background gradient. Press OK to define your own RGB "
+"color."
+msgstr ""
+"Scegliere il colore secondario per la sfumatura di sfondo. Premere OK per definire il "
+"proprio colore RGB"
+
+#: KravenFHD.py:856 KravenFHD.py:894 KravenFHD.py:898
+msgid "          Texture"
+msgstr "          Trama"
+
+#: KravenFHD.py:856
+msgid "Choose the texture for the background."
+msgstr "Scegliere la trama per lo sfondo."
+
+#: KravenFHD.py:857 KravenFHD.py:895 KravenFHD.py:899
+msgid "          Alternate Color"
+msgstr "          Colore alternativo"
+
+#: KravenFHD.py:857
+msgid ""
+"Choose the alternate color for the background. It should match the texture at the best. "
+"Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore alternativo delle infobar. Dovrebbe abbinarsi al meglio alla trama. "
+"Premere OK per definire il proprio colore RGB"
+
+#: KravenFHD.py:861
+msgid "Background-Transparency"
+msgstr "Trasparenza sfondo"
+
+#: KravenFHD.py:861
+msgid ""
+"Choose the degree of background transparency for all screens except system menus and "
+"channellists."
+msgstr ""
+"Scegliere il grado di trasparenza sfondo per tutti gli schermi tranne i menu di sistema e "
+"liste canali"
+
+#: KravenFHD.py:862
+msgid "Listselection"
+msgstr "Selezione liste"
+
+#: KravenFHD.py:862
+msgid "Choose the background color of selection bars. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore sfondo delle barre selezione. Premere OK per definire il proprio "
+"colore RGB"
+
+#: KravenFHD.py:863
+msgid "Listselection-Border"
+msgstr "Bordo selezione liste"
+
+#: KravenFHD.py:863
+msgid ""
+"Choose the border color of selection bars or deactivate borders completely. Press OK to "
+"define your own RGB color."
+msgstr ""
+"Scegliere il colore bordo della barra selezione o disattivarlo completamente. Premere OK "
+"per definire il proprio colore RGB"
+
+#: KravenFHD.py:864
+msgid "Listselection-Font"
+msgstr "Carattere selezione liste"
+
+#: KravenFHD.py:864
+msgid ""
+"Choose the color of the font in selection bars. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore carattere nella barra selezione. Premere OK per definire il proprio "
+"colore RGB"
+
+#: KravenFHD.py:865
+msgid "Progress-/Volumebar"
+msgstr "Avanzamento barra volume"
+
+#: KravenFHD.py:865
+msgid "Choose the color of progress bars. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore della barra di avanzamento. Premere OK per definire il proprio colore "
+"RGB."
+
+#: KravenFHD.py:866
+msgid "Progress-Border"
+msgstr "Bordo barra avanzamento"
+
+#: KravenFHD.py:866
+msgid "Choose the border color of progress bars. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore bordo delle barre di avanzamento. Premere OK per definire il proprio "
+"colore RGB"
+
+#: KravenFHD.py:867
+msgid "MiniTV-Border"
+msgstr "Bordo MiniTV"
+
+#: KravenFHD.py:867
+msgid "Choose the border color of MiniTV's. Press OK to define your own RGB color."
+msgstr "Scegliere il colore bordo MiniTV. Premere OK per definire il proprio colore RGB"
+
+#: KravenFHD.py:868
+msgid "Lines"
+msgstr "Linee"
+
+#: KravenFHD.py:868
+msgid ""
+"Choose the color of all lines. This affects dividers as well as the line in the center of "
+"some progress bars. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore per tutte le linee. Questo influisce sui divisori e sulla linea "
+"centrale di alcune barre di avanzamento. Premere OK per definire il proprio colore RGB"
+
+#: KravenFHD.py:869
+msgid "Primary-Font"
+msgstr "Carattere principale"
+
+#: KravenFHD.py:869
+msgid ""
+"Choose the color of the primary font. The primary font is used for list items, textboxes "
+"and other important information. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore del carattere principale. Questo viene utilizzato per le voci di "
+"elenchi, le caselle di testo e altre informazioni importanti. Premere OK per definire il "
+"proprio colore RGB"
+
+#: KravenFHD.py:870
+msgid "Secondary-Font"
+msgstr "Carattere secondario"
+
+#: KravenFHD.py:870
+msgid ""
+"Choose the color of the secondary font. The secondary font is used for headers, labels and "
+"other additional information. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore del carattere secondario. Questo viene utilizzato per intestazioni, "
+"etichette e informazioni supplementari"
+
+#: KravenFHD.py:871
+msgid "Marking-Font"
+msgstr "Carattere contrassegnato"
+
+#: KravenFHD.py:871
+msgid "Choose the font color of marked list items. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore del carattere delle voci di elenco contrassegnate. Premere OK per "
+"definire il proprio colore RGB"
+
+#: KravenFHD.py:872
+msgid "Colorbutton-Font"
+msgstr "Carattere colore tasti"
+
+#: KravenFHD.py:872
+msgid ""
+"Choose the font color of the color button labels. Press OK to define your own RGB color."
+msgstr "Scegliere il colore carattere tasto. Premere OK per definire il proprio colore RGB"
+
+#: KravenFHD.py:873
+msgid "Unskinned Colors"
+msgstr "Colori non della skin"
+
+#: KravenFHD.py:873
+msgid ""
+"Choose whether some foreground and background colors of unskinned screens are changed or "
+"not."
+msgstr ""
+"Scegliere se alcuni colori di primo piano/sfondo di schermi non “skinnati” vengono "
+"modificati"
+
+#: KravenFHD.py:878
+msgid "INFOBAR-LOOK _________________________________________________________________"
+msgstr "ASPETTO INFOBAR _______________________________________________________________"
+
+#: KravenFHD.py:878
+msgid "This sections offers all settings for the infobar-look."
+msgstr "Questa sezione offre tutte le impostazioni per l'aspetto della Infobar"
+
+#: KravenFHD.py:879
+msgid "Infobar-Style"
+msgstr "Stile infobar"
+
+#: KravenFHD.py:879
+msgid ""
+"Choose from different infobar styles. Please note that not every style provides every "
+"feature. Therefore some features might be unavailable for the chosen style."
+msgstr ""
+"Scegliere tra diversi stili Infobar. Ogni stile fornisce tutte le funzionalità. Pertanto "
+"alcune funzioni potrebbero non essere disponibili per lo stile scelto"
+
+#: KravenFHD.py:880
+msgid "Infobar-Background-Style"
+msgstr "Stile sfondo infobar"
+
+#: KravenFHD.py:880
+msgid "Choose from different infobar background styles."
+msgstr "Scegliere fra diversi stili di sfondo Infobar"
+
+#: KravenFHD.py:882
+msgid "Infobar-Box-Line"
+msgstr "Linea infobar box"
+
+#: KravenFHD.py:882
+msgid "Choose the color of the infobar box lines. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore delle linee di dialogo della Infobar. Premere OK per definire il "
+"proprio colore RGB."
+
+#: KravenFHD.py:886 KravenFHD.py:888
+msgid "Infobar-Background"
+msgstr "Sfondo infobar"
+
+#: KravenFHD.py:886
+msgid ""
+"Choose the background for the infobars. You can choose from a list of predefined colors or "
+"textures or create your own color using RGB sliders."
+msgstr ""
+"Scegliere il colore dello sfondo infobar. È possibile scegliere da un elenco di colori "
+"predefiniti o creare il proprio colore utilizzando i cursori RGB"
+
+#: KravenFHD.py:888
+msgid ""
+"Choose the background for the infobars. You can choose from a list of predefined colors or "
+"textures, create your own color using RGB sliders or define a color gradient."
+msgstr ""
+"Scegliere lo sfondo Infobar. È possibile scegliere da un elenco di colori predefiniti / "
+"trame, creare il proprio colore utilizzando i cursori RGB o definire una sfumatura"
+
+#: KravenFHD.py:890
+msgid ""
+"Choose the primary color for the infobar gradient. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore principale della sfumatura Infobar. Premere OK per definire il proprio "
+"colore RGB"
+
+#: KravenFHD.py:891
+msgid ""
+"Choose the secondary color for the infobar gradient. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore secondario della sfumatura Infobar. Premere OK per definire il proprio "
+"colore RGB"
+
+#: KravenFHD.py:892
+msgid "          Info Panels"
+msgstr "          Pannello info"
+
+#: KravenFHD.py:892
+msgid "Choose gradient or color for the info panels (Sysinfos, Timeshiftbar etc.)."
+msgstr ""
+"Scegliere la sfumatura o il colore per i pannelli di informazione (info sistema, barra "
+"Timeshift etc.)"
+
+#: KravenFHD.py:894 KravenFHD.py:898
+msgid "Choose the texture for the infobars."
+msgstr "Scegliere la struttura per l'infobar."
+
+#: KravenFHD.py:895 KravenFHD.py:899
+msgid ""
+"Choose the alternate color for the infobars. It should match the texture at the best. "
+"Press OK to define your own RGB color."
+msgstr ""
+"Scegli il colore alternativo per le infobar. Dovrebbe abbinarsi al meglio alla trama. "
+"Premere OK per definire il proprio colore RGB"
+
+#: KravenFHD.py:903
+msgid "Infobar-Transparency"
+msgstr "Trasparenza Infobar"
+
+#: KravenFHD.py:903
+msgid "Choose the degree of background transparency for the infobars."
+msgstr "Scegliere il grado di trasparenza dello sfondo infobar"
+
+#: KravenFHD.py:904
+msgid "Primary-Infobar-Font"
+msgstr "Carattere Infobar primaria"
+
+#: KravenFHD.py:904
+msgid "Choose the color of the primary infobar font. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore carattere della Infobar primaria. Premere OK per definire il proprio "
+"colore RGB"
+
+#: KravenFHD.py:905
+msgid "Secondary-Infobar-Font"
+msgstr "Carattere Infobar secondaria"
+
+#: KravenFHD.py:905
+msgid ""
+"Choose the color of the secondary infobar font. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore del carattere della Infobar secondaria. Premere OK per definire il "
+"proprio colore RGB"
+
+#: KravenFHD.py:906
+msgid "Infobar-Icons"
+msgstr "Icone Infobar"
+
+#: KravenFHD.py:906
+msgid "Choose between light and dark infobar icons."
+msgstr "Scegliere tra icone chiare/scure nella barra informazioni."
+
+#: KravenFHD.py:907
+msgid "Eventname Fontsize"
+msgstr "Dimensione carattere nome evento"
+
+#: KravenFHD.py:907
+msgid "Choose the font size of eventname."
+msgstr "Scegliere la dimensione carattere nome evento."
+
+#: KravenFHD.py:908
+msgid "Eventname effect"
+msgstr "Effetto nome evento"
+
+#: KravenFHD.py:908
+msgid "Choose from different effects to display eventname."
+msgstr "Scegliere tra diversi effetti per visualizzare il nome eventi"
+
+#: KravenFHD.py:913
+msgid "INFOBAR-CONTENTS _____________________________________________________________"
+msgstr "CONTENUTI INFOBAR____________________________________________________________"
+
+#: KravenFHD.py:913
+msgid "This sections offers all settings for infobar-contents."
+msgstr ""
+"Questa sezione offre tutte le impostazioni del contenuto per la barra delle informazioni"
+
+#: KravenFHD.py:915 KravenFHD.py:917 KravenFHD.py:919
+msgid "Tuner number"
+msgstr "Numero tuner"
+
+#: KravenFHD.py:915 KravenFHD.py:917 KravenFHD.py:919
+msgid "Choose from different options to display tuner."
+msgstr "Scegliere tra diverse opzioni di visualizzazione del Tuner"
+
+#: KravenFHD.py:923 KravenFHD.py:925 KravenFHD.py:927 KravenFHD.py:930 KravenFHD.py:932
+msgid "Record-State"
+msgstr "Stato registrazione"
+
+#: KravenFHD.py:923 KravenFHD.py:925 KravenFHD.py:927 KravenFHD.py:930 KravenFHD.py:932
+msgid "Choose from different options to display recording state."
+msgstr "Scegliere tra le diverse opzioni di visualizzazione dello stato di registrazione"
+
+#: KravenFHD.py:937 KravenFHD.py:939
+msgid "Infobox-Contents"
+msgstr "Contenuti info box"
+
+#: KravenFHD.py:937 KravenFHD.py:939
+msgid "Choose which informations will be shown in the info box."
+msgstr "Scegliere quali informazioni verranno mostrate nella finestra info"
+
+#: KravenFHD.py:943 KravenFHD.py:949
+msgid "Channelname/-number"
+msgstr "Nome canale / Numero"
+
+#: KravenFHD.py:943 KravenFHD.py:949
+msgid "Choose from different options to show the channel name and number in the infobar."
+msgstr ""
+"Scegliere tra diverse opzioni per visualizzare il nome /numero del canale nella Infobar"
+
+#: KravenFHD.py:945 KravenFHD.py:951
+msgid "Channelname/-number-Font"
+msgstr "Carattere numerazione & nome canale"
+
+#: KravenFHD.py:945 KravenFHD.py:951
+msgid ""
+"Choose the font color of channel name and number. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore carattere del nome / numero del canale . Premere OK per definire il "
+"proprio colore RGB"
+
+#: KravenFHD.py:954
+msgid "System-Infos"
+msgstr "Informazioni di sistema"
+
+#: KravenFHD.py:954
+msgid ""
+"Choose from different additional windows with system informations or deactivate them "
+"completely."
+msgstr ""
+"Scegliere tra diverse finestre aggiuntive con informazioni di sistema o disattivarle "
+"completamente"
+
+#: KravenFHD.py:959
+msgid "SECONDINFOBAR _____________________________________________________________"
+msgstr "SECONDA INFOBAR ____________________________________________________________"
+
+#: KravenFHD.py:959
+msgid "This sections offers all settings for SecondInfobar."
+msgstr "Questa sezione offre tutte le impostazioni per la ll infobar"
+
+#: KravenFHD.py:960
+msgid "SecondInfobar-Style"
+msgstr "Stile seconda infobar"
+
+#: KravenFHD.py:960
+msgid "Choose from different styles for SecondInfobar."
+msgstr "Scegliere tra stili diversi per seconda Infobar"
+
+#: KravenFHD.py:961
+msgid "SecondInfobar Fontsize"
+msgstr "Dimensione carattere seconda infobar"
+
+#: KravenFHD.py:961
+msgid "Choose the font size of SecondInfobar."
+msgstr "Scegliere la dimensione carattere della 2° Infobar"
+
+#: KravenFHD.py:966
+msgid "WEATHER ___________________________________________________________________"
+msgstr "METEO ________________________________________________________________________"
+
+#: KravenFHD.py:966
+msgid "This sections offers all weather settings."
+msgstr "Questa sezione offre tutte le impostazioni Meteo"
+
+#: KravenFHD.py:969
+msgid "Choose from different options to show the weather in the infobar."
+msgstr "Scegliere tra le diverse opzioni di visualizzazione del meteo nella infobar"
+
+#: KravenFHD.py:973 KravenFHD.py:976
+msgid "Activate or deactivate displaying the weather in the infobar."
+msgstr "Attivare o disattivare la visualizzazione del meteo nella infobar"
+
+#: KravenFHD.py:978
+msgid "Server"
+msgstr "Server"
+
+#: KravenFHD.py:978
+msgid "Choose from different servers for the weather data."
+msgstr "Scegliere tra diversi server per i dati meteo"
+
+#: KravenFHD.py:980
+msgid "Accuweather API Key"
+msgstr "Chiave API Accuweather"
+
+#: KravenFHD.py:980
+msgid ""
+"Press OK to enter your API Key.\n"
+"You will receive the key at\n"
+"https://developer.accuweather.com/."
+msgstr ""
+"Premere OK per inserire la chiave API.\n"
+"La chiave sarà disponibile su\n"
+"https: //developer.accuweather.com/"
+
+#: KravenFHD.py:981
+msgid "Search by"
+msgstr "Cerca per"
+
+#: KravenFHD.py:981
+msgid "Choose from different options to specify your location."
+msgstr "Scegliere tra le diverse opzioni per specificare la posizione"
+
+#: KravenFHD.py:983
+msgid ""
+"Specify any search string for your location (zip/city/district/state single or combined). "
+"Press OK to use the virtual keyboard. Step up or down in the menu to start the search."
+msgstr ""
+"Specificare qualsiasi stringa per la località (cap / città / quartiere / città, singoli o "
+"combinati). Premere OK per usare la tastiera virtuale. Passo su/giù nel menu per avviare "
+"la ricerca"
+
+#: KravenFHD.py:988
+msgid "Language"
+msgstr "Lingua"
+
+#: KravenFHD.py:988
+msgid "Specify the language for the weather output."
+msgstr "Specificare la lingua per le previsioni meteo"
+
+#: KravenFHD.py:989
+msgid "Refresh interval (in minutes)"
+msgstr "Intervallo aggiornamento (in minuti)"
+
+#: KravenFHD.py:989
+msgid "Choose the frequency of loading weather data from the internet."
+msgstr "Scegliere la frequenza di caricamento dati meteo da Internet"
+
+#: KravenFHD.py:990
+msgid "Weather-Style"
+msgstr "Stile Meteo"
+
+#: KravenFHD.py:990
+msgid "Choose between graphical weather symbols and Meteo symbols."
+msgstr "Scegliere tra simboli grafici meteo e simboli meteo"
+
+#: KravenFHD.py:992
+msgid "Meteo-Color"
+msgstr "Colore Meteo"
+
+#: KravenFHD.py:992
+msgid "Choose between light and dark Meteo symbols."
+msgstr "Scegliere fra le icone chiare/scure meteo"
+
+#: KravenFHD.py:996
+msgid "You have no internet connection. This function is disabled."
+msgstr "Non si dispone di alcuna connessione Internet. Questa funzione è disabilitata"
+
+#: KravenFHD.py:1004
+msgid "CLOCK _____________________________________________________________________"
+msgstr "OROLOGIO ___________________________________________________________________"
+
+#: KravenFHD.py:1004
+msgid "This sections offers all settings for the different clocks."
+msgstr "Questa sezione offre tutte le impostazioni per differenti orologi"
+
+#: KravenFHD.py:1006 KravenFHD.py:1017
+msgid "Clock-Style"
+msgstr "Stile orologio"
+
+#: KravenFHD.py:1006 KravenFHD.py:1017
+msgid "Choose from different options to show the clock in the infobar."
+msgstr "Scegliere tra le diverse opzioni per la visualizzazione dell'orologio nella infobar"
+
+#: KravenFHD.py:1009
+msgid "Analog-Clock-Color"
+msgstr "Colore Orologio Analogico"
+
+#: KravenFHD.py:1009
+msgid "Choose from different colors for the analog type clock in the infobar."
+msgstr "Scegliere tra i diversi colori per l'orologio analogico nella infobar"
+
+#: KravenFHD.py:1011 KravenFHD.py:1285
+msgid "Android-Temp-Color"
+msgstr "Colore Temperatura Android"
+
+#: KravenFHD.py:1011 KravenFHD.py:1285
+msgid ""
+"Choose the font color of android-clock temperature. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore carattere di android orologio e temperatura. Premere OK per definire "
+"il proprio colore RGB"
+
+#: KravenFHD.py:1013
+msgid "Weather-Icon-Size"
+msgstr "Dimensioni icona meteo"
+
+#: KravenFHD.py:1013
+msgid "Choose the size of the icon for 'weather icon' clock."
+msgstr "Scegliere le dimensioni icona per orologio 'icona meteo'"
+
+#: KravenFHD.py:1025
+msgid "ECM INFOS _________________________________________________________________"
+msgstr "INFORMAZIONI ECM ___________________________________________________________"
+
+#: KravenFHD.py:1025
+msgid "This sections offers all settings for showing the decryption infos."
+msgstr ""
+"Questa sezione offre tutte le impostazioni per la visualizzazione info di crittografia"
+
+#: KravenFHD.py:1027 KravenFHD.py:1029
+msgid "Show ECM Infos"
+msgstr "Mostra informazioni ECM"
+
+#: KravenFHD.py:1027
+msgid "Choose from different options where to display the ECM informations."
+msgstr "Scegliere tra le diverse opzioni dove visualizzare le informazioni ECM"
+
+#: KravenFHD.py:1031 KravenFHD.py:1035 KravenFHD.py:1039 KravenFHD.py:1297
+msgid "ECM Infos"
+msgstr "Informazioni ECM"
+
+#: KravenFHD.py:1031 KravenFHD.py:1035 KravenFHD.py:1039
+msgid "Choose from different options to display the ECM informations."
+msgstr "Scegliere tra diverse opzioni per la visualizzazione delle informazioni ECM"
+
+#: KravenFHD.py:1032 KravenFHD.py:1036 KravenFHD.py:1040
+msgid "Show 'free to air'"
+msgstr "Mostra canali non criptati"
+
+#: KravenFHD.py:1032 KravenFHD.py:1036 KravenFHD.py:1040
+msgid "Choose whether 'free to air' is displayed or not for unencrypted channels."
+msgstr "Scegliere se visualizzare 'free to air' per canali non criptati"
+
+#: KravenFHD.py:1033 KravenFHD.py:1037 KravenFHD.py:1041
+msgid "ECM-Font"
+msgstr "Carattere ECM"
+
+#: KravenFHD.py:1033 KravenFHD.py:1037 KravenFHD.py:1041
+msgid "Choose the font color of the ECM information. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore carattere informazioni ECM. Premere OK per definire il proprio colore "
+"RGB"
+
+#: KravenFHD.py:1048
+msgid "VIEWS _____________________________________________________________________"
+msgstr "VISUALIZZAZIONE ____________________________________________________________"
+
+#: KravenFHD.py:1048
+msgid "This sections offers all settings for skinned plugins."
+msgstr "Questa sezione offre tutte le impostazioni per Plugin Skin"
+
+#: KravenFHD.py:1049
+msgid "Volume"
+msgstr "Volume"
+
+#: KravenFHD.py:1049
+msgid "Choose from different styles for the volume display."
+msgstr "Scegliere tra stili diversi per la visualizzazione del volume"
+
+#: KravenFHD.py:1050
+msgid "CoolTVGuide"
+msgstr "Guida CoolTV"
+
+#: KravenFHD.py:1050
+msgid "Choose from different styles for CoolTVGuide."
+msgstr "Scegliere tra stili diversi per guida CoolTV"
+
+#: KravenFHD.py:1051
+msgid "SerienRecorder"
+msgstr "SerienRecorder"
+
+#: KravenFHD.py:1051
+msgid ""
+"Choose whether you want the Kraven skin to be applied to 'Serienrecorder' or not. "
+"Activation of this option prohibits the skin selection in the SR-plugin."
+msgstr ""
+"Scegliere se applicare la Skin Kraven a 'Serienrecorder'. L'attivazione di questa opzione "
+"impedisce la selezione della Skin nel SR-plugin."
+
+#: KravenFHD.py:1053
+msgid "MediaPortal"
+msgstr "MediaPortal"
+
+#: KravenFHD.py:1053
+msgid ""
+"Choose whether you want the Kraven skin to be applied to 'MediaPortal' or not. To remove "
+"it again, you must deactivate it here and activate another skin in 'MediaPortal'."
+msgstr ""
+"Scegliere se applicare la Skin Kraven a 'MediaPortal'. Per rimuoverla, è necessario "
+"disattivarla e attivare una Skin diversa in 'MediaPortal'"
+
+#: KravenFHD.py:1057
+msgid "SplitScreen"
+msgstr "Schermo diviso"
+
+#: KravenFHD.py:1057
+msgid "Choose from different styles to display SplitScreen."
+msgstr "Scegliere tra stili diversi per schermo diviso."
+
+#: KravenFHD.py:1059
+msgid "FileCommander"
+msgstr "File Commander"
+
+#: KravenFHD.py:1059
+msgid "Choose from different styles to display FileCommander."
+msgstr "Scegliere tra diversi stili per visualizzare FileCommander"
+
+#: KravenFHD.py:1066
+msgid "PERMANENTCLOCK __________________________________________________________"
+msgstr "OROLOGIO PERMANENTE ___________________________________________________"
+
+#: KravenFHD.py:1066
+msgid "This sections offers all settings for PermanentClock."
+msgstr "Questa sezione offre tutte le impostazioni PermanentClock"
+
+#: KravenFHD.py:1067
+msgid "PermanentClock-Color"
+msgstr "Colore PermanentClock"
+
+#: KravenFHD.py:1067
+msgid "Choose the colors of PermanentClock."
+msgstr "Scegliere i colori PermanentClock"
+
+#: KravenFHD.py:1069
+msgid "PermanentClock-Font"
+msgstr "Carattere PermanentClock"
+
+#: KravenFHD.py:1069
+msgid "Choose the font color of PermanentClock. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore carattere per PermanentClock. Premere OK per definire il proprio "
+"colore RGB"
+
+#: KravenFHD.py:1076
+msgid "CHANNELLIST _______________________________________________________________"
+msgstr "LISTE CANALI _________________________________________________________________"
+
+#: KravenFHD.py:1076
+msgid "This sections offers all channellist settings."
+msgstr "Questa sezione offre tutte le impostazioni liste canali"
+
+#: KravenFHD.py:1078
+msgid "use alternative (horizontal) channellist"
+msgstr "uso alternative lista canali (orizzontale)"
+
+#: KravenFHD.py:1078
+msgid "Choose whether use alternative horizontal channellist or not."
+msgstr "Scegliere se usare SI/NO in alternativa alla lista canali orizzontali"
+
+#: KravenFHD.py:1081 KravenFHD.py:1084 KravenFHD.py:1118 KravenFHD.py:1134 KravenFHD.py:1137
+#: KravenFHD.py:1164
+msgid "Channellist-Style"
+msgstr "Stile lista canali"
+
+#: KravenFHD.py:1081 KravenFHD.py:1084 KravenFHD.py:1118 KravenFHD.py:1134 KravenFHD.py:1137
+#: KravenFHD.py:1164
+msgid "Choose from different styles for the channel selection screen."
+msgstr "Scegliere tra stili diversi per la schermata selezione del canale"
+
+#: KravenFHD.py:1086
+msgid "VTi-EPGList"
+msgstr "VTi- elenco EPG"
+
+#: KravenFHD.py:1086
+msgid "Choose whether use VTi-EPGList in channellist or not."
+msgstr "Scegliere se utilizzare SI/NO VTi elenco EPG nella lista canali"
+
+#: KravenFHD.py:1088 KravenFHD.py:1140
+msgid "Channellist-Mode"
+msgstr "Modalità lista canali"
+
+#: KravenFHD.py:1088 KravenFHD.py:1140
+msgid "Choose between direct zapping (1xOK) and zapping after preview (2xOK)."
+msgstr "Scegliere tra zap diretto (1x OK) e zap dopo l'anteprima (2x OK)"
+
+#: KravenFHD.py:1092 KravenFHD.py:1144 KravenFHD.py:1167
+msgid "Channellist-Transparenz"
+msgstr "Trasparenza lista canali"
+
+#: KravenFHD.py:1092 KravenFHD.py:1144 KravenFHD.py:1167
+msgid "Choose the degree of background transparency for the channellists."
+msgstr "Scegliere il grado di trasparenza di sfondo per le liste canali"
+
+#: KravenFHD.py:1096 KravenFHD.py:1099
+msgid "Servicenumber/-name Fontsize"
+msgstr "Nome dimensione carattere / Numero canale"
+
+#: KravenFHD.py:1096 KravenFHD.py:1099
+msgid "Choose the font size of channelnumber and channelname."
+msgstr "Scegliere la dimensione carattere della numerazione e nome canale"
+
+#: KravenFHD.py:1097 KravenFHD.py:1100
+msgid "Serviceinfo Fontsize"
+msgstr "Dimensioni caratteri per informazioni canali"
+
+#: KravenFHD.py:1097 KravenFHD.py:1100
+msgid "Choose the font size of serviceinformation."
+msgstr "Scegliere la dimensione carattere informazione di servizio"
+
+#: KravenFHD.py:1102 KravenFHD.py:1104 KravenFHD.py:1106 KravenFHD.py:1148 KravenFHD.py:1150
+#: KravenFHD.py:1152 KravenFHD.py:1171 KravenFHD.py:1173 KravenFHD.py:1198 KravenFHD.py:1259
+#: KravenFHD.py:1277
+msgid "EPG Fontsize"
+msgstr "Dimensione carattere EPG"
+
+#: KravenFHD.py:1102 KravenFHD.py:1106 KravenFHD.py:1148 KravenFHD.py:1152 KravenFHD.py:1171
+#: KravenFHD.py:1173
+msgid "Choose the font size of event description, EPG list and primetime."
+msgstr "Scegliere la dimensione carattere descrizione evento, elenco EPG e prima serata"
+
+#: KravenFHD.py:1104 KravenFHD.py:1150
+msgid "Choose the font size of EPG list and primetime."
+msgstr "Scegliere la dimensione del carattere dell'elenco EPG e prima serata"
+
+#: KravenFHD.py:1107 KravenFHD.py:1119 KravenFHD.py:1153 KravenFHD.py:1174
+msgid "'Not available'-Font"
+msgstr "carattere 'non disponibile'"
+
+#: KravenFHD.py:1107 KravenFHD.py:1119 KravenFHD.py:1153 KravenFHD.py:1174
+msgid ""
+"Choose the font color of channels that are unavailable at the moment. Press OK to define "
+"your own RGB color."
+msgstr ""
+"Scegliere il colore carattere canali momentaneamente non disponibili. Premere OK per "
+"definire il proprio colore RGB"
+
+#: KravenFHD.py:1108 KravenFHD.py:1121 KravenFHD.py:1154 KravenFHD.py:1175
+msgid "Primetime"
+msgstr "Prima serata"
+
+#: KravenFHD.py:1108 KravenFHD.py:1121 KravenFHD.py:1154 KravenFHD.py:1175
+msgid "Choose whether primetime program information is displayed or not."
+msgstr "Scegliere se mostrare SI/NO informazioni sul programma in prima serata"
+
+#: KravenFHD.py:1110 KravenFHD.py:1123 KravenFHD.py:1156 KravenFHD.py:1177
+msgid "Primetime-Time"
+msgstr "Orario prima serata"
+
+#: KravenFHD.py:1110 KravenFHD.py:1123 KravenFHD.py:1156 KravenFHD.py:1177
+msgid "Specify the time for your primetime."
+msgstr "Specificare l'orario per prima serata."
+
+#: KravenFHD.py:1111 KravenFHD.py:1124 KravenFHD.py:1157 KravenFHD.py:1178
+msgid "Primetime-Font"
+msgstr "Carattere prima serata"
+
+#: KravenFHD.py:1111 KravenFHD.py:1124 KravenFHD.py:1157 KravenFHD.py:1178
+msgid ""
+"Choose the font color of the primetime information. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore carattere informazioni prima serata. Premere OK per definire il "
+"proprio colore RGB"
+
+#: KravenFHD.py:1185
+msgid "NUMBERZAP ________________________________________________________________"
+msgstr "NUMERAZIONE ZAP _________________________________________________________________"
+
+#: KravenFHD.py:1185
+msgid "This sections offers all settings for NumberZap."
+msgstr "Questa sezione offre tutte le impostazioni per Zap numerico"
+
+#: KravenFHD.py:1186
+msgid "NumberZap-Style"
+msgstr "Stile numerazione zap"
+
+#: KravenFHD.py:1186
+msgid "Choose from different styles for NumberZap."
+msgstr "Scegliere tra stili diversi per Zap numerico"
+
+#: KravenFHD.py:1188 KravenFHD.py:1207 KravenFHD.py:1214 KravenFHD.py:1222 KravenFHD.py:1231
+#: KravenFHD.py:1234 KravenFHD.py:1237
+msgid "Border Color"
+msgstr "Colore bordo"
+
+#: KravenFHD.py:1188
+msgid "Choose the border color for NumberZap. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore bordo per NumberZap. Premere OK per definire il proprio colore RGB"
+
+#: KravenFHD.py:1195
+msgid "EPGSELECTION ____________________________________________________________"
+msgstr "SELEZIONE EPG __________________________________________________________________"
+
+#: KravenFHD.py:1195
+msgid "This sections offers all settings for EPGSelection."
+msgstr "Questa sezione offre tutte le impostazioni selezione EPG"
+
+#: KravenFHD.py:1196
+msgid "EPGSelection-Style"
+msgstr "Stile selezione EPG"
+
+#: KravenFHD.py:1196
+msgid "Choose from different styles to display EPGSelection."
+msgstr "Scegliere tra stili diversi di visualizzazione della selezione EPG"
+
+#: KravenFHD.py:1197
+msgid "EPG-List Fontsize"
+msgstr "Dimensioni caratteri lista EPG"
+
+#: KravenFHD.py:1197
+msgid "Choose the font size of EPG-List."
+msgstr "Scegliere la dimensione carattere della lista EPG"
+
+#: KravenFHD.py:1198 KravenFHD.py:1206 KravenFHD.py:1212 KravenFHD.py:1221 KravenFHD.py:1259
+#: KravenFHD.py:1277
+msgid "Choose the font size of event description."
+msgstr "Scegliere la dimensione carattere della descrizione evento"
+
+#: KravenFHD.py:1204 KravenFHD.py:1219
+msgid "GRAPHMULTIEPG ___________________________________________________________"
+msgstr "EPG GRAFICI MULTIPLI____________________________________________________________"
+
+#: KravenFHD.py:1204 KravenFHD.py:1219
+msgid "This sections offers all settings for GraphMultiEPG."
+msgstr "Questa sezione offre tutte le impostazioni GraphMultiEPG"
+
+#: KravenFHD.py:1205 KravenFHD.py:1220
+msgid "GraphMultiEPG-Style"
+msgstr "Stile GraphMultiEPG"
+
+#: KravenFHD.py:1205 KravenFHD.py:1220
+msgid "Choose from different styles for GraphMultiEPG."
+msgstr "Scegliere tra stili diversi per GraphMultiEPG"
+
+#: KravenFHD.py:1206 KravenFHD.py:1212 KravenFHD.py:1221
+msgid "Event Description Fontsize"
+msgstr "Dimensione carattere descrizione eventi"
+
+#: KravenFHD.py:1207
+msgid "Choose the border color for GraphMultiEPG. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore del bordo GraphMultiEPG. Premere OK per definire il proprio colore RGB"
+
+#: KravenFHD.py:1208 KravenFHD.py:1215 KravenFHD.py:1223
+msgid "Selected Event Background"
+msgstr "Sfondo selezione eventi"
+
+#: KravenFHD.py:1208
+msgid ""
+"Choose the background color of selected events for GraphMultiEPG. Press OK to define your "
+"own RGB color."
+msgstr ""
+"Scegliere il colore sfondo GraphMultiEPG degli eventi selezionati. Premere OK per definire "
+"il proprio colore RGB"
+
+#: KravenFHD.py:1210
+msgid "GRAPHICALEPG _____________________________________________________________"
+msgstr "EPG GRAFICI _____________________________________________________________________"
+
+#: KravenFHD.py:1210
+msgid "This sections offers all settings for GraphicalEPG."
+msgstr "Questa sezione offre tutte le impostazioni EPG grafici"
+
+#: KravenFHD.py:1211
+msgid "GraphicalEPG-Style"
+msgstr "Stile EPG grafico"
+
+#: KravenFHD.py:1211
+msgid "Choose from different styles for GraphicalEPG."
+msgstr "Scegliere tra stili diversi per EPG grafici"
+
+#: KravenFHD.py:1214
+msgid "Choose the border color for GraphicalEPG. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore bordo GraphicalEPG. Premere OK per definire il proprio colore RGB"
+
+#: KravenFHD.py:1215
+msgid ""
+"Choose the background color of selected events for GraphicalEPG. Press OK to define your "
+"own RGB color."
+msgstr ""
+"Scegliere il colore sfondo GraphicalEPG degli eventi selezionati. Premere OK per definire "
+"il proprio colore RGB"
+
+#: KravenFHD.py:1228
+msgid "VERTICALEPG ______________________________________________________________"
+msgstr "EPG VERTICALI ___________________________________________________________________"
+
+#: KravenFHD.py:1228
+msgid "This sections offers all settings for VerticalEPG."
+msgstr "Questa sezione offre tutte le impostazioni EPG verticali"
+
+#: KravenFHD.py:1230 KravenFHD.py:1233 KravenFHD.py:1236
+msgid "VerticalEPG-Style"
+msgstr "Stile EPG verticale"
+
+#: KravenFHD.py:1230 KravenFHD.py:1233
+msgid "Choose from different styles for VerticalEPG."
+msgstr "Scegliere tra stili diversi per EPG verticali"
+
+#: KravenFHD.py:1231 KravenFHD.py:1234
+msgid "Choose the border color for VerticalEPG. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore bordo per EPG verticale. Premere OK per definire il proprio colore RGB"
+
+#: KravenFHD.py:1242
+msgid "TIMEREDITSCREEN ___________________________________________________________"
+msgstr "SCHERMATA MODIFICA TIMER _______________________________________________"
+
+#: KravenFHD.py:1242
+msgid "This sections offers all settings for TimerEditScreen."
+msgstr "Questa sezione offre tutte le impostazioni modifica schermate Timer"
+
+#: KravenFHD.py:1244 KravenFHD.py:1247 KravenFHD.py:1250
+msgid "TimerEdit-Style"
+msgstr "Stile modifica Timer"
+
+#: KravenFHD.py:1244
+msgid "Choose from different styles to display TimerEditScreen."
+msgstr "Scegliere tra stili diversi per visualizzare modifica schermate Timer"
+
+#: KravenFHD.py:1245 KravenFHD.py:1248 KravenFHD.py:1251
+msgid "TimerList-Style"
+msgstr "Stile liste Timer"
+
+#: KravenFHD.py:1245
+msgid "Choose from different styles to display TimerList."
+msgstr "Scegliere tra stili diversi per visualizzare liste Timer"
+
+#: KravenFHD.py:1256
+msgid "ENHANCED MOVIE CENTER _____________________________________________________"
+msgstr "CENTRO REGISTRAZIONI AVANZATO ______________________________________________"
+
+#: KravenFHD.py:1256
+msgid "This sections offers all settings for EMC ('EnhancedMovieCenter')."
+msgstr "Questa sezione offre tutte le impostazioni per EMC ('centro registr. avanzato')"
+
+#: KravenFHD.py:1257
+msgid "EMC-Style"
+msgstr "Stile EMC"
+
+#: KravenFHD.py:1257
+msgid "Choose from different styles for EnhancedMovieCenter."
+msgstr "Scegliere tra stili diversi per centro registrazioni avanzato"
+
+#: KravenFHD.py:1262
+msgid "Unwatched Color"
+msgstr "Colore registrazioni non viste"
+
+#: KravenFHD.py:1262
+msgid "Choose the font color of unwatched movies. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore carattere delle registrazioni non viste. Premere OK per definire il "
+"proprio colore RGB"
+
+#: KravenFHD.py:1263
+msgid "Watching Color"
+msgstr "Colore registrazioni parzialmente viste"
+
+#: KravenFHD.py:1263
+msgid "Choose the font color of watching movies. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore carattere della registrazione da vedere. Premere OK per definire il "
+"proprio colore RGB"
+
+#: KravenFHD.py:1264
+msgid "Finished Color"
+msgstr "Colore registrazioni viste"
+
+#: KravenFHD.py:1264
+msgid "Choose the font color of watched movies. Press OK to define your own RGB color."
+msgstr ""
+"Scegliere il colore carattere delle registrazioni viste. Premere OK per definire il "
+"proprio colore RGB"
+
+#: KravenFHD.py:1265
+msgid "Custom EMC-Selection-Colors"
+msgstr "Selezione colori EMC personalizzata"
+
+#: KravenFHD.py:1265
+msgid "Choose whether you want to customize the selection-colors for EnhancedMovieCenter."
+msgstr "Scegliere se si desidera personalizzare i colori selezione EnhancedMovieCenter"
+
+#: KravenFHD.py:1267
+msgid "EMC-Listselection"
+msgstr "Lista selezione EMC"
+
+#: KravenFHD.py:1267
+msgid ""
+"Choose the background color of selection bars for EnhancedMovieCenter. Press OK to define "
+"your own RGB color."
+msgstr ""
+"Scegliere il colore sfondo della barra selezione EnhancedMovieCenter. Premere OK per "
+"definire il proprio colore RGB"
+
+#: KravenFHD.py:1268
+msgid "EMC-Selection-Font"
+msgstr "Carattere selezione EMC"
+
+#: KravenFHD.py:1268
+msgid ""
+"Choose the color of the font in selection bars for EnhancedMovieCenter. Press OK to define "
+"your own RGB color."
+msgstr ""
+"Scegliere il colore carattere nella barra selezione per EnhancedMovieCenter. Premere OK "
+"per definire il proprio colore RGB"
+
+#: KravenFHD.py:1275
+msgid "MOVIESELECTION ____________________________________________________________"
+msgstr "SELEZIONE REGISTRAZIONI ____________________________________________________"
+
+#: KravenFHD.py:1275
+msgid "This sections offers all settings for MovieSelection."
+msgstr "Questa sezione offre tutte le impostazioni per la selezione registrazioni"
+
+#: KravenFHD.py:1276
+msgid "MovieSelection-Style"
+msgstr "Stile selezione registrazioni"
+
+#: KravenFHD.py:1276
+msgid "Choose from different styles for MovieSelection."
+msgstr "Scegliere tra stili diversi per la selezione registrazioni"
+
+#: KravenFHD.py:1282
+msgid "PLAYER ____________________________________________________________________"
+msgstr "PLAYER _______________________________________________________________________"
+
+#: KravenFHD.py:1282
+msgid "This sections offers all settings for the movie players."
+msgstr "Questa sezione offre tutte le impostazioni per la riproduzione registrazioni"
+
+#: KravenFHD.py:1283
+msgid "Clock"
+msgstr "Orologio"
+
+#: KravenFHD.py:1283
+msgid "Choose from different options to show the clock in the players."
+msgstr "Scegliere tra diverse opzioni per visualizzare l'orologio nel Player"
+
+#: KravenFHD.py:1288
+msgid "PVRState"
+msgstr "Stato PVR"
+
+#: KravenFHD.py:1288
+msgid "Choose from different options to display the PVR state."
+msgstr "Scegliere tra le diverse opzioni per visualizzare lo stato del PVR"
+
+#: KravenFHD.py:1294
+msgid ""
+"ANTIALIASING BRIGHTNESS ________________________________________________________________"
+msgstr ""
+"LUMINOSITA BORDI LEVIGATI _________________________________________________________________"
+
+#: KravenFHD.py:1294
+msgid ""
+"This sections offers all antialiasing settings. Distortions or color frames around fonts "
+"can be reduced by this settings."
+msgstr ""
+"Questa sezione offre le impostazioni antialiasing. Distorsioni intorno ai caratteri, etc… "
+"possono essere ridotte con questa impostazione"
+
+#: KravenFHD.py:1295
+msgid ""
+"Reduce distortions (faint/blurry) or color frames around fonts in the infobar and widgets "
+"by adjusting the antialiasing brightness."
+msgstr ""
+"Ridurre le distorsioni (debole / sfocata) o il colore frame attorno ai caratteri nella "
+"Infobar /widget regolando la luminosità antialiasing"
+
+#: KravenFHD.py:1297
+msgid ""
+"Reduce distortions (faint/blurry) or color frames around the ECM information in the "
+"infobar by adjusting the antialiasing brightness."
+msgstr ""
+"Ridurre le distorsioni (debole / sfocata) o il colore frame attorno alle informazioni ECM "
+"della infobar regolando la luminosità antialiasing"
+
+#: KravenFHD.py:1300
+msgid "Screens"
+msgstr "Schermi"
+
+#: KravenFHD.py:1300
+msgid ""
+"Reduce distortions (faint/blurry) or color frames around fonts at top and bottom of "
+"screens by adjusting the antialiasing brightness."
+msgstr ""
+"Ridurre le distorsioni (debole / sfocata) o il colore frame attorno ai caratteri nella "
+"parte superiore /inferiore schermo regolando la luminosità antialiasing"
+
+#: KravenFHD.py:1307
+msgid "VARIOUS SETTINGS ________________________________________________________________"
+msgstr "IMPOSTAZIONI VARIE_________________________________________________________________"
+
+#: KravenFHD.py:1307
+msgid "This sections offers various settings."
+msgstr "Questa sezione offre varie impostazioni"
+
+#: KravenFHD.py:1308
+msgid "Screennames"
+msgstr "Nome schermata"
+
+#: KravenFHD.py:1308
+msgid "Activate or deactivate small screen names for debugging purposes."
+msgstr "Attivare o disattivare i nomi nello schermo piccolo per scopi di debug"
+
+#: KravenFHD.py:1309
+msgid "Icon-Font vertical position"
+msgstr "Posizione verticale carattere icone"
+
+#: KravenFHD.py:1309
+msgid "Correct the vertical font position within some icons for the infobars and players."
+msgstr "Correggi la posizione del carattere verticale di alcune icone infobar e player"
+
+#: KravenFHD.py:1491 KravenFHD.py:1560 KravenFHD.py:1571
+msgid "various"
+msgstr "varie"
+
+#: KravenFHD.py:1492 KravenFHD.py:1497
+msgid "profiles"
+msgstr "profili"
+
+#: KravenFHD.py:1494 KravenFHD.py:1567 KravenFHD.py:1574
+msgid "about"
+msgstr "info"
+
+#: KravenFHD.py:1495 KravenFHD.py:1500
+msgid "system"
+msgstr "sistema"
+
+#: KravenFHD.py:1498 KravenFHD.py:1503
+msgid "global colors"
+msgstr "colori generali"
+
+#: KravenFHD.py:1501 KravenFHD.py:1506
+msgid "infobar-look"
+msgstr "aspetto infobar"
+
+#: KravenFHD.py:1504 KravenFHD.py:1509
+msgid "infobar-contents"
+msgstr "contenuto infobar"
+
+#: KravenFHD.py:1510 KravenFHD.py:1519 KravenFHD.py:1523
+msgid "weather"
+msgstr "meteo"
+
+#: KravenFHD.py:1514 KravenFHD.py:1520 KravenFHD.py:1528
+msgid "ECM infos"
+msgstr "Informazioni ECM"
+
+#: KravenFHD.py:1517 KravenFHD.py:1525
+msgid "clock"
+msgstr "orologio"
+
+#: KravenFHD.py:1526 KravenFHD.py:1531
+msgid "views"
+msgstr "visualizzazioni"
+
+#: KravenFHD.py:1529 KravenFHD.py:1534
+msgid "PermanentClock"
+msgstr "PermanentClock"
+
+#: KravenFHD.py:1532 KravenFHD.py:1537
+msgid "channellist"
+msgstr "lista canali"
+
+#: KravenFHD.py:1535 KravenFHD.py:1540
+msgid "NumberZap"
+msgstr "Numerazione Zap"
+
+#: KravenFHD.py:1538 KravenFHD.py:1543
+msgid "EPGSelection"
+msgstr "Selezione EPG"
+
+#: KravenFHD.py:1541 KravenFHD.py:1546
+msgid "GraphEPG"
+msgstr "EPG Grafici"
+
+#: KravenFHD.py:1544 KravenFHD.py:1549
+msgid "VerticalEPG"
+msgstr "EPG Verticali"
+
+#: KravenFHD.py:1547 KravenFHD.py:1552
+msgid "TimerEditScreen"
+msgstr "Schermata modifica Timer"
+
+#: KravenFHD.py:1550 KravenFHD.py:1555
+msgid "EMC"
+msgstr "EMC"
+
+#: KravenFHD.py:1553 KravenFHD.py:1559 KravenFHD.py:1562
+msgid "MovieSelection"
+msgstr "Selezione registrazioni"
+
+#: KravenFHD.py:1556 KravenFHD.py:1566 KravenFHD.py:1570
+msgid "player"
+msgstr "player"
+
+#: KravenFHD.py:1563 KravenFHD.py:1573
+msgid "antialiasing"
+msgstr "antialiasing"
+
+#: KravenFHD.py:1587 KravenFHD.py:1690 KravenFHD.py:1814 KravenFHD.py:1913
+msgid "Off"
+msgstr "Off"
+
+#: KravenFHD.py:1589
+msgid "On"
+msgstr "On"
+
+#: KravenFHD.py:1636 KravenFHD.py:1640
+msgid "RTL"
+msgstr "RTL"
+
+#: KravenFHD.py:1638 KravenFHD.py:1642
+msgid "5 - RTL"
+msgstr "5 - RTL"
+
+#: KravenFHD.py:1657
+msgid "free to air"
+msgstr "non criptato"
+
+#: KravenFHD.py:1709
+msgid ""
+"description - 28 Pixel \n"
+"EPG list - 28 Pixel \n"
+"primetime - 26 Pixel"
+msgstr ""
+"descrizione - 28 Pixel\n"
+"elenco EPG - 28 Pixel \n"
+"prima serata- 26 Pixel"
+
+#: KravenFHD.py:1711
+msgid ""
+"description - 32 Pixel \n"
+"EPG list - 28 Pixel \n"
+"primetime - 29 Pixel"
+msgstr ""
+"descrizione - 32 Pixel \n"
+"elenco EPG - 28 Pixel \n"
+"prima serata- 29 Pixel"
+
+#: KravenFHD.py:1713 KravenFHD.py:1718
+msgid ""
+"description - 28 Pixel \n"
+"EPG list - 26 Pixel \n"
+"primetime - 26 Pixel"
+msgstr ""
+"descrizione - 28 Pixel \n"
+"elenco EPG - 26 Pixel \n"
+"prima serata- 26 Pixel"
+
+#: KravenFHD.py:1715 KravenFHD.py:1720
+msgid ""
+"description - 32 Pixel \n"
+"EPG list - 29 Pixel \n"
+"primetime - 29 Pixel"
+msgstr ""
+"descrizione - 32 Pixel \n"
+"elenco EPG - 29 Pixel \n"
+"prima serata- 29 Pixel"
+
+#: KravenFHD.py:1725
+msgid ""
+"EPG list - 30 Pixel \n"
+"primetime - 32 Pixel"
+msgstr ""
+"elenco EPG - 30 Pixel \n"
+"prima serata - 32 Pixel"
+
+#: KravenFHD.py:1727
+msgid ""
+"EPG list - 34 Pixel \n"
+"primetime - 36 Pixel"
+msgstr ""
+"elenco EPG - 34 Pixel \n"
+"prima serata - 36 Pixel"
+
+#: KravenFHD.py:1729 KravenFHD.py:1734
+msgid ""
+"EPG list - 32 Pixel \n"
+"primetime - 32 Pixel"
+msgstr ""
+"elenco EPG - 32Pixel \n"
+"prima serata - 32 Pixel"
+
+#: KravenFHD.py:1731 KravenFHD.py:1736
+msgid ""
+"EPG list - 36 Pixel \n"
+"primetime - 36 Pixel"
+msgstr ""
+"elenco EPG - 36 Pixel \n"
+"prima serata - 36 Pixel"
+
+#: KravenFHD.py:1741
+msgid ""
+"description - 30 Pixel \n"
+"EPG list - 32 Pixel \n"
+"primetime - 32 Pixel"
+msgstr ""
+"descrizione - 30 Pixel \n"
+"elenco EPG - 32 Pixel \n"
+"prima serata - 32 Pixel"
+
+#: KravenFHD.py:1743
+msgid ""
+"description - 34 Pixel \n"
+"EPG list - 36 Pixel \n"
+"primetime - 36 Pixel"
+msgstr ""
+"descrizione - 34 Pixel \n"
+"elenco EPG - 36 Pixel \n"
+"prima serata- 36 Pixel"
+
+#: KravenFHD.py:1745 KravenFHD.py:1750
+msgid ""
+"description - 32 Pixel \n"
+"EPG list - 32 Pixel \n"
+"primetime - 32 Pixel"
+msgstr ""
+"descrizione - 32 Pixel \n"
+"elenco EPG - 32 Pixel \n"
+"prima serata - 32 Pixel"
+
+#: KravenFHD.py:1747 KravenFHD.py:1752
+msgid ""
+"description - 36 Pixel \n"
+"EPG list - 36 Pixel \n"
+"primetime - 36 Pixel"
+msgstr ""
+"descrizione - 36 Pixel \n"
+"elenco EPG - 36 Pixel \n"
+"prima serata- 36 Pixel"
+
+#: KravenFHD.py:1755 KravenFHD.py:1760 KravenFHD.py:1776 KravenFHD.py:1781 KravenFHD.py:1786
+msgid "33 Pixel"
+msgstr "33 Pixel"
+
+#: KravenFHD.py:1757 KravenFHD.py:1762 KravenFHD.py:1768 KravenFHD.py:1778 KravenFHD.py:1783
+msgid "36 Pixel"
+msgstr "36 Pixel"
+
+#: KravenFHD.py:1766
+msgid "32 Pixel"
+msgstr "32 Pixel"
+
+#: KravenFHD.py:1771
+msgid "32/26 Pixel"
+msgstr "32/26 Pixel"
+
+#: KravenFHD.py:1773
+msgid "37/30 Pixel"
+msgstr "37/30 Pixel"
+
+#: KravenFHD.py:1788
+msgid "39 Pixel"
+msgstr "39 Pixel"
+
+#: KravenFHD.py:1790
+msgid "45 Pixel"
+msgstr "45 Pixel"
+
+#: KravenFHD.py:1798
+msgid "144 Pixel"
+msgstr "144 Pixel"
+
+#: KravenFHD.py:1800
+msgid "192 Pixel"
+msgstr "192 Pixel"
+
+#: KravenFHD.py:1919
+msgid ""
+"Infobar & \n"
+"SecondInfobar"
+msgstr ""
+"Infobar  & \n"
+"Seconda Infobar"
+
+#: KravenFHD.py:2344
+msgid "Use the sliders to define your color:"
+msgstr "Usa i cursori per definire il tuo colore:"
+
+#: KravenFHD.py:2357
+msgid "Enter the city name of your location:"
+msgstr "Inserisci qui il nome della tua località:"
+
+#: KravenFHD.py:2361
+msgid "Enter your API Key:"
+msgstr "Inserisci la tua chiave API:"
+
+#: KravenFHD.py:2375
+msgid "Do you really want to reboot now?"
+msgstr "Riavviare ora?"
+
+#: KravenFHD.py:2376 KravenFHD.py:4359
+msgid "Restart GUI"
+msgstr "Riavvio del sistema (GUI)"
+
+#: KravenFHD.py:4358
+msgid ""
+"GUI needs a restart to apply a new skin.\n"
+"Do you want to Restart the GUI now?"
+msgstr ""
+"L'attivazione della skin richiede il riavvio del sistema\n"
+"Riavviare ora?"
+
+#: KravenFHD.py:4397
+msgid "Do you really want to exit without saving?"
+msgstr "Uscire dalla configurazione senza salvare?"
+
+#: KravenFHD.py:4451
+msgid "Do you really want to reset all values to the selected default profile?"
+msgstr "Resettare tutte le impostazioni e ripristinare i valori predefiniti?"
+
+#: KravenFHD.py:4452
+msgid "Reset profile"
+msgstr "Ripristina profilo"
+
+#: KravenFHD.py:4572 KravenFHD.py:4574
+msgid "Profile "
+msgstr "Profili "
+
+#: KravenFHD.py:4572
+msgid " saved successfully."
+msgstr " salvato con successo"
+
+#: KravenFHD.py:4574
+msgid " could not be saved!"
+msgstr "non può essere salvato"

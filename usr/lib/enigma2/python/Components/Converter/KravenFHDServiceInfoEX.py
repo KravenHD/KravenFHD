@@ -1,3 +1,23 @@
+# -*- coding: utf-8 -*-
+
+#  Service Info EX Converter
+#
+#  Coded/Modified/Adapted by Team Kraven
+#  Based on VTi and/or OpenATV image source code
+#  Based on Service Info EX by 2boom (see below)
+#
+#  This code is licensed under the Creative Commons 
+#  Attribution-NonCommercial-ShareAlike 3.0 Unported 
+#  License. To view a copy of this license, visit
+#  http://creativecommons.org/licenses/by-nc-sa/3.0/ 
+#  or send a letter to Creative Commons, 559 Nathan 
+#  Abbott Way, Stanford, California 94305, USA.
+#
+#  If you think this license infringes any rights,
+#  please contact Team Kraven at info@coolskins.de
+#
+#  Original license:
+
 # ServiceInfoEX
 # Copyright (c) 2boom 2013-14
 # v.1.4.0 27.04.2014
@@ -53,12 +73,6 @@ class KravenFHDServiceInfoEX(Poll, Converter, object):
 	FRAMERATE = 27
 	IS_FTA = 28
 	HAS_HBBTV = 29
-	IS_SATELLITE = 30
-	IS_CABLE = 31
-	IS_TERRESTRIAL = 32
-	IS_STREAMTV = 33
-	IS_SATELLITE_S = 34
-	IS_SATELLITE_S2 = 35
 	volume = 36
 	volumedata = 37
 	resolution = 38
@@ -128,18 +142,6 @@ class KravenFHDServiceInfoEX(Poll, Converter, object):
 			self.type = self.EDITMODE
 		elif  type == "Framerate":
 			self.type = self.FRAMERATE
-		elif  type == "IsSatellite":
-			self.type = self.IS_SATELLITE
-		elif  type == "IsSatelliteS":
-			self.type = self.IS_SATELLITE_S
-		elif  type == "IsSatelliteS2":
-			self.type = self.IS_SATELLITE_S2
-		elif  type == "IsCable":
-			self.type = self.IS_CABLE
-		elif  type == "IsTerrestrial":
-			self.type = self.IS_TERRESTRIAL
-		elif  type == "IsStreamTV":
-			self.type = self.IS_STREAMTV
 		elif  type == "IsVolume":
 			self.type = self.volume
 		elif  type == "IsVolumeData":
@@ -171,7 +173,6 @@ class KravenFHDServiceInfoEX(Poll, Converter, object):
 			return info.getInfoString(what)
 		return convert(v)
 
-		
 	@cached
 	def getText(self):
 		self.stream = { 'apid':"N/A", 'vpid':"N/A", 'sid':"N/A", 'onid':"N/A", 'tsid':"N/A", 'prcpid':"N/A", 'caids':"FTA", 'pmtpid':"N/A", 'txtpid':"N/A", 'xres':"", 'yres':"", 'resolution':"", 'atype':"", 'vtype':"", 'avtype':"", 'fps':"", 'tbps':"",}
@@ -212,8 +213,8 @@ class KravenFHDServiceInfoEX(Poll, Converter, object):
 		if audio:
 			if audio.getCurrentTrack() > -1:
 				self.stream['atype'] = str(audio.getTrackInfo(audio.getCurrentTrack()).getDescription()).replace(",","")
-		self.stream['vtype'] = ("MPEG2","AVC","H263","VC1","MPEG4-VC","VC1-SM","MPEG1","HEVC","VP8","VP9","XVID","N/A 11","N/A 12","DIVX 3.11","DIVX 4","DIVX 5","AVS","N/A 17","VP6","N/A 19","N/A 20","SPARK","")[info.getInfo(iServiceInformation.sVideoType)]
-		self.stream['avtype'] = self.stream['vtype'] + "/" + self.stream['atype']
+		self.stream['vtype'] = ("MPEG2", "MPEG4", "MPEG1", "MPEG4-II", "VC1", "VC1-SM", "")[info.getInfo(iServiceInformation.sVideoType)]
+		self.stream['avtype'] = ("MPEG2/", "MPEG4/", "MPEG1/", "MPEG4-II/", "VC1/", "VC1-SM/", "")[info.getInfo(iServiceInformation.sVideoType)] + self.stream['atype']
 		if self.getServiceInfoString(info, iServiceInformation.sFrameRate, lambda x: "%d" % ((x+500)/1000)) != "N/A":
 			self.stream['fps'] = self.getServiceInfoString(info, iServiceInformation.sFrameRate, lambda x: "%d" % ((x+500)/1000))
 		if self.getServiceInfoString(info, iServiceInformation.sTransferBPS, lambda x: "%d kB/s" % (x/1024)) != "N/A":
@@ -292,7 +293,7 @@ class KravenFHDServiceInfoEX(Poll, Converter, object):
 		service = self.source.service
 		info = service and service.info()
 		if not info:
-			return False
+			return True
 		self.tpdata = info.getInfoObject(iServiceInformation.sTransponderData)
 		if self.tpdata:
 			type = self.tpdata.get('tuner_type', '')
@@ -335,35 +336,14 @@ class KravenFHDServiceInfoEX(Poll, Converter, object):
 			return False
 		elif self.type == self.EDITMODE:
 			return hasattr(self.source, "editmode") and not not self.source.editmode
-		elif self.type == self.IS_SATELLITE:
-			if type == 'DVB-S':
-				return True
-		elif self.type == self.IS_CABLE:
-			if type == 'DVB-C':
-				return True
-		elif self.type == self.IS_TERRESTRIAL:
-			if type == 'DVB-T':
-				return True
-		elif self.type == self.IS_STREAMTV:
-			if service.streamed() is not None:
-				return True
-		elif self.type == self.IS_SATELLITE_S:
-			if type == 'DVB-S' and service.streamed() is None:
-				if self.tpdata.get('system', 0) is 0:
-					return True
-		elif self.type == self.IS_SATELLITE_S2:
-			if type == 'DVB-S' and service.streamed() is None:
-				if self.tpdata.get('system', 0) is 1:
-					return True
-		return False
+			
+		return True
+		
 	boolean = property(getBoolean)
 
 	def changed(self, what):
 		if what[0] == self.CHANGED_SPECIFIC:
 			if what[1] == iPlayableService.evVideoSizeChanged or what[1] == iPlayableService.evUpdatedInfo:
 				Converter.changed(self, what)
-		elif what[0] != self.CHANGED_SPECIFIC or what[1] in self.interesting_events:
-			Converter.changed(self, what)
 		elif what[0] == self.CHANGED_POLL:
 			self.downstream_elements.changed(what)
-

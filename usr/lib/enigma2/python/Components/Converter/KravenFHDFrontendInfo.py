@@ -1,8 +1,23 @@
+# -*- coding: utf-8 -*-
+
+#  Front End Info Converter
+#
+#  Coded/Modified/Adapted by Team Kraven
+#  Based on VTi and/or OpenATV image source code
+#
+#  This code is licensed under the Creative Commons 
+#  Attribution-NonCommercial-ShareAlike 3.0 Unported 
+#  License. To view a copy of this license, visit
+#  http://creativecommons.org/licenses/by-nc-sa/3.0/ 
+#  or send a letter to Creative Commons, 559 Nathan 
+#  Abbott Way, Stanford, California 94305, USA.
+#
+#  If you think this license infringes any rights,
+#  please contact Team Kraven at info@coolskins.de
+
 from Components.Converter.Converter import Converter
 from Components.Element import cached
-
 from Poll import Poll
-import NavigationInstance
 
 class KravenFHDFrontendInfo(Poll, Converter, object):
 	BER = 0
@@ -12,7 +27,6 @@ class KravenFHDFrontendInfo(Poll, Converter, object):
 	SNRdB = 4
 	SLOT_NUMBER = 5
 	TUNER_TYPE = 6
-	REC_TUNER = 7
 
 	def __init__(self, type):
 		Poll.__init__(self)
@@ -31,9 +45,6 @@ class KravenFHDFrontendInfo(Poll, Converter, object):
 			self.type = self.SLOT_NUMBER
 		elif type == "TYPE":
 			self.type = self.TUNER_TYPE
-		elif type.split("_")[0] == "REC":
-			self.type = self.REC_TUNER
-			self.tunernum = type.split("_")[1]
 		else:
 			self.type = self.LOCK
 
@@ -64,7 +75,7 @@ class KravenFHDFrontendInfo(Poll, Converter, object):
 
 	@cached
 	def getBool(self):
-		assert self.type in (self.LOCK, self.BER, self.REC_TUNER), "the boolean output of FrontendInfo can only be used for lock or BER info or Tuner-Rec"
+		assert self.type in (self.LOCK, self.BER), "the boolean output of FrontendInfo can only be used for lock or BER info or Tuner-Rec"
 		if self.type == self.LOCK:
 			lock = self.source.lock
 			if lock is None:
@@ -75,17 +86,6 @@ class KravenFHDFrontendInfo(Poll, Converter, object):
 			if ber is None:
 				ber = 0
 			return ber > 0
-		elif self.type == self.REC_TUNER:
-			for timer in NavigationInstance.instance.RecordTimer.timer_list:
-				if timer.isRunning() and not timer.justplay:
-					service = timer.record_service
-					feinfo = service and service.frontendInfo()
-					data = feinfo and feinfo.getFrontendData()
-					if data:
-						tuner = data.get('tuner_number', -1)
-						if tuner is not None and tuner > -1 and tuner == int(self.tunernum):
-							return True
-			return False
 
 	text = property(getText)
 	boolean = property(getBool)
@@ -117,5 +117,3 @@ class KravenFHDFrontendInfo(Poll, Converter, object):
 
 	range = 65536
 	value = property(getValue)
-	
-

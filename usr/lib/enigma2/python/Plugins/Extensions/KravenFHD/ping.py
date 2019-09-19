@@ -32,7 +32,6 @@
 # December 4, 2000
 # Changed the struct.pack() calls to pack the checksum and ID as
 # unsigned. My thanks to Jerome Poincheval for the fix.
-#
 
 import os
 from socket import *
