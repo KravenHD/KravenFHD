@@ -23,7 +23,17 @@ from Components.config import config
 from Tools.Transponder import ConvertToHumanReadable
 from Poll import Poll
 
-stream_codec = {
+stream_codec_vti = {
+	-1: "N/A",
+	0: "MPEG2",
+	1: "MPEG4",
+	2: "MPEG1",
+	3: "MPEG4-II",
+	4: "VC1",
+	5: "VC1-SM"
+}
+
+stream_codec_atv = {
 	-1: "N/A",
 	0: "MPEG2",
 	1: "AVC",
@@ -46,7 +56,7 @@ stream_codec = {
 	18: "VP6",
 	19: "N/A 19",
 	20: "N/A 20",
-	21: "SPARK",
+	21: "SPARK"
 }
 
 def addspace(text):
@@ -100,7 +110,10 @@ class KravenFHDExtraInfo(Poll, Converter, object):
 		return str(fps)
 
 	def createVideoCodec(self,info):
-		return stream_codec.get(info.getInfo(iServiceInformation.sVideoType), "N/A")
+		if self.getE2DistroVersion() == "VTi":
+			return stream_codec_vti.get(info.getInfo(iServiceInformation.sVideoType), "N/A")
+		else:
+			return stream_codec_atv.get(info.getInfo(iServiceInformation.sVideoType), "N/A")
 
 	def createAudioCodec(self,info):
 		service = self.source.service
@@ -292,3 +305,14 @@ class KravenFHDExtraInfo(Poll, Converter, object):
 			self.updateFEdata = False
 			Converter.changed(self, what)
 
+	def getE2DistroVersion(self):
+		try:
+			from boxbranding import getImageDistro
+			if getImageDistro() == "openatv":
+				return "openatv"
+			elif getImageDistro() == "teamblue":
+				return "teamblue"
+			elif getImageDistro() == "VTi":
+				return "VTi"
+		except ImportError:
+			return "VTi"

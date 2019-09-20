@@ -42,6 +42,42 @@ from Components.Element import cached
 
 WIDESCREEN = [3, 4, 7, 8, 0xB, 0xC, 0xF, 0x10]
 
+stream_codec_vti = {
+	-1: "N/A",
+	0: "MPEG2",
+	1: "MPEG4",
+	2: "MPEG1",
+	3: "MPEG4-II",
+	4: "VC1",
+	5: "VC1-SM"
+}
+
+stream_codec_atv = {
+	-1: "N/A",
+	0: "MPEG2",
+	1: "AVC",
+	2: "H263",
+	3: "VC1",
+	4: "MPEG4-VC",
+	5: "VC1-SM",
+	6: "MPEG1",
+	7: "HEVC",
+	8: "VP8",
+	9: "VP9",
+	10: "XVID",
+	11: "N/A 11",
+	12: "N/A 12",
+	13: "DIVX 3.11",
+	14: "DIVX 4",
+	15: "DIVX 5",
+	16: "AVS",
+	17: "N/A 17",
+	18: "VP6",
+	19: "N/A 19",
+	20: "N/A 20",
+	21: "SPARK"
+}
+
 class KravenFHDServiceInfoEX(Poll, Converter, object):
 	apid = 0
 	vpid = 1
@@ -73,9 +109,9 @@ class KravenFHDServiceInfoEX(Poll, Converter, object):
 	FRAMERATE = 27
 	IS_FTA = 28
 	HAS_HBBTV = 29
-	volume = 36
-	volumedata = 37
-	resolution = 38
+	volume = 30
+	volumedata = 31
+	resolution = 32
 	
 	def __init__(self, type):
 		Converter.__init__(self, type)
@@ -213,8 +249,11 @@ class KravenFHDServiceInfoEX(Poll, Converter, object):
 		if audio:
 			if audio.getCurrentTrack() > -1:
 				self.stream['atype'] = str(audio.getTrackInfo(audio.getCurrentTrack()).getDescription()).replace(",","")
-		self.stream['vtype'] = ("MPEG2", "MPEG4", "MPEG1", "MPEG4-II", "VC1", "VC1-SM", "")[info.getInfo(iServiceInformation.sVideoType)]
-		self.stream['avtype'] = ("MPEG2/", "MPEG4/", "MPEG1/", "MPEG4-II/", "VC1/", "VC1-SM/", "")[info.getInfo(iServiceInformation.sVideoType)] + self.stream['atype']
+		if self.getE2DistroVersion() == "VTi":
+			self.stream['vtype'] = stream_codec_vti.get(info.getInfo(iServiceInformation.sVideoType), "N/A")
+		else:
+			self.stream['vtype'] = stream_codec_atv.get(info.getInfo(iServiceInformation.sVideoType), "N/A")
+		self.stream['avtype'] = self.stream['vtype'] + "/" + self.stream['atype']
 		if self.getServiceInfoString(info, iServiceInformation.sFrameRate, lambda x: "%d" % ((x+500)/1000)) != "N/A":
 			self.stream['fps'] = self.getServiceInfoString(info, iServiceInformation.sFrameRate, lambda x: "%d" % ((x+500)/1000))
 		if self.getServiceInfoString(info, iServiceInformation.sTransferBPS, lambda x: "%d kB/s" % (x/1024)) != "N/A":
@@ -347,3 +386,15 @@ class KravenFHDServiceInfoEX(Poll, Converter, object):
 				Converter.changed(self, what)
 		elif what[0] == self.CHANGED_POLL:
 			self.downstream_elements.changed(what)
+
+	def getE2DistroVersion(self):
+		try:
+			from boxbranding import getImageDistro
+			if getImageDistro() == "openatv":
+				return "openatv"
+			elif getImageDistro() == "teamblue":
+				return "teamblue"
+			elif getImageDistro() == "VTi":
+				return "VTi"
+		except ImportError:
+			return "VTi"
