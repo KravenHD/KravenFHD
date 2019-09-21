@@ -39,7 +39,8 @@ stream_codec_vti = {
 	2: "MPEG1",
 	3: "MPEG4-II",
 	4: "VC1",
-	5: "VC1-SM"
+	5: "VC1-SM",
+	6: "H265-HEVC"
 }
 
 stream_codec_atv = {

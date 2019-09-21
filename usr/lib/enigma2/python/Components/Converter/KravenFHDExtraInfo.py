@@ -30,7 +30,8 @@ stream_codec_vti = {
 	2: "MPEG1",
 	3: "MPEG4-II",
 	4: "VC1",
-	5: "VC1-SM"
+	5: "VC1-SM",
+	6: "H265-HEVC"
 }
 
 stream_codec_atv = {
@@ -95,7 +96,6 @@ class KravenFHDExtraInfo(Poll, Converter, object):
 		mode = ("i", "p", "")[info.getInfo(iServiceInformation.sProgressive)]
 		fps  = str((info.getInfo(iServiceInformation.sFrameRate) + 500) / 1000)
 		return str(xres) + "x" + str(yres) + mode + " " + fps + "fps"
-# + ("MPEG2", "MPEG4", "MPEG1", "MPEG4-II", "VC1", "VC1-SM", "")[info.getInfo(iServiceInformation.sVideoType)]
 
 	def createResolution(self,info):
 		xres = info.getInfo(iServiceInformation.sVideoWidth)
