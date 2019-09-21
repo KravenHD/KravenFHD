@@ -2816,7 +2816,7 @@ class ActivateSkinSettings:
 		elif config.plugins.KravenFHD.Volume.value == "volume-top":
 			self.skinSearchAndReplace.append(['screen name="Volume" position="70,57" size="495,120"','screen name="Volume" position="center,37" size="600,42"'])
 		elif config.plugins.KravenFHD.Volume.value == "volume-center":
-			self.skinSearchAndReplace.append(['screen name="Volume" position="70,57" size="495,120"','screen name="Volume" position="822,429" size="276,276" size="184,184"'])
+			self.skinSearchAndReplace.append(['screen name="Volume" position="70,57" size="495,120"','screen name="Volume" position="822,429" size="276,276"'])
 
 		### PVRState
 		if config.plugins.KravenFHD.IBStyle.value == "box":
