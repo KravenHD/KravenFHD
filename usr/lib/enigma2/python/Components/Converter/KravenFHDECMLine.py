@@ -1,19 +1,13 @@
-# -*- coding: utf-8 -*-
-
-#  ECM Line Converter
 #
-#  Coded/Modified/Adapted by Team Kraven
-#  Based on VTi and/or OpenATV image source code
+#  ECM LINE Converter
 #
-#  This code is licensed under the Creative Commons 
-#  Attribution-NonCommercial-ShareAlike 3.0 Unported 
+#  Coded by tomele and tbx for Kraven Skins
+#
+#  This code is licensed under the Creative Commons
+#  Attribution-NonCommercial-ShareAlike 4.0 International
 #  License. To view a copy of this license, visit
-#  http://creativecommons.org/licenses/by-nc-sa/3.0/ 
-#  or send a letter to Creative Commons, 559 Nathan 
-#  Abbott Way, Stanford, California 94305, USA.
+#  http://creativecommons.org/licenses/by-nc-sa/4.0/
 #
-#  If you think this license infringes any rights,
-#  please contact Team Kraven at info@coolskins.de
 
 from enigma import iServiceInformation, iPlayableService
 from Components.Converter.Converter import Converter
@@ -21,16 +15,14 @@ from Components.Element import cached
 from Components.config import config
 from Poll import Poll
 import os, gettext
-
-try:
-	from enigma import eDVBCI_UI
-	from enigma import eDVBCIInterfaces
-	CI = True
-except:
-	CI = False
-
+from Tools.Directories import fileExists
 from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 from Components.Language import language
+
+if fileExists("/etc/enigma2/ci0.xml") or fileExists("/etc/enigma2/ci1.xml"):
+		CI = True
+else:
+		CI = False
 
 lang = language.getLanguage()
 os.environ["LANGUAGE"] = lang[:2]
@@ -100,93 +92,14 @@ class KravenFHDECMLine(Poll, Converter, object):
 				flines = f.readlines()
 				f.close()
 			except:
-
+				
 				if CI:
-					NUM_CI=eDVBCIInterfaces.getInstance().getNumOfSlots()
-					if NUM_CI > 0:
-						found_caid = False
-						service_caids = []
-						service_caid_list = []
-						caid = '0x0'
-						service = self.source.service
-						info = service and service.info()
-						if info:
-							service_caids = info.getInfoObject(iServiceInformation.sCAIDs)
-							if service_caids:
-								for service_caid in service_caids:
-									service_caid_list.append((str(hex(int(service_caid)))))
-								for act_slot in range(NUM_CI):
-									ci_caids = []
-									ci_caid_list = []
-									ci_caids = eDVBCIInterfaces.getInstance().readCICaIds(act_slot)
-									if ci_caids:
-										for ci_caid in ci_caids:
-											ci_caid_list.append(str(hex(int(ci_caid))))
-										for service_caid in service_caid_list:
-											if service_caid in ci_caid_list:
-												if int(service_caid,16) > int(caid,16):
-													found_caid = True
-													caid = service_caid
-													appname = eDVBCI_UI.getInstance().getAppName(act_slot)
-													slot = act_slot
+					ecmline = _('CI Modul')
 
-						if found_caid:
-							caid = str(caid)
-							caid = caid.lstrip('0x')
-							caid = caid.upper()
-							caid = caid.zfill(4)
-							
-							if ((caid>='1800') and (caid<='18FF')):
-								system = 'System: NAGRA'
-							elif ((caid>='1700') and (caid<='17FF')):
-								system = 'System: BETA'
-							elif ((caid>='0E00') and (caid<='0EFF')):
-								system = 'System: POWERVU'
-							elif ((caid>='0D00') and (caid<='0DFF')):
-								system = 'System: CWORKS'
-							elif ((caid>='0B00') and (caid<='0BFF')):
-								system = 'System: CONAX'
-							elif ((caid>='0900') and (caid<='09FF')):
-								system = 'System: NDS'
-							elif ((caid>='0600') and (caid<='06FF')):
-								system = 'System: IRDETO'
-							elif ((caid>='0500') and (caid<='05FF')):
-								system = 'System: VIACCESS'
-							elif ((caid>='0100') and (caid<='01FF')):
-								system = 'System: SECA'
-							else:
-								system = _('System: unknown')
-								
-							caid = 'CAID: ' + str(caid)
-							slot = 'Slot: ' + str(slot+1)
-							appname = 'CI: ' + str(appname)
-						else:
-							system = _('System: unknown')
-							caid = 'CAID: ' + _('unknown')
-							slot = 'Slot: ' + _('unknown')
-							appname = 'CI: ' + _('unknown')
-
-						if self.type == self.SATINFO:
-							ecmline = caid + ', ' + slot
-						elif self.type == self.VERYSHORTCAID:
-							ecmline = caid + ' - ' + slot
-						elif self.type == self.VERYSHORTREADER:
-							ecmline = slot + ' - ' + appname
-						elif self.type == self.SHORTREADER:
-							ecmline = caid + ' - ' + system + ' - ' + slot
-						elif self.type == self.NORMAL:
-							ecmline = caid + ' - ' + slot + ' - ' + appname
-						elif self.type == self.LONG:
-							ecmline = caid + ' - ' + system + ' - ' + slot + ' - ' + appname
-						else:
-							ecmline = 'CICAM' + ' - ' + caid + ' - ' + system + ' - ' + slot + ' - ' + appname
-					else:
-						ecmline = _('waiting for information ...')
 				else:
-					ecmline = _('no information available')
-
+					ecmline = _('waiting for information ...')
+	
 			else:
-
 				camInfo = {}
 				for line in flines:
 					r = line.split(':', 1)
@@ -194,7 +107,6 @@ class KravenFHDECMLine(Poll, Converter, object):
 						camInfo[r[0].strip('\n\r\t ')] = r[1].strip('\n\r\t ')
 
 				caid = camInfo.get('caid','')
-
 				caid = caid.lstrip('0x')
 				caid = caid.upper()
 				caid = caid.zfill(4)
@@ -239,6 +151,7 @@ class KravenFHDECMLine(Poll, Converter, object):
 				address = 'Server: ' + str(camInfo.get('address',''))
 				reader = 'Reader: ' + str(camInfo.get('reader',''))
 				source = 'Source: ' + str(camInfo.get('source',''))
+				decode =  'Decode: ' + str(camInfo.get('decode',''))
 
 				using = str(camInfo.get('using',''))
 
@@ -271,6 +184,23 @@ class KravenFHDECMLine(Poll, Converter, object):
 						ecmline = caid + ' - ' + system + ' - ' + address + ' - ' + hops + ' - ' + ecmtime
 					else:
 						ecmline = active + ' - ' + caid + ' - ' + system + ' - ' + address + ' - ' + hops + ' - ' + ecmtime
+
+				elif 'decode' in camInfo :
+					active = 'GBOX'
+					if self.type == self.SATINFO:
+						ecmline = active
+					elif self.type == self.VERYSHORTCAID:
+						ecmline = active
+					elif self.type == self.VERYSHORTREADER:
+						ecmline = active
+					elif self.type == self.SHORTREADER:
+						ecmline = active
+					elif self.type == self.NORMAL:
+						ecmline = active
+					elif self.type == self.LONG:
+						ecmline = active
+					else:
+						ecmline = active
 
 				elif 'reader' in camInfo :
 					active = 'OSCAM'
