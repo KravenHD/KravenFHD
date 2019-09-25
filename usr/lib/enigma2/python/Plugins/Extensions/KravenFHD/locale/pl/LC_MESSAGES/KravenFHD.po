@@ -314,18 +314,24 @@ msgstr ""
 "Naciśnij OK, aby zdefiniować własny kolor RGB."
 
 msgid ""
-"Choose the background color of selected events for GraphMultiEPG. Press OK to define your own RGB "
+"Choose the background color of selected event for GraphMultiEPG. Press OK to define your own RGB "
 "color."
 msgstr ""
 "Wybierz kolor tła wybranego programu dla \"Graficzne MultiEPG\". Naciśnij OK, aby ustawić własny "
 "kolor RGB."
 
 msgid ""
-"Choose the background color of selected events for GraphicalEPG. Press OK to define your own RGB "
+"Choose the background color of selected event for GraphicalEPG. Press OK to define your own RGB "
 "color."
 msgstr ""
 "Wybierz kolor tła wybranego programu dla \"Graficzne EPG\". Naciśnij OK, aby ustawić własny kolor "
 "RGB."
+
+msgid "Choose the font color of running event for GraphMultiEPG. Press OK to define your own RGB color."
+msgstr "Wybierz kolor czcionki dla uruchomionych zdarzeń dla GraphMultiEPG. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid "Choose the background color of running event for GraphMultiEPG. Press OK to define your own RGB color."
+msgstr "Wybierz kolor tła uruchomionych zdarzeń dla GraphMultiEPG. Naciśnij OK, aby zdefiniować własny kolor RGB."
 
 msgid ""
 "Choose the background color of selection bars for EnhancedMovieCenter. Press OK to define your "
@@ -336,6 +342,9 @@ msgstr ""
 
 msgid "Choose the background color of selection bars. Press OK to define your own RGB color."
 msgstr "Wybierz kolor tła pasków wyboru. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid "global selection fontcolor"
+msgstr "globalny wybór koloru czcionki"
 
 msgid ""
 "Choose the background for all screens. You can choose from a list of predefined colors or "
@@ -368,9 +377,6 @@ msgstr ""
 
 msgid "Choose the border color for NumberZap. Press OK to define your own RGB color."
 msgstr "Wybierz kolor obramowania dla  NumberZap. Naciśnij OK, aby zdefiniować własny kolor RGB."
-
-msgid "Choose the border color for VerticalEPG. Press OK to define your own RGB color."
-msgstr "Wybierz kolor obramowania dla Pionowego EPG. Naciśnij OK, aby zdefiniować własny kolor RGB."
 
 msgid "Choose the border color of MiniTV's. Press OK to define your own RGB color."
 msgstr "Wybierz kolor obramowania dla  Mini TV. Naciśnij OK, aby zdefiniować własny kolor RGB."
@@ -1081,6 +1087,12 @@ msgstr "Uruchamianie tekstu (opóźnienie)"
 msgid "Running Text (Speed)"
 msgstr "Uruchamianie tekstu (Szybkość)"
 
+msgid "Running Event Fontcolor"
+msgstr "Kolor Czcionki Uruchomionego Wydarzenia"
+
+msgid "Running Event Background"
+msgstr "Kolor Tła Wydrzenia"
+
 msgid "S-SE"
 msgstr "Po-Pow"
 
@@ -1166,8 +1178,11 @@ msgstr ""
 "lub naciśnięciu przycisku OK. Nowe profile zostaną wygenerowane na podstawie rzeczywistego. "
 "Profile można wymieniać między boxami."
 
+msgid "Selected Event Fontcolor"
+msgstr "Wybrany Kolor Czcionki Wydarzenia"
+
 msgid "Selected Event Background"
-msgstr "Kolor wybranego programu"
+msgstr "Wybrane tło zdarzenia"
 
 msgid "Serviceinfo Fontsize"
 msgstr "Rozmiar czcionki informacji o programie"
@@ -1209,7 +1224,9 @@ msgstr "Śnieg"
 msgid ""
 "Snow\n"
 " flurries"
-msgstr "Słaby śnieg"
+msgstr ""
+"Śnieg\n"
+" śnieżyca"
 
 msgid "Snow showers"
 msgstr "Opady śniegu"
@@ -1220,6 +1237,9 @@ msgid ""
 msgstr ""
 "Określ tryb wyszukiwania swojej lokalizacji (zip kod / miasto / dzielnica ). Naciśnij OK, aby "
 "użyć wirtualnej klawiatury. Wejdź w górę lub w dół menu, aby rozpocząć wyszukiwanie."
+
+msgid "Specify any search string for your location (zip(unprecise!)/city/district/state single or comma-separated). Press OK to use the virtual keyboard. Step up or down in the menu to start the search."
+msgstr "Podaj dowolny ciąg wyszukiwania dla swojej lokalizacji (zip (nieprecyzyjne!) / Miasto / dzielnica / stan pojedynczy lub oddzielony przecinkami). Naciśnij OK, aby użyć wirtualnej klawiatury. Przejdź w górę lub w dół menu, aby rozpocząć wyszukiwanie."
 
 msgid ""
 "Specify the GM code for your location. You can find it at https://weather.codes. Press OK to use "
@@ -1320,9 +1340,6 @@ msgstr "Ta sekcja oferuje wszystkie ustawienia dla drugiego paska info."
 msgid "This sections offers all settings for TimerEditScreen."
 msgstr "Ta sekcja zawiera wszystkie ustawienia ekranu edycji timera."
 
-msgid "This sections offers all settings for VerticalEPG."
-msgstr "Ta sekcja zawiera wszystkie ustawienia dla Pionowego EPG."
-
 msgid "This sections offers all settings for infobar-contents."
 msgstr "Ta sekcja zawiera wszystkie ustawienia dla zawartości paska info."
 
@@ -1392,9 +1409,6 @@ msgstr "Kolor nieobejrzanych filmów"
 
 msgid "Used"
 msgstr "Używane"
-
-msgid "VERTICALEPG ______________________________________________________________"
-msgstr "PIONOWE-EPG ______________________________________________________________"
 
 msgid "VIEWS _____________________________________________________________________"
 msgstr "WIDOK _________________________________________________________________"
@@ -1829,7 +1843,7 @@ msgid "right"
 msgstr "prawo"
 
 msgid "running since"
-msgstr "trwa:"
+msgstr "program trwa:"
 
 msgid "runningtext"
 msgstr "uruchomiony tekst"
@@ -1995,3 +2009,40 @@ msgstr "żółty"
 
 msgid "remaining: "
 msgstr "pozostało: "
+
+msgid "Busy color"
+msgstr "Zajęty kolor"
+
+msgid "Choose the color for engaged tuners. Press OK to define your own RGB color."
+msgstr "Wybierz kolor dla zaangażowanych tunerów. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid "Active color"
+msgstr "Aktywny kolor"
+
+msgid "Choose the color for the current live tuner. Press OK to define your own RGB color."
+msgstr "Wybierz kolor dla bieżącego tunera na żywo. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid "Record color"
+msgstr "Kolor nagrywania"
+
+msgid "Choose the color for recording tuners. Press OK to define your own RGB color."
+msgstr "Wybierz kolor do nagrywania tunerów. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid "Active record color"
+msgstr "Aktywny kolor nagrywania"
+
+msgid "Choose the color for the current live tuner when also recording. Press OK to define your own RGB color."
+msgstr "Wybierz kolor dla bieżącego tunera na żywo podczas nagrywania. Naciśnij OK, aby zdefiniować własny kolor RGB."
+
+msgid "Show unused Tuners"
+msgstr "Pokaż nieużywane tunery"
+
+msgid "Choose whether unused tuners are displayed or not."
+msgstr "Wybierz, czy nieużywane tunery mają być wyświetlane, czy nie."
+
+msgid "Show AGC/SNR"
+msgstr "Pokaż AGC/SNR"
+
+msgid "Choose whether AGC/SNR are displayed or not."
+msgstr "Wybierz, czy mają być wyświetlane AGC/SNR."
+
